@@ -237,9 +237,9 @@ class Ink:
                 self.c.drawCircle(float(P[k][0]), float(P[k][1]), float(W[k]), pt)
 
     def tube(self, pts: Sequence[Pt] | np.ndarray, w0: float, w1: float, fill, line: float | None = None,
-             dense: bool = False, shade=None) -> np.ndarray:
-        """Membro "de borracha": tubo com contorno, larguras w0→w1 ao longo da curva."""
-        b = self.brush
+             dense: bool = False, shade=None, ink=None) -> np.ndarray:
+        """Membro "de borracha": tubo com contorno, larguras w0→w1 ao longo da curva. `ink` troca a cor do contorno."""
+        b = self.brush if ink is None else Brush(self.brush.width, self.brush.vary, ink, self.brush.jitter, self.brush.seed)
         P = np.asarray(pts, float) if dense else catmull_open(pts, samples=12)
         P = _jitter(P, b.jitter * 0.6, self._next_seed(), False)
         n = len(P)

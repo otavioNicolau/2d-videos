@@ -55,7 +55,7 @@ def test_walk_exposure_on_twos_and_root_moves():
 
 
 def test_every_expression_and_viseme_renders():
-    for cid in ("caramelo", "tevico"):
+    for cid in ("caramelo", "tevico", "luizinho"):
         ch = character(cid)
         base = ch.render_array({"turn": 0.4}, scale=0.3, jitter=0)
         for e in EXPRESSIONS:
@@ -139,3 +139,11 @@ def test_action_channels_hold_until_action_starts():
                                                    "actions": [{"t": 2.0, "do": "crash", "surface_x": 400}]}, 24, 4.0)
     assert tl.raw(1.9)["stars"] == 0 and tl.raw(1.9)["rot"] == 0
     assert tl.raw(2.1)["flat"] > 0.9
+
+
+def test_luizinho_turnaround_has_no_hair_across_face():
+    """Regressão: a borda do cabelo não pode atravessar o rosto quando ele gira (pontos do lado escondido)."""
+    ch = character("luizinho")
+    for turn in (0.0, 0.5, 0.85, 1.0, -0.85):
+        a = ch.render_array({"turn": turn}, scale=0.5, jitter=0)
+        assert a[..., 3].any()

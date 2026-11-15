@@ -1,0 +1,90 @@
+{
+  "id": "luizinho",
+  "name": "Luizinho",
+  "channel": "Luizinho e Turminha",
+  "description": "Menino muito animado, protagonista do canal; canta, dança e apresenta a turma.",
+  "personality": "Alegre, curioso, energia sem fim; sorriso aberto por padrão; reage com o corpo todo.",
+  "appearance": "Cabelão castanho-escuro volumoso e fofo com franja, olhos castanhos grandes e brilhantes, pele morena clara, bochechas rosadas, regata vermelha, bermuda azul, tênis azuis.",
+  "proportions": {
+    "height_u": 400,
+    "heads_tall": 2.3,
+    "notes": "cabeça ~180u de largura; corpo de criança pequena"
+  },
+  "style": "turminha (contorno na cor da peça, chapado) — characters/kit.py",
+  "reference": "referencia/foto.png (local, fora do git; nunca publicar)",
+  "palette": {
+    "skin": "#E8AE86",
+    "skin_shade": "#D2946D",
+    "hair": "#3A2A22",
+    "hair_light": "#5E4536",
+    "shirt": "#E0342E",
+    "shirt_trim": "#B8231F",
+    "shorts": "#3E73C8",
+    "shoe": "#2F8EE0",
+    "sole": "#FFFFFF",
+    "iris": "#6B3D1F",
+    "blush": "#F2837A",
+    "lips": "#D9776D",
+    "brow": "#3A2A22"
+  },
+  "views": [
+    "frente",
+    "3/4",
+    "perfil",
+    "3/4 costas",
+    "costas"
+  ],
+  "expressions": [
+    "angry",
+    "confused",
+    "crying",
+    "determined",
+    "dizzy",
+    "happy",
+    "laughing",
+    "neutral",
+    "sad",
+    "scared",
+    "shock",
+    "sleepy",
+    "sly",
+    "surprised"
+  ],
+  "mouths": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "X"
+  ],
+  "animations": [
+    "bounce",
+    "crash",
+    "eat",
+    "fall",
+    "grab",
+    "jump",
+    "laugh",
+    "look_around",
+    "point",
+    "run",
+    "shake_fist",
+    "shock_reaction",
+    "sit",
+    "slip",
+    "sneak",
+    "stand",
+    "take",
+    "turn",
+    "walk"
+  ],
+  "model_sheet": {
+    "png": "luizinho_model_sheet.png",
+    "kra": "luizinho_model_sheet.kra"
+  },
+  "source": "toonstudio/characters/luizinho.py"
+}
