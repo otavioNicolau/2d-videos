@@ -233,7 +233,7 @@ class Episode:
             for i in range(n):
                 _, u = beat_phase(g0 + i / self.fps, song["grid"])
                 beat_hit[i] = round(math.exp(-7.0 * max(0.0, u)), 3)
-        pulse = float(s.get("bg_pulse", 0.025 if bg.get("graphic") else 0.0))
+        pulse = float(s.get("bg_pulse", 0.0))
         layers = []
         for l in bg["layers"]:
             L = {"file": str(bgdir / l["file"]), "parallax": l["parallax"], "z": l["z"],

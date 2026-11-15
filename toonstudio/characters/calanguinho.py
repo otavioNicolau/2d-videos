@@ -12,7 +12,7 @@ import numpy as np
 
 from ..drawing.ink import Ink, ellipse_pts
 from .base import Character, View, lerp, rot
-from .kit import Kit, Style, darken, lighten
+from .kit import Kit, Style, darken, ik2, lighten
 
 SOFT = Style(width=3.0, vary=0.0, ink_k=0.7, shade_k=0.8, soft=True)   # mesmo acabamento suave da turma
 
@@ -170,16 +170,14 @@ class Calanguinho(Character):
                      color_=PAL["body"])
 
     def _arm(self, kit: Kit, P, which, S, f, s, behind):
-        H = (S[0] + P[f"hand_{which}_x"] * f, S[1] + P[f"hand_{which}_y"])
-        dx, dy = H[0] - S[0], H[1] - S[1]
-        L = math.hypot(dx, dy) or 1
-        nx, ny = -dy / L, dx / L
-        if nx * -f < 0:
-            nx, ny = -nx, -ny
+        T = (S[0] + P[f"hand_{which}_x"] * f * 0.8, S[1] + P[f"hand_{which}_y"] * 0.8)
         bend = P[f"hand_{which}_bend"]
-        mid = ((S[0] + H[0]) / 2 + nx * bend * L, (S[1] + H[1]) / 2 + ny * bend * L)
+        E, H = ik2(S, T, 40, 38, (-f if bend >= 0 else f, 0.35))     # braço com cotovelo (sem "borracha")
+        dx, dy = H[0] - E[0], H[1] - E[1]
+        L = math.hypot(dx, dy) or 1
         col = darken(PAL["body"], 0.9) if behind else PAL["body"]
-        kit.limb([S, mid, H], 22, 17, col)
+        kit.limb([S, E], 22, 20, col)
+        kit.limb([E, H], 20, 17, col)
         kit.hand(H, (dx / L, dy / L), P[f"paw_{which}"], PAL["body"], behind, size=19)
 
     def _leg(self, kit: Kit, P, which, Hp, f, s, behind=False):

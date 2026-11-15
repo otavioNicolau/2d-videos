@@ -187,6 +187,26 @@ class Kit:
             self.k.stroke([(cx + f * 4, F[1] - 30), (cx + f * 16, F[1] - 26)], 3, color_="#FFFFFF")
 
 
+def ik2(S, T, l1: float, l2: float, side: tuple[float, float]):
+    """IK de dois ossos (ombro→cotovelo→mão, quadril→joelho→tornozelo) com comprimentos FIXOS.
+    O alvo fora de alcance é puxado para a distância máxima (o braço estica reto, nunca "estica como borracha").
+    `side` = direção para onde a junta deve dobrar. Retorna (junta, ponta)."""
+    dx, dy = T[0] - S[0], T[1] - S[1]
+    d = math.hypot(dx, dy) or 1e-6
+    reach = (l1 + l2) * 0.999
+    near = abs(l1 - l2) + 1e-3
+    dd = min(max(d, near), reach)
+    ux, uy = dx / d, dy / d
+    E_ = (S[0] + ux * dd, S[1] + uy * dd)
+    a = (l1 * l1 - l2 * l2 + dd * dd) / (2 * dd)
+    h = math.sqrt(max(0.0, l1 * l1 - a * a))
+    px, py = S[0] + ux * a, S[1] + uy * a
+    nx, ny = -uy, ux
+    if nx * side[0] + ny * side[1] < 0:
+        nx, ny = -nx, -ny
+    return (px + nx * h, py + ny * h), E_
+
+
 def _rgba(hex_color: str):
     c = hex_color.lstrip("#")
     return tuple(int(c[i:i + 2], 16) / 255 for i in (0, 2, 4)) + (1.0,)

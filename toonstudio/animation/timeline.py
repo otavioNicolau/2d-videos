@@ -157,7 +157,7 @@ class CharTimeline:
             ax, ay = max(-6e4, min(6e4, ax)), max(-6e4, min(6e4, ay))
             for _ in range(2):        # follow-through vertical: cabeça "pesa" ao quicar; cabelo e chapéu atrasam
                 h = dt / 2
-                hy_a = -110 * hy - 12 * hy_v - 0.0016 * ay
+                hy_a = -160 * hy - 22 * hy_v - 0.0008 * ay
                 hy_v += hy_a * h
                 hy += hy_v * h
                 hb_a = -70 * hb - 6 * hb_v - 0.00012 * ay
@@ -166,8 +166,8 @@ class CharTimeline:
                 hat_a = -80 * hat - 7 * hat_v - 0.00005 * ax * f
                 hat_v += hat_a * h
                 hat += hat_v * h
-            p["head_dy"] = p.get("head_dy", 0.0) + max(-14, min(14, hy * 30))
-            p["hair_bounce"] = p.get("hair_bounce", 0.0) + max(-1.0, min(1.0, hb * 8))
+            p["head_dy"] = p.get("head_dy", 0.0) + max(-4, min(4, hy * 12))
+            p["hair_bounce"] = p.get("hair_bounce", 0.0) + max(-0.5, min(0.5, hb * 4))
             p["hat_tilt"] = p.get("hat_tilt", 0.0) + max(-0.3, min(0.3, hat * 2))
             # mola amortecida: k rigidez, c amortecimento, impulsos pela aceleração
             for _ in range(2):

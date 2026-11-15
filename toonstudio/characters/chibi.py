@@ -14,7 +14,7 @@ import numpy as np
 
 from ..drawing.ink import Ink, ellipse_pts
 from .base import Character, View, lerp, rot
-from .kit import Kit, Style, darken, lighten
+from .kit import Kit, Style, darken, ik2, lighten
 
 SOFT = Style(width=2.6, vary=0.0, ink_k=0.78, shade_k=0.8, soft=True)   # contorno quase invisível (tom da peça)
 ARM_K, LEG_K = 0.7, 0.6
@@ -140,26 +140,24 @@ class Chibi(Character):
         kit.k.shape(ellipse_pts(S[0] + f * 4, S[1] + 8, 20, 17, 0, 12), fill=darken(L.top, 0.94), line=0)
 
     def _arm(self, kit: Kit, P, which, S, f, s, behind, sleeve: bool = True):
+        """Braço de verdade: braço + antebraço de comprimento fixo, dobrando no cotovelo (IK de 2 ossos)."""
         L = self.look
         ak = ARM_K * L.extra.get("braco", 1.0)
-        H = (S[0] + P[f"hand_{which}_x"] * f * ak, S[1] + P[f"hand_{which}_y"] * ak)
-        dx, dy = H[0] - S[0], H[1] - S[1]
-        Ln = math.hypot(dx, dy) or 1
-        nx, ny = -dy / Ln, dx / Ln
-        if nx * -f < 0:
-            nx, ny = -nx, -ny
+        T = (S[0] + P[f"hand_{which}_x"] * f * ak, S[1] + P[f"hand_{which}_y"] * ak)
+        l1 = l2 = 38 * L.extra.get("braco", 1.0)
         bend = P[f"hand_{which}_bend"]
-        mid = ((S[0] + H[0]) / 2 + nx * bend * Ln, (S[1] + H[1]) / 2 + ny * bend * Ln)
+        # cotovelo: + = para trás do personagem; também sempre um pouco para baixo/fora (braço de criança relaxado)
+        side = (-f if bend >= 0 else f, 0.35)
+        E, H = ik2(S, T, l1, l2, side)
+        dx, dy = H[0] - E[0], H[1] - E[1]
+        Ln = math.hypot(dx, dy) or 1
         skin = darken(L.skin, 0.9) if behind else L.skin
-        # manga curtinha da camiseta
-        kit.limb([S, mid, H], 28, 25, skin)
-        if not sleeve:
-            self._hand(kit, P, which, H, dx, dy, Ln, skin)
-            return
-        # manga bufante: um círculo da cor da camiseta cobrindo a junta do ombro (não "salsicha")
-        a = math.atan2(mid[1] - S[1], mid[0] - S[0])
-        c0 = (S[0] + math.cos(a) * 8, S[1] + math.sin(a) * 8)
-        kit.blob(ellipse_pts(c0[0], c0[1], 23, 21, a, 14), darken(L.top, 0.9) if behind else L.top)
+        kit.limb([S, E], 28, 27, skin)               # braço (segmento reto)
+        kit.limb([E, H], 27, 25, skin)               # antebraço (segmento reto)
+        if sleeve:
+            a = math.atan2(E[1] - S[1], E[0] - S[0])
+            c0 = (S[0] + math.cos(a) * 8, S[1] + math.sin(a) * 8)
+            kit.blob(ellipse_pts(c0[0], c0[1], 23, 21, a, 14), darken(L.top, 0.9) if behind else L.top)
         self._hand(kit, P, which, H, dx, dy, Ln, skin)
 
     def _hand(self, kit: Kit, P, which, H, dx, dy, Ln, skin):
@@ -171,15 +169,16 @@ class Chibi(Character):
             kit.blob(ellipse_pts(H[0] + math.cos(a) * r, H[1] + math.sin(a) * r, 8, 6, a, 8), skin, shade=False)
 
     def _leg(self, kit: Kit, P, which, Hp, f, s, behind):
+        """Perna com coxa e canela de comprimento fixo; o joelho dobra para a frente (IK)."""
         L = self.look
         F = (Hp[0] + P[f"foot_{which}_x"] * f * LEG_K, P[f"foot_{which}_y"] * LEG_K)
         ankle = (F[0], F[1] - 14)
-        bend = P[f"foot_{which}_bend"]
-        dx, dy = ankle[0] - Hp[0], ankle[1] - Hp[1]
-        Ln = math.hypot(dx, dy) or 1
-        mid = ((Hp[0] + ankle[0]) / 2 + f * bend * Ln * 0.5, (Hp[1] + ankle[1]) / 2)
+        seg = (66 * L.extra.get("perna", 1.0) - 14) / 2 + 1.5      # em pé fica quase reta, sem esticar
+        K, A = ik2(Hp, ankle, seg, seg, (f, 0.0))
         skin = darken(L.skin, 0.9) if behind else L.skin
-        kit.limb([Hp, mid, ankle], 34, 30, skin)
+        kit.limb([Hp, K], 34, 32, skin)
+        kit.limb([K, A], 32, 30, skin)
+        F = (A[0], A[1] + 14)
         cx = F[0] + f * s * 10
         shoe = darken(L.shoe, 0.88) if behind else L.shoe
         kit.blob(ellipse_pts(cx, F[1] - 14, lerp(30, 38, s), 17, P[f"foot_{which}_rot"] * f, 14), shoe)
