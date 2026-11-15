@@ -105,8 +105,25 @@ def test_whole_gang_uses_chibi_template_and_renders():
     from toonstudio.characters.chibi import TURMA, Chibi
     from toonstudio.characters.base import EXPRESSIONS, expression
     for cid in TURMA:
+        if cid == "laurinha":          # Laurinha agora é a muriçoca oficial (BIBLIA_VISUAL.md)
+            continue
         ch = character(cid)
         assert isinstance(ch, Chibi)
         for e in ("happy", "joy", "surprised"):
             assert ch.render_array({"turn": 0.2, **expression(e)}, scale=0.3, jitter=0)[..., 3].any()
         assert ch.render_array({"turn": 0.0, "back": True}, scale=0.3, jitter=0)[..., 3].any()
+
+
+def test_official_style_is_flat_bible_rule_7():
+    """BIBLIA_VISUAL §6, item 7: o estilo oficial não usa gradiente, brilho nem desfoque."""
+    from toonstudio.core.config import ROOT
+    for f in ("toonstudio/characters/flat_muri.py", "toonstudio/backgrounds/plano.py"):
+        src = (ROOT / f).read_text()
+        for banned in ("GradientShader", "MaskFilter", "soft=", "GaussianBlur"):
+            assert banned not in src, (f, banned)
+    from toonstudio.characters.flat_muri import FlatMuri
+    for cid in ("laurinha", "luisinho"):
+        ch = character(cid)
+        assert isinstance(ch, FlatMuri)
+        for p in ({"turn": 0.2}, {"turn": 0.3, "fly": 1, "wing_phase": 0.4}, {"turn": 0.0, "back": True}):
+            assert ch.render_array(p, scale=0.3, jitter=0)[..., 3].any()
