@@ -11,11 +11,11 @@
 
 ## Cenas
 
-- **s01_chegada** — 126 quadros; laurinha: 126 desenhos, luizinho: 126 desenhos
-- **s02_zumzum** — 125 quadros; laurinha: 125 desenhos, luizinho: 125 desenhos
+- **s01_andam_acenam** — 126 quadros; laurinha: 126 desenhos, luizinho: 126 desenhos
+- **s02_voam** — 125 quadros; laurinha: 125 desenhos, luizinho: 125 desenhos
 
 ## Avisos
 
 - render final ainda não aprovado (approval.final_render = false): será gerado como CANDIDATO
-- storyboard s01_chegada: sem storyboard
-- storyboard s02_zumzum: sem storyboard
+- storyboard s01_andam_acenam: sem storyboard
+- storyboard s02_voam: sem storyboard
