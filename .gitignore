@@ -16,3 +16,7 @@ projects/*/output/*.mp4
 projects/*/output/*.png
 # referências pessoais (fotos) — nunca versionar
 library/characters/*/referencia/
+# músicas (arquivos de áudio de terceiros/usuário — nunca versionar)
+projects/*/musica/
+# análise musical (voz separada, letra de terceiros) — regenerável, nunca versionar
+projects/*/analise/

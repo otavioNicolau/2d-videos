@@ -6,6 +6,8 @@
   toonstudio modelsheet <personagem>        folha de modelo PNG + KRA (Krita)
   toonstudio background <id>                pinta o cenário e gera KRA com as camadas
   toonstudio catalog                        biblioteca de animações/expressões (JSON)
+  toonstudio song import <projeto> <arquivo>  copia a música (original intocado, somente leitura) + cópia de trabalho
+  toonstudio song analyze <projeto>         voz separada, batidas, letra palavra a palavra → analise/song.json
   toonstudio storyboard <episódio>          prévia rápida (3 painéis por plano) antes do render caro
   toonstudio board <episódio> <cena> aprovar|rejeitar ["nota"]   decisão de storyboard por plano
   toonstudio krita <arquivo.kra|ora>        abre no Krita (Windows)
@@ -31,6 +33,8 @@ def main(argv=None) -> int:
     m = sub.add_parser("modelsheet"); m.add_argument("character")
     g = sub.add_parser("background"); g.add_argument("id", nargs="?", default="floresta_clareira")
     sub.add_parser("catalog")
+    sg = sub.add_parser("song"); sg.add_argument("op", choices=["import", "analyze"]); sg.add_argument("episode")
+    sg.add_argument("file", nargs="?")
     sb = sub.add_parser("storyboard"); sb.add_argument("episode")
     bd = sub.add_parser("board"); bd.add_argument("episode"); bd.add_argument("scene"); bd.add_argument("decision", choices=["aprovar", "rejeitar"]); bd.add_argument("notes", nargs="?", default="")
     k = sub.add_parser("krita"); k.add_argument("file")
@@ -73,6 +77,20 @@ def main(argv=None) -> int:
             out = LIBRARY / "backgrounds" / args.id
             meta = forest.build(out / "layers")
             print(layers_to_kra(out / "layers", out / f"{args.id}.kra", meta))
+            return 0
+        if args.cmd == "song":
+            from .audio import song
+            pdir = PROJECTS / args.episode
+            if args.op == "import":
+                if not args.file:
+                    raise StudioError("informe o arquivo de áudio (MP3/WAV/M4A) a importar")
+                print(song.import_song(Path(args.file), pdir))
+            else:
+                from .audio import voice
+                try:
+                    print(song.analyze(pdir))
+                finally:
+                    voice.shutdown()
             return 0
         if args.cmd == "storyboard":
             from .composition.storyboard import build

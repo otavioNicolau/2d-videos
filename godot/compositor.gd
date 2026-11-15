@@ -51,14 +51,14 @@ func _ready() -> void:
 	RenderingServer.set_default_clear_color(Color(0, 0, 0))
 	for l in job["layers"]:
 		var s := Sprite2D.new()
-		s.centered = false
+		s.centered = bool(l.get("center", false))
 		s.texture = _tex(l["file"], true)
 		s.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR_WITH_MIPMAPS
 		var k := 1.0 / float(l["scale"])
 		s.scale = Vector2(k, k)
 		s.z_index = int(l["z"])
 		add_child(s)
-		layers.append([s, float(l["parallax"])])
+		layers.append([s, float(l["parallax"]), l])
 	for p in job["performers"]:
 		var s := Sprite2D.new()
 		s.centered = false
@@ -94,7 +94,15 @@ func _process(_delta: float) -> void:
 	var hh := float(job["resolution"][1]) / 2.0
 	for l in layers:
 		var f: float = l[1]
-		l[0].position = Vector2((cx - hw) * (1.0 - f), (cy - hh) * (1.0 - f))
+		var ld: Dictionary = l[2]
+		if ld.get("fixed", false):
+			# camada gráfica presa à tela (fundos de dança): centrada na câmera; zoom ainda aplica
+			var off := Vector2(float(ld.get("x", 0.0)), float(ld.get("y", 0.0)))
+			l[0].position = Vector2(cx, cy) + (off if l[0].centered else off - Vector2(hw, hh))
+		else:
+			l[0].position = Vector2((cx - hw) * (1.0 - f), (cy - hh) * (1.0 - f))
+		if ld.has("angles"):
+			l[0].rotation_degrees = float(ld["angles"][i])
 	for pr in performers:
 		var s: Sprite2D = pr[0]
 		var p: Dictionary = pr[1]
@@ -106,5 +114,9 @@ func _process(_delta: float) -> void:
 		s.scale = Vector2(k, k)
 		s.position = Vector2(float(tr[0]) - float(p["anchor"][0]) * k, float(tr[1]) - float(p["anchor"][1]) * k)
 		s.visible = bool(tr[3])
-	fade_rect.color.a = float(job["fade"][i]) if job.has("fade") else 0.0
+	var fl := float(job["flash"][i]) if job.has("flash") else 0.0
+	if fl > 0.0:
+		fade_rect.color = Color(1, 1, 1, fl)        # clarão branco na batida (entrada de refrão)
+	else:
+		fade_rect.color = Color(0, 0, 0, float(job["fade"][i]) if job.has("fade") else 0.0)
 	i += 1

@@ -15,7 +15,6 @@ from PIL import Image, ImageDraw, ImageFont
 from ..animation.timeline import compile_character
 from ..core.config import LIBRARY
 from ..core.registry import character
-from ..core.validate import load_background
 
 Image.MAX_IMAGE_PIXELS = None
 FONT = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
@@ -36,7 +35,7 @@ def _camera_at(s, t):
     return val
 
 
-def panel(ep: dict, s: dict, t: float, layers: list) -> Image.Image:
+def panel(ep: dict, s: dict, t: float, layers: list, beats: list | None = None, offset: float = 0.0) -> Image.Image:
     W, H = ep["resolution"]
     cx, cy, z = _camera_at(s, t)
     k = PW / W
@@ -53,6 +52,11 @@ def panel(ep: dict, s: dict, t: float, layers: list) -> Image.Image:
 
     items = []
     for l, im in layers:
+        if l.get("fixed"):     # fundo gráfico preso à tela: cobre o quadro (rotação dos raios é ignorada na prévia)
+            fit = im.resize((PW, int(PW * im.height / im.width))) if not l.get("center") else \
+                im.resize((int(PW * 1.6), int(PW * 1.6 * im.height / im.width)))
+            _paste(out, fit, (PW - fit.width) // 2, (PH - fit.height) // 2)
+            continue
         f = l["parallax"]
         off_x = (cx - W / 2) * (1 - f)
         off_y = (cy - H / 2) * (1 - f)
@@ -60,7 +64,8 @@ def panel(ep: dict, s: dict, t: float, layers: list) -> Image.Image:
     perf = {**s.get("characters", {}), **s.get("props", {})}
     for who, spec in perf.items():
         ch = character(ep["cast"][who]["character"])
-        tl = compile_character(ch, spec, ep["fps"], s["duration"])
+        bl = [b - offset for b in (beats or [])]
+        tl = compile_character(ch, spec, ep["fps"], s["duration"], beats=bl)
         p = tl.raw(min(t, s["duration"] - 1e-3))
         im = Image.fromarray(ch.render_array(p, scale=0.5, jitter=0.0), "RGBA")
         items.append((int(spec.get("start", {}).get("z", 1)), "ch",
@@ -79,20 +84,34 @@ def _paste(dst: Image.Image, im: Image.Image, x: int, y: int) -> None:
 
 def build(ep_dir: Path) -> Path:
     ep = json.loads((ep_dir / "episode.json").read_text(encoding="utf-8"))
-    bg = load_background(ep["background"])
-    bdir = LIBRARY / "backgrounds" / ep["background"] / "layers"
-    layers = []
-    for l in bg["layers"]:
-        im = Image.open(bdir / l["file"]).convert("RGBA")
-        im = im.resize((im.width // 3, im.height // 3))
-        layers.append(({**l, "_scale": bg["scale"] / 3}, im))
+    from ..backgrounds import registry
+    cache: dict[str, list] = {}
+
+    def layers_for(bid: str) -> list:
+        if bid not in cache:
+            bg = registry.ensure(bid)
+            bdir = LIBRARY / "backgrounds" / bid / "layers"
+            ls = []
+            for l in bg["layers"]:
+                im = Image.open(bdir / l["file"]).convert("RGBA")
+                im = im.resize((max(1, im.width // 3), max(1, im.height // 3)))
+                ls.append(({**l, "_scale": l.get("scale_override", bg["scale"]) / 3}, im))
+            cache[bid] = ls
+        return cache[bid]
+    beats = None
+    st = ep.get("soundtrack")
+    if st:
+        song = json.loads((ep_dir / st.get("analysis", "analise/song.json")).read_text(encoding="utf-8"))
+        beats = song["beats"][song.get("downbeat_phase", 0) % 2::2] if st.get("beat_grid", "half") == "half" else song["beats"]
     status_p = ep_dir / "output" / "storyboard.json"
     status = json.loads(status_p.read_text()) if status_p.exists() else {}
     f = ImageFont.truetype(FONT, 20)
     tw, th = 480, 270
     sheet = Image.new("RGB", (3 * (tw + 8) + 330, len(ep["scenes"]) * (th + 12) + 12), (28, 26, 30))
     d = ImageDraw.Draw(sheet)
+    offset = st["start"] if st else 0.0
     for r, s in enumerate(ep["scenes"]):
+        layers = layers_for(s.get("background", ep["background"]))
         y = 12 + r * (th + 12)
         st = status.setdefault(s["id"], {"status": "pendente", "notes": ""})
         col = {"aprovado": (120, 220, 120), "rejeitado": (240, 110, 100)}.get(st["status"], (240, 210, 120))
@@ -102,8 +121,9 @@ def build(ep_dir: Path) -> Path:
         for i, line in enumerate(_wrap(s.get("description", ""), 30)[:7]):
             d.text((12, y + 90 + i * 22), line, fill=(215, 215, 215), font=ImageFont.truetype(FONT, 16))
         for i, frac in enumerate((0.05, 0.5, 0.95)):
-            pn = panel(ep, s, frac * s["duration"], layers).convert("RGB").resize((tw, th))
+            pn = panel(ep, s, frac * s["duration"], layers, beats, offset).convert("RGB").resize((tw, th))
             sheet.paste(pn, (330 + i * (tw + 8), y))
+        offset += s["duration"]
     out = ep_dir / "output"
     out.mkdir(exist_ok=True)
     sheet.save(out / "storyboard.png")

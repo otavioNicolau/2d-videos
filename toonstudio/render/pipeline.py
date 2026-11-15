@@ -71,17 +71,29 @@ class Episode:
                 self.report["warnings"].append(f"storyboard {s['id']}: {st}{' — ' + note if note else ''}")
         log(f"validação ok ({len(self.ep['scenes'])} cenas)")
 
-    def background(self) -> dict:
-        bg_id = self.ep["background"]
-        src = ROOT / "toonstudio" / "backgrounds"
-        h = file_sha(src)
-        out = LIBRARY / "backgrounds" / bg_id / "layers"
-        if not self.state.fresh(f"bg:{bg_id}", h, out / "background.json"):
-            log(f"cenário {bg_id}: pintando camadas…")
-            from ..backgrounds import forest
-            forest.build(out, scale=self.scale)
-            self.state.mark(f"bg:{bg_id}", h)
-        return load_background(bg_id)
+    def background(self) -> dict[str, dict]:
+        """Todos os cenários usados (episódio + por cena), construídos sob demanda pelo registro."""
+        from ..backgrounds import registry
+        ids = {self.ep["background"], *(s.get("background") for s in self.ep["scenes"] if s.get("background"))}
+        out = {}
+        for bid in sorted(ids):
+            out[bid] = registry.ensure(bid, scale=self.scale)
+        return out
+
+    def song(self) -> dict | None:
+        """Análise da música (clipes): batidas, palavras, voz isolada. None em episódios sem trilha."""
+        st = self.ep.get("soundtrack")
+        if not st:
+            return None
+        sp = self.dir / st.get("analysis", "analise/song.json")
+        if not sp.exists():
+            raise StudioError(f"música sem análise: rode `toonstudio song analyze {self.slug}`")
+        song = json.loads(sp.read_text(encoding="utf-8"))
+        beats = song["beats"]
+        if st.get("beat_grid", "half") == "half":
+            beats = beats[song.get("downbeat_phase", 0) % 2::2]
+        song["grid"] = beats
+        return song
 
     def voices(self) -> dict[str, dict]:
         """Gera/recupera todas as falas. Retorna {chave: {wav, cues, duration, …}}."""
@@ -113,15 +125,22 @@ class Episode:
         return lines
 
     # -------------------------------------------------------------- cena
-    def scene(self, s: dict, bg: dict, lines: dict, force: bool = False) -> Path:
+    def scene(self, s: dict, bgs: dict, lines: dict, force: bool = False, offset: float = 0.0, song: dict | None = None) -> Path:
         sid = s["id"]
         sdir = self.build / "scenes" / sid
         n = int(round(s["duration"] * self.fps))
+        bg_id = s.get("background", self.ep["background"])
+        bg = bgs[bg_id]
         perf = {**s.get("characters", {}), **s.get("props", {})}
         line_meta = {k: {"cues": v["cues"], "duration": v["duration"]} for k, v in lines.items() if k.startswith(sid + ":")}
+        # música: tempo da cena na música, grade de batidas local e bocas do canto
+        g0 = (self.ep["soundtrack"]["start"] + offset) if song else 0.0
+        beats_local = [b - g0 for b in song["grid"] if -2 <= b - g0 <= s["duration"] + 2] if song else []
+        sing_cues = self._sing(s, song, g0) if song else {}
         h = sha({"scene": s, "cast": {w: self.ep["cast"][w] for w in perf}, "lines": line_meta, "fps": self.fps,
-                 "res": [self.W, self.H], "scale": self.scale, "code": file_sha(*CODE_HASH_PATHS), "v": 3,
-                 "godot": file_sha(GODOT_PROJECT / "compositor.gd"), "bg": bg.get("layers")})
+                 "res": [self.W, self.H], "scale": self.scale, "code": file_sha(*CODE_HASH_PATHS), "v": 4,
+                 "godot": file_sha(GODOT_PROJECT / "compositor.gd"), "bg": [bg_id, bg.get("layers")],
+                 "beats": [round(b, 3) for b in beats_local], "sing": sing_cues})
         comp_dir = sdir / "comp"
         if not force and self.state.fresh(f"scene:{sid}", h, comp_dir / f"{n:06d}.png"):
             log(f"{sid}: sem mudanças (cache)")
@@ -138,7 +157,9 @@ class Episode:
                 if d["who"] == who:
                     L = lines[f"{sid}:{d['t']}"]
                     spans.append((d["t"], d["t"] + L["duration"], [(d["t"] + t, v) for t, v in L["cues"]]))
-            tl = compile_character(ch, spec, self.fps, s["duration"], spans)
+            for sp_ in sing_cues.get(who, []):
+                spans.append(tuple(sp_))
+            tl = compile_character(ch, spec, self.fps, s["duration"], spans, beats=beats_local)
             cells, drawings, stage = expose(tl)
             ldir = sdir / "levels" / who
             if ldir.exists():
@@ -171,11 +192,15 @@ class Episode:
             ot.patch_camera(p, cw, chh, self.fps)
         self.state.mark(f"tnz:{sid}", ot.scene_hash(edit))
         performers = []
+        from concurrent.futures import ThreadPoolExecutor
+        log(f"  tcomposer: {', '.join(c['name'] for c in columns)} (em paralelo)")
+        with ThreadPoolExecutor(max_workers=min(3, len(columns))) as tp:
+            rendered = dict(zip([c["name"] for c in columns],
+                                tp.map(lambda c: ot.render(render_scenes[c["name"]], sdir / "otrender" / c["name"], n), columns)))
         for c in columns:
             who = c["name"]
             out = sdir / "otrender" / who
-            log(f"  tcomposer: {who}")
-            frames = ot.render(render_scenes[who], out, n)
+            frames = rendered[who]
             self._qa_level(qa, who, c["cells"], Path(c["level_dir"]), frames)
             st = tracks[who]["stage"]
             vis = [True] * n
@@ -194,11 +219,30 @@ class Episode:
             k = int(0.4 * self.fps)
             for i in range(k):
                 fade[i] = max(fade[i], 1 - (i + 1) / k)
-        bgdir = LIBRARY / "backgrounds" / self.ep["background"] / "layers"
-        job = {"resolution": [self.W, self.H], "fps": self.fps, "frames": n, "camera": cam, "fade": fade,
-               "layers": [{"file": str(bgdir / l["file"]), "parallax": l["parallax"], "z": l["z"], "scale": bg["scale"]}
-                          for l in bg["layers"]],
-               "performers": performers}
+        bgdir = LIBRARY / "backgrounds" / bg_id / "layers"
+        layers = []
+        for l in bg["layers"]:
+            L = {"file": str(bgdir / l["file"]), "parallax": l["parallax"], "z": l["z"],
+                 "scale": l.get("scale_override", bg["scale"])}
+            if l.get("fixed"):
+                L.update({"fixed": True, "center": bool(l.get("center")),
+                          "x": 0.0 if l.get("center") else -(l["width"] - self.W) / 2,
+                          "y": 0.0 if l.get("center") else -(l["height"] - self.H) / 2})
+            if l.get("spin_per_beat") and song:
+                from ..animation.cycles import beat_phase
+                ang = []
+                for i in range(n):
+                    k_, u = beat_phase(g0 + i / self.fps, song["grid"])
+                    ang.append(round(l["spin_per_beat"] * (k_ + (1 - (1 - min(u, 1)) ** 3)), 3))
+                L["angles"] = ang
+            layers.append(L)
+        flash = [0.0] * n
+        if s.get("flash_in"):
+            for i, a in enumerate((1.0, 0.85, 0.6, 0.38, 0.2, 0.08)):
+                if i < n:
+                    flash[i] = a
+        job = {"resolution": [self.W, self.H], "fps": self.fps, "frames": n, "camera": cam, "fade": fade, "flash": flash,
+               "layers": layers, "performers": performers}
         jp = sdir / "job.json"
         jp.write_text(json.dumps(job))
         self._godot(jp, comp_dir, n)
@@ -207,6 +251,24 @@ class Episode:
         self.report["scenes"][sid] = qa
         self.state.mark(f"scene:{sid}", h)
         return comp_dir
+
+    def _sing(self, s: dict, song: dict, g0: float) -> dict[str, list]:
+        """Bocas do canto: Rhubarb na voz isolada, só nos trechos marcados em `sing` (tempo local da cena)."""
+        from ..audio import song as songmod
+        out: dict[str, list] = {}
+        cdir = self.build / "audio" / "sing"
+        cdir.mkdir(parents=True, exist_ok=True)
+        for k, sg in enumerate(s.get("sing", [])):
+            a, b = g0 + sg["from"], g0 + sg["to"]
+            text = " ".join(w["w"] for w in song["words"] if a - 0.1 <= w["s"] < b) or "a"
+            cp = cdir / f"{s['id']}_{sg['who']}_{k}_{a:.2f}_{b:.2f}.json"
+            if cp.exists():
+                cues = [tuple(c) for c in json.loads(cp.read_text())]
+            else:
+                cues = songmod.sung_visemes(Path(song["files"]["vocals"]), a, b, text, cdir / "tmp_rhubarb.json")
+                cp.write_text(json.dumps(cues))
+            out.setdefault(sg["who"], []).append([sg["from"], sg["to"], [[round(t - g0, 3), v] for t, v in cues]])
+        return out
 
     def _check_dialog_fits(self, lines: dict) -> None:
         """A fala gerada tem duração real: ela precisa caber no plano (senão a boca para no corte e o som invade o próximo)."""
@@ -311,8 +373,47 @@ class Episode:
 
     # -------------------------------------------------------------- áudio e montagem
     def mix(self, lines: dict) -> Path:
+        st = self.ep.get("soundtrack")
+        if st:
+            # clipe: o áudio é a música original — só recortamos o trecho numa CÓPIA (o arquivo original não é tocado)
+            out = self.build / "audio" / "trilha_trecho.wav"
+            out.parent.mkdir(parents=True, exist_ok=True)
+            dur = st["end"] - st["start"]
+            af = []
+            if st.get("fade_out"):
+                af.append(f"afade=t=out:st={dur - st['fade_out']:.3f}:d={st['fade_out']:.3f}")
+            cmd = [tool("ffmpeg"), "-y", "-loglevel", "error", "-ss", f"{st['start']:.3f}", "-t", f"{dur:.3f}",
+                   "-i", str(self.dir / st["file"]), "-ar", "48000", "-ac", "2"]
+            if af:
+                cmd += ["-af", ",".join(af)]
+            subprocess.run(cmd + [str(out)], check=True)
+            return out
         from ..audio import mixer
         return mixer.mix_episode(self, lines)
+
+    def _overlays(self, out_dir: Path) -> list[str]:
+        """Filtros de texto/marca: letra palavra a palavra, aviso inicial, rodapé e logo (clipes)."""
+        from . import brand
+        ov = self.ep.get("overlays", {})
+        cap = self.ep.get("captions")
+        st = self.ep.get("soundtrack")
+        total = sum(s["duration"] for s in self.ep["scenes"])
+        lines = []
+        if cap and st:
+            data = json.loads((self.dir / cap["lyrics"]).read_text(encoding="utf-8"))
+            for ln in data["lines"]:
+                ws = [{"w": w["w"], "s": w["s"] - st["start"], "e": w["e"] - st["start"]} for w in ln["words"]]
+                if ws and ws[-1]["e"] > 0 and ws[0]["s"] < total:
+                    lines.append({"s": ws[0]["s"], "e": ln["e"] - st["start"], "words": ws})
+        if not (lines or ov.get("card") or ov.get("footer") or ov.get("logo")):
+            return []
+        assf = brand.ass(self.build / "textos.ass", self.W, self.H, lines, ov.get("card"), ov.get("footer"), total,
+                         float(ov.get("card_dur", 5.0)))
+        filt = f"ass={assf}:fontsdir={LIBRARY / 'fonts'}"
+        if ov.get("logo"):
+            lg = brand.logo(self.build / "logo.png", height=118)
+            return ["-i", str(lg), "-filter_complex", f"[0:v][2:v]overlay=28:14[l];[l]{filt}[v]", "-map", "[v]"]
+        return ["-vf", filt, "-map", "0:v"]
 
     def assemble(self, wav: Path) -> Path:
         approved = bool(self.ep.get("approval", {}).get("final_render"))
@@ -330,23 +431,27 @@ class Episode:
         name = f"{self.ep['id']}{'' if approved else '_CANDIDATO'}.mp4"
         mp4 = out_dir / name
         log(f"FFmpeg: montando {k} quadros → {mp4.name}")
+        extra = self._overlays(out_dir)
+        vmap = extra if extra else ["-map", "0:v"]
         subprocess.run([tool("ffmpeg"), "-y", "-loglevel", "error", "-framerate", str(self.fps), "-i", str(seq / "%06d.png"),
-                        "-i", str(wav), "-map", "0:v", "-map", "1:a", "-c:v", "libx264", "-preset", "slow", "-crf", "17",
-                        "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", str(mp4)],
-                       check=True)
+                        "-i", str(wav), *vmap, "-map", "1:a", "-c:v", "libx264", "-preset", "slow", "-crf", "17",
+                        "-pix_fmt", "yuv420p", "-r", str(self.fps), "-c:a", "aac", "-b:a", "192k", "-shortest",
+                        "-movflags", "+faststart", str(mp4)], check=True)
         shutil.rmtree(seq)
         return mp4
 
     def run(self, only: list[str] | None = None, force: bool = False) -> Path:
         t0 = time.time()
         self.check()
-        bg = self.background()
+        bgs = self.background()
+        song = self.song()
         lines = self.voices()
         self._check_dialog_fits(lines)
+        offset = 0.0
         for s in self.ep["scenes"]:
-            if only and s["id"] not in only:
-                continue
-            self.scene(s, bg, lines, force=force and (not only or s["id"] in only))
+            if not (only and s["id"] not in only):
+                self.scene(s, bgs, lines, force=force and (not only or s["id"] in only), offset=offset, song=song)
+            offset += s["duration"]
         wav = self.mix(lines)
         mp4 = self.assemble(wav)
         from ..qa import review

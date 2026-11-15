@@ -62,3 +62,19 @@ revisão    output/REVISAO.md, prancha.png, qa_report.json
 .venv/bin/python -m toonstudio.cli opentoonz torta-do-caramelo s03_roubo   # retime à mão; o build respeita
 .venv/bin/python -m pytest
 ```
+
+## Modo clipe musical (canal Luizinho e Turminha — ADR-0013)
+
+```bash
+toonstudio song import <projeto> musica.mp3      # original copiado somente-leitura; trabalha numa cópia
+toonstudio song analyze <projeto>                # Demucs (voz) + librosa (batidas) + Whisper (letra) → analise/song.json
+# revisar/corrigir analise/letra.json (palavras com tempo) e escrever episode.json (schema 1.1) no chat
+toonstudio storyboard <projeto>                  # prévia em segundos
+toonstudio build <projeto>                       # MP4 com áudio original, letra palavra a palavra, logo e avisos
+```
+
+- `soundtrack`: trecho [start, end] da música; a soma das cenas tem de bater com o trecho (validado). Cortes de cena na grade de batidas.
+- Ações `dance` (bob, cabeca, lango, lado, bracos) seguem a **grade real de batidas** (meia velocidade por padrão: o "pulso" da dança).
+- `sing`: trechos em que cada personagem canta → visemas do Rhubarb na voz isolada.
+- Cenários por cena: `sertao`, `floresta_clareira`, `danca_<ondas|raios>_<cor>` (raios giram a cada batida no compositor).
+- `flash_in`: clarão branco na entrada (refrões). `overlays`: logo, cartela de aviso e rodapé; `captions`: letra palavra a palavra (ASS/libass).

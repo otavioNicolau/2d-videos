@@ -33,9 +33,10 @@ class Key:
 class Segment:
     t0: float
     t1: float
-    kind: str           # walk | sneak | run | flap
+    kind: str           # walk | sneak | run | flap | dance:<estilo>
     T: float
     blend: float = 0.12
+    amp: float = 1.0
 
 
 @dataclass
@@ -49,6 +50,7 @@ class CharTimeline:
     default_ex: int = 2
     mouth_spans: list[tuple[float, float, list[tuple[float, str]]]] = field(default_factory=list)
     blinks: bool = True
+    beats: list[float] = field(default_factory=list)     # grade principal de batidas da música (clipes)
 
     # ---------------------------------------------------------------- construção
     def add_key(self, t: float, values: dict[str, Any], ease: str = "inout") -> None:
@@ -110,6 +112,8 @@ class CharTimeline:
                 w = easing.inout(min(1.0, w))
                 if s.kind == "flap":
                     ov = cycles.flap(t - s.t0, s.T)
+                elif s.kind.startswith("dance:"):
+                    ov = cycles.dance(s.kind[6:], t, self.beats, s.amp)
                 else:
                     ov = cycles.gait(self.char.id, s.kind, (t - s.t0) / s.T)
                 for k, v in ov.items():
@@ -190,14 +194,15 @@ class CharTimeline:
 
 
 def compile_character(char: Character, spec: dict, fps: int, duration: float,
-                      mouth_spans: list[tuple[float, float, list[tuple[float, str]]]] | None = None) -> CharTimeline:
+                      mouth_spans: list[tuple[float, float, list[tuple[float, str]]]] | None = None,
+                      beats: list[float] | None = None) -> CharTimeline:
     """spec: {"start": {...}, "keys": [{"t", "pose", "expr", "amount", "ease", "in"}], "actions": [{"t", "do", ...}],
     "exposure": 2}
 
     Semântica de animador: um canal SEGURA o valor até a próxima mudança começar. Uma chave de cena chega em `t`
     depois de uma transição de `in` segundos (padrão 0,25; 0 se ease = step). Uma ação segura todos os canais que
     ela mexe até o seu início — nada "começa a cair" antes da trombada."""
-    tl = CharTimeline(char, fps, duration, default_ex=int(spec.get("exposure", 2)))
+    tl = CharTimeline(char, fps, duration, default_ex=int(spec.get("exposure", 2)), beats=list(beats or []))
     base = char.pose()
     base.update({"x": 0.0, "y": 0.0, "z": 0, "depth": 1.0})
     start = dict(spec.get("start", {}))
@@ -243,7 +248,7 @@ def compile_character(char: Character, spec: dict, fps: int, duration: float,
             tl.add_key(t0 + dt_, vals, ease)
         if res.cycle:
             ckind, T = res.cycle
-            tl.segments.append(Segment(t0, t0 + res.dur, ckind, T))
+            tl.segments.append(Segment(t0, t0 + res.dur, ckind, T, amp=float(ev.get("amp", 1.0))))
         if res.ex:
             tl.ex_spans.append((t0, t0 + res.dur + 0.3, res.ex))
         state.update(res.end_state)

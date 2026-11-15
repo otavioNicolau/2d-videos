@@ -54,10 +54,13 @@ def _travel(char: str, st: dict, a: dict, style: str) -> ActionResult:
     to_x = float(a["to_x"])
     d = to_x - x0
     sgn = 1 if d >= 0 else -1
-    v = cycles.speed(char, style) * float(a.get("speed", 1.0))
+    g = cycles.GAITS[char][style]
+    if "T" in a:     # período imposto (ex.: um passo por batida da música)
+        v = g["S"] / (0.5 * float(a["T"]))
+    else:
+        v = cycles.speed(char, style) * float(a.get("speed", 1.0))
     dur = float(a.get("dur", abs(d) / v if v else 1.0))
     turn = float(a.get("turn", sgn * (0.8 if style != "run" else 0.95)))
-    g = cycles.GAITS[char][style]
     T = g["T"] * (abs(d) / dur / cycles.speed(char, style)) ** -1 if dur > 0 and d else g["T"]
     keys = [(0.0, {"x": x0, "turn": turn}, "step"), (dur, {"x": to_x}, "linear")]
     # assentamento ao parar (desaceleração + inclinação de volta)
@@ -323,6 +326,28 @@ def _reach(char_id: str, pose: dict, f: int) -> float:
         return 0.0
     edge = cols[-1] if f > 0 else cols[0]
     return abs(edge / sc - ch.anchor[0])
+
+
+@action("dance", "dance", "Dança no tempo da música (grade real de batidas): bob, cabeca, lango, lado, bracos.",
+        {"style": "estilo", "dur": "s", "amp": "intensidade"})
+def dance(char, st, a):
+    style = a.get("style", "bob")
+    if style not in cycles.DANCES:
+        raise KeyError(f"dança desconhecida: {style} (disponíveis: {cycles.DANCES})")
+    return ActionResult(keys=[(0.0, {}, "step")], cycle=(f"dance:{style}", 0.0), dur=float(a.get("dur", 2.0)), ex=1)
+
+
+@action("wave", "interaction", "Acenar para a câmera (tchau/oi), mão balançando.", {"dur": "s"})
+def wave(char, st, a):
+    d = float(a.get("dur", 1.2))
+    keys = [(0.0, {}, "step"), (0.15, {"hand_n_x": -55, "hand_n_y": -80, "hand_n_bend": 0.35, "paw_n": 3}, "back")]
+    t, k = 0.15, 0
+    while t < d:
+        t += 0.16
+        k += 1
+        keys.append((t, {"hand_n_x": -55 + (22 if k % 2 else -8)}, "inout"))
+    keys.append((d + 0.25, {"hand_n_x": -14, "hand_n_y": 82, "hand_n_bend": 0.2, "paw_n": 0}, "inout"))
+    return ActionResult(keys=keys, dur=d + 0.25, ex=1)
 
 
 def catalog() -> list[dict]:

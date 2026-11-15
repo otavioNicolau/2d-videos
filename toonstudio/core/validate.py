@@ -47,11 +47,29 @@ def validate(ep: dict) -> Report:
     if r.errors:
         return r
     W, H = ep["resolution"]
-    try:
-        bg = load_background(ep["background"])
-    except FileNotFoundError as e:
-        r.errors.append(str(e))
+    from ..backgrounds import registry as bgreg
+    bgs: dict[str, dict] = {}
+    for bid in {ep["background"], *(s.get("background") for s in ep["scenes"] if s.get("background"))}:
+        if not bgreg.known(bid):
+            r.errors.append(f"cenário '{bid}' não existe (biblioteca: {', '.join(bgreg.catalog())})")
+            continue
+        try:
+            bgs[bid] = load_background(bid)
+        except FileNotFoundError:
+            bgs[bid] = bgreg.ensure(bid)
+    if r.errors:
         return r
+    from ..core.config import PROJECTS
+    st = ep.get("soundtrack")
+    if st:
+        if not (PROJECTS / ep["id"] / st["file"]).exists():
+            r.errors.append(f"trilha não encontrada: projects/{ep['id']}/{st['file']} (use `toonstudio song import`)")
+        total = sum(s["duration"] for s in ep["scenes"])
+        if abs(total - (st["end"] - st["start"])) > 0.05:
+            r.errors.append(f"soma das cenas ({total:.2f}s) ≠ trecho da música ({st['end'] - st['start']:.2f}s): o vídeo "
+                            "precisa ter a duração exata do áudio")
+        if ep["fps"] != 30:
+            r.warnings.append("clipes musicais: 30 fps é o padrão combinado")
     cast = ep["cast"]
     for name, c in cast.items():
         if c["character"] not in CHARACTERS:
@@ -89,6 +107,20 @@ def validate(ep: dict) -> Report:
                 r.errors.append(f"{sid}: fala de '{d['who']}', que não está em cena (sem boca para sincronizar)")
             if d["t"] >= dur:
                 r.errors.append(f"{sid}: fala começa depois do fim da cena")
+        for sg in s.get("sing", []):
+            if sg["who"] not in s.get("characters", {}):
+                r.errors.append(f"{sid}: '{sg['who']}' canta mas não está em cena")
+            if not (0 <= sg["from"] < sg["to"] <= dur + 1e-6):
+                r.errors.append(f"{sid}: trecho cantado {sg['from']}–{sg['to']} fora da cena")
+        for who, p in perf.items():
+            for a in p.get("actions", []):
+                if a["do"] == "dance":
+                    from ..animation.cycles import DANCES
+                    if a.get("style", "bob") not in DANCES:
+                        r.errors.append(f"{sid}/{who}: dança '{a.get('style')}' não existe ({', '.join(DANCES)})")
+                    if not ep.get("soundtrack"):
+                        r.errors.append(f"{sid}/{who}: 'dance' precisa de trilha (soundtrack) para a grade de batidas")
+        bg = bgs[s.get("background", ep["background"])]
         for x in s.get("sfx", []):
             if x["id"] not in known_sfx:
                 r.errors.append(f"{sid}: efeito sonoro '{x['id']}' não existe ({', '.join(sorted(known_sfx))})")
@@ -97,13 +129,17 @@ def validate(ep: dict) -> Report:
             vw, vh = W / k["zoom"], H / k["zoom"]
             x0, y0 = k["x"] - vw / 2, k["y"] - vh / 2
             for layer in bg["layers"]:
+                if layer.get("fixed"):        # camada gráfica presa à tela: cobre o quadro com zoom ≥ 0,9
+                    if k["zoom"] < 0.9:
+                        r.errors.append(f"{sid}: zoom {k['zoom']} < 0,9 num fundo gráfico (mostraria a borda)")
+                    continue
                 f = layer["parallax"]
                 center = (k["x"] - W / 2) * f + W / 2          # mesmo modelo do compositor (godot/compositor.gd)
                 left, right = center - vw / 2, center + vw / 2
                 if left < -1 or right > layer["width"] + 1:
                     r.errors.append(f"{sid}: câmera em x={k['x']} (zoom {k['zoom']}) mostra além da camada {layer['name']} "
                                     f"({left:.0f}..{right:.0f}, largura {layer['width']})")
-            if y0 < -1 or y0 + vh > bg["height"] + 1:
+            if not bg.get("graphic") and (y0 < -1 or y0 + vh > bg["height"] + 1):
                 r.errors.append(f"{sid}: câmera em y={k['y']} (zoom {k['zoom']}) mostra fora do cenário na vertical")
     if not ep.get("approval", {}).get("final_render"):
         r.warnings.append("render final ainda não aprovado (approval.final_render = false): será gerado como CANDIDATO")

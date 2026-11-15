@@ -36,8 +36,16 @@ def main() -> None:
                 if sr != 16000:
                     n = int(len(a) * 16000 / sr)
                     a = np.interp(np.linspace(0, len(a) - 1, n), np.arange(len(a)), a).astype(np.float32)
-                segs, _ = asr.transcribe(a, language=req.get("lang", "pt"), beam_size=5, vad_filter=False)
-                proto.write(json.dumps({"ok": True, "text": " ".join(s.text.strip() for s in segs)}) + "\n")
+                words = bool(req.get("words"))
+                segs, _ = asr.transcribe(a, language=req.get("lang", "pt"), beam_size=5, vad_filter=False,
+                                         word_timestamps=words, initial_prompt=req.get("prompt"))
+                segs = list(segs)
+                out = {"ok": True, "text": " ".join(s.text.strip() for s in segs)}
+                if words:
+                    out["segments"] = [{"start": s.start, "end": s.end, "text": s.text.strip(),
+                                        "words": [{"w": w.word.strip(), "s": w.start, "e": w.end, "p": w.probability}
+                                                  for w in (s.words or [])]} for s in segs]
+                proto.write(json.dumps(out, ensure_ascii=False) + "\n")
             elif req["op"] == "kokoro":
                 import numpy as np
                 import soundfile as sf
