@@ -15,13 +15,13 @@ def known(bg_id: str) -> bool:
     if bg_id.startswith("danca_"):
         from .dance import COLORS
         parts = bg_id.split("_", 2)
-        return len(parts) == 3 and parts[1] in ("ondas", "raios") and parts[2] in COLORS
+        return len(parts) == 3 and parts[1] in ("ondas", "raios", "xadrez", "bolinhas") and parts[2] in COLORS
     return False
 
 
 def catalog() -> list[str]:
     from .dance import COLORS
-    return sorted(STATIC) + [f"danca_{k}_{c}" for k in ("ondas", "raios") for c in COLORS]
+    return sorted(STATIC) + [f"danca_{k}_{c}" for k in ("ondas", "raios", "xadrez", "bolinhas") for c in COLORS]
 
 
 def ensure(bg_id: str, scale: float = 1.5) -> dict:

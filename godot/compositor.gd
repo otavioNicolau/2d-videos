@@ -12,6 +12,7 @@ var cam: Camera2D
 var layers: Array = []        # [Sprite2D, parallax, scale]
 var performers: Array = []    # [Sprite2D, dict]
 var fade_rect: ColorRect
+var particles: Node2D
 var tex_cache := {}
 
 func _fail(msg: String) -> void:
@@ -69,7 +70,19 @@ func _ready() -> void:
 	cam = Camera2D.new()
 	add_child(cam)
 	cam.make_current()
+	if job.has("particles") and job["particles"].size() > 0:
+		var pl := CanvasLayer.new()
+		pl.layer = 1
+		add_child(pl)
+		particles = Node2D.new()
+		particles.set_script(load("res://particles.gd"))
+		particles.specs = job["particles"]
+		particles.fps = float(job["fps"])
+		particles.W = float(job["resolution"][0])
+		particles.H = float(job["resolution"][1])
+		pl.add_child(particles)
 	var cl := CanvasLayer.new()
+	cl.layer = 2
 	add_child(cl)
 	fade_rect = ColorRect.new()
 	fade_rect.color = Color(0, 0, 0, 0)
@@ -103,6 +116,12 @@ func _process(_delta: float) -> void:
 			l[0].position = Vector2((cx - hw) * (1.0 - f), (cy - hh) * (1.0 - f))
 		if ld.has("angles"):
 			l[0].rotation_degrees = float(ld["angles"][i])
+		if ld.has("anim"):
+			# [dx, dy, escala] por quadro: fundo que flutua, desliza e pulsa na batida
+			var an: Array = ld["anim"][i]
+			l[0].position += Vector2(float(an[0]), float(an[1]))
+			var kk := float(an[2]) / float(ld["scale"])     # an[2] = fator de pulso (1 = tamanho normal)
+			l[0].scale = Vector2(kk, kk)
 	for pr in performers:
 		var s: Sprite2D = pr[0]
 		var p: Dictionary = pr[1]
@@ -114,6 +133,10 @@ func _process(_delta: float) -> void:
 		s.scale = Vector2(k, k)
 		s.position = Vector2(float(tr[0]) - float(p["anchor"][0]) * k, float(tr[1]) - float(p["anchor"][1]) * k)
 		s.visible = bool(tr[3])
+	if particles:
+		particles.frame = i
+		particles.beat_hit = float(job["beat_hit"][i]) if job.has("beat_hit") else 0.0
+		particles.queue_redraw()
 	var fl := float(job["flash"][i]) if job.has("flash") else 0.0
 	if fl > 0.0:
 		fade_rect.color = Color(1, 1, 1, fl)        # clarão branco na batida (entrada de refrão)

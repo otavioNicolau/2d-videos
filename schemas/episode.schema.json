@@ -168,6 +168,14 @@
         },
         "card_dur": {
           "type": "number"
+        },
+        "channel": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 2,
+          "maxItems": 2
         }
       }
     }
@@ -218,9 +226,7 @@
       "type": "object",
       "required": [
         "id",
-        "duration",
-        "camera",
-        "characters"
+        "duration"
       ],
       "additionalProperties": false,
       "properties": {
@@ -307,6 +313,45 @@
                     "type": "number"
                   },
                   "amp": {
+                    "type": "number"
+                  }
+                }
+              }
+            },
+            "beat": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "pulse": {
+                  "type": "number"
+                },
+                "bar_zoom": {
+                  "type": "number"
+                },
+                "sway": {
+                  "type": "number"
+                },
+                "bounce": {
+                  "type": "number"
+                }
+              }
+            },
+            "punch": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "t"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "t": {
+                    "type": "number"
+                  },
+                  "zoom": {
+                    "type": "number"
+                  },
+                  "dur": {
                     "type": "number"
                   }
                 }
@@ -419,6 +464,325 @@
                 "type": "number"
               }
             }
+          }
+        },
+        "fx": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "enum": [
+                  "bolhas",
+                  "confete",
+                  "estrelas",
+                  "coracoes",
+                  "notas"
+                ]
+              },
+              {
+                "type": "object",
+                "required": [
+                  "type"
+                ],
+                "properties": {
+                  "type": {
+                    "enum": [
+                      "bolhas",
+                      "confete",
+                      "estrelas",
+                      "coracoes",
+                      "notas"
+                    ]
+                  },
+                  "count": {
+                    "type": "integer"
+                  },
+                  "scale": {
+                    "type": "number"
+                  },
+                  "seed": {
+                    "type": "integer"
+                  }
+                },
+                "additionalProperties": false
+              }
+            ]
+          }
+        },
+        "bg_pulse": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 0.2
+        },
+        "transition_in": {
+          "type": "object",
+          "required": [
+            "type"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "type": {
+              "enum": [
+                "deslizar_esq",
+                "deslizar_dir",
+                "deslizar_cima",
+                "deslizar_baixo",
+                "cortina",
+                "circulo",
+                "zoom",
+                "giro"
+              ]
+            },
+            "dur": {
+              "type": "number",
+              "minimum": 0.1,
+              "maximum": 1.5
+            }
+          }
+        },
+        "callouts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "t",
+              "text"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "t": {
+                "type": "number"
+              },
+              "text": {
+                "type": "string"
+              },
+              "dur": {
+                "type": "number"
+              },
+              "y": {
+                "type": "number"
+              },
+              "color": {
+                "enum": [
+                  "amarelo",
+                  "rosa",
+                  "azul",
+                  "verde",
+                  "laranja"
+                ]
+              }
+            }
+          }
+        },
+        "layout": {
+          "enum": [
+            "diagonal",
+            "vertical"
+          ]
+        },
+        "panels": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": "object",
+            "required": [
+              "camera",
+              "characters"
+            ],
+            "properties": {
+              "camera": {
+                "type": "object",
+                "required": [
+                  "keys"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "keys": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "t",
+                        "x",
+                        "y",
+                        "zoom"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "t": {
+                          "type": "number"
+                        },
+                        "x": {
+                          "type": "number"
+                        },
+                        "y": {
+                          "type": "number"
+                        },
+                        "zoom": {
+                          "type": "number",
+                          "minimum": 0.5,
+                          "maximum": 3
+                        },
+                        "ease": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "shake": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "t",
+                        "dur",
+                        "amp"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "t": {
+                          "type": "number"
+                        },
+                        "dur": {
+                          "type": "number"
+                        },
+                        "amp": {
+                          "type": "number"
+                        }
+                      }
+                    }
+                  },
+                  "beat": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "pulse": {
+                        "type": "number"
+                      },
+                      "bar_zoom": {
+                        "type": "number"
+                      },
+                      "sway": {
+                        "type": "number"
+                      },
+                      "bounce": {
+                        "type": "number"
+                      }
+                    }
+                  },
+                  "punch": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "t"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "t": {
+                          "type": "number"
+                        },
+                        "zoom": {
+                          "type": "number"
+                        },
+                        "dur": {
+                          "type": "number"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "characters": {
+                "type": "object",
+                "additionalProperties": {
+                  "$ref": "#/$defs/performance"
+                }
+              },
+              "props": {
+                "type": "object",
+                "additionalProperties": {
+                  "$ref": "#/$defs/performance"
+                }
+              },
+              "background": {
+                "type": "string"
+              },
+              "fx": {
+                "type": "array",
+                "items": {
+                  "anyOf": [
+                    {
+                      "enum": [
+                        "bolhas",
+                        "confete",
+                        "estrelas",
+                        "coracoes",
+                        "notas"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "type"
+                      ],
+                      "properties": {
+                        "type": {
+                          "enum": [
+                            "bolhas",
+                            "confete",
+                            "estrelas",
+                            "coracoes",
+                            "notas"
+                          ]
+                        },
+                        "count": {
+                          "type": "integer"
+                        },
+                        "scale": {
+                          "type": "number"
+                        },
+                        "seed": {
+                          "type": "integer"
+                        }
+                      },
+                      "additionalProperties": false
+                    }
+                  ]
+                }
+              },
+              "sing": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "who",
+                    "from",
+                    "to"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "who": {
+                      "type": "string"
+                    },
+                    "from": {
+                      "type": "number"
+                    },
+                    "to": {
+                      "type": "number"
+                    }
+                  }
+                }
+              },
+              "bg_pulse": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 0.2
+              }
+            },
+            "additionalProperties": false
           }
         }
       }

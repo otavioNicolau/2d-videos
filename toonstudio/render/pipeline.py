@@ -74,7 +74,11 @@ class Episode:
     def background(self) -> dict[str, dict]:
         """Todos os cenários usados (episódio + por cena), construídos sob demanda pelo registro."""
         from ..backgrounds import registry
-        ids = {self.ep["background"], *(s.get("background") for s in self.ep["scenes"] if s.get("background"))}
+        ids = {self.ep["background"]}
+        for s in self.ep["scenes"]:
+            for u in [s, *s.get("panels", [])]:
+                if u.get("background"):
+                    ids.add(u["background"])
         out = {}
         for bid in sorted(ids):
             out[bid] = registry.ensure(bid, scale=self.scale)
@@ -126,6 +130,8 @@ class Episode:
 
     # -------------------------------------------------------------- cena
     def scene(self, s: dict, bgs: dict, lines: dict, force: bool = False, offset: float = 0.0, song: dict | None = None) -> Path:
+        if s.get("panels"):
+            return self._split_scene(s, bgs, lines, force, offset, song)
         sid = s["id"]
         sdir = self.build / "scenes" / sid
         n = int(round(s["duration"] * self.fps))
@@ -209,7 +215,7 @@ class Episode:
                                "level_scale": self.scale, "z": tracks[who]["z"],
                                "track": [[st[i]["x"], st[i]["y"], st[i].get("depth", 1.0), vis[i]] for i in range(n)]})
         # câmera por quadro
-        cam = self._camera(s, n)
+        cam = self._camera(s, n, song, g0)
         fade = [0.0] * n
         if s.get("transition_out") == "fade":
             k = int(0.7 * self.fps)
@@ -220,6 +226,14 @@ class Episode:
             for i in range(k):
                 fade[i] = max(fade[i], 1 - (i + 1) / k)
         bgdir = LIBRARY / "backgrounds" / bg_id / "layers"
+        # impulso da batida por quadro (pulso do fundo, partículas)
+        beat_hit = [0.0] * n
+        if song:
+            from ..animation.cycles import beat_phase
+            for i in range(n):
+                _, u = beat_phase(g0 + i / self.fps, song["grid"])
+                beat_hit[i] = round(math.exp(-7.0 * max(0.0, u)), 3)
+        pulse = float(s.get("bg_pulse", 0.025 if bg.get("graphic") else 0.0))
         layers = []
         for l in bg["layers"]:
             L = {"file": str(bgdir / l["file"]), "parallax": l["parallax"], "z": l["z"],
@@ -235,14 +249,33 @@ class Episode:
                     k_, u = beat_phase(g0 + i / self.fps, song["grid"])
                     ang.append(round(l["spin_per_beat"] * (k_ + (1 - (1 - min(u, 1)) ** 3)), 3))
                 L["angles"] = ang
+            if l.get("fixed") and (l.get("scroll") or pulse):
+                vx, vy, px, py = (l.get("scroll") or [0, 0, 0, 0])
+                anim = []
+                for i in range(n):
+                    tt = i / self.fps
+                    dx = (px / 2 - (tt * vx) % px) if px else 0.0
+                    dy = (py / 2 - (tt * vy) % py) if py else 0.0
+                    k_ = 1 + pulse * beat_hit[i]
+                    if not l.get("center"):        # escala em torno do centro da camada, não do canto
+                        dx -= (k_ - 1) * l["width"] / 2
+                        dy -= (k_ - 1) * l["height"] / 2
+                    anim.append([round(dx, 2), round(dy, 2), round(k_, 5)])
+                L["anim"] = anim
             layers.append(L)
         flash = [0.0] * n
         if s.get("flash_in"):
             for i, a in enumerate((1.0, 0.85, 0.6, 0.38, 0.2, 0.08)):
                 if i < n:
                     flash[i] = a
+        particles = []
+        for k_, fx in enumerate(s.get("fx", [])):
+            spec = {"type": fx} if isinstance(fx, str) else dict(fx)
+            spec.setdefault("count", {"bolhas": 14, "confete": 60, "estrelas": 18, "coracoes": 14, "notas": 14}.get(spec["type"], 12))
+            spec.setdefault("seed", 7 + k_ * 13 + len(sid))
+            particles.append(spec)
         job = {"resolution": [self.W, self.H], "fps": self.fps, "frames": n, "camera": cam, "fade": fade, "flash": flash,
-               "layers": layers, "performers": performers}
+               "layers": layers, "performers": performers, "particles": particles, "beat_hit": beat_hit}
         jp = sdir / "job.json"
         jp.write_text(json.dumps(job))
         self._godot(jp, comp_dir, n)
@@ -251,6 +284,27 @@ class Episode:
         self.report["scenes"][sid] = qa
         self.state.mark(f"scene:{sid}", h)
         return comp_dir
+
+    def _split_scene(self, s: dict, bgs: dict, lines: dict, force: bool, offset: float, song: dict | None) -> Path:
+        """Tela dividida: cada painel é uma sub-cena completa (personagens, cenário, câmera, efeitos)."""
+        from PIL import Image
+        from .post import split_frame
+        n = int(round(s["duration"] * self.fps))
+        dirs = []
+        for k, pn in enumerate(s["panels"]):
+            sub = {**pn, "id": f"{s['id']}__p{k}", "duration": s["duration"]}
+            for key in ("flash_in", "transition_in"):
+                sub.pop(key, None)
+            dirs.append(self.scene(sub, bgs, lines, force, offset, song))
+        comp = self.build / "scenes" / s["id"] / "comp"
+        comp.mkdir(parents=True, exist_ok=True)
+        layout = s.get("layout", "diagonal")
+        log(f"{s['id']}: tela dividida ({layout}, {len(dirs)} painéis)")
+        for i in range(n):
+            ims = [Image.open(d / f"{i + 1:06d}.png").convert("RGB") for d in dirs]
+            split_frame(ims, layout, i / self.fps).convert("RGBA").save(comp / f"{i + 1:06d}.png", compress_level=1)
+        self.report["scenes"][s["id"]] = {"frames": n, "panels": len(dirs), "issues": []}
+        return comp
 
     def _sing(self, s: dict, song: dict, g0: float) -> dict[str, list]:
         """Bocas do canto: Rhubarb na voz isolada, só nos trechos marcados em `sing` (tempo local da cena)."""
@@ -282,8 +336,14 @@ class Episode:
         if errs:
             raise StudioError("falas que não cabem no plano:\n  - " + "\n  - ".join(errs))
 
-    def _camera(self, s: dict, n: int) -> list[list[float]]:
+    def _camera(self, s: dict, n: int, song: dict | None = None, g0: float = 0.0) -> list[list[float]]:
+        """Câmera por quadro: chaves com easing + tremores + (clipes) dinâmica na batida:
+        pulso de zoom em cada batida, aproximar/afastar alternado por compasso, balanço lateral, quique vertical
+        e "socos" de zoom (punch) em instantes marcados."""
         keys = s["camera"]["keys"]
+        dyn = s["camera"].get("beat") if song else None
+        punches = s["camera"].get("punch", [])
+        from ..animation.cycles import beat_phase
         out = []
         rng = np.random.default_rng(len(s["id"]))
         shakes = s["camera"].get("shake", [])
@@ -300,6 +360,25 @@ class Episode:
                 if t > b["t"]:
                     val = (b["x"], b["y"], b["zoom"])
             x, y, z = val
+            if dyn:
+                bi, u = beat_phase(g0 + t, song["grid"])
+                hit = math.exp(-7.0 * max(0.0, u))
+                z *= 1 + float(dyn.get("pulse", 0.0)) * hit
+                bz = float(dyn.get("bar_zoom", 0.0))
+                if bz:      # a cada compasso (4 batidas) alterna perto/longe, com transição suave na virada
+                    bar, frac = divmod(bi + u, 4)
+                    target = 1 + bz if int(bar) % 2 == 0 else 1.0
+                    prev = 1.0 if int(bar) % 2 == 0 else 1 + bz
+                    e = easing.inout(min(1.0, frac / 0.6))
+                    z *= prev + (target - prev) * e
+                sw = float(dyn.get("sway", 0.0))
+                x += sw * math.sin(math.pi * (bi + u) / 2)
+                y += float(dyn.get("bounce", 0.0)) * hit
+            for pu in punches:      # soco de zoom: entra rápido, volta com overshoot
+                if pu["t"] <= t <= pu["t"] + pu.get("dur", 0.5):
+                    q = (t - pu["t"]) / pu.get("dur", 0.5)
+                    env = easing.ease_out(q / 0.25) if q < 0.25 else 1 - easing.back((q - 0.25) / 0.75)
+                    z *= 1 + pu.get("zoom", 0.2) * env
             for sh in shakes:
                 if sh["t"] <= t <= sh["t"] + sh["dur"]:
                     amp = sh["amp"] * (1 - (t - sh["t"]) / sh["dur"])
@@ -405,14 +484,22 @@ class Episode:
                 ws = [{"w": w["w"], "s": w["s"] - st["start"], "e": w["e"] - st["start"]} for w in ln["words"]]
                 if ws and ws[-1]["e"] > 0 and ws[0]["s"] < total:
                     lines.append({"s": ws[0]["s"], "e": ln["e"] - st["start"], "words": ws})
-        if not (lines or ov.get("card") or ov.get("footer") or ov.get("logo")):
+        if not (lines or ov.get("card") or ov.get("footer") or ov.get("logo") or any(s.get("callouts") for s in self.ep["scenes"])):
             return []
+        callouts, off = [], 0.0
+        for s in self.ep["scenes"]:
+            for c in s.get("callouts", []):
+                callouts.append({**c, "t": off + c["t"]})
+            off += s["duration"]
         assf = brand.ass(self.build / "textos.ass", self.W, self.H, lines, ov.get("card"), ov.get("footer"), total,
-                         float(ov.get("card_dur", 5.0)))
+                         float(ov.get("card_dur", 5.0)), callouts)
         filt = f"ass={assf}:fontsdir={LIBRARY / 'fonts'}"
         if ov.get("logo"):
-            lg = brand.logo(self.build / "logo.png", height=118)
-            return ["-i", str(lg), "-filter_complex", f"[0:v][2:v]overlay=28:14[l];[l]{filt}[v]", "-map", "[v]"]
+            ch = ov.get("channel", ["LAURINHA", "e Luizinho"])
+            lg = brand.logo(self.build / "logo.png", height=118, line1=ch[0], line2=ch[1])
+            # -loop 1: a logo (imagem parada) vale para o vídeo inteiro, mesmo se o filtro reiniciar
+            return ["-loop", "1", "-i", str(lg), "-filter_complex", f"[0:v][2:v]overlay=28:14:shortest=1[l];[l]{filt}[v]",
+                    "-map", "[v]"]
         return ["-vf", filt, "-map", "0:v"]
 
     def assemble(self, wav: Path) -> Path:
@@ -423,11 +510,23 @@ class Episode:
         if seq.exists():
             shutil.rmtree(seq)
         seq.mkdir()
+        from .post import apply_transition
         k = 0
+        prev_last = None
+        trdir = self.build / "transitions"
+        if trdir.exists():
+            shutil.rmtree(trdir)
         for s in self.ep["scenes"]:
-            for f in sorted((self.build / "scenes" / s["id"] / "comp").glob("*.png")):
+            frames = sorted((self.build / "scenes" / s["id"] / "comp").glob("*.png"))
+            tr = s.get("transition_in")
+            repl = {}
+            if tr and prev_last is not None:
+                nt = max(1, int(round(float(tr.get("dur", 0.4)) * self.fps)))
+                repl = apply_transition(prev_last, frames, tr["type"], nt, trdir)
+            for i, f in enumerate(frames):
                 k += 1
-                os.link(f, seq / f"{k:06d}.png")
+                os.link(repl.get(i, f), seq / f"{k:06d}.png")
+            prev_last = frames[-1] if frames else prev_last
         name = f"{self.ep['id']}{'' if approved else '_CANDIDATO'}.mp4"
         mp4 = out_dir / name
         log(f"FFmpeg: montando {k} quadros → {mp4.name}")

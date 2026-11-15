@@ -118,14 +118,12 @@ GAITS["luizinho"] = {
     "sneak": {"T": 1.2, "S": 80, "lift": 46, "bob": 12, "lean": 0.15, "arm": 0.0, "ex": 1},
     "run": {"T": 0.34, "S": 150, "lift": 60, "bob": 18, "lean": 0.3, "arm": 1.0, "ex": 1},
 }
+GAITS["laurinha"] = GAITS["luizinho"]
 GAITS["calanguinho"] = {
     "walk": {"T": 0.7, "S": 60, "lift": 22, "bob": 7, "lean": 0.08, "arm": 0.8, "ex": 1},
     "sneak": {"T": 1.2, "S": 80, "lift": 40, "bob": 10, "lean": 0.2, "arm": 0.0, "ex": 1},
     "run": {"T": 0.3, "S": 150, "lift": 50, "bob": 16, "lean": 0.4, "arm": 1.0, "ex": 1},
 }
-
-DANCES = ("bob", "cabeca", "lango", "lado", "bracos")
-
 
 def beat_phase(t: float, beats: list[float]) -> tuple[int, float]:
     """(índice da batida, fração 0..1 até a próxima) na grade REAL de batidas da música."""
@@ -140,48 +138,184 @@ def beat_phase(t: float, beats: list[float]) -> tuple[int, float]:
     return i, (t - beats[i]) / max(1e-6, nxt - beats[i])
 
 
-def dance(style: str, t: float, beats: list[float], amp: float = 1.0) -> dict[str, float]:
-    """Pose de dança em função da batida. `beats` = grade principal (tempo da dança, ex.: 86 BPM).
-    Acentos caem NA batida (ease-out logo depois), como coreografia de verdade."""
+# ------------------------------------------------------------------ coreografia (passos em batidas)
+# Cada passo: (duração em batidas, [(posição em batidas, pose)]). As poses são interpoladas por curva suave cíclica
+# (Catmull-Rom): movimento contínuo com arcos, sem "pausa" entre batidas. Chaves com "+" SOMAM ao canal base
+# (ex.: "turn+" gira o corpo em torno da direção definida na cena). Mãos em coordenadas "para a frente".
+# braços em V: cotovelo para FORA (o braço sobe por fora da cabeça grande, nunca cruza o rosto)
+_ARM_V_N = {"hand_n_x": -128, "hand_n_y": -82, "hand_n_bend": 0.5, "paw_n": 3}
+_ARM_V_F = {"hand_f_x": 128, "hand_f_y": -82, "hand_f_bend": -0.5, "paw_f": 3}
+CHOREO: dict[str, tuple[float, list[tuple[float, dict]]]] = {
+    # balanço lateral: peso de um pé para o outro, tronco gira, cabeça contrabalança, braços em pêndulo
+    "balanco": (2, [
+        (0.0, {"body_x": -34, "body_y": 20, "lean": -0.13, "turn+": -0.32, "head_tilt": 0.2, "squash": 0.95,
+               "hand_n_x": -95, "hand_n_y": 15, "hand_n_bend": 0.5, "paw_n": 3, "hand_f_x": 55, "hand_f_y": 45,
+               "hand_f_bend": 0.6, "paw_f": 0, "foot_n_bend": 0.35, "foot_f_bend": 0.1, "tail_wag": -0.5}),
+        (0.5, {"body_x": 0, "body_y": -12, "lean": 0.0, "turn+": 0.0, "head_tilt": 0.0, "squash": 1.04,
+               "hand_n_x": -40, "hand_n_y": 40, "hand_f_x": 40, "hand_f_y": 40, "foot_n_bend": 0.1, "foot_f_bend": 0.1, "tail_wag": 0}),
+        (1.0, {"body_x": 34, "body_y": 20, "lean": 0.13, "turn+": 0.32, "head_tilt": -0.2, "squash": 0.95,
+               "hand_n_x": -55, "hand_n_y": 45, "hand_n_bend": 0.6, "paw_n": 0, "hand_f_x": 95, "hand_f_y": 15,
+               "hand_f_bend": 0.5, "paw_f": 3, "foot_n_bend": 0.1, "foot_f_bend": 0.35, "tail_wag": 0.5}),
+        (1.5, {"body_x": 0, "body_y": -12, "lean": 0.0, "turn+": 0.0, "head_tilt": 0.0, "squash": 1.04,
+               "hand_n_x": -40, "hand_n_y": 40, "hand_f_x": 40, "hand_f_y": 40, "foot_n_bend": 0.1, "foot_f_bend": 0.1, "tail_wag": 0}),
+    ]),
+    # palmas no tempo: mãos se encontram NA batida (com o corpo descendo), abrem entre as batidas
+    "palmas": (1, [
+        (0.0, {"hand_n_x": 38, "hand_n_y": 8, "hand_f_x": 38, "hand_f_y": 8, "hand_n_bend": 0.7, "hand_f_bend": 0.7,
+               "paw_n": 3, "paw_f": 3, "body_y": 16, "squash": 0.93, "head_tilt": 0.06, "head_dy": 8}),
+        (0.5, {"hand_n_x": -75, "hand_n_y": -10, "hand_f_x": 120, "hand_f_y": -10, "hand_n_bend": 0.2, "hand_f_bend": 0.2,
+               "body_y": -14, "squash": 1.05, "head_tilt": -0.06, "head_dy": -4}),
+    ]),
+    # pulinho: agacha (antecipação), sobe esticado com braços em V, aterrissa amassado, quica
+    "pulinho": (2, [
+        (0.0, {"body_y": 34, "squash": 0.8, "foot_n_y": 0, "foot_f_y": 0, "foot_n_bend": 0.6, "foot_f_bend": 0.6,
+               "hand_n_x": -30, "hand_n_y": 95, "hand_f_x": 30, "hand_f_y": 95, "paw_n": 0, "paw_f": 0, "head_dy": 10}),
+        (0.35, {"body_y": -95, "squash": 1.18, "foot_n_y": -70, "foot_f_y": -62, "foot_n_bend": 0.7, "foot_f_bend": 0.7,
+                **_ARM_V_N, **_ARM_V_F, "head_dy": -6}),
+        (0.75, {"body_y": 26, "squash": 0.84, "foot_n_y": 0, "foot_f_y": 0, "foot_n_bend": 0.5, "foot_f_bend": 0.5,
+                "hand_n_x": -80, "hand_n_y": 30, "hand_f_x": 80, "hand_f_y": 30, "paw_n": 3, "paw_f": 3, "head_dy": 12}),
+        (1.2, {"body_y": -18, "squash": 1.05, "foot_n_bend": 0.1, "foot_f_bend": 0.1, "hand_n_x": -60, "hand_n_y": 10,
+               "hand_f_x": 60, "hand_f_y": 10, "head_dy": -3}),
+        (1.6, {"body_y": 6, "squash": 0.98, "hand_n_x": -40, "hand_n_y": 60, "hand_f_x": 40, "hand_f_y": 60, "head_dy": 3}),
+    ]),
+    # passinho (step-touch): pisa para um lado, o outro pé encosta; braços balançam junto
+    "passinho": (2, [
+        (0.0, {"body_x": 30, "body_y": 14, "lean": 0.1, "turn+": 0.2, "foot_f_x": 62, "foot_n_x": 20, "foot_n_y": -8,
+               "foot_f_y": 0, "hand_n_x": 30, "hand_n_y": 20, "hand_f_x": 110, "hand_f_y": 0, "paw_n": 1, "paw_f": 3,
+               "head_tilt": -0.12}),
+        (0.5, {"body_x": 10, "body_y": -10, "lean": 0.0, "turn+": 0.0, "foot_f_x": 30, "foot_n_x": -10, "foot_n_y": -22,
+               "hand_n_x": 0, "hand_n_y": 40, "hand_f_x": 40, "hand_f_y": 40, "head_tilt": 0.0}),
+        (1.0, {"body_x": -30, "body_y": 14, "lean": -0.1, "turn+": -0.2, "foot_n_x": -62, "foot_f_x": -20, "foot_f_y": -8,
+               "foot_n_y": 0, "hand_n_x": -110, "hand_n_y": 0, "hand_f_x": -30, "hand_f_y": 20, "paw_n": 3, "paw_f": 1,
+               "head_tilt": 0.12}),
+        (1.5, {"body_x": -10, "body_y": -10, "lean": 0.0, "turn+": 0.0, "foot_n_x": -30, "foot_f_x": 10, "foot_f_y": -22,
+               "hand_n_x": -40, "hand_n_y": 40, "hand_f_x": 0, "hand_f_y": 40, "head_tilt": 0.0}),
+    ]),
+    # cabeça balançando (com o corpo em contraponto e joelhos marcando)
+    "cabeca": (2, [
+        (0.0, {"head_tilt": 0.34, "head_dx": -12, "body_x": 14, "body_y": 14, "lean": -0.05, "turn+": 0.12, "squash": 0.95,
+               "hand_n_x": 45, "hand_n_y": 30, "hand_f_x": 70, "hand_f_y": 20, "hand_n_bend": 0.8, "hand_f_bend": 0.8,
+               "paw_n": 1, "paw_f": 1, "hat_tilt": -0.18, "tail_wag": 0.5}),
+        (0.5, {"head_tilt": 0.0, "head_dx": 0, "body_x": 0, "body_y": -6, "lean": 0.0, "turn+": 0.0, "squash": 1.03,
+               "hand_n_x": 30, "hand_n_y": 40, "hand_f_x": 55, "hand_f_y": 36, "hat_tilt": 0.05, "tail_wag": 0}),
+        (1.0, {"head_tilt": -0.34, "head_dx": 12, "body_x": -14, "body_y": 14, "lean": 0.05, "turn+": -0.12, "squash": 0.95,
+               "hand_n_x": 20, "hand_n_y": 20, "hand_f_x": 45, "hand_f_y": 30, "hat_tilt": 0.18, "tail_wag": -0.5}),
+        (1.5, {"head_tilt": 0.0, "head_dx": 0, "body_x": 0, "body_y": -6, "lean": 0.0, "turn+": 0.0, "squash": 1.03,
+               "hand_n_x": 30, "hand_n_y": 40, "hand_f_x": 55, "hand_f_y": 36, "hat_tilt": -0.05, "tail_wag": 0}),
+    ]),
+    # "lango, lango": cabeça e corpo dão um tranco para a frente em cada batida, braços pistão
+    "lango": (1, [
+        (0.0, {"head_dy": 20, "head_dx": 14, "head_tilt": 0.08, "body_y": 18, "lean": 0.1, "squash": 0.9,
+               "hand_n_x": 70, "hand_n_y": 5, "hand_f_x": 85, "hand_f_y": 0, "hand_n_bend": 0.4, "hand_f_bend": 0.4,
+               "paw_n": 3, "paw_f": 3, "hat_tilt": 0.15, "tail_wag": 0.4}),
+        (0.5, {"head_dy": -8, "head_dx": -4, "head_tilt": -0.04, "body_y": -10, "lean": -0.04, "squash": 1.05,
+               "hand_n_x": 20, "hand_n_y": 45, "hand_f_x": 30, "hand_f_y": 45, "hand_n_bend": 0.7, "hand_f_bend": 0.7,
+               "hat_tilt": -0.08, "tail_wag": -0.4}),
+    ]),
+    # braços em V alternados, com o corpo girando para o lado do braço alto
+    "bracos": (2, [
+        (0.0, {**_ARM_V_N, "hand_f_x": 90, "hand_f_y": -20, "hand_f_bend": 0.3, "paw_f": 3, "body_y": 14, "turn+": -0.22,
+               "head_tilt": 0.15, "squash": 0.95, "lean": -0.06}),
+        (0.5, {"hand_n_x": -100, "hand_n_y": -50, "hand_f_x": 100, "hand_f_y": -50, "body_y": -10, "turn+": 0.0,
+               "head_tilt": 0.0, "squash": 1.04, "lean": 0.0}),
+        (1.0, {"hand_n_x": -90, "hand_n_y": -20, "hand_n_bend": 0.3, "paw_n": 3, **_ARM_V_F, "body_y": 14, "turn+": 0.22,
+               "head_tilt": -0.15, "squash": 0.95, "lean": 0.06}),
+        (1.5, {"hand_n_x": -100, "hand_n_y": -50, "hand_f_x": 100, "hand_f_y": -50, "body_y": -10, "turn+": 0.0,
+               "head_tilt": 0.0, "squash": 1.04, "lean": 0.0}),
+    ]),
+    # "vai pro lado": pulo lateral com antecipação, aterrissagem e o braço DO LADO apontando
+    "lado": (2, [
+        (0.0, {"body_x": -40, "body_y": 22, "lean": -0.12, "squash": 0.86, "foot_n_y": 0, "foot_f_y": 0,
+               "hand_n_x": -125, "hand_n_y": -15, "hand_n_bend": 0.05, "paw_n": 2, "hand_f_x": 18, "hand_f_y": 52,
+               "hand_f_bend": -0.9, "paw_f": 1, "turn+": -0.2, "head_tilt": 0.1}),
+        (0.45, {"body_x": 0, "body_y": -55, "lean": 0.0, "squash": 1.12, "foot_n_y": -36, "foot_f_y": -40, "turn+": 0.0,
+                "hand_n_x": -60, "hand_n_y": -40, "hand_f_x": 60, "hand_f_y": -40, "paw_n": 3, "paw_f": 3, "head_tilt": 0.0}),
+        (1.0, {"body_x": 40, "body_y": 22, "lean": 0.12, "squash": 0.86, "foot_n_y": 0, "foot_f_y": 0,
+               "hand_n_x": -18, "hand_n_y": 52, "hand_n_bend": -0.9, "paw_n": 1, "hand_f_x": 125, "hand_f_y": -15,
+               "hand_f_bend": 0.05, "paw_f": 2, "turn+": 0.2, "head_tilt": -0.1}),
+        (1.45, {"body_x": 0, "body_y": -55, "lean": 0.0, "squash": 1.12, "foot_n_y": -40, "foot_f_y": -36, "turn+": 0.0,
+                "hand_n_x": -60, "hand_n_y": -40, "hand_f_x": 60, "hand_f_y": -40, "paw_n": 3, "paw_f": 3, "head_tilt": 0.0}),
+    ]),
+    # marcha: joelho alto alternado, braços em oposição
+    "marcha": (2, [
+        (0.0, {"foot_n_y": -55, "foot_n_x": 25, "foot_n_bend": 0.9, "foot_f_y": 0, "foot_f_bend": 0.05, "body_y": -8,
+               "hand_n_x": -70, "hand_n_y": 50, "hand_f_x": 80, "hand_f_y": 10, "paw_n": 1, "paw_f": 1, "head_tilt": 0.08}),
+        (0.5, {"foot_n_y": 0, "foot_n_bend": 0.1, "foot_f_y": 0, "body_y": 12, "hand_n_x": 0, "hand_n_y": 60,
+               "hand_f_x": 20, "hand_f_y": 60, "head_tilt": 0.0}),
+        (1.0, {"foot_f_y": -55, "foot_f_x": 35, "foot_f_bend": 0.9, "foot_n_y": 0, "foot_n_x": -10, "body_y": -8,
+               "hand_n_x": 60, "hand_n_y": 10, "hand_f_x": -40, "hand_f_y": 50, "head_tilt": -0.08}),
+        (1.5, {"foot_f_y": 0, "foot_f_bend": 0.1, "foot_n_y": 0, "body_y": 12, "hand_n_x": 0, "hand_n_y": 60,
+               "hand_f_x": 20, "hand_f_y": 60, "head_tilt": 0.0}),
+    ]),
+    # rebolado/giro do tronco (twist): o corpo gira de um 3/4 ao outro, braços abertos acompanham
+    "twist": (2, [
+        (0.0, {"turn+": -0.55, "body_y": 16, "lean": -0.08, "hand_n_x": -100, "hand_n_y": 20, "hand_f_x": 100, "hand_f_y": 20,
+               "paw_n": 3, "paw_f": 3, "head_turn": 0.2, "squash": 0.95}),
+        (0.5, {"turn+": 0.0, "body_y": -6, "lean": 0.0, "head_turn": 0.0, "squash": 1.03}),
+        (1.0, {"turn+": 0.55, "body_y": 16, "lean": 0.08, "head_turn": -0.2, "squash": 0.95}),
+        (1.5, {"turn+": 0.0, "body_y": -6, "lean": 0.0, "head_turn": 0.0, "squash": 1.03}),
+    ]),
+}
+ALIASES = {"bob": "balanco"}
+DANCES = tuple(CHOREO) + tuple(ALIASES)
+_CAT = ("paw_n", "paw_f")
+_SCALE = {"body_x", "body_y", "lean", "turn+", "head_tilt", "head_dx", "head_dy", "foot_n_y", "foot_f_y", "hat_tilt", "tail_wag"}
+
+
+def _filled(keys):
+    """Cada chave com todos os canais do passo (valor anterior quando omitido; primeiro: o da última chave)."""
+    names = []
+    for _, k in keys:
+        for n in k:
+            if n not in names:
+                names.append(n)
+    full = []
+    last = {}
+    for _, k in reversed(keys):          # valor "antes do início" = última chave que define o canal (ciclo)
+        for n in names:
+            if n not in last and n in k:
+                last[n] = k[n]
+    prev = {n: last[n] for n in names}
+    for b, k in keys:
+        cur = {n: k.get(n, prev[n]) for n in names}
+        full.append((b, cur))
+        prev = cur
+    return names, full
+
+
+_FILLED = {k: (L, *_filled(keys)) for k, (L, keys) in CHOREO.items()}
+
+
+def dance(style: str, t: float, beats: list[float], amp: float = 1.0, t0: float | None = None) -> dict[str, float]:
+    """Pose de dança no instante t, presa à grade real de batidas (posição = batidas desde o início do passo)."""
+    style = ALIASES.get(style, style)
+    if style not in _FILLED:
+        raise KeyError(f"dança desconhecida: {style} (disponíveis: {DANCES})")
+    L, names, keys = _FILLED[style]
     i, u = beat_phase(t, beats)
-    hit = math.exp(-5.0 * u)                  # impulso no instante da batida, decaindo
-    side = 1 if i % 2 == 0 else -1            # alterna lado a cada batida
-    sway = side * (1 - 2 * u)                 # vai de um lado ao outro entre batidas (para pendular)
-    smooth_side = math.cos(math.pi * (i + u))       # extremos caem NA batida
-    if style == "bob":
-        return {"body_y": 14 * amp * (1 - math.cos(2 * math.pi * u)) / 2 * 0 + 12 * amp * hit, "squash": 1 - 0.06 * amp * hit,
-                "head_dy": 6 * amp * math.exp(-5.0 * max(0.0, u - 0.08)), "hand_n_x": 30 + 18 * side, "hand_n_y": 50 - 20 * hit,
-                "hand_f_x": 30 - 18 * side, "hand_f_y": 50 - 20 * hit, "hand_n_bend": 0.7, "hand_f_bend": 0.7,
-                "paw_n": 1, "paw_f": 1, "tail_wag": 0.3 * smooth_side, "foot_n_bend": 0.3 * hit, "foot_f_bend": 0.3 * hit}
-    if style == "cabeca":
-        return {"head_tilt": 0.26 * amp * smooth_side, "body_x": -6 * smooth_side, "lean": 0.04 * smooth_side,
-                "hat_tilt": -0.12 * math.cos(math.pi * (i + u) - 0.6),     # chapéu atrasa (follow-through)
-                "body_y": 8 * amp * hit, "squash": 1 - 0.04 * hit,
-                "hand_n_x": 50, "hand_n_y": 34, "hand_f_x": 46, "hand_f_y": 30, "hand_n_bend": 0.75, "hand_f_bend": 0.75,
-                "paw_n": 0, "paw_f": 0, "tail_wag": 0.5 * smooth_side, "look_x": 0.3 * smooth_side}
-    if style == "lango":
-        return {"head_dy": 16 * amp * hit, "head_tilt": 0.1 * side * hit, "body_y": 10 * amp * hit, "squash": 1 - 0.07 * hit,
-                "hand_n_x": 60, "hand_n_y": 20 - 30 * hit, "hand_f_x": 55, "hand_f_y": 20 - 30 * hit, "paw_n": 3, "paw_f": 3,
-                "hand_n_bend": 0.4, "hand_f_bend": 0.4, "tail_wag": 0.6 * side * hit, "hat_tilt": 0.15 * side * hit}
-    if style == "lado":
-        # cada batida: pulinho para o lado, braço aponta para onde vai
-        # aponta com o braço DO LADO para onde vai (o outro na cintura): o braço nunca cruza o rosto.
-        # braço "n" fica do lado de trás (-x em coordenadas de frente), o "f" do lado da frente (+x)
-        point_n = side < 0
-        base = {"body_x": 34 * amp * side * (1 - math.exp(-6 * u)) - 34 * amp * side * 0.5, "lean": 0.18 * side,
-                "body_y": -18 * amp * math.sin(math.pi * min(1.0, u * 2)) if u < 0.5 else 0.0, "squash": 1 + 0.05 * hit,
-                "tail_wag": -0.5 * side, "head_tilt": 0.1 * side}
-        point = {"x": 120, "y": -15, "bend": 0.05, "paw": 2}
-        rest = {"x": 18, "y": 52, "bend": -0.9, "paw": 1}       # mão na cintura
-        pn, pf = (point, rest) if point_n else (rest, point)
-        base.update({"hand_n_x": -pn["x"] if point_n else -rest["x"], "hand_n_y": pn["y"], "hand_n_bend": pn["bend"], "paw_n": pn["paw"],
-                     "hand_f_x": pf["x"] if not point_n else rest["x"], "hand_f_y": pf["y"], "hand_f_bend": pf["bend"], "paw_f": pf["paw"]})
-        return base
-    if style == "bracos":
-        up_n = 1.0 if side > 0 else 0.4
-        up_f = 0.4 if side > 0 else 1.0
-        # braços em "V": as mãos sobem POR FORA da cabeça (antes subiam por cima e pareciam "mão na cabeça")
-        return {"hand_n_x": -105, "hand_n_y": -30 - 70 * up_n, "hand_f_x": 105, "hand_f_y": -30 - 70 * up_f,
-                "paw_n": 3, "paw_f": 3, "hand_n_bend": 0.2, "hand_f_bend": 0.2, "body_y": 10 * amp * hit, "squash": 1 + 0.05 * hit,
-                "head_tilt": 0.08 * smooth_side, "tail_wag": 0.4 * smooth_side}
-    raise KeyError(f"dança desconhecida: {style} (disponíveis: {DANCES})")
+    i0 = beat_phase(t0, beats)[0] if t0 is not None else 0
+    pos = ((i - i0) + u) % L
+    n = len(keys)
+    bs = [b for b, _ in keys]
+    k = max(j for j in range(n) if bs[j] <= pos)
+    b0 = bs[k]
+    b1 = bs[k + 1] if k + 1 < n else L
+    s = (pos - b0) / max(1e-6, b1 - b0)
+    s2, s3 = s * s, s * s * s
+    out: dict[str, float] = {}
+    for name in names:
+        if name in _CAT:
+            out[name] = keys[k][1][name]
+            continue
+        p0 = keys[(k - 1) % n][1][name]
+        p1 = keys[k][1][name]
+        p2 = keys[(k + 1) % n][1][name]
+        p3 = keys[(k + 2) % n][1][name]
+        # Catmull-Rom: passa pelas poses-chave com tangentes suaves (arcos, sem paradas)
+        v = 0.5 * ((2 * p1) + (-p0 + p2) * s + (2 * p0 - 5 * p1 + 4 * p2 - p3) * s2 + (-p0 + 3 * p1 - 3 * p2 + p3) * s3)
+        if name in _SCALE:
+            v *= amp
+        elif name == "squash":
+            v = 1 + (v - 1) * amp
+        out[name] = v
+    return out

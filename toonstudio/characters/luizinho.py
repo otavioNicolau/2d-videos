@@ -28,9 +28,15 @@ HEAD_SIDE = [(6, -88), (60, -78), (90, -38), (94, 8), (84, 46), (50, 76), (2, 84
 
 
 class Luizinho(Character):
-    def __init__(self) -> None:
+    # parâmetros de estilo que os personagens derivados (a turma) trocam
+    hair_tuft = 12.0          # altura dos tufos do cabelo (0 = liso)
+    fringe_y = -54.0          # altura da franja (mais negativo = testa mais aberta)
+    lash_w = 5.0
+
+    def __init__(self, cid: str = "luizinho", name: str = "Luizinho", pal: dict | None = None) -> None:
+        self.pal = pal or PAL
         super().__init__(
-            id="luizinho", name="Luizinho", canvas=(700, 640), anchor=(350, 600), height=400, palette=PAL,
+            id=cid, name=name, canvas=(700, 640), anchor=(350, 600), height=400, palette=self.pal,
             defaults={
                 "turn": 0.35, "back": False, "lean": 0.0, "squash": 1.0, "body_y": 0.0, "body_x": 0.0,
                 "head_tilt": 0.0, "head_dx": 0.0, "head_dy": 0.0, "head_turn": 0.0,
@@ -71,22 +77,15 @@ class Luizinho(Character):
                 y = T((0, 0))[1] - 220 + i * 50
                 x0 = T((0, 0))[0] - f * (90 + (i * 31) % 40)
                 ink.stroke([(x0, y), (x0 - f * (90 + 120 * P["speed"]), y)], 4.5, taper=(0.05, 0.9), color_=(0.2, 0.15, 0.15, 0.5))
+        self._back_hair(kit, P, C, hv, ht)        # cabelo comprido fica ATRÁS de tudo (corpo e braços)
         self._arm(kit, P, "f", sh_f, f, s, behind=True)
         self._leg(kit, P, "f", hip_f, f, s, behind=True)
         self._leg(kit, P, "n", hip_n, f, s)
         # pescoço
-        kit.limb([neck, (neck[0] + (C[0] - neck[0]) * 0.5, neck[1] - 30)], 34, 32, PAL["skin_shade"])
+        kit.limb([neck, (neck[0] + (C[0] - neck[0]) * 0.5, neck[1] - 30)], 34, 32, self.pal["skin_shade"])
         # tronco: regata + bermuda
-        def clothes(kk: Ink):
-            b0 = T((0, -6))
-            kk.c.drawRect(_rect(b0[0] - 200, b0[1], b0[0] + 200, b0[1] + 200), _p(PAL["shorts"]))
-            kk.stroke([(b0[0] - 120, b0[1]), (b0[0] + 120, b0[1])], 5, taper=(0, 0), color_=darken(PAL["shorts"], 0.6))
-            if not v.back:   # decote em U mostrando a pele
-                nk = T((f * s * 14, -96))
-                kk.shape(ellipse_pts(nk[0], nk[1] + 2, 26 - 8 * s, 18, ht * 0.5, 12), fill=PAL["skin"], line=0)
-                kk.stroke([(nk[0] - 27 + 8 * s, nk[1] + 2), (nk[0], nk[1] + 21), (nk[0] + 27 - 8 * s, nk[1] + 2)], 6,
-                          taper=(0.1, 0.1), color_=PAL["shirt_trim"])
-        kit.blob(torso, PAL["shirt"], clip_extra=clothes)
+        kit.blob(torso, self.pal["shirt"], clip_extra=lambda kk: self._clothes(kk, T, v, f, s, ht))
+        self._over_torso(kit, P, T, v, f, s, ht)
         self._head(kit, P, C, hv, ht, hsq)
         self._arm(kit, P, "n", sh_n, f, s, behind=False)
         if P["stars"] > 0:
@@ -96,6 +95,27 @@ class Luizinho(Character):
                 pts = [(x + math.cos(j * math.pi / 5 - math.pi / 2) * (18 if j % 2 == 0 else 8),
                         y + math.sin(j * math.pi / 5 - math.pi / 2) * (18 if j % 2 == 0 else 8)) for j in range(10)]
                 kit.blob(pts, "#FFD93D", shade=False, smooth=False)
+
+    # ------------------------------------------------------------------ roupa (ganchos para a turma)
+    def _clothes(self, kk: Ink, T, v: View, f, s, ht):
+        """Regata + bermuda (recortado dentro do tronco)."""
+        b0 = T((0, -6))
+        kk.c.drawRect(_rect(b0[0] - 200, b0[1], b0[0] + 200, b0[1] + 200), _p(self.pal["shorts"]))
+        kk.stroke([(b0[0] - 120, b0[1]), (b0[0] + 120, b0[1])], 5, taper=(0, 0), color_=darken(self.pal["shorts"], 0.6))
+        if not v.back:   # decote em U mostrando a pele
+            nk = T((f * s * 14, -96))
+            kk.shape(ellipse_pts(nk[0], nk[1] + 2, 26 - 8 * s, 18, ht * 0.5, 12), fill=self.pal["skin"], line=0)
+            kk.stroke([(nk[0] - 27 + 8 * s, nk[1] + 2), (nk[0], nk[1] + 21), (nk[0] + 27 - 8 * s, nk[1] + 2)], 6,
+                      taper=(0.1, 0.1), color_=self.pal["shirt_trim"])
+
+    def _over_torso(self, kit: Kit, P, T, v: View, f, s, ht):
+        """Peças por cima do tronco (saia, estampa). Nada no Luizinho."""
+
+    def _back_hair(self, kit: Kit, P, C, v: View, ht):
+        """Cabelo atrás da cabeça (cabelo comprido). Nada no Luizinho."""
+
+    def _hair_extras(self, kit: Kit, P, C, v: View, ht):
+        """Enfeites por cima do cabelo (laços, presilhas). Nada no Luizinho."""
 
     # ------------------------------------------------------------------ cabeça
     def _head(self, kit: Kit, P, C, v: View, ht, hsq):
@@ -111,7 +131,7 @@ class Luizinho(Character):
         for c, x, a in ears:
             if v.back or c < 0.3:
                 self._ear(kit, (x, C[1] + 10), c, a)
-        kit.blob(head, PAL["skin"], shade_offset=(10, 10))
+        kit.blob(head, self.pal["skin"], shade_offset=(10, 10))
         if v.back:
             for c, x, a in ears:
                 self._ear(kit, (x, C[1] + 10), 1.0, a)
@@ -134,22 +154,22 @@ class Luizinho(Character):
         for c, x, ang in eyes:
             if c > 0.3:          # olho de trás quase escondido no perfil: não desenha (evita olho "achatado" atrás do nariz)
                 ex, ey = rot((x - C[0], 4), ht)
-                kit.eye(P, (C[0] + ex, C[1] + ey), max(c, 0.45), ang, f, s, ht, rx=23, ry=29, iris=PAL["iris"],
-                        lid_color=PAL["skin"], brow_color=PAL["brow"], brow_w=10, brow_gap=12)
+                kit.eye(P, (C[0] + ex, C[1] + ey), max(c, 0.45), ang, f, s, ht, rx=23, ry=29, iris=self.pal["iris"],
+                        lid_color=self.pal["skin"], brow_color=self.pal["brow"], brow_w=10, brow_gap=12)
         # nariz
         nx, nc = v.sphere(C[0], 90, 0.0)
         npos = rot((nx - C[0] - f * s * 4, 34), ht)
         N = (C[0] + npos[0], C[1] + npos[1])
         if s > 0.55:
             k.shape([(N[0] - f * 8, N[1] - 10), (N[0] + f * 6, N[1] - 2), (N[0] + f * 7, N[1] + 4), (N[0] - f * 4, N[1] + 8)],
-                    fill=PAL["skin"], brush=kit.brush(PAL["skin"], 4), smooth=True)
+                    fill=self.pal["skin"], brush=kit.brush(self.pal["skin"], 4), smooth=True)
         else:
-            k.ellipse(N[0], N[1], 9, 6.5, PAL["skin_shade"], line=0)
-            k.dot(N[0] - 3, N[1] - 2, 2.2, lighten(PAL["skin"], 0.5))
+            k.ellipse(N[0], N[1], 9, 6.5, self.pal["skin_shade"], line=0)
+            k.dot(N[0] - 3, N[1] - 2, 2.2, lighten(self.pal["skin"], 0.5))
         # boca
         mpos = rot((nx - C[0] - f * s * 22, 58), ht)
-        kit.mouth(P, (C[0] + mpos[0], C[1] + mpos[1]), f, s, ht, width=26, line=darken(PAL["lips"], 0.55),
-                  lips=PAL["lips"])
+        kit.mouth(P, (C[0] + mpos[0], C[1] + mpos[1]), f, s, ht, width=26, line=darken(self.pal["lips"], 0.55),
+                  lips=self.pal["lips"])
         if P["tears"] > 0:
             for c, x, ang in eyes:
                 if c > 0.2:
@@ -162,8 +182,8 @@ class Luizinho(Character):
             kit.blob([(sx_, C[1] - 60), (sx_ + 10, C[1] - 34), (sx_, C[1] - 26), (sx_ - 10, C[1] - 34)], "#BFE8FA", shade=False)
 
     def _ear(self, kit: Kit, E, c, a):
-        kit.blob(ellipse_pts(E[0], E[1], 15 * max(abs(c), 0.6), 21, 0, 12), PAL["skin"], shade=False)
-        kit.k.ellipse(E[0] + (2 if a > 0 else -2), E[1] + 1, 7 * max(abs(c), 0.6), 11, PAL["skin_shade"], line=0)
+        kit.blob(ellipse_pts(E[0], E[1], 15 * max(abs(c), 0.6), 21, 0, 12), self.pal["skin"], shade=False)
+        kit.k.ellipse(E[0] + (2 if a > 0 else -2), E[1] + 1, 7 * max(abs(c), 0.6), 11, self.pal["skin_shade"], line=0)
 
     def _hair(self, kit: Kit, P, C, v: View, ht, back: bool):
         """Cabelão volumoso e bagunçado: massa com tufos + franja; borda de baixo segue a testa ao girar."""
@@ -173,19 +193,20 @@ class Luizinho(Character):
         if back:
             arc = []
             for i, a in enumerate(np.linspace(-2.1, 2.1, 40)):
-                r = 104 + 11 * abs(math.sin(a * 4.2 + 0.4)) + 3 * math.sin(a * 9)        # tufos ondulados, não espinhos
+                r = 104 + self.hair_tuft * (0.92 * abs(math.sin(a * 4.2 + 0.4)) + 0.25 * math.sin(a * 9))        # tufos ondulados, não espinhos
                 arc.append((top_c[0] + r * math.sin(a), top_c[1] - r * math.cos(a) * 0.98 - bounce * 8 * math.cos(a)))
             nape = [(C[0] + 70, C[1] + 44), (C[0] + 30, C[1] + 58), (C[0] - 6, C[1] + 48), (C[0] - 40, C[1] + 60), (C[0] - 72, C[1] + 42)]
             pts = [rot(p, ht, C) for p in arc + nape]
-            kit.blob(pts, PAL["hair"], shade_offset=(8, 10))
+            kit.blob(pts, self.pal["hair"], shade_offset=(8, 10))
+            self._hair_extras(kit, P, C, v, ht)
             return
 
         def yl(phi):
             a = abs(phi)
             if a < 1.0:
-                return -54 + 8 * math.cos(a * 4.5) ** 2                 # franja: 2–3 ondas suaves (sobrancelhas à mostra)
+                return self.fringe_y + 8 * math.cos(a * 4.5) ** 2 * (self.hair_tuft / 12)   # franja em ondas suaves
             if a < 1.55:
-                return lerp(-50, 2, (a - 1.0) / 0.55)                   # têmporas
+                return lerp(self.fringe_y + 4, 2, (a - 1.0) / 0.55)   # têmporas
             return lerp(2, 44, min(1.0, (a - 1.55) / 1.4))              # nuca (lado de trás no perfil)
 
         p0 = -1.55 - (1.445 * s if f > 0 else 0.0)
@@ -211,14 +232,15 @@ class Luizinho(Character):
             r = lerp(math.hypot(L[0] - top_c[0], L[1] - top_c[1]) if u < 0.5 else math.hypot(R[0] - top_c[0], R[1] - top_c[1]),
                      102, min(1, edge * 3))
             # tufos arredondados (ondas) — cabelo fofo e bagunçado
-            r += (12 * abs(math.sin(a * 4.2 + 0.4)) + 3 * math.sin(a * 9)) * min(1, edge * 2.5)
+            r += self.hair_tuft * (abs(math.sin(a * 4.2 + 0.4)) + 0.25 * math.sin(a * 9)) * min(1, edge * 2.5)
             yb = -bounce * 10 * edge
             upper.append((top_c[0] + r * math.sin(a), top_c[1] - r * math.cos(a) + yb))
         pts = [rot(p, ht, C) for p in upper + lower]
-        kit.blob(pts, PAL["hair"], shade_offset=(8, 10))
+        kit.blob(pts, self.pal["hair"], shade_offset=(8, 10))
         # brilho do cabelo
         hl = [rot((top_c[0] - 40 + 50 * f * s * 0.3 + dx, top_c[1] - 78 + dy), ht, C) for dx, dy in ((0, 10), (30, -4), (62, 6))]
-        kit.k.stroke(hl, 8, taper=(0.3, 0.3), color_=PAL["hair_light"])
+        kit.k.stroke(hl, 8, taper=(0.3, 0.3), color_=self.pal["hair_light"])
+        self._hair_extras(kit, P, C, v, ht)
         # mechas soltas na franja
 
     # ------------------------------------------------------------------ membros
@@ -231,9 +253,9 @@ class Luizinho(Character):
             nx, ny = -nx, -ny
         bend = P[f"hand_{which}_bend"]
         mid = ((S[0] + H[0]) / 2 + nx * bend * L, (S[1] + H[1]) / 2 + ny * bend * L)
-        skin = darken(PAL["skin"], 0.92) if behind else PAL["skin"]
+        skin = darken(self.pal["skin"], 0.92) if behind else self.pal["skin"]
         kit.limb([S, mid, H], 27, 22, skin)
-        kit.hand(H, (dx / L, dy / L), P[f"paw_{which}"], PAL["skin"], behind, size=21)
+        kit.hand(H, (dx / L, dy / L), P[f"paw_{which}"], self.pal["skin"], behind, size=21)
 
     def _leg(self, kit: Kit, P, which, Hp, f, s, behind=False):
         F = (Hp[0] + P[f"foot_{which}_x"] * f, P[f"foot_{which}_y"])
@@ -242,12 +264,13 @@ class Luizinho(Character):
         dx, dy = ankle[0] - Hp[0], ankle[1] - Hp[1]
         L = math.hypot(dx, dy) or 1
         mid = ((Hp[0] + ankle[0]) / 2 + f * bend * L, (Hp[1] + ankle[1]) / 2)
-        skin = darken(PAL["skin"], 0.92) if behind else PAL["skin"]
+        skin = darken(self.pal["skin"], 0.92) if behind else self.pal["skin"]
         kit.limb([Hp, mid, ankle], 30, 25, skin)
         # perna da bermuda
         cuff = (Hp[0] + (mid[0] - Hp[0]) * 0.75, Hp[1] + (mid[1] - Hp[1]) * 0.75)
-        kit.limb([Hp, cuff], 40, 38, darken(PAL["shorts"], 0.9) if behind else PAL["shorts"])
-        kit.sneaker(F, f, s, P[f"foot_{which}_rot"] * f, PAL["shoe"], PAL["sole"], behind)
+        if self.pal.get("shorts"):
+            kit.limb([Hp, cuff], 40, 38, darken(self.pal["shorts"], 0.9) if behind else self.pal["shorts"])
+        kit.sneaker(F, f, s, P[f"foot_{which}_rot"] * f, self.pal["shoe"], self.pal["sole"], behind)
 
     def reference_poses(self):
         from .base import expression

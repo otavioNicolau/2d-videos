@@ -113,10 +113,14 @@ class CharTimeline:
                 if s.kind == "flap":
                     ov = cycles.flap(t - s.t0, s.T)
                 elif s.kind.startswith("dance:"):
-                    ov = cycles.dance(s.kind[6:], t, self.beats, s.amp)
+                    ov = cycles.dance(s.kind[6:], t, self.beats, s.amp, s.t0)
                 else:
                     ov = cycles.gait(self.char.id, s.kind, (t - s.t0) / s.T)
                 for k, v in ov.items():
+                    if k.endswith("+"):                # canal aditivo: soma ao valor da cena (ex.: turn+)
+                        base = k[:-1]
+                        p[base] = p.get(base, 0.0) + v * w
+                        continue
                     if p.get("holding") and (k.startswith("hand_n") or k == "paw_n"):
                         continue                      # a mão que segura o objeto não entra no ciclo
                     if isinstance(v, (int, float)) and k not in CATEGORICAL:
@@ -138,13 +142,33 @@ class CharTimeline:
         poses = [self.raw(i * dt) for i in range(n)]
         # ação secundária: orelhas/cauda/cabeça respondem à aceleração do corpo (follow-through)
         ear, ear_v, tail, tail_v, hx, hx_v = 0.0, 0.0, 0.0, 0.0, 0.0, 0.0
-        prev_vx, prev_x, prev_by = 0.0, poses[0]["x"] if poses else 0.0, poses[0]["body_y"] if poses else 0.0
+        hy, hy_v, hb, hb_v, hat, hat_v = 0.0, 0.0, 0.0, 0.0, 0.0, 0.0
+        bx0 = (poses[0]["x"] + poses[0].get("body_x", 0.0)) if poses else 0.0
+        prev_vx, prev_x, prev_by, prev_vy = 0.0, bx0, poses[0]["body_y"] if poses else 0.0, 0.0
         for i, p in enumerate(poses):
             f = 1.0 if p["turn"] >= 0 else -1.0
-            vx = (p["x"] - prev_x) / dt
+            # corpo inteiro (deslocamento no palco + balanço da dança): a cabeça/cabelo/chapéu respondem a ele
+            bx = p["x"] + p.get("body_x", 0.0) * f
+            vx = (bx - prev_x) / dt
             ax = (vx - prev_vx) / dt
             vy = (p["body_y"] + p["y"] - prev_by) / dt
-            prev_x, prev_vx, prev_by = p["x"], vx, p["body_y"] + p["y"]
+            ay = (vy - prev_vy) / dt
+            prev_x, prev_vx, prev_by, prev_vy = bx, vx, p["body_y"] + p["y"], vy
+            ax, ay = max(-6e4, min(6e4, ax)), max(-6e4, min(6e4, ay))
+            for _ in range(2):        # follow-through vertical: cabeça "pesa" ao quicar; cabelo e chapéu atrasam
+                h = dt / 2
+                hy_a = -110 * hy - 12 * hy_v - 0.0016 * ay
+                hy_v += hy_a * h
+                hy += hy_v * h
+                hb_a = -70 * hb - 6 * hb_v - 0.00012 * ay
+                hb_v += hb_a * h
+                hb += hb_v * h
+                hat_a = -80 * hat - 7 * hat_v - 0.00005 * ax * f
+                hat_v += hat_a * h
+                hat += hat_v * h
+            p["head_dy"] = p.get("head_dy", 0.0) + max(-14, min(14, hy * 30))
+            p["hair_bounce"] = p.get("hair_bounce", 0.0) + max(-1.0, min(1.0, hb * 8))
+            p["hat_tilt"] = p.get("hat_tilt", 0.0) + max(-0.3, min(0.3, hat * 2))
             # mola amortecida: k rigidez, c amortecimento, impulsos pela aceleração
             for _ in range(2):
                 h = dt / 2

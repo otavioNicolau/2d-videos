@@ -1,14 +1,22 @@
 {
   "episode": "teste-danca-do-calango",
   "scenes": {
-    "s01_abertura": {
-      "frames": 228,
+    "s01_oi": {
+      "frames": 123,
       "performers": {
-        "luizinho": {
-          "drawings": 227,
+        "laurinha": {
+          "drawings": 123,
           "hidden_frames": [],
           "exposure": {
-            "1s": 227
+            "1s": 122
+          },
+          "empty_frames": 0
+        },
+        "luizinho": {
+          "drawings": 123,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 122
           },
           "empty_frames": 0
         }
@@ -16,11 +24,34 @@
       "issues": [],
       "frozen_samples": 0
     },
-    "s02_vai_ai": {
-      "frames": 230,
+    "s02_sertao": {
+      "frames": 105,
       "performers": {
         "luizinho": {
-          "drawings": 223,
+          "drawings": 105,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 104
+          },
+          "empty_frames": 0
+        },
+        "laurinha": {
+          "drawings": 105,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 104
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s03_dividida__p0": {
+      "frames": 230,
+      "performers": {
+        "laurinha": {
+          "drawings": 230,
           "hidden_frames": [],
           "exposure": {
             "1s": 229
@@ -31,14 +62,14 @@
       "issues": [],
       "frozen_samples": 0
     },
-    "s03_passeando": {
-      "frames": 251,
+    "s03_dividida__p1": {
+      "frames": 230,
       "performers": {
         "luizinho": {
-          "drawings": 251,
+          "drawings": 230,
           "hidden_frames": [],
           "exposure": {
-            "1s": 250
+            "1s": 229
           },
           "empty_frames": 0
         }
@@ -46,7 +77,58 @@
       "issues": [],
       "frozen_samples": 0
     },
-    "s04_apareceu": {
+    "s03_dividida": {
+      "frames": 230,
+      "panels": 2,
+      "issues": []
+    },
+    "s04_passeando": {
+      "frames": 126,
+      "performers": {
+        "luizinho": {
+          "drawings": 126,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 125
+          },
+          "empty_frames": 0
+        },
+        "laurinha": {
+          "drawings": 126,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 125
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s05_juntos": {
+      "frames": 125,
+      "performers": {
+        "laurinha": {
+          "drawings": 125,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 124
+          },
+          "empty_frames": 0
+        },
+        "luizinho": {
+          "drawings": 125,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 124
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s06_apareceu": {
       "frames": 146,
       "performers": {
         "luizinho": {
@@ -57,6 +139,14 @@
           },
           "empty_frames": 0
         },
+        "laurinha": {
+          "drawings": 146,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 145
+          },
+          "empty_frames": 0
+        },
         "calanguinho": {
           "drawings": 146,
           "hidden_frames": [],
@@ -69,10 +159,18 @@
       "issues": [],
       "frozen_samples": 0
     },
-    "s05_observando": {
+    "s07_observando": {
       "frames": 168,
       "performers": {
         "luizinho": {
+          "drawings": 168,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 167
+          },
+          "empty_frames": 0
+        },
+        "laurinha": {
           "drawings": 168,
           "hidden_frames": [],
           "exposure": {
@@ -92,7 +190,7 @@
       "issues": [],
       "frozen_samples": 0
     },
-    "s06_comecou": {
+    "s08_comecou": {
       "frames": 167,
       "performers": {
         "calanguinho": {
@@ -107,14 +205,14 @@
       "issues": [],
       "frozen_samples": 0
     },
-    "s07_refrao1": {
-      "frames": 251,
+    "s09_lango": {
+      "frames": 126,
       "performers": {
         "calanguinho": {
-          "drawings": 251,
+          "drawings": 126,
           "hidden_frames": [],
           "exposure": {
-            "1s": 250
+            "1s": 125
           },
           "empty_frames": 0
         }
@@ -122,22 +220,30 @@
       "issues": [],
       "frozen_samples": 0
     },
-    "s08_refrao2": {
-      "frames": 398,
+    "s10_cabeca": {
+      "frames": 125,
       "performers": {
-        "luizinho": {
-          "drawings": 398,
+        "laurinha": {
+          "drawings": 125,
           "hidden_frames": [],
           "exposure": {
-            "1s": 397
+            "1s": 124
           },
           "empty_frames": 0
         },
         "calanguinho": {
-          "drawings": 398,
+          "drawings": 125,
           "hidden_frames": [],
           "exposure": {
-            "1s": 397
+            "1s": 124
+          },
+          "empty_frames": 0
+        },
+        "luizinho": {
+          "drawings": 125,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 124
           },
           "empty_frames": 0
         }
@@ -145,10 +251,107 @@
       "issues": [],
       "frozen_samples": 0
     },
-    "s09_pro_lado": {
+    "s11_dividida__p0": {
       "frames": 147,
       "performers": {
+        "laurinha": {
+          "drawings": 147,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 146
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s11_dividida__p1": {
+      "frames": 147,
+      "performers": {
+        "calanguinho": {
+          "drawings": 147,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 146
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s11_dividida": {
+      "frames": 147,
+      "panels": 2,
+      "issues": []
+    },
+    "s12_palmas": {
+      "frames": 105,
+      "performers": {
+        "laurinha": {
+          "drawings": 105,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 104
+          },
+          "empty_frames": 0
+        },
+        "calanguinho": {
+          "drawings": 105,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 104
+          },
+          "empty_frames": 0
+        },
         "luizinho": {
+          "drawings": 105,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 104
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s13_twist": {
+      "frames": 146,
+      "performers": {
+        "laurinha": {
+          "drawings": 146,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 145
+          },
+          "empty_frames": 0
+        },
+        "calanguinho": {
+          "drawings": 146,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 145
+          },
+          "empty_frames": 0
+        },
+        "luizinho": {
+          "drawings": 146,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 145
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s14_pro_lado": {
+      "frames": 147,
+      "performers": {
+        "laurinha": {
           "drawings": 147,
           "hidden_frames": [],
           "exposure": {
@@ -163,15 +366,23 @@
             "1s": 146
           },
           "empty_frames": 0
+        },
+        "luizinho": {
+          "drawings": 147,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 146
+          },
+          "empty_frames": 0
         }
       },
       "issues": [],
       "frozen_samples": 0
     },
-    "s10_pro_outro": {
+    "s15_pro_outro": {
       "frames": 209,
       "performers": {
-        "luizinho": {
+        "laurinha": {
           "drawings": 209,
           "hidden_frames": [],
           "exposure": {
@@ -180,6 +391,14 @@
           "empty_frames": 0
         },
         "calanguinho": {
+          "drawings": 209,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 208
+          },
+          "empty_frames": 0
+        },
+        "luizinho": {
           "drawings": 209,
           "hidden_frames": [],
           "exposure": {
@@ -194,16 +413,21 @@
   },
   "warnings": [
     "render final ainda não aprovado (approval.final_render = false): será gerado como CANDIDATO",
-    "storyboard s01_abertura: pendente",
-    "storyboard s02_vai_ai: pendente",
-    "storyboard s03_passeando: pendente",
-    "storyboard s04_apareceu: pendente",
-    "storyboard s05_observando: pendente",
-    "storyboard s06_comecou: pendente",
-    "storyboard s07_refrao1: pendente",
-    "storyboard s08_refrao2: pendente",
-    "storyboard s09_pro_lado: pendente",
-    "storyboard s10_pro_outro: pendente"
+    "storyboard s01_oi: pendente",
+    "storyboard s02_sertao: pendente",
+    "storyboard s03_dividida: pendente",
+    "storyboard s04_passeando: pendente",
+    "storyboard s05_juntos: pendente",
+    "storyboard s06_apareceu: pendente",
+    "storyboard s07_observando: pendente",
+    "storyboard s08_comecou: pendente",
+    "storyboard s09_lango: pendente",
+    "storyboard s10_cabeca: pendente",
+    "storyboard s11_dividida: pendente",
+    "storyboard s12_palmas: pendente",
+    "storyboard s13_twist: pendente",
+    "storyboard s14_pro_lado: pendente",
+    "storyboard s15_pro_outro: pendente"
   ],
   "lines": {},
   "video": "/home/otavio/2d/projects/teste-danca-do-calango/output/teste-danca-do-calango_CANDIDATO.mp4",

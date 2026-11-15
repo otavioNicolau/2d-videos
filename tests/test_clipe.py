@@ -74,3 +74,36 @@ def test_test_clip_validates_and_matches_audio_length():
     assert r.ok, r.errors
     total = sum(s["duration"] for s in ep["scenes"])
     assert abs(total - (ep["soundtrack"]["end"] - ep["soundtrack"]["start"])) < 0.05
+
+
+def test_transitions_and_split_keep_size_and_mix_frames():
+    from PIL import Image
+    from toonstudio.render.post import TRANSITIONS, split_frame, transition_frame
+    a = Image.new("RGB", (320, 180), (255, 0, 0))
+    b = Image.new("RGB", (320, 180), (0, 0, 255))
+    for k in TRANSITIONS:
+        start, mid, end = (transition_frame(a, b, k, u) for u in (0.0, 0.5, 1.0))
+        assert start.size == mid.size == (320, 180), k
+        assert end.getpixel((160, 90))[2] > 200, k            # termina mostrando a cena nova
+    s = split_frame([a, b], "vertical", 0.0)
+    assert s.getpixel((40, 90))[0] > 200 and s.getpixel((280, 90))[2] > 200
+
+
+def test_choreography_moves_are_continuous_and_on_beat():
+    beats = [i * 0.7 for i in range(40)]
+    for st in cycles.DANCES:
+        prev = None
+        for k in range(200):
+            p = cycles.dance(st, 1.0 + k / 60, beats, 1.0, 0.0)
+            if prev is not None:      # sem saltos entre quadros vizinhos (curva suave)
+                jump = max(abs(p[c] - prev[c]) for c in p if not c.startswith("paw") and c in prev)
+                assert jump < 40, (st, k, jump)
+            prev = p
+
+
+def test_laurinha_shares_child_template():
+    from toonstudio.characters.laurinha import Laurinha
+    from toonstudio.characters.luizinho import Luizinho
+    assert issubclass(Laurinha, Luizinho)
+    a = character("laurinha").render_array({"turn": 0.2}, scale=0.4, jitter=0)
+    assert a[..., 3].any()

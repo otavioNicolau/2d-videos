@@ -121,7 +121,14 @@ def build(ep_dir: Path) -> Path:
         for i, line in enumerate(_wrap(s.get("description", ""), 30)[:7]):
             d.text((12, y + 90 + i * 22), line, fill=(215, 215, 215), font=ImageFont.truetype(FONT, 16))
         for i, frac in enumerate((0.05, 0.5, 0.95)):
-            pn = panel(ep, s, frac * s["duration"], layers, beats, offset).convert("RGB").resize((tw, th))
+            if s.get("panels"):
+                from ..render.post import split_frame
+                subs = [panel(ep, {**pn, "id": s["id"], "duration": s["duration"]}, frac * s["duration"],
+                              layers_for(pn.get("background", ep["background"])), beats, offset).convert("RGB")
+                        for pn in s["panels"]]
+                pn = split_frame(subs, s.get("layout", "diagonal"), frac * s["duration"]).resize((tw, th))
+            else:
+                pn = panel(ep, s, frac * s["duration"], layers, beats, offset).convert("RGB").resize((tw, th))
             sheet.paste(pn, (330 + i * (tw + 8), y))
         offset += s["duration"]
     out = ep_dir / "output"

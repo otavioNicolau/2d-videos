@@ -160,15 +160,37 @@ class Ink:
     # -- formas fechadas
     def shape(self, pts: Sequence[Pt] | np.ndarray, fill=None, line: float | None = None, smooth: bool = True,
               brush: Brush | None = None, shade: tuple | None = None, shade_offset: Pt = (10, 12),
-              clip_extra: Callable[["Ink"], None] | None = None, dense: bool = False) -> np.ndarray:
-        """Forma fechada: preenchimento + (sombra interna opcional) + detalhes recortados + contorno variável."""
+              clip_extra: Callable[["Ink"], None] | None = None, dense: bool = False,
+              soft: tuple | None = None) -> np.ndarray:
+        """Forma fechada: preenchimento + (sombra interna opcional) + detalhes recortados + contorno variável.
+        `soft=(clara, base, escura)`: volume suave (gradiente radial com luz no alto-esquerda + brilho especular),
+        em vez da meia-lua de sombra dura — o visual "fofinho" dos clipes infantis."""
         b = brush or self.brush
         P = np.asarray(pts, float) if dense else (catmull_closed(pts) if smooth else np.asarray(pts, float))
         P = _jitter(P, b.jitter, self._next_seed(), True)
         P = _orient_ccw(P)
         path = _poly_path(P)
-        if fill is not None:
+        if soft is not None:
+            lo, hi = P.min(axis=0), P.max(axis=0)
+            w_, h_ = hi - lo
+            c0 = skia.Point(lo[0] + w_ * 0.36, lo[1] + h_ * 0.3)
+            r = float(max(w_, h_)) * 0.95
+            sh = skia.GradientShader.MakeRadial(c0, r, [color(soft[0]).toColor(), color(soft[1]).toColor(),
+                                                        color(soft[2]).toColor()], [0.0, 0.55, 1.0])
+            pt = skia.Paint(AntiAlias=True, Shader=sh)
+            self.c.drawPath(path, pt)
+        elif fill is not None:
             self.c.drawPath(path, paint(fill))
+        if soft is not None:
+            lo, hi = P.min(axis=0), P.max(axis=0)
+            w_, h_ = hi - lo
+            if min(w_, h_) > 18:       # brilho especular suave no alto-esquerda
+                self.c.save()
+                self.c.clipPath(path, doAntiAlias=True)
+                hp = skia.Paint(AntiAlias=True, Color4f=skia.Color4f(1, 1, 1, 0.28))
+                hp.setMaskFilter(skia.MaskFilter.MakeBlur(skia.kNormal_BlurStyle, max(2.0, min(w_, h_) * 0.08)))
+                self.c.drawOval(skia.Rect(lo[0] + w_ * 0.16, lo[1] + h_ * 0.08, lo[0] + w_ * 0.52, lo[1] + h_ * 0.3), hp)
+                self.c.restore()
         if shade is not None or clip_extra is not None:
             self.c.save()
             self.c.clipPath(path, doAntiAlias=True)

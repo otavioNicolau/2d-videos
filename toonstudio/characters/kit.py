@@ -26,10 +26,11 @@ def lighten(hex_color: str, k: float = 0.35) -> str:
 
 @dataclass
 class Style:
-    width: float = 5.0          # contorno
-    vary: float = 0.22          # variação suave (quase constante)
-    ink_k: float = 0.5          # contorno = cor da peça × ink_k
-    shade_k: float = 0.88       # sombra = cor da peça × shade_k
+    width: float = 4.2          # contorno (fino: o volume vem do sombreado)
+    vary: float = 0.15          # variação suave (quase constante)
+    ink_k: float = 0.55         # contorno = cor da peça × ink_k
+    shade_k: float = 0.82       # sombra = cor da peça × shade_k
+    soft: bool = True           # volume com gradiente + brilho (visual "3D fofinho")
 
 
 TURMINHA = Style()
@@ -48,12 +49,16 @@ class Kit:
 
     def blob(self, pts, fill: str, shade: bool = True, width: float | None = None, smooth: bool = True,
              shade_offset=(8, 9), clip_extra=None):
+        if self.s.soft and shade:
+            return self.k.shape(pts, fill=fill, brush=self.brush(fill, width), smooth=smooth,
+                                soft=(lighten(fill, 0.22), fill, darken(fill, self.s.shade_k)), clip_extra=clip_extra)
         return self.k.shape(pts, fill=fill, brush=self.brush(fill, width), smooth=smooth,
                             shade=darken(fill, self.s.shade_k) if shade else None, shade_offset=shade_offset,
                             clip_extra=clip_extra)
 
     def limb(self, pts, w0: float, w1: float, fill: str):
-        return self.k.tube(pts, w0, w1, fill=fill, line=self.s.width, ink=_rgba(darken(fill, self.s.ink_k)))
+        return self.k.tube(pts, w0, w1, fill=fill, line=self.s.width, ink=_rgba(darken(fill, self.s.ink_k)),
+                           shade=_rgba(darken(fill, 0.9)) if self.s.soft else None)
 
     # ------------------------------------------------------------------ rosto
     def eye(self, P: dict, E, c: float, ang: float, f: float, s: float, ht: float, *, rx: float, ry: float,
@@ -64,6 +69,17 @@ class Kit:
         rx, ry = rx * c * es, ry * es
         ex, ey = E
         lid, lid_low = P["lid"], P["lid_low"]
+        if P.get("eyes_happy", 0.0) > 0.5:
+            # "^^": arco grosso para cima, com cílio no canto externo
+            out = -1 if ang < 0 else 1
+            arc = [(ex - rx * 1.05, ey + ry * 0.15), (ex - rx * 0.5, ey - ry * 0.45), (ex, ey - ry * 0.58),
+                   (ex + rx * 0.5, ey - ry * 0.45), (ex + rx * 1.05, ey + ry * 0.15)]
+            self.k.stroke(arc, max(6.0, ry * 0.32), taper=(0.25, 0.25), color_=lash)
+            b = P["brow_l"] if ang < 0 else P["brow_r"]
+            by = ey - ry - brow_gap - P["brow_y"] * 10
+            self.k.stroke([(ex - rx * 0.9, by + 4), (ex, by - 4), (ex + rx * 0.9, by + 4)], brow_w * max(c, 0.6),
+                          taper=(0.35, 0.25), color_=brow_color)
+            return
 
         def inside(kk: Ink):
             lx = (P["look_x"] * f * 0.5 + 0.25 * f * s) * rx

@@ -30,6 +30,7 @@ FACE_NEUTRAL = {
     "smile": 0.2,                       # -1 tristeza .. 1 sorriso
     "jaw": 0.0,                         # abertura extra além do visema (grito)
     "tears": 0.0, "sweat": 0.0, "blush": 0.0,
+    "eyes_happy": 0.0,                  # >0,5: olhos fechados em arco "^^" (alegria pura, canto, riso)
 }
 
 EXPRESSIONS: dict[str, dict[str, float]] = {
@@ -47,6 +48,7 @@ EXPRESSIONS: dict[str, dict[str, float]] = {
     "dizzy": {"brow_l": -0.5, "brow_r": 0.4, "lid": 0.3, "smile": -0.3, "jaw": 0.25},
     "sleepy": {"lid": 0.7, "brow_y": -0.2, "smile": 0.0},
     "determined": {"brow_l": 0.6, "brow_r": 0.6, "brow_y": -0.2, "smile": -0.2, "lid": 0.15},
+    "joy": {"eyes_happy": 1.0, "smile": 1.0, "brow_y": 0.5, "blush": 1.0, "jaw": 0.25},
 }
 
 VISEMES = "ABCDEFGHX"   # Rhubarb (Preston Blair estendido)

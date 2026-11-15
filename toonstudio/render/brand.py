@@ -10,8 +10,8 @@ from ..core.config import LIBRARY
 FONT = LIBRARY / "fonts" / "Poppins-ExtraBold.ttf"
 
 
-def logo(out: Path, height: int = 150) -> Path:
-    """Selo do canal: nuvem amarela com borda vermelha, 'LUIZINHO' vermelho e 'e Turminha' azul, contorno branco."""
+def logo(out: Path, height: int = 150, line1: str = "LAURINHA", line2: str = "e Luizinho") -> Path:
+    """Selo do canal: nuvem amarela com borda vermelha, nome principal e complemento, contorno branco."""
     tf = skia.Typeface.MakeFromFile(str(FONT))
     W, H = int(height * 2.6), height
     s = skia.Surface(W, H + 40)
@@ -36,8 +36,8 @@ def logo(out: Path, height: int = 150) -> Path:
         c.drawTextBlob(blob, x, y, skia.Paint(AntiAlias=True, Color=skia.ColorWHITE, Style=skia.Paint.kStroke_Style,
                                               StrokeWidth=size * 0.16, StrokeJoin=skia.Paint.kRound_Join))
         c.drawTextBlob(blob, x, y, skia.Paint(AntiAlias=True, Color=color))
-    text("LUIZINHO", H * 0.42, skia.Color(224, 52, 46), H * 0.6)
-    text("e Turminha", H * 0.26, skia.Color(46, 112, 210), H * 0.86)
+    text(line1, H * 0.42 * min(1.0, 8 / max(8, len(line1))), skia.Color(232, 62, 120), H * 0.6)
+    text(line2, H * 0.26, skia.Color(46, 112, 210), H * 0.86)
     out.parent.mkdir(parents=True, exist_ok=True)
     s.makeImageSnapshot().save(str(out), skia.kPNG)
     return out
@@ -53,8 +53,13 @@ def _esc(t: str) -> str:
     return t.replace("{", "(").replace("}", ")").replace("\n", "\\N")
 
 
+CALLOUT_COLORS = {"amarelo": ("&H003FD2FF", "&H001565E0"), "rosa": ("&H00B36FF7", "&H006A1FB0"),
+                  "azul": ("&H00F08B3C", "&H00803010"), "verde": ("&H0067CB4F", "&H00206B1A"),
+                  "laranja": ("&H004DB0FF", "&H000A50C8")}
+
+
 def ass(out: Path, W: int, H: int, lines: list[dict], card: str | None, footer: str | None, duration: float,
-        card_dur: float = 5.0) -> Path:
+        card_dur: float = 5.0, callouts: list[dict] | None = None) -> Path:
     """Letra: palavra por palavra (cada palavra aparece quando é cantada), amarela, maiúscula, contorno escuro."""
     head = f"""[Script Info]
 ScriptType: v4.00+
@@ -67,6 +72,7 @@ ScaledBorderAndShadow: yes
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
 Style: Letra,Poppins ExtraBold,72,&H004DE1FF,&H004DE1FF,&H00102040,&H80000000,0,0,0,0,100,100,1,0,1,6,3,2,80,80,58,1
 Style: Aviso,Poppins ExtraBold,40,&H00FFFFFF,&H00FFFFFF,&H00000000,&HB0000000,0,0,0,0,100,100,0,0,3,14,0,5,160,160,40,1
+Style: Destaque,Poppins ExtraBold,150,&H003FD2FF,&H003FD2FF,&H001565E0,&H00000000,0,0,0,0,100,100,2,0,1,12,0,5,40,40,40,1
 Style: Rodape,Poppins ExtraBold,24,&H00FFFFFF,&H00FFFFFF,&H00000000,&H90000000,0,0,0,0,100,100,0,0,3,6,0,9,40,40,30,1
 
 [Events]
@@ -85,6 +91,16 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
                 continue
             txt = " ".join(x["w"] for x in words[:k + 1]).upper()
             ev.append(f"Dialogue: 1,{_ts(start)},{_ts(end)},Letra,,0,0,0,,{{\\fad(60,0)}}{_esc(txt)}")
+    for c in callouts or []:
+        # palavra de destaque: nasce do zero, passa do tamanho (overshoot), assenta e balança; some encolhendo
+        d = float(c.get("dur", 1.2))
+        fill, border = CALLOUT_COLORS.get(c.get("color", "amarelo"), CALLOUT_COLORS["amarelo"])
+        y = int(c.get("y", 210))
+        ms = int(d * 1000)
+        anim = (f"\\pos({W // 2},{y})\\c{fill}\\3c{border}\\fscx0\\fscy0\\frz-8"
+                f"\\t(0,180,\\fscx125\\fscy125\\frz4)\\t(180,320,\\fscx100\\fscy100\\frz-3)"
+                f"\\t(320,{ms - 220},\\frz3)\\t({ms - 200},{ms},\\fscx0\\fscy0)")
+        ev.append(f"Dialogue: 4,{_ts(c['t'])},{_ts(c['t'] + d)},Destaque,,0,0,0,,{{{anim}}}{_esc(c['text'].upper())}")
     if card:
         ev.append(f"Dialogue: 3,{_ts(0)},{_ts(card_dur)},Aviso,,0,0,0,,{{\\fad(200,300)}}{_esc(card)}")
     if footer:

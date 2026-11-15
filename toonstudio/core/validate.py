@@ -49,7 +49,12 @@ def validate(ep: dict) -> Report:
     W, H = ep["resolution"]
     from ..backgrounds import registry as bgreg
     bgs: dict[str, dict] = {}
-    for bid in {ep["background"], *(s.get("background") for s in ep["scenes"] if s.get("background"))}:
+    used = {ep["background"]}
+    for s in ep["scenes"]:
+        for u in [s, *s.get("panels", [])]:
+            if u.get("background"):
+                used.add(u["background"])
+    for bid in used:
         if not bgreg.known(bid):
             r.errors.append(f"cenário '{bid}' não existe (biblioteca: {', '.join(bgreg.catalog())})")
             continue
@@ -76,11 +81,21 @@ def validate(ep: dict) -> Report:
             r.errors.append(f"elenco {name}: personagem {c['character']} não existe na biblioteca")
     known_sfx = sfx_ids()
     seen = set()
+    units = []
     for s in ep["scenes"]:
+        if s["id"] in seen:
+            r.errors.append(f"{s['id']}: id de cena repetido")
+        seen.add(s["id"])
+        if s.get("panels"):
+            if s.get("characters") or s.get("camera"):
+                r.errors.append(f"{s['id']}: cena com painéis não leva personagens/câmera próprios (vão em cada painel)")
+            units += [{**pn, "id": f"{s['id']}__p{k}", "duration": s["duration"]} for k, pn in enumerate(s["panels"])]
+        elif "camera" not in s or "characters" not in s:
+            r.errors.append(f"{s['id']}: falta câmera ou personagens")
+        else:
+            units.append(s)
+    for s in units:
         sid, dur = s["id"], s["duration"]
-        if sid in seen:
-            r.errors.append(f"{sid}: id de cena repetido")
-        seen.add(sid)
         perf = {**s.get("characters", {}), **s.get("props", {})}
         for who, p in perf.items():
             if who not in cast:

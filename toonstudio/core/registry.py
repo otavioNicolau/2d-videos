@@ -5,10 +5,11 @@ from ..characters.base import Character
 from ..characters.calanguinho import Calanguinho
 from ..characters.caramelo import Caramelo
 from ..characters.props import Torta
+from ..characters.laurinha import Laurinha
 from ..characters.luizinho import Luizinho
 from ..characters.tevico import Tevico
 
-CHARACTERS: dict[str, type[Character]] = {"caramelo": Caramelo, "tevico": Tevico, "torta": Torta, "luizinho": Luizinho, "calanguinho": Calanguinho}
+CHARACTERS: dict[str, type[Character]] = {"caramelo": Caramelo, "tevico": Tevico, "torta": Torta, "luizinho": Luizinho, "calanguinho": Calanguinho, "laurinha": Laurinha}
 BACKGROUNDS = {"floresta_clareira": "toonstudio.backgrounds.forest"}
 
 _cache: dict[str, Character] = {}

@@ -1,7 +1,7 @@
 {
   "schema": "1.1",
   "id": "teste-danca-do-calango",
-  "title": "TESTE — Dança do Calango (Luizinho e Turminha)",
+  "title": "TESTE — Dança do Calango (Laurinha e Luizinho)",
   "logline": "Teste interno de direção de clipe musical. Música de terceiros (Animadinhos) — não publicar.",
   "fps": 30,
   "resolution": [
@@ -25,11 +25,18 @@
     "logo": true,
     "card_dur": 5.0,
     "card": "TESTE INTERNO DE PRODUÇÃO\nMúsica “Dança do Calango” © Animadinhos — todos os direitos reservados aos autores.\nVídeo apenas para avaliação interna. Proibida a publicação.",
-    "footer": "TESTE INTERNO • Música © Animadinhos • NÃO PUBLICAR"
+    "footer": "TESTE INTERNO • Música © Animadinhos • NÃO PUBLICAR",
+    "channel": [
+      "LAURINHA",
+      "e Luizinho"
+    ]
   },
   "cast": {
     "luizinho": {
       "character": "luizinho"
+    },
+    "laurinha": {
+      "character": "laurinha"
     },
     "calanguinho": {
       "character": "calanguinho"
@@ -41,24 +48,116 @@
   },
   "scenes": [
     {
-      "id": "s01_abertura",
-      "title": "Abertura no sertão",
-      "duration": 7.6,
+      "id": "s01_oi",
+      "title": "Oi, turminha!",
+      "duration": 4.1,
+      "shot": "plano americano",
+      "background": "danca_bolinhas_amarelo",
+      "flash_in": true,
+      "fx": [
+        "estrelas"
+      ],
+      "callouts": [
+        {
+          "t": 1.2,
+          "text": "OI!",
+          "dur": 1.6,
+          "color": "rosa"
+        }
+      ],
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 540,
+            "zoom": 1.08
+          },
+          {
+            "t": 4.1,
+            "x": 960,
+            "y": 540,
+            "zoom": 1.0,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.035,
+          "bar_zoom": 0.1,
+          "sway": 22,
+          "bounce": 7
+        },
+        "punch": [
+          {
+            "t": 1.2,
+            "zoom": 0.12,
+            "dur": 0.6
+          }
+        ]
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 700,
+            "y": 1010,
+            "turn": 0.2,
+            "expr": "happy",
+            "depth": 1.35,
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "pulinho",
+              "dur": 4.1
+            }
+          ]
+        },
+        "luizinho": {
+          "start": {
+            "x": 1220,
+            "y": 1010,
+            "turn": -0.2,
+            "expr": "happy",
+            "depth": 1.35,
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "pulinho",
+              "dur": 4.1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "s02_sertao",
+      "title": "Chegando no sertão",
+      "duration": 3.5,
       "shot": "plano geral",
-      "description": "Sertão ensolarado. Luizinho entra correndo e acena para quem assiste.",
+      "transition_in": {
+        "type": "circulo",
+        "dur": 0.5
+      },
       "camera": {
         "keys": [
           {
             "t": 0,
             "x": 1150,
             "y": 600,
-            "zoom": 1.2
+            "zoom": 1.15
           },
           {
-            "t": 7.6,
-            "x": 1050,
-            "y": 610,
-            "zoom": 1.3,
+            "t": 3.5,
+            "x": 1080,
+            "y": 620,
+            "zoom": 1.45,
             "ease": "inout"
           }
         ]
@@ -66,112 +165,203 @@
       "characters": {
         "luizinho": {
           "start": {
-            "x": 250,
+            "x": 350,
             "y": 945,
             "turn": 0.9,
-            "expr": "happy",
+            "expr": "joy",
             "z": 3
           },
           "exposure": 1,
           "actions": [
             {
-              "t": 3.6,
+              "t": 0,
               "do": "run",
-              "to_x": 950,
-              "dur": 2.0
+              "to_x": 960,
+              "dur": 1.6
             },
             {
-              "t": 5.9,
+              "t": 1.7,
               "do": "turn",
               "to": 0.15
             },
             {
-              "t": 6.2,
+              "t": 2.0,
               "do": "wave",
-              "dur": 1.1
+              "dur": 1.4
             }
           ]
-        }
-      }
-    },
-    {
-      "id": "s02_vai_ai",
-      "title": "Vai aí, animadinhos!",
-      "duration": 7.6667,
-      "shot": "plano médio",
-      "sing": [
-        {
-          "who": "luizinho",
-          "from": 0.15,
-          "to": 7.5667
-        }
-      ],
-      "description": "Luizinho canta para a câmera e dança com os braços no tempo da música.",
-      "camera": {
-        "keys": [
-          {
-            "t": 0,
-            "x": 930,
-            "y": 640,
-            "zoom": 1.6
-          },
-          {
-            "t": 7.6667,
-            "x": 925,
-            "y": 630,
-            "zoom": 1.68,
-            "ease": "inout"
-          }
-        ]
-      },
-      "characters": {
-        "luizinho": {
+        },
+        "laurinha": {
           "start": {
-            "x": 950,
+            "x": 180,
             "y": 945,
-            "turn": 0.12,
-            "expr": "happy",
-            "z": 3
+            "turn": 0.9,
+            "expr": "joy",
+            "z": 4
           },
           "exposure": 1,
           "actions": [
             {
-              "t": 0.1,
-              "do": "dance",
-              "style": "bracos",
-              "dur": 7.3667,
-              "amp": 0.9
+              "t": 0.15,
+              "do": "run",
+              "to_x": 1190,
+              "dur": 1.6
+            },
+            {
+              "t": 1.85,
+              "do": "turn",
+              "to": -0.15
+            },
+            {
+              "t": 2.1,
+              "do": "wave",
+              "dur": 1.3
             }
           ]
         }
       }
     },
     {
-      "id": "s03_passeando",
+      "id": "s03_dividida",
+      "title": "Os dois cantam (tela dividida)",
+      "duration": 7.6667,
+      "layout": "diagonal",
+      "transition_in": {
+        "type": "deslizar_esq",
+        "dur": 0.4
+      },
+      "panels": [
+        {
+          "background": "danca_xadrez_rosa",
+          "fx": [
+            "coracoes"
+          ],
+          "camera": {
+            "keys": [
+              {
+                "t": 0,
+                "x": 960,
+                "y": 560,
+                "zoom": 1.25
+              }
+            ],
+            "beat": {
+              "pulse": 0.035,
+              "bar_zoom": 0.1,
+              "sway": 22,
+              "bounce": 7
+            }
+          },
+          "sing": [
+            {
+              "who": "laurinha",
+              "from": 0.2,
+              "to": 7.5667
+            }
+          ],
+          "characters": {
+            "laurinha": {
+              "start": {
+                "x": 960,
+                "y": 1060,
+                "turn": 0.15,
+                "expr": "happy",
+                "depth": 1.5,
+                "z": 3
+              },
+              "exposure": 1,
+              "actions": [
+                {
+                  "t": 0.0,
+                  "do": "dance",
+                  "style": "balanco",
+                  "dur": 7.6667
+                }
+              ]
+            }
+          }
+        },
+        {
+          "background": "danca_xadrez_azul",
+          "fx": [
+            "notas"
+          ],
+          "camera": {
+            "keys": [
+              {
+                "t": 0,
+                "x": 960,
+                "y": 560,
+                "zoom": 1.25
+              }
+            ],
+            "beat": {
+              "pulse": 0.035,
+              "bar_zoom": 0.1,
+              "sway": 22,
+              "bounce": 7
+            }
+          },
+          "sing": [
+            {
+              "who": "luizinho",
+              "from": 0.2,
+              "to": 7.5667
+            }
+          ],
+          "characters": {
+            "luizinho": {
+              "start": {
+                "x": 960,
+                "y": 1060,
+                "turn": -0.15,
+                "expr": "happy",
+                "depth": 1.5,
+                "z": 3
+              },
+              "exposure": 1,
+              "actions": [
+                {
+                  "t": 0.0,
+                  "do": "dance",
+                  "style": "passinho",
+                  "dur": 7.6667
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "s04_passeando",
       "title": "Passeando no sertão",
-      "duration": 8.3667,
+      "duration": 4.2,
       "shot": "plano geral",
+      "transition_in": {
+        "type": "cortina",
+        "dur": 0.45
+      },
       "sing": [
         {
           "who": "luizinho",
           "from": 0.3,
-          "to": 8.2667
+          "to": 4.1000000000000005
         }
       ],
-      "description": "Luizinho passeia pela trilha, um passo por batida; a câmera acompanha.",
       "camera": {
         "keys": [
           {
             "t": 0,
             "x": 1150,
-            "y": 620,
-            "zoom": 1.38
+            "y": 610,
+            "zoom": 1.35
           },
           {
-            "t": 8.3667,
-            "x": 1880,
-            "y": 620,
-            "zoom": 1.38,
+            "t": 4.2,
+            "x": 1650,
+            "y": 610,
+            "zoom": 1.45,
             "ease": "inout"
           }
         ]
@@ -188,43 +378,164 @@
           "exposure": 1,
           "actions": [
             {
-              "t": 0.0,
+              "t": 0,
               "do": "walk",
-              "to_x": 1760,
-              "T": 1.394,
-              "settle": true
+              "to_x": 1600,
+              "T": 1.394
+            }
+          ]
+        },
+        "laurinha": {
+          "start": {
+            "x": 800,
+            "y": 945,
+            "turn": 0.8,
+            "expr": "happy",
+            "z": 4
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "walk",
+              "to_x": 1430,
+              "T": 1.394
             }
           ]
         }
       }
     },
     {
-      "id": "s04_apareceu",
+      "id": "s05_juntos",
+      "title": "Junto com os amigos",
+      "duration": 4.1667,
+      "shot": "close",
+      "background": "danca_ondas_verde",
+      "flash_in": true,
+      "fx": [
+        "bolhas"
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 4.0667
+        },
+        {
+          "who": "luizinho",
+          "from": 0.0,
+          "to": 4.0667
+        }
+      ],
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 600,
+            "zoom": 1.35
+          }
+        ],
+        "beat": {
+          "pulse": 0.035,
+          "bar_zoom": 0.1,
+          "sway": 22,
+          "bounce": 7
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 760,
+            "y": 1080,
+            "turn": 0.2,
+            "expr": "happy",
+            "depth": 1.6,
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "cabeca",
+              "dur": 4.1667
+            }
+          ]
+        },
+        "luizinho": {
+          "start": {
+            "x": 1170,
+            "y": 1080,
+            "turn": -0.2,
+            "expr": "happy",
+            "depth": 1.6,
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "cabeca",
+              "dur": 4.1667
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "s06_apareceu",
       "title": "De repente apareceu…",
       "duration": 4.8667,
       "shot": "plano conjunto",
-      "description": "Atrás da pedra surge o Calanguinho, num pulo; Luizinho leva um susto feliz.",
+      "transition_in": {
+        "type": "zoom",
+        "dur": 0.4
+      },
+      "callouts": [
+        {
+          "t": 1.65,
+          "text": "UAU!",
+          "dur": 1.4,
+          "color": "laranja",
+          "y": 230
+        }
+      ],
       "camera": {
         "keys": [
           {
             "t": 0,
             "x": 2340,
             "y": 640,
-            "zoom": 1.45
+            "zoom": 1.4
           },
           {
-            "t": 4.8667,
+            "t": 1.5,
             "x": 2360,
-            "y": 630,
-            "zoom": 1.5,
-            "ease": "inout"
+            "y": 640,
+            "zoom": 1.4
+          },
+          {
+            "t": 2.0,
+            "x": 2420,
+            "y": 610,
+            "zoom": 1.7,
+            "ease": "out"
+          }
+        ],
+        "punch": [
+          {
+            "t": 1.6,
+            "zoom": 0.12,
+            "dur": 0.5
           }
         ]
       },
       "characters": {
         "luizinho": {
           "start": {
-            "x": 2050,
+            "x": 2030,
             "y": 945,
             "turn": 0.65,
             "expr": "happy",
@@ -233,15 +544,38 @@
           "exposure": 1,
           "actions": [
             {
-              "t": 1.7,
+              "t": 1.75,
               "do": "take",
               "strength": "surprised"
             }
           ],
           "keys": [
             {
-              "t": 2.6,
-              "expr": "happy"
+              "t": 2.7,
+              "expr": "joy"
+            }
+          ]
+        },
+        "laurinha": {
+          "start": {
+            "x": 1880,
+            "y": 945,
+            "turn": 0.6,
+            "expr": "happy",
+            "z": 4
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 1.8,
+              "do": "take",
+              "strength": "surprised"
+            }
+          ],
+          "keys": [
+            {
+              "t": 2.8,
+              "expr": "joy"
             }
           ]
         },
@@ -304,18 +638,21 @@
       }
     },
     {
-      "id": "s05_observando",
+      "id": "s07_observando",
       "title": "Todo mundo se aproximou",
       "duration": 5.6,
       "shot": "plano conjunto",
+      "transition_in": {
+        "type": "deslizar_dir",
+        "dur": 0.4
+      },
       "sing": [
         {
-          "who": "luizinho",
+          "who": "laurinha",
           "from": 0.2,
           "to": 5.3999999999999995
         }
       ],
-      "description": "Luizinho chega perto, curioso; o calango pula da pedra para o chão e olha em volta.",
       "camera": {
         "keys": [
           {
@@ -326,9 +663,9 @@
           },
           {
             "t": 5.6,
-            "x": 2390,
+            "x": 2420,
             "y": 650,
-            "zoom": 1.5,
+            "zoom": 1.6,
             "ease": "inout"
           }
         ]
@@ -336,7 +673,7 @@
       "characters": {
         "luizinho": {
           "start": {
-            "x": 2050,
+            "x": 2030,
             "y": 945,
             "turn": 0.65,
             "expr": "happy",
@@ -350,18 +687,29 @@
               "to_x": 2140,
               "T": 1.394
             }
+          ]
+        },
+        "laurinha": {
+          "start": {
+            "x": 1880,
+            "y": 945,
+            "turn": 0.6,
+            "expr": "happy",
+            "z": 4
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.4,
+              "do": "walk",
+              "to_x": 2010,
+              "T": 1.394
+            }
           ],
           "keys": [
             {
-              "t": 2.4,
-              "expr": "surprised",
-              "amount": 0.5
-            },
-            {
-              "t": 3.2,
-              "pose": {
-                "lean": 0.12
-              }
+              "t": 2.6,
+              "expr": "joy"
             }
           ]
         },
@@ -393,10 +741,10 @@
       }
     },
     {
-      "id": "s06_comecou",
+      "id": "s08_comecou",
       "title": "Foi quando ele começou…",
       "duration": 5.5667,
-      "shot": "plano médio",
+      "shot": "close",
       "sing": [
         {
           "who": "calanguinho",
@@ -404,7 +752,6 @@
           "to": 5.4667
         }
       ],
-      "description": "Close no Calanguinho: ele ajeita o chapéu e começa a dança do calango.",
       "camera": {
         "keys": [
           {
@@ -416,8 +763,8 @@
           {
             "t": 5.5667,
             "x": 2530,
-            "y": 610,
-            "zoom": 1.7,
+            "y": 600,
+            "zoom": 1.9,
             "ease": "in"
           }
         ]
@@ -439,7 +786,7 @@
             },
             {
               "t": 2.4,
-              "expr": "happy"
+              "expr": "joy"
             }
           ],
           "actions": [
@@ -447,42 +794,62 @@
               "t": 2.2,
               "do": "dance",
               "style": "lango",
-              "dur": 3.2667,
-              "amp": 0.9
+              "dur": 3.2667
             }
           ]
         }
       }
     },
     {
-      "id": "s07_refrao1",
+      "id": "s09_lango",
       "title": "Lango, lango, lango",
-      "duration": 8.3667,
-      "shot": "plano americano",
+      "duration": 4.2,
       "background": "danca_raios_laranja",
       "flash_in": true,
+      "fx": [
+        "notas",
+        "estrelas"
+      ],
+      "transition_in": {
+        "type": "giro",
+        "dur": 0.45
+      },
       "sing": [
         {
           "who": "calanguinho",
-          "from": 0.1,
-          "to": 8.1667
+          "from": 0.0,
+          "to": 4.1000000000000005
         }
       ],
-      "description": "Refrão: Calanguinho dança grande no fundo de raios que giram no tempo.",
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "LANGO!",
+          "dur": 1.6,
+          "color": "amarelo",
+          "y": 190
+        }
+      ],
       "camera": {
         "keys": [
           {
             "t": 0,
             "x": 960,
             "y": 540,
-            "zoom": 1.0
-          },
+            "zoom": 1.05
+          }
+        ],
+        "beat": {
+          "pulse": 0.035,
+          "bar_zoom": 0.1,
+          "sway": 22,
+          "bounce": 7
+        },
+        "punch": [
           {
-            "t": 8.3667,
-            "x": 960,
-            "y": 530,
-            "zoom": 1.08,
-            "ease": "inout"
+            "t": 0.2,
+            "zoom": 0.15,
+            "dur": 0.6
           }
         ]
       },
@@ -490,11 +857,11 @@
         "calanguinho": {
           "start": {
             "x": 960,
-            "y": 1030,
+            "y": 1075,
             "turn": 0.05,
             "expr": "happy",
             "depth": 1.75,
-            "z": 2
+            "z": 3
           },
           "exposure": 1,
           "actions": [
@@ -502,38 +869,41 @@
               "t": 0.0,
               "do": "dance",
               "style": "lango",
-              "dur": 4.9
-            },
-            {
-              "t": 4.95,
-              "do": "dance",
-              "style": "cabeca",
-              "dur": 3.3667
+              "dur": 4.2
             }
           ]
         }
       }
     },
     {
-      "id": "s08_refrao2",
-      "title": "Na dança do calango",
-      "duration": 13.2667,
-      "shot": "plano americano",
-      "background": "danca_ondas_azul",
-      "flash_in": true,
+      "id": "s10_cabeca",
+      "title": "Cabeça balançando",
+      "duration": 4.1667,
+      "background": "danca_xadrez_vermelho",
+      "fx": [
+        "confete"
+      ],
+      "transition_in": {
+        "type": "cortina",
+        "dur": 0.4
+      },
       "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 4.0667
+        },
         {
           "who": "luizinho",
           "from": 0.0,
-          "to": 13.0667
+          "to": 4.0667
         },
         {
           "who": "calanguinho",
           "from": 0.0,
-          "to": 13.0667
+          "to": 4.0667
         }
       ],
-      "description": "Refrão: Luizinho e Calanguinho lado a lado; balançam a cabeça juntos em 'cabeça balançando'.",
       "camera": {
         "keys": [
           {
@@ -541,21 +911,246 @@
             "x": 960,
             "y": 540,
             "zoom": 1.0
-          },
-          {
-            "t": 13.2667,
-            "x": 960,
-            "y": 530,
-            "zoom": 1.06,
-            "ease": "inout"
           }
-        ]
+        ],
+        "beat": {
+          "pulse": 0.035,
+          "bar_zoom": 0.1,
+          "sway": 22,
+          "bounce": 7
+        }
       },
       "characters": {
+        "laurinha": {
+          "start": {
+            "x": 430,
+            "y": 1060,
+            "turn": 0.2,
+            "expr": "happy",
+            "depth": 1.6,
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "cabeca",
+              "dur": 4.1667
+            }
+          ]
+        },
+        "calanguinho": {
+          "start": {
+            "x": 960,
+            "y": 1060,
+            "turn": 0.0,
+            "expr": "happy",
+            "depth": 1.6,
+            "z": 2
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "cabeca",
+              "dur": 4.1667
+            }
+          ]
+        },
         "luizinho": {
           "start": {
-            "x": 600,
-            "y": 1030,
+            "x": 1490,
+            "y": 1060,
+            "turn": -0.2,
+            "expr": "happy",
+            "depth": 1.6,
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "cabeca",
+              "dur": 4.1667
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "s11_dividida",
+      "title": "Laurinha e Calanguinho",
+      "duration": 4.9,
+      "layout": "vertical",
+      "transition_in": {
+        "type": "deslizar_cima",
+        "dur": 0.4
+      },
+      "panels": [
+        {
+          "background": "danca_bolinhas_rosa",
+          "fx": [
+            "coracoes"
+          ],
+          "camera": {
+            "keys": [
+              {
+                "t": 0,
+                "x": 960,
+                "y": 560,
+                "zoom": 1.2
+              }
+            ],
+            "beat": {
+              "pulse": 0.035,
+              "bar_zoom": 0.1,
+              "sway": 22,
+              "bounce": 7
+            }
+          },
+          "sing": [
+            {
+              "who": "laurinha",
+              "from": 0.0,
+              "to": 4.800000000000001
+            }
+          ],
+          "characters": {
+            "laurinha": {
+              "start": {
+                "x": 960,
+                "y": 1060,
+                "turn": 0.1,
+                "expr": "happy",
+                "depth": 1.5,
+                "z": 3
+              },
+              "exposure": 1,
+              "actions": [
+                {
+                  "t": 0.0,
+                  "do": "dance",
+                  "style": "bracos",
+                  "dur": 4.9
+                }
+              ]
+            }
+          }
+        },
+        {
+          "background": "danca_bolinhas_amarelo",
+          "fx": [
+            "estrelas"
+          ],
+          "camera": {
+            "keys": [
+              {
+                "t": 0,
+                "x": 960,
+                "y": 560,
+                "zoom": 1.2
+              }
+            ],
+            "beat": {
+              "pulse": 0.035,
+              "bar_zoom": 0.1,
+              "sway": 22,
+              "bounce": 7
+            }
+          },
+          "sing": [
+            {
+              "who": "calanguinho",
+              "from": 0.0,
+              "to": 4.800000000000001
+            }
+          ],
+          "characters": {
+            "calanguinho": {
+              "start": {
+                "x": 960,
+                "y": 1060,
+                "turn": -0.1,
+                "expr": "happy",
+                "depth": 1.5,
+                "z": 3
+              },
+              "exposure": 1,
+              "actions": [
+                {
+                  "t": 0.0,
+                  "do": "dance",
+                  "style": "bracos",
+                  "dur": 4.9
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "s12_palmas",
+      "title": "Palmas!",
+      "duration": 3.5,
+      "background": "danca_ondas_azul",
+      "fx": [
+        "bolhas"
+      ],
+      "transition_in": {
+        "type": "circulo",
+        "dur": 0.4
+      },
+      "callouts": [
+        {
+          "t": 0.3,
+          "text": "PALMAS!",
+          "dur": 1.5,
+          "color": "verde",
+          "y": 180
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 3.4
+        },
+        {
+          "who": "luizinho",
+          "from": 0.0,
+          "to": 3.4
+        },
+        {
+          "who": "calanguinho",
+          "from": 0.0,
+          "to": 3.4
+        }
+      ],
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 540,
+            "zoom": 1.0
+          }
+        ],
+        "beat": {
+          "pulse": 0.035,
+          "bar_zoom": 0.1,
+          "sway": 22,
+          "bounce": 7
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 430,
+            "y": 1060,
             "turn": 0.25,
             "expr": "happy",
             "depth": 1.6,
@@ -566,22 +1161,139 @@
             {
               "t": 0.0,
               "do": "dance",
-              "style": "bob",
-              "dur": 7.7
-            },
-            {
-              "t": 7.8,
-              "do": "dance",
-              "style": "cabeca",
-              "dur": 5.3667
+              "style": "palmas",
+              "dur": 3.5
             }
           ]
         },
         "calanguinho": {
           "start": {
-            "x": 1330,
-            "y": 1030,
+            "x": 960,
+            "y": 1060,
+            "turn": 0.1,
+            "expr": "happy",
+            "depth": 1.6,
+            "z": 2
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "palmas",
+              "dur": 3.5
+            }
+          ]
+        },
+        "luizinho": {
+          "start": {
+            "x": 1490,
+            "y": 1060,
             "turn": -0.25,
+            "expr": "happy",
+            "depth": 1.6,
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "palmas",
+              "dur": 3.5
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "s13_twist",
+      "title": "Na dança do calango",
+      "duration": 4.8667,
+      "background": "danca_raios_roxo",
+      "flash_in": true,
+      "fx": [
+        "confete",
+        "estrelas"
+      ],
+      "transition_in": {
+        "type": "giro",
+        "dur": 0.4
+      },
+      "callouts": [
+        {
+          "t": 0.4,
+          "text": "CALANGO!",
+          "dur": 1.6,
+          "color": "rosa",
+          "y": 190
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 4.7667
+        },
+        {
+          "who": "luizinho",
+          "from": 0.0,
+          "to": 4.7667
+        },
+        {
+          "who": "calanguinho",
+          "from": 0.0,
+          "to": 4.7667
+        }
+      ],
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 540,
+            "zoom": 1.0
+          }
+        ],
+        "beat": {
+          "pulse": 0.035,
+          "bar_zoom": 0.1,
+          "sway": 22,
+          "bounce": 7
+        },
+        "punch": [
+          {
+            "t": 0.4,
+            "zoom": 0.12,
+            "dur": 0.55
+          }
+        ]
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 430,
+            "y": 1060,
+            "turn": 0.2,
+            "expr": "happy",
+            "depth": 1.6,
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "twist",
+              "dur": 4.8667
+            }
+          ]
+        },
+        "calanguinho": {
+          "start": {
+            "x": 960,
+            "y": 1060,
+            "turn": 0.0,
             "expr": "happy",
             "depth": 1.6,
             "z": 2
@@ -592,26 +1304,58 @@
               "t": 0.0,
               "do": "dance",
               "style": "lango",
-              "dur": 7.7
-            },
+              "dur": 4.8667
+            }
+          ]
+        },
+        "luizinho": {
+          "start": {
+            "x": 1490,
+            "y": 1060,
+            "turn": -0.2,
+            "expr": "happy",
+            "depth": 1.6,
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
             {
-              "t": 7.8,
+              "t": 0.0,
               "do": "dance",
-              "style": "cabeca",
-              "dur": 5.3667
+              "style": "twist",
+              "dur": 4.8667
             }
           ]
         }
       }
     },
     {
-      "id": "s09_pro_lado",
+      "id": "s14_pro_lado",
       "title": "Vai pro lado",
       "duration": 4.9,
-      "shot": "plano americano",
-      "background": "danca_ondas_rosa",
-      "flash_in": true,
+      "background": "danca_xadrez_verde",
+      "fx": [
+        "estrelas"
+      ],
+      "transition_in": {
+        "type": "deslizar_esq",
+        "dur": 0.35
+      },
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "PRO LADO!",
+          "dur": 1.4,
+          "color": "azul",
+          "y": 180
+        }
+      ],
       "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 4.800000000000001
+        },
         {
           "who": "luizinho",
           "from": 0.0,
@@ -623,29 +1367,27 @@
           "to": 4.800000000000001
         }
       ],
-      "description": "Os dois pulam para o lado a cada 'vai', apontando.",
       "camera": {
         "keys": [
           {
             "t": 0,
             "x": 960,
             "y": 540,
-            "zoom": 1.04
-          },
-          {
-            "t": 4.9,
-            "x": 980,
-            "y": 540,
-            "zoom": 1.04,
-            "ease": "inout"
+            "zoom": 1.0
           }
-        ]
+        ],
+        "beat": {
+          "pulse": 0.035,
+          "bar_zoom": 0.1,
+          "sway": 22,
+          "bounce": 7
+        }
       },
       "characters": {
-        "luizinho": {
+        "laurinha": {
           "start": {
-            "x": 600,
-            "y": 1030,
+            "x": 430,
+            "y": 1060,
             "turn": 0.3,
             "expr": "happy",
             "depth": 1.6,
@@ -663,8 +1405,8 @@
         },
         "calanguinho": {
           "start": {
-            "x": 1330,
-            "y": 1030,
+            "x": 960,
+            "y": 1060,
             "turn": 0.3,
             "expr": "happy",
             "depth": 1.6,
@@ -679,17 +1421,57 @@
               "dur": 4.9
             }
           ]
+        },
+        "luizinho": {
+          "start": {
+            "x": 1490,
+            "y": 1060,
+            "turn": 0.3,
+            "expr": "happy",
+            "depth": 1.6,
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "lado",
+              "dur": 4.9
+            }
+          ]
         }
       }
     },
     {
-      "id": "s10_pro_outro",
-      "title": "Vai pro outro",
+      "id": "s15_pro_outro",
+      "title": "Vai pro outro — tchau!",
       "duration": 6.9667,
-      "shot": "plano americano",
-      "background": "danca_raios_roxo",
-      "flash_in": true,
+      "background": "danca_bolinhas_rosa",
+      "fx": [
+        "confete",
+        "coracoes"
+      ],
+      "transition_in": {
+        "type": "deslizar_dir",
+        "dur": 0.35
+      },
+      "transition_out": "fade",
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "PRO OUTRO!",
+          "dur": 1.4,
+          "color": "laranja",
+          "y": 180
+        }
+      ],
       "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 4.7
+        },
         {
           "who": "luizinho",
           "from": 0.0,
@@ -701,30 +1483,27 @@
           "to": 4.7
         }
       ],
-      "transition_out": "fade",
-      "description": "Agora para o outro lado; no fim os dois abrem os braços e se despedem.",
       "camera": {
         "keys": [
           {
             "t": 0,
-            "x": 980,
-            "y": 540,
-            "zoom": 1.04
-          },
-          {
-            "t": 6.9667,
             "x": 960,
-            "y": 530,
-            "zoom": 1.1,
-            "ease": "inout"
+            "y": 540,
+            "zoom": 1.0
           }
-        ]
+        ],
+        "beat": {
+          "pulse": 0.035,
+          "bar_zoom": 0.1,
+          "sway": 22,
+          "bounce": 7
+        }
       },
       "characters": {
-        "luizinho": {
+        "laurinha": {
           "start": {
-            "x": 600,
-            "y": 1030,
+            "x": 430,
+            "y": 1060,
             "turn": -0.3,
             "expr": "happy",
             "depth": 1.6,
@@ -748,14 +1527,14 @@
           "keys": [
             {
               "t": 4.9,
-              "expr": "laughing"
+              "expr": "joy"
             }
           ]
         },
         "calanguinho": {
           "start": {
-            "x": 1330,
-            "y": 1030,
+            "x": 960,
+            "y": 1060,
             "turn": -0.3,
             "expr": "happy",
             "depth": 1.6,
@@ -778,7 +1557,38 @@
           "keys": [
             {
               "t": 4.9,
-              "expr": "laughing"
+              "expr": "joy"
+            }
+          ]
+        },
+        "luizinho": {
+          "start": {
+            "x": 1490,
+            "y": 1060,
+            "turn": -0.3,
+            "expr": "happy",
+            "depth": 1.6,
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "lado",
+              "dur": 4.8
+            },
+            {
+              "t": 4.9,
+              "do": "dance",
+              "style": "bracos",
+              "dur": 1.9667000000000003
+            }
+          ],
+          "keys": [
+            {
+              "t": 4.9,
+              "expr": "joy"
             }
           ]
         }
