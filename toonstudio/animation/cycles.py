@@ -260,6 +260,26 @@ CHOREO: dict[str, tuple[float, list[tuple[float, dict]]]] = {
         (1.0, {"turn+": 0.55, "body_y": 5, "lean": 0.08, "head_turn": -0.2, "squash": 0.982}),
         (1.5, {"turn+": 0.0, "body_y": -2, "lean": 0.0, "head_turn": 0.0, "squash": 1.01}),
     ]),
+    # ---- movimentos simples "de marionete" (como nos clipes de referência): o corpo todo gira a partir dos pés
+    # gingado: balança de um lado para o outro (1 lado por batida), braços alternando, cabeça em contraponto
+    "gingado": (2, [
+        (0.0, {"rot": -0.11, "head_tilt": 0.12, "hand_n_x": -70, "hand_n_y": -40, "hand_f_x": 60, "hand_f_y": 50,
+               "hand_n_bend": 0.4, "hand_f_bend": -0.3, "paw_n": 3, "paw_f": 0, "tail_wag": -0.4}),
+        (1.0, {"rot": 0.11, "head_tilt": -0.12, "hand_n_x": -60, "hand_n_y": 50, "hand_f_x": 70, "hand_f_y": -40,
+               "hand_n_bend": 0.3, "hand_f_bend": -0.4, "paw_n": 0, "paw_f": 3, "tail_wag": 0.4}),
+    ]),
+    # pêndulo lento: 2 batidas para cada lado, braços abertos
+    "pendulo": (4, [
+        (0.0, {"rot": -0.14, "head_tilt": 0.1, "hand_n_x": -100, "hand_n_y": 10, "hand_f_x": 100, "hand_f_y": 10,
+               "hand_n_bend": 0.3, "hand_f_bend": -0.3, "paw_n": 3, "paw_f": 3}),
+        (2.0, {"rot": 0.14, "head_tilt": -0.1, "hand_n_x": -100, "hand_n_y": 10, "hand_f_x": 100, "hand_f_y": 10}),
+    ]),
+    # tchauzinho: o corpo balança de leve e as duas mãos acenam lado a lado na altura do rosto
+    "tchau": (1, [
+        (0.0, {"rot": -0.05, "hand_n_x": -80, "hand_n_y": -60, "hand_f_x": 40, "hand_f_y": -60, "hand_n_bend": 0.4,
+               "hand_f_bend": -0.4, "paw_n": 3, "paw_f": 3, "head_tilt": 0.05}),
+        (0.5, {"rot": 0.05, "hand_n_x": -40, "hand_n_y": -60, "hand_f_x": 80, "hand_f_y": -60, "head_tilt": -0.05}),
+    ]),
 }
 ALIASES = {"bob": "balanco"}
 DANCES = tuple(CHOREO) + tuple(ALIASES)

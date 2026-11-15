@@ -1,0 +1,263 @@
+{
+  "schema": "1.1",
+  "id": "teste-muricocas",
+  "title": "TESTE — Muriçocas (Laurinha e Luizinho)",
+  "fps": 30,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "background": "fofo_parque",
+  "soundtrack": {
+    "file": "musica/original.m4a",
+    "analysis": "analise/song.json",
+    "start": 39.666666666666664,
+    "end": 48.03333333333333,
+    "fade_out": 0.8,
+    "beat_grid": "half"
+  },
+  "captions": {
+    "lyrics": "analise/letra.json",
+    "style": "palavra_a_palavra"
+  },
+  "overlays": {
+    "logo": true,
+    "channel": [
+      "LAURINHA",
+      "e Luizinho"
+    ],
+    "card_dur": 3.0,
+    "card": "TESTE INTERNO DE PRODUÇÃO\nMúsica “Dança do Calango” © Animadinhos — todos os direitos reservados aos autores.\nVídeo apenas para avaliação interna. Proibida a publicação.",
+    "footer": "TESTE INTERNO • Música © Animadinhos • NÃO PUBLICAR"
+  },
+  "cast": {
+    "laurinha": {
+      "character": "laurinha_muricoca"
+    },
+    "luizinho": {
+      "character": "luizinho_muricoca"
+    }
+  },
+  "approval": {
+    "storyboard": false,
+    "final_render": false
+  },
+  "scenes": [
+    {
+      "id": "s01_chegada",
+      "title": "Chegam voando no parque",
+      "duration": 4.2,
+      "shot": "plano conjunto",
+      "fx": [
+        "estrelas"
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.2,
+          "to": 4.1000000000000005
+        },
+        {
+          "who": "luizinho",
+          "from": 0.2,
+          "to": 4.1000000000000005
+        }
+      ],
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540,
+            "zoom": 1.0
+          },
+          {
+            "t": 4.2,
+            "x": 1320,
+            "y": 520,
+            "zoom": 1.15,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.05,
+          "sway": 10,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 300,
+            "y": 945,
+            "turn": 0.6,
+            "expr": "happy",
+            "depth": 1.25,
+            "z": 3
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0,
+              "pose": {
+                "x": 300,
+                "y": 945
+              }
+            },
+            {
+              "t": 1.4,
+              "pose": {
+                "x": 1100,
+                "y": 905,
+                "turn": 0.25
+              },
+              "ease": "out",
+              "in": 1.4
+            }
+          ],
+          "actions": [
+            {
+              "t": 1.5,
+              "do": "dance",
+              "style": "gingado",
+              "dur": 2.7
+            }
+          ]
+        },
+        "luizinho": {
+          "start": {
+            "x": 2350,
+            "y": 945,
+            "turn": -0.6,
+            "expr": "happy",
+            "depth": 1.25,
+            "z": 4
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0,
+              "pose": {
+                "x": 2350,
+                "y": 945
+              }
+            },
+            {
+              "t": 1.6,
+              "pose": {
+                "x": 1540,
+                "y": 930,
+                "turn": -0.25
+              },
+              "ease": "out",
+              "in": 1.6
+            }
+          ],
+          "actions": [
+            {
+              "t": 1.7,
+              "do": "dance",
+              "style": "tchau",
+              "dur": 2.5
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "s02_zumzum",
+      "title": "Dança no ar",
+      "duration": 4.1667,
+      "background": "danca_raios_rosa",
+      "flash_in": true,
+      "fx": [
+        "notas",
+        "coracoes"
+      ],
+      "transition_in": {
+        "type": "circulo",
+        "dur": 0.4
+      },
+      "callouts": [
+        {
+          "t": 0.3,
+          "text": "ZUM ZUM!",
+          "dur": 1.5,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 4.0667
+        },
+        {
+          "who": "luizinho",
+          "from": 0.0,
+          "to": 4.0667
+        }
+      ],
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 540,
+            "zoom": 1.0
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.06,
+          "sway": 10,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 640,
+            "y": 945,
+            "turn": 0.25,
+            "expr": "happy",
+            "depth": 1.6,
+            "z": 3
+          },
+          "exposure": 1,
+          "keys": [],
+          "actions": [
+            {
+              "t": 0,
+              "do": "dance",
+              "style": "pendulo",
+              "dur": 4.1667
+            }
+          ]
+        },
+        "luizinho": {
+          "start": {
+            "x": 1300,
+            "y": 945,
+            "turn": -0.25,
+            "expr": "happy",
+            "depth": 1.6,
+            "z": 4
+          },
+          "exposure": 1,
+          "keys": [],
+          "actions": [
+            {
+              "t": 0,
+              "do": "dance",
+              "style": "gingado",
+              "dur": 4.1667
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -107,7 +107,7 @@ def validate(ep: dict) -> Report:
                     r.errors.append(f"{sid}/{who}: ação '{a['do']}' começa em {a['t']}s, depois do fim da cena ({dur}s)")
                 if a["do"] in ("walk", "sneak", "run") and "to_x" not in a:
                     r.errors.append(f"{sid}/{who}: '{a['do']}' exige to_x")
-                if a["do"] == "fly" and cast.get(who, {}).get("character") != "tevico":
+                if a["do"] == "fly" and not (cast.get(who, {}).get("character") == "tevico" or "muricoca" in cast.get(who, {}).get("character", "")):
                     r.errors.append(f"{sid}/{who}: só personagens alados voam")
             for k in p.get("keys", []):
                 if "expr" in k and k["expr"] not in EXPRESSIONS:

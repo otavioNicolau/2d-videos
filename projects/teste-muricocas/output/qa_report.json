@@ -1,0 +1,60 @@
+{
+  "episode": "teste-muricocas",
+  "scenes": {
+    "s01_chegada": {
+      "frames": 126,
+      "performers": {
+        "laurinha": {
+          "drawings": 126,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 125
+          },
+          "empty_frames": 0
+        },
+        "luizinho": {
+          "drawings": 126,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 125
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s02_zumzum": {
+      "frames": 125,
+      "performers": {
+        "laurinha": {
+          "drawings": 125,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 124
+          },
+          "empty_frames": 0
+        },
+        "luizinho": {
+          "drawings": 125,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 124
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    }
+  },
+  "warnings": [
+    "render final ainda não aprovado (approval.final_render = false): será gerado como CANDIDATO",
+    "storyboard s01_chegada: sem storyboard",
+    "storyboard s02_zumzum: sem storyboard"
+  ],
+  "lines": {},
+  "video": "/home/otavio/2d/projects/teste-muricocas/output/teste-muricocas_CANDIDATO.mp4",
+  "contact_sheet": "/home/otavio/2d/projects/teste-muricocas/output/prancha.png",
+  "approved": false
+}

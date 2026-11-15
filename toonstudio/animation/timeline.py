@@ -167,6 +167,15 @@ class CharTimeline:
                 hat_v += hat_a * h
                 hat += hat_v * h
             p["head_dy"] = p.get("head_dy", 0.0) + max(-4, min(4, hy * 12))
+            if getattr(self.char, "flies", False):
+                # inseto voador: asas sempre batendo (14 batidas/s), paira, inclina na direção do voo,
+                # perninhas ficam para trás quando acelera
+                tt = i * dt
+                p["wing_phase"] = tt * 14.0
+                p["body_y"] = p.get("body_y", 0.0) + 14 * math.sin(2 * math.pi * 0.9 * tt) + 5 * math.sin(2 * math.pi * 2.3 * tt + 1)
+                p["body_x"] = p.get("body_x", 0.0) + 6 * math.sin(2 * math.pi * 0.55 * tt + 0.7)
+                p["bank"] = max(-0.45, min(0.45, vx * f / 2600.0))
+                p["dangle"] = max(-0.6, min(0.8, abs(vx) / 1800.0 + vy / 2500.0))
             p["hair_bounce"] = p.get("hair_bounce", 0.0) + max(-0.5, min(0.5, hb * 4))
             p["hat_tilt"] = p.get("hat_tilt", 0.0) + max(-0.3, min(0.3, hat * 2))
             # mola amortecida: k rigidez, c amortecimento, impulsos pela aceleração
