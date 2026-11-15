@@ -31,6 +31,7 @@ class Style:
     ink_k: float = 0.55         # contorno = cor da peça × ink_k
     shade_k: float = 0.82       # sombra = cor da peça × shade_k
     soft: bool = True           # volume com gradiente + brilho (visual "3D fofinho")
+    ink: str = ""               # cor única de contorno (ex.: marrom-escuro do estilo "cel" de TV); "" = cor da peça
 
 
 TURMINHA = Style()
@@ -45,7 +46,8 @@ class Kit:
 
     def brush(self, fill: str, width: float | None = None) -> Brush:
         b = self.k.brush
-        return Brush(width or self.s.width, self.s.vary, _rgba(darken(fill, self.s.ink_k)), b.jitter, b.seed)
+        ink = self.s.ink or darken(fill, self.s.ink_k)
+        return Brush(width or self.s.width, self.s.vary, _rgba(ink), b.jitter, b.seed)
 
     def blob(self, pts, fill: str, shade: bool = True, width: float | None = None, smooth: bool = True,
              shade_offset=(8, 9), clip_extra=None):
@@ -57,7 +59,7 @@ class Kit:
                             clip_extra=clip_extra)
 
     def limb(self, pts, w0: float, w1: float, fill: str):
-        return self.k.tube(pts, w0, w1, fill=fill, line=self.s.width, ink=_rgba(darken(fill, self.s.ink_k)),
+        return self.k.tube(pts, w0, w1, fill=fill, line=self.s.width, ink=_rgba(self.s.ink or darken(fill, self.s.ink_k)),
                            shade=_rgba(darken(fill, 0.9)) if self.s.soft else None)
 
     # ------------------------------------------------------------------ rosto

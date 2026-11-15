@@ -17,6 +17,9 @@ from .base import Character, View, lerp, rot
 from .kit import Kit, Style, darken, ik2, lighten
 
 SOFT = Style(width=2.6, vary=0.0, ink_k=0.78, shade_k=0.8, soft=True)   # contorno quase invisível (tom da peça)
+# estilo "desenho de TV": contorno marrom-escuro uniforme, cor chapada com sombra recortada (cel), olhos brancos grandes
+CEL = Style(width=5.2, vary=0.2, ink_k=0.35, shade_k=0.84, soft=False, ink="#3B2219")
+STYLES = {"fofo": SOFT, "cel": CEL}
 ARM_K, LEG_K = 0.7, 0.6
 HEAD_RX, HEAD_RY = 118.0, 108.0
 
@@ -37,8 +40,9 @@ class ChibiLook:
 
 
 class Chibi(Character):
-    def __init__(self, cid: str, name: str, look: ChibiLook):
+    def __init__(self, cid: str, name: str, look: ChibiLook, style: str = "cel"):
         self.look = look
+        self.style = STYLES[style]
         super().__init__(
             id=cid, name=name, canvas=(700, 640), anchor=(350, 600), height=430, palette=look.__dict__,
             defaults={
@@ -55,7 +59,7 @@ class Chibi(Character):
     # ------------------------------------------------------------------ corpo
     def draw(self, ink: Ink, P: dict) -> None:
         L = self.look
-        kit = Kit(ink, SOFT)
+        kit = Kit(ink, self.style)
         v = View(P["turn"], P["back"])
         f, s = v.f, v.side
         sq = P["squash"]
@@ -196,6 +200,9 @@ class Chibi(Character):
             x, c = v.sphere(C[0], rx * 0.98, side * 1.55)
             if c > -0.2:
                 kit.blob(ellipse_pts(x, C[1] + 16, 16 * max(c, 0.5), 22, 0, 12), L.skin)
+                if not self.style.soft and c > 0.2:     # dobrinha da orelha (C)
+                    kit.k.stroke([(x + side * 3, C[1] + 6), (x - side * 5, C[1] + 14), (x + side * 2, C[1] + 26)], 3.5,
+                                 taper=(0.3, 0.3), color_=self.style.ink)
         head = [rot((C[0] + rx * math.cos(a) * (1 - 0.04 * (math.sin(a) > 0)), C[1] + ry * math.sin(a) * (1.04 if math.sin(a) > 0 else 1)), ht, C)
                 for a in np.linspace(0, 2 * math.pi, 28, endpoint=False)]
         kit.blob(head, L.skin)
@@ -221,12 +228,62 @@ class Chibi(Character):
                     if c > 0.3:
                         k.dot(fx_ + dx_ * c, fy_ + dy_, 2.6, darken(L.skin, 0.72))
         (nx_, ny_), c = face(0.0, 30)                 # narizinho
-        k.ellipse(nx_ + f * s * 6, ny_, 6.5, 5, darken(L.skin, 0.82), line=0)
+        if self.style.soft:
+            k.ellipse(nx_ + f * s * 6, ny_, 6.5, 5, darken(L.skin, 0.82), line=0)
+        else:      # narizinho de TV: curva com sombra embaixo
+            nx2 = nx_ + f * s * 14
+            k.stroke([(nx2 - 10, ny_ + 2), (nx2 - 4, ny_ + 9), (nx2 + 6, ny_ + 8), (nx2 + 11, ny_ + 1)], 4.5,
+                     taper=(0.4, 0.4), color_=self.style.ink)
         (mx, my), c = face(-f * 0.04 * s, 56)        # boca
-        kit.mouth(P, (mx, my), f, s, ht, width=19, line="#8C3A34", lips="#C9615A", tongue="#F07C86", inside_col="#8A2A36")
+        if self.style.soft:
+            kit.mouth(P, (mx, my), f, s, ht, width=19, line="#8C3A34", lips="#C9615A", tongue="#F07C86", inside_col="#8A2A36")
+        else:
+            kit.mouth(P, (mx, my), f, s, ht, width=24, line=self.style.ink, lips=self.style.ink, tongue="#F07C86",
+                      inside_col="#7A2430")
         self._hair(kit, P, C, v, ht, back=False)
 
     def _eye(self, kit: Kit, P, ex, ey, c, side, f, s, ht):
+        if not self.style.soft:
+            return self._eye_cel(kit, P, ex, ey, c, side, f, s, ht)
+        return self._eye_fofo(kit, P, ex, ey, c, side, f, s, ht)
+
+    def _eye_cel(self, kit: Kit, P, ex, ey, c, side, f, s, ht):
+        """Olho de desenho de TV: branco grande contornado, pupila escura grande com brilho, pálpebra e sobrancelha grossa."""
+        L = self.look
+        k = kit.k
+        es = P["eye_scale"]
+        rx, ry = 25 * c * es, 32 * es          # olhos grandes (expressão lê de longe)
+        inner = -side
+        b = P["brow_l"] if side < 0 else P["brow_r"]
+        by = ey - ry - 12 - P["brow_y"] * 9
+        if P.get("eyes_happy", 0) > 0.5:
+            k.stroke([(ex - rx * 1.1, ey + 6), (ex, ey - ry * 0.55), (ex + rx * 1.1, ey + 6)], 7, taper=(0.3, 0.3),
+                     color_=self.style.ink)
+        else:
+            lid, lid_low = P["lid"], P["lid_low"]
+            lx = (P["look_x"] * f * 0.45 + 0.22 * f * s) * rx
+            ly = P["look_y"] * 0.4 * ry
+
+            def inside(kk: Ink):
+                pr = ry * 0.56 * P["pupil"] ** 0.5
+                kk.ellipse(ex + lx + inner * rx * 0.08, ey + ly + 3, pr * 0.82 * max(c, 0.6), pr, L.eye, line=0)
+                kk.dot(ex + lx + inner * rx * 0.08 - pr * 0.3, ey + ly - pr * 0.35, max(3.0, pr * 0.32), "#FFFFFF")
+                if lid > 0.02:
+                    top = ey - ry - 4 + (2 * ry + 8) * lid
+                    kk.c.drawRect(_rect(ex - rx - 8, ey - ry - 30, ex + rx + 8, top), _p(L.skin))
+                    kk.stroke([(ex - rx - 2, top), (ex + rx + 2, top)], 4.5, color_=self.style.ink)
+                if lid_low > 0.02:
+                    bot = ey + ry + 4 - ry * 1.1 * lid_low
+                    kk.c.drawRect(_rect(ex - rx - 8, bot, ex + rx + 8, ey + ry + 30), _p(L.skin))
+            k.shape(ellipse_pts(ex, ey, rx, ry, ht, 16), fill="#FFFFFF", brush=kit.brush("#FFFFFF", 4.5), clip_extra=inside)
+        # sobrancelha grossa e expressiva
+        x0, x1 = ex - 18 * c * inner * -1, ex + 18 * c * inner * -1
+        y0, y1 = by - b * 3, by + b * 9
+        k.stroke([(ex - 19 * c, by + (b * 8 if inner < 0 else -b * 3) + 2), (ex, by - 5),
+                  (ex + 19 * c, by + (b * 8 if inner > 0 else -b * 3) + 2)], 9 * max(c, 0.6), taper=(0.35, 0.35),
+                 color_=darken(L.hair, 0.55) if L.hair_style != "black_power" else "#1A110E")
+
+    def _eye_fofo(self, kit: Kit, P, ex, ey, c, side, f, s, ht):
         """Olho oval escuro com dois brilhos (estilo das referências), pálpebra e sobrancelha fininha."""
         L = self.look
         k = kit.k
