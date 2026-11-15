@@ -1,4 +1,6 @@
 VINHETA DE ABERTURA — "Laurinha e Luisinho"
+PEÇA FIXA DO CANAL: gerada UMA vez e usada no início de TODOS os vídeos. É independente da música do episódio
+(tem batida, tom e instrumental próprios).
 Duração final: NO MÁXIMO 5 SEGUNDOS.
 O Suno sempre gera mais longo; o estúdio corta o melhor trecho (até 5 s), começando e terminando na batida,
 com final limpo. Por isso as letras abaixo são mínimas: o nome cabe inteiro em 2–3 segundos.
@@ -10,7 +12,7 @@ OPÇÃO A — "Zum zum!" + nome (recomendada)
 TÍTULO: Laurinha e Luisinho (Vinheta)
 
 ESTILO:
-very short kids TV channel ident, starts immediately with a brass fanfare hit, loud punchy drums, snare roll, bright major key, 150 bpm, happy, cheerful girl and boy child vocals singing the name, Brazilian Portuguese
+very short kids TV channel ident, standalone, starts immediately with a brass fanfare hit, loud punchy drums, snare roll, bright major key, 150 bpm, happy, cheerful girl and boy child vocals singing the name, Brazilian Portuguese
 
 EXCLUIR:
 slow, sad, ballad, long intro, explicit
@@ -27,7 +29,7 @@ OPÇÃO B — melodia de 3 notas + nome
 TÍTULO: Laurinha e Luisinho (Assinatura)
 
 ESTILO:
-very short kids TV channel ident, sparkle, xylophone three-note melody, brass stab, loud drum fill, bright major key, 140 bpm, cheerful girl and boy child vocals, Brazilian Portuguese
+very short kids TV channel ident, standalone, sparkle, xylophone three-note melody, brass stab, loud drum fill, bright major key, 140 bpm, cheerful girl and boy child vocals, Brazilian Portuguese
 
 EXCLUIR:
 slow, sad, ballad, long, explicit
@@ -43,7 +45,7 @@ OPÇÃO C — instrumental com grito
 TÍTULO: Laurinha e Luisinho (Abertura Instrumental)
 
 ESTILO:
-very short instrumental kids TV channel ident, whistle, drum roll, brass fanfare hit, high energy, bright major key, 150 bpm, ends with a big final hit
+very short instrumental kids TV channel ident, standalone, whistle, drum roll, brass fanfare hit, high energy, bright major key, 150 bpm, ends with a big final hit
 
 EXCLUIR:
 slow, sad, ballad, long intro, vocals singing, explicit
@@ -56,5 +58,5 @@ LETRA:
 
 --------------------------------------------------------------------
 DEPOIS DE GERAR: salve o arquivo em ~/2d/musicas/vinheta/ (WAV ou MP3) e avise.
-O estúdio corta em até 5 s (na batida), iguala o volume ao das músicas e coloca no começo dos vídeos
-com o logo animado e a Laurinha e o Luisinho entrando voando.
+O estúdio corta em até 5 s (na batida), guarda a versão final na biblioteca do canal e coloca
+automaticamente no começo de todos os vídeos, com o logo animado e a Laurinha e o Luisinho entrando voando.

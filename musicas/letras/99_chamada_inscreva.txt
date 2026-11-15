@@ -1,11 +1,10 @@
 CHAMADA FINAL — "Se inscreve e deixa o joinha!"
-Entra no FIM de todos os vídeos (cerca de 8 a 12 s), com a tela de encerramento (botão INSCREVA-SE, logo e
-sugestão de outro vídeo). O estúdio corta no trecho bom, na batida, e iguala o volume.
+PEÇA FIXA DO CANAL: gerada UMA vez e usada no fim de TODOS os vídeos. É independente da música do episódio
+(tem batida, tom e instrumental próprios) — funciona igual depois de um frevo, de um rock ou de um forró.
+Duração final: 8 a 10 segundos (o estúdio corta na batida, com final limpo, e iguala o volume).
 
 IMPORTANTE (YouTube "conteúdo para crianças"): canais/vídeos marcados como feitos para crianças NÃO têm sininho de
-notificação nem comentários. Por isso a chamada pede só INSCREVER e CURTIR (joinha) — não fala de "ativar o sininho"
-nem de "comentar". E convida um adulto a ajudar (boa prática em canal infantil).
-Use a MESMA Persona (voz) das músicas.
+notificação nem comentários. Por isso a chamada pede só INSCREVER e CURTIR (joinha) e convida um adulto a ajudar.
 
 ====================================================================
 OPÇÃO A — cantada (recomendada)
@@ -13,22 +12,16 @@ OPÇÃO A — cantada (recomendada)
 TÍTULO: Se Inscreve, Turminha!
 
 ESTILO:
-short kids TV outro jingle, carnival brass, loud punchy drums, bright major key, 150 bpm, happy, catchy, cheerful girl and boy child vocals, kids choir, Brazilian Portuguese
+short kids TV outro jingle, standalone, carnival brass, loud punchy drums, bright major key, 140 bpm, happy, catchy, cheerful girl and boy child vocals, Brazilian Portuguese
 
 EXCLUIR:
 slow, sad, ballad, long intro, explicit
 
 LETRA:
-[Intro - drum fill]
-
 [Hook - girl and boy child vocals]
-Gostou? Então vem com a gente!
-Se inscreve no canal, que é diferente!
-Deixa o seu joinha, chama um adulto pra ajudar!
-Laurinha e Luisinho, até o próximo zum-zum-zum!
-
-[Outro - kids choir]
-Tchau, tchau, tchau! (Zum!)
+Se inscreve no canal e deixa o joinha!
+Chama um adulto pra ajudar a turminha!
+Laurinha e Luisinho... tchau, tchau! (Zum!)
 [End]
 
 ====================================================================
@@ -37,7 +30,7 @@ OPÇÃO B — curtinha
 TÍTULO: Joinha e Inscrição
 
 ESTILO:
-very short kids TV outro sting, xylophone and brass stab, loud drum fill, bright major key, 140 bpm, cheerful girl and boy child vocals, Brazilian Portuguese
+very short kids TV outro sting, standalone, xylophone and brass stab, loud drum fill, bright major key, 140 bpm, cheerful girl and boy child vocals, Brazilian Portuguese
 
 EXCLUIR:
 slow, sad, ballad, long, explicit
@@ -49,12 +42,23 @@ Tchau, tchau! (Zum!)
 [End]
 
 ====================================================================
-OPÇÃO C — falada pelos personagens (feita no estúdio, sem Suno)
+OPÇÃO C — falada pelos personagens sobre uma BASE PRÓPRIA
 ====================================================================
-Laurinha: Gostou da música? Pede pra um adulto te ajudar a se inscrever no canal!
+1) Gere no Suno só a base instrumental (fixa do canal):
+TÍTULO: Base da Chamada (Instrumental)
+ESTILO:
+short instrumental kids TV outro bed, standalone, light carnival percussion, soft brass, xylophone, bright major key, 120 bpm, happy, loopable, no vocals
+EXCLUIR:
+vocals, singing, slow, sad, explicit
+LETRA:
+[Instrumental]
+[End]
+
+2) A fala dos personagens é gravada no estúdio por cima dessa base:
+Laurinha: Gostou? Pede pra um adulto te ajudar a se inscrever no canal!
 Luisinho: E deixa o seu joinha! Zum-zum!
 Os dois:  Tchau, turminha! Até o próximo vídeo!
-(Fundo: trecho instrumental da própria música do vídeo.)
 
 --------------------------------------------------------------------
 DEPOIS DE GERAR: salve em ~/2d/musicas/chamada/ (WAV ou MP3) e avise.
+O estúdio guarda a versão final na biblioteca do canal e coloca automaticamente no fim de todos os vídeos.

@@ -15,6 +15,12 @@ Cada arquivo em `letras/` tem três blocos para colar no Suno, no modo **Custom*
 | 05 | Samba dos Números | Samba-enredo | 145 | Contar de 1 a 10 e de 10 a 1, mostrar os dedinhos |
 | 06 | Forró da Lagoa | Forró piseiro | 160 | Bichos da lagoa, arrastar o pé, girar |
 
+## Peças fixas do canal (independentes das músicas)
+- `00_vinheta_abertura.txt` — vinheta de **até 5 s**, no início de todo vídeo.
+- `99_chamada_inscreva.txt` — chamada para **se inscrever e curtir**, no fim de todo vídeo.
+Geradas uma vez, com batida/tom próprios; ficam na biblioteca do canal e entram automaticamente em todos os clipes,
+qualquer que seja o ritmo da música do episódio.
+
 ## Estrutura padrão do canal (inspirada na análise de clipes infantis de sucesso)
 `Intro + grito "Laurinha e Luisinho!"` → `Verso (4 linhas)` → `Refrão (sílabas divertidas + comandos de dança)` →
 `"Vai!" + 8 s instrumental` → `Verso 2` → `Refrão` → `"Vai!" + 8 s instrumental` → `Refrão` → `Tchau`.
