@@ -54,7 +54,7 @@ def _travel(char: str, st: dict, a: dict, style: str) -> ActionResult:
     to_x = float(a["to_x"])
     d = to_x - x0
     sgn = 1 if d >= 0 else -1
-    g = cycles.GAITS[char][style]
+    g = cycles.gaits(char)[style]
     if "T" in a:     # período imposto (ex.: um passo por batida da música)
         v = g["S"] / (0.5 * float(a["T"]))
     else:

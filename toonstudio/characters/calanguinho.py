@@ -12,7 +12,9 @@ import numpy as np
 
 from ..drawing.ink import Ink, ellipse_pts
 from .base import Character, View, lerp, rot
-from .kit import Kit, darken, lighten
+from .kit import Kit, Style, darken, lighten
+
+SOFT = Style(width=3.0, vary=0.0, ink_k=0.7, shade_k=0.8, soft=True)   # mesmo acabamento suave da turma
 
 PAL = {"body": "#E9A23B", "spot": "#A3552B", "belly": "#F8E3B0", "iris": "#3E8E3A", "straw": "#EBC97F",
        "band": "#D9473F", "mouth_line": "#7A3A1E"}
@@ -39,7 +41,7 @@ class Calanguinho(Character):
             })
 
     def draw(self, ink: Ink, P: dict) -> None:
-        kit = Kit(ink)
+        kit = Kit(ink, SOFT)
         v = View(P["turn"], P["back"])
         f, s = v.f, v.side
         sq = P["squash"]

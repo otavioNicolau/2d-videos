@@ -101,9 +101,12 @@ def test_choreography_moves_are_continuous_and_on_beat():
             prev = p
 
 
-def test_laurinha_shares_child_template():
-    from toonstudio.characters.laurinha import Laurinha
-    from toonstudio.characters.luizinho import Luizinho
-    assert issubclass(Laurinha, Luizinho)
-    a = character("laurinha").render_array({"turn": 0.2}, scale=0.4, jitter=0)
-    assert a[..., 3].any()
+def test_whole_gang_uses_chibi_template_and_renders():
+    from toonstudio.characters.chibi import TURMA, Chibi
+    from toonstudio.characters.base import EXPRESSIONS, expression
+    for cid in TURMA:
+        ch = character(cid)
+        assert isinstance(ch, Chibi)
+        for e in ("happy", "joy", "surprised"):
+            assert ch.render_array({"turn": 0.2, **expression(e)}, scale=0.3, jitter=0)[..., 3].any()
+        assert ch.render_array({"turn": 0.0, "back": True}, scale=0.3, jitter=0)[..., 3].any()

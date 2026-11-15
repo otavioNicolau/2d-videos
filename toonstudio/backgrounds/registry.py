@@ -6,7 +6,7 @@ from pathlib import Path
 
 from ..core.config import LIBRARY, ROOT, file_sha
 
-STATIC = {"floresta_clareira": "forest", "sertao": "sertao"}
+STATIC = {"floresta_clareira": "forest", "sertao": "sertao", "fofo_parque": "fofo", "fofo_cidade": "fofo", "fofo_praia": "fofo"}
 
 
 def known(bg_id: str) -> bool:
@@ -40,6 +40,9 @@ def ensure(bg_id: str, scale: float = 1.5) -> dict:
         elif mod == "sertao":
             from . import sertao
             sertao.build(out, scale=scale)
+        elif mod == "fofo":
+            from . import fofo
+            fofo.build(bg_id, out, scale=scale)
         else:
             from . import dance
             dance.build(bg_id, out, scale=1.0)

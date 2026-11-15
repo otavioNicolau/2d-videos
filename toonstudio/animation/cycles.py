@@ -26,8 +26,13 @@ GAITS = {
 }
 
 
+def gaits(char: str) -> dict:
+    """Parâmetros de andar do personagem (crianças da turma usam o padrão infantil)."""
+    return GAITS.get(char, GAITS["luizinho"])
+
+
 def speed(char: str, style: str) -> float:
-    g = GAITS[char][style]
+    g = gaits(char)[style]
     return g["S"] / (0.5 * g["T"])
 
 
@@ -42,7 +47,7 @@ def _leg(p: float, S: float, lift: float, contact: float = 0.5) -> tuple[float, 
 
 
 def gait(char: str, style: str, p: float) -> dict[str, float]:
-    g = GAITS[char][style]
+    g = gaits(char)[style]
     S, lift, bob = g["S"], g["lift"], g["bob"]
     contact = 0.5 if style != "run" else 0.38
     nx, ny = _leg(p, S, lift, contact)

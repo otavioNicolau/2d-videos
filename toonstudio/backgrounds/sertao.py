@@ -13,7 +13,7 @@ from .painter import P, blob, canopy, grass_tufts, lin, paper, poly
 
 WIDTH, HEIGHT = 4400, 1080
 GROUND = 930
-LANDMARKS = {"ground_y": GROUND, "rock": {"x": 2600, "top_y": 760}, "big_cactus": {"x": 1250}}
+LANDMARKS = {"ground_y": GROUND, "rock": {"x": 2600, "top_y": 806}, "big_cactus": {"x": 1250}}
 PAL = {"sky_top": "#5BB8F0", "sky_bot": "#FFE6A8", "sun": "#FFD23F", "mesa": "#B67BB8", "mesa2": "#9A69A8",
        "mesa_l": "#D3A0CF", "sand": "#F2C77A", "sand_d": "#E0A85B", "sand_l": "#F8DCA0", "cactus": "#5BA65A",
        "cactus_d": "#3F8443", "cactus_l": "#7CC46F", "shrub": "#8AA35A", "shrub_d": "#6B8545", "shrub_l": "#AFC377",
@@ -92,7 +92,7 @@ def layer_caatinga(scale, rng):
     x = 0.0
     while x < w:
         if rng.random() < 0.35:
-            mandacaru(c, x, 820, rng.uniform(150, 230), rng, 0.7)
+            mandacaru(c, x, 820, rng.uniform(95, 140), rng, 0.5)
         else:
             canopy(c, x, 790, rng.uniform(70, 120), rng.uniform(45, 70), PAL["shrub_d"], PAL["shrub"], PAL["shrub_l"], rng, n=8)
         x += rng.uniform(160, 320)
@@ -109,9 +109,9 @@ def layer_ground(scale, rng):
         x, y = rng.uniform(0, w), rng.uniform(850, 1075)
         c.drawOval(skia.Rect(x, y, x + rng.uniform(6, 16), y + rng.uniform(3, 7)), P(PAL["sand_d"], alpha=0.7))
     grass_tufts(c, 0, w, 840, 880, [PAL["shrub_d"], PAL["shrub"]], rng, n=140, h=(10, 22))
-    mandacaru(c, LANDMARKS["big_cactus"]["x"], 905, 420, rng, 1.3)
+    mandacaru(c, LANDMARKS["big_cactus"]["x"], 905, 250, rng, 0.85)     # cenário na escala das crianças
     for x in (400, 3600):
-        mandacaru(c, x, 900, 300, rng, 1.0)
+        mandacaru(c, x, 900, 185, rng, 0.7)
     rx = LANDMARKS["rock"]["x"]
     for x0, wd in ((rx, 210), (LANDMARKS["big_cactus"]["x"], 90)):
         c.drawOval(skia.Rect(x0 - wd, 912, x0 + wd, 944), P("#8A5A2B", alpha=0.25, blur=8))
@@ -123,9 +123,9 @@ def layer_rock(scale, rng):
     """Pedra grande numa camada própria, NA FRENTE dos personagens: o calango pode se esconder atrás dela."""
     s, c = _surface(WIDTH, HEIGHT, scale)
     rx = LANDMARKS["rock"]["x"]
-    blob(c, [(rx - 190, 935), (rx - 170, 840), (rx - 90, 770), (rx + 10, 750), (rx + 120, 780), (rx + 185, 860), (rx + 200, 935)],
+    blob(c, [(rx - 150, 935), (rx - 132, 862), (rx - 70, 818), (rx + 8, 806), (rx + 92, 826), (rx + 145, 878), (rx + 158, 935)],
          PAL["rock"], shader=lin((rx - 150, 760), (rx + 150, 930), [PAL["rock_l"], PAL["rock"], PAL["rock_d"]]))
-    blob(c, [(rx - 60, 790), (rx + 20, 772), (rx + 70, 790), (rx + 10, 805)], PAL["rock_l"], alpha=0.8)
+    blob(c, [(rx - 46, 836), (rx + 14, 824), (rx + 56, 838), (rx + 8, 850)], PAL["rock_l"], alpha=0.8)
     return s, WIDTH, 1.0
 
 
