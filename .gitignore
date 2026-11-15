@@ -1,0 +1,18 @@
+# ferramentas baixadas (binários de terceiros)
+tools/
+# saídas de testes de viabilidade
+.spike/
+# gerados
+**/build/
+**/__pycache__/
+.venv*/
+godot/.godot/
+godot/.cache/
+*.wav.cache
+# gerados (regeneráveis pelo pipeline)
+library/backgrounds/*/layers/
+*.ora
+projects/*/output/*.mp4
+projects/*/output/*.png
+# referências pessoais (fotos) — nunca versionar
+library/characters/*/referencia/

@@ -1,0 +1,960 @@
+{
+  "schema": "1.0",
+  "id": "torta-do-caramelo",
+  "title": "A Torta do Caramelo",
+  "logline": "Caramelo jura que ninguém encosta na torta dele; Tevico, um bem-te-vi guloso, prova que jurar não basta.",
+  "fps": 24,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "background": "floresta_clareira",
+  "cast": {
+    "caramelo": {
+      "character": "caramelo",
+      "voice": {
+        "provider": "higgs",
+        "ref": "aspero",
+        "tags": [
+          "prosody:pitch_low"
+        ],
+        "pitch": -1.5,
+        "tempo": 1.0,
+        "formant": "preserved"
+      }
+    },
+    "tevico": {
+      "character": "tevico",
+      "voice": {
+        "provider": "higgs",
+        "ref": "homem_jovem",
+        "tags": [
+          "prosody:pitch_high"
+        ],
+        "pitch": 4.0,
+        "tempo": 1.06,
+        "formant": "shifted"
+      }
+    },
+    "torta": {
+      "character": "torta"
+    }
+  },
+  "music": {
+    "track": "tema_floresta",
+    "volume_db": -21
+  },
+  "approval": {
+    "storyboard": false,
+    "final_render": false
+  },
+  "scenes": [
+    {
+      "id": "s01_guarda",
+      "title": "O guarda da torta",
+      "duration": 4.0,
+      "shot": "plano geral",
+      "description": "Clareira. A torta fumega no toco. Caramelo, estufado de orgulho, avisa o mundo.",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1560,
+            "y": 540,
+            "zoom": 1.0
+          },
+          {
+            "t": 4.0,
+            "x": 1480,
+            "y": 560,
+            "zoom": 1.08,
+            "ease": "inout"
+          }
+        ]
+      },
+      "characters": {
+        "caramelo": {
+          "start": {
+            "x": 1270,
+            "y": 945,
+            "turn": -0.35,
+            "expr": "happy",
+            "z": 2
+          },
+          "keys": [
+            {
+              "t": 0,
+              "expr": "happy",
+              "amount": 0.7
+            },
+            {
+              "t": 1.9,
+              "expr": "determined"
+            },
+            {
+              "t": 3.3,
+              "expr": "happy",
+              "amount": 0.8
+            }
+          ],
+          "actions": [
+            {
+              "t": 1.95,
+              "do": "shake_fist",
+              "dur": 0.9
+            }
+          ]
+        }
+      },
+      "props": {
+        "torta": {
+          "start": {
+            "x": 1500,
+            "y": 822,
+            "z": 1
+          },
+          "keys": [
+            {
+              "t": 0,
+              "pose": {
+                "steam": 0
+              }
+            },
+            {
+              "t": 4.0,
+              "pose": {
+                "steam": 2.6
+              },
+              "ease": "linear"
+            }
+          ]
+        }
+      },
+      "dialog": [
+        {
+          "t": 0.45,
+          "who": "caramelo",
+          "text": "Ninguém encosta nesta torta. Ninguém!",
+          "emotion": [
+            "orgulho",
+            "firme"
+          ]
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "id": "s02_espiao",
+      "title": "O espião no arbusto",
+      "duration": 3.5,
+      "shot": "plano médio",
+      "description": "Do arbusto surge Tevico, de olho na torta, com cara de quem já decidiu.",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 2330,
+            "y": 640,
+            "zoom": 1.7
+          },
+          {
+            "t": 3.5,
+            "x": 2320,
+            "y": 630,
+            "zoom": 1.76,
+            "ease": "inout"
+          }
+        ]
+      },
+      "characters": {
+        "tevico": {
+          "start": {
+            "x": 2400,
+            "y": 1190,
+            "turn": -0.4,
+            "z": 2
+          },
+          "keys": [
+            {
+              "t": 0.35,
+              "pose": {
+                "y": 1190,
+                "squash": 1.0
+              }
+            },
+            {
+              "t": 0.55,
+              "pose": {
+                "y": 750,
+                "squash": 1.28,
+                "crest": 1.0
+              },
+              "ease": "out"
+            },
+            {
+              "t": 0.72,
+              "pose": {
+                "y": 800,
+                "squash": 0.9
+              },
+              "ease": "inout"
+            },
+            {
+              "t": 0.9,
+              "pose": {
+                "squash": 1.0,
+                "crest": 0.0
+              },
+              "ease": "back"
+            },
+            {
+              "t": 0.6,
+              "expr": "sly"
+            },
+            {
+              "t": 0.6,
+              "pose": {
+                "look_x": 0.8
+              }
+            },
+            {
+              "t": 0.8,
+              "pose": {
+                "hand_n_x": 40,
+                "hand_n_y": 40,
+                "hand_f_x": 46,
+                "hand_f_y": 36,
+                "hand_n_bend": 0.5,
+                "hand_f_bend": 0.5
+              }
+            },
+            {
+              "t": 2.6,
+              "pose": {
+                "head_tilt": 0.12,
+                "hand_n_x": 30,
+                "hand_n_y": 10,
+                "hand_f_x": 40,
+                "hand_f_y": 6,
+                "paw_n": 1,
+                "paw_f": 1
+              }
+            },
+            {
+              "t": 3.4,
+              "pose": {
+                "head_tilt": 0.0
+              }
+            }
+          ]
+        }
+      },
+      "dialog": [
+        {
+          "t": 1.0,
+          "who": "tevico",
+          "text": "Hum... só um pedacinho.",
+          "emotion": [
+            "zombaria"
+          ]
+        }
+      ],
+      "sfx": [
+        {
+          "t": 0.42,
+          "id": "pop"
+        }
+      ]
+    },
+    {
+      "id": "s03_roubo",
+      "title": "Pé ante pé",
+      "duration": 5.5,
+      "shot": "plano geral",
+      "description": "Caramelo vigia o lado errado. Tevico sai do arbusto na ponta dos pés e pega a torta pelas costas dele.",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1760,
+            "y": 540,
+            "zoom": 1.0
+          },
+          {
+            "t": 5.5,
+            "x": 1640,
+            "y": 545,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ]
+      },
+      "characters": {
+        "caramelo": {
+          "start": {
+            "x": 1270,
+            "y": 945,
+            "turn": -0.65,
+            "z": 2
+          },
+          "keys": [
+            {
+              "t": 0,
+              "pose": {
+                "lid": 0.55,
+                "smile": 0.75,
+                "brow_y": 0.3,
+                "head_tilt": -0.08
+              }
+            },
+            {
+              "t": 2.6,
+              "pose": {
+                "head_tilt": 0.06
+              }
+            },
+            {
+              "t": 4.6,
+              "pose": {
+                "head_tilt": -0.06
+              }
+            }
+          ]
+        },
+        "tevico": {
+          "start": {
+            "x": 2330,
+            "y": 945,
+            "turn": -0.8,
+            "expr": "sly",
+            "z": 3
+          },
+          "actions": [
+            {
+              "t": 0.3,
+              "do": "sneak",
+              "to_x": 1640,
+              "speed": 1.4
+            },
+            {
+              "t": 3.6,
+              "do": "grab",
+              "reach_x": 95,
+              "reach_y": 40,
+              "item": "torta"
+            }
+          ],
+          "keys": [
+            {
+              "t": 4.5,
+              "pose": {
+                "turn": -0.25,
+                "look_x": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 4.5,
+              "expr": "sly"
+            },
+            {
+              "t": 4.6,
+              "pose": {
+                "smile": 1.0
+              }
+            }
+          ]
+        }
+      },
+      "props": {
+        "torta": {
+          "start": {
+            "x": 1500,
+            "y": 822,
+            "z": 1
+          },
+          "keys": [
+            {
+              "t": 0,
+              "pose": {
+                "steam": 0
+              }
+            },
+            {
+              "t": 3.9,
+              "pose": {
+                "steam": 2.5
+              },
+              "ease": "linear"
+            },
+            {
+              "t": 3.88,
+              "pose": {
+                "hidden": 1.0
+              },
+              "ease": "step"
+            }
+          ],
+          "exposure": 1
+        }
+      },
+      "dialog": [],
+      "sfx": [
+        {
+          "t": 0.35,
+          "id": "pizz_1"
+        },
+        {
+          "t": 0.81,
+          "id": "pizz_2"
+        },
+        {
+          "t": 1.27,
+          "id": "pizz_1"
+        },
+        {
+          "t": 1.73,
+          "id": "pizz_2"
+        },
+        {
+          "t": 2.19,
+          "id": "pizz_1"
+        },
+        {
+          "t": 2.65,
+          "id": "pizz_2"
+        },
+        {
+          "t": 3.11,
+          "id": "pizz_3"
+        },
+        {
+          "t": 3.82,
+          "id": "zip"
+        }
+      ]
+    },
+    {
+      "id": "s04_flagra",
+      "title": "O flagra",
+      "duration": 3.45,
+      "shot": "plano médio",
+      "description": "Caramelo sente algo errado, vira, e dá de cara com o ladrão de torta na mão.",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1430,
+            "y": 540,
+            "zoom": 1.42
+          },
+          {
+            "t": 0.95,
+            "x": 1430,
+            "y": 540,
+            "zoom": 1.42
+          },
+          {
+            "t": 1.15,
+            "x": 1415,
+            "y": 505,
+            "zoom": 1.5,
+            "ease": "out"
+          }
+        ]
+      },
+      "characters": {
+        "caramelo": {
+          "start": {
+            "x": 1270,
+            "y": 945,
+            "turn": -0.65,
+            "z": 2
+          },
+          "keys": [
+            {
+              "t": 0,
+              "pose": {
+                "lid": 0.55,
+                "smile": 0.75
+              }
+            },
+            {
+              "t": 0.3,
+              "pose": {
+                "ear": -0.45,
+                "lid": 0.0,
+                "smile": 0.0,
+                "look_x": -1.0,
+                "brow_l": 0.5,
+                "brow_r": -0.5
+              },
+              "ease": "out"
+            },
+            {
+              "t": 1.55,
+              "expr": "angry"
+            }
+          ],
+          "actions": [
+            {
+              "t": 0.62,
+              "do": "turn",
+              "to": 0.6
+            },
+            {
+              "t": 0.95,
+              "do": "take",
+              "strength": "shock"
+            },
+            {
+              "t": 1.75,
+              "do": "shake_fist",
+              "dur": 1.0
+            }
+          ]
+        },
+        "tevico": {
+          "start": {
+            "x": 1640,
+            "y": 945,
+            "turn": -0.25,
+            "expr": "sly",
+            "holding": "torta",
+            "z": 3
+          },
+          "keys": [
+            {
+              "t": 0,
+              "pose": {
+                "smile": 1.0
+              }
+            }
+          ],
+          "actions": [
+            {
+              "t": 1.05,
+              "do": "take",
+              "strength": "surprised"
+            },
+            {
+              "t": 1.85,
+              "do": "run",
+              "to_x": 2700,
+              "settle": false
+            }
+          ]
+        }
+      },
+      "dialog": [
+        {
+          "t": 1.6,
+          "who": "caramelo",
+          "text": "Ei! A minha torta!",
+          "emotion": [
+            "raiva",
+            "grito"
+          ]
+        }
+      ],
+      "sfx": [
+        {
+          "t": 0.3,
+          "id": "tink"
+        },
+        {
+          "t": 0.95,
+          "id": "whistle_up"
+        },
+        {
+          "t": 1.85,
+          "id": "zip"
+        }
+      ]
+    },
+    {
+      "id": "s05_perseguicao",
+      "title": "Perseguição",
+      "duration": 6.0,
+      "shot": "plano geral",
+      "description": "Tevico dispara com a torta; Caramelo vai atrás pela trilha. A câmera acompanha.",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1980,
+            "y": 540,
+            "zoom": 1.0
+          },
+          {
+            "t": 6.0,
+            "x": 3480,
+            "y": 540,
+            "zoom": 1.0,
+            "ease": "inout"
+          }
+        ]
+      },
+      "characters": {
+        "tevico": {
+          "start": {
+            "x": 2050,
+            "y": 945,
+            "turn": 0.95,
+            "expr": "happy",
+            "holding": "torta",
+            "z": 3
+          },
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "run",
+              "to_x": 4250,
+              "dur": 5.8,
+              "settle": false
+            }
+          ]
+        },
+        "caramelo": {
+          "start": {
+            "x": 1350,
+            "y": 945,
+            "turn": 0.95,
+            "expr": "angry",
+            "z": 2
+          },
+          "actions": [
+            {
+              "t": 0.35,
+              "do": "run",
+              "to_x": 3780,
+              "dur": 5.65,
+              "settle": false
+            }
+          ]
+        }
+      },
+      "dialog": [
+        {
+          "t": 2.1,
+          "who": "caramelo",
+          "text": "Volta aqui, seu ladrãozinho!",
+          "emotion": [
+            "raiva",
+            "grito"
+          ]
+        }
+      ],
+      "sfx": [
+        {
+          "t": 0.0,
+          "id": "zip"
+        },
+        {
+          "t": 0.35,
+          "id": "zip"
+        },
+        {
+          "t": 0.5,
+          "id": "patter"
+        },
+        {
+          "t": 3.2,
+          "id": "patter"
+        }
+      ]
+    },
+    {
+      "id": "s06_trombada",
+      "title": "A trombada",
+      "duration": 5.0,
+      "shot": "plano geral",
+      "description": "Tevico sobe voando para o galho; Caramelo não freia e acerta o tronco em cheio, depois cai duro de costas.",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 3600,
+            "y": 540,
+            "zoom": 1.0
+          },
+          {
+            "t": 2.0,
+            "x": 3700,
+            "y": 540,
+            "zoom": 1.0,
+            "ease": "inout"
+          },
+          {
+            "t": 5.0,
+            "x": 3720,
+            "y": 545,
+            "zoom": 1.04,
+            "ease": "inout"
+          }
+        ],
+        "shake": [
+          {
+            "t": 2.06,
+            "dur": 0.4,
+            "amp": 16
+          },
+          {
+            "t": 3.05,
+            "dur": 0.25,
+            "amp": 8
+          }
+        ]
+      },
+      "characters": {
+        "tevico": {
+          "start": {
+            "x": 3700,
+            "y": 945,
+            "turn": 0.95,
+            "expr": "happy",
+            "holding": "torta",
+            "z": 3
+          },
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "run",
+              "to_x": 4120,
+              "dur": 0.7,
+              "settle": false
+            },
+            {
+              "t": 0.72,
+              "do": "fly",
+              "to_x": 4120,
+              "to_y": 470,
+              "dur": 0.85
+            },
+            {
+              "t": 3.15,
+              "do": "laugh",
+              "dur": 1.5
+            }
+          ],
+          "keys": [
+            {
+              "t": 1.95,
+              "pose": {
+                "turn": -0.45
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.1,
+              "expr": "surprised",
+              "amount": 0.6
+            },
+            {
+              "t": 2.6,
+              "expr": "happy"
+            }
+          ]
+        },
+        "caramelo": {
+          "start": {
+            "x": 2950,
+            "y": 945,
+            "turn": 0.95,
+            "expr": "angry",
+            "z": 2
+          },
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "run",
+              "to_x": 4060,
+              "dur": 2.02,
+              "settle": false
+            },
+            {
+              "t": 2.02,
+              "do": "crash",
+              "fall": true,
+              "surface_x": 4290
+            }
+          ]
+        }
+      },
+      "dialog": [
+        {
+          "t": 3.2,
+          "who": "tevico",
+          "text": "Bem feito, cachorrão!",
+          "emotion": [
+            "zombaria",
+            "alegria"
+          ]
+        }
+      ],
+      "sfx": [
+        {
+          "t": 0.75,
+          "id": "flutter"
+        },
+        {
+          "t": 2.06,
+          "id": "bonk"
+        },
+        {
+          "t": 2.1,
+          "id": "rustle"
+        },
+        {
+          "t": 2.68,
+          "id": "whistle_down"
+        },
+        {
+          "t": 3.05,
+          "id": "thud"
+        },
+        {
+          "t": 3.25,
+          "id": "tweets"
+        }
+      ]
+    },
+    {
+      "id": "s07_sobremesa",
+      "title": "Sobremesa",
+      "duration": 4.6,
+      "shot": "plano conjunto",
+      "description": "No galho, Tevico come a torta toda. Lá embaixo, Caramelo vê estrelinhas.",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 3950,
+            "y": 484,
+            "zoom": 1.12
+          },
+          {
+            "t": 4.6,
+            "x": 3975,
+            "y": 470,
+            "zoom": 1.18,
+            "ease": "inout"
+          }
+        ]
+      },
+      "characters": {
+        "tevico": {
+          "start": {
+            "x": 4120,
+            "y": 470,
+            "turn": -0.35,
+            "expr": "happy",
+            "holding": "torta",
+            "z": 3
+          },
+          "actions": [
+            {
+              "t": 0.25,
+              "do": "eat",
+              "dur": 1.3
+            }
+          ],
+          "keys": [
+            {
+              "t": 0,
+              "pose": {
+                "hand_n_x": 48,
+                "hand_n_y": -6,
+                "hand_n_bend": 0.6
+              }
+            },
+            {
+              "t": 0.25,
+              "pose": {
+                "eaten": 0.0
+              }
+            },
+            {
+              "t": 1.6,
+              "pose": {
+                "eaten": 0.85
+              },
+              "ease": "linear"
+            },
+            {
+              "t": 1.65,
+              "expr": "happy"
+            },
+            {
+              "t": 3.6,
+              "pose": {
+                "lid": 0.6,
+                "smile": 1.0
+              }
+            }
+          ]
+        },
+        "caramelo": {
+          "start": {
+            "x": 4075,
+            "y": 945,
+            "turn": 0.95,
+            "expr": "dizzy",
+            "rot": -1.52,
+            "stars": 0.0,
+            "z": 2
+          },
+          "keys": [
+            {
+              "t": 0,
+              "pose": {
+                "stars": 0.0
+              }
+            },
+            {
+              "t": 4.6,
+              "pose": {
+                "stars": 5.0
+              },
+              "ease": "linear"
+            }
+          ]
+        }
+      },
+      "dialog": [
+        {
+          "t": 1.75,
+          "who": "tevico",
+          "text": "Hummm... tava uma delícia!",
+          "emotion": [
+            "alegria",
+            "zombaria"
+          ]
+        }
+      ],
+      "sfx": [
+        {
+          "t": 0.3,
+          "id": "munch"
+        },
+        {
+          "t": 0.62,
+          "id": "munch"
+        },
+        {
+          "t": 0.94,
+          "id": "munch"
+        },
+        {
+          "t": 1.26,
+          "id": "munch"
+        },
+        {
+          "t": 0.1,
+          "id": "tweets"
+        }
+      ],
+      "transition_out": "fade"
+    }
+  ]
+}

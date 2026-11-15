@@ -1,0 +1,93 @@
+{
+  "description": "Bem-te-vi trapaceiro e guloso.",
+  "personality": "Esperto, debochado, rápido; planeja com cara de santo e foge rindo.",
+  "appearance": "Cabeça grande branca com boné preto, máscara preta nos lados, listra branca de sobrancelha (expressiva), bico preto longo, barriga amarela, costas e asas marrons (asas = braços com três penas-dedo), pernas finas compridas, cauda em leque, topetinho preto.",
+  "proportions": {
+    "height_u": 348,
+    "heads_tall": 2.8,
+    "notes": "~64% da altura do Caramelo; cabeça ~130u"
+  },
+  "silhouette": "cabeça redonda + bico comprido + cauda em leque",
+  "voice": "higgs/homem_jovem, +4 semitons, formantes deslocados, 1,06x",
+  "id": "tevico",
+  "name": "Tevico",
+  "palette": {
+    "yellow": "#F8D33A",
+    "yellow_shade": "#DDA91C",
+    "brown": "#8A5A33",
+    "brown_shade": "#674024",
+    "black": "#211C1E",
+    "white": "#FBFAF5",
+    "white_shade": "#D8D3C6",
+    "beak": "#2B2526",
+    "legs": "#5E5452",
+    "mouth": "#6A1F24",
+    "tongue": "#E77A7E",
+    "eye": "#FFFFFF",
+    "pupil": "#1A1416",
+    "tear": "#8FD3F5",
+    "sweat": "#BFE8FA",
+    "blush": "#F08A7A"
+  },
+  "views": [
+    "frente",
+    "3/4",
+    "perfil",
+    "3/4 costas",
+    "costas"
+  ],
+  "expressions": [
+    "angry",
+    "confused",
+    "crying",
+    "determined",
+    "dizzy",
+    "happy",
+    "laughing",
+    "neutral",
+    "sad",
+    "scared",
+    "shock",
+    "sleepy",
+    "sly",
+    "surprised"
+  ],
+  "mouths": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "X"
+  ],
+  "animations": [
+    "bounce",
+    "crash",
+    "eat",
+    "fall",
+    "fly",
+    "grab",
+    "jump",
+    "laugh",
+    "look_around",
+    "point",
+    "run",
+    "shake_fist",
+    "shock_reaction",
+    "sit",
+    "slip",
+    "sneak",
+    "stand",
+    "take",
+    "turn",
+    "walk"
+  ],
+  "model_sheet": {
+    "png": "tevico_model_sheet.png",
+    "kra": "tevico_model_sheet.kra"
+  },
+  "source": "toonstudio/characters/tevico.py"
+}

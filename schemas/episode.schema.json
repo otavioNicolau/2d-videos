@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "toonstudio/episode.schema.json",
+  "title": "Episódio",
+  "description": "Contrato entre IA/roteiro e o pipeline. Tempos em segundos relativos ao início da cena; coordenadas em unidades de palco (1080 de altura, origem no canto superior esquerdo do cenário, y para baixo; personagens pelo ponto de apoio no chão).",
+  "type": "object",
+  "required": ["schema", "id", "title", "fps", "resolution", "background", "cast", "scenes"],
+  "additionalProperties": false,
+  "properties": {
+    "schema": {"const": "1.0"},
+    "id": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+    "title": {"type": "string"},
+    "logline": {"type": "string"},
+    "fps": {"enum": [24, 30]},
+    "resolution": {"type": "array", "items": {"type": "integer"}, "minItems": 2, "maxItems": 2},
+    "background": {"type": "string"},
+    "cast": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["character"],
+        "additionalProperties": false,
+        "properties": {
+          "character": {"type": "string"},
+          "voice": {"$ref": "#/$defs/voice"}
+        }
+      }
+    },
+    "music": {"type": "object", "additionalProperties": false,
+              "properties": {"track": {"type": "string"}, "volume_db": {"type": "number"}}},
+    "approval": {"type": "object", "additionalProperties": false,
+                 "properties": {"storyboard": {"type": "boolean"}, "final_render": {"type": "boolean"},
+                                "approved_by": {"type": "string"}, "notes": {"type": "string"}}},
+    "scenes": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/scene"}}
+  },
+  "$defs": {
+    "voice": {
+      "type": "object", "additionalProperties": false, "required": ["provider", "ref"],
+      "properties": {
+        "provider": {"enum": ["higgs", "kokoro"]},
+        "ref": {"type": "string"},
+        "tags": {"type": "array", "items": {"type": "string"}},
+        "pitch": {"type": "number", "minimum": -8, "maximum": 8},
+        "tempo": {"type": "number", "minimum": 0.6, "maximum": 1.6},
+        "formant": {"enum": ["preserved", "shifted"]}
+      }
+    },
+    "scene": {
+      "type": "object",
+      "required": ["id", "duration", "camera", "characters"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "pattern": "^s[0-9]{2}[a-z0-9_-]*$"},
+        "title": {"type": "string"},
+        "duration": {"type": "number", "exclusiveMinimum": 0, "maximum": 60},
+        "shot": {"enum": ["plano geral", "plano médio", "close", "plano conjunto", "detalhe"]},
+        "description": {"type": "string"},
+        "camera": {
+          "type": "object", "required": ["keys"], "additionalProperties": false,
+          "properties": {
+            "keys": {"type": "array", "minItems": 1, "items": {
+              "type": "object", "required": ["t", "x", "y", "zoom"], "additionalProperties": false,
+              "properties": {"t": {"type": "number"}, "x": {"type": "number"}, "y": {"type": "number"},
+                             "zoom": {"type": "number", "minimum": 0.5, "maximum": 3}, "ease": {"type": "string"}}}},
+            "shake": {"type": "array", "items": {
+              "type": "object", "required": ["t", "dur", "amp"], "additionalProperties": false,
+              "properties": {"t": {"type": "number"}, "dur": {"type": "number"}, "amp": {"type": "number"}}}}
+          }
+        },
+        "characters": {"type": "object", "additionalProperties": {"$ref": "#/$defs/performance"}},
+        "props": {"type": "object", "additionalProperties": {"$ref": "#/$defs/performance"}},
+        "dialog": {"type": "array", "items": {
+          "type": "object", "required": ["t", "who", "text"], "additionalProperties": false,
+          "properties": {"t": {"type": "number"}, "who": {"type": "string"}, "text": {"type": "string", "minLength": 1},
+                         "emotion": {"type": "array", "items": {"type": "string"}}, "volume_db": {"type": "number"}}}},
+        "sfx": {"type": "array", "items": {
+          "type": "object", "required": ["t", "id"], "additionalProperties": false,
+          "properties": {"t": {"type": "number"}, "id": {"type": "string"}, "volume_db": {"type": "number"},
+                         "pan": {"type": "number", "minimum": -1, "maximum": 1}}}},
+        "transition_out": {"enum": ["cut", "fade"]}
+      }
+    },
+    "performance": {
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "start": {"type": "object"},
+        "keys": {"type": "array", "items": {
+          "type": "object", "required": ["t"], "additionalProperties": false,
+          "properties": {"t": {"type": "number"}, "pose": {"type": "object"}, "expr": {"type": "string"},
+                         "amount": {"type": "number"}, "ease": {"type": "string"}}}},
+        "actions": {"type": "array", "items": {
+          "type": "object", "required": ["t", "do"],
+          "properties": {"t": {"type": "number"}, "do": {"type": "string"}}}},
+        "exposure": {"enum": [1, 2, 3]},
+        "z": {"type": "integer"}
+      }
+    }
+  }
+}

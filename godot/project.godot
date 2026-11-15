@@ -1,0 +1,18 @@
+; Compositor do Cartoon Studio (ADR-0005): só composição — câmera, parallax, camadas, ordem de profundidade.
+config_version=5
+
+[application]
+config/name="Cartoon Studio Compositor"
+run/main_scene="res://compositor.tscn"
+
+[display]
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/window_width_override=480
+window/size/window_height_override=270
+window/stretch/mode="viewport"
+
+[rendering]
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/canvas_textures/default_texture_filter=1

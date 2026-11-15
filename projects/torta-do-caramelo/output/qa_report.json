@@ -1,0 +1,256 @@
+{
+  "episode": "torta-do-caramelo",
+  "scenes": {
+    "s01_guarda": {
+      "frames": 96,
+      "performers": {
+        "caramelo": {
+          "drawings": 65,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 64
+          },
+          "empty_frames": 0
+        },
+        "torta": {
+          "drawings": 48,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 47
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s02_espiao": {
+      "frames": 84,
+      "performers": {
+        "tevico": {
+          "drawings": 42,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 41
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s03_roubo": {
+      "frames": 132,
+      "performers": {
+        "caramelo": {
+          "drawings": 66,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 65
+          },
+          "empty_frames": 0
+        },
+        "tevico": {
+          "drawings": 76,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 75
+          },
+          "empty_frames": 0
+        },
+        "torta": {
+          "drawings": 132,
+          "hidden_frames": [
+            95,
+            96,
+            97,
+            98,
+            99,
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            108,
+            109,
+            110,
+            111,
+            112,
+            113,
+            114,
+            115,
+            116,
+            117,
+            118,
+            119,
+            120,
+            121,
+            122,
+            123,
+            124,
+            125,
+            126,
+            127,
+            128,
+            129,
+            130,
+            131,
+            132
+          ],
+          "exposure": {
+            "1s": 131
+          },
+          "empty_frames": 38
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s04_flagra": {
+      "frames": 83,
+      "performers": {
+        "caramelo": {
+          "drawings": 74,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 73
+          },
+          "empty_frames": 0
+        },
+        "tevico": {
+          "drawings": 69,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 68
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s05_perseguicao": {
+      "frames": 144,
+      "performers": {
+        "tevico": {
+          "drawings": 144,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 143
+          },
+          "empty_frames": 0
+        },
+        "caramelo": {
+          "drawings": 139,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 138
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s06_trombada": {
+      "frames": 120,
+      "performers": {
+        "tevico": {
+          "drawings": 83,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 82
+          },
+          "empty_frames": 0
+        },
+        "caramelo": {
+          "drawings": 115,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 114
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s07_sobremesa": {
+      "frames": 110,
+      "performers": {
+        "tevico": {
+          "drawings": 55,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 54
+          },
+          "empty_frames": 0
+        },
+        "caramelo": {
+          "drawings": 55,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 54
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    }
+  },
+  "warnings": [
+    "render final ainda não aprovado (approval.final_render = false): será gerado como CANDIDATO",
+    "storyboard s01_guarda: pendente",
+    "storyboard s02_espiao: pendente",
+    "storyboard s03_roubo: pendente",
+    "storyboard s04_flagra: pendente",
+    "storyboard s05_perseguicao: pendente",
+    "storyboard s06_trombada: pendente",
+    "storyboard s07_sobremesa: pendente"
+  ],
+  "lines": {
+    "s01_guarda:0.45": {
+      "text": "Ninguém encosta nesta torta. Ninguém!",
+      "heard": "Ninguém encosta nesta torta. Ninguém.",
+      "similarity": 1.0,
+      "duration": 2.91225
+    },
+    "s02_espiao:1.0": {
+      "text": "Hum... só um pedacinho.",
+      "heard": "hum, só um pedacinho",
+      "similarity": 1.0,
+      "duration": 1.548125
+    },
+    "s04_flagra:1.6": {
+      "text": "Ei! A minha torta!",
+      "heard": "Ei! A minha torta!",
+      "similarity": 1.0,
+      "duration": 1.7124166666666667
+    },
+    "s05_perseguicao:2.1": {
+      "text": "Volta aqui, seu ladrãozinho!",
+      "heard": "Hmm, volta aqui seu ladrãozinho.",
+      "similarity": 0.929,
+      "duration": 2.2965
+    },
+    "s06_trombada:3.2": {
+      "text": "Bem feito, cachorrão!",
+      "heard": "Bem feito, cachorrão!",
+      "similarity": 1.0,
+      "duration": 1.3408541666666667
+    },
+    "s07_sobremesa:1.75": {
+      "text": "Hummm... tava uma delícia!",
+      "heard": "Hum, tava uma delícia!",
+      "similarity": 0.952,
+      "duration": 1.2582708333333332
+    }
+  },
+  "video": "/home/otavio/2d/projects/torta-do-caramelo/output/torta-do-caramelo_CANDIDATO.mp4",
+  "contact_sheet": "/home/otavio/2d/projects/torta-do-caramelo/output/prancha.png",
+  "approved": false
+}

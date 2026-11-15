@@ -1,0 +1,17 @@
+# Configuração da máquina. Caminhos Linux (WSL); o pipeline converte para Windows com `wslpath -w` quando preciso.
+tools:
+  opentoonz: "/mnt/c/Program Files/OpenToonz/OpenToonz.exe"
+  tcomposer: "/mnt/c/Program Files/OpenToonz/tcomposer.exe"
+  krita: "/mnt/c/Program Files/Krita (x64)/bin/krita.com"
+  godot: "~/.local/opt/godot/4.7.2-stable/Godot_v4.7.2-stable_linux.x86_64"
+  rhubarb: "tools/rhubarb/rhubarb"
+  ffmpeg: "ffmpeg"
+audio:
+  # reaproveitado do ~/videos (ADR-0006): venvs e referências de voz já existentes
+  higgs_python: "~/videos/.venv-higgs/bin/python"
+  aux_python: "~/videos/.venv/bin/python"       # kokoro + faster-whisper
+  voice_refs: "~/videos/library/voices/elenco"
+  whisper_model: "small"
+render:
+  level_scale: 1.5          # resolução dos desenhos e cenários (folga para zoom de câmera até 1.5x)
+  krita_sources: true       # gerar KRA editáveis (model sheets e cenário)
