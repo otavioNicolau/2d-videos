@@ -23,6 +23,7 @@ Personagens e universos **sempre originais** — referências clássicas só com
 - Caminhos para o Windows: `wslpath -w` (dados ficam no WSL, ADR-0007).
 
 ## Regras
+- **Identidade visual: [BIBLIA_VISUAL.md](BIBLIA_VISUAL.md) é a base obrigatória** de todo personagem, animal, objeto e cenário. Mudanças só com autorização do usuário.
 - Código funcional não prova qualidade artística: renderizar, **olhar os quadros** (pranchas) e corrigir.
 - Nada de imagem estática deslizando no lugar de animação.
 - Não esconder limitações; aprovação humana antes do render final.
