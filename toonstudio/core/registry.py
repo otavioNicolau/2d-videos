@@ -12,9 +12,12 @@ CHARACTERS: dict = {"caramelo": Caramelo, "tevico": Tevico, "torta": Torta, "cal
 from ..characters.muricoca import LAURINHA_M, LUIZINHO_M, Muricoca
 CHARACTERS["laurinha_muricoca"] = lambda: Muricoca("laurinha_muricoca", "Laurinha", LAURINHA_M)
 CHARACTERS["luizinho_muricoca"] = lambda: Muricoca("luizinho_muricoca", "Luizinho", LUIZINHO_M)
+from ..characters.flat_muri import LAURINHA as _FL, LUISINHO as _FU, FlatMuri
+CHARACTERS["laurinha"] = lambda: FlatMuri("laurinha", "Laurinha", _FL)      # estilo oficial (BIBLIA_VISUAL.md)
+CHARACTERS["luisinho"] = lambda: FlatMuri("luisinho", "Luisinho", _FU)
 # a turma do canal (modelo chibi): construída a partir do visual de cada criança
 for _cid, (_name, _look) in TURMA.items():
-    CHARACTERS[_cid] = (lambda c=_cid, n=_name, l=_look: Chibi(c, n, l))
+    CHARACTERS.setdefault(_cid, (lambda c=_cid, n=_name, l=_look: Chibi(c, n, l)))
 BACKGROUNDS = {"floresta_clareira": "toonstudio.backgrounds.forest"}
 
 _cache: dict[str, Character] = {}

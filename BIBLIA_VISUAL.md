@@ -162,4 +162,5 @@ Elemento que falhar em qualquer item é corrigido antes de entrar. A verificaç�
 
 ## Histórico
 
-- 2026-11-15 — versão 1, a partir da análise da referência. Pendente: validação da proposta dos protagonistas.
+- 2026-11-15 — versão 1, a partir da análise da referência.
+- 2026-11-15 — primeira proposta: `toonstudio/characters/flat_muri.py` (Laurinha e Luisinho), `toonstudio/backgrounds/plano.py` (plano_parque); folhas de modelo em `library/visual/personagens/` e prancha `library/visual/prancha_laurinha_luisinho.png`. Pendente: validação do usuário.
