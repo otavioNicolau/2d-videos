@@ -71,7 +71,7 @@ class FlatMuri(Character):
                 "foot_f_x": 16.0, "foot_f_y": 0.0, "foot_f_bend": 0.0, "foot_f_rot": 0.0,
                 "mouth": "X", "smile": 0.8, "brow_y": 0.2, "blush": 1.0, "stars": 0.0, "speed": 0.0,
                 "holding": "", "wing_phase": 0.0, "bank": 0.0, "dangle": 0.0, "hair_bounce": 0.0,
-                "fly": 0.0, "rot_pivot": 0.55, "bigode": 0.0, "mochila": 0.0, "buzz": 0.0,
+                "fly": 0.0, "rot_pivot": 0.55, "bigode": 0.0, "mochila": 0.0, "buzz": 0.0, "suor": 0.0,
             })
 
     # ------------------------------------------------------------------ primitivas chapadas
@@ -104,16 +104,30 @@ class FlatMuri(Character):
         ht = ang * 0.5 + P["head_tilt"] * f
 
         # asas: as duas ATRÁS do corpo, saindo das costas (de frente abrem para os lados; de perfil vão para trás)
-        for side in (-1, 1):
-            self._wing(ink, P, T((side * 10 * (1 - s) - f * 10 * s, -66)), f, fly, far=(side == f), side=side, s=s)
+        if L.extra.get("asas", True):
+            for side in (-1, 1):
+                self._wing(ink, P, T((side * 10 * (1 - s) - f * 10 * s, -66)), f, fly, far=(side == f), side=side, s=s)
         if P.get("mochila", 0) > 0.5:          # mochila nas costas (atrás do tórax; aparece pelas bordas)
             self._mochila(ink, T, f, s)
         self._abdomen(ink, T, f)
+        if L.extra.get("patas_meio"):        # formiga: o par do meio (6 patinhas)
+            for side in (-1, 1):
+                a0 = T((side * 34, -22))
+                k1 = T((side * 92, -8))
+                k2 = T((side * 112, 34))
+                col = dark(L.body, 0.75)
+                self._line(ink, [a0, k1, k2], col, w=LIMB * 0.9)
+                self._line(ink, [k2, (k2[0] + side * 12, k2[1] + 4)], col, w=LIMB * 0.9)   # pezinho
         self._arm(ink, P, "f", T((lerp(38 * f, 8 * f, s), -62)), f, behind=True)
         self._leg(ink, P, "f", T((lerp(16 * f, 6 * f, s), -2)), f, s, fly, behind=True)
         self._leg(ink, P, "n", T((lerp(-16 * f, -4 * f, s), 0)), f, s, fly, behind=False)
         # tórax (gota) — mesma cor do corpo
         self._shape(ink, [T(p) for p in ((0, -80), (30, -74), (44, -44), (44, -10), (26, 10), (0, 14), (-26, 10), (-44, -10), (-44, -44), (-30, -74))], L.body)
+        if L.extra.get("pintas"):             # casco de joaninha: risca do meio + pintinhas
+            self._line(ink, [T((0, -78)), T((0, 12))], dark(L.body, 0.6), w=LINE)
+            for dx, dy, r in ((-24, -52, 9), (22, -46, 10), (-28, -12, 8), (26, -10, 9)):
+                q = T((dx, dy))
+                ink.shape(ellipse_pts(q[0], q[1], r, r, 0, 12), fill=_rgba(L.extra["pintas"]), line=0)
         if P.get("mochila", 0) > 0.5:          # alças por cima dos ombros
             for side in (-1, 1):
                 self._line(ink, [T((side * 26 - f * s * 10, -76)), T((side * 30, -20))], "#3E7BD6" if not L.bow else "#F0509A", w=LINE * 1.6)
@@ -137,6 +151,13 @@ class FlatMuri(Character):
         L = self.look
         pts = [T(p) for p in ((-f * 8, -50), (-f * 56, -64), (-f * 106, -48), (-f * 130, -16), (-f * 114, 14), (-f * 66, 18), (-f * 16, 2))]
         P_ = k.shape(pts, fill=_rgba(L.belly_a), line=0)
+        if L.extra.get("abdomen_liso"):
+            if L.extra.get("pintas"):
+                for j, (dx, dy) in enumerate(((-60, -30), (-96, -10), (-70, 4))):
+                    q = T((f * dx, dy))
+                    k.shape(ellipse_pts(q[0], q[1], 9, 9, 0, 12), fill=_rgba(L.extra["pintas"]), line=0)
+            k.shape(P_, fill=None, brush=Brush(LINE, 0.0, _rgba(dark(L.belly_a)), 0.0), dense=True, line=LINE)
+            return
         path = skia.Path()
         path.addPoly([skia.Point(*p) for p in P_], True)
         k.c.save()
@@ -215,7 +236,12 @@ class FlatMuri(Character):
             b = rot((C[0] + side * 34 + f * s * 10, C[1] - r * 0.88), ht, C)
             sway = P.get("hair_bounce", 0.0) * 0.5 + P["head_tilt"] * 0.7
             tip = (b[0] + side * 30 + sway * 26, b[1] - 82)
-            self._line(k, [b, (b[0] + side * 6, b[1] - 46), tip], line, w=LINE * 1.2)
+            if L.extra.get("antena_cotovelo"):  # formiga: antena dobrada em "cotovelo"
+                mid = (b[0] + side * 8, b[1] - 54)
+                tip = (b[0] + side * 44 + sway * 20, b[1] - 66)
+                self._line(k, [b, mid, tip], line, w=LINE * 1.2)
+            else:
+                self._line(k, [b, (b[0] + side * 6, b[1] - 46), tip], line, w=LINE * 1.2)
             self._shape(k, ellipse_pts(tip[0], tip[1], 17, 17, 0, 16), L.pom)
         if L.curl and not v.back:            # topetinho em espiral (traço)
             base = rot((C[0] - 6 + f * s * 8, C[1] - r * 0.98), ht, C)
@@ -266,6 +292,11 @@ class FlatMuri(Character):
                 self._line(k, [(eyes[0][0] + 30, eyes[0][1] - 4), (eyes[1][0] - 30, eyes[1][1] - 4)], "#534946", w=LINE * 0.9)
         nx_, _ = v.sphere(C[0], r * 0.72, 0.0)            # boca sempre dentro da cabeça, inclusive de perfil
         self._mouth(k, P, rot((nx_, C[1] + 52), ht, C), f, s, line)
+        if P.get("suor", 0) > 0.5:            # gotinhas de suor (chegou correndo)
+            for dx, dy, sc in ((r * 0.95, -r * 0.55, 1.0), (r * 1.12, -r * 0.2, 0.75)):
+                q = rot((C[0] + dx * f, C[1] + dy), ht, C)
+                pts = [(q[0], q[1] - 18 * sc), (q[0] + 10 * sc, q[1]), (q[0], q[1] + 10 * sc), (q[0] - 10 * sc, q[1])]
+                self._shape(k, pts, "#9CCBFA", line="#5A8FD6")
         if P.get("bigode", 0) > 0.5:          # bigodinho de leite
             m = rot((nx_, C[1] + 40), ht, C)
             pts = [(m[0] - 34, m[1] + 4), (m[0] - 20, m[1] - 8), (m[0], m[1] - 4), (m[0] + 20, m[1] - 8), (m[0] + 34, m[1] + 4),
@@ -369,3 +400,9 @@ MAMAE = FlatLook(body="#C9A6F2", belly_a="#FFE066", belly_b="#9B6BD9", shoe="#9B
                  pom="#9B6BD9", cheek="#FF8FC4", lashes=True, extra={"colar": "#FFFFFF", "flor": "#FF7FBF"})
 VOVO = FlatLook(body="#8FD9C4", belly_a="#FFE066", belly_b="#3FA98C", shoe="#E9545D", sole="#FFFFFF",
                 pom="#3FA98C", cheek="#FF9AAE", lashes=True, extra={"oculos": True, "coque": "#E4E4EE", "cabelo": "#E4E4EE"})
+# amigas da turma (música 02): mesmo modelo, detalhes próprios
+JOANINHA = FlatLook(body="#F2545B", belly_a="#F2545B", belly_b="#2B2B33", shoe="#2B2B33", sole="#FFD23F",
+                    pom="#2B2B33", cheek="#FF9AAE", lashes=True, extra={"pintas": "#2B2B33", "abdomen_liso": True})
+FORMIGUINHA = FlatLook(body="#E08A4F", belly_a="#B9652E", belly_b="#B9652E", shoe="#9B6BD9", sole="#FFE066",
+                       pom="#B9652E", cheek="#FF8FA0", lashes=True,
+                       extra={"asas": False, "abdomen_liso": True, "patas_meio": True, "antena_cotovelo": True})

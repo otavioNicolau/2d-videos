@@ -179,3 +179,63 @@ def apontar_camera(char, st, a):
                               (0.2, {"hand_f_x": 70, "hand_f_y": -30, "hand_f_bend": -0.1, "paw_f": 2, "lean": 0.06,
                                      **expression("joy"), "mouth": "D"}, "back"),
                               (d, {"lean": 0.02}, "inout")], dur=d, ex=1)
+
+
+@action("lavar_maos", "acting", "Esfrega as mãos na frente do corpo (lavando com espuma), carinha feliz.", {"dur": "s"})
+def lavar_maos(char, st, a):
+    d = _d(a, 1.6)
+    keys = [(0.0, {}, "step"), (0.25, {"hand_n_x": 30, "hand_n_y": 30, "hand_f_x": 30, "hand_f_y": 30, "hand_n_bend": 0.9,
+                                        "hand_f_bend": -0.9, "paw_n": 1, "paw_f": 1, "eyes_happy": 1.0, "head_tilt": 0.1}, "inout")]
+    t, k = 0.25, 0
+    while t < d - 0.15:
+        t += 0.14
+        k += 1
+        keys.append((t, {"hand_n_x": 30 + (16 if k % 2 else -12), "hand_f_x": 30 + (-12 if k % 2 else 16),
+                         "hand_n_y": 30 + (6 if k % 2 else -4), "hand_f_y": 30 + (-4 if k % 2 else 6)}, "inout"))
+    keys.append((d, {**REST, "eyes_happy": 0.0, "head_tilt": 0.0, **expression("joy")}, "inout"))
+    return ActionResult(keys=keys, dur=d, ex=1)
+
+
+@action("ofegante", "acting", "Chegou correndo: respira rápido, suadinha, mãos nos joelhos.", {"dur": "s"})
+def ofegante(char, st, a):
+    d = _d(a, 1.4)
+    keys = [(0.0, {"suor": 1.0, "hand_n_x": 30, "hand_n_y": 100, "hand_f_x": 30, "hand_f_y": 100, "lean": 0.12,
+                   "mouth": "D", "lid": 0.35}, "step")]
+    t, k = 0.0, 0
+    while t < d - 0.1:
+        t += 0.18
+        k += 1
+        keys.append((t, {"body_y": 6 if k % 2 else 0, "mouth": "D" if k % 2 else "C"}, "inout"))
+    keys.append((d, {"lean": 0.0, "body_y": 0, "lid": 0.0, **REST}, "inout"))
+    return ActionResult(keys=keys, dur=d, ex=1)
+
+
+@action("entregar", "acting", "Estende o braço e entrega o objeto (solta da mão no fim).", {"dur": "s", "item": "objeto"})
+def entregar(char, st, a):
+    d = _d(a, 1.2)
+    item = a.get("item")
+    k0 = {"holding": item} if item else {}
+    return ActionResult(keys=[(0.0, k0, "step"),
+                              (0.35, {"hand_n_x": 140, "hand_n_y": 40, "hand_n_bend": 0.1, "lean": 0.1, **expression("joy")}, "back"),
+                              (d * 0.8, {"holding": ""}, "step"),
+                              (d, {**REST, "lean": 0.0}, "inout")], dur=d, ex=1)
+
+
+@action("receber", "acting", "Recebe algo com olhos brilhando (encantado) e segura.", {"dur": "s", "item": "objeto"})
+def receber(char, st, a):
+    d = _d(a, 1.2)
+    return ActionResult(keys=[(0.0, {}, "step"),
+                              (0.3, {"hand_n_x": 100, "hand_n_y": 40, "paw_n": 3, "eye_scale": 1.35, "pupil": 1.6, "mouth": "D",
+                                     "brow_y": 0.9}, "out"),
+                              (0.5, {"holding": a.get("item", "")}, "step"),
+                              (d, {"hand_n_x": -110, "hand_n_y": 20, "paw_n": 1, **expression("joy")}, "inout")], dur=d, ex=1)
+
+
+@action("abraco", "acting", "Abraço coletivo: braços abertos para os lados, olhinhos felizes, cabeça inclinada.", {"dur": "s"})
+def abraco(char, st, a):
+    d = _d(a, 1.5)
+    return ActionResult(keys=[(0.0, {}, "step"),
+                              (0.3, {"hand_n_x": -140, "hand_n_y": -10, "hand_n_bend": 0.3, "paw_n": 3, "hand_f_x": 140,
+                                     "hand_f_y": -10, "hand_f_bend": -0.3, "paw_f": 3, "eyes_happy": 1.0, "head_tilt": 0.15,
+                                     "mouth": "D"}, "back"),
+                              (d, {"head_tilt": 0.2}, "inout")], dur=d, ex=1)

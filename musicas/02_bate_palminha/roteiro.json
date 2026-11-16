@@ -1,0 +1,1448 @@
+{
+ "schema": "roteiro-1.0",
+ "nota": "Roteiro verso a verso de 'Bate Palminha' (aprovado no chat em 16/11/2026, revisado com a análise da referência): destaques de objeto com fundo de desenhos, sabonete com carinha, close de mãos e pés no refrão.",
+ "partes": {
+  "intro": [
+   {
+    "cenario": "danca_raios_amarelo",
+    "flash": true,
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "BATE PALMINHA!",
+      "color": "rosa"
+     }
+    ],
+    "fx": [
+     "estrelas"
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 420,
+      "turn": 0.15,
+      "depth": 1.1,
+      "acoes": [
+       {
+        "do": "dance",
+        "style": "palmas",
+        "dur": "resto"
+       }
+      ]
+     },
+     "joaninha": {
+      "x": 780,
+      "turn": 0.1,
+      "depth": 1.1,
+      "acoes": [
+       {
+        "do": "dance",
+        "style": "palmas",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1140,
+      "turn": -0.1,
+      "depth": 1.1,
+      "acoes": [
+       {
+        "do": "dance",
+        "style": "palmas",
+        "dur": "resto"
+       }
+      ]
+     },
+     "formiguinha": {
+      "x": 1500,
+      "turn": -0.15,
+      "depth": 1.1,
+      "acoes": [
+       {
+        "do": "dance",
+        "style": "palmas",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "verso#1": [
+   {
+    "cenario": "plano_escola",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0
+    },
+    "atores": {
+     "laurinha": {
+      "x": 1300,
+      "y": 820,
+      "mochila": 1,
+      "acoes": [
+       {
+        "do": "fly",
+        "to_x": 1720,
+        "to_y": 950,
+        "dur": 1.0
+       },
+       {
+        "t": 1.1,
+        "do": "wave",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "cenario": "plano_quarto_rosa",
+    "camera": "medio:laurinha",
+    "objetos": {
+     "mochila": {
+      "x": 1180,
+      "y": 935,
+      "z": 4,
+      "pose": {
+       "hidden": 1,
+       "cai": 0.0
+      },
+      "keys": [
+       {
+        "t": 0.45,
+        "pose": {
+         "hidden": 0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.75,
+        "pose": {
+         "cai": 1.0
+        },
+        "ease": "in"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 1300,
+      "mochila": 1,
+      "keys": [
+       {
+        "t": 0.42,
+        "pose": {
+         "mochila": 0
+        },
+        "ease": "step"
+       }
+      ],
+      "acoes": [
+       {
+        "t": 0.8,
+        "do": "bacana",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "cenario": "plano_banheiro",
+    "camera": {
+     "x": 1330,
+     "y": 560,
+     "zoom": 1.35
+    },
+    "fx": [
+     "bolhas"
+    ],
+    "objetos": {
+     "sabonete": {
+      "x": 1470,
+      "y": 575,
+      "z": 4,
+      "depth": 0.6,
+      "keys": [
+       {
+        "t": 0.2,
+        "pose": {
+         "pulo": 0.0
+        }
+       },
+       {
+        "t": 0.5,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 0.8,
+        "pose": {
+         "pulo": 0.0,
+         "bolhas": 1.0
+        },
+        "ease": "in"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 1260,
+      "y": 960,
+      "z": 3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "lavar_maos",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "cenario": "padrao_bolhas_azul",
+    "camera": "medio:laurinha",
+    "fx": [
+     "bolhas"
+    ],
+    "objetos": {
+     "sabonete": {
+      "x": 1330,
+      "y": 1030,
+      "z": 4,
+      "depth": 0.9,
+      "pose": {
+       "bolhas": 1.0
+      }
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 820,
+      "acoes": [
+       {
+        "do": "lavar_maos",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "cenario": "plano_parque",
+    "camera": {
+     "x": 1150,
+     "y": 540,
+     "zoom": 1.15
+    },
+    "atores": {
+     "laurinha": {
+      "x": 1300,
+      "turn": -0.4,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "wave",
+        "dur": "resto"
+       }
+      ]
+     },
+     "joaninha": {
+      "x": 300,
+      "y": 600,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "fly",
+        "to_x": 950,
+        "to_y": 930,
+        "dur": 1.0
+       }
+      ]
+     }
+    }
+   },
+   {
+    "cenario": "plano_parque",
+    "camera": {
+     "x": 1250,
+     "y": 540,
+     "zoom": 1.1
+    },
+    "atores": {
+     "laurinha": {
+      "x": 1100,
+      "turn": 0.4,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "wave",
+        "dur": "resto"
+       }
+      ]
+     },
+     "joaninha": {
+      "x": 880,
+      "turn": 0.3
+     },
+     "formiguinha": {
+      "x": 1900,
+      "turn": -0.8,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "walk",
+        "to_x": 1400,
+        "dur": 1.2
+       }
+      ]
+     }
+    }
+   },
+   {
+    "cenario": "padrao_bolo_rosa",
+    "camera": {
+     "x": 960,
+     "y": 520,
+     "zoom": 1.2
+    },
+    "fx": [
+     "estrelas"
+    ],
+    "objetos": {
+     "bolo": {
+      "x": 960,
+      "y": 900,
+      "z": 3,
+      "depth": 1.6,
+      "pose": {
+       "vapor": 1.0
+      }
+     }
+    }
+   },
+   {
+    "cenario": "plano_parque",
+    "camera": {
+     "x": 1150,
+     "y": 560,
+     "zoom": 1.05
+    },
+    "objetos": {
+     "mesa": {
+      "x": 1150,
+      "y": 990,
+      "z": 5
+     },
+     "bolo": {
+      "x": 1150,
+      "y": 760,
+      "z": 6,
+      "depth": 0.7
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 760,
+      "y": 900,
+      "turn": 0.25,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "wave",
+        "dur": "resto"
+       }
+      ]
+     },
+     "joaninha": {
+      "x": 1010,
+      "y": 900,
+      "turn": 0.15,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "wave",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1290,
+      "y": 900,
+      "turn": -0.15,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "wave",
+        "dur": "resto"
+       }
+      ]
+     },
+     "formiguinha": {
+      "x": 1540,
+      "y": 900,
+      "turn": -0.25,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "wave",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "refrao": [
+   {
+    "cenario": [
+     "danca_raios_amarelo",
+     "danca_raios_laranja",
+     "danca_raios_rosa"
+    ],
+    "flash": true,
+    "callout": "BATE PALMINHA!",
+    "camera": "close:laurinha",
+    "fx": [
+     "estrelas"
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 960,
+      "acoes": [
+       {
+        "do": "dance",
+        "style": "palmas",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "cenario": [
+     "danca_bolinhas_rosa",
+     "danca_bolinhas_amarelo",
+     "danca_bolinhas_rosa"
+    ],
+    "callout": [
+     {
+      "t": 0.1,
+      "text": "TUM, TUM, TUM!",
+      "color": "azul"
+     }
+    ],
+    "camera": {
+     "x": 960,
+     "y": 860,
+     "zoom": 1.5
+    },
+    "atores": {
+     "luisinho": {
+      "x": 960,
+      "acoes": [
+       {
+        "do": "dance",
+        "style": "pezinho",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 2,
+    "cenario": "plano_parque",
+    "camera": {
+     "x": 1150,
+     "y": 540,
+     "zoom": 1.05
+    },
+    "fx": [
+     "coracoes"
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 760,
+      "y": 930,
+      "turn": 0.25,
+      "acoes": [
+       {
+        "do": "dance",
+        "style": "roda",
+        "dur": "resto"
+       }
+      ]
+     },
+     "joaninha": {
+      "x": 1010,
+      "y": 930,
+      "turn": 0.15,
+      "acoes": [
+       {
+        "do": "dance",
+        "style": "roda",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1290,
+      "y": 930,
+      "turn": -0.15,
+      "acoes": [
+       {
+        "do": "dance",
+        "style": "roda",
+        "dur": "resto"
+       }
+      ]
+     },
+     "formiguinha": {
+      "x": 1540,
+      "y": 930,
+      "turn": -0.25,
+      "acoes": [
+       {
+        "do": "dance",
+        "style": "roda",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 2,
+    "tela_dividida": {
+     "layout": "diagonal",
+     "paineis": [
+      {
+       "cenario": "danca_xadrez_rosa",
+       "fx": [
+        "estrelas"
+       ],
+       "atores": {
+        "laurinha": {
+         "x": 760,
+         "acoes": [
+          {
+           "do": "dance",
+           "style": "palmas",
+           "dur": "resto"
+          }
+         ]
+        },
+        "joaninha": {
+         "x": 1160,
+         "acoes": [
+          {
+           "do": "dance",
+           "style": "palmas",
+           "dur": "resto"
+          }
+         ]
+        }
+       }
+      },
+      {
+       "cenario": "danca_xadrez_azul",
+       "fx": [
+        "notas"
+       ],
+       "atores": {
+        "luisinho": {
+         "x": 760,
+         "acoes": [
+          {
+           "do": "dance",
+           "style": "pezinho",
+           "dur": "resto"
+          }
+         ]
+        },
+        "formiguinha": {
+         "x": 1160,
+         "acoes": [
+          {
+           "do": "dance",
+           "style": "pezinho",
+           "dur": "resto"
+          }
+         ]
+        }
+       }
+      }
+     ]
+    }
+   },
+   {
+    "linhas": 2,
+    "cenario": [
+     "danca_ondas_azul",
+     "danca_ondas_verde",
+     "danca_ondas_rosa"
+    ],
+    "fx": [
+     "coracoes"
+    ],
+    "callout": [
+     {
+      "t": 1.0,
+      "text": "CABE MAIS UM!",
+      "color": "verde"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 420,
+      "turn": 0.15,
+      "depth": 1.1,
+      "acoes": [
+       {
+        "do": "dance",
+        "style": "roda",
+        "dur": 1.0
+       },
+       {
+        "t": 1.0,
+        "do": "abraco",
+        "dur": "resto"
+       }
+      ]
+     },
+     "joaninha": {
+      "x": 780,
+      "turn": 0.1,
+      "depth": 1.1,
+      "acoes": [
+       {
+        "do": "dance",
+        "style": "roda",
+        "dur": 1.0
+       },
+       {
+        "t": 1.0,
+        "do": "abraco",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1140,
+      "turn": -0.1,
+      "depth": 1.1,
+      "acoes": [
+       {
+        "do": "dance",
+        "style": "roda",
+        "dur": 1.0
+       },
+       {
+        "t": 1.0,
+        "do": "abraco",
+        "dur": "resto"
+       }
+      ]
+     },
+     "formiguinha": {
+      "x": 1500,
+      "turn": -0.15,
+      "depth": 1.1,
+      "acoes": [
+       {
+        "do": "dance",
+        "style": "roda",
+        "dur": 1.0
+       },
+       {
+        "t": 1.0,
+        "do": "abraco",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "refrao#4": [
+   {
+    "linhas": 2,
+    "cenario": "danca_raios_roxo",
+    "fx": [
+     "confete"
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 420,
+      "turn": 0.15,
+      "depth": 1.1,
+      "acoes": [
+       {
+        "do": "dance",
+        "style": "palmas",
+        "dur": "resto"
+       }
+      ]
+     },
+     "joaninha": {
+      "x": 780,
+      "turn": 0.1,
+      "depth": 1.1,
+      "acoes": [
+       {
+        "do": "dance",
+        "style": "palmas",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1140,
+      "turn": -0.1,
+      "depth": 1.1,
+      "acoes": [
+       {
+        "do": "dance",
+        "style": "palmas",
+        "dur": "resto"
+       }
+      ]
+     },
+     "formiguinha": {
+      "x": 1500,
+      "turn": -0.15,
+      "depth": 1.1,
+      "acoes": [
+       {
+        "do": "dance",
+        "style": "palmas",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "cenario": "danca_ondas_rosa",
+    "fx": [
+     "coracoes"
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 420,
+      "turn": 0.15,
+      "depth": 1.1,
+      "acoes": [
+       {
+        "do": "abraco",
+        "dur": "resto"
+       }
+      ]
+     },
+     "joaninha": {
+      "x": 780,
+      "turn": 0.1,
+      "depth": 1.1,
+      "acoes": [
+       {
+        "do": "abraco",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1140,
+      "turn": -0.1,
+      "depth": 1.1,
+      "acoes": [
+       {
+        "do": "abraco",
+        "dur": "resto"
+       }
+      ]
+     },
+     "formiguinha": {
+      "x": 1500,
+      "turn": -0.15,
+      "depth": 1.1,
+      "acoes": [
+       {
+        "do": "abraco",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "intervalo#1": [
+   {
+    "cenario": "danca_raios_rosa",
+    "camera": "close:laurinha",
+    "callout": "BORA, TURMINHA!",
+    "atores": {
+     "laurinha": {
+      "x": 960,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "apontar_camera",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "cenario": "danca_xadrez_verde",
+    "fx": [
+     "confete"
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 420,
+      "turn": 0.15,
+      "depth": 1.1,
+      "acoes": [
+       {
+        "do": "dance",
+        "style": "palmas",
+        "dur": "resto"
+       }
+      ]
+     },
+     "joaninha": {
+      "x": 780,
+      "turn": 0.1,
+      "depth": 1.1,
+      "acoes": [
+       {
+        "do": "dance",
+        "style": "palmas",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1140,
+      "turn": -0.1,
+      "depth": 1.1,
+      "acoes": [
+       {
+        "do": "dance",
+        "style": "palmas",
+        "dur": "resto"
+       }
+      ]
+     },
+     "formiguinha": {
+      "x": 1500,
+      "turn": -0.15,
+      "depth": 1.1,
+      "acoes": [
+       {
+        "do": "dance",
+        "style": "palmas",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "verso#2": [
+   {
+    "cenario": "plano_ceu",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.05
+    },
+    "atores": {
+     "joaninha": {
+      "x": 500,
+      "y": 700,
+      "segura": "suco",
+      "acoes": [
+       {
+        "do": "fly",
+        "to_x": 2100,
+        "to_y": 560,
+        "dur": "resto",
+        "land": false
+       }
+      ]
+     }
+    }
+   },
+   {
+    "cenario": "plano_parque",
+    "camera": "medio:joaninha",
+    "atores": {
+     "joaninha": {
+      "x": 1150,
+      "segura": "suco",
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "segurar",
+        "item": "suco",
+        "pose": "alto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "cenario": "plano_parque",
+    "camera": {
+     "x": 1350,
+     "y": 540,
+     "zoom": 1.1
+    },
+    "atores": {
+     "formiguinha": {
+      "x": 2050,
+      "turn": -0.8,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "run",
+        "to_x": 1350,
+        "dur": 1.0
+       }
+      ]
+     }
+    }
+   },
+   {
+    "cenario": "plano_parque",
+    "camera": "close:formiguinha",
+    "fx": [
+     "estrelas"
+    ],
+    "atores": {
+     "formiguinha": {
+      "x": 1350,
+      "acoes": [
+       {
+        "do": "ofegante",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "cenario": "plano_parque",
+    "camera": "medio:luisinho",
+    "atores": {
+     "luisinho": {
+      "x": 1250,
+      "segura": "fatia_bolo",
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "pensar",
+        "dur": 0.9
+       },
+       {
+        "t": 1.2,
+        "do": "bacana",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "cenario": "plano_parque",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.25
+    },
+    "atores": {
+     "luisinho": {
+      "x": 1150,
+      "turn": 0.6,
+      "segura": "fatia_grande",
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "entregar",
+        "item": "fatia_grande",
+        "dur": 1.2
+       }
+      ]
+     },
+     "formiguinha": {
+      "x": 1460,
+      "turn": -0.6
+     }
+    }
+   },
+   {
+    "cenario": "plano_parque",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.25
+    },
+    "atores": {
+     "luisinho": {
+      "x": 1150,
+      "turn": 0.6,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "bacana",
+        "dur": "resto"
+       }
+      ]
+     },
+     "formiguinha": {
+      "x": 1460,
+      "turn": -0.6,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "receber",
+        "item": "fatia_grande",
+        "dur": 1.2
+       }
+      ]
+     }
+    }
+   },
+   {
+    "cenario": "padrao_bolo_rosa",
+    "camera": "medio:formiguinha",
+    "fx": [
+     "coracoes",
+     "estrelas"
+    ],
+    "atores": {
+     "formiguinha": {
+      "x": 960,
+      "segura": "fatia_grande",
+      "expr": "joy",
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "bacana",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "intervalo#2": [
+   {
+    "cenario": "danca_raios_azul",
+    "camera": "close:luisinho",
+    "callout": "ZUM-ZUM, QUE MASSA!",
+    "atores": {
+     "luisinho": {
+      "x": 960,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "cheguei",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "cenario": "danca_bolinhas_amarelo",
+    "fx": [
+     "confete"
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 420,
+      "turn": 0.15,
+      "depth": 1.1,
+      "acoes": [
+       {
+        "do": "dance",
+        "style": "pezinho",
+        "dur": "resto"
+       }
+      ]
+     },
+     "joaninha": {
+      "x": 780,
+      "turn": 0.1,
+      "depth": 1.1,
+      "acoes": [
+       {
+        "do": "dance",
+        "style": "pezinho",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1140,
+      "turn": -0.1,
+      "depth": 1.1,
+      "acoes": [
+       {
+        "do": "dance",
+        "style": "pezinho",
+        "dur": "resto"
+       }
+      ]
+     },
+     "formiguinha": {
+      "x": 1500,
+      "turn": -0.15,
+      "depth": 1.1,
+      "acoes": [
+       {
+        "do": "dance",
+        "style": "pezinho",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "ponte": [
+   {
+    "cenario": "danca_raios_laranja",
+    "callout": "SÓ AS PALMAS!",
+    "atores": {
+     "laurinha": {
+      "x": 420,
+      "turn": 0.15,
+      "depth": 1.1,
+      "acoes": [
+       {
+        "do": "dance",
+        "style": "palmas",
+        "dur": "resto"
+       }
+      ]
+     },
+     "joaninha": {
+      "x": 780,
+      "turn": 0.1,
+      "depth": 1.1,
+      "acoes": [
+       {
+        "do": "dance",
+        "style": "palmas",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1140,
+      "turn": -0.1,
+      "depth": 1.1,
+      "acoes": [
+       {
+        "do": "dance",
+        "style": "palmas",
+        "dur": "resto"
+       }
+      ]
+     },
+     "formiguinha": {
+      "x": 1500,
+      "turn": -0.15,
+      "depth": 1.1,
+      "acoes": [
+       {
+        "do": "dance",
+        "style": "palmas",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "cenario": "danca_bolinhas_rosa",
+    "camera": {
+     "x": 960,
+     "y": 860,
+     "zoom": 1.35
+    },
+    "callout": [
+     {
+      "t": 0.1,
+      "text": "SÓ O PEZINHO!",
+      "color": "azul"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 420,
+      "turn": 0.15,
+      "depth": 1.1,
+      "acoes": [
+       {
+        "do": "dance",
+        "style": "pezinho",
+        "dur": "resto"
+       }
+      ]
+     },
+     "joaninha": {
+      "x": 780,
+      "turn": 0.1,
+      "depth": 1.1,
+      "acoes": [
+       {
+        "do": "dance",
+        "style": "pezinho",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1140,
+      "turn": -0.1,
+      "depth": 1.1,
+      "acoes": [
+       {
+        "do": "dance",
+        "style": "pezinho",
+        "dur": "resto"
+       }
+      ]
+     },
+     "formiguinha": {
+      "x": 1500,
+      "turn": -0.15,
+      "depth": 1.1,
+      "acoes": [
+       {
+        "do": "dance",
+        "style": "pezinho",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "cenario": "plano_parque",
+    "camera": {
+     "x": 1150,
+     "y": 560,
+     "zoom": 1.2
+    },
+    "fx": [
+     "coracoes"
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 900,
+      "turn": 0.2,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "abraco",
+        "dur": "resto"
+       }
+      ]
+     },
+     "joaninha": {
+      "x": 1060,
+      "turn": 0.1,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "abraco",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1240,
+      "turn": -0.1,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "abraco",
+        "dur": "resto"
+       }
+      ]
+     },
+     "formiguinha": {
+      "x": 1400,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "abraco",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "cenario": "danca_ondas_rosa",
+    "fx": [
+     "coracoes",
+     "confete"
+    ],
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "TODO MUNDO JUNTO!",
+      "color": "amarelo"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 420,
+      "turn": 0.15,
+      "depth": 1.1,
+      "acoes": [
+       {
+        "do": "dance",
+        "style": "roda",
+        "dur": "resto"
+       }
+      ]
+     },
+     "joaninha": {
+      "x": 780,
+      "turn": 0.1,
+      "depth": 1.1,
+      "acoes": [
+       {
+        "do": "dance",
+        "style": "roda",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1140,
+      "turn": -0.1,
+      "depth": 1.1,
+      "acoes": [
+       {
+        "do": "dance",
+        "style": "roda",
+        "dur": "resto"
+       }
+      ]
+     },
+     "formiguinha": {
+      "x": 1500,
+      "turn": -0.15,
+      "depth": 1.1,
+      "acoes": [
+       {
+        "do": "dance",
+        "style": "roda",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "final": [
+   {
+    "cenario": "plano_parque",
+    "camera": {
+     "x": 1150,
+     "y": 560,
+     "zoom": 1.05
+    },
+    "fx": [
+     "coracoes"
+    ],
+    "objetos": {
+     "mesa": {
+      "x": 1150,
+      "y": 990,
+      "z": 5
+     },
+     "bolo": {
+      "x": 1150,
+      "y": 760,
+      "z": 6,
+      "depth": 0.7,
+      "pose": {
+       "fatias": 1.0,
+       "vapor": 0.0
+      }
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 760,
+      "y": 900,
+      "turn": 0.25,
+      "acoes": [
+       {
+        "do": "dance",
+        "style": "tchau",
+        "dur": "resto"
+       }
+      ]
+     },
+     "joaninha": {
+      "x": 1010,
+      "y": 900,
+      "turn": 0.15,
+      "acoes": [
+       {
+        "do": "dance",
+        "style": "tchau",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1290,
+      "y": 900,
+      "turn": -0.15,
+      "acoes": [
+       {
+        "do": "dance",
+        "style": "tchau",
+        "dur": "resto"
+       }
+      ]
+     },
+     "formiguinha": {
+      "x": 1540,
+      "y": 900,
+      "turn": -0.25,
+      "acoes": [
+       {
+        "do": "dance",
+        "style": "tchau",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ]
+ }
+}

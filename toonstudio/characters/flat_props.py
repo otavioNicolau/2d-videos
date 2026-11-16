@@ -55,7 +55,8 @@ def ln(k: Ink, pts, col: str, w: float = LINE, alpha: float = 1.0):
 
 # ───────────────────────── objetos de mão ─────────────────────────
 
-ITEMS = ("copo_leite", "copo_vazio", "banana", "banana_mordida", "pente", "garrafinha", "carrinho", "sombrinha", "escova")
+ITEMS = ("copo_leite", "copo_vazio", "banana", "banana_mordida", "pente", "garrafinha", "carrinho", "sombrinha", "escova",
+         "suco", "fatia_bolo", "fatia_grande")
 
 
 ITEM_SCALE = 1.6
@@ -103,6 +104,16 @@ def draw_item(k: Ink, name: str, H: tuple[float, float], f: float = 1.0) -> None
     elif name == "escova":
         shape(k, Q([(-6, 14), (-6, -74), (6, -74), (6, 14)]), PAL["escova"], smooth=False)
         shape(k, Q([(-2, -104), (16, -104), (16, -72), (-2, -72)]), "#FFFFFF", line="#B8C4D0", smooth=False)
+    elif name == "suco":                                   # copinho de suco de uva com canudinho
+        shape(k, Q([(-22, -60), (22, -60), (17, 16), (-17, 16)]), PAL["vidro"], line="#7FB6DB", alpha=0.9, smooth=False)
+        shape(k, Q([(-19, -40), (19, -40), (16, 12), (-16, 12)]), "#9B4FD1", line="#7A3AAE", smooth=False)
+        ln(k, Q([(8, -40), (14, -84), (26, -92)]), "#FF5A8A", w=LINE * 1.2)
+    elif name in ("fatia_bolo", "fatia_grande"):           # fatia de bolo vista de lado: base reta, topo inclinado com casquinha
+        g = 1.45 if name == "fatia_grande" else 1.0
+        shape(k, Q([(-40 * g, 6), (40 * g, 6), (40 * g, -54 * g), (-40 * g, -26 * g)]), "#F7C948", line="#C99A2A", smooth=False)
+        shape(k, Q([(-40 * g, -26 * g), (40 * g, -54 * g), (40 * g, -64 * g), (-40 * g, -36 * g)]), "#D9902E", line="#B5741F", smooth=False)
+        for dx, dy in ((-20, -10), (6, -24), (22, -12), (-4, -4)):
+            k.dot(*q(dx * g, dy * g), 3, _rgba("#E0A93A"))
     elif name == "sombrinha":
         ln(k, Q([(0, 20), (0, -110)]), "#534946", w=LINE * 1.1)
         cx, cy = q(0, -110)
@@ -437,4 +448,68 @@ class Joinha(_Prop):
         k.c.restore()
 
 
-PROPS.update({"logo": Logo, "botao_inscrever": BotaoInscrever, "joinha": Joinha})
+class Sabonete(_Prop):
+    """Sabonete com carinha (objeto-personagem): `pulo` 0→1 faz ele saltar; `bolhas` solta bolhinhas."""
+
+    def __init__(self):
+        super().__init__("sabonete", "Sabonete", (420, 420), (210, 380), 200, {"pulo": 0.0, "bolhas": 0.0, "lid": 0.0})
+
+    def paint(self, k, P):
+        y0 = -60 - 120 * math.sin(math.pi * max(0.0, min(1.0, P["pulo"])))
+        box(k, -90, y0 - 70, 90, y0 + 50, "#FF9EC7", line="#E0679F", r=46)
+        ln(k, [(-56, y0 - 46), (-20, y0 - 56)], "#FFFFFF", w=LINE * 1.6)
+        for s in (-1, 1):
+            ex, ey = s * 32, y0 - 12
+            if P["lid"] > 0.5:
+                ln(k, [(ex - 14, ey), (ex, ey - 9), (ex + 14, ey)], "#5C1E2E", w=LINE)
+            else:
+                shape(k, ellipse_pts(ex, ey, 14, 18, 0, 14), "#FFFFFF", line="#C2557F")
+                k.dot(ex + 2, ey + 4, 6, _rgba("#000000"))
+        ln(k, [(-20, y0 + 18), (0, y0 + 30), (20, y0 + 18)], "#5C1E2E", w=LINE * 1.1)
+        k.shape(ellipse_pts(-58, y0 + 10, 14, 10, 0, 12), fill=_rgba("#FF6FA8", 0.7), line=0)
+        k.shape(ellipse_pts(58, y0 + 10, 14, 10, 0, 12), fill=_rgba("#FF6FA8", 0.7), line=0)
+        b = P["bolhas"]
+        for j, (bx, by, r) in enumerate(((-110, -120, 26), (100, -150, 20), (-40, -190, 16), (60, -230, 24), (-120, -260, 14))):
+            if b > j * 0.15:
+                yy = by - 60 * b
+                shape(k, ellipse_pts(bx, y0 + yy, r, r, 0, 18), "#E8F6FF", line="#9CCBFA", alpha=0.8)
+                ln(k, [(bx - r * 0.4, y0 + yy - r * 0.4), (bx - r * 0.1, y0 + yy - r * 0.6)], "#FFFFFF", w=LINE * 0.8)
+
+
+class Bolo(_Prop):
+    """Bolo de fubá (tipo pudim, com furo) num prato. `fatias` 0→1 tira um pedaço; `vapor` mostra o calorzinho."""
+
+    def __init__(self):
+        super().__init__("bolo", "Bolo de fubá", (620, 520), (310, 480), 300, {"fatias": 0.0, "vapor": 1.0})
+
+    def paint(self, k, P):
+        shape(k, ellipse_pts(0, -10, 250, 40, 0, 32), "#FFFFFF", line="#C9D6E0")
+        shape(k, [(-190, -30), (190, -30), (160, -200), (-160, -200)], "#F7C948", line="#C99A2A", smooth=False)
+        shape(k, ellipse_pts(0, -200, 160, 36, 0, 32), "#E9A93A", line="#C99A2A")
+        shape(k, ellipse_pts(0, -200, 40, 10, 0, 20), "#B5741F", line="#8E5A18")
+        for x in (-120, -40, 40, 120):
+            ln(k, [(x, -60), (x * 0.86, -180)], "#E0A93A", w=LINE * 0.8)
+        if P["fatias"] > 0.5:                                   # pedaço tirado (frente direita)
+            shape(k, [(60, -32), (150, -32), (140, -196), (50, -200)], "#FFF4C9", line="#C99A2A", smooth=False)
+        if P["vapor"] > 0.05:
+            for x in (-60, 0, 60):
+                pts = [(x + 14 * math.sin(i / 2.0), -250 - i * 14) for i in range(8)]
+                ln(k, pts, "#FFFFFF", w=LINE * 1.2, alpha=0.8 * P["vapor"])
+
+
+class MochilaChao(_Prop):
+    """Mochila largada no chão (rosa da Laurinha). `cai` 0→1 = caindo até o chão (ploft)."""
+
+    def __init__(self):
+        super().__init__("mochila", "Mochila", (360, 360), (180, 330), 180, {"cai": 1.0})
+
+    def paint(self, k, P):
+        dy = -220 * (1 - max(0.0, min(1.0, P["cai"])))
+        box(k, -80, dy - 150, 80, dy, "#F0509A", r=30)
+        box(k, -54, dy - 70, 54, dy - 16, "#FF7FBF", r=14)
+        ln(k, [(-50, dy - 150), (-30, dy - 196), (30, dy - 196), (50, dy - 150)], "#C2357A", w=LINE * 1.4)
+        _estrela(k, 0, dy - 110, 18, "#FFD23F")
+
+
+PROPS.update({"logo": Logo, "botao_inscrever": BotaoInscrever, "joinha": Joinha, "sabonete": Sabonete, "bolo": Bolo,
+              "mochila": MochilaChao})

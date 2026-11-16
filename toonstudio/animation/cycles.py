@@ -335,6 +335,18 @@ CHOREO: dict[str, tuple[float, list[tuple[float, dict]]]] = {
         (1.0, {"hand_n_x": -70, "hand_n_y": 20, "hand_n_bend": 0.3, "hand_f_x": 130, "hand_f_y": -140, "hand_f_bend": -0.5,
                "head_tilt": -0.1, "body_y": 3}),
     ]),
+    # "bate o pezinho": pisa forte alternando os pés, mãos na cintura
+    "pezinho": (1, [
+        (0.0, {"foot_n_y": 0, "foot_f_y": -70, "foot_f_bend": 0.8, "body_y": 4, "hand_n_x": 10, "hand_n_y": 40, "hand_n_bend": 0.9,
+               "hand_f_x": 10, "hand_f_y": 40, "hand_f_bend": -0.9, "paw_n": 1, "paw_f": 1, "head_tilt": 0.06}),
+        (0.5, {"foot_f_y": 0, "foot_n_y": -70, "foot_n_bend": 0.8, "foot_f_bend": 0.1, "body_y": 4, "head_tilt": -0.06}),
+    ]),
+    # "roda": de mãos dadas (braços abertos na horizontal), passo para o lado em sincronia
+    "roda": (2, [
+        (0.0, {"body_x": -26, "body_y": 3, "lean": -0.05, "hand_n_x": -150, "hand_n_y": 20, "hand_f_x": 150, "hand_f_y": 20,
+               "hand_n_bend": 0.1, "hand_f_bend": -0.1, "paw_n": 1, "paw_f": 1, "foot_n_x": -40, "foot_f_x": 0}),
+        (1.0, {"body_x": 26, "body_y": 3, "lean": 0.05, "foot_n_x": 0, "foot_f_x": 40}),
+    ]),
 }
 ALIASES = {"bob": "balanco"}
 DANCE_WITH_ITEM = {"frevo"}        # passos em que a mão que segura o objeto (sombrinha) também dança

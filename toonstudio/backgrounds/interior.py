@@ -26,7 +26,7 @@ from .plano import Flat, PAL as PPAL, _surf
 W_INT, H = 2600, 1080
 FLOOR_Y = 760          # encontro parede/chão (o personagem pisa por volta de y 930, à frente)
 QUARTO = {"rosa": ("#FFD6EC", "#FFC2E2", "#E8B27A"), "azul": ("#D6ECFF", "#C2E0FF", "#E8B27A")}
-MOTIVOS = ("bananas", "leite", "lacos", "estrelas", "coracoes")
+MOTIVOS = ("bananas", "leite", "lacos", "estrelas", "coracoes", "bolhas", "bolo")
 
 
 def _text(c, txt, x, y, size, col, outline=None):
@@ -179,7 +179,8 @@ def ceu(rng) -> tuple[skia.Surface, int]:
     return s, w
 
 
-COR_MOTIVO = {"bananas": "#FFE066", "leite": "#FFFFFF", "lacos": "#FFD23F", "estrelas": "#FFFFFF", "coracoes": "#FFFFFF"}
+COR_MOTIVO = {"bananas": "#FFE066", "leite": "#FFFFFF", "lacos": "#FFD23F", "estrelas": "#FFFFFF", "coracoes": "#FFFFFF",
+              "bolhas": "#E8F6FF", "bolo": "#F7C948"}
 
 
 def _motivo(c, kind, x, y, s, col):
@@ -219,6 +220,15 @@ def _motivo(c, kind, x, y, s, col):
             (path.moveTo if j == 0 else path.lineTo)(math.cos(a) * r, math.sin(a) * r)
         path.close()
         c.drawPath(path, p); c.drawPath(path, pl)
+    elif kind == "bolhas":
+        c.drawCircle(0, 0, 34, p); c.drawCircle(0, 0, 34, pl)
+        c.drawCircle(42, 26, 16, p); c.drawCircle(42, 26, 16, pl)
+        c.drawCircle(-12, -14, 8, skia.Paint(AntiAlias=True, Color4f=skia.Color4f(1, 1, 1, 1)))
+    elif kind == "bolo":
+        path = skia.Path()
+        path.moveTo(-34, 22); path.lineTo(34, 22); path.lineTo(22, -26); path.lineTo(-22, -26); path.close()
+        c.drawPath(path, p); c.drawPath(path, pl)
+        c.drawRect(skia.Rect(-22, -34, 22, -26), skia.Paint(AntiAlias=True, Color4f=skia.Color4f(*_rgba("#D9902E"))))
     elif kind == "coracoes":
         path = skia.Path()
         path.moveTo(0, 30); path.cubicTo(-50, -4, -26, -44, 0, -18); path.cubicTo(26, -44, 50, -4, 0, 30); path.close()
@@ -243,7 +253,32 @@ def padrao(kind: str, color: str, scale: float, gap: int = 180):
     return s, w, h, P_
 
 
-SCENES = {"plano_quarto_rosa": lambda rng: quarto("rosa", rng), "plano_quarto_azul": lambda rng: quarto("azul", rng),
+def banheiro(rng) -> tuple[skia.Surface, int]:
+    s, c = _surf(W_INT, H, 1.5)
+    F = Flat(c)
+    c.drawRect(skia.Rect(0, 0, W_INT, H), skia.Paint(Color4f=skia.Color4f(*_rgba("#D6F1FF"))))
+    for xx in range(0, W_INT, 110):                               # azulejos azuis
+        F.line([(xx, 0), (xx, FLOOR_Y)], "#B9E2F7", w=LINE * 0.6)
+    for yy in range(0, FLOOR_Y, 110):
+        F.line([(0, yy), (W_INT, yy)], "#B9E2F7", w=LINE * 0.6)
+    _floor(F, W_INT, "#F2F2F7")
+    cx = 1300                                                     # pia com torneira e espelho
+    F.shape([(cx - 300, 560), (cx + 300, 560), (cx + 260, 640), (cx - 260, 640)], "#FFFFFF", smooth=False)
+    F.shape([(cx - 70, 640), (cx + 70, 640), (cx + 50, FLOOR_Y + 60), (cx - 50, FLOOR_Y + 60)], "#FFFFFF", smooth=False)
+    F.shape([(cx - 20, 560), (cx - 20, 480), (cx + 60, 480), (cx + 60, 500), (cx, 500), (cx, 560)], "#B8C4D0", smooth=False)
+    F.oval(cx - 90, 548, 22, 12, "#E9545D")
+    F.oval(cx + 110, 548, 22, 12, "#3C8BF0")
+    F.oval(cx, 300, 190, 150, "#FFD23F")
+    F.oval(cx, 300, 160, 122, "#CFE8FA")
+    F.shape([(1900, 360), (2060, 360), (2060, 700), (1900, 700)], "#FF8CC6", smooth=False)      # toalha
+    F.line([(1880, 360), (2080, 360)], "#B8C4D0", w=LINE * 1.6)
+    F.oval(620, 640, 60, 80, "#9FDCCB")                                                     # vaso de planta
+    for a in (-0.6, -0.2, 0.2, 0.6):
+        F.leaf(620, 570, 80, -math.pi / 2 + a, PPAL["folha"])
+    return s, W_INT
+
+
+SCENES = {"plano_banheiro": banheiro, "plano_quarto_rosa": lambda rng: quarto("rosa", rng), "plano_quarto_azul": lambda rng: quarto("azul", rng),
           "plano_cozinha": cozinha, "plano_casa_frente": casa_frente, "plano_escola": escola, "plano_ceu": ceu}
 
 
