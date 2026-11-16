@@ -6,7 +6,10 @@ Duração final: NO MÁXIMO 5 SEGUNDOS.
 >>> VERSÃO ATUAL (sem ritmo de música): LOGOTIPO SONORO feito no estúdio, sem Suno —
     zumbido das duas muriçocas passando + brilho de sininhos + vozes "Laurinha!" "e Luisinho!" + "zum!" final (4,2 s).
     Arquivo: library/audio/marca/vinheta.wav  ·  código: toonstudio/audio/sound_logo.py
-    As vozes sintetizadas soaram ROBÓTICAS (16/11/2026) → usar a OPÇÃO V abaixo: só as vozes, geradas no Suno com a
+    DECISÃO 16/11/2026: vozes sintéticas e voz recortada da música soaram ROBÓTICAS (separação voz/música deixa a voz
+    metálica). → VINHETA CANTADA NO SUNO (OPÇÃO A, com a Persona Laurinha), usada direto, sem separar a voz; o estúdio corta
+    até 5 s (`toonstudio marca vinheta <arquivo>`) e reajusta a animação às palavras.
+    (Histórico: a OPÇÃO V abaixo — só as vozes — não ficou boa.) só as vozes, geradas no Suno com a
     Persona Laurinha; o estúdio separa a voz, recorta "Laurinha!", "e Luisinho!" e "Zum!" e encaixa no logotipo sonoro
     (mesmos tempos — a animação da vinheta não muda).
 
