@@ -1,6 +1,12 @@
 {
  "schema": "musica-1.0",
  "titulo": "Zum Zum, Cheguei!",
+ "gancho": "zum, zum, cheguei",
+ "palavras_tema": [
+  "acordei",
+  "janela",
+  "bom dia"
+ ],
  "tipo": "rotina",
  "tema": "acordar e se arrumar para a escola",
  "dia_a_dia": [
@@ -56,7 +62,9 @@
   140,
   170
  ],
- "alternativas": [],
+ "alternativas": [
+  "marchinha"
+ ],
  "status": "letra_revisada",
  "versoes": []
 }

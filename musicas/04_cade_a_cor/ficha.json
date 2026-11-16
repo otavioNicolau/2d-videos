@@ -1,6 +1,13 @@
 {
  "schema": "musica-1.0",
  "titulo": "Cadê a Cor?",
+ "gancho": "cadê a cor",
+ "palavras_tema": [
+  "vermelho",
+  "amarelo",
+  "azul",
+  "verde"
+ ],
  "tipo": "educativa",
  "tema": "cores e misturas de cores",
  "dia_a_dia": [
@@ -40,7 +47,10 @@
   140,
   170
  ],
- "alternativas": [],
+ "alternativas": [
+  "funk_infantil",
+  "pop_infantil"
+ ],
  "status": "letra_revisada",
  "versoes": []
 }

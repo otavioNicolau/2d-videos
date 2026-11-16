@@ -1,6 +1,11 @@
 {
  "schema": "musica-1.0",
  "titulo": "Sorriso Brilhante",
+ "gancho": "sorriso brilhante",
+ "palavras_tema": [
+  "escovinha",
+  "pasta"
+ ],
  "tipo": "rotina",
  "tema": "escovar os dentes",
  "dia_a_dia": [
@@ -12,12 +17,13 @@
  "curiosidade": "pasta do tamanho de um grão de feijão, 2 minutinhos e torneira fechada para não gastar água",
  "ritmo": "rock_infantil",
  "bpm": 165,
- "estrutura": "A",
+ "estrutura": "D",
  "voz": "dueto",
  "cantam": {
   "verso 1": "luisinho",
   "verso 2": "laurinha",
   "ponte": "laurinha pergunta, coro responde",
+  "paradas": "coro (Parou! Congelou!)",
   "refrão": "coro"
  },
  "cenas": [
@@ -50,7 +56,9 @@
   140,
   170
  ],
- "alternativas": [],
+ "alternativas": [
+  "pop_infantil"
+ ],
  "status": "letra_revisada",
  "versoes": []
 }

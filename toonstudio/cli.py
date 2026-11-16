@@ -8,6 +8,12 @@
   toonstudio catalog                        biblioteca de animações/expressões (JSON)
   toonstudio song import <projeto> <arquivo>  copia a música (original intocado, somente leitura) + cópia de trabalho
   toonstudio song analyze <projeto>         voz separada, batidas, letra palavra a palavra → analise/song.json
+  toonstudio musica lista                   músicas do canal: ritmo, estrutura, status
+  toonstudio musica nova <nome> --titulo T --ritmo R --tipo X [--estrutura A] [--voz dueto]   ficha + modelo de letra
+  toonstudio musica checar <música>         confere a letra contra a BIBLIA_MUSICAL (versos, gancho, ritmo citado…)
+  toonstudio musica prompt <música>         gera <pasta>/suno.txt (Título, Style, Exclude, Lyrics, Persona, alternativas)
+  toonstudio musica medir <música> [arquivos…]   mede as versões do Suno (versoes/) → avaliacao.json + tabela
+  toonstudio musica escolher <música> <versão>   registra a versão escolhida (decisão humana)
   toonstudio marca vinheta|chamada <arquivo> corta a peça fixa na batida (vinheta ≤ 5 s, chamada ≤ 10 s)
   toonstudio storyboard <episódio>          prévia rápida (3 painéis por plano) antes do render caro
   toonstudio board <episódio> <cena> aprovar|rejeitar ["nota"]   decisão de storyboard por plano
@@ -36,6 +42,10 @@ def main(argv=None) -> int:
     sub.add_parser("catalog")
     sg = sub.add_parser("song"); sg.add_argument("op", choices=["import", "analyze"]); sg.add_argument("episode")
     sg.add_argument("file", nargs="?")
+    mu = sub.add_parser("musica"); mu.add_argument("op", choices=["lista", "nova", "checar", "prompt", "medir", "escolher"])
+    mu.add_argument("nome", nargs="?"); mu.add_argument("extra", nargs="*")
+    mu.add_argument("--titulo"); mu.add_argument("--ritmo"); mu.add_argument("--tipo", default="")
+    mu.add_argument("--estrutura", default="A"); mu.add_argument("--voz", default="dueto")
     vn = sub.add_parser("marca"); vn.add_argument("peca", choices=["vinheta", "chamada"]); vn.add_argument("arquivo")
     vn.add_argument("--inicio", type=float); vn.add_argument("--fim", type=float)
     sb = sub.add_parser("storyboard"); sb.add_argument("episode")
@@ -95,6 +105,8 @@ def main(argv=None) -> int:
                 finally:
                     voice.shutdown()
             return 0
+        if args.cmd == "musica":
+            return _musica(args)
         if args.cmd == "marca":
             from .audio.brand_audio import trim_on_beat
             lim = 5.0 if args.peca == "vinheta" else 10.0
@@ -125,6 +137,52 @@ def main(argv=None) -> int:
     except StudioError as e:
         print(f"ERRO: {e}", file=sys.stderr)
         return 2
+    return 0
+
+
+def _musica(args) -> int:
+    from .audio import composer as c
+    if args.op == "lista":
+        E = c.estilos()
+        for d in c.todas():
+            f = c.ficha(d)
+            print(f"{d.name:26} {E['ritmos'][f['ritmo']]['nome']:24} {f['bpm']:>3} BPM  estrutura {f.get('estrutura', '?')}  {f.get('status', '')}")
+        return 0
+    if not args.nome:
+        raise StudioError("informe a música (nome da pasta, número ou parte do nome)")
+    if args.op == "nova":
+        if not (args.titulo and args.ritmo):
+            raise StudioError("use --titulo e --ritmo (ritmos em musicas/estilos.json)")
+        print(c.nova(args.nome, args.titulo, args.ritmo, args.tipo, args.estrutura, args.voz))
+        return 0
+    d = c.pasta(args.nome)
+    if args.op == "checar":
+        ck = c.checar(d)
+        for i in ck.itens:
+            print(f"{ {'erro': 'ERRO ', 'aviso': 'aviso', 'ok': '  ok '}[i.nivel]}  {i.regra}: {i.msg}")
+        print(json.dumps(ck.metricas, ensure_ascii=False))
+        return 1 if ck.erros else 0
+    if args.op == "prompt":
+        ck = c.checar(d)
+        if ck.erros:
+            for i in ck.erros:
+                print("ERRO:", i.regra, "-", i.msg)
+            raise StudioError("corrija a letra antes de gerar o prompt")
+        print(c.escrever_prompt(d))
+        return 0
+    if args.op == "medir":
+        from .audio import voice
+        try:
+            out = c.medir(d, [Path(x) for x in args.extra] or None)
+        finally:
+            voice.shutdown()
+        print(c.tabela(json.loads(out.read_text(encoding="utf-8"))))
+        return 0
+    if args.op == "escolher":
+        if not args.extra:
+            raise StudioError("informe a versão (nome do arquivo sem extensão)")
+        print(c.escolher(d, args.extra[0]))
+        return 0
     return 0
 
 

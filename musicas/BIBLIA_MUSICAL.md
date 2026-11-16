@@ -183,21 +183,27 @@ gerar 2 a 4, medir, ouvir e decidir.
 
 ## 9. Fluxo de produção
 
-1. **Tema** → escolher o tipo (seção 5), 2–3 alternativas de ritmo (seção 4) e a estrutura (seção 7).
-2. **Ficha** (`ficha.json`): tema, dia a dia, curiosidade, ritmo, andamento, estrutura, voz, cenas sugeridas.
-3. **Letra** (`letra.txt`) com as marcações do Suno; revisar com as regras da seção 6.
-4. **Prompt do Suno:** Título, Style, Exclude e Lyrics montados a partir da ficha + `estilos.json` + `vozes.json`.
-5. **Suno:** gerar 2–4 versões com a Persona oficial; baixar em WAV para `<pasta da música>/versoes/`.
-6. **Avaliar** (seção 8) e escolher; mandar a letra final se o Suno mudou alguma palavra.
-7. **Clipe:** `toonstudio song import` + `song analyze`; cenas a partir das partes da música, com a [BIBLIA_VISUAL.md](../BIBLIA_VISUAL.md).
+| Passo | O quê | Comando |
+|---|---|---|
+| 1 | **Tema** → tipo (seção 5), 2–3 ritmos (seção 4), estrutura (seção 7) | — (no chat) |
+| 2 | **Ficha + modelo de letra** | `toonstudio musica nova <nome> --titulo "…" --ritmo frevo --tipo animal --estrutura R` |
+| 3 | **Letra** escrita no chat, com os atalhos `[Virada]`, `[Intervalo 10s]`, `[Bordão laurinha]` | `toonstudio musica checar <música>` |
+| 4 | **Prompt do Suno** → `<pasta>/suno.txt` (com alternativas de ritmo da ficha) | `toonstudio musica prompt <música>` |
+| 5 | **Suno:** 2–4 versões com a Persona oficial → baixar para `<pasta>/versoes/` | — (manual) |
+| 6 | **Medir** as versões (andamento, tom, começo, gancho, intervalos, final, letra reconhecida) | `toonstudio musica medir <música>` |
+| 7 | **Ouvir e escolher** (decisão humana; nunca a primeira automaticamente) | `toonstudio musica escolher <música> <versão>` |
+| 8 | **Clipe:** importar, analisar, cenas a partir da ficha, com a [BIBLIA_VISUAL.md](../BIBLIA_VISUAL.md) | `toonstudio song import` / `song analyze` |
+
+`<música>` aceita o nome da pasta, o número (`03`) ou parte do nome (`lagoa`). A estimativa de duração da checagem é
+grosseira; a duração real vem da medição.
 
 ## 10. Peças fixas do canal
 
 Independentes da música do episódio; repetidas em todo vídeo:
 - **Vinheta de abertura** (até 5 s): logotipo sonoro do estúdio — `library/audio/marca/vinheta.wav`
-  (alternativas cantadas em `letras/00_vinheta_abertura.txt`).
+  (alternativas cantadas em `vinheta/vinheta.txt`).
 - **Chamada final** (inscrever e curtir; sem sininho nem comentários em conteúdo para crianças):
-  `letras/99_chamada_inscreva.txt` → `library/audio/marca/chamada.wav`.
+  `chamada/chamada.txt` → `library/audio/marca/chamada.wav`.
 
 ## 11. Direitos
 

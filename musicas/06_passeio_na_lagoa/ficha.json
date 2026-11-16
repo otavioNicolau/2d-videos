@@ -1,6 +1,12 @@
 {
  "schema": "musica-1.0",
  "titulo": "Passeio na Lagoa",
+ "gancho": "passeio na lagoa",
+ "palavras_tema": [
+  "passear",
+  "vovó",
+  "lagoa"
+ ],
  "tipo": "animal",
  "tema": "passeio de domingo na lagoa com a vovó",
  "dia_a_dia": [
@@ -42,7 +48,9 @@
   140,
   170
  ],
- "alternativas": [],
+ "alternativas": [
+  "forro_pe_de_serra"
+ ],
  "status": "letra_revisada",
  "versoes": []
 }

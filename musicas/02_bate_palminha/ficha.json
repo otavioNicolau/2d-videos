@@ -1,6 +1,12 @@
 {
  "schema": "musica-1.0",
  "titulo": "Bate Palminha",
+ "gancho": "bate palminha",
+ "palavras_tema": [
+  "escola",
+  "amigo",
+  "joaninha"
+ ],
  "tipo": "brincadeira",
  "tema": "brincar com os amigos depois da escola",
  "dia_a_dia": [
@@ -13,7 +19,7 @@
  "curiosidade": "quem tem amigo nunca fica sozinho; dividir faz a festa ficar maior",
  "ritmo": "pagodao",
  "bpm": 135,
- "estrutura": "A",
+ "estrutura": "R",
  "voz": "dueto",
  "cantam": {
   "verso 1": "laurinha",
@@ -46,7 +52,10 @@
   140,
   170
  ],
- "alternativas": [],
+ "alternativas": [
+  "samba_infantil",
+  "axe"
+ ],
  "status": "letra_revisada",
  "versoes": []
 }

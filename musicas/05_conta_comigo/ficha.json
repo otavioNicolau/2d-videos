@@ -1,6 +1,10 @@
 {
  "schema": "musica-1.0",
  "titulo": "Conta Comigo",
+ "gancho": "conta comigo",
+ "palavras_tema": [
+  "um, dois, três"
+ ],
  "tipo": "educativa",
  "tema": "contar de 1 a 10 na rotina",
  "dia_a_dia": [
@@ -45,7 +49,9 @@
   140,
   170
  ],
- "alternativas": [],
+ "alternativas": [
+  "batucada"
+ ],
  "status": "letra_revisada",
  "versoes": []
 }
