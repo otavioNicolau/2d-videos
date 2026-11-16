@@ -4,6 +4,70 @@
  "partes": {
   "intro": [
    {
+    "linhas": 0,
+    "seg": 4.6,
+    "titulo": "a turma chega ao jardim",
+    "cenario": "plano_parque",
+    "camera": {
+     "x": 1150,
+     "y": 540,
+     "zoom": 1.05
+    },
+    "atores": {
+     "laurinha": {
+      "x": -200,
+      "y": 600,
+      "acoes": [
+       {
+        "do": "fly",
+        "to_x": 780,
+        "to_y": 930,
+        "dur": 1.4
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 2500,
+      "y": 560,
+      "acoes": [
+       {
+        "t": 0.4,
+        "do": "fly",
+        "to_x": 1290,
+        "to_y": 930,
+        "dur": 1.4,
+        "land_turn": -0.15
+       }
+      ]
+     },
+     "joaninha": {
+      "x": -200,
+      "y": 420,
+      "acoes": [
+       {
+        "t": 1.2,
+        "do": "fly",
+        "to_x": 1010,
+        "to_y": 930,
+        "dur": 1.4
+       }
+      ]
+     },
+     "formiguinha": {
+      "x": 2300,
+      "turn": -0.8,
+      "acoes": [
+       {
+        "t": 1.6,
+        "do": "walk",
+        "to_x": 1540,
+        "dur": 2.0
+       }
+      ]
+     }
+    }
+   },
+   {
     "cenario": "danca_raios_amarelo",
     "flash": true,
     "callout": [
@@ -410,7 +474,7 @@
     ],
     "flash": true,
     "callout": "BATE PALMINHA!",
-    "camera": "close:laurinha",
+    "camera": "medio:laurinha",
     "fx": [
      "estrelas"
     ],
@@ -743,6 +807,12 @@
       "depth": 1.1,
       "acoes": [
        {
+        "do": "dance",
+        "style": "roda",
+        "dur": 2.6
+       },
+       {
+        "t": 2.6,
         "do": "abraco",
         "dur": "resto"
        }
@@ -754,6 +824,12 @@
       "depth": 1.1,
       "acoes": [
        {
+        "do": "dance",
+        "style": "roda",
+        "dur": 2.6
+       },
+       {
+        "t": 2.6,
         "do": "abraco",
         "dur": "resto"
        }
@@ -765,6 +841,12 @@
       "depth": 1.1,
       "acoes": [
        {
+        "do": "dance",
+        "style": "roda",
+        "dur": 2.6
+       },
+       {
+        "t": 2.6,
         "do": "abraco",
         "dur": "resto"
        }
@@ -776,6 +858,12 @@
       "depth": 1.1,
       "acoes": [
        {
+        "do": "dance",
+        "style": "roda",
+        "dur": 2.6
+       },
+       {
+        "t": 2.6,
         "do": "abraco",
         "dur": "resto"
        }
@@ -951,12 +1039,13 @@
       "segura": "fatia_bolo",
       "acoes": [
        {
-        "t": 0.2,
-        "do": "pensar",
-        "dur": 0.9
+        "t": 0.15,
+        "do": "segurar",
+        "item": "fatia_bolo",
+        "pose": "alto"
        },
        {
-        "t": 1.2,
+        "t": 1.0,
         "do": "bacana",
         "dur": "resto"
        }
@@ -1247,14 +1336,14 @@
     "camera": {
      "x": 1150,
      "y": 560,
-     "zoom": 1.2
+     "zoom": 1.15
     },
     "fx": [
      "coracoes"
     ],
     "atores": {
      "laurinha": {
-      "x": 900,
+      "x": 820,
       "turn": 0.2,
       "acoes": [
        {
@@ -1265,7 +1354,7 @@
       ]
      },
      "joaninha": {
-      "x": 1060,
+      "x": 1030,
       "turn": 0.1,
       "acoes": [
        {
@@ -1276,7 +1365,7 @@
       ]
      },
      "luisinho": {
-      "x": 1240,
+      "x": 1260,
       "turn": -0.1,
       "acoes": [
        {
@@ -1287,7 +1376,7 @@
       ]
      },
      "formiguinha": {
-      "x": 1400,
+      "x": 1480,
       "turn": -0.2,
       "acoes": [
        {
@@ -1370,73 +1459,52 @@
     "camera": {
      "x": 1150,
      "y": 560,
-     "zoom": 1.05
+     "zoom": 1.1
     },
     "fx": [
      "coracoes"
     ],
-    "objetos": {
-     "mesa": {
-      "x": 1150,
-      "y": 990,
-      "z": 5
-     },
-     "bolo": {
-      "x": 1150,
-      "y": 760,
-      "z": 6,
-      "depth": 0.7,
-      "pose": {
-       "fatias": 1.0,
-       "vapor": 0.0
-      }
-     }
-    },
     "atores": {
      "laurinha": {
       "x": 760,
-      "y": 900,
-      "turn": 0.25,
+      "turn": 0.2,
       "acoes": [
        {
-        "do": "dance",
-        "style": "tchau",
+        "t": 0.1,
+        "do": "wave",
         "dur": "resto"
        }
       ]
      },
      "joaninha": {
       "x": 1010,
-      "y": 900,
-      "turn": 0.15,
+      "turn": 0.1,
       "acoes": [
        {
-        "do": "dance",
-        "style": "tchau",
+        "t": 0.1,
+        "do": "wave",
         "dur": "resto"
        }
       ]
      },
      "luisinho": {
       "x": 1290,
-      "y": 900,
-      "turn": -0.15,
+      "turn": -0.1,
       "acoes": [
        {
-        "do": "dance",
-        "style": "tchau",
+        "t": 0.1,
+        "do": "wave",
         "dur": "resto"
        }
       ]
      },
      "formiguinha": {
       "x": 1540,
-      "y": 900,
-      "turn": -0.25,
+      "turn": -0.2,
       "acoes": [
        {
-        "do": "dance",
-        "style": "tchau",
+        "t": 0.1,
+        "do": "wave",
         "dur": "resto"
        }
       ]
