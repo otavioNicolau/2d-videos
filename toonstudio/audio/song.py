@@ -269,7 +269,8 @@ def align_known_lyrics(words: list[dict], sections: list[dict], spans: list[list
         if cur is None or cur["_k"] != (si, li):
             cur = {"_k": (si, li), "secao": si, "words": [], "ok": 0}
             lines.append(cur)
-        cur["words"].append({"w": dw, "s": round(max(0.0, s), 3), "e": round(max(s + 0.05, e), 3)})
+        cur["words"].append({"w": dw.replace("(", "").replace(")", ""),  # parêntese só orienta o Suno (coro)
+                              "s": round(max(0.0, s), 3), "e": round(max(s + 0.05, e), 3)})
         cur["ok"] += 1 if a else 0
     inst = ("intervalo", "virada", "parada", "intro")
     for n, l in enumerate(lines):         # palavra casada com uma repetição vizinha (ex.: bordão cantado 2×) estica a linha
