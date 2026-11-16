@@ -117,7 +117,9 @@ class Flat:
             self.shape([(wx - 44, base - h + 70), (wx + 44, base - h + 70), (wx + 44, base - h + 150), (wx - 44, base - h + 150)], PAL["janela"], smooth=False)
             self.line([(wx, base - h + 70), (wx, base - h + 150)], dark(PAL["janela"]))
             self.line([(wx - 44, base - h + 110), (wx + 44, base - h + 110)], dark(PAL["janela"]))
-        self.shape([(x - 40, base), (x - 40, base - 130), (x - 30, base - 145), (x + 30, base - 145), (x + 40, base - 130), (x + 40, base)], PAL["porta"])
+        # porta: base reta no chão, laterais retas e ARCO em cima (desenho explícito; a suavização arredondava a base)
+        arco = [(x + 40 * np.cos(a), base - 110 - 40 * np.sin(a)) for a in np.linspace(np.pi, 0, 24)]
+        self.shape([(x - 40, base)] + arco + [(x + 40, base)], PAL["porta"], smooth=False)
         self.k.dot(x + 22, base - 64, 6, _rgba("#FFE066"))
 
 
