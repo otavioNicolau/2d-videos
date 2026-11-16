@@ -124,6 +124,16 @@ def expandir(letra: str, peso: str, E: dict, V: dict) -> str:
 
 # ───────────────────────── prompt do Suno ─────────────────────────
 
+GRAFIA_SUNO = {"Luisinho": "Luizinho"}       # BIBLIA_MUSICAL §3: escrito com z o Suno não canta "Luissinho"
+
+
+def grafia_suno(letra: str) -> str:
+    """Grafia SÓ para o texto do Suno (pronúncia); legenda e tela continuam com o nome oficial."""
+    for a, b in GRAFIA_SUNO.items():
+        letra = letra.replace(a, b)
+    return letra
+
+
 def style(f: dict, ritmo: str | None = None, bpm: int | None = None, E: dict | None = None, V: dict | None = None) -> str:
     E = E or estilos()
     V = V or vozes()
@@ -177,7 +187,7 @@ def prompt(d: Path) -> dict:
     voz = V["vozes"][f.get("voz", "dueto")]
     res = {"titulo": f["titulo"], "ritmo": r["nome"], "bpm": f["bpm"], "style": style(f, E=E, V=V),
            "style_curto": style_curto(f, E=E, V=V), "exclude": exclude(f, E=E),
-           "lyrics": expandir(letra, r["peso"], E, V), "persona": voz.get("suno_persona"), "voz": f.get("voz", "dueto"),
+           "lyrics": grafia_suno(expandir(letra, r["peso"], E, V)), "persona": voz.get("suno_persona"), "voz": f.get("voz", "dueto"),
            "avisos": [], "alternativas": []}
     lo, hi, _ = r["bpm"]
     if not lo <= f["bpm"] <= hi:
@@ -190,7 +200,7 @@ def prompt(d: Path) -> dict:
     for alt in f.get("alternativas", []):
         ra = E["ritmos"][alt]
         res["alternativas"].append({"ritmo": ra["nome"], "id": alt, "bpm": ra["bpm"][2], "style": style(f, alt, E=E, V=V),
-                                    "exclude": exclude(f, alt, E=E), "lyrics": expandir(letra, ra["peso"], E, V)})
+                                    "exclude": exclude(f, alt, E=E), "lyrics": grafia_suno(expandir(letra, ra["peso"], E, V))})
     return res
 
 
