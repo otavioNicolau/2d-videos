@@ -346,3 +346,95 @@ def _estrela(k: Ink, x, y, r, col):
 
 PROPS = {"janela": Janela, "cama": Cama, "lencol": Lencol, "mesa": Mesa, "espelho": Espelho,
          "caixa_brinquedos": CaixaBrinquedos, "sol": Sol}
+
+
+# ───────────────────────── marca: logo, botão de inscrição, joinha ─────────────────────────
+
+def _texto(k: Ink, txt: str, x: float, y: float, size: float, cor, contorno=(1, 1, 1, 1), borda: float = 0.16):
+    from ..core.config import LIBRARY
+    tf = skia.Typeface.MakeFromFile(str(LIBRARY / "fonts" / "Poppins-ExtraBold.ttf"))
+    font = skia.Font(tf, size)
+    w = font.measureText(txt)
+    blob = skia.TextBlob.MakeFromString(txt, font)
+    k.c.drawTextBlob(blob, x - w / 2, y, skia.Paint(AntiAlias=True, Color4f=skia.Color4f(*contorno), Style=skia.Paint.kStroke_Style,
+                                                    StrokeWidth=size * borda, StrokeJoin=skia.Paint.kRound_Join))
+    k.c.drawTextBlob(blob, x - w / 2, y, skia.Paint(AntiAlias=True, Color4f=skia.Color4f(*cor)))
+
+
+class Logo(_Prop):
+    """Selo do canal em tamanho de vinheta (mesmo desenho do logo do canto): nuvem amarela, borda vermelha,
+    LAURINHA (rosa) e 'e Luisinho' (azul). Canais: `escala` (entra pulando), `giro` (balanço leve)."""
+
+    def __init__(self):
+        super().__init__("logo", "Logo do canal", (1300, 700), (650, 640), 520, {"escala": 1.0, "giro": 0.0})
+
+    def paint(self, k, P):
+        s = max(0.0, P["escala"])
+        if s < 0.02:
+            return
+        k.c.save()
+        k.c.translate(0, -300)
+        k.c.rotate(math.degrees(P["giro"]))
+        k.c.scale(s, s)
+        W, H = 1000.0, 380.0
+        path = skia.Path()
+        r = H * 0.42
+        path.addRRect(skia.RRect.MakeRectXY(skia.Rect(-W / 2, -H / 2 + 10, W / 2, H / 2 - 8), r, r))
+        for fx, fy, rr in ((-0.32, -0.30, 0.22), (-0.05, -0.38, 0.26), (0.25, -0.30, 0.22)):
+            path.addCircle(W * fx, H * fy + 10, H * rr)
+        path.setFillType(skia.PathFillType.kWinding)
+        k.c.drawPath(path, skia.Paint(AntiAlias=True, Color4f=skia.Color4f(*_rgba("#E0342E")), Style=skia.Paint.kStroke_Style,
+                                      StrokeWidth=30, StrokeJoin=skia.Paint.kRound_Join))
+        k.c.drawPath(path, skia.Paint(AntiAlias=True, Color4f=skia.Color4f(*_rgba("#FFD640"))))
+        _texto(k, "LAURINHA", 0, H * 0.10, H * 0.40, _rgba("#E83E78"))
+        _texto(k, "e Luisinho", 0, H * 0.36, H * 0.25, _rgba("#2E70D2"))
+        k.c.restore()
+
+
+class BotaoInscrever(_Prop):
+    """Botão vermelho 'INSCREVA-SE' (canal infantil: sem sininho). `aperta` 0→1 afunda o botão (clique)."""
+
+    def __init__(self):
+        super().__init__("botao_inscrever", "Botão inscreva-se", (900, 340), (450, 300), 220, {"aperta": 0.0, "escala": 1.0})
+
+    def paint(self, k, P):
+        s = max(0.0, P["escala"]) * (1 - 0.08 * P["aperta"])
+        if s < 0.02:
+            return
+        k.c.save()
+        k.c.translate(0, -120)
+        k.c.scale(s, s)
+        pressed = P["aperta"] > 0.5
+        cor = "#9E9E9E" if pressed else "#E0342E"
+        box(k, -330, -90, 330, 90, cor, line=dark(cor, 0.75), r=60)
+        if pressed:                          # a fonte não tem "✓": o visto é desenhado
+            _texto(k, "INSCRITO", -40, 32, 92, _rgba("#FFFFFF"), contorno=_rgba(dark(cor, 0.7)), borda=0.12)
+            ln(k, [(215, -4), (240, 26), (285, -34)], "#FFFFFF", w=LINE * 3)
+        else:
+            _texto(k, "INSCREVA-SE", 0, 32, 92, _rgba("#FFFFFF"), contorno=_rgba(dark(cor, 0.7)), borda=0.12)
+        k.c.restore()
+
+
+class Joinha(_Prop):
+    """Joinha (polegar para cima) dentro de um círculo azul. `escala` faz ele 'pular' na tela."""
+
+    def __init__(self):
+        super().__init__("joinha", "Joinha", (420, 420), (210, 400), 360, {"escala": 1.0})
+
+    def paint(self, k, P):
+        s = max(0.0, P["escala"])
+        if s < 0.02:
+            return
+        k.c.save()
+        k.c.translate(0, -180)
+        k.c.scale(s, s)
+        shape(k, ellipse_pts(0, 0, 160, 160, 0, 40), "#3C8BF0")
+        box(k, -70, -10, 40, 90, "#FFFFFF", line="#C9D6E0", r=24)                     # mão
+        box(k, -100, -6, -66, 92, "#FFFFFF", line="#C9D6E0", r=12)                    # punho
+        shape(k, [(-30, -10), (-36, -88), (-14, -100), (6, -84), (10, -10)], "#FFFFFF", line="#C9D6E0")   # polegar
+        for y in (16, 42, 68):
+            ln(k, [(-10, y), (36, y)], "#C9D6E0", w=LINE * 0.8)
+        k.c.restore()
+
+
+PROPS.update({"logo": Logo, "botao_inscrever": BotaoInscrever, "joinha": Joinha})

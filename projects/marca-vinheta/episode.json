@@ -1,0 +1,333 @@
+{
+  "schema": "1.1",
+  "id": "marca-vinheta",
+  "title": "Vinheta — Laurinha e Luisinho",
+  "logline": "Peça fixa do canal: abertura de 4,2 s sincronizada com o logotipo sonoro.",
+  "fps": 30,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "background": "plano_ceu",
+  "soundtrack": {
+    "file": "musica/trabalho.wav",
+    "analysis": "analise/song.json",
+    "start": 0.0,
+    "end": 4.2,
+    "fade_out": 0.0,
+    "beat_grid": "full"
+  },
+  "overlays": {
+    "logo": false
+  },
+  "cast": {
+    "laurinha": {
+      "character": "laurinha"
+    },
+    "luisinho": {
+      "character": "luisinho"
+    },
+    "logo": {
+      "character": "logo"
+    }
+  },
+  "approval": {
+    "storyboard": false,
+    "final_render": false
+  },
+  "scenes": [
+    {
+      "id": "s01_vinheta",
+      "title": "Vinheta Laurinha e Luisinho",
+      "duration": 4.2,
+      "background": "plano_ceu",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540,
+            "zoom": 1.0
+          },
+          {
+            "t": 4.2,
+            "x": 1300,
+            "y": 540,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.0,
+          "sway": 0,
+          "bounce": 0
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": -300,
+            "y": 520,
+            "turn": 0.9,
+            "expr": "joy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "fly",
+              "to_x": 2950,
+              "to_y": 360,
+              "dur": 1.3,
+              "land": false
+            },
+            {
+              "t": 1.36,
+              "do": "fly",
+              "to_x": 640,
+              "to_y": 940,
+              "dur": 0.32
+            },
+            {
+              "t": 2.25,
+              "do": "wave",
+              "dur": 0.9
+            },
+            {
+              "t": 3.25,
+              "do": "dance",
+              "style": "asinhas",
+              "dur": 0.95
+            }
+          ],
+          "keys": [
+            {
+              "t": 1.33,
+              "pose": {
+                "x": -250,
+                "y": 760
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.55,
+              "pose": {
+                "mouth": "D"
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.652,
+              "pose": {
+                "mouth": "X"
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.72,
+              "pose": {
+                "mouth": "C"
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.822,
+              "pose": {
+                "mouth": "X"
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.89,
+              "pose": {
+                "mouth": "D"
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.992,
+              "pose": {
+                "mouth": "X"
+              },
+              "ease": "step"
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 2950,
+            "y": 700,
+            "turn": -0.9,
+            "expr": "joy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.35,
+              "do": "fly",
+              "to_x": -300,
+              "to_y": 620,
+              "dur": 1.3,
+              "land": false
+            },
+            {
+              "t": 1.95,
+              "do": "fly",
+              "to_x": 1960,
+              "to_y": 940,
+              "dur": 0.32,
+              "land_turn": -0.15
+            },
+            {
+              "t": 2.95,
+              "do": "wave",
+              "dur": 0.3
+            },
+            {
+              "t": 3.25,
+              "do": "dance",
+              "style": "asinhas",
+              "dur": 0.95
+            }
+          ],
+          "keys": [
+            {
+              "t": 1.9,
+              "pose": {
+                "x": 2900,
+                "y": 760
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.3,
+              "pose": {
+                "mouth": "D"
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.396,
+              "pose": {
+                "mouth": "X"
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.46,
+              "pose": {
+                "mouth": "C"
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.556,
+              "pose": {
+                "mouth": "X"
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.62,
+              "pose": {
+                "mouth": "D"
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.716,
+              "pose": {
+                "mouth": "X"
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.78,
+              "pose": {
+                "mouth": "C"
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.876,
+              "pose": {
+                "mouth": "X"
+              },
+              "ease": "step"
+            }
+          ]
+        }
+      },
+      "props": {
+        "logo": {
+          "start": {
+            "x": 1300,
+            "y": 780,
+            "z": 1,
+            "escala": 0.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 1.2,
+              "pose": {
+                "escala": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.42,
+              "pose": {
+                "escala": 1.15
+              },
+              "ease": "out"
+            },
+            {
+              "t": 1.6,
+              "pose": {
+                "escala": 1.0
+              },
+              "ease": "inout"
+            },
+            {
+              "t": 3.25,
+              "pose": {
+                "escala": 1.0,
+                "giro": 0.0
+              }
+            },
+            {
+              "t": 3.4,
+              "pose": {
+                "escala": 1.08,
+                "giro": 0.05
+              },
+              "ease": "out"
+            },
+            {
+              "t": 3.6,
+              "pose": {
+                "escala": 1.0,
+                "giro": -0.03
+              },
+              "ease": "inout"
+            },
+            {
+              "t": 3.8,
+              "pose": {
+                "giro": 0.0
+              },
+              "ease": "inout"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

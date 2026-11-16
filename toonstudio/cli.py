@@ -17,6 +17,7 @@
   toonstudio musica escolher <música> <versão>   registra a versão escolhida (decisão humana)
   toonstudio marca vinheta|chamada <arquivo> corta a peça fixa na batida (vinheta ≤ 5 s, chamada ≤ 10 s)
   toonstudio clipe montar <projeto> --musica 01 [--force]   episode.json do roteiro verso a verso (recusa se incompleto)
+  toonstudio final <projeto>                vídeo completo: vinheta + clipe + chamada (peças fixas de library/brand)
   toonstudio storyboard <episódio>          prévia rápida (3 painéis por plano) antes do render caro
   toonstudio board <episódio> <cena> aprovar|rejeitar ["nota"]   decisão de storyboard por plano
   toonstudio krita <arquivo.kra|ora>        abre no Krita (Windows)
@@ -52,6 +53,7 @@ def main(argv=None) -> int:
     vn.add_argument("--inicio", type=float); vn.add_argument("--fim", type=float)
     cl = sub.add_parser("clipe"); cl.add_argument("op", choices=["montar"]); cl.add_argument("episode")
     cl.add_argument("--musica", required=True); cl.add_argument("--force", action="store_true")
+    fi = sub.add_parser("final"); fi.add_argument("episode")
     sb = sub.add_parser("storyboard"); sb.add_argument("episode")
     bd = sub.add_parser("board"); bd.add_argument("episode"); bd.add_argument("scene"); bd.add_argument("decision", choices=["aprovar", "rejeitar"]); bd.add_argument("notes", nargs="?", default="")
     k = sub.add_parser("krita"); k.add_argument("file")
@@ -135,6 +137,10 @@ def main(argv=None) -> int:
                 raise StudioError(str(e))
             out.write_text(json.dumps(ep, ensure_ascii=False, indent=2), encoding="utf-8")
             print(f"{out}: {len(ep['scenes'])} planos, {ep['soundtrack']['end']:.1f}s — conferir o storyboard antes do render")
+            return 0
+        if args.cmd == "final":
+            from .composition.marca import final
+            print(final(args.episode))
             return 0
         if args.cmd == "storyboard":
             from .composition.storyboard import build
