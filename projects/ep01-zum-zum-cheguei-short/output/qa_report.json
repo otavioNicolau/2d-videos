@@ -1,6 +1,29 @@
 {
   "episode": "ep01-zum-zum-cheguei-short",
   "scenes": {
+    "s01_refrao": {
+      "frames": 121,
+      "performers": {
+        "laurinha": {
+          "drawings": 121,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 120
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 121,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 120
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
     "s02_refrao": {
       "frames": 22,
       "performers": {
@@ -17,6 +40,404 @@
           "hidden_frames": [],
           "exposure": {
             "1s": 21
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s03_refrao": {
+      "frames": 44,
+      "performers": {
+        "laurinha": {
+          "drawings": 44,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 43
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 44,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 43
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s04_refrao": {
+      "frames": 99,
+      "performers": {
+        "laurinha": {
+          "drawings": 99,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 98
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 99,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 98
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s05_refrao": {
+      "frames": 33,
+      "performers": {
+        "laurinha": {
+          "drawings": 33,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 32
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 33,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 32
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s06_refrao": {
+      "frames": 43,
+      "performers": {
+        "laurinha": {
+          "drawings": 43,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 42
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 43,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 42
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s07_verso": {
+      "frames": 46,
+      "performers": {
+        "laurinha": {
+          "drawings": 46,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 45
+          },
+          "empty_frames": 0
+        },
+        "cama": {
+          "drawings": 46,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 45
+          },
+          "empty_frames": 0
+        },
+        "lencol": {
+          "drawings": 46,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 45
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s08_verso": {
+      "frames": 55,
+      "performers": {
+        "laurinha": {
+          "drawings": 55,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 54
+          },
+          "empty_frames": 0
+        },
+        "janela": {
+          "drawings": 55,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 54
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s09_verso": {
+      "frames": 132,
+      "performers": {
+        "sol": {
+          "drawings": 132,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 131
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 1
+    },
+    "s10_verso": {
+      "frames": 88,
+      "performers": {
+        "laurinha": {
+          "drawings": 88,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 87
+          },
+          "empty_frames": 0
+        },
+        "janela": {
+          "drawings": 88,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 87
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s11_verso": {
+      "frames": 67,
+      "performers": {
+        "laurinha": {
+          "drawings": 67,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 66
+          },
+          "empty_frames": 0
+        },
+        "mesa": {
+          "drawings": 67,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 66
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s12_verso": {
+      "frames": 110,
+      "performers": {
+        "laurinha": {
+          "drawings": 110,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 109
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s13_verso": {
+      "frames": 88,
+      "performers": {
+        "laurinha": {
+          "drawings": 88,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 87
+          },
+          "empty_frames": 0
+        },
+        "espelho": {
+          "drawings": 88,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 87
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s14_verso": {
+      "frames": 88,
+      "performers": {
+        "laurinha": {
+          "drawings": 88,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 87
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s15_refrao": {
+      "frames": 121,
+      "performers": {
+        "laurinha": {
+          "drawings": 121,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 120
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 121,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 120
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s16_refrao": {
+      "frames": 22,
+      "performers": {
+        "laurinha": {
+          "drawings": 22,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 21
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 22,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 21
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s17_refrao": {
+      "frames": 44,
+      "performers": {
+        "laurinha": {
+          "drawings": 44,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 43
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 44,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 43
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s18_refrao": {
+      "frames": 99,
+      "performers": {
+        "laurinha": {
+          "drawings": 99,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 98
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 99,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 98
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s19_refrao": {
+      "frames": 33,
+      "performers": {
+        "laurinha": {
+          "drawings": 33,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 32
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 33,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 32
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s20_refrao": {
+      "frames": 43,
+      "performers": {
+        "laurinha": {
+          "drawings": 43,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 42
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 43,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 42
           },
           "empty_frames": 0
         }
