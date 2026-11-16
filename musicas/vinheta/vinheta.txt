@@ -14,6 +14,23 @@ Duração final: NO MÁXIMO 5 SEGUNDOS.
     (Histórico: a OPÇÃO V abaixo — só as vozes, para encaixar no logotipo sonoro — não ficou boa.)
 
 ====================================================================
+>>> RECEITA EM USO (16/11/2026, depois da análise da vinheta de referência do mercado)
+====================================================================
+Análise (só características gerais; nada de melodia/voz/marca deles): ~2,5 s de som + ~1 s de silêncio; SEM bateria e
+SEM baixo (0%); voz = 67% do som, VOZ DE DESENHO bem aguda (até ~900 Hz) subindo de tom, "Uuuuh!" cantadinho; fundo só de
+brilhos/"vush" mágicos. Por isso: música com batida = barulhenta/longa; aba "Discurso" = fala normal demais.
+SUNO → aba "Músicas" · Avançado · Persona Laurinha · v6
+ESTILOS: short cartoon kids channel ident, no drums, no beat, magical sparkle and whoosh sound effects, playful high-pitched cartoon character voice, sing-song rising exclamation, cheerful and cute, Brazilian Portuguese, native Brazilian accent
+EXCLUIR: drums, beat, bass, percussion, rhythm, song, verse, long intro, adult voice, European Portuguese accent, Spanish accent, English accent
+LETRA:
+[Magic sparkle]
+[Cartoon voice, rising, playful] Uuuuh! Lau-ri-nha e Luizinho!
+[Magic sparkle]
+[End]
+O estúdio corta o áudio inteiro (sem separar a voz) do 1º som ao fim do brilho, até 5 s.
+(As decisões/receitas abaixo ficam como histórico.)
+
+====================================================================
 >>> DECISÃO FINAL DO DONO (16/11/2026): SEM RITMO DE MÚSICA. As versões cantadas com batida ficaram longas e barulhentas.
     Vinheta = VOZ FALADA do Suno (aba "Discurso", sem música de fundo) + efeitos suaves do estúdio por baixo
     (zumbido das asinhas, sininhos, "zum!" final — audio/sound_logo.py sem vozes), até 5 s. A voz não é processada:
