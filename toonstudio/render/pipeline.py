@@ -297,7 +297,9 @@ class Episode:
                 sub.pop(key, None)
             dirs.append(self.scene(sub, bgs, lines, force, offset, song))
         comp = self.build / "scenes" / s["id"] / "comp"
-        comp.mkdir(parents=True, exist_ok=True)
+        if comp.exists():                    # quadros antigos de uma versão mais longa do plano dessincronizariam o vídeo
+            shutil.rmtree(comp)
+        comp.mkdir(parents=True)
         layout = s.get("layout", "diagonal")
         log(f"{s['id']}: tela dividida ({layout}, {len(dirs)} painéis)")
         for i in range(n):
@@ -518,6 +520,11 @@ class Episode:
             shutil.rmtree(trdir)
         for s in self.ep["scenes"]:
             frames = sorted((self.build / "scenes" / s["id"] / "comp").glob("*.png"))
+            want = int(round(s["duration"] * self.fps))
+            if len(frames) != want:          # trava de sincronia: cada plano entra com a duração exata dele
+                log(f"AVISO {s['id']}: {len(frames)} quadros na pasta, {want} esperados — usando {min(len(frames), want)}")
+                self.report["warnings"].append(f"{s['id']}: {len(frames)} quadros (esperado {want})")
+                frames = frames[:want]
             tr = s.get("transition_in")
             repl = {}
             if tr and prev_last is not None:
