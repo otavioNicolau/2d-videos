@@ -22,10 +22,27 @@ Estudamos características gerais do gênero, **nunca** letras, melodias, arranj
 - **Título = gancho = refrão:** uma ou duas palavras, muitas vezes com som divertido ou repetição.
 - **Séries com personagem fixo** (um mesmo bicho em várias músicas) criam fidelidade.
 - **Duração:** mediana 2:40; 75% até 3:00.
-- **Medição de duas músicas:** 172 BPM, tom maior, bateria como o instrumento mais alto; voz entra em ~4 s;
-  ~60% do tempo cantado; ~16 versos curtos (2–3 s cada) cantados duas vezes; intervalos de dança de 4–5 s,
-  às vezes dois seguidos separados por um "Vai!" (~10 s).
-- Medições de outros ritmos entram aqui quando os vídeos de referência forem analisados.
+
+### Medição de 13 músicas (16/11/2026)
+Batidão, Dança do Calango, Pintinho Amarelinho, Sorvete, Vamos pra Escola, Neneco, Boi Colorido, Morto-Vivo, Rock do Billy,
+Lá Vem o Trem, Frevo, Teréu Théo Théo, Celular do Vovô. Medido por computador (separação de instrumentos, batidas,
+transcrição da voz só para contar versos e repetições; nada da letra delas é guardado).
+
+| Medida | Resultado | Para nós |
+|---|---|---|
+| Abertura | **a mesma vinheta de 3,7 s em todos os vídeos**; depois, ~4 s de introdução da música | confirma a vinheta fixa de até 5 s; intro da música ≤ 4 s |
+| Andamento | dois grupos: **~130 BPM** (Sorvete, Neneco, Pintinho, Teréu, Trem) e **~160–172** (Batidão, Calango, Celular, Escola); Rock do Billy ~108; 4 ambíguas (metade/dobro) | não é tudo 172: a faixa de cada ritmo em `estilos.json` vale |
+| Tom | **13 de 13 em tom maior** | sempre maior |
+| Mixagem | bateria ~36% e voz ~37% (empatadas no topo); baixo ~12% | bateria tão alta quanto a voz nos ritmos de peso forte |
+| Tempo cantado | 46–76% (mediana 62%) | deixar ~1/3 da música para dançar |
+| **Verso** | **3 a 5 palavras** (mediana 4), **1 a 2 s** cada | versos curtos; nossos versos de 6–8 palavras são longos |
+| Variedade | 31–72 linhas cantadas, mas só **8–31 diferentes** (mediana ~23); 57–100% das linhas se repetem | poucas ideias, muito bem repetidas |
+| **Gancho** | frase de **3 palavras** repetida **~10 vezes** (de 2 a 22); entra entre 11 e 61 s (mediana ~35 s) | o título vira gancho de 3 palavras |
+| Forma | **9 de 13: um bloco de ~55–75 s cantado 2 ou 3 vezes** quase igual, separado por intervalos; 2 progressivas (cada parte nova, como uma lista de cores) | estruturas A (bloco que volta) e C/F (lista) são as do mercado |
+| Intervalos | pares de 4–5 s com "Vai!" ou o grito do canal no meio; às vezes 8–15 s | intervalo puxado por bordão, 4–8 s |
+| Grito do canal | 10 de 13, logo após a intro (~10–14 s) e dentro dos intervalos, até 8 vezes | nosso equivalente: os bordões |
+| Final | corte seco e ~4 s de silêncio (tela final) | terminar com batida final limpa (`[End]`); a chamada entra no vídeo |
+| Cortes de cena | ~4 a 22 por minuto (mediana ~10: um corte a cada ~6 s) | cortar na batida a cada 3–6 s |
 
 ## 2. Identidade do canal
 
@@ -105,10 +122,11 @@ Séries são bem-vindas: um tema que funcionou pode voltar com variações (ex.:
 ## 6. A letra
 
 **Sempre:**
-1. Vocabulário simples e frases curtas (um verso cabe em 2–3 s cantado; ~5 a 9 palavras).
+1. Vocabulário simples e **versos curtos: 3 a 5 palavras** (máximo 7), cantados em 1–2 s.
 2. Rimas naturais; onomatopeias e palavras sonoras.
 3. **Refrão forte e grudento:** 2 a 4 linhas, com repetição interna, sílabas divertidas e um comando de movimento.
-4. **O título é o gancho do refrão:** curto, sonoro, fácil de lembrar.
+4. **O título é o gancho do refrão:** frase de até 3 palavras, sonora, repetida ~8 a 12 vezes na música.
+   Poucas ideias bem repetidas: ~20–25 linhas diferentes por música é o suficiente.
 5. **O tema aparece nos primeiros 2 versos.**
 6. Momento do **dia a dia da criança** em toda música.
 7. Uma **curiosidade ou aprendizado**, dito de forma divertida.
@@ -130,7 +148,8 @@ Intervalos de dança de 4–5 s (ou ~10 s com um bordão no meio), puxados por u
 
 | Código | Estrutura | Quando usar |
 |---|---|---|
-| **A** | clássica: intro → verso → refrão → intervalo → verso → refrão → ponte → intervalo → refrão → final | quase tudo; a mais segura |
+| **R** | bloco que volta: intro → [verso + refrão + intervalo] × 2 ou 3, quase igual, com uma variação pequena na última vez | a forma mais comum no mercado (9 de 13 medidas); dança, bichos, comida |
+| **A** | clássica: intro → verso → refrão → intervalo → verso → refrão → ponte → intervalo → refrão → final | quando há história ou curiosidade para contar |
 | **B** | pergunta e resposta do começo ao fim (Laurinha pergunta, o coro responde) | educativas, cores, sons de bichos |
 | **C** | cumulativa: cada verso soma um item e repete os anteriores | listas, festa que vai crescendo, historinha divertida |
 | **D** | brincadeira com paradas: a música para e todo mundo congela; volta mais forte | dança e brincadeira (estátua, abaixa e levanta) |

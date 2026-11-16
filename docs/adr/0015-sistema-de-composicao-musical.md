@@ -9,7 +9,7 @@ avaliação das versões do Suno nem ligação entre a letra conhecida e a anál
 O Suno não tem API pública (só um programa de parceiros fechado desde jul/2026); APIs não oficiais violam os termos de uso.
 
 ## Decisão
-- **Fonte única:** `musicas/BIBLIA_MUSICAL.md` (identidade, bordões, ritmo por tema, letra, estruturas A–F, avaliação).
+- **Fonte única:** `musicas/BIBLIA_MUSICAL.md` (identidade, bordões, ritmo por tema, letra, estruturas R e A–F, avaliação).
 - **Dados:** `musicas/estilos.json` (16 ritmos com andamento, bateria própria, peso da batida forte/média/marcada, Exclude),
   `musicas/vozes.json` (vozes oficiais e Personas, preenchidas à mão), `musicas/<nº>_<nome>/ficha.json` + `letra.txt`.
 - O Style é **montado por ritmo**: gênero + andamento + peso + bateria e instrumentos do próprio ritmo + voz + canal.
