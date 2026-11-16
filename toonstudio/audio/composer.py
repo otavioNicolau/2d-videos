@@ -609,3 +609,49 @@ def escolher(d: Path, versao: str) -> str:
     (d / "ficha.json").write_text(json.dumps(f, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     arq = av["versoes"][versao]["arquivo"]
     return f"escolhida: {arq} → próximo passo: `toonstudio song import <projeto> {d / 'versoes' / arq}`"
+
+
+# ───────────────────────── partes da música (F5) ─────────────────────────
+
+INSTRUMENTAL = ("intro", "drum break", "instrumental break", "drum fill", "percussion fill", "guitar solo", "stop", "end",
+                "solo", "break")
+
+
+def tipo_secao(tag: str) -> str:
+    t = tag.lower()
+    for chave, tipo in (("intro", "intro"), ("verse", "verso"), ("chorus", "refrao"), ("bridge", "ponte"), ("outro", "final"),
+                        ("shout", "bordao"), ("drum fill", "virada"), ("percussion fill", "virada"), ("stop", "parada"),
+                        ("end", "fim")):
+        if t.startswith(chave):
+            return tipo
+    if "break" in t or "solo" in t:
+        return "intervalo"
+    return "outro"
+
+
+def cantor(tag: str) -> list[str]:
+    t = tag.lower()
+    quem = [n for n in ("laurinha", "luisinho") if n in t]
+    if not quem and ("choir" in t or "everybody" in t or "kids" in t or t.startswith("chorus")):
+        quem = ["coro"]
+    return quem
+
+
+def secoes(d: Path) -> list[dict]:
+    """Partes da letra expandida, em ordem: [{tag, tipo, cantam, linhas}]. Versos soltos antes de qualquer tag vão para 'intro'."""
+    E, V = estilos(), vozes()
+    f = ficha(d)
+    letra = expandir((d / "letra.txt").read_text(encoding="utf-8"), E["ritmos"][f["ritmo"]]["peso"], E, V)
+    out: list[dict] = []
+    for kind, txt in parse(letra):
+        if kind == "tag":
+            out.append({"tag": txt, "tipo": tipo_secao(txt), "cantam": cantor(txt), "linhas": []})
+        else:
+            if not out:
+                out.append({"tag": "Intro", "tipo": "intro", "cantam": ["coro"], "linhas": []})
+            out[-1]["linhas"].append(txt)
+    # linhas que vêm logo depois de uma marcação instrumental (ex.: "(Laurinha e Luisinho!)" num intervalo) são gritos do coro
+    for s in out:
+        if s["linhas"] and s["tipo"] in ("intervalo", "virada", "parada") and not s["cantam"]:
+            s["cantam"] = ["coro"]
+    return out

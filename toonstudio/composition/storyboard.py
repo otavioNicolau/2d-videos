@@ -77,6 +77,8 @@ def panel(ep: dict, s: dict, t: float, layers: list, beats: list | None = None, 
 
 def _paste(dst: Image.Image, im: Image.Image, x: int, y: int) -> None:
     l, t = max(0, -x), max(0, -y)
+    if l >= im.width or t >= im.height or x >= dst.width or y >= dst.height:
+        return                                    # inteiramente fora do quadro (ex.: entrando voando)
     crop = im.crop((l, t, im.width, im.height))
     if crop.width > 0 and crop.height > 0:
         dst.alpha_composite(crop, (max(0, x), max(0, y)))

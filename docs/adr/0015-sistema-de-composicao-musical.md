@@ -1,6 +1,6 @@
 # ADR-0015 — Sistema de composição musical (Suno) do canal Laurinha e Luisinho
 
-- **Status:** F1–F4 feitas · F5 (ligação com a animação) e F6 (piloto) pendentes · 2026-11-16
+- **Status:** F1–F5 feitas · F6 (piloto: ep01 "Zum Zum, Cheguei!") em storyboard · 2026-11-16
 
 ## Contexto
 As 6 primeiras letras eram arquivos de texto com o mesmo Style de bateria pesada e a mesma estrutura, o que tornava as
@@ -18,7 +18,13 @@ O Suno não tem API pública (só um programa de parceiros fechado desde jul/202
   ritmo, checagem pela bíblia, `suno.txt` gerado (um teste garante que não é editado à mão).
 - **F4** `toonstudio musica medir|escolher`: andamento (corrigindo metade/dobro pelo andamento pedido), tom, voz, gancho,
   intervalos, final, % da letra reconhecida pela transcrição da voz isolada → `avaliacao.json`; a escolha é humana.
-- Pendentes: F5 alinhamento da letra conhecida em `song analyze` e rascunho de cenas; F6 piloto.
+- **F5** `song analyze --musica`: a letra CONHECIDA é alinhada letra a letra à transcrição (tolera "zunzun ceguei"),
+  palavras sem correspondência vão para os trechos com voz, linhas esticadas por repetições do Suno são corrigidas pela
+  estrutura (intervalo antes/depois); saem `letra.json` (legenda/boca com o texto exato) e as partes com quem canta.
+  `toonstudio clipe rascunho` gera o `episode.json` a partir das partes (cortes na batida, parque nos versos em lugares
+  fora da lagoa, close/dupla/voo, fundos de dança e tela dividida nos refrões, gancho e bordões na tela) — rascunho para
+  o storyboard; o refinamento é manual.
+- Pendente: F6 piloto (ep01) e a montagem com vinheta no início e chamada no fim.
 
 ## Consequências
 O texto de copiar e colar é gerado (`<pasta>/suno.txt`, por `toonstudio musica prompt`); a vinheta e a chamada ficam em `musicas/vinheta/` e `musicas/chamada/`. Áudio das versões fica fora do git.

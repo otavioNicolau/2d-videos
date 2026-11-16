@@ -16,6 +16,14 @@ from .config import LIBRARY, SCHEMAS
 from .registry import CHARACTERS
 
 
+def _flies(cid: str) -> bool:
+    """Personagem alado: declara `flies = True` (muriçocas) — o Tevico voa por regra própria (pássaro antigo)."""
+    if cid == "tevico":
+        return True
+    make = CHARACTERS.get(cid)
+    return bool(make and getattr(make(), "flies", False))
+
+
 @dataclass
 class Report:
     errors: list[str] = field(default_factory=list)
@@ -107,7 +115,7 @@ def validate(ep: dict) -> Report:
                     r.errors.append(f"{sid}/{who}: ação '{a['do']}' começa em {a['t']}s, depois do fim da cena ({dur}s)")
                 if a["do"] in ("walk", "sneak", "run") and "to_x" not in a:
                     r.errors.append(f"{sid}/{who}: '{a['do']}' exige to_x")
-                if a["do"] == "fly" and not (cast.get(who, {}).get("character") == "tevico" or "muricoca" in cast.get(who, {}).get("character", "")):
+                if a["do"] == "fly" and not _flies(cast.get(who, {}).get("character", "")):
                     r.errors.append(f"{sid}/{who}: só personagens alados voam")
             for k in p.get("keys", []):
                 if "expr" in k and k["expr"] not in EXPRESSIONS:

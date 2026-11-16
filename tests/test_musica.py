@@ -89,3 +89,50 @@ def test_ending_detection_hard_stop_vs_fade():
     assert c._final(seco, sr) == {"tipo": "corte seco", "silencio": 3.0}
     fade = tom * np.clip((6 - t) / 3, 0, 1).astype("float32")
     assert c._final(fade, sr)["tipo"] == "esmaecendo"
+
+
+def test_known_lyrics_alignment_tolerates_asr_spelling_and_skips_silence():
+    from toonstudio.audio.song import align_known_lyrics
+    secs = [{"tag": "Verse", "tipo": "verso", "cantam": ["laurinha"], "linhas": ["O sol deu bom dia"]},
+            {"tag": "Drum Break", "tipo": "intervalo", "cantam": [], "linhas": []},
+            {"tag": "Chorus", "tipo": "refrao", "cantam": ["coro"], "linhas": ["Zum, zum, cheguei!", "Bati as asinhas"]}]
+    heard = [{"w": w, "s": s, "e": s + 0.4} for w, s in
+             (("o", 1.0), ("sol", 1.5), ("deu", 2.0), ("bom", 2.5), ("dia", 3.0),
+              ("zunzun", 10.0), ("ceguei", 10.6), ("tiazazinhas", 11.5))]
+    al = align_known_lyrics(heard, secs, spans=[[1.0, 3.5], [10.0, 12.5]])
+    texts = [l["text"] for l in al["lines"]]
+    assert texts == ["O sol deu bom dia", "Zum, zum, cheguei!", "Bati as asinhas"]     # texto é o da letra
+    chorus = al["lines"][1]
+    assert 9.8 <= chorus["s"] <= 10.2 and chorus["e"] < 11.5                            # "zunzun ceguei" casou
+    brk = al["sections"][1]
+    assert brk["s"] >= 3.3 and brk["e"] <= 10.1                                         # intervalo fica no silêncio
+
+
+def test_stretched_line_keeps_the_side_after_an_instrumental_break():
+    from toonstudio.audio.song import _fix_stretched
+    ws = [{"w": "Zum,", "s": 104.8, "e": 105.1}, {"w": "zum,", "s": 105.1, "e": 105.3},
+          {"w": "cheguei!", "s": 105.3, "e": 105.5}, {"w": "(Cheguei!)", "s": 105.5, "e": 113.3}]
+    _fix_stretched(ws, keep="right")
+    assert ws[0]["s"] > 111.5 and ws[-1]["e"] == 113.3
+
+
+def test_clip_draft_blocks_cover_the_song_and_merge_fill_and_shout():
+    from toonstudio.composition.clip_draft import blocos
+    song = {"duration": 30.0, "beats": [i * 0.5 for i in range(61)], "sections": [
+        {"tag": "Intro", "tipo": "intro", "cantam": [], "s": 0.0, "e": 2.0},
+        {"tag": "Verse", "tipo": "verso", "cantam": ["laurinha"], "s": 4.0, "e": 12.0},
+        {"tag": "Drum Fill", "tipo": "virada", "cantam": [], "s": 12.0, "e": 12.0},
+        {"tag": "Chorus", "tipo": "refrao", "cantam": ["coro"], "s": 12.5, "e": 20.0},
+        {"tag": "Shout", "tipo": "bordao", "cantam": ["laurinha"], "s": 20.0, "e": 21.0},
+        {"tag": "Drum Break", "tipo": "intervalo", "cantam": [], "s": 21.0, "e": 26.0},
+        {"tag": "End", "tipo": "fim", "cantam": [], "s": 30.0, "e": 30.0}]}
+    b = blocos(song)
+    assert [x["tipo"] for x in b] == ["intro", "verso", "refrao", "intervalo"]
+    assert b[0]["s"] == 0.0 and b[-1]["e"] == 30.0
+    assert all(abs(x["e"] - y["s"]) < 1e-9 for x, y in zip(b, b[1:]))                  # contínuo, sem buraco
+    assert all(x["s"] in song["beats"] for x in b[1:])                                  # cortes na batida
+
+
+def test_official_muricocas_can_fly_in_validation():
+    from toonstudio.core.validate import _flies
+    assert _flies("laurinha") and _flies("luisinho") and not _flies("caramelo")

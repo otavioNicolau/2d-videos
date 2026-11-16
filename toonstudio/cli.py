@@ -7,7 +7,8 @@
   toonstudio background <id>                pinta o cenário e gera KRA com as camadas
   toonstudio catalog                        biblioteca de animações/expressões (JSON)
   toonstudio song import <projeto> <arquivo>  copia a música (original intocado, somente leitura) + cópia de trabalho
-  toonstudio song analyze <projeto>         voz separada, batidas, letra palavra a palavra → analise/song.json
+  toonstudio song analyze <projeto> [--musica 01]   com --musica: letra conhecida alinhada + partes da música;
+                                            voz separada, batidas, letra palavra a palavra → analise/song.json
   toonstudio musica lista                   músicas do canal: ritmo, estrutura, status
   toonstudio musica nova <nome> --titulo T --ritmo R --tipo X [--estrutura A] [--voz dueto]   ficha + modelo de letra
   toonstudio musica checar <música>         confere a letra contra a BIBLIA_MUSICAL (versos, gancho, ritmo citado…)
@@ -15,6 +16,7 @@
   toonstudio musica medir <música> [arquivos…]   mede as versões do Suno (versoes/) → avaliacao.json + tabela
   toonstudio musica escolher <música> <versão>   registra a versão escolhida (decisão humana)
   toonstudio marca vinheta|chamada <arquivo> corta a peça fixa na batida (vinheta ≤ 5 s, chamada ≤ 10 s)
+  toonstudio clipe rascunho <projeto> --musica 01 [--force]   episode.json a partir das partes da música (revisar!)
   toonstudio storyboard <episódio>          prévia rápida (3 painéis por plano) antes do render caro
   toonstudio board <episódio> <cena> aprovar|rejeitar ["nota"]   decisão de storyboard por plano
   toonstudio krita <arquivo.kra|ora>        abre no Krita (Windows)
@@ -41,13 +43,15 @@ def main(argv=None) -> int:
     g = sub.add_parser("background"); g.add_argument("id", nargs="?", default="floresta_clareira")
     sub.add_parser("catalog")
     sg = sub.add_parser("song"); sg.add_argument("op", choices=["import", "analyze"]); sg.add_argument("episode")
-    sg.add_argument("file", nargs="?")
+    sg.add_argument("file", nargs="?"); sg.add_argument("--musica")
     mu = sub.add_parser("musica"); mu.add_argument("op", choices=["lista", "nova", "checar", "prompt", "medir", "escolher"])
     mu.add_argument("nome", nargs="?"); mu.add_argument("extra", nargs="*")
     mu.add_argument("--titulo"); mu.add_argument("--ritmo"); mu.add_argument("--tipo", default="")
     mu.add_argument("--estrutura", default="A"); mu.add_argument("--voz", default="dueto")
     vn = sub.add_parser("marca"); vn.add_argument("peca", choices=["vinheta", "chamada"]); vn.add_argument("arquivo")
     vn.add_argument("--inicio", type=float); vn.add_argument("--fim", type=float)
+    cl = sub.add_parser("clipe"); cl.add_argument("op", choices=["rascunho"]); cl.add_argument("episode")
+    cl.add_argument("--musica", required=True); cl.add_argument("--force", action="store_true")
     sb = sub.add_parser("storyboard"); sb.add_argument("episode")
     bd = sub.add_parser("board"); bd.add_argument("episode"); bd.add_argument("scene"); bd.add_argument("decision", choices=["aprovar", "rejeitar"]); bd.add_argument("notes", nargs="?", default="")
     k = sub.add_parser("krita"); k.add_argument("file")
@@ -101,7 +105,11 @@ def main(argv=None) -> int:
             else:
                 from .audio import voice
                 try:
-                    print(song.analyze(pdir))
+                    mus = None
+                    if args.musica:
+                        from .audio import composer
+                        mus = composer.pasta(args.musica)
+                    print(song.analyze(pdir, musica=mus))
                 finally:
                     voice.shutdown()
             return 0
@@ -113,6 +121,17 @@ def main(argv=None) -> int:
             r = trim_on_beat(Path(args.arquivo), args.peca, max_len=lim, min_len=2.5 if args.peca == "vinheta" else 6.0,
                              start=args.inicio, end=args.fim)
             print(f"{args.peca}: {r['duracao']}s (trecho {r['inicio']}–{r['fim']}s do original) → {r['arquivo']}")
+            return 0
+        if args.cmd == "clipe":
+            from .audio import composer
+            from .composition.clip_draft import rascunho
+            pdir = PROJECTS / args.episode
+            out = pdir / "episode.json"
+            if out.exists() and not args.force:
+                raise StudioError(f"{out} já existe (use --force para substituir o rascunho)")
+            ep = rascunho(pdir, composer.pasta(args.musica))
+            out.write_text(json.dumps(ep, ensure_ascii=False, indent=2), encoding="utf-8")
+            print(f"{out}: {len(ep['scenes'])} planos, {ep['soundtrack']['end']:.1f}s — revise no storyboard antes do render")
             return 0
         if args.cmd == "storyboard":
             from .composition.storyboard import build
