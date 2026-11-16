@@ -24,6 +24,7 @@ Personagens e universos **sempre originais** — referências clássicas só com
 
 ## Regras
 - **Identidade visual: [BIBLIA_VISUAL.md](BIBLIA_VISUAL.md) é a base obrigatória** de todo personagem, animal, objeto e cenário. Mudanças só com autorização do usuário.
+- **Entregas SEMPRE em `C:\Users\DELL\Videos\Laurinha e Luisinho\`** (nunca no Downloads): `NN Título\{Pré-produção, Vídeo longo, Short}\` e `Canal\` (capa, perfil, textos, `Vinheta\`). Mesmo formato do projeto ~/videos.
 - **Nunca rascunho: padrão profissional sempre e melhoria contínua — [docs/PADRAO_DE_QUALIDADE.md](docs/PADRAO_DE_QUALIDADE.md)** (regra do dono do canal). Todo clipe tem roteiro verso a verso completo, passa pela conferência antes de ser mostrado e cada erro percebido entra no registro de lições.
 - **Identidade musical: [musicas/BIBLIA_MUSICAL.md](musicas/BIBLIA_MUSICAL.md) é a base obrigatória** de toda música (ritmo por tema, bordões, letra, estruturas, avaliação). Ritmos em `musicas/estilos.json`, vozes em `musicas/vozes.json`.
 - Código funcional não prova qualidade artística: renderizar, **olhar os quadros** (pranchas) e corrigir.
