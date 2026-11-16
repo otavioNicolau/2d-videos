@@ -11,8 +11,8 @@
 
 ## Cenas
 
-- **s01_vinheta** — 126 quadros; laurinha: 126 desenhos, luisinho: 126 desenhos, logo: 126 desenhos
-  - ⚠ logo: 41 quadros vazios (ex.: [1, 2, 3, 4, 5])
+- **s01_vinheta** — 108 quadros; laurinha: 108 desenhos, luisinho: 108 desenhos, logo: 106 desenhos
+  - ⚠ logo: 5 quadros vazios (ex.: [1, 2, 3, 4, 5])
 
 ## Avisos
 

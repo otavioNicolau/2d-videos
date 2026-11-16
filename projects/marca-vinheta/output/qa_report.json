@@ -2,35 +2,35 @@
   "episode": "marca-vinheta",
   "scenes": {
     "s01_vinheta": {
-      "frames": 126,
+      "frames": 108,
       "performers": {
         "laurinha": {
-          "drawings": 126,
+          "drawings": 108,
           "hidden_frames": [],
           "exposure": {
-            "1s": 125
+            "1s": 107
           },
           "empty_frames": 0
         },
         "luisinho": {
-          "drawings": 126,
+          "drawings": 108,
           "hidden_frames": [],
           "exposure": {
-            "1s": 125
+            "1s": 107
           },
           "empty_frames": 0
         },
         "logo": {
-          "drawings": 126,
+          "drawings": 106,
           "hidden_frames": [],
           "exposure": {
-            "1s": 125
+            "1s": 107
           },
-          "empty_frames": 41
+          "empty_frames": 5
         }
       },
       "issues": [
-        "logo: 41 quadros vazios (ex.: [1, 2, 3, 4, 5])"
+        "logo: 5 quadros vazios (ex.: [1, 2, 3, 4, 5])"
       ],
       "frozen_samples": 0
     }

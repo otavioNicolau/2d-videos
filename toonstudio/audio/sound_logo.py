@@ -61,7 +61,7 @@ def place(bus, x, t, gain=1.0):
     bus[i:i + len(seg)] += seg
 
 
-def build(voice_a: Path, voice_b: Path, out: Path, total: float = 4.2) -> Path:
+def build(voice_a: Path | None, voice_b: Path | None, out: Path, total: float = 4.2) -> Path:
     bus = np.zeros((int(total * SR), 2))
     place(bus, buzz_flyby(1.3, 520, +1, 1), 0.0, 0.55)                  # Laurinha passa (agudinha) →
     place(bus, buzz_flyby(1.3, 410, -1, 2), 0.35, 0.5)                  # Luisinho passa ←
@@ -69,6 +69,8 @@ def build(voice_a: Path, voice_b: Path, out: Path, total: float = 4.2) -> Path:
         place(bus, chime(nfreq), 1.25 + k * 0.09, 0.35)
     place(bus, sparkle(1.4, 5), 1.25, 1.0)
     for f, t0, g in ((voice_a, 1.55, 0.95), (voice_b, 2.3, 0.95)):
+        if f is None:                        # versão sem voz (vozes sintéticas/recortadas soaram robóticas)
+            continue
         a, sr = sf.read(f, dtype="float32")
         if a.ndim > 1:
             a = a.mean(axis=1)

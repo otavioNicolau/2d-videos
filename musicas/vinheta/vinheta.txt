@@ -3,7 +3,9 @@ PEÇA FIXA DO CANAL: gerada UMA vez e usada no início de TODOS os vídeos. É i
 (tem batida, tom e instrumental próprios).
 Duração final: NO MÁXIMO 5 SEGUNDOS.
 
->>> VERSÃO ATUAL (sem ritmo de música): LOGOTIPO SONORO feito no estúdio, sem Suno —
+>>> VERSÃO ATUAL (16/11/2026): o ÁUDIO ORIGINAL DO SUNO da opção V ("Laurinha e Luisinho... Zum!", 3,1 s), SEM processamento
+    (library/audio/marca/vinheta_suno.wav → library/brand/vinheta.mp4). Reserva: vinheta sem voz (library/brand/vinheta_sem_voz.mp4).
+>>> Versão anterior (descartada, voz robótica): LOGOTIPO SONORO feito no estúdio —
     zumbido das duas muriçocas passando + brilho de sininhos + vozes "Laurinha!" "e Luisinho!" + "zum!" final (4,2 s).
     Arquivo: library/audio/marca/vinheta.wav  ·  código: toonstudio/audio/sound_logo.py
     DECISÃO 16/11/2026: vozes sintéticas e voz recortada da música soaram ROBÓTICAS (separação voz/música deixa a voz
