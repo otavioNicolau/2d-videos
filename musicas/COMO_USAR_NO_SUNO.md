@@ -9,7 +9,7 @@ Cada arquivo em `letras/` tem três blocos para colar no Suno, no modo **Custom*
 | # | Música | Ritmo (só no campo Style) | BPM | Dia a dia | Curiosidade / aprendizado |
 |---|---|---|---|---|---|
 | 01 | Zum Zum, Cheguei! | Frevo | 160 | acordar, café, arrumar a cama, mochila, tchau pra mamãe | por que a muriçoca faz "zum" (a asinha batendo rápido) |
-| 02 | Bate Palminha | Pagode | 110 | voltar da escola, lavar as mãos, brincar com amigos | dividir o bolo; quem tem amigo nunca fica sozinho |
+| 02 | Bate Palminha | Pagodão baiano | 135 | voltar da escola, lavar as mãos, brincar com amigos | dividir o bolo; quem tem amigo nunca fica sozinho |
 | 03 | Sorriso Brilhante | Rock | 165 | escovar os dentes | pasta do tamanho de um grão de feijão, 2 minutinhos, fechar a torneira |
 | 04 | Cadê a Cor? | Axé | 140 | cores do lanche, da mochila | misturar cores: azul+amarelo=verde, vermelho+amarelo=laranja, azul+vermelho=roxo |
 | 05 | Conta Comigo | Samba-enredo | 145 | rotina da manhã (1→10) e da noite (10→1) | quantos dedos, rodas, patinhas da formiga |
@@ -38,6 +38,10 @@ como bronca).
 `Intro (instrumental)` → `Verso (4 linhas)` → `Refrão (sílabas divertidas + comandos de dança)` →
 `"Vai!" + 8 s instrumental` → `Verso 2` → `Refrão` → `Ponte (curiosidade ou brincadeira)` → `"Vai!" + 8 s instrumental` → `Refrão` → `Tchau`.
 Andamento rápido, tom maior, **bateria mais alta que tudo**, duração-alvo **2:45–3:00**.
+**Muita batida:** todo Style leva `heavy drum-driven beat, pounding kick drum on every beat, booming bass drum, loud claps,
+big drum fills before every chorus, percussion breakdowns, drums loudest in the mix`; a letra marca `[Drum Fill]` antes
+de cada refrão e os intervalos são `[Drum Break]` (só batucada). Se o seu Suno limitar o tamanho do Style, mantenha
+pelo menos: ritmo + BPM + `heavy drum-driven beat, pounding kick, big drum fills, drums loudest in the mix` + vozes.
 Os intervalos instrumentais são os momentos de dança no clipe; o "inscreva-se" entra no vídeo, não na música.
 
 ## Dicas para sair bom
