@@ -2,6 +2,11 @@ VINHETA DE ABERTURA — "Laurinha e Luisinho"
 PEÇA FIXA DO CANAL: gerada UMA vez e usada no início de TODOS os vídeos. É independente da música do episódio
 (tem batida, tom e instrumental próprios).
 Duração final: NO MÁXIMO 5 SEGUNDOS.
+
+>>> VERSÃO ATUAL (sem ritmo de música): LOGOTIPO SONORO feito no estúdio, sem Suno —
+    zumbido das duas muriçocas passando + brilho de sininhos + vozes "Laurinha!" "e Luisinho!" + "zum!" final (4,2 s).
+    Arquivo: library/audio/marca/vinheta.wav  ·  código: toonstudio/audio/sound_logo.py
+    As opções abaixo (Suno) ficam como alternativa, caso prefira uma vinheta cantada.
 O Suno sempre gera mais longo; o estúdio corta o melhor trecho (até 5 s), começando e terminando na batida,
 com final limpo. Por isso as letras abaixo são mínimas: o nome cabe inteiro em 2–3 segundos.
 Gere 3–4 versões e escolha a que tiver o começo mais forte. Use a MESMA Persona (voz) das músicas.

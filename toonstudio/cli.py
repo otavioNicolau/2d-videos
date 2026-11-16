@@ -8,6 +8,7 @@
   toonstudio catalog                        biblioteca de animações/expressões (JSON)
   toonstudio song import <projeto> <arquivo>  copia a música (original intocado, somente leitura) + cópia de trabalho
   toonstudio song analyze <projeto>         voz separada, batidas, letra palavra a palavra → analise/song.json
+  toonstudio marca vinheta|chamada <arquivo> corta a peça fixa na batida (vinheta ≤ 5 s, chamada ≤ 10 s)
   toonstudio storyboard <episódio>          prévia rápida (3 painéis por plano) antes do render caro
   toonstudio board <episódio> <cena> aprovar|rejeitar ["nota"]   decisão de storyboard por plano
   toonstudio krita <arquivo.kra|ora>        abre no Krita (Windows)
@@ -35,6 +36,8 @@ def main(argv=None) -> int:
     sub.add_parser("catalog")
     sg = sub.add_parser("song"); sg.add_argument("op", choices=["import", "analyze"]); sg.add_argument("episode")
     sg.add_argument("file", nargs="?")
+    vn = sub.add_parser("marca"); vn.add_argument("peca", choices=["vinheta", "chamada"]); vn.add_argument("arquivo")
+    vn.add_argument("--inicio", type=float); vn.add_argument("--fim", type=float)
     sb = sub.add_parser("storyboard"); sb.add_argument("episode")
     bd = sub.add_parser("board"); bd.add_argument("episode"); bd.add_argument("scene"); bd.add_argument("decision", choices=["aprovar", "rejeitar"]); bd.add_argument("notes", nargs="?", default="")
     k = sub.add_parser("krita"); k.add_argument("file")
@@ -91,6 +94,13 @@ def main(argv=None) -> int:
                     print(song.analyze(pdir))
                 finally:
                     voice.shutdown()
+            return 0
+        if args.cmd == "marca":
+            from .audio.brand_audio import trim_on_beat
+            lim = 5.0 if args.peca == "vinheta" else 10.0
+            r = trim_on_beat(Path(args.arquivo), args.peca, max_len=lim, min_len=2.5 if args.peca == "vinheta" else 6.0,
+                             start=args.inicio, end=args.fim)
+            print(f"{args.peca}: {r['duracao']}s (trecho {r['inicio']}–{r['fim']}s do original) → {r['arquivo']}")
             return 0
         if args.cmd == "storyboard":
             from .composition.storyboard import build
