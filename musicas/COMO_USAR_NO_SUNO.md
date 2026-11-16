@@ -6,14 +6,14 @@ Cada arquivo em `letras/` tem três blocos para colar no Suno, no modo **Custom*
 2. **Exclude** — o que evitar (lento, triste…), quando a sua versão do Suno tiver esse campo.
 3. **Lyrics** — a letra com as marcações `[Verse]`, `[Chorus]` etc. (o Suno usa as marcações para montar a música).
 
-| # | Música | Ritmo | BPM | Tema / movimentos |
-|---|---|---|---|---|
-| 01 | Zum Zum, Cheguei! | Frevo de carnaval | 160 | Apresentação de Laurinha e Luisinho; agachar, levantar, girar |
-| 02 | Bate Palminha | Pagode | 110 | Bater palmas, bater o pé, amizade; bichinhos tocando instrumentos |
-| 03 | Rock da Escovinha | Rock | 165 | Escovar os dentes (hábito de higiene) |
-| 04 | Axé das Cores | Axé | 140 | Cores (pergunta e resposta), pular, pro lado/pro outro |
-| 05 | Samba dos Números | Samba-enredo | 145 | Contar de 1 a 10 e de 10 a 1, mostrar os dedinhos |
-| 06 | Forró da Lagoa | Forró piseiro | 160 | Bichos da lagoa, arrastar o pé, girar |
+| # | Música | Ritmo (só no campo Style) | BPM | Dia a dia | Curiosidade / aprendizado |
+|---|---|---|---|---|---|
+| 01 | Zum Zum, Cheguei! | Frevo | 160 | acordar, café, arrumar a cama, mochila, tchau pra mamãe | por que a muriçoca faz "zum" (a asinha batendo rápido) |
+| 02 | Bate Palminha | Pagode | 110 | voltar da escola, lavar as mãos, brincar com amigos | dividir o bolo; quem tem amigo nunca fica sozinho |
+| 03 | Sorriso Brilhante | Rock | 165 | escovar os dentes | pasta do tamanho de um grão de feijão, 2 minutinhos, fechar a torneira |
+| 04 | Cadê a Cor? | Axé | 140 | cores do lanche, da mochila | misturar cores: azul+amarelo=verde, vermelho+amarelo=laranja, azul+vermelho=roxo |
+| 05 | Conta Comigo | Samba-enredo | 145 | rotina da manhã (1→10) e da noite (10→1) | quantos dedos, rodas, patinhas da formiga |
+| 06 | Passeio na Lagoa | Forró piseiro | 160 | passeio de domingo com a vovó, protetor e chapéu | o sapo já foi girino |
 
 ## Peças fixas do canal (independentes das músicas)
 - `00_vinheta_abertura.txt` — vinheta de **até 5 s**, no início de todo vídeo.
@@ -21,24 +21,22 @@ Cada arquivo em `letras/` tem três blocos para colar no Suno, no modo **Custom*
 Geradas uma vez, com batida/tom próprios; ficam na biblioteca do canal e entram automaticamente em todos os clipes,
 qualquer que seja o ritmo da música do episódio.
 
-## Regra do canal: toda música tem algo do DIA A DIA da criança
+## Regras das letras
+1. **Nunca citar o ritmo na letra** ("é o rock…", "é o axé…"): o ritmo vai só no campo Style.
+2. **Refrão forte e grudento**, com sílabas divertidas e comandos de dança, repetido 3 vezes.
+3. **Uma curiosidade ou aprendizado** por música (dito de forma divertida).
+4. **Dia a dia da criança** em toda música (abaixo).
+5. O grito "Laurinha e Luisinho!" fica nos intervalos — a vinheta de abertura já apresenta o canal.
+
+### Toda música tem algo do DIA A DIA da criança
 Para gerar identificação, cada letra traz momentos da rotina: acordar, café da manhã, escovar os dentes, lavar as
 mãos, arrumar a cama, guardar os brinquedos, mochila e escola, lanche, dividir com o amigo, banho, hora de dormir,
 passeio com a família. Situações simples e reconhecíveis, com bons hábitos mostrados de forma divertida (nunca
 como bronca).
 
-| Música | Momentos do dia a dia |
-|---|---|
-| Zum Zum, Cheguei! | acordar cedo, café da manhã, calçar o tênis, arrumar a cama, guardar o brinquedo, mochila, tchau pra mamãe |
-| Bate Palminha | voltar da escola, lavar as mãos, lanche, dividir o lanche com o amigo |
-| Rock da Escovinha | escovar os dentes (manhã, depois de comer, antes de dormir) |
-| Axé das Cores | cores da banana do lanche, da mochila, da escovinha |
-| Samba dos Números | rotina da manhã contada de 1 a 10; à noite de 10 a 1: guardar brinquedo, banho, boa noite |
-| Forró da Lagoa | passeio de domingo com a vovó, lanchinho, garrafinha de água |
-
 ## Estrutura padrão do canal (inspirada na análise de clipes infantis de sucesso)
-`Intro + grito "Laurinha e Luisinho!"` → `Verso (4 linhas)` → `Refrão (sílabas divertidas + comandos de dança)` →
-`"Vai!" + 8 s instrumental` → `Verso 2` → `Refrão` → `"Vai!" + 8 s instrumental` → `Refrão` → `Tchau`.
+`Intro (instrumental)` → `Verso (4 linhas)` → `Refrão (sílabas divertidas + comandos de dança)` →
+`"Vai!" + 8 s instrumental` → `Verso 2` → `Refrão` → `Ponte (curiosidade ou brincadeira)` → `"Vai!" + 8 s instrumental` → `Refrão` → `Tchau`.
 Andamento rápido, tom maior, **bateria mais alta que tudo**, duração-alvo **2:45–3:00**.
 Os intervalos instrumentais são os momentos de dança no clipe; o "inscreva-se" entra no vídeo, não na música.
 
