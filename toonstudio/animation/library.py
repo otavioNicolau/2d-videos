@@ -93,9 +93,19 @@ def fly(char, st, a):
     sgn = 1 if to_x >= st["x"] else -1
     keys = [(0.0, {"x": st["x"], "y": st["y"], "turn": sgn * 0.9, "lean": 0.25}, "step"),
             (dur, {"x": to_x, "y": to_y}, a.get("ease", "inout"))]
+    from ..core.registry import character
+    muri = "fly" in character(char).defaults           # muriçocas: asas próprias (ciclo "voo"); Tevico bate os braços-asas
+    if "turn" in a:                                    # voar sem virar de perfil (ex.: subindo de frente)
+        keys[0][1]["turn"] = float(a["turn"])
     if a.get("land", True):
         keys += [(dur + 0.08, {"squash": 0.8, "lean": 0.0}, "out"), (dur + 0.3, {"squash": 1.0}, "back")]
-    return ActionResult(keys=keys, cycle=("flap", 0.22), dur=dur, ex=1, end_state={"x": to_x, "y": to_y, "turn": sgn * 0.9})
+        if muri:
+            keys += [(dur, {"fly": 1.0}, "step"), (dur + 0.02, {"fly": 0.0, "turn": a.get("land_turn", 0.15)}, "step")]
+    elif muri:
+        keys += [(dur, {"fly": 1.0}, "step")]
+    end_turn = float(a.get("turn", sgn * 0.9)) if not (a.get("land", True) and muri) else a.get("land_turn", 0.15)
+    return ActionResult(keys=keys, cycle=("voo", 0.12) if muri else ("flap", 0.22), dur=dur, ex=1,
+                        end_state={"x": to_x, "y": to_y, "turn": end_turn})
 
 
 @action("jump", "basic", "Pulo com agachamento, esticão, arco e aterrissagem.", {"to_x": "x", "to_y": "y", "height": "u", "dur": "s"})

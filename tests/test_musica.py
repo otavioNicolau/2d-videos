@@ -136,3 +136,42 @@ def test_clip_draft_blocks_cover_the_song_and_merge_fill_and_shout():
 def test_official_muricocas_can_fly_in_validation():
     from toonstudio.core.validate import _flies
     assert _flies("laurinha") and _flies("luisinho") and not _flies("caramelo")
+
+
+def test_roteiro_shots_cover_the_block_and_follow_the_lines():
+    from toonstudio.composition.clip_draft import roteiro_bloco
+    b = {"tipo": "verso", "s": 10.0, "e": 20.0, "cantam": ["laurinha"]}
+    lines = [{"s": 10.2, "e": 12.0, "text": "Acordei", "_cantam": ["laurinha"]},
+             {"s": 12.5, "e": 15.0, "text": "Abri a janela", "_cantam": ["laurinha"]},
+             {"s": 15.5, "e": 19.0, "text": "Bom dia", "_cantam": ["laurinha"]}]
+    spec = [{"cenario": "danca_raios_rosa", "atores": {"laurinha": {"x": 640}}},
+            {"cenario": "danca_raios_azul", "atores": {"luisinho": {"x": 960}}},
+            {"cenario": "danca_raios_roxo", "atores": {"laurinha": {"x": 960, "acoes": [{"do": "bacana", "dur": "resto"}]}}}]
+    beats = [10 + i * 0.25 for i in range(41)]
+    cast = {}
+    sc = roteiro_bloco(b, spec, 1, lines, beats, cast, 5)
+    assert len(sc) == 3 and abs(sum(s["duration"] for s in sc) - 10.0) < 1e-3
+    assert [s["description"] for s in sc] == ["Acordei", "Abri a janela", "Bom dia"]
+    assert "sing" not in sc[1]                                  # Luisinho está no plano, mas o verso é da Laurinha
+    assert sc[2]["characters"]["laurinha"]["actions"][0]["dur"] > 3   # "resto" vira a duração até o fim do plano
+    assert "luisinho" in cast and sc[0]["transition_in"]
+
+
+def test_muricoca_flight_lands_with_feet_on_the_ground():
+    from toonstudio.animation.timeline import compile_character
+    from toonstudio.core.registry import character
+    spec = {"start": {"x": 0, "y": 600, "turn": 0.15}, "actions": [{"t": 0.0, "do": "fly", "to_x": 300, "to_y": 1000, "dur": 0.6}]}
+    poses = compile_character(character("laurinha"), spec, 30, 1.5).evaluate_all()
+    assert poses[8]["fly"] > 0.5 and poses[-1]["fly"] < 0.5 and abs(poses[-1]["y"] - 1000) < 1
+
+
+def test_brand_library_renders_props_family_and_scenes():
+    from toonstudio.backgrounds import registry
+    from toonstudio.characters.flat_props import PROPS, ITEMS
+    from toonstudio.core.registry import character
+    for pid in list(PROPS) + ["mamae", "vovo"]:
+        character(pid).render({}, scale=0.2)
+    for item in ITEMS:
+        character("laurinha").render({"holding": item}, scale=0.2)
+    for bg in ("plano_quarto_rosa", "plano_cozinha", "plano_escola", "padrao_bananas_azul"):
+        assert registry.known(bg)

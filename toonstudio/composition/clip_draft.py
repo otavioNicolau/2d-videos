@@ -137,7 +137,16 @@ def rascunho(project_dir: Path, musica: Path, titulo: str | None = None) -> dict
     gancho = f.get("gancho", "").upper().rstrip("!") + "!"
     bordoes = {v["bordao"] for v in composer.vozes()["vozes"].values() if v.get("bordao")}
     scenes, n_ref, n_dan, n_par, n_tr = [], 0, 0, 0, 0
+    rot_p = musica / "roteiro.json"
+    roteiro = json.loads(rot_p.read_text(encoding="utf-8"))["partes"] if rot_p.exists() else {}
+    cast_extra: dict = {}
+    occ: dict = {}
     for bi, b in enumerate(blocos(song)):
+        occ[b["tipo"]] = occ.get(b["tipo"], 0) + 1
+        spec = roteiro.get(f"{b['tipo']}#{occ[b['tipo']]}") or roteiro.get(b["tipo"])
+        if spec:
+            scenes += roteiro_bloco(b, spec, occ[b["tipo"]], lines, beats, cast_extra, len(scenes) + 1)
+            continue
         shots = planos(b, lines, beats)
         if b["tipo"] == "refrao":
             n_ref += 1
@@ -268,7 +277,195 @@ def rascunho(project_dir: Path, musica: Path, titulo: str | None = None) -> dict
                          "fade_out": 0.6, "beat_grid": "full"},
           "captions": {"lyrics": "analise/letra.json", "style": "palavra_a_palavra"},
           "overlays": {"logo": True, "channel": ["LAURINHA", "e Luisinho"]},
-          "cast": {k: {"character": v} for k, v in CAST.items()},
+          "cast": {**{k: {"character": v} for k, v in CAST.items()}, **cast_extra},
           "approval": {"storyboard": False, "final_render": False},
           "scenes": scenes}
     return ep
+
+
+# ───────────────────────── roteiro verso a verso (ADR-0016) ─────────────────────────
+# musicas/<música>/roteiro.json:
+# {"partes": {"intro": [plano…], "verso#1": [...], "refrao": [...], "intervalo#2": [...], ...}}
+# Chave = tipo do bloco + "#n" (ocorrência) ou só o tipo (vale para todas as ocorrências, ex.: o refrão = mesma coreografia).
+# plano = {"linhas": 1, "seg": s (planos sem verso), "cenario": id | [id por ocorrência], "camera": "aberto"|"medio:ator"|
+#          "close:ator"|{x,y,zoom,zoom_fim}, "atores": {nome: {x,y,turn,expr,depth,z,segura,mochila,bigode,acoes:[…],keys:[…]}},
+#          "objetos": {nome: {id?, x,y,z, pose:{…}, keys:[{t,pose}]}}, "fx": [...], "callout": "TEXTO" | [{t,text,…}],
+#          "flash": bool, "transicao": tipo, "cantam": [...], "tela_dividida": {"layout", "paineis": [sub-plano, sub-plano]}}
+# Atuação: "dur": "resto" vai até o fim do plano. O canto (boca) vem da letra: quem canta a parte e está no plano.
+GRAPHIC = ("danca_", "padrao_")
+SING_CAST = ("laurinha", "luisinho")
+
+
+def _bg_width(bg: str) -> float:
+    if bg.startswith(GRAPHIC):
+        return 1920.0
+    from ..backgrounds import registry
+    return float(registry.ensure(bg)["width"])
+
+
+def _camera(spec, bg: str, atores: dict, dur: float) -> dict:
+    graphic = bg.startswith(GRAPHIC)
+    w = _bg_width(bg)
+    if isinstance(spec, dict):
+        x, y, z0 = spec.get("x", w / 2), spec.get("y", 540), spec.get("zoom", 1.0)
+        z1 = spec.get("zoom_fim", z0 + 0.05)
+    else:
+        spec = spec or "aberto"
+        kind, _, who = spec.partition(":")
+        if graphic:
+            x, y = 960, 560
+        else:
+            x, y = w / 2, 540
+        z0 = 1.0
+        if who and who in atores:
+            a = atores[who]
+            x = a.get("x", x)
+            base_y = a.get("y", 1010 if graphic else GROUND)
+            if kind == "medio":
+                y, z0 = base_y - 330, 1.3
+            elif kind == "close":
+                y, z0 = base_y - 380, 1.75
+        z1 = z0 + 0.06
+    if graphic:
+        x = 960 if abs(x - 960) < 1 else x
+    else:
+        x = _clamp_x(x, min(z0, z1), w)
+        half_h = 540 / max(1.0, min(z0, z1))
+        y = max(half_h, min(1080 - half_h, y))
+    return {"keys": [{"t": 0, "x": round(x, 1), "y": round(y, 1), "zoom": z0},
+                     {"t": round(dur, 3), "x": round(x, 1), "y": round(y, 1), "zoom": z1, "ease": "inout"}],
+            "beat": dict(BEAT_CAM)}
+
+
+def _performance(a: dict, dur: float, graphic: bool) -> dict:
+    from ..animation.acting import HOLD_SIDE
+    st = {"x": a.get("x", 960), "y": a.get("y", 1010 if graphic else GROUND), "turn": a.get("turn", 0.15),
+          "expr": a.get("expr", "happy"), "z": a.get("z", 3)}
+    if graphic or "depth" in a:
+        st["depth"] = a.get("depth", 1.3 if graphic else 1.0)
+    for k in ("mochila", "bigode", "fly", "dangle"):
+        if k in a:
+            st[k] = a[k]
+    if a.get("segura"):
+        st.update({"holding": a["segura"], **HOLD_SIDE})
+    if a.get("pose"):
+        st.update(a["pose"])
+    acts = []
+    for ac in a.get("acoes", []):
+        ac = dict(ac)
+        ac.setdefault("t", 0.0)
+        if ac.get("dur") == "resto":
+            ac["dur"] = round(max(0.3, dur - ac["t"]), 3)
+        acts.append(ac)
+    perf = {"start": st, "exposure": 1, "actions": acts}
+    if a.get("keys"):
+        perf["keys"] = a["keys"]
+    return perf
+
+
+def _objetos(objs: dict, cast: dict) -> dict:
+    out = {}
+    for name, o in (objs or {}).items():
+        cid = o.get("id", name)
+        cast[name] = {"character": cid}
+        st = {"x": o.get("x", 960), "y": o.get("y", GROUND), "z": o.get("z", 1), **o.get("pose", {})}
+        if "depth" in o:
+            st["depth"] = o["depth"]
+        perf = {"start": st, "exposure": 1}
+        if o.get("keys"):
+            perf["keys"] = o["keys"]
+        out[name] = perf
+    return out
+
+
+def _plano_scene(p: dict, occ: int, dur: float, plines: list, t0: float, cantam_bloco: list, cast: dict, sid: str) -> dict:
+    bg = p.get("cenario", PARQUE)
+    if isinstance(bg, list):
+        bg = bg[(occ - 1) % len(bg)]
+    graphic = bg.startswith(GRAPHIC)
+    sc: dict = {"id": sid, "title": (plines[0]["text"] if plines else p.get("titulo", "instrumental"))[:60], "duration": dur,
+                "description": " / ".join(l["text"] for l in plines)[:300]}
+    if p.get("tela_dividida"):
+        td = p["tela_dividida"]
+        sc["layout"] = td.get("layout", "diagonal")
+        sc["panels"] = []
+        for sub in td["paineis"]:
+            sub_bg = sub.get("cenario", bg)
+            if isinstance(sub_bg, list):
+                sub_bg = sub_bg[(occ - 1) % len(sub_bg)]
+            g2 = sub_bg.startswith(GRAPHIC)
+            atores = sub.get("atores", {})
+            for w in atores:
+                cast.setdefault(w, {"character": w})
+            panel = {"background": sub_bg, "camera": _camera(sub.get("camera"), sub_bg, atores, dur),
+                     "characters": {w: _performance(a, dur, g2) for w, a in atores.items()}}
+            if sub.get("fx"):
+                panel["fx"] = sub["fx"]
+            sing = [s for w in atores for s in _sing(plines, t0, t0 + dur, p.get("cantam") or cantam_bloco, w) if w in SING_CAST]
+            if sing:
+                panel["sing"] = sing
+            sc["panels"].append(panel)
+        return sc
+    atores = p.get("atores", {})
+    for w in atores:
+        cast.setdefault(w, {"character": w})
+    sc["background"] = bg
+    sc["camera"] = _camera(p.get("camera"), bg, atores, dur)
+    sc["characters"] = {w: _performance(a, dur, graphic) for w, a in atores.items()}
+    props = _objetos(p.get("objetos"), cast)
+    if props:
+        sc["props"] = props
+    if p.get("fx"):
+        sc["fx"] = p["fx"]
+    if p.get("flash"):
+        sc["flash_in"] = True
+    co = p.get("callout")
+    if co:
+        if isinstance(co, str):
+            co = [{"t": 0.2, "text": co}]
+        sc["callouts"] = [{"t": c.get("t", 0.2), "text": c["text"], "dur": c.get("dur", 1.8),
+                           "color": c.get("color", CORES[len(c["text"]) % len(CORES)]), "y": c.get("y", 170)} for c in co]
+    sing = [s for w in atores if w in SING_CAST for s in _sing(plines, t0, t0 + dur, p.get("cantam") or cantam_bloco, w)]
+    if sing:
+        sc["sing"] = sing
+    return sc
+
+
+def roteiro_bloco(b: dict, planos_spec: list, occ: int, lines: list, beats: list, cast: dict, first_sid: int) -> list[dict]:
+    """Planos de um bloco a partir do roteiro: cada plano consome N versos; corte na batida antes do 1º verso do plano."""
+    blines = [l for l in lines if b["s"] - 0.05 <= l["s"] < b["e"] - 0.05]
+    starts, li, t = [], 0, b["s"]
+    for k, p in enumerate(planos_spec):
+        n = int(p.get("linhas", 1 if "seg" not in p else 0))
+        if k == 0:
+            st = b["s"]
+        elif n > 0 and li < len(blines):
+            st = _snap(blines[li]["s"] - 0.12, beats)
+        else:
+            st = t
+        mine = blines[li:li + n] if n > 0 else []
+        li += n
+        starts.append((st, p, mine))
+        t = st + float(p["seg"]) if "seg" in p else (mine[-1]["e"] if mine else st + 2.0)
+    if li < len(blines) and starts:                         # versos que sobraram ficam no último plano
+        st, p, mine = starts[-1]
+        starts[-1] = (st, p, mine + blines[li:])
+    kept: list = []                                       # plano curto demais: some e o anterior absorve versos e tempo
+    for k, (st, p, mine) in enumerate(starts):
+        en = starts[k + 1][0] if k + 1 < len(starts) else b["e"]
+        if _q(en) - _q(st) < 0.6 and kept:
+            kept[-1] = (kept[-1][0], kept[-1][1], kept[-1][2] + mine)
+            continue
+        kept.append((st, p, mine))
+    scenes = []
+    for k, (st, p, mine) in enumerate(kept):
+        en = kept[k + 1][0] if k + 1 < len(kept) else b["e"]
+        t0q, t1q = _q(st), _q(en)
+        sid = f"s{first_sid + len(scenes):02d}_{b['tipo']}"
+        sc = _plano_scene(p, occ, round(t1q - t0q, 4), mine, t0q, b["cantam"], cast, sid)
+        if k == 0 and first_sid > 1:
+            sc["transition_in"] = {"type": p.get("transicao", TRANS[(first_sid + occ) % len(TRANS)]), "dur": 0.4}
+        elif p.get("transicao"):
+            sc["transition_in"] = {"type": p["transicao"], "dur": 0.35}
+        scenes.append(sc)
+    return scenes

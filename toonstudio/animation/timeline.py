@@ -112,6 +112,8 @@ class CharTimeline:
                 w = easing.inout(min(1.0, w))
                 if s.kind == "flap":
                     ov = cycles.flap(t - s.t0, s.T)
+                elif s.kind == "voo":
+                    ov = cycles.voo(t - s.t0, s.T)
                 elif s.kind.startswith("dance:"):
                     ov = cycles.dance(s.kind[6:], t, self.beats, s.amp, s.t0)
                 else:

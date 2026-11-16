@@ -117,6 +117,14 @@ def flap(t: float, T: float = 0.24) -> dict[str, float]:
             "body_y": -6 * up, "tail": 0.25 * up, "squash": 1 + 0.04 * up}
 
 
+def voo(t: float, T: float = 0.12) -> dict[str, float]:
+    """Voo das muriçocas: asas zumbindo (3 poses), perninhas penduradas balançando, braços abertos, corpo flutuando."""
+    u = math.sin(TAU * t / (T * 6))
+    return {"fly": 1.0, "wing_phase": (t / T) % 1.0, "dangle": 0.35 + 0.25 * u,
+            "hand_n_x": -95, "hand_n_y": -10 + 12 * u, "hand_n_bend": 0.4, "paw_n": 3,
+            "hand_f_x": 95, "hand_f_y": -10 - 12 * u, "hand_f_bend": -0.4, "paw_f": 3, "body_y": 5 * u}
+
+
 # ------------------------------------------------------------------ dança no tempo da música (clipes)
 GAITS["luizinho"] = {
     "walk": {"T": 0.7, "S": 64, "lift": 26, "bob": 8, "lean": 0.05, "arm": 1.0, "ex": 1},
