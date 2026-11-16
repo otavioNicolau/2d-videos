@@ -9,9 +9,19 @@ from ..core.config import LIBRARY, ROOT, file_sha
 STATIC = {"floresta_clareira": "forest", "sertao": "sertao", "fofo_parque": "fofo", "fofo_cidade": "fofo", "fofo_praia": "fofo", "plano_parque": "plano"}
 
 
+INTERIOR = ("plano_quarto_rosa", "plano_quarto_azul", "plano_cozinha", "plano_casa_frente", "plano_escola", "plano_ceu")
+
+
 def known(bg_id: str) -> bool:
     if bg_id in STATIC:
         return True
+    if bg_id in INTERIOR:
+        return True
+    if bg_id.startswith("padrao_"):
+        from .dance import COLORS
+        from .interior import MOTIVOS
+        parts = bg_id.split("_", 2)
+        return len(parts) == 3 and parts[1] in MOTIVOS and parts[2] in COLORS
     if bg_id.startswith("danca_"):
         from .dance import COLORS
         parts = bg_id.split("_", 2)
@@ -21,7 +31,9 @@ def known(bg_id: str) -> bool:
 
 def catalog() -> list[str]:
     from .dance import COLORS
-    return sorted(STATIC) + [f"danca_{k}_{c}" for k in ("ondas", "raios", "xadrez", "bolinhas") for c in COLORS]
+    from .interior import MOTIVOS
+    return (sorted(STATIC) + list(INTERIOR) + [f"danca_{k}_{c}" for k in ("ondas", "raios", "xadrez", "bolinhas") for c in COLORS]
+            + [f"padrao_{m}_{c}" for m in MOTIVOS for c in COLORS])
 
 
 def ensure(bg_id: str, scale: float = 1.5) -> dict:
@@ -29,7 +41,7 @@ def ensure(bg_id: str, scale: float = 1.5) -> dict:
     if not known(bg_id):
         raise KeyError(f"cenário desconhecido: {bg_id} (disponíveis: {', '.join(catalog())})")
     out = LIBRARY / "backgrounds" / bg_id / "layers"
-    mod = STATIC.get(bg_id, "dance")
+    mod = STATIC.get(bg_id) or ("interior" if bg_id in INTERIOR or bg_id.startswith("padrao_") else "dance")
     h = file_sha(ROOT / "toonstudio" / "backgrounds" / f"{mod}.py", ROOT / "toonstudio" / "backgrounds" / "painter.py")
     stamp = out / ".hash"
     meta_p = out / "background.json"
@@ -40,6 +52,9 @@ def ensure(bg_id: str, scale: float = 1.5) -> dict:
         elif mod == "sertao":
             from . import sertao
             sertao.build(out, scale=scale)
+        elif mod == "interior":
+            from . import interior
+            interior.build(bg_id, out, scale=scale)
         elif mod == "plano":
             from . import plano
             plano.build(bg_id, out, scale=scale)

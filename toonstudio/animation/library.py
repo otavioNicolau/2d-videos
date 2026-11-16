@@ -358,3 +358,7 @@ def catalog() -> list[dict]:
     out += [{"name": f"expr:{e}", "category": "expression", "description": f"expressão facial {e}", "params": {}}
             for e in EXPRESSIONS]
     return out
+
+
+# ações de atuação (ilustram a letra) — ADR-0016
+from . import acting  # noqa: E402,F401  (registra as ações no REGISTRY)

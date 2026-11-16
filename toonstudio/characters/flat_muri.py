@@ -22,6 +22,7 @@ from .kit import ik2
 H_REF = 470.0
 LINE = H_REF * 0.0115            # ≈ 5,4 unidades — contorno padrão (BÍBLIA §3.1)
 LIMB = LINE * 1.9                # braços/pernas em traço
+ARM_A, ARM_B, ARM_K = 56, 52, 0.82   # braço e antebraço; escala dos alvos das mãos
 PUPIL = "#000000"
 
 
@@ -70,7 +71,7 @@ class FlatMuri(Character):
                 "foot_f_x": 16.0, "foot_f_y": 0.0, "foot_f_bend": 0.0, "foot_f_rot": 0.0,
                 "mouth": "X", "smile": 0.8, "brow_y": 0.2, "blush": 1.0, "stars": 0.0, "speed": 0.0,
                 "holding": "", "wing_phase": 0.0, "bank": 0.0, "dangle": 0.0, "hair_bounce": 0.0,
-                "fly": 0.0, "rot_pivot": 0.55,
+                "fly": 0.0, "rot_pivot": 0.55, "bigode": 0.0, "mochila": 0.0, "buzz": 0.0,
             })
 
     # ------------------------------------------------------------------ primitivas chapadas
@@ -105,14 +106,31 @@ class FlatMuri(Character):
         # asas: as duas ATRÁS do corpo, saindo das costas (de frente abrem para os lados; de perfil vão para trás)
         for side in (-1, 1):
             self._wing(ink, P, T((side * 10 * (1 - s) - f * 10 * s, -66)), f, fly, far=(side == f), side=side, s=s)
+        if P.get("mochila", 0) > 0.5:          # mochila nas costas (atrás do tórax; aparece pelas bordas)
+            self._mochila(ink, T, f, s)
         self._abdomen(ink, T, f)
         self._arm(ink, P, "f", T((lerp(38 * f, 8 * f, s), -62)), f, behind=True)
         self._leg(ink, P, "f", T((lerp(16 * f, 6 * f, s), -2)), f, s, fly, behind=True)
         self._leg(ink, P, "n", T((lerp(-16 * f, -4 * f, s), 0)), f, s, fly, behind=False)
         # tórax (gota) — mesma cor do corpo
         self._shape(ink, [T(p) for p in ((0, -80), (30, -74), (44, -44), (44, -10), (26, 10), (0, 14), (-26, 10), (-44, -10), (-44, -44), (-30, -74))], L.body)
+        if P.get("mochila", 0) > 0.5:          # alças por cima dos ombros
+            for side in (-1, 1):
+                self._line(ink, [T((side * 26 - f * s * 10, -76)), T((side * 30, -20))], "#3E7BD6" if not L.bow else "#F0509A", w=LINE * 1.6)
+        if L.extra.get("colar"):               # colar de bolinhas (mamãe)
+            for j in range(7):
+                a = math.pi * (0.15 + 0.7 * j / 6)
+                q = T((math.cos(a) * 30, -76 + math.sin(a) * 16))
+                ink.dot(q[0], q[1], 6.5, _rgba(L.extra["colar"]))
         self._head(ink, P, C, hv, ht)
         self._arm(ink, P, "n", T((lerp(-38 * f, -6 * f, s), -62)), f, behind=False)
+
+    def _mochila(self, k: Ink, T, f, s):
+        cor = "#3E7BD6" if not self.look.bow else "#F0509A"
+        pts = [T(p) for p in ((-f * 30 - 58, -96), (-f * 30 + 58, -96), (-f * 30 + 62, -6), (-f * 30 - 62, -6))]
+        self._shape(k, pts, cor, smooth=False)
+        a, b = T((-f * 30 - 40, -46)), T((-f * 30 + 40, -46))
+        self._line(k, [a, b], "#FFFFFF", w=LINE * 1.2)
 
     def _abdomen(self, k: Ink, T, f):
         """Barriguinha listrada atrás (gota inclinada para trás/baixo), listras chapadas recortadas."""
@@ -132,7 +150,7 @@ class FlatMuri(Character):
     def _wing(self, k: Ink, P, A, f, fly, far: bool, side: int = 1, s: float = 0.0):
         """Asa chapada branca semitransparente. Batida em 3 poses (sem borrão); parada no chão."""
         ph = P.get("wing_phase", 0.0)
-        if fly > 0.5:
+        if fly > 0.5 or P.get("buzz", 0.0) > 0.5:       # voando ou "batendo as asinhas" no chão
             beat = (0.0, 0.45, 0.9)[int(ph * 3) % 3]          # 3 poses discretas
         else:
             beat = 0.25 + 0.04 * math.sin(ph * 2 * math.pi)
@@ -146,15 +164,20 @@ class FlatMuri(Character):
             self._line(k, [A, (cx, cy), (A[0] + (cx - A[0]) * 1.7, A[1] + (cy - A[1]) * 1.7)], "#9CC9EA", w=LINE * 0.6)
 
     def _arm(self, k: Ink, P, which, S, f, behind):
-        T_ = (S[0] + P[f"hand_{which}_x"] * f * 0.62, S[1] + P[f"hand_{which}_y"] * 0.62)
+        # braços ~30% mais longos que no 1º modelo: os gestos precisam passar da cabeça grande (análise da referência)
+        T_ = (S[0] + P[f"hand_{which}_x"] * f * ARM_K, S[1] + P[f"hand_{which}_y"] * ARM_K)
         bend = P[f"hand_{which}_bend"]
-        E, H = ik2(S, T_, 42, 40, (-f if bend >= 0 else f, 0.4))
+        E, H = ik2(S, T_, ARM_A, ARM_B, (-f if bend >= 0 else f, 0.4))
         col = dark(self.look.body, 0.72 if behind else 0.8)
         self._line(k, [S, E, H], col, w=LIMB)
         d = (H[0] - E[0], H[1] - E[1])
         a0 = math.atan2(d[1], d[0])
         spread = (-0.7, 0.0, 0.7) if P[f"paw_{which}"] >= 2.5 else (-0.35, 0.0, 0.35)
         ln = 15 if P[f"paw_{which}"] >= 2.5 else 10
+        item = P.get("holding", "") if which == "n" else ""
+        if item:                              # objeto na mão (desenhado sob os dedos)
+            from .flat_props import draw_item
+            draw_item(k, item, (H[0] + math.cos(a0) * 8, H[1] + math.sin(a0) * 8), f)
         for a in spread:                      # mão = 3 dedos-traço
             self._line(k, [H, (H[0] + math.cos(a0 + a) * ln, H[1] + math.sin(a0 + a) * ln)], col, w=LIMB * 0.75)
 
@@ -202,9 +225,23 @@ class FlatMuri(Character):
                 a = u * 3.4 * math.pi
                 pts.append((base[0] + (4 + 13 * u) * math.cos(a), base[1] - 40 * u - (4 + 13 * u) * math.sin(a) * 0.45))
             self._line(k, pts, line, w=LINE * 1.3)
+        if L.extra.get("coque"):             # coque da vovó (atrás do topo da cabeça)
+            q = rot((C[0] + f * s * 10, C[1] - r * 0.98), ht, C)
+            self._shape(k, ellipse_pts(q[0], q[1], 46, 40, 0, 24), L.extra["coque"])
+            self._line(k, [(q[0] - 30, q[1] + 18), (q[0] + 30, q[1] + 18)], dark(L.extra["coque"]), w=LINE)
         self._shape(k, ellipse_pts(C[0], C[1], r, r * 0.94, ht, 32), L.body)
+        if L.extra.get("cabelo"):            # franjinha grisalha (vovó)
+            for j in range(5):
+                q = rot((C[0] - 60 + j * 30 + f * s * 10, C[1] - r * 0.82), ht, C)
+                self._shape(k, ellipse_pts(q[0], q[1], 22, 16, 0, 14), L.extra["cabelo"])
         if L.bow:
             self._bow(k, rot((C[0] - 52 * f + f * s * 30, C[1] - r * 0.8), ht, C))
+        if L.extra.get("flor"):              # florzinha no lugar do laço (mamãe)
+            q = rot((C[0] - 56 * f + f * s * 30, C[1] - r * 0.78), ht, C)
+            for j in range(5):
+                a = j * 2 * math.pi / 5
+                self._shape(k, ellipse_pts(q[0] + math.cos(a) * 17, q[1] + math.sin(a) * 17, 14, 14, 0, 12), L.extra["flor"])
+            self._shape(k, ellipse_pts(q[0], q[1], 10, 10, 0, 12), "#FFE066")
         if v.back:
             return
         for side in (-1, 1):                 # bochechas chapadas, sem contorno
@@ -216,8 +253,24 @@ class FlatMuri(Character):
             x, c = v.sphere(C[0], r * 0.78, side * 0.42)
             if c > 0.3:
                 self._eye(k, P, rot((x, C[1] - 8), ht, C), c, side, f, s, line)
+        if L.extra.get("oculos"):            # óculos redondos (vovó)
+            eyes = []
+            for side in (-1, 1):
+                x, c = v.sphere(C[0], r * 0.78, side * 0.42)
+                if c > 0.3:
+                    q = rot((x, C[1] - 8), ht, C)
+                    eyes.append(q)
+                    k.shape(ellipse_pts(q[0], q[1], 34 * c, 34, 0, 20), fill=None,
+                            brush=Brush(LINE * 0.9, 0.0, _rgba("#534946"), 0.0), dense=True, line=LINE * 0.9)
+            if len(eyes) == 2:
+                self._line(k, [(eyes[0][0] + 30, eyes[0][1] - 4), (eyes[1][0] - 30, eyes[1][1] - 4)], "#534946", w=LINE * 0.9)
         nx_, _ = v.sphere(C[0], r * 0.72, 0.0)            # boca sempre dentro da cabeça, inclusive de perfil
         self._mouth(k, P, rot((nx_, C[1] + 52), ht, C), f, s, line)
+        if P.get("bigode", 0) > 0.5:          # bigodinho de leite
+            m = rot((nx_, C[1] + 40), ht, C)
+            pts = [(m[0] - 34, m[1] + 4), (m[0] - 20, m[1] - 8), (m[0], m[1] - 4), (m[0] + 20, m[1] - 8), (m[0] + 34, m[1] + 4),
+                   (m[0] + 18, m[1] + 10), (m[0], m[1] + 6), (m[0] - 18, m[1] + 10)]
+            self._shape(k, pts, "#FFFFFF", line="#C9D6E0")
 
     def _bow(self, k: Ink, B):
         L = self.look
@@ -311,3 +364,8 @@ LAURINHA = FlatLook(body="#F7A8D8", belly_a="#FFE066", belly_b="#F27AB8", shoe="
                     pom="#F0509A", cheek="#FF7FBF", lashes=True, bow="#FFD23F")
 LUISINHO = FlatLook(body="#7CC2F2", belly_a="#FFE066", belly_b="#3E7BD6", shoe="#3E7BD6", sole="#FFA53E",
                     pom="#3E7BD6", cheek="#FF9AAE", curl=True, extra={"sobrancelha": True})
+# família: mamãe e vovó muriçoca (mesmo modelo; acessórios próprios)
+MAMAE = FlatLook(body="#C9A6F2", belly_a="#FFE066", belly_b="#9B6BD9", shoe="#9B6BD9", sole="#FFD23F",
+                 pom="#9B6BD9", cheek="#FF8FC4", lashes=True, extra={"colar": "#FFFFFF", "flor": "#FF7FBF"})
+VOVO = FlatLook(body="#8FD9C4", belly_a="#FFE066", belly_b="#3FA98C", shoe="#E9545D", sole="#FFFFFF",
+                pom="#3FA98C", cheek="#FF9AAE", lashes=True, extra={"oculos": True, "coque": "#E4E4EE", "cabelo": "#E4E4EE"})

@@ -15,6 +15,12 @@ CHARACTERS["luizinho_muricoca"] = lambda: Muricoca("luizinho_muricoca", "Luizinh
 from ..characters.flat_muri import LAURINHA as _FL, LUISINHO as _FU, FlatMuri
 CHARACTERS["laurinha"] = lambda: FlatMuri("laurinha", "Laurinha", _FL)      # estilo oficial (BIBLIA_VISUAL.md)
 CHARACTERS["luisinho"] = lambda: FlatMuri("luisinho", "Luisinho", _FU)
+from ..characters.flat_muri import MAMAE as _FM, VOVO as _FV
+CHARACTERS["mamae"] = lambda: FlatMuri("mamae", "Mamãe", _FM)
+CHARACTERS["vovo"] = lambda: FlatMuri("vovo", "Vovó", _FV)
+from ..characters.flat_props import PROPS as _PROPS
+for _pid, _cls in _PROPS.items():
+    CHARACTERS[_pid] = _cls
 # a turma do canal (modelo chibi): construída a partir do visual de cada criança
 for _cid, (_name, _look) in TURMA.items():
     CHARACTERS.setdefault(_cid, (lambda c=_cid, n=_name, l=_look: Chibi(c, n, l)))

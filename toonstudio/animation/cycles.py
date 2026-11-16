@@ -280,8 +280,56 @@ CHOREO: dict[str, tuple[float, list[tuple[float, dict]]]] = {
                "hand_f_bend": -0.4, "paw_n": 3, "paw_f": 3, "head_tilt": 0.05}),
         (0.5, {"rot": 0.05, "hand_n_x": -40, "hand_n_y": -60, "hand_f_x": 80, "hand_f_y": -60, "head_tilt": -0.05}),
     ]),
+    # ---- passos das MURIÇOCAS (BIBLIA_VISUAL; ADR-0016): de frente, sem giro do corpo e sem pula-pula; ligados à letra
+    # "bati as asinhas": cotovelos batendo como asinhas + asas zumbindo (3 poses de asa por batida)
+    "asinhas": (1, [
+        (0.0, {"hand_n_x": -60, "hand_n_y": -50, "hand_n_bend": 0.95, "paw_n": 1, "hand_f_x": 60, "hand_f_y": -50,
+               "hand_f_bend": -0.95, "paw_f": 1, "buzz": 1.0, "wing_phase": 0.15, "body_y": 2, "head_tilt": 0.04}),
+        (0.33, {"hand_n_x": -105, "hand_n_y": 10, "hand_f_x": 105, "hand_f_y": 10, "wing_phase": 0.5, "body_y": -2}),
+        (0.66, {"hand_n_x": -70, "hand_n_y": -40, "hand_f_x": 70, "hand_f_y": -40, "wing_phase": 0.85, "body_y": 1,
+                "head_tilt": -0.04}),
+    ]),
+    # passo de frevo com a sombrinha no alto: joelho alternado, corpo inclina para o lado do joelho
+    "frevo": (2, [
+        (0.0, {"foot_n_y": -34, "foot_n_bend": 0.8, "foot_f_y": 0, "lean": -0.1, "body_y": 4, "hand_n_x": -135,
+               "hand_n_y": -20, "hand_n_bend": 0.5, "paw_n": 1, "hand_f_x": 115, "hand_f_y": 10, "hand_f_bend": -0.3,
+               "paw_f": 3, "head_tilt": 0.08}),
+        (0.5, {"foot_n_y": 0, "foot_n_bend": 0.1, "foot_f_y": 0, "lean": 0.0, "body_y": -2, "head_tilt": 0.0}),
+        (1.0, {"foot_f_y": -34, "foot_f_bend": 0.8, "foot_n_y": 0, "lean": 0.1, "body_y": 4, "hand_f_x": 95,
+               "hand_f_y": -30, "head_tilt": -0.08}),
+        (1.5, {"foot_f_y": 0, "foot_f_bend": 0.1, "lean": 0.0, "body_y": -2, "hand_f_x": 115, "hand_f_y": 10, "head_tilt": 0.0}),
+    ]),
+    # agacha (2 tempos) e levanta com braços para cima (2 tempos)
+    "agacha": (4, [
+        (0.0, {"body_y": 0, "squash": 1.0, "hand_n_x": -55, "hand_n_y": 75, "hand_f_x": 55, "hand_f_y": 75}),
+        (0.8, {"body_y": 46, "squash": 0.9, "hand_n_x": 30, "hand_n_y": 95, "hand_f_x": 30, "hand_f_y": 95, "foot_n_bend": 0.7,
+               "foot_f_bend": 0.7, "paw_n": 1, "paw_f": 1}),
+        (2.0, {"body_y": 46, "squash": 0.9}),
+        (2.6, {"body_y": -6, "squash": 1.04, "hand_n_x": -130, "hand_n_y": -140, "hand_f_x": 130, "hand_f_y": -140,
+               "foot_n_bend": 0.1, "foot_f_bend": 0.1, "paw_n": 3, "paw_f": 3}),
+        (3.6, {"body_y": -6, "squash": 1.04}),
+    ]),
+    # passo para o lado de frente (sem girar), braços balançando junto
+    "lado_frente": (2, [
+        (0.0, {"body_x": -30, "body_y": 3, "lean": -0.06, "foot_n_x": -50, "foot_f_x": 0, "hand_n_x": -110, "hand_n_y": 0,
+               "hand_f_x": 30, "hand_f_y": 40, "paw_n": 3, "paw_f": 1, "head_tilt": 0.08}),
+        (0.5, {"body_x": 0, "body_y": -2, "lean": 0.0, "foot_n_x": -20, "foot_f_x": 20, "hand_n_x": -50, "hand_n_y": 40,
+               "hand_f_x": 50, "hand_f_y": 40, "head_tilt": 0.0}),
+        (1.0, {"body_x": 30, "body_y": 3, "lean": 0.06, "foot_n_x": 0, "foot_f_x": 50, "hand_n_x": -30, "hand_n_y": 40,
+               "hand_f_x": 110, "hand_f_y": 0, "paw_n": 1, "paw_f": 3, "head_tilt": -0.08}),
+        (1.5, {"body_x": 0, "body_y": -2, "lean": 0.0, "foot_n_x": -20, "foot_f_x": 20, "hand_n_x": -50, "hand_n_y": 40,
+               "hand_f_x": 50, "hand_f_y": 40, "head_tilt": 0.0}),
+    ]),
+    # festa: braços em V alternando (sem girar), cabeça acompanhando
+    "festa": (2, [
+        (0.0, {"hand_n_x": -130, "hand_n_y": -140, "hand_n_bend": 0.5, "paw_n": 3, "hand_f_x": 70, "hand_f_y": 20,
+               "hand_f_bend": -0.3, "paw_f": 3, "head_tilt": 0.1, "body_y": 3}),
+        (1.0, {"hand_n_x": -70, "hand_n_y": 20, "hand_n_bend": 0.3, "hand_f_x": 130, "hand_f_y": -140, "hand_f_bend": -0.5,
+               "head_tilt": -0.1, "body_y": 3}),
+    ]),
 }
 ALIASES = {"bob": "balanco"}
+DANCE_WITH_ITEM = {"frevo"}        # passos em que a mão que segura o objeto (sombrinha) também dança
 DANCES = tuple(CHOREO) + tuple(ALIASES)
 _CAT = ("paw_n", "paw_f")
 _SCALE = {"body_x", "body_y", "lean", "turn+", "head_tilt", "head_dx", "head_dy", "foot_n_y", "foot_f_y", "hat_tilt", "tail_wag"}

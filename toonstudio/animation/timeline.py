@@ -121,14 +121,17 @@ class CharTimeline:
                         base = k[:-1]
                         p[base] = p.get(base, 0.0) + v * w
                         continue
-                    if p.get("holding") and (k.startswith("hand_n") or k == "paw_n"):
-                        continue                      # a mão que segura o objeto não entra no ciclo
+                    if p.get("holding") and (k.startswith("hand_n") or k == "paw_n") and \
+                            not (s.kind.startswith("dance:") and s.kind[6:] in cycles.DANCE_WITH_ITEM):
+                        continue                      # a mão que segura o objeto não entra no ciclo (exceto passos COM o objeto)
                     if isinstance(v, (int, float)) and k not in CATEGORICAL:
                         p[k] = p.get(k, 0.0) * (1 - w) + v * w
                     elif w > 0.5:
                         p[k] = v
                 active = active or w > 0.5
-        if p.get("holding") and "hand_n_x" not in self.channels:
+        item_dance = any(s.kind.startswith("dance:") and s.kind[6:] in cycles.DANCE_WITH_ITEM and s.t0 <= t <= s.t1
+                         for s in self.segments)
+        if p.get("holding") and "hand_n_x" not in self.channels and not item_dance:
             p.update({"hand_n_x": 62.0, "hand_n_y": 38.0, "hand_n_bend": 0.4, "paw_n": 0})    # carrega à frente, na altura da barriga (rosto livre)
         if not active:
             for k, v in cycles.breathe(t).items():
