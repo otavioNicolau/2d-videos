@@ -495,7 +495,7 @@ class Episode:
                          float(ov.get("card_dur", 5.0)), callouts)
         filt = f"ass={assf}:fontsdir={LIBRARY / 'fonts'}"
         if ov.get("logo"):
-            ch = ov.get("channel", ["LAURINHA", "e Luizinho"])
+            ch = ov.get("channel", ["LAURINHA", "e Luisinho"])
             lg = brand.logo(self.build / "logo.png", height=118, line1=ch[0], line2=ch[1])
             # -loop 1: a logo (imagem parada) vale para o vídeo inteiro, mesmo se o filtro reiniciar
             return ["-loop", "1", "-i", str(lg), "-filter_complex", f"[0:v][2:v]overlay=28:14:shortest=1[l];[l]{filt}[v]",

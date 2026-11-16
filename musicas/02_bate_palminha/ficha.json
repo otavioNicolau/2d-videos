@@ -1,0 +1,52 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Bate Palminha",
+ "tipo": "brincadeira",
+ "tema": "brincar com os amigos depois da escola",
+ "dia_a_dia": [
+  "voltar da escola",
+  "largar a mochila",
+  "lavar as mãos",
+  "chamar os amigos",
+  "dividir o lanche"
+ ],
+ "curiosidade": "quem tem amigo nunca fica sozinho; dividir faz a festa ficar maior",
+ "ritmo": "pagodao",
+ "bpm": 135,
+ "estrutura": "A",
+ "voz": "dueto",
+ "cantam": {
+  "verso 1": "laurinha",
+  "verso 2": "luisinho",
+  "refrão": "coro"
+ },
+ "cenas": [
+  {
+   "parte": "verso 1",
+   "ideia": "Laurinha chega da escola, lava as mãos com espuma, chama a turma no jardim"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "roda de amigos (joaninha, formiga), palmas e pezinho em sincronia com plá-plá e tum-tum"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "joaninha reparte o bolo de fubá; a formiga chega atrasada e ganha a melhor fatia"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "só palmas, só pezinho, abraço coletivo; câmera abre para mostrar todos"
+  },
+  {
+   "parte": "intervalo",
+   "ideia": "fundo danca_bolinhas_*, todos dançando o mesmo passo"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [],
+ "status": "letra_revisada",
+ "versoes": []
+}

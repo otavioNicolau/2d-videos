@@ -24,6 +24,7 @@ Personagens e universos **sempre originais** — referências clássicas só com
 
 ## Regras
 - **Identidade visual: [BIBLIA_VISUAL.md](BIBLIA_VISUAL.md) é a base obrigatória** de todo personagem, animal, objeto e cenário. Mudanças só com autorização do usuário.
+- **Identidade musical: [musicas/BIBLIA_MUSICAL.md](musicas/BIBLIA_MUSICAL.md) é a base obrigatória** de toda música (ritmo por tema, bordões, letra, estruturas, avaliação). Ritmos em `musicas/estilos.json`, vozes em `musicas/vozes.json`.
 - Código funcional não prova qualidade artística: renderizar, **olhar os quadros** (pranchas) e corrigir.
 - Nada de imagem estática deslizando no lugar de animação.
 - Não esconder limitações; aprovação humana antes do render final.

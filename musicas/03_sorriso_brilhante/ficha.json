@@ -1,0 +1,56 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Sorriso Brilhante",
+ "tipo": "rotina",
+ "tema": "escovar os dentes",
+ "dia_a_dia": [
+  "acordar despenteado",
+  "escovar os dentes",
+  "escovar a língua",
+  "fechar a torneira"
+ ],
+ "curiosidade": "pasta do tamanho de um grão de feijão, 2 minutinhos e torneira fechada para não gastar água",
+ "ritmo": "rock_infantil",
+ "bpm": 165,
+ "estrutura": "A",
+ "voz": "dueto",
+ "cantam": {
+  "verso 1": "luisinho",
+  "verso 2": "laurinha",
+  "ponte": "laurinha pergunta, coro responde",
+  "refrão": "coro"
+ },
+ "cenas": [
+  {
+   "parte": "intro",
+   "ideia": "Luisinho acorda com a antena torta, cabelo pro ar; riff de guitarra no corte"
+  },
+  {
+   "parte": "verso 1",
+   "ideia": "close na pasta do tamanho de um grão de feijão (objeto gigante no mundo pequenino)"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "escova vira guitarra; movimentos pra cima, pra baixo e rodinha; brilho \"tim-tim\" no sorriso"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "Laurinha escova a linguinha e fecha a torneira; gota de água gigante agradece"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "pergunta e resposta com o coro: manhã, lanche, antes de dormir"
+  },
+  {
+   "parte": "intervalo",
+   "ideia": "solo de guitarra com a escova; fundo danca_raios_*"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [],
+ "status": "letra_revisada",
+ "versoes": []
+}

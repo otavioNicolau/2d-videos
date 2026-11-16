@@ -1,0 +1,48 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Passeio na Lagoa",
+ "tipo": "animal",
+ "tema": "passeio de domingo na lagoa com a vovó",
+ "dia_a_dia": [
+  "passeio com a família",
+  "lanchinho e garrafinha",
+  "protetor solar",
+  "chapéu"
+ ],
+ "curiosidade": "o sapo já foi girino e nadava com rabo como um peixinho",
+ "ritmo": "forro_piseiro",
+ "bpm": 160,
+ "estrutura": "A",
+ "voz": "dueto",
+ "cantam": {
+  "verso 1": "luisinho",
+  "verso 2": "laurinha",
+  "ponte": "coro",
+  "refrão": "coro"
+ },
+ "cenas": [
+  {
+   "parte": "verso 1",
+   "ideia": "Luisinho e a vovó saindo com lanche, protetor e chapéu; lagoa ao fundo"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "arrastar o pé na beira da lagoa; sapos e patos dançando junto"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "Laurinha conta a história do girino: quadros em sequência (girino → perninhas → sapo)"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "pato faz quém-quém, sapo faz croac, as muriçocas fazem zum-zum"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [],
+ "status": "letra_revisada",
+ "versoes": []
+}

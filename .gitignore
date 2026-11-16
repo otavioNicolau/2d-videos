@@ -22,3 +22,7 @@ projects/*/musica/
 projects/*/analise/
 projects/*/musica
 projects/*/analise
+# versões de músicas geradas no Suno (áudio do usuário — nunca versionar)
+musicas/**/*.wav
+musicas/**/*.mp3
+musicas/**/*.m4a

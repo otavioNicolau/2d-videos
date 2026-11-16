@@ -1,0 +1,27 @@
+{
+ "schema": "vozes-1.0",
+ "nota": "Vozes oficiais (BIBLIA_MUSICAL.md, seção 3). Nunca inventar voz nova por música. 'suno_persona' fica vazio até a Persona ser criada no Suno; depois registre o nome exato e de qual música/versão ela veio.",
+ "vozes": {
+  "laurinha": {
+   "descricao": "menina, clara, doce e firme; a mais velha da turma, puxa a brincadeira",
+   "style": "cheerful girl child vocal",
+   "tag": "Laurinha, girl child vocal",
+   "bordao": "Bora, turminha!",
+   "suno_persona": null, "criada_de": null
+  },
+  "luisinho": {
+   "descricao": "menino, animado e brincalhão; o sapeca que se empolga",
+   "style": "playful boy child vocal",
+   "tag": "Luisinho, boy child vocal",
+   "bordao": "Zum-zum, que massa!",
+   "suno_persona": null, "criada_de": null
+  },
+  "dueto": {
+   "descricao": "Laurinha e Luisinho alternando versos e cantando juntos o refrão",
+   "style": "cheerful girl and boy child vocals, duet",
+   "tag": "Laurinha and Luisinho",
+   "suno_persona": null, "criada_de": null
+  }
+ },
+ "coro": {"style": "kids choir shouts", "tag": "kids choir"}
+}

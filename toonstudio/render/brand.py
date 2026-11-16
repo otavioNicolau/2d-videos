@@ -1,4 +1,4 @@
-"""Identidade do canal "Luizinho e Turminha" (logo) e textos na tela (letra palavra a palavra, avisos) em ASS/libass."""
+"""Identidade do canal "Laurinha e Luisinho" (logo) e textos na tela (letra palavra a palavra, avisos) em ASS/libass."""
 from __future__ import annotations
 
 from pathlib import Path
@@ -10,7 +10,7 @@ from ..core.config import LIBRARY
 FONT = LIBRARY / "fonts" / "Poppins-ExtraBold.ttf"
 
 
-def logo(out: Path, height: int = 150, line1: str = "LAURINHA", line2: str = "e Luizinho") -> Path:
+def logo(out: Path, height: int = 150, line1: str = "LAURINHA", line2: str = "e Luisinho") -> Path:
     """Selo do canal: nuvem amarela com borda vermelha, nome principal e complemento, contorno branco."""
     tf = skia.Typeface.MakeFromFile(str(FONT))
     W, H = int(height * 2.6), height

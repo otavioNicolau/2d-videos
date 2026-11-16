@@ -1,0 +1,51 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Conta Comigo",
+ "tipo": "educativa",
+ "tema": "contar de 1 a 10 na rotina",
+ "dia_a_dia": [
+  "acordar e se espreguiçar",
+  "calçar o sapato",
+  "pegar o lanche",
+  "chegar na escola",
+  "guardar o brinquedo",
+  "banho",
+  "pijama"
+ ],
+ "curiosidade": "mão tem 5 dedos, bicicleta 2 rodas, formiga 6 patinhas",
+ "ritmo": "samba_enredo",
+ "bpm": 145,
+ "estrutura": "F",
+ "voz": "dueto",
+ "cantam": {
+  "verso 1": "laurinha",
+  "verso 2": "luisinho pergunta, coro responde",
+  "ponte": "laurinha",
+  "refrão": "coro"
+ },
+ "cenas": [
+  {
+   "parte": "verso 1",
+   "ideia": "números grandes aparecem a cada ação da manhã (1, 2, 3…)"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "mãos mostrando 3, 5 e 10 dedos; desfile de escola de samba com os bichinhos"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "mão, bicicleta, formiga aparecem para contar; corações enchendo a tela no \"um montão\""
+  },
+  {
+   "parte": "ponte",
+   "ideia": "contagem regressiva da noite (10→1), luz baixando; no \"acorda!\" a festa volta"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [],
+ "status": "letra_revisada",
+ "versoes": []
+}

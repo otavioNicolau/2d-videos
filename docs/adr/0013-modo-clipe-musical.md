@@ -20,3 +20,7 @@ pelo Claude no chat; o pipeline anima e monta. Referência de gênero apenas: na
 ## Consequências
 O episódio "A Torta do Caramelo" (schema 1.0) continua válido. O gargalo de render (Godot na CPU) precisa ser resolvido
 antes da produção em lote.
+
+## Atualização · 2026-11-16
+O canal passou a se chamar **Laurinha e Luisinho**; os protagonistas são as muriçocas chapadas de `characters/flat_muri.py`
+(base: BIBLIA_VISUAL.md). As músicas seguem a [BIBLIA_MUSICAL.md](../../musicas/BIBLIA_MUSICAL.md) — ver ADR-0015.

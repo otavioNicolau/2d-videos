@@ -1,0 +1,192 @@
+{
+ "schema": "estilos-1.0",
+ "nota": "Biblioteca de ritmos do canal (BIBLIA_MUSICAL.md, seção 4). Termos do Style em inglês (o Suno entende melhor). Andamento em BPM: [mínimo, máximo, padrão].",
+ "canal": {
+  "sempre": "major key, happy, Brazilian Portuguese",
+  "coro": "kids choir shouts",
+  "exclude_sempre": ["sad", "explicit", "dark", "long intro"]
+ },
+ "peso": {
+  "forte": {
+   "descricao": "festa: bateria e percussão na frente, virada antes de cada refrão, intervalos só de batucada",
+   "style": "heavy drum-driven beat, drums loudest in the mix, big drum fills before every chorus, percussion breakdowns",
+   "exclude": ["slow", "ballad", "soft drums", "weak drums", "quiet beat", "acoustic only"],
+   "intervalo": "[Drum Break - {s} seconds, heavy drums and percussion only]"
+  },
+  "media": {
+   "descricao": "groove forte e bem marcado, percussão presente",
+   "style": "strong punchy groove, drums upfront, clear beat",
+   "exclude": ["slow", "ballad", "weak drums", "quiet beat"],
+   "intervalo": "[Instrumental Break - {s} seconds, percussion and groove]"
+  },
+  "marcada": {
+   "descricao": "groove marcado e dançante, sem bateria pesada",
+   "style": "steady marked groove, clear danceable beat, light percussion",
+   "exclude": ["heavy drums", "aggressive", "distorted guitars", "ballad", "lullaby", "sleepy"],
+   "intervalo": "[Instrumental Break - {s} seconds, groove and percussion]"
+  }
+ },
+ "ritmos": {
+  "frevo": {
+   "nome": "Frevo pernambucano", "bpm": [150, 170, 160], "peso": "forte",
+   "genero": "frevo pernambucano, Brazilian carnival",
+   "bateria": "marching snare rolls, surdo, frevo snare groove",
+   "instrumentos": "big brass band, trumpets, trombones, saxophones",
+   "clima": "euphoric street carnival",
+   "temas": ["carnaval", "festa", "euforia", "bicho que pula", "bicho que voa", "voar"],
+   "estruturas": ["A", "D", "C"],
+   "exclude": []
+  },
+  "marchinha": {
+   "nome": "Marchinha de carnaval", "bpm": [120, 138, 128], "peso": "forte",
+   "genero": "marchinha de carnaval, Brazilian carnival march",
+   "bateria": "marching snare, bass drum on every beat, crash cymbals",
+   "instrumentos": "brass band, tuba, trumpets, clarinet",
+   "clima": "festive sing-along",
+   "temas": ["carnaval", "fantasia", "desfile", "rotina", "humor"],
+   "estruturas": ["A", "C"],
+   "exclude": []
+  },
+  "axe": {
+   "nome": "Axé", "bpm": [130, 145, 140], "peso": "forte",
+   "genero": "axé music, Bahia carnival",
+   "bateria": "samba-reggae drums, timbau, surdo, repique",
+   "instrumentos": "electric guitar, brass stabs",
+   "clima": "euphoric party, call and response",
+   "temas": ["dança", "comandos", "cores", "festa", "pular"],
+   "estruturas": ["B", "D", "A"],
+   "exclude": []
+  },
+  "pagodao": {
+   "nome": "Pagodão baiano", "bpm": [128, 140, 135], "peso": "forte",
+   "genero": "pagodão baiano, Bahia party percussion",
+   "bateria": "timbau, surdo, repique, tantã, pandeiro, loud claps",
+   "instrumentos": "cavaquinho, bass",
+   "clima": "euphoric, call and response",
+   "temas": ["amizade", "roda", "palmas", "dança", "comandos"],
+   "estruturas": ["A", "D", "B"],
+   "exclude": []
+  },
+  "forro_piseiro": {
+   "nome": "Forró piseiro", "bpm": [150, 170, 160], "peso": "forte",
+   "genero": "forró piseiro, northeastern Brazil party",
+   "bateria": "electronic kick on every beat, zabumba, triângulo",
+   "instrumentos": "sanfona accordion, keyboard, bass",
+   "clima": "festa junina energy",
+   "temas": ["são joão", "roça", "bichos do campo", "passeio", "dança", "arrastar o pé"],
+   "estruturas": ["A", "D", "E"],
+   "exclude": []
+  },
+  "forro_pe_de_serra": {
+   "nome": "Forró pé de serra", "bpm": [120, 145, 132], "peso": "media",
+   "genero": "forró pé de serra, traditional northeastern Brazil",
+   "bateria": "zabumba, triângulo",
+   "instrumentos": "sanfona accordion, acoustic bass",
+   "clima": "joyful country dance",
+   "temas": ["são joão", "roça", "família", "comida típica", "bichos do campo"],
+   "estruturas": ["A", "E", "C"],
+   "exclude": ["electronic", "synth"]
+  },
+  "baiao": {
+   "nome": "Baião", "bpm": [115, 135, 125], "peso": "media",
+   "genero": "baião, northeastern Brazil",
+   "bateria": "zabumba baião groove, triângulo, agogô",
+   "instrumentos": "sanfona accordion, viola caipira",
+   "clima": "bouncy and proud",
+   "temas": ["sertão", "bichos", "historinha", "viagem", "trem"],
+   "estruturas": ["E", "A", "C"],
+   "exclude": ["electronic", "synth"]
+  },
+  "xote": {
+   "nome": "Xote", "bpm": [90, 110, 100], "peso": "marcada",
+   "genero": "xote, northeastern Brazil, swaying couple dance",
+   "bateria": "zabumba xote groove, triângulo",
+   "instrumentos": "sanfona accordion, acoustic guitar",
+   "clima": "sweet and swaying",
+   "temas": ["carinho", "família", "bicho lento", "chuva", "fim de tarde", "abraço"],
+   "estruturas": ["A", "E"],
+   "exclude": ["electronic", "synth"]
+  },
+  "samba_infantil": {
+   "nome": "Samba infantil", "bpm": [95, 115, 105], "peso": "media",
+   "genero": "samba, Brazilian kids samba, roda de samba",
+   "bateria": "pandeiro, surdo, tamborim, chocalho, claps",
+   "instrumentos": "cavaquinho, 7-string acoustic guitar",
+   "clima": "warm and joyful",
+   "temas": ["amizade", "roda", "família", "comida", "festa em casa"],
+   "estruturas": ["A", "B", "C"],
+   "exclude": ["electronic", "synth"]
+  },
+  "samba_enredo": {
+   "nome": "Samba-enredo", "bpm": [140, 150, 145], "peso": "forte",
+   "genero": "samba-enredo, escola de samba carnival parade",
+   "bateria": "full bateria, surdos marking the beat, caixa, tamborim, agogô, cuíca, whistle",
+   "instrumentos": "cavaquinho",
+   "clima": "grand parade",
+   "temas": ["desfile", "contagem", "grande festa", "carnaval", "história do bairro"],
+   "estruturas": ["F", "A", "E"],
+   "exclude": []
+  },
+  "batucada": {
+   "nome": "Batucada (percussão brasileira)", "bpm": [120, 140, 130], "peso": "forte",
+   "genero": "Brazilian batucada, drum line party",
+   "bateria": "surdo, caixa, repique, timbau, agogô, whistle",
+   "instrumentos": "kids chant over drums",
+   "clima": "tribal fun, call and response",
+   "temas": ["dança", "comandos", "corpo", "sons", "percussão corporal"],
+   "estruturas": ["B", "D"],
+   "exclude": ["guitar solo"]
+  },
+  "ciranda": {
+   "nome": "Ciranda", "bpm": [95, 115, 105], "peso": "marcada",
+   "genero": "ciranda pernambucana, circle dance, swaying",
+   "bateria": "bombo marking every beat, ganzá, caixa",
+   "instrumentos": "acoustic guitar, flute, light brass",
+   "clima": "gentle and joyful, everyone holding hands",
+   "temas": ["roda", "amizade", "mar", "praia", "carinho", "voar"],
+   "estruturas": ["A", "C"],
+   "exclude": ["electronic", "synth"]
+  },
+  "pop_infantil": {
+   "nome": "Pop infantil", "bpm": [115, 130, 124], "peso": "media",
+   "genero": "upbeat kids pop, bright and catchy",
+   "bateria": "four-on-the-floor kick, handclaps, snappy snare",
+   "instrumentos": "synths, ukulele, glockenspiel, bass",
+   "clima": "sunny and bouncy",
+   "temas": ["rotina", "banho", "escola", "cores", "formas", "amizade"],
+   "estruturas": ["A", "B", "F"],
+   "exclude": []
+  },
+  "reggae_infantil": {
+   "nome": "Reggae infantil", "bpm": [78, 95, 86], "peso": "marcada",
+   "genero": "kids reggae, sunny and relaxed",
+   "bateria": "one drop drum groove, rimshot, shaker",
+   "instrumentos": "skank guitar, organ bubble, bass",
+   "clima": "happy and laid back",
+   "temas": ["chuva", "natureza", "bicho lento", "praia", "preguiça", "calma alegre"],
+   "estruturas": ["A", "E"],
+   "exclude": []
+  },
+  "rock_infantil": {
+   "nome": "Rock infantil", "bpm": [150, 170, 165], "peso": "forte",
+   "genero": "energetic kids rock, shout-along",
+   "bateria": "punk-rock drumming, crash cymbals, driving kick",
+   "instrumentos": "distorted electric guitars, catchy guitar riff, bass, short guitar solo",
+   "clima": "adventurous",
+   "temas": ["aventura", "desafio", "energia", "dinossauro", "super-herói", "escovar os dentes"],
+   "estruturas": ["A", "E", "D"],
+   "exclude": ["screaming", "metal growl"]
+  },
+  "funk_infantil": {
+   "nome": "Funk brasileiro infantil", "bpm": [125, 150, 130], "peso": "forte",
+   "genero": "Brazilian funk for kids, clean and playful",
+   "bateria": "tamborzão beat, beatbox, loud claps",
+   "instrumentos": "funk synth stabs, vocal chops",
+   "clima": "playful dance party",
+   "temas": ["dança", "comandos", "comida", "parou", "imitar"],
+   "estruturas": ["D", "B", "A"],
+   "exclude": ["adult themes", "sensual", "aggressive", "distorted bass"],
+   "cuidados": "sem gírias de baile, sem passos sensuais; comandos de brincadeira (pula, para, gira, abaixa)"
+  }
+ }
+}

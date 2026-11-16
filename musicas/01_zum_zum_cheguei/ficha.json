@@ -1,0 +1,62 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Zum Zum, Cheguei!",
+ "tipo": "rotina",
+ "tema": "acordar e se arrumar para a escola",
+ "dia_a_dia": [
+  "acordar",
+  "café da manhã",
+  "arrumar a cama",
+  "pentear o cabelo",
+  "mochila",
+  "tchau pra mamãe e pra vovó"
+ ],
+ "curiosidade": "o zum-zum da muriçoca é a asinha batendo bem rápido",
+ "ritmo": "frevo",
+ "bpm": 160,
+ "estrutura": "A",
+ "voz": "dueto",
+ "cantam": {
+  "verso 1": "laurinha",
+  "verso 2": "luisinho",
+  "ponte": "dueto",
+  "refrão": "coro"
+ },
+ "cenas": [
+  {
+   "parte": "intro",
+   "ideia": "as duas muriçocas entram voando pela janela no nascer do sol (plano_parque); \"zum\" no corte"
+  },
+  {
+   "parte": "verso 1",
+   "ideia": "Laurinha abre a janela, toma o leite, ajeita o laço; ações em sincronia com cada verso"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "fundo de dança (danca_raios_*), passo \"bater as asinhas\" e voo curto no \"voei\""
+  },
+  {
+   "parte": "intervalo",
+   "ideia": "Laurinha grita o bordão; tela dividida com os dois dançando frevo com sombrinha"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "Luisinho arruma a cama, penteia o topete, pega a mochila, dá tchau"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "close nas asas batendo (câmera lenta divertida); agacha e levanta com o coro"
+  },
+  {
+   "parte": "final",
+   "ideia": "os dois voam para a escola e dão tchau para a câmera"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [],
+ "status": "letra_revisada",
+ "versoes": []
+}

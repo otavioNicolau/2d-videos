@@ -1,0 +1,46 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Cadê a Cor?",
+ "tipo": "educativa",
+ "tema": "cores e misturas de cores",
+ "dia_a_dia": [
+  "lanche (morango, banana)",
+  "mochila",
+  "pintura"
+ ],
+ "curiosidade": "azul + amarelo = verde, vermelho + amarelo = laranja, azul + vermelho = roxo",
+ "ritmo": "axe",
+ "bpm": 140,
+ "estrutura": "B",
+ "voz": "dueto",
+ "cantam": {
+  "verso 1": "laurinha pergunta, coro responde",
+  "verso 2": "luisinho mistura, coro responde",
+  "refrão": "coro"
+ },
+ "cenas": [
+  {
+   "parte": "verso 1",
+   "ideia": "cada cor perguntada \"acende\" o objeto: morango, banana, mochila, folha"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "pula-pula com fundo trocando de cor a cada batida forte; arco-íris no final"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "Luisinho mistura tintas em potinhos gigantes; a cor nova explode em bolinhas"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "pro lado, pro outro, roda e pula: coreografia simples em tela dividida"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [],
+ "status": "letra_revisada",
+ "versoes": []
+}
