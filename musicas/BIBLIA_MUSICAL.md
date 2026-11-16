@@ -73,9 +73,12 @@ Toda música transmite: alegria, energia, diversão, criatividade, movimento, mu
 - **Vozes fixas, nunca inventar voz nova por música.** As Personas oficiais ficam em [vozes.json](vozes.json):
   `laurinha`, `luisinho` e `dueto`. Enquanto não forem criadas no Suno, o campo `suno_persona` fica vazio
   e o Style usa a descrição padrão da voz.
-- Criar a Persona: gerar a música até a voz ficar boa → menu da música (⋯) → Create Persona → registrar o nome em `vozes.json`.
+- Criar a voz: gerar a música até a voz ficar boa → na biblioteca, menu da música (⋯) → **Create → Voice** (a antiga
+  "Persona" virou "Voice" no Suno de 2026) → registrar o nome em `vozes.json`. Usar com **+ Voice**; o Suno confirma
+  Voices no modelo v5.5.
 - **Limite honesto:** marcações como `[Verse - Laurinha, girl child vocal]` são dicas; o Suno não garante duas vozes
-  distintas e constantes na mesma faixa. Toda versão é conferida de ouvido.
+  distintas e constantes na mesma faixa. Confirmado na 1ª música (16/11/2026): as duas versões cantaram os versos da
+  Laurinha e do Luisinho com a mesma voz (~350 Hz). Toda versão é conferida de ouvido e medida.
 - **Pronúncia em português do Brasil:** escrever como se canta; evitar palavras estrangeiras; se o Suno errar uma
   palavra, reescrever a grafia (sílabas com hífen, acento) e gerar de novo. A medição (seção 8) aponta as palavras erradas.
 

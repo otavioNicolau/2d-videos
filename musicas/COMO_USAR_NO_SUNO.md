@@ -34,11 +34,11 @@ cada música tem a sua pasta `<nº>_<nome>/` com `ficha.json` e `letra.txt`.
 
 ## Dicas para sair bom
 - Gere **2 a 4 versões** de cada e escolha a melhor; ouça se as palavras saíram claras.
-- **Mesma voz em todas as músicas — Personas oficiais** (`laurinha`, `luisinho`, `dueto`, em [vozes.json](vozes.json)):
-  gere a música até a voz ficar do seu gosto; na biblioteca, abra o menu da música (⋯) → **Create Persona**; me diga o
-  nome que você deu e de qual música/versão veio, para eu registrar. Nas próximas, selecione a Persona no modo Custom.
-  Ela mantém o estilo da voz, mas pode variar um pouco. Se o seu plano tiver **Voices**, tende a ser mais fiel.
-  (Nomes de botões mudam com as versões do Suno.)
+- **Mesma voz em todas as músicas — vozes oficiais** (`laurinha`, `luisinho`, `dueto`, em [vozes.json](vozes.json)).
+  No Suno atual (v5.5/v6, nov/2026) a antiga **Persona** virou **Voice**: na biblioteca, abra a música escolhida →
+  **⋯** → **Create** → **Voice**; dê o nome e me diga qual é, para eu registrar. Nas próximas, use **+ Voice** no painel
+  de criação. A ajuda do Suno confirma o uso de Voices com o modelo **v5.5**; se o v6 não aceitar, troque para v5.5.
+  Ela mantém o estilo da voz, mas pode variar um pouco — gere 2–3 versões e escolha. (Nomes de botões mudam com as versões.)
 - Duração-alvo: **2:20 a 2:50**.
 - **Nunca fique com a primeira versão:** baixe as 2–4 versões em **WAV** (ou MP3) para `~/2d/musicas/<nº>_<nome>/versoes/`;
   o estúdio mede cada uma (andamento, começo, pronúncia) e você escolhe.

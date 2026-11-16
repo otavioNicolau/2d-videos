@@ -1,0 +1,115 @@
+{
+ "schema": "avaliacao-1.0",
+ "versoes": {
+  "v1": {
+   "arquivo": "v1.wav",
+   "duracao": 132.4,
+   "bpm": 161.5,
+   "bpm_nota": "",
+   "tom": "Sol maior",
+   "voz_inicio": 6.25,
+   "refrao_inicio": 36.5,
+   "cantado": 74,
+   "intervalos": [
+    [
+     7.2,
+     7.2
+    ],
+    [
+     50.0,
+     2.5
+    ],
+    [
+     106.2,
+     6.8
+    ]
+   ],
+   "fim_depois_da_voz": 1.1,
+   "final": "esmaecendo",
+   "silencio_final": 0.5,
+   "acerto": 61,
+   "nao_reconhecidas": [
+    "laurinha",
+    "luisinho",
+    "bati",
+    "asinhas",
+    "festa",
+    "carrinho",
+    "abri",
+    "bebi",
+    "comi",
+    "laco",
+    "enroladinho",
+    "gente"
+   ],
+   "pontos_a_conferir": [
+    "voz só entra em 6.25 s (ideal ≤ 5 s)",
+    "só 61% da letra reconhecida — ouvir a pronúncia"
+   ]
+  },
+  "v2": {
+   "arquivo": "v2.wav",
+   "duracao": 131.6,
+   "bpm": 161.5,
+   "bpm_nota": "",
+   "tom": "Fá maior",
+   "voz_inicio": 6.1,
+   "refrao_inicio": 37.1,
+   "cantado": 77,
+   "intervalos": [
+    [
+     7.2,
+     6.9
+    ],
+    [
+     107.1,
+     4.8
+    ],
+    [
+     124.9,
+     2.5
+    ]
+   ],
+   "fim_depois_da_voz": 1.5,
+   "final": "esmaecendo",
+   "silencio_final": 0.7,
+   "acerto": 75,
+   "nao_reconhecidas": [
+    "luisinho",
+    "asinhas",
+    "cedinho",
+    "janela",
+    "acordei",
+    "abri",
+    "comi",
+    "bora",
+    "enroladinho",
+    "asinha",
+    "turma"
+   ],
+   "pontos_a_conferir": [
+    "voz só entra em 6.1 s (ideal ≤ 5 s)",
+    "só 75% da letra reconhecida — ouvir a pronúncia"
+   ]
+  }
+ },
+ "ouvido": {
+  "v1": {
+   "1 começo chama atenção": null,
+   "5 melodia combina com a letra": null,
+   "6 dá vontade de dançar": null,
+   "7 pronúncia natural": null,
+   "8 tem a cara do canal": null,
+   "9 nenhum trecho cansativo": null
+  },
+  "v2": {
+   "1 começo chama atenção": null,
+   "5 melodia combina com a letra": null,
+   "6 dá vontade de dançar": null,
+   "7 pronúncia natural": null,
+   "8 tem a cara do canal": null,
+   "9 nenhum trecho cansativo": null
+  }
+ },
+ "escolhida": null
+}
