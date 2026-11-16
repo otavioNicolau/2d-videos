@@ -81,6 +81,9 @@ Toda música transmite: alegria, energia, diversão, criatividade, movimento, mu
   Laurinha e do Luisinho com a mesma voz (~350 Hz). Toda versão é conferida de ouvido e medida.
 - **Pronúncia em português do Brasil:** escrever como se canta; evitar palavras estrangeiras; se o Suno errar uma
   palavra, reescrever a grafia (sílabas com hífen, acento) e gerar de novo. A medição (seção 8) aponta as palavras erradas.
+- **Nomes do canal:** o Suno tende a cantar "Larinha". Em falas curtas (vinheta, chamada) escrever **"Lau-ri-nha"** e
+  **"Lu-i-si-nho"**; sempre dentro de uma frase em português e com "native Brazilian Portuguese accent" no Style
+  (outros sotaques no Exclude). Frase isolada dá sotaque estrangeiro.
 
 ## 4. Escolha do ritmo
 
