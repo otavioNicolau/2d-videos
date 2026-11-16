@@ -21,6 +21,21 @@ Cada arquivo em `letras/` tem três blocos para colar no Suno, no modo **Custom*
 Geradas uma vez, com batida/tom próprios; ficam na biblioteca do canal e entram automaticamente em todos os clipes,
 qualquer que seja o ritmo da música do episódio.
 
+## Regra do canal: toda música tem algo do DIA A DIA da criança
+Para gerar identificação, cada letra traz momentos da rotina: acordar, café da manhã, escovar os dentes, lavar as
+mãos, arrumar a cama, guardar os brinquedos, mochila e escola, lanche, dividir com o amigo, banho, hora de dormir,
+passeio com a família. Situações simples e reconhecíveis, com bons hábitos mostrados de forma divertida (nunca
+como bronca).
+
+| Música | Momentos do dia a dia |
+|---|---|
+| Zum Zum, Cheguei! | acordar cedo, café da manhã, calçar o tênis, arrumar a cama, guardar o brinquedo, mochila, tchau pra mamãe |
+| Bate Palminha | voltar da escola, lavar as mãos, lanche, dividir o lanche com o amigo |
+| Rock da Escovinha | escovar os dentes (manhã, depois de comer, antes de dormir) |
+| Axé das Cores | cores da banana do lanche, da mochila, da escovinha |
+| Samba dos Números | rotina da manhã contada de 1 a 10; à noite de 10 a 1: guardar brinquedo, banho, boa noite |
+| Forró da Lagoa | passeio de domingo com a vovó, lanchinho, garrafinha de água |
+
 ## Estrutura padrão do canal (inspirada na análise de clipes infantis de sucesso)
 `Intro + grito "Laurinha e Luisinho!"` → `Verso (4 linhas)` → `Refrão (sílabas divertidas + comandos de dança)` →
 `"Vai!" + 8 s instrumental` → `Verso 2` → `Refrão` → `"Vai!" + 8 s instrumental` → `Refrão` → `Tchau`.
