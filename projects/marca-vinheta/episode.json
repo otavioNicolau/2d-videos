@@ -2,7 +2,7 @@
   "schema": "1.1",
   "id": "marca-vinheta",
   "title": "Vinheta — Laurinha e Luisinho",
-  "logline": "Peça fixa do canal: abertura com a vinheta cantada no Suno (voz natural, sem processamento).",
+  "logline": "Peça fixa do canal: vinheta = repetição do tema 'Zum Zum' (Suno), áudio original.",
   "fps": 30,
   "resolution": [
     1920,
@@ -10,10 +10,10 @@
   ],
   "background": "plano_ceu",
   "soundtrack": {
-    "file": "musica/suno.wav",
+    "file": "musica/tema_v2.wav",
     "analysis": "analise/song.json",
     "start": 0.0,
-    "end": 3.6,
+    "end": 3.62,
     "fade_out": 0.0,
     "beat_grid": "full"
   },
@@ -39,7 +39,7 @@
     {
       "id": "s01_vinheta",
       "title": "Vinheta Laurinha e Luisinho",
-      "duration": 3.6,
+      "duration": 3.62,
       "background": "plano_ceu",
       "camera": {
         "keys": [
@@ -50,7 +50,7 @@
             "zoom": 1.0
           },
           {
-            "t": 3.6,
+            "t": 3.62,
             "x": 1300,
             "y": 540,
             "zoom": 1.06,
@@ -83,58 +83,53 @@
               "do": "fly",
               "to_x": 640,
               "to_y": 940,
-              "dur": 0.32
+              "dur": 0.3
             },
             {
-              "t": 1.3,
-              "do": "wave",
-              "dur": 0.8
-            },
-            {
-              "t": 2.2,
+              "t": 1.66,
               "do": "dance",
               "style": "asinhas",
-              "dur": 1.4
+              "dur": 1.96
             }
           ],
           "keys": [
             {
-              "t": 0.04,
+              "t": 0.08,
               "pose": {
                 "mouth": "D"
               },
               "ease": "step"
             },
             {
-              "t": 0.214,
+              "t": 0.194,
               "pose": {
                 "mouth": "X"
               },
               "ease": "step"
             },
             {
-              "t": 0.33,
+              "t": 0.27,
               "pose": {
                 "mouth": "C"
               },
               "ease": "step"
             },
             {
-              "t": 0.504,
+              "t": 0.384,
               "pose": {
                 "mouth": "X"
               },
               "ease": "step"
             },
             {
-              "t": 0.62,
+              "t": 0.46,
               "pose": {
                 "mouth": "D"
               },
               "ease": "step"
             },
             {
-              "t": 0.794,
+              "t": 0.574,
               "pose": {
                 "mouth": "X"
               },
@@ -153,72 +148,72 @@
           "exposure": 1,
           "actions": [
             {
-              "t": 0.95,
+              "t": 0.55,
               "do": "fly",
               "to_x": 1960,
               "to_y": 940,
-              "dur": 0.32,
+              "dur": 0.3,
               "land_turn": -0.15
             },
             {
-              "t": 2.2,
+              "t": 1.66,
               "do": "dance",
               "style": "asinhas",
-              "dur": 1.4
+              "dur": 1.96
             }
           ],
           "keys": [
             {
-              "t": 1.0,
+              "t": 0.8,
               "pose": {
                 "mouth": "D"
               },
               "ease": "step"
             },
             {
-              "t": 1.174,
+              "t": 0.914,
               "pose": {
                 "mouth": "X"
               },
               "ease": "step"
             },
             {
-              "t": 1.29,
+              "t": 0.99,
               "pose": {
                 "mouth": "C"
               },
               "ease": "step"
             },
             {
-              "t": 1.464,
+              "t": 1.104,
               "pose": {
                 "mouth": "X"
               },
               "ease": "step"
             },
             {
-              "t": 1.58,
+              "t": 1.18,
               "pose": {
                 "mouth": "D"
               },
               "ease": "step"
             },
             {
-              "t": 1.754,
+              "t": 1.294,
               "pose": {
                 "mouth": "X"
               },
               "ease": "step"
             },
             {
-              "t": 1.87,
+              "t": 1.37,
               "pose": {
                 "mouth": "C"
               },
               "ease": "step"
             },
             {
-              "t": 2.044,
+              "t": 1.484,
               "pose": {
                 "mouth": "X"
               },
@@ -245,45 +240,84 @@
               "ease": "step"
             },
             {
-              "t": 0.22,
+              "t": 0.2,
               "pose": {
                 "escala": 1.15
               },
               "ease": "out"
             },
             {
-              "t": 0.4,
+              "t": 0.38,
               "pose": {
                 "escala": 1.0
               },
               "ease": "inout"
             },
             {
-              "t": 2.2,
+              "t": 1.68,
               "pose": {
                 "escala": 1.0,
                 "giro": 0.0
               }
             },
             {
-              "t": 2.35,
+              "t": 1.78,
               "pose": {
-                "escala": 1.08,
-                "giro": 0.05
+                "escala": 1.07,
+                "giro": 0.04
               },
               "ease": "out"
             },
             {
-              "t": 2.55,
+              "t": 1.92,
               "pose": {
                 "escala": 1.0,
-                "giro": -0.03
+                "giro": 0.0
               },
               "ease": "inout"
             },
             {
-              "t": 2.75,
+              "t": 2.62,
               "pose": {
+                "escala": 1.0,
+                "giro": 0.0
+              }
+            },
+            {
+              "t": 2.72,
+              "pose": {
+                "escala": 1.07,
+                "giro": 0.04
+              },
+              "ease": "out"
+            },
+            {
+              "t": 2.8600000000000003,
+              "pose": {
+                "escala": 1.0,
+                "giro": 0.0
+              },
+              "ease": "inout"
+            },
+            {
+              "t": 2.94,
+              "pose": {
+                "escala": 1.0,
+                "giro": 0.0
+              }
+            },
+            {
+              "t": 3.04,
+              "pose": {
+                "escala": 1.07,
+                "giro": 0.04
+              },
+              "ease": "out"
+            },
+            {
+              "t": 3.1799999999999997,
+              "pose": {
+                "escala": 1.0,
                 "giro": 0.0
               },
               "ease": "inout"

@@ -117,3 +117,30 @@ def vinheta_suno_episode(dur: float = 3.6) -> dict:
     ep["soundtrack"].update({"file": "musica/suno.wav", "end": dur})
     ep["logline"] = "Peça fixa do canal: abertura com a vinheta cantada no Suno (voz natural, sem processamento)."
     return ep
+
+
+def vinheta_tema_episode(dur: float = 3.62) -> dict:
+    """Vinheta oficial (16/11/2026): repetição nº 2 do tema "Zum Zum" do Suno, áudio original sem processar.
+    Palavras (transcrição): "Laurinha" 0,0–0,64 · "Luisinho" 0,78–1,56 · "zum" 1,68 / 2,62 / 2,94 s."""
+    ep = vinheta_episode(dur, falas=False)
+    sc = ep["scenes"][0]
+    sc["camera"]["keys"][-1]["t"] = dur
+    zums = (1.68, 2.62, 2.94)
+    la = {"start": {"x": -260, "y": 760, "turn": 0.9, "expr": "joy", "z": 3}, "exposure": 1,
+          "actions": [{"t": 0.0, "do": "fly", "to_x": 640, "to_y": 940, "dur": 0.3},
+                      {"t": 1.66, "do": "dance", "style": "asinhas", "dur": round(dur - 1.66, 3)}],
+          "keys": _boca(0.08, 3, 0.19)}
+    lu = {"start": {"x": 2900, "y": 760, "turn": -0.9, "expr": "joy", "z": 3}, "exposure": 1,
+          "actions": [{"t": 0.55, "do": "fly", "to_x": 1960, "to_y": 940, "dur": 0.3, "land_turn": -0.15},
+                      {"t": 1.66, "do": "dance", "style": "asinhas", "dur": round(dur - 1.66, 3)}],
+          "keys": _boca(0.8, 4, 0.19)}
+    lk = [{"t": 0.0, "pose": {"escala": 0.0}, "ease": "step"}, {"t": 0.2, "pose": {"escala": 1.15}, "ease": "out"},
+          {"t": 0.38, "pose": {"escala": 1.0}, "ease": "inout"}]
+    for z in zums:                                     # o logo balança em cada "zum"
+        lk += [{"t": z, "pose": {"escala": 1.0, "giro": 0.0}}, {"t": z + 0.1, "pose": {"escala": 1.07, "giro": 0.04}, "ease": "out"},
+               {"t": z + 0.24, "pose": {"escala": 1.0, "giro": 0.0}, "ease": "inout"}]
+    sc.update({"duration": dur, "characters": {"laurinha": la, "luisinho": lu},
+               "props": {"logo": {"start": {"x": 1300, "y": 780, "z": 1, "escala": 0.0}, "exposure": 1, "keys": lk}}})
+    ep["soundtrack"].update({"file": "musica/tema_v2.wav", "end": dur})
+    ep["logline"] = "Peça fixa do canal: vinheta = repetição do tema 'Zum Zum' (Suno), áudio original."
+    return ep
