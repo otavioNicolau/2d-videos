@@ -397,8 +397,19 @@ class Episode:
         tmp.mkdir()
         log(f"  Godot: compondo {n} quadros")
         t = time.time()
-        p = subprocess.run([tool("godot"), "--path", str(GODOT_PROJECT), "--write-movie", str(tmp / "f.png"),
-                            "--fixed-fps", str(self.fps), "--", f"--job={job}"], capture_output=True, timeout=1800)
+        override = GODOT_PROJECT / "override.cfg"
+        if (self.W, self.H) != (1920, 1080):        # o Movie Maker grava no tamanho de tela do projeto (fixo na abertura):
+            override.write_text(                     # vídeo vertical (Short) usa override.cfg só durante esta gravação
+                "[display]\n\n"
+                f"window/size/viewport_width={self.W}\nwindow/size/viewport_height={self.H}\n"
+                f"window/size/window_width_override={self.W // 4}\nwindow/size/window_height_override={self.H // 4}\n",
+                encoding="utf-8")
+        try:
+            p = subprocess.run([tool("godot"), "--path", str(GODOT_PROJECT), "--write-movie", str(tmp / "f.png"),
+                                "--fixed-fps", str(self.fps), "--", f"--job={job}"], capture_output=True, timeout=1800)
+        finally:
+            if override.exists():
+                override.unlink()
         outp = (p.stdout + p.stderr).decode("utf-8", "replace")
         if "COMPOSITOR_ERROR" in outp or "SCRIPT ERROR" in outp or "Parse Error" in outp:
             raise StudioError("Godot falhou:\n" + "\n".join(l for l in outp.splitlines() if "ERROR" in l or "Error" in l)[:2000])

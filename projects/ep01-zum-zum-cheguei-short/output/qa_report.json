@@ -1,0 +1,35 @@
+{
+  "episode": "ep01-zum-zum-cheguei-short",
+  "scenes": {
+    "s02_refrao": {
+      "frames": 22,
+      "performers": {
+        "laurinha": {
+          "drawings": 22,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 21
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 22,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 21
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    }
+  },
+  "warnings": [
+    "render final ainda não aprovado (approval.final_render = false): será gerado como CANDIDATO"
+  ],
+  "lines": {},
+  "video": "/home/otavio/2d/projects/ep01-zum-zum-cheguei-short/output/ep01-zum-zum-cheguei-short_CANDIDATO.mp4",
+  "contact_sheet": "/home/otavio/2d/projects/ep01-zum-zum-cheguei-short/output/prancha.png",
+  "approved": false
+}

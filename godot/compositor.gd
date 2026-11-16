@@ -49,6 +49,11 @@ func _ready() -> void:
 		return
 	job = parsed
 	frames = int(job["frames"])
+	# tamanho do quadro do VÍDEO (deitado 1920×1080 ou vertical 1080×1920 para Shorts): o projeto tem 1920×1080 fixo,
+	# então a janela e a área de desenho são ajustadas por job (o Movie Maker grava nesse tamanho)
+	var res := Vector2i(int(job["resolution"][0]), int(job["resolution"][1]))
+	get_window().content_scale_size = res
+	get_window().size = res
 	RenderingServer.set_default_clear_color(Color(0, 0, 0))
 	for l in job["layers"]:
 		var s := Sprite2D.new()

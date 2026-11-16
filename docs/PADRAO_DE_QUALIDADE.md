@@ -26,7 +26,7 @@ melhor que o anterior.** Este documento é obrigatório, como a [BIBLIA_VISUAL.m
 - [ ] Gestos visíveis (fora da cabeça), sem pula-pula, sem tremelique, pés no chão depois de pousar
 - [ ] Ninguém pisa na água, atravessa móvel ou some na borda sem querer
 - [ ] Legenda = letra exata (sem marcações do Suno, sem parênteses)
-- [ ] Número de quadros de cada plano = duração × 30; vídeo e áudio com a mesma duração (`ffprobe`)
+- [ ] Número de quadros de cada plano = duração × 30; vídeo e áudio com a mesma duração e o TAMANHO certo (`ffprobe`: 1920×1080 ou 1080×1920 no Short)
 - [ ] Quadros extraídos do MP4 final em pelo menos 10 momentos e olhados um a um
 - [ ] Testes do projeto passando
 
@@ -43,3 +43,4 @@ melhor que o anterior.** Este documento é obrigatório, como a [BIBLIA_VISUAL.m
 | 16/11 | Risco de 1 s de dessincronia a partir de 1:41 | tela dividida guardava quadros antigos | pasta limpa + trava de duração na montagem | item da conferência (quadros × duração) |
 | 16/11 | Voz da vinheta robotizada (2×) | voz sintetizada no estúdio; depois voz separada da música (Demucs) e recortada | áudio do Suno usado como veio, sem processar | **nunca usar voz separada/recortada para ouvir** — separação só para análise (boca, letra); fala sempre do Suno, inteira |
 | 16/11 | Corte da vinheta pegou o fim do "Luisinho" anterior | corte pela grade de batidas, não pela voz | corte dentro das pausas de respiração da voz | cortes de fala/canto sempre nas pausas da voz (nunca só pela batida) |
+| 16/11 | 1º render do Short saiu deitado e esticado | o Godot grava no tamanho de tela fixo do projeto (1920×1080) | `override.cfg` com o tamanho do vídeo durante a gravação | conferir `ffprobe` (largura × altura) de todo vídeo antes de entregar |
