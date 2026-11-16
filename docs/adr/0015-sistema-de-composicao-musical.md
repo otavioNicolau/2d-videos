@@ -21,8 +21,8 @@ O Suno não tem API pública (só um programa de parceiros fechado desde jul/202
 - **F5** `song analyze --musica`: a letra CONHECIDA é alinhada letra a letra à transcrição (tolera "zunzun ceguei"),
   palavras sem correspondência vão para os trechos com voz, linhas esticadas por repetições do Suno são corrigidas pela
   estrutura (intervalo antes/depois); saem `letra.json` (legenda/boca com o texto exato) e as partes com quem canta.
-  `toonstudio clipe rascunho` gera o `episode.json` a partir das partes (cortes na batida, parque nos versos em lugares
-  fora da lagoa, close/dupla/voo, fundos de dança e tela dividida nos refrões, gancho e bordões na tela) — rascunho para
+  `toonstudio clipe montar` gera o `episode.json` a partir das partes (cortes na batida, parque nos versos em lugares
+  fora da lagoa, close/dupla/voo, fundos de dança e tela dividida nos refrões, gancho e bordões na tela) — base para
   o storyboard; o refinamento é manual.
 - Pendente: F6 piloto (ep01) e a montagem com vinheta no início e chamada no fim.
 

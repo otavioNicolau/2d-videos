@@ -2,7 +2,7 @@
   "schema": "1.1",
   "id": "ep01-zum-zum-cheguei",
   "title": "Zum Zum, Cheguei!",
-  "logline": "Clipe de \"Zum Zum, Cheguei!\" — acordar e se arrumar para a escola. Rascunho gerado (clip_draft) para revisão.",
+  "logline": "Clipe de \"Zum Zum, Cheguei!\" — acordar e se arrumar para a escola. Montado do roteiro verso a verso (roteiro.json).",
   "fps": 30,
   "resolution": [
     1920,
@@ -64,7 +64,7 @@
     }
   },
   "approval": {
-    "storyboard": true,
+    "storyboard": false,
     "final_render": false
   },
   "scenes": [

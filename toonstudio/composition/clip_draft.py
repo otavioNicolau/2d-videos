@@ -1,4 +1,7 @@
-"""Rascunho de clipe a partir das partes da música (ADR-0015, F5).
+"""Montagem do clipe a partir das partes da música e do ROTEIRO verso a verso (ADR-0015/0016).
+
+PADRAO_DE_QUALIDADE.md: nada de rascunho — sem roteiro completo, a montagem é recusada. O gerador genérico abaixo só
+existe para testes internos (`permitir_generico=True`) e nunca é usado para entregar clipe.
 
 Entrada: `analise/song.json` com letra conhecida alinhada (`song analyze --musica`) + ficha da música.
 Saída: `episode.json` (schema 1.1) para revisar no storyboard ANTES do render. É um ponto de partida: as regras abaixo
@@ -125,7 +128,7 @@ def _cam(x, y, z0, z1, dur, largura: float | None = None):
             "beat": dict(BEAT_CAM)}
 
 
-def rascunho(project_dir: Path, musica: Path, titulo: str | None = None) -> dict:
+def rascunho(project_dir: Path, musica: Path, titulo: str | None = None, permitir_generico: bool = False) -> dict:
     from ..audio import composer
     song = json.loads((project_dir / "analise" / "song.json").read_text(encoding="utf-8"))
     if not song.get("sections"):
@@ -139,6 +142,16 @@ def rascunho(project_dir: Path, musica: Path, titulo: str | None = None) -> dict
     scenes, n_ref, n_dan, n_par, n_tr = [], 0, 0, 0, 0
     rot_p = musica / "roteiro.json"
     roteiro = json.loads(rot_p.read_text(encoding="utf-8"))["partes"] if rot_p.exists() else {}
+    if not permitir_generico:                 # PADRAO_DE_QUALIDADE.md: nada de rascunho — roteiro completo, verso a verso
+        cont: dict = {}
+        faltam = []
+        for b in blocos(song):
+            cont[b["tipo"]] = cont.get(b["tipo"], 0) + 1
+            if not (roteiro.get(f"{b['tipo']}#{cont[b['tipo']]}") or roteiro.get(b["tipo"])):
+                faltam.append(f"{b['tipo']}#{cont[b['tipo']]} ({b['s']:.1f}–{b['e']:.1f}s)")
+        if faltam:
+            raise ValueError(f"roteiro incompleto em {rot_p}: faltam as partes {', '.join(faltam)} "
+                             "(padrão de qualidade: todo verso precisa de cena própria)")
     cast_extra: dict = {}
     occ: dict = {}
     for bi, b in enumerate(blocos(song)):
@@ -271,7 +284,7 @@ def rascunho(project_dir: Path, musica: Path, titulo: str | None = None) -> dict
         scenes[-1]["transition_out"] = "fade"
     total = round(sum(s["duration"] for s in scenes), 4)
     ep = {"schema": "1.1", "id": project_dir.name, "title": titulo or f["titulo"],
-          "logline": f"Clipe de \"{f['titulo']}\" — {f.get('tema', '')}. Rascunho gerado (clip_draft) para revisão.",
+          "logline": f"Clipe de \"{f['titulo']}\" — {f.get('tema', '')}. Montado do roteiro verso a verso (roteiro.json).",
           "fps": FPS, "resolution": [1920, 1080], "background": PARQUE,
           "soundtrack": {"file": "musica/trabalho.wav", "analysis": "analise/song.json", "start": 0.0, "end": total,
                          "fade_out": 0.6, "beat_grid": "full"},
