@@ -42,3 +42,4 @@ melhor que o anterior.** Este documento é obrigatório, como a [BIBLIA_VISUAL.m
 | 16/11 | Parênteses do coro na legenda | texto do Suno usado direto | legenda sem marcações | item da conferência |
 | 16/11 | Risco de 1 s de dessincronia a partir de 1:41 | tela dividida guardava quadros antigos | pasta limpa + trava de duração na montagem | item da conferência (quadros × duração) |
 | 16/11 | Voz da vinheta robotizada (2×) | voz sintetizada no estúdio; depois voz separada da música (Demucs) e recortada | áudio do Suno usado como veio, sem processar | **nunca usar voz separada/recortada para ouvir** — separação só para análise (boca, letra); fala sempre do Suno, inteira |
+| 16/11 | Corte da vinheta pegou o fim do "Luisinho" anterior | corte pela grade de batidas, não pela voz | corte dentro das pausas de respiração da voz | cortes de fala/canto sempre nas pausas da voz (nunca só pela batida) |
