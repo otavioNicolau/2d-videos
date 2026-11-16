@@ -72,7 +72,7 @@ ScaledBorderAndShadow: yes
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
 Style: Letra,Poppins ExtraBold,72,&H004DE1FF,&H004DE1FF,&H00102040,&H80000000,0,0,0,0,100,100,1,0,1,6,3,2,80,80,58,1
 Style: Aviso,Poppins ExtraBold,40,&H00FFFFFF,&H00FFFFFF,&H00000000,&HB0000000,0,0,0,0,100,100,0,0,3,14,0,5,160,160,40,1
-Style: Destaque,Poppins ExtraBold,150,&H003FD2FF,&H003FD2FF,&H001565E0,&H00000000,0,0,0,0,100,100,2,0,1,12,0,5,40,40,40,1
+Style: Destaque,Poppins ExtraBold,{150 if W >= H else 110},&H003FD2FF,&H003FD2FF,&H001565E0,&H00000000,0,0,0,0,100,100,2,0,1,12,0,5,40,40,40,1
 Style: Rodape,Poppins ExtraBold,24,&H00FFFFFF,&H00FFFFFF,&H00000000,&H90000000,0,0,0,0,100,100,0,0,3,6,0,9,40,40,30,1
 
 [Events]
@@ -95,7 +95,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
         # palavra de destaque: nasce do zero, passa do tamanho (overshoot), assenta e balança; some encolhendo
         d = float(c.get("dur", 1.2))
         fill, border = CALLOUT_COLORS.get(c.get("color", "amarelo"), CALLOUT_COLORS["amarelo"])
-        y = int(c.get("y", 210))
+        y = int(c.get("y", 210)) if W >= H else int(c.get("y", 210) * H / 1080) + 60   # vertical: abaixo do logo
         ms = int(d * 1000)
         anim = (f"\\pos({W // 2},{y})\\c{fill}\\3c{border}\\fscx0\\fscy0\\frz-8"
                 f"\\t(0,180,\\fscx125\\fscy125\\frz4)\\t(180,320,\\fscx100\\fscy100\\frz-3)"

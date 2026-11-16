@@ -142,7 +142,7 @@ def publicar(project: str, musica: Path, copiar: bool = True) -> Path:
     Image.open(png).convert("RGB").save(out / f"miniatura-{slug}-1280x720.jpg", quality=92)
     if copiar:
         n = re.match(r"^(\d+)_", musica.name)
-        dest = WIN_ROOT / _win_safe(f"{n.group(1) if n else '00'} {f['titulo']}")
+        dest = WIN_ROOT / _win_safe(f"{n.group(1) if n else '00'} {f['titulo']}") / "Vídeo longo"   # como em ~/videos
         dest.mkdir(parents=True, exist_ok=True)
         for p in out.iterdir():
             shutil.copy2(p, dest / p.name)
@@ -155,5 +155,39 @@ def publicar(project: str, musica: Path, copiar: bool = True) -> Path:
         md = src / "CANAL_YOUTUBE.md"
         if md.exists():
             (canal / "TEXTOS DO CANAL.txt").write_text(md.read_text(encoding="utf-8").replace("\n", "\r\n"), encoding="utf-8")
+        return dest
+    return out
+
+
+def publicar_short(project: str, musica: Path, copiar: bool = True) -> Path:
+    """Short vertical (projeto `<origem>-short`): mp4 + descrição (#shorts) + extras → …/NN Título/Short/."""
+    from ..audio import composer
+    pdir = PROJECTS / project
+    f = composer.ficha(musica)
+    yt = f.get("youtube", {})
+    vids = sorted((pdir / "output").glob(f"{project}*.mp4"))
+    if not vids:
+        raise StudioError(f"renderize o Short antes (`toonstudio build {project}`)")
+    slug = _slug(musica) + "-short"
+    out = pdir / "output" / slug
+    out.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(vids[0], out / f"{slug}.mp4")
+    titulo = f"{f['titulo'].upper()} 🐝 Laurinha e Luisinho #shorts"
+    desc = [f"TÍTULO\n{titulo}", "", "DESCRIÇÃO", (yt.get("resumo_short") or yt["resumo"]).strip(), "",
+            "▶️ Clipe completo no canal Laurinha e Luisinho!", "",
+            "👍 Peça para um adulto se inscrever no canal e deixar o joinha!", "",
+            "#shorts #musicainfantil #laurinhaeluisinho #desenhoinfantil", "",
+            "OBS.: canal para crianças — comentários ficam desativados pelo YouTube."]
+    (out / f"{slug}.descricao.txt").write_text("\n".join(desc) + "\n", encoding="utf-8")
+    (out / f"{slug}.youtube.txt").write_text("\n".join([
+        "Configurações do envio (Short):", "- Formato: vertical 1080×1920, menos de 60 s", "- Público: SIM, é conteúdo para crianças",
+        "- Categoria: Música", "- Idioma do vídeo: Português (Brasil)",
+        "- Miniatura: o YouTube usa um quadro do vídeo (escolha o do refrão, com os dois de braços para cima)"]) + "\n", encoding="utf-8")
+    if copiar:
+        n = re.match(r"^(\d+)_", musica.name)
+        dest = WIN_ROOT / _win_safe(f"{n.group(1) if n else '00'} {f['titulo']}") / "Short"
+        dest.mkdir(parents=True, exist_ok=True)
+        for p in out.iterdir():
+            shutil.copy2(p, dest / p.name)
         return dest
     return out

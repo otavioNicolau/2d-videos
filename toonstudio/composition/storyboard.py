@@ -35,9 +35,15 @@ def _camera_at(s, t):
     return val
 
 
+def _panel_size(ep: dict) -> tuple[int, int]:
+    W, H = ep["resolution"]
+    return (960, 540) if W >= H else (540, 960)
+
+
 def panel(ep: dict, s: dict, t: float, layers: list, beats: list | None = None, offset: float = 0.0) -> Image.Image:
     W, H = ep["resolution"]
     cx, cy, z = _camera_at(s, t)
+    PW, PH = _panel_size(ep)                                  # deitado 960×540; vertical (Short) 540×960
     k = PW / W
     out = Image.new("RGBA", (PW, PH), (0, 0, 0, 255))
     vw, vh = W / z, H / z
@@ -52,10 +58,10 @@ def panel(ep: dict, s: dict, t: float, layers: list, beats: list | None = None, 
 
     items = []
     for l, im in layers:
-        if l.get("fixed"):     # fundo gráfico preso à tela: cobre o quadro (rotação dos raios é ignorada na prévia)
-            fit = im.resize((PW, int(PW * im.height / im.width))) if not l.get("center") else \
-                im.resize((int(PW * 1.6), int(PW * 1.6 * im.height / im.width)))
-            _paste(out, fit, (PW - fit.width) // 2, (PH - fit.height) // 2)
+        if l.get("fixed"):     # fundo gráfico preso à tela, no tamanho real × zoom (rotação dos raios ignorada)
+            ww, hh = im.width / l["_scale"] * z * k, im.height / l["_scale"] * z * k
+            fit = im.resize((max(1, int(ww)), max(1, int(hh))))
+            _paste(out, fit, int((PW - fit.width) / 2), int((PH - fit.height) / 2))
             continue
         f = l["parallax"]
         off_x = (cx - W / 2) * (1 - f)
@@ -108,7 +114,7 @@ def build(ep_dir: Path) -> Path:
     status_p = ep_dir / "output" / "storyboard.json"
     status = json.loads(status_p.read_text()) if status_p.exists() else {}
     f = ImageFont.truetype(FONT, 20)
-    tw, th = 480, 270
+    tw, th = (480, 270) if ep["resolution"][0] >= ep["resolution"][1] else (270, 480)
     sheet = Image.new("RGB", (3 * (tw + 8) + 330, len(ep["scenes"]) * (th + 12) + 12), (28, 26, 30))
     d = ImageDraw.Draw(sheet)
     offset = st["start"] if st else 0.0

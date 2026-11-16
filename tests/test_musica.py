@@ -175,3 +175,18 @@ def test_brand_library_renders_props_family_and_scenes():
         character("laurinha").render({"holding": item}, scale=0.2)
     for bg in ("plano_quarto_rosa", "plano_cozinha", "plano_escola", "padrao_bananas_azul"):
         assert registry.known(bg)
+
+
+def test_short_vertical_framing_covers_frame_and_merges_split_screen():
+    from toonstudio.composition.short import _verticaliza, _zoom_min, H
+    sc = {"id": "s05_refrao", "duration": 3.0, "layout": "diagonal", "panels": [
+        {"background": "danca_xadrez_rosa", "camera": {"keys": [{"t": 0, "x": 960, "y": 560, "zoom": 1.2}]},
+         "characters": {"laurinha": {"start": {"x": 960, "y": 1010}, "actions": []}}},
+        {"background": "danca_xadrez_azul", "camera": {"keys": [{"t": 0, "x": 960, "y": 560, "zoom": 1.2}]},
+         "characters": {"luisinho": {"start": {"x": 960, "y": 1010}, "actions": []}}}]}
+    v = _verticaliza(sc, {})
+    assert "panels" not in v and set(v["characters"]) == {"laurinha", "luisinho"}
+    xs = sorted(c["start"]["x"] for c in v["characters"].values())
+    assert xs[1] - xs[0] >= 300 and abs(sum(xs) / 2 - 960) < 1        # lado a lado, centrados
+    assert all(k["zoom"] >= _zoom_min("danca_xadrez_rosa", {}) for k in v["camera"]["keys"])
+    assert _zoom_min("plano_quarto_rosa", {"height": 1080}) * 1080 >= H   # cenário pintado cobre a altura do quadro

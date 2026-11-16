@@ -18,6 +18,7 @@
   toonstudio marca vinheta|chamada <arquivo> corta a peça fixa na batida (vinheta ≤ 5 s, chamada ≤ 10 s)
   toonstudio clipe montar <projeto> --musica 01 [--force]   episode.json do roteiro verso a verso (recusa se incompleto)
   toonstudio publicar <projeto> --musica 01  pasta de publicação (mp4, descrição, srt, extras, miniatura) → Vídeos/Laurinha e Luisinho
+  toonstudio short <projeto> [--partes "refrao#1|verso#1,refrao#1"]   Short vertical a partir do clipe roteirizado
   toonstudio final <projeto>                vídeo completo: vinheta + clipe + chamada (peças fixas de library/brand)
   toonstudio storyboard <episódio>          prévia rápida (3 painéis por plano) antes do render caro
   toonstudio board <episódio> <cena> aprovar|rejeitar ["nota"]   decisão de storyboard por plano
@@ -56,6 +57,8 @@ def main(argv=None) -> int:
     cl.add_argument("--musica", required=True); cl.add_argument("--force", action="store_true")
     fi = sub.add_parser("final"); fi.add_argument("episode")
     pu = sub.add_parser("publicar"); pu.add_argument("episode"); pu.add_argument("--musica", required=True)
+    pu.add_argument("--short", action="store_true")
+    sh = sub.add_parser("short"); sh.add_argument("episode"); sh.add_argument("--partes", default="refrao#1|verso#1,refrao#1")
     sb = sub.add_parser("storyboard"); sb.add_argument("episode")
     bd = sub.add_parser("board"); bd.add_argument("episode"); bd.add_argument("scene"); bd.add_argument("decision", choices=["aprovar", "rejeitar"]); bd.add_argument("notes", nargs="?", default="")
     k = sub.add_parser("krita"); k.add_argument("file")
@@ -142,8 +145,14 @@ def main(argv=None) -> int:
             return 0
         if args.cmd == "publicar":
             from .audio import composer
-            from .composition.publicar import publicar
-            print(publicar(args.episode, composer.pasta(args.musica)))
+            from .composition.publicar import publicar, publicar_short
+            fn = publicar_short if args.short else publicar
+            print(fn(args.episode, composer.pasta(args.musica)))
+            return 0
+        if args.cmd == "short":
+            from .composition.short import criar_short
+            partes = [g.split(",") for g in args.partes.split("|")]
+            print(criar_short(args.episode, partes))
             return 0
         if args.cmd == "final":
             from .composition.marca import final
