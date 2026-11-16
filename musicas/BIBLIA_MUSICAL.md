@@ -103,7 +103,8 @@ O ritmo nasce do **tema, da emoção e da brincadeira**, não de uma lista fixa.
 
 **Peso da batida (decisão do canal): batida sempre marcante, com o peso de cada ritmo.**
 - `forte` (festa: frevo, axé, pagodão, piseiro, rock, funk, samba-enredo, batucada, marchinha): bateria e percussão
-  na frente, virada antes de cada refrão, intervalos só de batucada.
+  fortes, **empatadas com a voz** (nunca abafando a voz — medição da referência ~36% × ~37%), virada antes de cada
+  refrão, intervalos só de batucada.
 - `media` (baião, pé de serra, pop, samba infantil): groove forte e bem marcado, percussão presente.
 - `marcada` (xote, ciranda, reggae): groove marcado e dançante, **sem** bateria pesada.
 

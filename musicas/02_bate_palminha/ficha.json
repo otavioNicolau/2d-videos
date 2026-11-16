@@ -16,7 +16,7 @@
   "chamar os amigos",
   "dividir o lanche"
  ],
- "curiosidade": "quem tem amigo nunca fica sozinho; dividir faz a festa ficar maior",
+ "curiosidade": "dividir faz a festa ficar maior: quem tem amigo nunca fica sozinho",
  "ritmo": "pagodao",
  "bpm": 135,
  "estrutura": "R",
@@ -24,28 +24,25 @@
  "cantam": {
   "verso 1": "laurinha",
   "verso 2": "luisinho",
+  "ponte": "coro",
   "refrão": "coro"
  },
  "cenas": [
   {
    "parte": "verso 1",
-   "ideia": "Laurinha chega da escola, lava as mãos com espuma, chama a turma no jardim"
+   "ideia": "chega da escola voando; mochila cai ('ploft'); banheiro: sabonete com carinha; destaque de espuma em fundo de bolhinhas; chama os amigos; destaque do bolo de fubá em fundo de fatias"
   },
   {
    "parte": "refrão",
-   "ideia": "roda de amigos (joaninha, formiga), palmas e pezinho em sincronia com plá-plá e tum-tum"
+   "ideia": "close nas mãos (palmas) e nos pés (pezinho); roda dos 4 girando; 'vem pra roda' abre a roda para a câmera"
   },
   {
    "parte": "verso 2",
-   "ideia": "joaninha reparte o bolo de fubá; a formiga chega atrasada e ganha a melhor fatia"
+   "ideia": "joaninha chega voando com o suquinho; formiga chega correndo e ofegante; Luisinho divide o pedaço; destaque da maior fatia para a formiga"
   },
   {
    "parte": "ponte",
-   "ideia": "só palmas, só pezinho, abraço coletivo; câmera abre para mostrar todos"
-  },
-  {
-   "parte": "intervalo",
-   "ideia": "fundo danca_bolinhas_*, todos dançando o mesmo passo"
+   "ideia": "só palmas, só pezinho, abraço coletivo com corações"
   }
  ],
  "duracao_alvo": [
