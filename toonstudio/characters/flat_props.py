@@ -79,16 +79,7 @@ def draw_item(k: Ink, name: str, H: tuple[float, float], f: float = 1.0) -> None
             shape(k, Q([(-21, -48), (21, -48), (17, 14), (-17, 14)]), PAL["leite"], line="#C9D6E0", smooth=False)
         ln(k, Q([(-12, -54), (-9, 6)]), "#FFFFFF", w=LINE * 0.8)
     elif name in ("banana", "banana_mordida"):
-        # banana em pé na mão: meia-lua grossa, pontinha marrom em cima (e cabinho embaixo)
-        outer = [(-30 + 62 * math.cos(a), -46 + 62 * math.sin(a)) for a in np.linspace(-1.25, 1.25, 15)]
-        inner = [(-22 + 44 * math.cos(a), -46 + 44 * math.sin(a)) for a in np.linspace(1.1, -1.1, 13)]
-        body = outer + inner
-        if name == "banana_mordida":                      # mordida: corta a ponta de cima
-            body = [(x, y) for x, y in body if y > -86]
-        shape(k, Q(body), PAL["banana"], line="#D8A21E")
-        if name == "banana":
-            k.dot(*q(*outer[0]), 5, _rgba(PAL["banana_ponta"]))
-        k.dot(*q(*outer[-1]), 5, _rgba(PAL["banana_ponta"]))
+        _banana(k, Q, q, name == "banana_mordida")
     elif name == "pente":
         box(k, *q(-10, -70), *q(10, 10), PAL["pente"], r=6) if f > 0 else box(k, *q(10, -70), *q(-10, 10), PAL["pente"], r=6)
         for j in range(6):
@@ -123,6 +114,58 @@ def draw_item(k: Ink, name: str, H: tuple[float, float], f: float = 1.0) -> None
                                 for u in range(7)]
             shape(k, pts, SOMBRINHA[j], smooth=False)
         k.dot(cx, cy - R * 0.62, 7, _rgba("#534946"))
+
+
+def _banana_lado(u0, u1, n, w0=22.0, comp=118.0, curva=30.0, k_w=1.0):
+    """Contorno de uma banana entre as frações u0..u1 do comprimento: linha central curva + largura que afina nas pontas."""
+    import math as _m
+    esq, dir_ = [], []
+    for i in range(n + 1):
+        u = u0 + (u1 - u0) * i / n
+        cx, cy = curva * _m.sin(_m.pi * u), -comp * u
+        dx, dy = curva * _m.pi * _m.cos(_m.pi * u), -comp
+        L = _m.hypot(dx, dy)
+        nx, ny = -dy / L, dx / L
+        w = (w0 * max(0.0, _m.sin(_m.pi * u)) ** 0.6 + 3) * k_w
+        esq.append((cx + nx * w, cy + ny * w))
+        dir_.append((cx - nx * w, cy - ny * w))
+    return esq, dir_
+
+
+def _banana(k: Ink, Q, q, descascada: bool) -> None:
+    """Banana clássica de desenho: comprida, curvada, cabinho embaixo (na mão) e pontinha marrom em cima.
+    Mordida = descascada: fruta creme com mordida + 3 cascas caindo para os lados."""
+    if not descascada:
+        esq, dir_ = _banana_lado(0.0, 1.0, 20, w0=17)
+        shape(k, Q(esq + dir_[::-1]), PAL["banana"], line="#D8A21E")
+        c_esq, c_dir = _banana_lado(0.12, 0.9, 14, k_w=0.0)
+        ln(k, Q([((a[0] + b[0]) / 2 + 6, (a[1] + b[1]) / 2) for a, b in zip(c_esq, c_dir)]), "#E8B92E", w=LINE * 0.8)
+        shape(k, Q([(-5, 2), (5, 2), (4, 18), (-4, 18)]), PAL["banana_ponta"], smooth=False)       # cabinho
+        tip = q(*_banana_lado(1.0, 1.0, 1)[0][0])
+        k.dot(tip[0], tip[1], 5, _rgba(PAL["banana_ponta"]))
+        return
+    # fruta (creme) com mordida no alto
+    esq, dir_ = _banana_lado(0.3, 0.86, 12, k_w=0.72)
+    fruta = esq + dir_[::-1]
+    shape(k, Q(fruta), "#FFF3C4", line="#E2C77A")
+    topo = ((esq[-1][0] + dir_[-1][0]) / 2, (esq[-1][1] + dir_[-1][1]) / 2)
+    for dx in (-7, 7):                                                     # topo arredondado da mordida
+        k.dot(*q(topo[0] + dx, topo[1] + 2), 9 * ITEM_SCALE, _rgba("#FFF3C4"))
+    ln(k, Q([(topo[0] - 14, topo[1] + 6), (topo[0] - 7, topo[1] - 2), (topo[0], topo[1] + 6), (topo[0] + 7, topo[1] - 2),
+             (topo[0] + 14, topo[1] + 6)]), "#E2C77A", w=LINE * 0.8)
+    # casca de baixo + 3 abas caindo
+    esq, dir_ = _banana_lado(0.0, 0.42, 8)
+    shape(k, Q(esq + dir_[::-1]), PAL["banana"], line="#D8A21E")
+    base_y = esq[-1][1]
+    cx = (esq[-1][0] + dir_[-1][0]) / 2
+    for lado, ang in ((-1, 0.9), (0, 0.0), (1, 0.9)):
+        if lado == 0:
+            pts = [(cx - 8, base_y + 2), (cx + 8, base_y + 2), (cx + 6, base_y - 30), (cx, base_y - 40), (cx - 6, base_y - 30)]
+        else:
+            pts = [(cx + lado * 6, base_y + 2), (cx + lado * 20, base_y - 4), (cx + lado * 40, base_y + 22),
+                   (cx + lado * 44, base_y + 40), (cx + lado * 30, base_y + 30), (cx + lado * 14, base_y + 12)]
+        shape(k, Q(pts), PAL["banana"], line="#D8A21E")
+    shape(k, Q([(-5, 2), (5, 2), (4, 18), (-4, 18)]), PAL["banana_ponta"], smooth=False)
 
 
 # ───────────────────────── objetos de cena ─────────────────────────

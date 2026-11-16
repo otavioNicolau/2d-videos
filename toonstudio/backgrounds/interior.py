@@ -191,9 +191,16 @@ def _motivo(c, kind, x, y, s, col):
     c.translate(x, y)
     c.scale(s, s)
     if kind == "bananas":
+        from ..characters.flat_props import _banana_lado
+        esq, dir_ = _banana_lado(0.0, 1.0, 16, w0=16, comp=86, curva=22)
         path = skia.Path()
-        path.moveTo(-44, -26); path.quadTo(-6, 52, 48, -22); path.quadTo(0, 18, -44, -26); path.close()
+        pts = [(px, py + 43) for px, py in esq + dir_[::-1]]
+        path.moveTo(*pts[0])
+        for pt in pts[1:]:
+            path.lineTo(*pt)
+        path.close()
         c.drawPath(path, p); c.drawPath(path, pl)
+        c.drawRect(skia.Rect(-3, 40, 3, 52), skia.Paint(AntiAlias=True, Color4f=skia.Color4f(*_rgba("#7A5A2E"))))
     elif kind == "leite":
         path = skia.Path()
         path.moveTo(0, -42); path.quadTo(30, 0, 22, 18); path.quadTo(0, 44, -22, 18); path.quadTo(-30, 0, 0, -42); path.close()
