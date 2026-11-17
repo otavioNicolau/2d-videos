@@ -517,16 +517,20 @@ class Bolo(_Prop):
 
 
 class MochilaChao(_Prop):
-    """Mochila largada no chão (rosa da Laurinha). `cai` 0→1 = caindo até o chão (ploft)."""
+    """Mochila largada no chão (rosa da Laurinha; `azul` 1 = a azul do Luisinho). `cai` 0→1 = caindo até o chão (ploft).
+    `cor` 0 = cinza → 1 a cor acende (Cadê a Cor?)."""
 
     def __init__(self):
-        super().__init__("mochila", "Mochila", (360, 360), (180, 330), 180, {"cai": 1.0})
+        super().__init__("mochila", "Mochila", (360, 360), (180, 330), 180, {"cai": 1.0, "azul": 0.0, "cor": 1.0})
 
     def paint(self, k, P):
         dy = -220 * (1 - max(0.0, min(1.0, P["cai"])))
-        box(k, -80, dy - 150, 80, dy, "#F0509A", r=30)
-        box(k, -54, dy - 70, 54, dy - 16, "#FF7FBF", r=14)
-        ln(k, [(-50, dy - 150), (-30, dy - 196), (30, dy - 196), (50, dy - 150)], "#C2357A", w=LINE * 1.4)
+        az = P.get("azul", 0) > 0.5
+        c1, c2, c3 = ("#2F86F0", "#6FB2FF", "#1F5FB8") if az else ("#F0509A", "#FF7FBF", "#C2357A")
+        c1, c2, c3 = (_mix(CINZA, c, P.get("cor", 1.0)) for c in (c1, c2, c3))
+        box(k, -80, dy - 150, 80, dy, c1, r=30)
+        box(k, -54, dy - 70, 54, dy - 16, c2, r=14)
+        ln(k, [(-50, dy - 150), (-30, dy - 196), (30, dy - 196), (50, dy - 150)], c3, w=LINE * 1.4)
         _estrela(k, 0, dy - 110, 18, "#FFD23F")
 
 
@@ -688,3 +692,189 @@ class AguaTorneira(_Prop):
 
 
 PROPS.update({"pasta": PastaDente, "feijao": Feijao, "ampulheta": Ampulheta, "gotinha": Gotinha, "agua": AguaTorneira})
+
+
+# ───────────────────────── 04 Cadê a Cor? ─────────────────────────
+# Objetos de cor com o canal `cor`: 0 = cinza (a cor "sumiu"), 1 = a cor acende (resposta do coro ao "cadê?").
+
+CINZA = "#C9CBD3"
+CORES_TINTA = {0: None, 1: "#2F86F0", 2: "#FFD21F", 3: "#EE3B3B", 4: "#2DBE5A", 5: "#FF8A1F", 6: "#8E44EF", 7: "#8A5A36"}
+#               vazio     azul          amarelo       vermelho      verde         laranja       roxo          marrom
+
+
+def _mix(c1: str, c2: str, t: float) -> str:
+    t = max(0.0, min(1.0, t))
+    a = [int(c1[i:i + 2], 16) for i in (1, 3, 5)]
+    b = [int(c2[i:i + 2], 16) for i in (1, 3, 5)]
+    return "#{:02X}{:02X}{:02X}".format(*(round(x + (y - x) * t) for x, y in zip(a, b)))
+
+
+def _acende(cor: str, P: dict) -> str:
+    return _mix(CINZA, cor, P.get("cor", 1.0))
+
+
+def _brilho_cor(k: Ink, P: dict, x: float, y: float, raio: float) -> None:
+    """Estrelinhas em volta no instante em que a cor acende (cor entre 0,2 e 0,95)."""
+    c = P.get("cor", 1.0)
+    if 0.2 < c < 0.95:
+        for j in range(5):
+            a = j * 2 * math.pi / 5 + 0.3
+            _estrela(k, x + math.cos(a) * raio, y + math.sin(a) * raio, 22 * math.sin(math.pi * c), "#FFFFFF")
+
+
+class Morango(_Prop):
+    """Morango GIGANTE (mundo pequenino: maior que a Laurinha). Sementinhas, folhas e carinha opcional (`cara`)."""
+
+    def __init__(self):
+        super().__init__("morango", "Morango", (620, 700), (310, 660), 340, {"cor": 1.0, "cara": 0.0, "lid": 0.0, "boca": 0.0,
+                                                                            "pulo": 0.0})
+
+    def paint(self, k, P):
+        y0 = -40 * math.sin(math.pi * max(0.0, min(1.0, P["pulo"])))
+        verm, folha = _acende("#EE3B3B", P), _acende("#3DBE5A", P)
+        pts = []
+        for j in range(48):                                         # coração arredondado, ponta para baixo
+            t = j / 48 * 2 * math.pi
+            x = 230 * math.sin(t) * (0.78 + 0.22 * math.cos(t))
+            yy = -300 - 270 * math.cos(t) * (0.9 if math.cos(t) < 0 else 1.0)
+            pts.append((x, y0 + yy * 1.0 + (0 if math.cos(t) < 0 else 0)))
+        shape(k, pts, verm, line=dark(verm, 0.7))
+        ln(k, [(-140, y0 - 430), (-90, y0 - 480)], "#FFFFFF", w=LINE * 2.2, alpha=0.7)          # brilho
+        sem = _acende("#FFE15A", P)
+        for sx, sy in ((-120, -380), (-40, -420), (60, -400), (140, -350), (-150, -260), (-60, -300), (40, -280),
+                       (130, -230), (-100, -160), (0, -180), (80, -130), (-30, -90)):
+            if P["cara"] > 0.5 and -110 < sx < 110 and -360 < sy < -180:
+                continue                                            # a carinha fica limpa
+            shape(k, [(sx, y0 + sy - 12), (sx + 7, y0 + sy), (sx, y0 + sy + 12), (sx - 7, y0 + sy)], sem, line=dark(sem, 0.75),
+                  w=LINE * 0.6)
+        for a in (-1.0, -0.45, 0.1, 0.65, 1.2):                     # coroa de folhas no topo
+            cx, cy = 60 * math.sin(a), y0 - 560
+            tip = (cx + 150 * math.sin(a), cy - 40 - 60 * math.cos(a))
+            shape(k, [(cx - 30, cy + 10), tip, (cx + 30, cy + 10)], folha, line=dark(folha, 0.7))
+        shape(k, [(-12, y0 - 580), (-6, y0 - 660), (12, y0 - 660), (14, y0 - 580)], folha, line=dark(folha, 0.7), smooth=False)
+        if P["cara"] > 0.5:
+            _carinha(k, 0, y0 - 290, P, "#7A1E1E", "#FF9AB0", esc=1.5)
+        _brilho_cor(k, P, 0, y0 - 320, 300)
+
+
+class BananaGrande(_Prop):
+    """Banana GIGANTE deitada em arco (vira escorregador). Mesma banana dos itens, ampliada."""
+
+    def __init__(self):
+        super().__init__("banana_grande", "Banana gigante", (900, 420), (450, 380), 220, {"cor": 1.0})
+
+    def paint(self, k, P):
+        am, pt = _acende("#FFD84A", P), _acende("#7A5A2E", P)
+        cima, baixo = [], []
+        for j in range(25):                                         # arco: a curva de cima e a de baixo
+            u = j / 24
+            x = -380 + 760 * u
+            arco = 200 * (1 - math.sin(math.pi * u))              # "sorriso": deitada, pontas para cima (escorregador)
+            w = 30 + 70 * math.sin(math.pi * u)
+            cima.append((x, -110 - arco - w))
+            baixo.append((x, -110 - arco + w))
+        shape(k, cima + baixo[::-1], am, line=dark(am, 0.78))
+        ln(k, [(p[0], p[1] + 30 + 20 * math.sin(math.pi * j / 24)) for j, p in enumerate(cima[4:21], 4)], dark(am, 0.85),
+           w=LINE * 0.8)                                            # gomo
+        shape(k, [(-404, -340), (-370, -356), (-360, -316), (-398, -306)], pt, smooth=False)            # pontinhas
+        shape(k, [(366, -326), (414, -342), (420, -302), (372, -296)], pt, smooth=False)
+        ln(k, [(-160, -150), (-40, -120)], "#FFFFFF", w=LINE * 2.0, alpha=0.7)
+        _brilho_cor(k, P, 0, -180, 330)
+
+
+class Folha(_Prop):
+    """Folhinha gigante (vira cama elástica): `balanco` 0→1 afunda e volta; nervuras; caule."""
+
+    def __init__(self):
+        super().__init__("folha", "Folhinha", (820, 420), (410, 380), 200, {"cor": 1.0, "balanco": 0.0})
+
+    def paint(self, k, P):
+        verde = _acende("#3DBE5A", P)
+        b = 50 * math.sin(math.pi * max(0.0, min(1.0, P["balanco"])))   # afunda no meio
+        pts = []
+        for j in range(41):                                         # contorno: ponta à direita, base à esquerda
+            u = j / 40 * 2 * math.pi
+            x = 340 * math.cos(u)
+            yy = -170 + 120 * math.sin(u) * (1 - 0.35 * max(0.0, math.cos(u))) + b * (1 - abs(math.cos(u)))
+            pts.append((x, yy))
+        shape(k, pts, verde, line=dark(verde, 0.7))
+        meio = [(-330, -170), (-100, -170 + b * 0.9), (120, -170 + b * 0.8), (330, -170)]
+        ln(k, meio, dark(verde, 0.78), w=LINE * 1.2)
+        for x in (-200, -60, 80, 200):                              # nervuras
+            y = -170 + b * (1 - abs(x) / 340)
+            for s_ in (-1, 1):
+                ln(k, [(x, y), (x + 70, y + s_ * 70)], dark(verde, 0.78), w=LINE * 0.9)
+        ln(k, [(-340, -170), (-400, -120), (-420, -40)], dark(verde, 0.6), w=LINE * 2.2)             # caule
+        ln(k, [(-150, -240), (0, -265)], "#FFFFFF", w=LINE * 1.8, alpha=0.6)
+        _brilho_cor(k, P, 0, -170, 330)
+
+
+class PotesTinta(_Prop):
+    """Três potes de tinta gigantes: esquerda e direita despejam (`derrama` 0→1) no pote do meio, que enche (`nivel`)
+    com a cor nova; `explode` 0→1 = a cor nova estoura em bolinhas. Cores pelo código de CORES_TINTA
+    (`esq`, `dir`, `meio`: 1 azul, 2 amarelo, 3 vermelho, 4 verde, 5 laranja, 6 roxo, 7 marrom)."""
+
+    def __init__(self):
+        super().__init__("potes_tinta", "Potes de tinta", (1000, 620), (500, 580), 300,
+                         {"esq": 1.0, "dir": 2.0, "meio": 4.0, "derrama": 0.0, "nivel": 0.0, "explode": 0.0})
+
+    def _pote(self, k, cx, cor, nivel, incl=0.0, base=0.0):
+        k.c.save()
+        k.c.rotate(incl, cx, base - 60)
+        corpo = [(cx - 120, base - 230), (cx + 120, base - 230), (cx + 100, base), (cx - 100, base)]
+        shape(k, corpo, "#F4F7FB", line="#9FB3C8", smooth=False)
+        if cor and nivel > 0.02:
+            h = 200 * nivel
+            shape(k, [(cx - 100 - 20 * (h / 230), base - h), (cx + 100 + 20 * (h / 230), base - h), (cx + 100, base), (cx - 100, base)],
+                  cor, line=dark(cor, 0.75), smooth=False)
+            shape(k, ellipse_pts(cx, base - h, 100 + 20 * (h / 230), 18, 0, 20), _mix(cor, "#FFFFFF", 0.25), line=dark(cor, 0.75))
+        shape(k, ellipse_pts(cx, base - 230, 120, 22, 0, 24), "#FFFFFF", line="#9FB3C8")       # boca do pote
+        if cor:
+            box(k, cx - 60, base - 150, cx + 60, base - 90, cor, line=dark(cor, 0.7), r=12)       # etiqueta da cor
+        k.c.restore()
+
+    def paint(self, k, P):
+        d = max(0.0, min(1.0, P["derrama"]))
+        ce, cd, cm = (CORES_TINTA.get(int(round(P[n]))) for n in ("esq", "dir", "meio"))
+        self._pote(k, -330, ce, 0.8 - 0.4 * d, incl=35 * math.sin(math.pi * d) if d < 1 else 0)
+        self._pote(k, 330, cd, 0.8 - 0.4 * d, incl=-35 * math.sin(math.pi * d) if d < 1 else 0)
+        if 0.15 < d < 0.85:                                         # fios de tinta caindo no pote do meio
+            for cx, cor, s_ in ((-330, ce, 1), (330, cd, -1)):
+                if cor:
+                    ln(k, [(cx + s_ * 110, -250), (cx + s_ * 200, -300), (s_ * -60, -240)], cor, w=LINE * 3.5)
+        self._pote(k, 0, cm, max(0.0, min(1.0, P["nivel"])))
+        e = max(0.0, min(1.0, P["explode"]))
+        if cm and 0.0 < e < 1.0:                                    # a cor nova estoura em bolinhas
+            for j in range(12):
+                a = -math.pi / 2 + (j - 5.5) * 0.28
+                rr = 80 + 380 * e
+                r = 34 * (1 - e * 0.6) * (1 if j % 2 else 0.7)
+                shape(k, ellipse_pts(math.cos(a) * rr, -260 + math.sin(a) * rr, r, r, 0, 14), cm, line=dark(cm, 0.75))
+
+
+class ArcoIris(_Prop):
+    """Arco-íris que se monta faixa por faixa: `faixas` 0→6 (vermelho → roxo, de fora para dentro), nuvens nas pontas."""
+
+    def __init__(self):
+        super().__init__("arco_iris", "Arco-íris", (1300, 720), (650, 680), 360, {"faixas": 6.0})
+
+    def paint(self, k, P):
+        n = max(0.0, min(6.0, P["faixas"]))
+        cores = ("#EE3B3B", "#FF8A1F", "#FFD21F", "#2DBE5A", "#2F86F0", "#8E44EF")
+        R0, w = 560, 62
+        for i, c in enumerate(cores):
+            vis = max(0.0, min(1.0, n - i))
+            if vis <= 0:
+                break
+            r1, r2 = R0 - i * w, R0 - (i + 1) * w
+            a_fim = math.pi * vis                                  # cada faixa cresce da esquerda para a direita
+            ext = [(-r1 * math.cos(a), -60 - r1 * math.sin(a)) for a in np.linspace(0, a_fim, 40)]
+            inn = [(-r2 * math.cos(a), -60 - r2 * math.sin(a)) for a in np.linspace(a_fim, 0, 40)]
+            shape(k, ext + inn, c, line=dark(c, 0.8), smooth=False)
+        for cx in (-R0 + 3 * w, R0 - 3 * w):                       # nuvens nas pontas
+            for dx, dy, r in ((-90, -10, 70), (0, -50, 90), (90, -10, 70), (0, 10, 80)):
+                shape(k, ellipse_pts(cx + dx, -40 + dy, r, r * 0.85, 0, 20), "#FFFFFF", line="#BFD6EA")
+
+
+PROPS.update({"morango": Morango, "banana_grande": BananaGrande, "folha": Folha, "potes_tinta": PotesTinta,
+              "arco_iris": ArcoIris})

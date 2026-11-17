@@ -324,6 +324,8 @@ class FlatMuri(Character):
         nx_ = C[0] + r * 0.72 * math.sin(a_m)              # boca sempre dentro da cabeça, inclusive de perfil
         self._mouth(k, P, rot((nx_, C[1] + 52), ht, C), f, s, line)
         self._boca_fx(k, P, rot((nx_, C[1] + 52), ht, C), f)
+        if P.get("tinta", 0) > 0.05:          # sujo de tinta (Cadê a Cor?: "misturei tudo… marrom!")
+            self._tinta(k, P["tinta"], C, r, ht)
         if P.get("suor", 0) > 0.5:            # gotinhas de suor (chegou correndo)
             for dx, dy, sc in ((r * 0.95, -r * 0.55, 1.0), (r * 1.12, -r * 0.2, 0.75)):
                 q = rot((C[0] + dx * f, C[1] + dy), ht, C)
@@ -334,6 +336,19 @@ class FlatMuri(Character):
             pts = [(m[0] - 34, m[1] + 4), (m[0] - 20, m[1] - 8), (m[0], m[1] - 4), (m[0] + 20, m[1] - 8), (m[0] + 34, m[1] + 4),
                    (m[0] + 18, m[1] + 10), (m[0], m[1] + 6), (m[0] - 18, m[1] + 10)]
             self._shape(k, pts, "#FFFFFF", line="#C9D6E0")
+
+    def _tinta(self, k: Ink, t: float, C, r: float, ht: float):
+        """Manchas de tinta na cabeça (topo, lateral e queixo; nunca em cima dos olhos). t 0→1 = quanto sujou."""
+        for j, (dx, dy, R, cor) in enumerate(((-0.45, -0.72, 34, "#8A5A36"), (0.5, -0.62, 26, "#8A5A36"),
+                                              (0.86, 0.1, 22, "#2DBE5A"), (-0.82, 0.25, 24, "#8E44EF"),
+                                              (-0.05, -0.9, 18, "#FF8A1F"))):
+            if t <= j * 0.14:
+                continue
+            q = rot((C[0] + dx * r, C[1] + dy * r), ht, C)
+            sc = min(1.0, (t - j * 0.14) / 0.3)
+            pts = [(q[0] + math.cos(a) * R * sc * (1 + 0.28 * math.sin(5 * a + j)),
+                    q[1] + math.sin(a) * R * sc * (1 + 0.28 * math.sin(5 * a + j))) for a in (i * 2 * math.pi / 21 for i in range(21))]
+            k.shape(pts, fill=_rgba(cor), line=0)
 
     def _boca_fx(self, k: Ink, P, M, f):
         """Efeitos da escovação em volta da boca: espuma, bafinho (nuvenzinha verde), brilho 'tim-tim' e cuspe."""
