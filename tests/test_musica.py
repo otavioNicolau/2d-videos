@@ -296,3 +296,12 @@ def test_both_eyes_until_profile_and_full_blink():
     assert len(bts) >= 4 and max(gaps) - min(gaps) > 0.5, "piscada em intervalo fixo (robótico)"
     assert all(tl.exposure_at(b + 1.5 / 24) == 1 for b in bts), "piscada em 2s (some na exposição)"
     assert bts != CharTimeline(character("luisinho"), 24, 20.0).blink_times()
+
+
+def test_wave_keeps_hand_up_during_the_whole_goodbye():
+    from toonstudio.animation.timeline import compile_character
+    from toonstudio.core.registry import character
+    tl = compile_character(character("laurinha"), {"start": {"x": 900, "y": 930, "turn": 0.15},
+                                                   "actions": [{"t": 0.0, "do": "wave", "dur": 2.4}]}, 24, 3.0)
+    P = tl.evaluate_all()
+    assert all(P[i]["hand_n_y"] < -75 and P[i]["hand_n_x"] < -125 for i in range(6, 56)), "a mão do tchau escorrega ou some atrás da cabeça"

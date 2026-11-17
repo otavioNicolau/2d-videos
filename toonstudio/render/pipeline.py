@@ -221,6 +221,10 @@ class Episode:
             k = int(0.7 * self.fps)
             for i in range(n - k, n):
                 fade[i] = (i - (n - k) + 1) / k
+        if s.get("escurece"):                      # luz baixando/voltando (noite): véu escuro de a0 a a1 ao longo da cena
+            a0, a1 = (float(v) for v in s["escurece"])
+            for i in range(n):
+                fade[i] = max(fade[i], a0 + (a1 - a0) * i / max(1, n - 1))
         if s is self.ep["scenes"][0]:
             k = int(0.4 * self.fps)
             for i in range(k):

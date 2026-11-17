@@ -283,11 +283,11 @@ CHOREO: dict[str, tuple[float, list[tuple[float, dict]]]] = {
         (2.0, {"rot": 0.14, "head_tilt": -0.1, "hand_n_x": -100, "hand_n_y": 10, "hand_f_x": 100, "hand_f_y": 10}),
     ]),
     # tchauzinho: o corpo balança de leve e as duas mãos acenam lado a lado na altura do rosto
-    # tchau: as duas mãos no ALTO, ao lado da cabeça, balançando (no peito elas somem no corpo — storyboard ep04)
+    # tchau: as duas mãos abertas ao lado do rosto, fora da cabeça, balançando (storyboards ep04/ep05)
     "tchau": (1, [
-        (0.0, {"rot": -0.05, "hand_n_x": -128, "hand_n_y": -138, "hand_f_x": 98, "hand_f_y": -146, "hand_n_bend": 0.5,
+        (0.0, {"rot": -0.05, "hand_n_x": -158, "hand_n_y": -92, "hand_f_x": 138, "hand_f_y": -104, "hand_n_bend": 0.5,
                "hand_f_bend": -0.5, "paw_n": 3, "paw_f": 3, "head_tilt": 0.05}),
-        (0.5, {"rot": 0.05, "hand_n_x": -98, "hand_n_y": -146, "hand_f_x": 128, "hand_f_y": -138, "head_tilt": -0.05}),
+        (0.5, {"rot": 0.05, "hand_n_x": -138, "hand_n_y": -104, "hand_f_x": 158, "hand_f_y": -92, "head_tilt": -0.05}),
     ]),
     # ---- passos das MURIÇOCAS (BIBLIA_VISUAL; ADR-0016): de frente, sem giro do corpo e sem pula-pula; ligados à letra
     # "bati as asinhas": cotovelos batendo como asinhas + asas zumbindo (3 poses de asa por batida)

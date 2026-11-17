@@ -303,7 +303,7 @@ def rascunho(project_dir: Path, musica: Path, titulo: str | None = None, permiti
 # plano = {"linhas": 1, "seg": s (planos sem verso), "cenario": id | [id por ocorrência], "camera": "aberto"|"medio:ator"|
 #          "close:ator"|{x,y,zoom,zoom_fim}, "atores": {nome: {x,y,turn,expr,depth,z,segura,mochila,bigode,acoes:[…],keys:[…]}},
 #          "objetos": {nome: {id?, x,y,z, pose:{…}, keys:[{t,pose}]}}, "fx": [...], "callout": "TEXTO" | [{t,text,…}],
-#          "flash": bool, "transicao": tipo, "cantam": [...], "tela_dividida": {"layout", "paineis": [sub-plano, sub-plano]}}
+#          "flash": bool, "escurece": [a0, a1] (luz baixando), "transicao": tipo, "cantam": [...], "tela_dividida": {"layout", "paineis": [sub-plano, sub-plano]}}
 # Atuação: "dur": "resto" vai até o fim do plano. O canto (boca) vem da letra: quem canta a parte e está no plano.
 GRAPHIC = ("danca_", "padrao_")
 SING_CAST = ("laurinha", "luisinho")
@@ -432,6 +432,8 @@ def _plano_scene(p: dict, occ: int, dur: float, plines: list, t0: float, cantam_
         sc["fx"] = p["fx"]
     if p.get("flash"):
         sc["flash_in"] = True
+    if p.get("escurece"):                                   # [opacidade no início, no fim] do véu escuro (noite)
+        sc["escurece"] = [round(float(v), 3) for v in p["escurece"]]
     co = p.get("callout")
     if co:
         if isinstance(co, str):

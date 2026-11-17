@@ -1,0 +1,93 @@
+{
+ "schema": "avaliacao-1.0",
+ "versoes": {
+  "v1": {
+   "arquivo": "v1.wav",
+   "duracao": 140.9,
+   "bpm": 143.6,
+   "bpm_nota": "",
+   "tom": "Lá# maior",
+   "voz_inicio": 2.0,
+   "refrao_inicio": 23.2,
+   "cantado": 92,
+   "intervalos": [
+    [
+     109.5,
+     2.5
+    ]
+   ],
+   "fim_depois_da_voz": 1.2,
+   "final": "esmaecendo",
+   "silencio_final": 0.6,
+   "acerto": 74,
+   "nao_reconhecidas": [
+    "contar",
+    "luisinho",
+    "ronc",
+    "calcei",
+    "lanchinho",
+    "rodas",
+    "bicicleta",
+    "guarda"
+   ],
+   "pontos_a_conferir": [
+    "só 74% da letra reconhecida — ouvir a pronúncia",
+    "menos de 2 intervalos de dança"
+   ]
+  },
+  "v2": {
+   "arquivo": "v2.wav",
+   "duracao": 127.2,
+   "bpm": 136.0,
+   "bpm_nota": "",
+   "tom": "Fá maior",
+   "voz_inicio": 5.8,
+   "refrao_inicio": null,
+   "cantado": 90,
+   "intervalos": [],
+   "fim_depois_da_voz": 1.1,
+   "final": "corte seco",
+   "silencio_final": 1.0,
+   "acerto": 67,
+   "nao_reconhecidas": [
+    "conta",
+    "mostra",
+    "turminha",
+    "luisinho",
+    "ronc",
+    "laurinha",
+    "rodas",
+    "formiga",
+    "guarda",
+    "pijama",
+    "acorda"
+   ],
+   "pontos_a_conferir": [
+    "andamento 136 fora da faixa do Samba-enredo (140–150)",
+    "o gancho não foi reconhecido na transcrição",
+    "duração 127 s fora do alvo 140–170 s",
+    "só 67% da letra reconhecida — ouvir a pronúncia",
+    "menos de 2 intervalos de dança"
+   ]
+  }
+ },
+ "ouvido": {
+  "v1": {
+   "1 começo chama atenção": null,
+   "5 melodia combina com a letra": null,
+   "6 dá vontade de dançar": null,
+   "7 pronúncia natural": null,
+   "8 tem a cara do canal": null,
+   "9 nenhum trecho cansativo": null
+  },
+  "v2": {
+   "1 começo chama atenção": null,
+   "5 melodia combina com a letra": null,
+   "6 dá vontade de dançar": null,
+   "7 pronúncia natural": null,
+   "8 tem a cara do canal": null,
+   "9 nenhum trecho cansativo": null
+  }
+ },
+ "escolhida": "v1"
+}
