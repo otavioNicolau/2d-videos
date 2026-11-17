@@ -72,6 +72,7 @@ class FlatMuri(Character):
                 "mouth": "X", "smile": 0.8, "brow_y": 0.2, "blush": 1.0, "stars": 0.0, "speed": 0.0,
                 "holding": "", "wing_phase": 0.0, "bank": 0.0, "dangle": 0.0, "hair_bounce": 0.0,
                 "fly": 0.0, "rot_pivot": 0.55, "bigode": 0.0, "mochila": 0.0, "buzz": 0.0, "suor": 0.0,
+                "despenteado": 0.0, "bafinho": 0.0, "espuma": 0.0, "brilho": 0.0, "cuspe": 0.0,
             })
 
     # ------------------------------------------------------------------ primitivas chapadas
@@ -240,10 +241,19 @@ class FlatMuri(Character):
                 mid = (b[0] + side * 8, b[1] - 54)
                 tip = (b[0] + side * 44 + sway * 20, b[1] - 66)
                 self._line(k, [b, mid, tip], line, w=LINE * 1.2)
+            elif P.get("despenteado", 0) > 0.5:   # acordou despenteado: antena em zigue-zague, ponta caída
+                tip = (b[0] + side * (44 if side > 0 else 12) + sway * 26, b[1] - (58 if side > 0 else 86))
+                self._line(k, [b, (b[0] + side * 22, b[1] - 26), (b[0] - side * 6, b[1] - 50), tip], line, w=LINE * 1.2)
             else:
                 self._line(k, [b, (b[0] + side * 6, b[1] - 46), tip], line, w=LINE * 1.2)
             self._shape(k, ellipse_pts(tip[0], tip[1], 17, 17, 0, 16), L.pom)
-        if L.curl and not v.back:            # topetinho em espiral (traço)
+        if P.get("despenteado", 0) > 0.5 and not v.back:   # tufinhos arrepiados no topo
+            for j, (dx, ang) in enumerate(((-22, -2.0), (0, -1.55), (22, -1.1))):
+                q = rot((C[0] + dx + f * s * 8, C[1] - r * 0.9), ht, C)
+                ln_ = 34 if j == 1 else 28
+                self._line(k, [q, (q[0] + math.cos(ang) * ln_ * 0.55 + 6, q[1] + math.sin(ang) * ln_ * 0.55),
+                               (q[0] + math.cos(ang) * ln_, q[1] + math.sin(ang) * ln_)], line, w=LINE * 1.2)
+        elif L.curl and not v.back:            # topetinho em espiral (traço)
             base = rot((C[0] - 6 + f * s * 8, C[1] - r * 0.98), ht, C)
             pts = []
             for i in range(26):
@@ -292,6 +302,7 @@ class FlatMuri(Character):
                 self._line(k, [(eyes[0][0] + 30, eyes[0][1] - 4), (eyes[1][0] - 30, eyes[1][1] - 4)], "#534946", w=LINE * 0.9)
         nx_, _ = v.sphere(C[0], r * 0.72, 0.0)            # boca sempre dentro da cabeça, inclusive de perfil
         self._mouth(k, P, rot((nx_, C[1] + 52), ht, C), f, s, line)
+        self._boca_fx(k, P, rot((nx_, C[1] + 52), ht, C), f)
         if P.get("suor", 0) > 0.5:            # gotinhas de suor (chegou correndo)
             for dx, dy, sc in ((r * 0.95, -r * 0.55, 1.0), (r * 1.12, -r * 0.2, 0.75)):
                 q = rot((C[0] + dx * f, C[1] + dy), ht, C)
@@ -302,6 +313,41 @@ class FlatMuri(Character):
             pts = [(m[0] - 34, m[1] + 4), (m[0] - 20, m[1] - 8), (m[0], m[1] - 4), (m[0] + 20, m[1] - 8), (m[0] + 34, m[1] + 4),
                    (m[0] + 18, m[1] + 10), (m[0], m[1] + 6), (m[0] - 18, m[1] + 10)]
             self._shape(k, pts, "#FFFFFF", line="#C9D6E0")
+
+    def _boca_fx(self, k: Ink, P, M, f):
+        """Efeitos da escovação em volta da boca: espuma, bafinho (nuvenzinha verde), brilho 'tim-tim' e cuspe."""
+        mx, my = M
+        e = P.get("espuma", 0.0)
+        if e > 0.05:                          # espuminha branca nos cantos da boca
+            for j, (dx, dy, r) in enumerate(((-30, 4, 11), (-18, 14, 9), (24, 6, 12), (34, -6, 8), (6, 18, 10), (-40, -6, 7))):
+                if e > j * 0.12:
+                    self._shape(k, ellipse_pts(mx + dx, my + dy, r, r, 0, 12), "#FFFFFF", line="#B9D7EE", w=LINE * 0.7)
+        b = P.get("bafinho", 0.0)
+        if 0.02 < b < 0.98:                   # nuvenzinha verde que sai da boca, cresce e some
+            a = 0.85 * min(1.0, (1 - b) * 3.0)
+            cx, cy = mx + f * (50 + 120 * b), my - 10 - 70 * b
+            sc = 0.6 + 0.8 * b
+            for dx, dy, r in ((-26, 6, 24), (0, -10, 30), (26, 4, 24), (8, 14, 20)):
+                k.shape(ellipse_pts(cx + dx * sc, cy + dy * sc, r * sc, r * sc, 0, 16), fill=_rgba("#A8E07A", a),
+                        brush=Brush(LINE * 0.7, 0.0, _rgba("#6FB33F", a), 0.0), line=LINE * 0.7)
+            for j in (-1, 0, 1):              # risquinhos de "cheirinho"
+                x0 = cx + j * 24 * sc
+                self._line(k, [(x0, cy - 40 * sc), (x0 + 6, cy - 52 * sc), (x0 - 4, cy - 64 * sc)], "#6FB33F", w=LINE * 0.8,
+                           alpha=a)
+        g = P.get("brilho", 0.0)
+        if g > 0.05:                          # brilho "tim-tim" no sorriso: estrela de 4 pontas
+            cx, cy, R = mx + f * 30, my - 6, 34 * g
+            pts = []
+            for j in range(8):
+                ang = -math.pi / 2 + j * math.pi / 4
+                rr = R if j % 2 == 0 else R * 0.28
+                pts.append((cx + math.cos(ang) * rr, cy + math.sin(ang) * rr))
+            self._shape(k, pts, "#FFFFFF", line="#FFC21A", smooth=False)
+        c = P.get("cuspe", 0.0)
+        if 0.02 < c < 0.98:                   # cuspe de espuma indo para a pia
+            for j, (dx, dy, r) in enumerate(((40, 30, 10), (60, 50, 8), (30, 60, 7))):
+                q = (mx + f * (dx + 90 * c), my + dy + 140 * c * c)
+                self._shape(k, ellipse_pts(q[0], q[1], r, r, 0, 12), "#FFFFFF", line="#B9D7EE", w=LINE * 0.7)
 
     def _bow(self, k: Ink, B):
         L = self.look

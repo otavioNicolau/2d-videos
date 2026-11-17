@@ -10,7 +10,9 @@
    "dark",
    "long intro",
    "European Portuguese accent",
-   "Spanish accent"
+   "Spanish accent",
+   "minor key",
+   "fade out"
   ]
  },
  "peso": {
@@ -446,8 +448,8 @@
    "peso": "forte",
    "genero": "energetic kids rock, shout-along",
    "bateria": "punk-rock drumming, crash cymbals, driving kick",
-   "instrumentos": "distorted electric guitars, catchy guitar riff, bass, short guitar solo",
-   "clima": "adventurous",
+   "instrumentos": "bright pop-punk electric guitars, happy major-key guitar riff, bass, short guitar solo",
+   "clima": "adventurous and sunny",
    "temas": [
     "aventura",
     "desafio",
@@ -463,7 +465,9 @@
    ],
    "exclude": [
     "screaming",
-    "metal growl"
+    "metal growl",
+    "dark riff",
+    "heavy metal"
    ]
   },
   "funk_infantil": {

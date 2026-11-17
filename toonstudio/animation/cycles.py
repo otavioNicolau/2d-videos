@@ -347,9 +347,31 @@ CHOREO: dict[str, tuple[float, list[tuple[float, dict]]]] = {
                "hand_n_bend": 0.1, "hand_f_bend": -0.1, "paw_n": 1, "paw_f": 1, "foot_n_x": -40, "foot_f_x": 0}),
         (1.0, {"body_x": 26, "body_y": 3, "lean": 0.05, "foot_n_x": 0, "foot_f_x": 40}),
     ]),
+    # "pra cima, pra baixo! roda, rodinha!": escova na boca sobe e desce (2 tempos) e faz rodinha (2 tempos);
+    # a outra mão na cintura, o corpo marca o tempo
+    "escovar": (4, [
+        (0.0, {"hand_n_x": 115, "hand_n_y": -112, "hand_n_bend": 0.7, "paw_n": 1, "hand_f_x": 10, "hand_f_y": 40,
+               "hand_f_bend": -0.9, "paw_f": 1, "body_y": -3, "head_tilt": 0.05, "squash": 1.01}),
+        (0.5, {"hand_n_x": 115, "hand_n_y": -56, "body_y": 5, "head_tilt": -0.03, "squash": 0.985}),
+        (1.0, {"hand_n_x": 115, "hand_n_y": -112, "body_y": -3, "head_tilt": 0.05, "squash": 1.01}),
+        (1.5, {"hand_n_x": 115, "hand_n_y": -56, "body_y": 5, "head_tilt": -0.03, "squash": 0.985}),
+        (2.0, {"hand_n_x": 140, "hand_n_y": -84, "body_y": -3, "head_tilt": 0.08, "squash": 1.01}),
+        (2.5, {"hand_n_x": 115, "hand_n_y": -108, "body_y": 5, "head_tilt": 0.0, "squash": 0.985}),
+        (3.0, {"hand_n_x": 90, "hand_n_y": -84, "body_y": -3, "head_tilt": -0.08, "squash": 1.01}),
+        (3.5, {"hand_n_x": 115, "hand_n_y": -60, "body_y": 5, "head_tilt": 0.0, "squash": 0.985}),
+    ]),
+    # guitarra-escova: mão de baixo "toca" na barriga a cada meio tempo, a de cima no braço da guitarra,
+    # cabeça balança no ritmo do rock, pezinho marcando
+    "guitarra": (2, [
+        (0.0, {"hand_n_x": 20, "hand_n_y": 40, "hand_n_bend": 0.8, "paw_n": 1, "hand_f_x": 130, "hand_f_y": -40,
+               "hand_f_bend": -0.4, "paw_f": 1, "lean": -0.07, "head_tilt": 0.14, "body_y": 4, "foot_f_y": -18}),
+        (0.5, {"hand_n_x": 30, "hand_n_y": 66, "lean": 0.03, "head_tilt": -0.08, "body_y": -2, "foot_f_y": 0}),
+        (1.0, {"hand_n_x": 20, "hand_n_y": 40, "hand_f_y": -30, "lean": -0.07, "head_tilt": 0.14, "body_y": 4, "foot_f_y": -18}),
+        (1.5, {"hand_n_x": 30, "hand_n_y": 66, "hand_f_y": -40, "lean": 0.03, "head_tilt": -0.08, "body_y": -2, "foot_f_y": 0}),
+    ]),
 }
 ALIASES = {"bob": "balanco"}
-DANCE_WITH_ITEM = {"frevo"}        # passos em que a mão que segura o objeto (sombrinha) também dança
+DANCE_WITH_ITEM = {"frevo", "escovar", "guitarra"}        # passos em que a mão que segura o objeto (sombrinha) também dança
 DANCES = tuple(CHOREO) + tuple(ALIASES)
 _CAT = ("paw_n", "paw_f")
 _SCALE = {"body_x", "body_y", "lean", "turn+", "head_tilt", "head_dx", "head_dy", "foot_n_y", "foot_f_y", "hat_tilt", "tail_wag"}

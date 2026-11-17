@@ -213,6 +213,19 @@ def _fix_stretched(ws: list[dict], max_gap: float = 2.0, step: float = 0.32, kee
             t += step
 
 
+def drop_skipped(lines: list[dict]) -> list[dict]:
+    """Linha repetida que o Suno PULOU (ex.: 2º "Bate palminha" do refrão final): nenhuma palavra reconhecida e
+    espremida em menos de 0,12 s por palavra entre as vizinhas. Fica fora da letra (senão pisca na legenda)."""
+    out = []
+    for l in lines:
+        n = len(l["words"])
+        repetida = sum(1 for x in lines if x["text"] == l["text"]) > 1
+        if repetida and l.get("confianca", 1.0) == 0.0 and l["e"] - l["s"] < 0.12 * n:
+            continue
+        out.append(l)
+    return out
+
+
 def align_known_lyrics(words: list[dict], sections: list[dict], spans: list[list[float]] | None = None) -> dict:
     """Alinha a letra CONHECIDA (partes da ficha) às palavras transcritas (com tempo) da voz isolada.
 
@@ -283,6 +296,7 @@ def align_known_lyrics(words: list[dict], sections: list[dict], spans: list[list
         _fix_stretched(l["words"], keep="right" if after_inst else "left" if before_inst else None)
     out_lines = [{"s": l["words"][0]["s"], "e": l["words"][-1]["e"], "text": " ".join(w["w"] for w in l["words"]),
                   "secao": l["secao"], "confianca": round(l["ok"] / len(l["words"]), 2), "words": l["words"]} for l in lines]
+    out_lines = drop_skipped(out_lines)
     secs = []
     for si, s in enumerate(sections):
         ls = [l for l in out_lines if l["secao"] == si]

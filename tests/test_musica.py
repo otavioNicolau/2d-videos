@@ -190,3 +190,40 @@ def test_short_vertical_framing_covers_frame_and_merges_split_screen():
     assert xs[1] - xs[0] >= 300 and abs(sum(xs) / 2 - 960) < 1        # lado a lado, centrados
     assert all(k["zoom"] >= _zoom_min("danca_xadrez_rosa", {}) for k in v["camera"]["keys"])
     assert _zoom_min("plano_quarto_rosa", {"height": 1080}) * 1080 >= H   # cenário pintado cobre a altura do quadro
+
+
+def test_short_vertical_fits_groups_and_follows_movement():
+    """Quadro vertical: 3+ personagens viram foto de grupo (dupla na frente, nada cortado); quem anda leva o
+    destino junto; a câmera acompanha quem voa; o parado no fundo sai do quadro estreito."""
+    from toonstudio.composition.short import _verticaliza, _zoom_min, W
+    def ch(x, acts=()):
+        return {"start": {"x": x, "y": 1010, "depth": 1.3, "z": 3}, "actions": list(acts)}
+    cam = {"keys": [{"t": 0, "x": 960, "y": 560, "zoom": 1.0}]}
+    sc = {"id": "s1", "duration": 3.0, "background": "danca_ondas_azul", "camera": cam,
+          "characters": {w: ch(x, [{"do": "dance", "style": "roda", "dur": 3}]) for w, x in
+                         [("laurinha", 480), ("joaninha", 800), ("luisinho", 1120), ("formiguinha", 1440)]}}
+    v = _verticaliza(sc, {})
+    half = W / 2 / _zoom_min("danca_ondas_azul", {})
+    for w, c in v["characters"].items():
+        assert abs(c["start"]["x"] - 960) + 150 * c["start"]["depth"] <= half, w     # ninguém cortado
+    assert v["characters"]["laurinha"]["start"]["z"] > v["characters"]["joaninha"]["start"]["z"]
+    sc2 = {"id": "s2", "duration": 3.9, "background": "plano_parque", "camera": cam,
+           "characters": {"laurinha": ch(1300, [{"t": 0.1, "do": "wave", "dur": 3}]), "joaninha": ch(980),
+                          "formiguinha": ch(1700, [{"t": 0.1, "do": "walk", "to_x": 1450, "dur": 1.2}])}}
+    v2 = _verticaliza(sc2, {"plano_parque": {"width": 2400, "height": 1080}})
+    assert "joaninha" not in v2["characters"]
+    c = v2["characters"]
+    assert c["formiguinha"]["actions"][0]["to_x"] - c["laurinha"]["start"]["x"] >= 300   # chega AO LADO, não em cima
+    sc3 = {"id": "s3", "duration": 3.0, "background": "plano_escola", "camera": cam,
+           "characters": {"laurinha": ch(1300, [{"t": 0, "do": "fly", "to_x": 1720, "to_y": 950, "dur": 1.0}])}}
+    k3 = _verticaliza(sc3, {"plano_escola": {"width": 2400, "height": 1080}})["camera"]["keys"]
+    assert k3[0]["x"] < k3[-1]["x"] and abs(k3[-1]["x"] - 1720) < 1                    # câmera vai junto
+
+
+def test_skipped_repeated_line_is_dropped_from_lyrics():
+    from toonstudio.audio.song import drop_skipped
+    w = lambda *ts: [{"w": "x", "s": t, "e": t + 0.05} for t in ts]
+    lines = [{"s": 123.7, "e": 125.6, "text": "Bate palminha!", "confianca": 0.4, "words": w(123.7, 125.0)},
+             {"s": 127.04, "e": 127.28, "text": "Bate palminha!", "confianca": 0.0, "words": w(127.04, 127.2)},
+             {"s": 127.28, "e": 133.9, "text": "Vem pra roda", "confianca": 1.0, "words": w(127.3, 130.0)}]
+    assert [l["s"] for l in drop_skipped(lines)] == [123.7, 127.28]

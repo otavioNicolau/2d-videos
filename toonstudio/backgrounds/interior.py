@@ -26,7 +26,7 @@ from .plano import Flat, PAL as PPAL, _surf
 W_INT, H = 2600, 1080
 FLOOR_Y = 760          # encontro parede/chão (o personagem pisa por volta de y 930, à frente)
 QUARTO = {"rosa": ("#FFD6EC", "#FFC2E2", "#E8B27A"), "azul": ("#D6ECFF", "#C2E0FF", "#E8B27A")}
-MOTIVOS = ("bananas", "leite", "lacos", "estrelas", "coracoes", "bolhas", "bolo")
+MOTIVOS = ("bananas", "leite", "lacos", "estrelas", "coracoes", "bolhas", "bolo", "feijao", "gotas")
 
 
 def _text(c, txt, x, y, size, col, outline=None):
@@ -180,7 +180,7 @@ def ceu(rng) -> tuple[skia.Surface, int]:
 
 
 COR_MOTIVO = {"bananas": "#FFE066", "leite": "#FFFFFF", "lacos": "#FFD23F", "estrelas": "#FFFFFF", "coracoes": "#FFFFFF",
-              "bolhas": "#E8F6FF", "bolo": "#F7C948"}
+              "bolhas": "#E8F6FF", "bolo": "#F7C948", "feijao": "#8E3B2E", "gotas": "#9CD8FF"}
 
 
 def _motivo(c, kind, x, y, s, col):
@@ -229,6 +229,22 @@ def _motivo(c, kind, x, y, s, col):
         path.moveTo(-34, 22); path.lineTo(34, 22); path.lineTo(22, -26); path.lineTo(-22, -26); path.close()
         c.drawPath(path, p); c.drawPath(path, pl)
         c.drawRect(skia.Rect(-22, -34, 22, -26), skia.Paint(AntiAlias=True, Color4f=skia.Color4f(*_rgba("#D9902E"))))
+    elif kind == "feijao":                                      # grãozinho de feijão (rim) com olhinho claro
+        path = skia.Path()
+        for j in range(30):
+            t = j / 30 * 2 * math.pi
+            r = 1.0 - 0.18 * max(0.0, math.cos(t - math.pi / 2)) ** 3
+            (path.moveTo if j == 0 else path.lineTo)(48 * math.cos(t) * r, 31 * math.sin(t) * r)
+        path.close()
+        c.drawPath(path, p); c.drawPath(path, pl)
+        c.drawOval(skia.Rect(8, 16, 30, 23), skia.Paint(AntiAlias=True, Color4f=skia.Color4f(*_rgba("#F2E6D8"))))
+    elif kind == "gotas":                                       # gotinha d'água com brilho
+        c.scale(1.4, 1.4)
+        path = skia.Path()
+        path.moveTo(0, -34); path.cubicTo(14, -12, 24, 0, 24, 10); path.cubicTo(24, 26, 12, 34, 0, 34)
+        path.cubicTo(-12, 34, -24, 26, -24, 10); path.cubicTo(-24, 0, -14, -12, 0, -34); path.close()
+        c.drawPath(path, p); c.drawPath(path, pl)
+        c.drawCircle(-9, 8, 5, skia.Paint(AntiAlias=True, Color4f=skia.Color4f(1, 1, 1, 1)))
     elif kind == "coracoes":
         path = skia.Path()
         path.moveTo(0, 30); path.cubicTo(-50, -4, -26, -44, 0, -18); path.cubicTo(26, -44, 50, -4, 0, 30); path.close()

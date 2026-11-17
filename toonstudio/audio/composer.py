@@ -125,13 +125,18 @@ def expandir(letra: str, peso: str, E: dict, V: dict) -> str:
 # ───────────────────────── prompt do Suno ─────────────────────────
 
 GRAFIA_SUNO = {"Luisinho": "Luizinho"}       # BIBLIA_MUSICAL §3: escrito com z o Suno não canta "Luissinho"
+GRAFIA_CANTO = {"Laurinha": "Lau-ri-nha"}     # só no que é CANTADO (fora dos [colchetes]): junto ele canta "Larinha"/"Launinha"
 
 
 def grafia_suno(letra: str) -> str:
     """Grafia SÓ para o texto do Suno (pronúncia); legenda e tela continuam com o nome oficial."""
     for a, b in GRAFIA_SUNO.items():
         letra = letra.replace(a, b)
-    return letra
+    partes = re.split(r"(\[[^\]]*\])", letra)     # marcações [..] ficam com o nome normal (são instruções)
+    for i in range(0, len(partes), 2):
+        for a, b in GRAFIA_CANTO.items():
+            partes[i] = partes[i].replace(a, b)
+    return "".join(partes)
 
 
 def style(f: dict, ritmo: str | None = None, bpm: int | None = None, E: dict | None = None, V: dict | None = None) -> str:

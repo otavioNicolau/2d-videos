@@ -56,7 +56,7 @@ def ln(k: Ink, pts, col: str, w: float = LINE, alpha: float = 1.0):
 # ───────────────────────── objetos de mão ─────────────────────────
 
 ITEMS = ("copo_leite", "copo_vazio", "banana", "banana_mordida", "pente", "garrafinha", "carrinho", "sombrinha", "escova",
-         "suco", "fatia_bolo", "fatia_grande")
+         "suco", "fatia_bolo", "fatia_grande", "escova_pasta", "escova_guitarra")
 
 
 ITEM_SCALE = 1.6
@@ -101,9 +101,22 @@ def draw_item(k: Ink, name: str, H: tuple[float, float], f: float = 1.0) -> None
             c = q(wx, 6)
             shape(k, ellipse_pts(c[0], c[1], 12 * S, 12 * S, 0, 14), PAL["roda"])
             k.dot(c[0], c[1], 4 * S, _rgba("#FFFFFF"))
-    elif name == "escova":
-        shape(k, Q([(-6, 14), (-6, -74), (6, -74), (6, 14)]), PAL["escova"], smooth=False)
-        shape(k, Q([(-2, -104), (16, -104), (16, -72), (-2, -72)]), "#FFFFFF", line="#B8C4D0", smooth=False)
+    elif name in ("escova", "escova_pasta"):
+        # deitada, apontando para TRÁS do punho (para a boca quando a mão está ao lado do rosto); cerdas para cima
+        shape(k, Q([(22, -6), (-38, -6), (-38, 6), (22, 6)]), PAL["escova"], smooth=False)
+        shape(k, Q([(-40, -6), (-64, -6), (-64, -24), (-40, -24)]), "#FFFFFF", line="#B8C4D0", smooth=False)
+        if name == "escova_pasta":                          # pasta do tamanho de um grão de feijão em cima das cerdas
+            shape(k, Q([(-62, -24), (-57, -34), (-47, -34), (-42, -24)]), "#7FD3F7", line="#3E9FD6")
+    elif name == "escova_guitarra":                         # escova gigante segurada como guitarra (cabo na diagonal)
+        def g(px, py):
+            a = -0.62                                       # cabo sobe para a frente
+            return q(px * math.cos(a) - py * math.sin(a), px * math.sin(a) + py * math.cos(a))
+        shape(k, [g(-40, -12), g(150, -12), g(150, 12), g(-40, 12)], PAL["escova"], smooth=False)
+        shape(k, [g(150, -16), g(196, -16), g(196, 10), g(150, 10)], "#FFFFFF", line="#B8C4D0", smooth=False)
+        for j in range(4):                                  # "cordas" (listrinhas brancas no cabo)
+            ln(k, [g(-30 + j * 8, -3), g(140, -3 + j * 2)], "#FFFFFF", w=LINE * 0.45)
+        shape(k, ellipse_pts(*g(-30, 0), 26 * S, 22 * S, -0.62, 18), "#FF8A1F")     # corpo da "guitarra" (adesivo de estrela)
+        _estrela(k, *g(-30, 0), 16 * S, "#FFD23F")
     elif name == "suco":                                   # copinho de suco de uva com canudinho
         shape(k, Q([(-22, -60), (22, -60), (17, 16), (-17, 16)]), PAL["vidro"], line="#7FB6DB", alpha=0.9, smooth=False)
         shape(k, Q([(-19, -40), (19, -40), (16, 12), (-16, 12)]), "#9B4FD1", line="#7A3AAE", smooth=False)
@@ -196,13 +209,19 @@ class Janela(_Prop):
     """Janela de parede com duas folhas que ABREM (canal `abre` 0→1) e faixa de luz entrando."""
 
     def __init__(self):
-        super().__init__("janela", "Janela", (900, 560), (450, 520), 400, {"abre": 0.0, "luz": 0.0})
+        super().__init__("janela", "Janela", (900, 560), (450, 520), 400, {"abre": 0.0, "luz": 0.0, "noite": 0.0})
 
     def paint(self, k, P):
         W2, Hh = 170, 340
         shape(k, [(-W2 - 22, 22), (W2 + 22, 22), (W2 + 22, -Hh - 22), (-W2 - 22, -Hh - 22)], PAL["moldura"], line="#C9D6E0", smooth=False)
-        shape(k, [(-W2, 0), (W2, 0), (W2, -Hh), (-W2, -Hh)], PAL["ceu"], smooth=False)
-        for cx, cy, s in ((-70, -250, 0.9), (80, -150, 0.7)):      # nuvens vistas pela janela
+        noite = P.get("noite", 0.0) > 0.5
+        shape(k, [(-W2, 0), (W2, 0), (W2, -Hh), (-W2, -Hh)], "#2B3A78" if noite else PAL["ceu"], smooth=False)
+        if noite:                                                  # céu de noite: lua e estrelinhas
+            shape(k, ellipse_pts(60, -240, 56, 56, 0, 28), "#FFF3B0", line="#E0C860")
+            shape(k, ellipse_pts(84, -258, 48, 48, 0, 28), "#2B3A78", line="#2B3A78")
+            for sx, sy, r in ((-100, -280, 12), (-40, -120, 9), (110, -90, 10), (-120, -60, 8)):
+                _estrela(k, sx, sy, r, "#FFF3B0")
+        for cx, cy, s in (() if noite else ((-70, -250, 0.9), (80, -150, 0.7))):      # nuvens vistas pela janela
             p = skia.Path()
             for dx, dy, r in ((-40, 6, 28), (-10, -10, 36), (24, -4, 32), (46, 8, 24)):
                 p.addCircle(cx + dx * s, cy + dy * s, r * s)
@@ -513,3 +532,159 @@ class MochilaChao(_Prop):
 
 PROPS.update({"logo": Logo, "botao_inscrever": BotaoInscrever, "joinha": Joinha, "sabonete": Sabonete, "bolo": Bolo,
               "mochila": MochilaChao})
+
+
+# ───────────────────────── 03 Sorriso Brilhante ─────────────────────────
+
+def _carinha(k: Ink, cx: float, cy: float, P: dict, linha: str, bochecha: str, esc: float = 1.0) -> None:
+    """Carinha de objeto-personagem (mesmo desenho do sabonete): olhos, boca e bochechas."""
+    for s_ in (-1, 1):
+        ex, ey = cx + s_ * 30 * esc, cy - 10 * esc
+        if P.get("lid", 0) > 0.5:
+            ln(k, [(ex - 13 * esc, ey), (ex, ey - 9 * esc), (ex + 13 * esc, ey)], linha, w=LINE)
+        else:
+            shape(k, ellipse_pts(ex, ey, 13 * esc, 17 * esc, 0, 14), "#FFFFFF", line=linha)
+            k.dot(ex + 2 * esc, ey + 4 * esc, 6 * esc, _rgba("#000000"))
+    b = P.get("boca", 0.0)
+    if b < 0.15:
+        ln(k, [(cx - 18 * esc, cy + 18 * esc), (cx, cy + 30 * esc), (cx + 18 * esc, cy + 18 * esc)], linha, w=LINE * 1.1)
+    else:
+        shape(k, [(cx - 20 * esc, cy + 16 * esc), (cx + 20 * esc, cy + 16 * esc), (cx + 10 * esc, cy + (16 + 30 * b) * esc),
+                  (cx - 10 * esc, cy + (16 + 30 * b) * esc)], "#8A2E2E", line=linha)
+    for s_ in (-1, 1):
+        k.shape(ellipse_pts(cx + s_ * 54 * esc, cy + 12 * esc, 13 * esc, 9 * esc, 0, 12), fill=_rgba(bochecha, 0.7), line=0)
+
+
+class PastaDente(_Prop):
+    """Tubo de pasta de dente deitado. `aperta` 0→1 amassa o tubo e sai uma bolinha de pasta (do tamanho de um feijão)."""
+
+    def __init__(self):
+        super().__init__("pasta", "Pasta de dente", (640, 320), (320, 290), 150, {"aperta": 0.0})
+
+    def paint(self, k, P):
+        a = max(0.0, min(1.0, P["aperta"]))
+        p_ = 18 * a                                                          # amassado no meio
+        corpo = [(-230, -150), (60, -140 + p_ * 0.4), (130, -128), (170, -105), (170, -45), (130, -22), (60, -10 - p_ * 0.4),
+                 (-230, 0)]
+        shape(k, corpo, "#FFFFFF", line="#9FB3C8", smooth=False)
+        shape(k, [(-250, -156), (-226, -156), (-226, 6), (-250, 6)], "#E9545D", smooth=False)     # fundo dobrado (crimpado)
+        for y in (-128, -96, -64, -32):
+            ln(k, [(-246, y), (-230, y)], "#FFFFFF", w=LINE * 0.6)
+        shape(k, [(-170, -128 + 3), (40, -120 + p_ * 0.3), (40, -30 - p_ * 0.3), (-170, -22)], "#3C8BF0", smooth=False)  # rótulo
+        _estrela(k, -65, -75, 30, "#FFFFFF")
+        ln(k, [(-150, -112), (20, -106)], "#FFFFFF", w=LINE * 1.2)
+        box(k, 170, -100, 222, -50, "#E9545D", r=10)                                            # tampinha
+        if a > 0.4:
+            u = min(1.0, (a - 0.4) / 0.6)
+            for dx, dy, r in ((0, 6, 26), (0, -12, 20), (4, -26, 11)):
+                shape(k, ellipse_pts(254 + 22 * u + dx, -75 + dy, r * (0.6 + 0.4 * u), r * 0.7 * (0.6 + 0.4 * u), 0, 16),
+                      "#7FD3F7", line="#3E9FD6")
+
+
+class Feijao(_Prop):
+    """Grão de feijão gigante (destaque 'do tamanho de um grão de feijão'). `pasta` 1 = a bolinha de pasta igual ao lado."""
+
+    def __init__(self):
+        super().__init__("feijao", "Grão de feijão", (760, 460), (380, 420), 260, {"pasta": 0.0, "pulo": 0.0})
+
+    def paint(self, k, P):
+        y0 = -130 - 60 * math.sin(math.pi * max(0.0, min(1.0, P["pulo"])))
+        x0 = -130 if P["pasta"] > 0.05 else 0
+        pts = []
+        for j in range(40):                                        # contorno de feijão (rim)
+            t = j / 40 * 2 * math.pi
+            r = 1.0 - 0.3 * max(0.0, math.cos(t - math.pi / 2)) ** 2      # entalhe do "rim" embaixo
+            pts.append((x0 + 150 * math.cos(t) * r, y0 + 100 * math.sin(t) * r))
+        shape(k, pts, "#8E3B2E", line="#5E2219")
+        ln(k, [(x0 - 80, y0 - 50), (x0 - 30, y0 - 70)], "#C46A57", w=LINE * 2.0)                    # brilho
+        k.shape(ellipse_pts(x0 + 60, y0 + 70, 26, 8, 0, 12), fill=_rgba("#F2E6D8"), line=0)          # olhinho do feijão
+        if P["pasta"] > 0.05:
+            sc = P["pasta"]
+            cx, cy = 190, y0
+            for dx, dy, r in ((0, 30, 132), (0, -12, 98), (6, -48, 54)):                            # bolinha de pasta (casquinha),
+                shape(k, ellipse_pts(cx + dx * sc, cy + dy * sc, r * sc, r * 0.5 * sc, 0, 24), "#7FD3F7", line="#3E9FD6")  # mesmo tamanho
+            ln(k, [(cx - 70 * sc, cy - 10 * sc), (cx - 30 * sc, cy - 26 * sc)], "#FFFFFF", w=LINE * 1.6)
+            for yy in (-18, 18):                                                                     # sinal de igual
+                box(k, 4, y0 + yy - 9, 56, y0 + yy + 9, "#FFFFFF", line="#5E2219", r=6)
+
+
+class Ampulheta(_Prop):
+    """Ampulheta dos 'dois minutinhos'. `areia` 0→1 escorre de cima para baixo; `vira` 0→1 gira meia volta."""
+
+    def __init__(self):
+        super().__init__("ampulheta", "Ampulheta", (520, 640), (260, 600), 330, {"areia": 0.0, "vira": 0.0, "brilho": 0.0})
+
+    def paint(self, k, P):
+        cy = -260
+        k.c.save()
+        k.c.rotate(math.degrees(math.pi * max(0.0, min(1.0, P["vira"]))), 0, cy)
+        for y in (-240, 240):                                      # tampas de madeira
+            box(k, -150, cy + y - 22 if y < 0 else cy + y - 6, 150, cy + y + 6 if y < 0 else cy + y + 22, PAL["madeira"], r=8)
+        glass = [(-110, cy - 230), (110, cy - 230), (20, cy - 10), (110, cy + 230), (-110, cy + 230), (-20, cy - 10)]
+        a = max(0.0, min(1.0, P["areia"]))
+        top_h = 170 * (1 - a)                                      # areia de cima diminui, a de baixo cresce
+        if top_h > 4:
+            yt = cy - 30 - top_h
+            w = 20 + (110 - 20) * (top_h / 220)
+            shape(k, [(-w, yt), (w, yt), (16, cy - 24), (-16, cy - 24)], "#FFC93A", line="#D99A1E", smooth=False)
+        bot_h = 30 + 150 * a
+        shape(k, [(-104, cy + 226), (104, cy + 226), (104 - bot_h * 0.25, cy + 226 - bot_h * 0.6),
+                  (0, cy + 226 - bot_h), (-104 + bot_h * 0.25, cy + 226 - bot_h * 0.6)], "#FFC93A", line="#D99A1E", smooth=False)
+        if 0.0 < a < 1.0:
+            ln(k, [(0, cy - 24), (0, cy + 226 - bot_h)], "#FFC93A", w=LINE * 1.2)
+        shape(k, glass, PAL["vidro"], line="#7FB6DB", alpha=0.45, smooth=False)
+        ln(k, [(-80, cy - 200), (-40, cy - 120)], "#FFFFFF", w=LINE * 1.4)
+        for x in (-150, 150):
+            box(k, x - 10, cy - 230, x + 10, cy + 230, PAL["madeira"], r=6)
+        k.c.restore()
+        if P["brilho"] > 0.05:
+            _estrela(k, 160, cy - 260, 30 * P["brilho"], "#FFFFFF")
+
+
+class Gotinha(_Prop):
+    """Gotinha d'água com carinha (objeto-personagem): agradece fazendo reverência (`reverencia` 0→1), pula, fala (`boca`)."""
+
+    def __init__(self):
+        super().__init__("gotinha", "Gotinha d'água", (460, 560), (230, 520), 260,
+                         {"reverencia": 0.0, "pulo": 0.0, "boca": 0.0, "lid": 0.0})
+
+    def paint(self, k, P):
+        y0 = -40 * math.sin(math.pi * max(0.0, min(1.0, P["pulo"])))
+        rv = max(0.0, min(1.0, P["reverencia"]))
+        k.c.save()
+        k.c.rotate(-28 * rv, 0, y0)                                # inclina para a frente (reverência) a partir da base
+        pts = []
+        for j in range(40):
+            t = j / 40 * 2 * math.pi
+            x = 120 * math.sin(t) * (1 - 0.0)
+            yy = -120 - 120 * math.cos(t)
+            if math.cos(t) > 0:                                     # parte de cima afina até a ponta
+                x *= (1 - math.cos(t)) ** 0.8
+                yy = -120 - 210 * math.cos(t)
+            pts.append((x, y0 + yy))
+        shape(k, pts, "#7FC8FA", line="#3E8FD6")
+        ln(k, [(-60, y0 - 200), (-30, y0 - 260)], "#FFFFFF", w=LINE * 1.8)
+        _carinha(k, 0, y0 - 120, P, "#1E4E8C", "#FF8AB0", esc=1.2)
+        if rv > 0.3:                                                # bracinhos de reverência (um na barriga, outro aberto)
+            ln(k, [(-100, y0 - 80), (-40, y0 - 60)], "#3E8FD6", w=LINE * 1.6)
+            ln(k, [(100, y0 - 90), (160, y0 - 150)], "#3E8FD6", w=LINE * 1.6)
+        k.c.restore()
+
+
+class AguaTorneira(_Prop):
+    """Fio d'água saindo da torneira da pia do banheiro. `aberta` 0→1 (0 = torneira fechada, só pinga)."""
+
+    def __init__(self):
+        super().__init__("agua", "Água da torneira", (200, 300), (100, 20), 80, {"aberta": 1.0})
+
+    def paint(self, k, P):
+        a = max(0.0, min(1.0, P["aberta"]))
+        if a > 0.05:                                                # origem = bico da torneira; cai até a cuba
+            w = 6 + 10 * a
+            shape(k, [(-w, 0), (w, 0), (w * 0.8, 70 * a + 10), (-w * 0.8, 70 * a + 10)], "#9CD8FF", line="#5AA8E6", alpha=0.85,
+                  smooth=False)
+        else:
+            shape(k, [(0, 6), (8, 22), (0, 30), (-8, 22)], "#9CD8FF", line="#5AA8E6")
+
+
+PROPS.update({"pasta": PastaDente, "feijao": Feijao, "ampulheta": Ampulheta, "gotinha": Gotinha, "agua": AguaTorneira})

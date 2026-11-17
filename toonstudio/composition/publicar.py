@@ -55,7 +55,8 @@ def _letra_publicavel(musica: Path) -> str:
             continue
         if s["tipo"] == "refrao":
             if refrao_visto:
-                out.append("(Refrão)")
+                if out[-1] != "(Refrão)":                    # refrão repetido em seguida: indica uma vez só
+                    out.append("(Refrão)")
                 continue
             refrao_visto = True
         linhas = [re.sub(r"\s+", " ", l.replace("Lau-ri-nha", "Laurinha").replace("Luizinho", "Luisinho")) for l in s["linhas"]]
@@ -77,6 +78,8 @@ def _capitulos(song: dict, offset: float, total: float) -> list[tuple[float, str
             nv += 1
             nome = f"Verso {nv}"
         t = b["s"] + offset
+        if nome == caps[-1][1]:                                 # refrão repetido em seguida = mesmo capítulo
+            continue
         if t - caps[-1][0] >= 10 and total - t >= 10:          # regra do YouTube: capítulos de 10 s ou mais
             caps.append((t, nome))
     return caps if len(caps) >= 3 else []

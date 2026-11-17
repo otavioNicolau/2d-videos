@@ -239,3 +239,103 @@ def abraco(char, st, a):
                                      "hand_f_y": -10, "hand_f_bend": -0.3, "paw_f": 3, "eyes_happy": 1.0, "head_tilt": 0.15,
                                      "mouth": "D"}, "back"),
                               (d, {"head_tilt": 0.2}, "inout")], dur=d, ex=1)
+
+
+# ───────────────────────── 03 Sorriso Brilhante: escovação ─────────────────────────
+
+@action("escovar_dentes", "acting", "Escova os dentes no espelho (espuma aparece). lado: frente | tras (bochecha) | lingua.",
+        {"dur": "s", "lado": "frente|tras|lingua"})
+def escovar_dentes(char, st, a):
+    d = _d(a, 1.6)
+    lado = a.get("lado", "frente")
+    base = {"frente": {"hand_n_x": 115, "hand_n_y": -82, "eyes_happy": 1.0},
+            "tras": {"hand_n_x": 135, "hand_n_y": -88, "head_tilt": -0.14, "eyes_happy": 1.0},
+            "lingua": {"hand_n_x": 112, "hand_n_y": -76, "mouth": "D", "jaw": 0.4, "brow_y": 0.8}}[lado]
+    keys = [(0.0, {"holding": "escova_pasta"}, "step"), (0.25, {**base, "hand_n_bend": 0.7, "paw_n": 1, "espuma": 0.4}, "inout")]
+    t, k = 0.25, 0
+    while t < d - 0.2:
+        t += 0.12
+        k += 1
+        dx = (14 if k % 2 else -14) if lado != "lingua" else 0
+        dy = 0 if lado != "lingua" else (10 if k % 2 else -10)
+        keys.append((t, {"hand_n_x": base["hand_n_x"] + dx, "hand_n_y": base["hand_n_y"] + dy, "espuma": min(1.0, 0.4 + t),
+                         "body_y": 2 if k % 2 else 0}, "inout"))
+    keys.append((d, {"body_y": 0}, "inout"))
+    return ActionResult(keys=keys, dur=d, ex=1)
+
+
+@action("cuspir", "acting", "Inclina para a pia e cospe a espuma (Ptuí!); volta sorrindo, boca limpinha.", {"dur": "s"})
+def cuspir(char, st, a):
+    d = _d(a, 1.2)
+    return ActionResult(keys=[(0.0, {"cuspe": 0.0}, "step"),
+                              (0.25, {"lean": 0.16, "head_dy": 10, "mouth": "F", "hand_n_x": -90, "hand_n_y": 30, "lid": 0.4}, "inout"),
+                              (0.3, {"cuspe": 0.02}, "step"),
+                              (0.75, {"cuspe": 0.97, "espuma": 0.0}, "in"),
+                              (0.8, {"cuspe": 0.0}, "step"),
+                              (d, {"lean": 0.0, "head_dy": 0, "lid": 0.0, **expression("joy")}, "inout")], dur=d, ex=1)
+
+
+_ESTATUA = {"perna": {"foot_f_y": -60, "foot_f_bend": 0.8, "hand_n_x": -150, "hand_n_y": -20, "hand_f_x": 150, "hand_f_y": -60,
+                      "paw_n": 3, "paw_f": 3, "lean": 0.08, "mouth": "C"},
+            "bracos": {"hand_n_x": -130, "hand_n_y": -140, "hand_f_x": 130, "hand_f_y": -140, "paw_n": 3, "paw_f": 3,
+                       "mouth": "D", "squash": 1.03},
+            "escova": {"hand_n_x": 115, "hand_n_y": -82, "hand_n_bend": 0.7, "paw_n": 1, "hand_f_x": 120, "hand_f_y": -80,
+                       "paw_f": 3, "head_tilt": 0.12, "eye_scale": 1.25, "mouth": "E"}}
+
+
+@action("estatua", "acting", "'Parou! Congelou!': congela numa pose engraçada; só os olhinhos mexem de um lado para o outro.",
+        {"dur": "s", "pose": "perna|bracos|escova"})
+def estatua(char, st, a):
+    d = _d(a, 2.0)
+    keys = [(0.0, {**_ESTATUA[a.get("pose", "perna")], "look_x": 0.0, "body_y": 0, "body_x": 0}, "step")]
+    t, k = 0.0, 0
+    while t < d - 0.35:                                        # olhinhos: direita, esquerda (pausa em cada lado)
+        t += 0.4
+        k += 1
+        keys.append((t, {"look_x": 1.0 if k % 2 else -1.0}, "out"))
+    return ActionResult(keys=keys, dur=d, ex=1)
+
+
+@action("tampar_nariz", "acting", "Tampa o nariz com a mão da frente (bafinho!), olhinhos apertados, cabeça para trás.",
+        {"dur": "s"})
+def tampar_nariz(char, st, a):
+    d = _d(a, 1.2)
+    return ActionResult(keys=[(0.0, {}, "step"),
+                              (0.25, {"hand_n_x": 30, "hand_n_y": -108, "hand_n_bend": 0.9, "paw_n": 1, "lid": 0.6, "mouth": "F",
+                                      "head_tilt": -0.1, "lean": -0.06, "brow_y": 0.8}, "back"),
+                              (d, {"head_tilt": -0.12}, "inout")], dur=d, ex=1)
+
+
+@action("fechar_torneira", "acting", "Estica o braço e gira a torneira (fecha), depois sorri.", {"dur": "s"})
+def fechar_torneira(char, st, a):
+    d = _d(a, 1.2)
+    return ActionResult(keys=[(0.0, {}, "step"),
+                              (0.3, {"hand_n_x": 130, "hand_n_y": -20, "hand_n_bend": 0.2, "paw_n": 1, "lean": 0.08}, "inout"),
+                              (0.5, {"hand_n_x": 122, "hand_n_y": -28}, "inout"),
+                              (0.7, {"hand_n_x": 132, "hand_n_y": -16}, "inout"),
+                              (d, {**REST, "lean": 0.0, **expression("joy")}, "inout")], dur=d, ex=1)
+
+
+@action("sorriso", "acting", "Mostra o sorriso brilhante para a câmera: boca aberta feliz e brilho 'tim-tim' piscando.",
+        {"dur": "s"})
+def sorriso(char, st, a):
+    d = _d(a, 1.4)
+    keys = [(0.0, {"brilho": 0.0}, "step"),
+            (0.2, {"mouth": "D", "smile": 1.0, "eyes_happy": 1.0, "head_tilt": 0.08, "hand_f_x": 110, "hand_f_y": -70,
+                   "hand_f_bend": -0.4, "paw_f": 1}, "back"),
+            (0.35, {"brilho": 1.0}, "back")]
+    t = 0.35
+    while t < d - 0.3:
+        t += 0.3
+        keys.append((t, {"brilho": 0.55 if int(t / 0.3) % 2 else 1.0}, "inout"))
+    return ActionResult(keys=keys, dur=d, ex=1)
+
+
+@action("bafo", "acting", "Acordou com bafinho: boceja e sai uma nuvenzinha verde da boca.", {"dur": "s"})
+def bafo(char, st, a):
+    d = _d(a, 1.4)
+    return ActionResult(keys=[(0.0, {"bafinho": 0.0}, "step"),
+                              (0.25, {"mouth": "D", "jaw": 0.5, "lid": 0.5, "hand_f_x": 40, "hand_f_y": -40, "paw_f": 1}, "inout"),
+                              (0.3, {"bafinho": 0.02}, "step"),
+                              (min(d, 1.3), {"bafinho": 0.97}, "out"),
+                              (d, {"mouth": "X", "jaw": 0.0, "lid": 0.0, "bafinho": 0.98, **REST}, "inout")], dur=d, ex=1)
