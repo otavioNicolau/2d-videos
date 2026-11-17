@@ -15,33 +15,51 @@
   "protetor solar",
   "chapéu"
  ],
- "curiosidade": "o sapo já foi girino e nadava com rabo como um peixinho",
+ "curiosidade": "o sapo já foi girino: nadava com rabo como um peixinho, depois nasceram quatro perninhas e ele pulou pro chão",
  "ritmo": "forro_piseiro",
  "bpm": 160,
  "estrutura": "A",
  "voz": "dueto",
  "cantam": {
+  "intro": "coro (arrasta o pé, zum)",
   "verso 1": "luisinho",
-  "verso 2": "laurinha",
-  "ponte": "coro",
-  "refrão": "coro"
+  "refrão": "coro",
+  "verso 2": "laurinha conta a história do girino",
+  "ponte": "coro: comandos de dança e sons dos bichos",
+  "final": "todo mundo"
  },
  "cenas": [
   {
+   "parte": "intro",
+   "ideia": "sanfona: a lagoa vista de pertinho (mundo pequenino): folhas de vitória-régia como ilhas, taboas gigantes; Laurinha e Luisinho chegam voando no 'zum'"
+  },
+  {
    "parte": "verso 1",
-   "ideia": "Luisinho e a vovó saindo com lanche, protetor e chapéu; lagoa ao fundo"
+   "ideia": "casa da vovó no domingo: vovó de chapéu, Luisinho com lanchinho e garrafinha, passa protetor (bochecha branca), chapéu; os três voam baixinho até a lagoa"
   },
   {
    "parte": "refrão",
-   "ideia": "arrastar o pé na beira da lagoa; sapos e patos dançando junto"
+   "ideia": "arrasta-pé na beira da lagoa com a vovó; 'Bate a asinha!' asas zumbindo; sapo e pato dançando junto; 'Gira pra lá, gira pra cá' giros; fundo de bolinhas no 'Passeio na lagoa'"
+  },
+  {
+   "parte": "intervalo",
+   "ideia": "forró com a turma em cima da folha de vitória-régia que balança na água"
   },
   {
    "parte": "verso 2",
-   "ideia": "Laurinha conta a história do girino: quadros em sequência (girino → perninhas → sapo)"
+   "ideia": "Laurinha conta a história em quadros: girino nadando com rabo como peixinho → nascem as 4 perninhas (uma por vez) → pula pro chão e vira sapo cantor ('Croac!') com microfone de taboa"
   },
   {
    "parte": "ponte",
-   "ideia": "pato faz quém-quém, sapo faz croac, as muriçocas fazem zum-zum"
+   "ideia": "só zabumba: pra frente, pra trás, voltinha e para (todo mundo congela); 'O pato faz?' close do pato 'quém, quém'; 'O sapo faz?' sapo 'croac'; 'E a muriçoca?' Laurinha e Luisinho fazem 'zum, zum' com as asinhas"
+  },
+  {
+   "parte": "refrão final",
+   "ideia": "todos dançando na beira da lagoa ao pôr do sol, a vovó também arrasta o pé"
+  },
+  {
+   "parte": "final",
+   "ideia": "'Ô, arrasta o pé! Tchau!' batida final seca: tchau de todos, vovó acena com o chapéu, os dois voam no 'zum'"
   }
  ],
  "duracao_alvo": [
@@ -52,5 +70,10 @@
   "forro_pe_de_serra"
  ],
  "status": "letra_revisada",
- "versoes": []
+ "versoes": [],
+ "youtube": {
+  "resumo": "PASSEIO NA LAGOA! 🐸 Domingo é dia de passear com a vovó! O Luisinho leva lanchinho, garrafinha, protetor e chapéu e voa bem baixinho até a lagoa. Lá a Laurinha conta um segredo: o sapo já foi girino e nadava com rabo igual um peixinho! Arrasta o pé, bate a asinha, gira pra lá, gira pra cá: ninguém fica à toa!",
+  "resumo_short": "PASSEIO NA LAGOA! 🐸 Arrasta o pé com a Laurinha, o Luisinho e a vovó na beira da lagoa!",
+  "curiosidade": "O sapo já foi girino: nadava com rabo igual um peixinho, depois nasceram quatro perninhas e ele pulou pro chão"
+ }
 }
