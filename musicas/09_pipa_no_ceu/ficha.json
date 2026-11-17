@@ -63,7 +63,86 @@
  "youtube": {
   "resumo": "PIPA NO CÉU! 🪁 Ventou lá fora: pega a pipa! A Laurinha e o Luisinho correm, soltam a linha e a pipa sobe, sobe, sobe e dança com o vento! Sabia que o vento é o ar se mexendo? E pipa a gente solta longe dos fios de luz, com um adulto. Abre os braços e vira pipa!",
   "resumo_short": "PIPA NO CÉU! 🪁 Sobe, sobe e dança com o vento com a Laurinha e o Luisinho!",
-  "curiosidade": "O vento é o ar se mexendo e empurra a pipa pro alto; e pipa se solta longe dos fios de luz"
+  "curiosidade": "O vento é o ar se mexendo e empurra a pipa pro alto; e pipa se solta longe dos fios de luz",
+  "miniatura": "PIPA\\nNO CÉU!",
+  "miniatura_cena": {
+   "fundo": "faixas",
+   "lado": "direita",
+   "cores": [
+    [
+     255,
+     138,
+     31
+    ],
+    [
+     150,
+     220,
+     255
+    ],
+    [
+     255,
+     210,
+     31
+    ],
+    [
+     255,
+     120,
+     170
+    ]
+   ],
+   "heroi": {
+    "id": "laurinha",
+    "pose": {
+     "turn": 0.2,
+     "mouth": "D",
+     "hand_n_x": -150,
+     "hand_n_y": -150,
+     "hand_n_bend": 0.5,
+     "paw_n": 1,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3
+    }
+   },
+   "par": {
+    "id": "luisinho",
+    "pose": {
+     "turn": -0.2,
+     "mouth": "D",
+     "hand_n_x": -135,
+     "hand_n_y": -135,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3
+    }
+   },
+   "objetos": [
+    {
+     "id": "pipa",
+     "pose": {
+      "balanco": 0.2,
+      "rabiola": 0.3
+     },
+     "tam": 470,
+     "x": 800,
+     "base": 620,
+     "giro": -12
+    },
+    {
+     "id": "vento",
+     "pose": {
+      "sopro": 0.3
+     },
+     "tam": 300,
+     "x": 220,
+     "base": 330
+    }
+   ]
+  }
  },
  "escolhida": "v1"
 }

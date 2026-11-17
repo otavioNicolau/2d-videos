@@ -1,0 +1,2047 @@
+{
+ "schema": "roteiro-1.0",
+ "nota": "Roteiro verso a verso de 'Pipa no Céu' (letra e v1 aprovadas em 17/11/2026): dia de vento no parque, pipa colorida com rabiola, a pipa sobe e dança no céu, o vento é o ar se mexendo, a mamãe avisa longe do fio de luz, a turma vira pipa na ponte, convite e tchau com a pipa no alto.",
+ "partes": {
+  "intro": [
+   {
+    "linhas": 1,
+    "cenario": "plano_parque",
+    "camera": {
+     "x": 1500,
+     "y": 540,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "callout": [
+     {
+      "t": 3.2,
+      "text": "UUUU!",
+      "color": "azul"
+     }
+    ],
+    "objetos": {
+     "vento": {
+      "id": "vento",
+      "x": 1400,
+      "y": 900,
+      "z": 4,
+      "depth": 1.4,
+      "keys": [
+       {
+        "t": 0,
+        "pose": {
+         "sopro": 0.0
+        }
+       },
+       {
+        "t": 6,
+        "pose": {
+         "sopro": 5.0
+        },
+        "ease": "linear"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": -250,
+      "y": 520,
+      "turn": 0.4,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "fly",
+        "dur": 2.4,
+        "to_x": 1200,
+        "to_y": 930
+       }
+      ]
+     },
+     "luisinho": {
+      "x": -450,
+      "y": 460,
+      "turn": 0.4,
+      "acoes": [
+       {
+        "t": 0.5,
+        "do": "fly",
+        "dur": 2.3,
+        "to_x": 1750,
+        "to_y": 930
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "verso#1": [
+   {
+    "linhas": 1,
+    "cenario": "plano_parque",
+    "camera": {
+     "x": 1400,
+     "y": 540,
+     "zoom": 1.2
+    },
+    "callout": [
+     {
+      "t": 0.4,
+      "text": "VENTOU!",
+      "color": "azul"
+     }
+    ],
+    "objetos": {
+     "vento": {
+      "id": "vento",
+      "x": 1400,
+      "y": 880,
+      "z": 4,
+      "depth": 1.4,
+      "keys": [
+       {
+        "t": 0,
+        "pose": {
+         "sopro": 0.0
+        }
+       },
+       {
+        "t": 6,
+        "pose": {
+         "sopro": 5.0
+        },
+        "ease": "linear"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 1250,
+      "turn": 0.3,
+      "pose": {
+       "despenteado": 1
+      },
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "look_around",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_parque",
+    "camera": {
+     "x": 1500,
+     "y": 540,
+     "zoom": 1.15
+    },
+    "callout": [
+     {
+      "t": 0.6,
+      "text": "PEGA A PIPA!",
+      "color": "rosa"
+     }
+    ],
+    "objetos": {
+     "pipa": {
+      "id": "pipa",
+      "x": 1720,
+      "y": 1200,
+      "z": 2,
+      "depth": 0.8,
+      "pose": {
+       "linha": 0.0,
+       "linha_dx": -500.0,
+       "linha_dy": 600.0
+      },
+      "keys": []
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 1250,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "point",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1550,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.4,
+        "do": "bacana",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "padrao_estrelas_azul",
+    "callout": [
+     {
+      "t": 0.4,
+      "text": "PAPEL COLORIDO!",
+      "color": "amarelo"
+     }
+    ],
+    "objetos": {
+     "pipa": {
+      "id": "pipa",
+      "x": 960,
+      "y": 1150,
+      "z": 2,
+      "depth": 1.15,
+      "pose": {
+       "linha": 0.0,
+       "linha_dx": -500.0,
+       "linha_dy": 600.0
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "balanco": 0.0,
+         "rabiola": 0.0
+        }
+       },
+       {
+        "t": 2.5,
+        "pose": {
+         "balanco": 2.0,
+         "rabiola": 3.0
+        },
+        "ease": "linear"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "padrao_estrelas_roxo",
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "RABIOLA!",
+      "color": "rosa"
+     }
+    ],
+    "objetos": {
+     "pipa": {
+      "id": "pipa",
+      "x": 960,
+      "y": 850,
+      "z": 2,
+      "depth": 1.6,
+      "pose": {
+       "linha": 0.0,
+       "linha_dx": -500.0,
+       "linha_dy": 600.0
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "balanco": 0.0,
+         "rabiola": 0.0
+        }
+       },
+       {
+        "t": 2.0,
+        "pose": {
+         "balanco": 2.0,
+         "rabiola": 3.0
+        },
+        "ease": "linear"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_parque",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0
+    },
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "CORRE, CORRE!",
+      "color": "laranja"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 600,
+      "turn": 0.6,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "run",
+        "to_x": 1700
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_parque",
+    "camera": {
+     "x": 1500,
+     "y": 540,
+     "zoom": 1.0
+    },
+    "callout": [
+     {
+      "t": 1.2,
+      "text": "SUBIU!",
+      "color": "verde"
+     }
+    ],
+    "objetos": {
+     "pipa": {
+      "id": "pipa",
+      "x": 1500,
+      "y": 900,
+      "z": 2,
+      "depth": 0.8,
+      "pose": {
+       "linha": 1.0,
+       "linha_dx": -450.0,
+       "linha_dy": 650.0
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "balanco": 0.0,
+         "rabiola": 0.0
+        }
+       },
+       {
+        "t": 6.0,
+        "pose": {
+         "balanco": 6.0,
+         "rabiola": 9.0
+        },
+        "ease": "linear"
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "y": 1150
+        }
+       },
+       {
+        "t": 2.0,
+        "pose": {
+         "y": 600
+        },
+        "ease": "out"
+       }
+      ]
+     },
+     "vento": {
+      "id": "vento",
+      "x": 1200,
+      "y": 800,
+      "z": 4,
+      "depth": 1.2,
+      "keys": [
+       {
+        "t": 0,
+        "pose": {
+         "sopro": 0.0
+        }
+       },
+       {
+        "t": 6,
+        "pose": {
+         "sopro": 5.0
+        },
+        "ease": "linear"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 1100,
+      "turn": 0.3,
+      "pose": {
+       "hand_n_x": -150,
+       "hand_n_y": -150,
+       "paw_n": 1
+      },
+      "acoes": [
+       {
+        "t": 1.6,
+        "do": "jump",
+        "dur": 0.8
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "refrao": [
+   {
+    "linhas": 2,
+    "cenario": "plano_parque",
+    "camera": {
+     "x": 1500,
+     "y": 540,
+     "zoom": 1.0
+    },
+    "flash": true,
+    "callout": "PIPA NO CÉU!",
+    "objetos": {
+     "pipa": {
+      "id": "pipa",
+      "x": 1500,
+      "y": 700,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "linha": 0.0,
+       "linha_dx": -500.0,
+       "linha_dy": 600.0
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "balanco": 0.0,
+         "rabiola": 0.0
+        }
+       },
+       {
+        "t": 6.0,
+        "pose": {
+         "balanco": 6.0,
+         "rabiola": 9.0
+        },
+        "ease": "linear"
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "y": 950
+        }
+       },
+       {
+        "t": 1.2,
+        "pose": {
+         "y": 650
+        },
+        "ease": "out"
+       }
+      ]
+     },
+     "vento": {
+      "id": "vento",
+      "x": 1200,
+      "y": 800,
+      "z": 4,
+      "depth": 1.2,
+      "keys": [
+       {
+        "t": 0,
+        "pose": {
+         "sopro": 0.0
+        }
+       },
+       {
+        "t": 6,
+        "pose": {
+         "sopro": 5.0
+        },
+        "ease": "linear"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 1150,
+      "turn": 0.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "bracos",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1850,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "bracos",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 2,
+    "cenario": [
+     "danca_raios_azul",
+     "danca_raios_amarelo",
+     "danca_raios_verde"
+    ],
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "SOBE, SOBE, SOBE!",
+      "color": "amarelo"
+     }
+    ],
+    "fx": [
+     "estrelas"
+    ],
+    "objetos": {
+     "pipa": {
+      "id": "pipa",
+      "x": 960,
+      "y": 820,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "linha": 0.0,
+       "linha_dx": -500.0,
+       "linha_dy": 600.0
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "balanco": 0.0,
+         "rabiola": 0.0
+        }
+       },
+       {
+        "t": 6.0,
+        "pose": {
+         "balanco": 6.0,
+         "rabiola": 9.0
+        },
+        "ease": "linear"
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "y": 1100
+        }
+       },
+       {
+        "t": 1.0,
+        "pose": {
+         "y": 820
+        },
+        "ease": "out"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 560,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "asinhas",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1360,
+      "turn": -0.15,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "asinhas",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 2,
+    "cenario": "plano_ceu",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0
+    },
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "PRA ESQUERDA! PRA DIREITA!",
+      "color": "verde"
+     }
+    ],
+    "objetos": {
+     "pipa": {
+      "id": "pipa",
+      "x": 1300,
+      "y": 800,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "linha": 0.0,
+       "linha_dx": -500.0,
+       "linha_dy": 600.0
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 1000,
+         "balanco": 0.0,
+         "rabiola": 0.0
+        }
+       },
+       {
+        "t": 1.6,
+        "pose": {
+         "x": 1600
+        }
+       },
+       {
+        "t": 3.2,
+        "pose": {
+         "x": 1100
+        }
+       },
+       {
+        "t": 3.6,
+        "pose": {
+         "balanco": 3.0,
+         "rabiola": 4.0
+        },
+        "ease": "linear"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 700,
+      "y": 700,
+      "fly": 1,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "fly",
+        "dur": 1.6,
+        "to_x": 1250,
+        "to_y": 640
+       },
+       {
+        "t": 1.7,
+        "do": "fly",
+        "dur": 1.5,
+        "to_x": 800,
+        "to_y": 700
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1900,
+      "y": 720,
+      "fly": 1,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "fly",
+        "dur": 1.6,
+        "to_x": 1500,
+        "to_y": 660
+       },
+       {
+        "t": 1.8,
+        "do": "fly",
+        "dur": 1.5,
+        "to_x": 1950,
+        "to_y": 720
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 2,
+    "cenario": "plano_parque",
+    "camera": {
+     "x": 1500,
+     "y": 540,
+     "zoom": 1.0
+    },
+    "fx": [
+     "confete"
+    ],
+    "callout": [
+     {
+      "t": 0.5,
+      "text": "BEM LÁ NO ALTO!",
+      "color": "azul"
+     }
+    ],
+    "objetos": {
+     "pipa": {
+      "id": "pipa",
+      "x": 1500,
+      "y": 560,
+      "z": 2,
+      "depth": 0.75,
+      "pose": {
+       "linha": 1.0,
+       "linha_dx": -450.0,
+       "linha_dy": 720.0
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "balanco": 0.0,
+         "rabiola": 0.0
+        }
+       },
+       {
+        "t": 6.0,
+        "pose": {
+         "balanco": 6.0,
+         "rabiola": 9.0
+        },
+        "ease": "linear"
+       }
+      ]
+     },
+     "vento": {
+      "id": "vento",
+      "x": 1300,
+      "y": 760,
+      "z": 4,
+      "depth": 1.2,
+      "keys": [
+       {
+        "t": 0,
+        "pose": {
+         "sopro": 0.0
+        }
+       },
+       {
+        "t": 6,
+        "pose": {
+         "sopro": 5.0
+        },
+        "ease": "linear"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 1150,
+      "turn": 0.2,
+      "pose": {
+       "hand_n_x": -150,
+       "hand_n_y": -150,
+       "paw_n": 1
+      },
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "jump",
+        "dur": 0.8
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1850,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "pulinho",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "intervalo#1": [
+   {
+    "cenario": "plano_ceu",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0
+    },
+    "titulo": "pipas da turma no céu",
+    "fx": [
+     "confete"
+    ],
+    "objetos": {
+     "p1": {
+      "id": "pipa",
+      "x": 800,
+      "y": 750,
+      "z": 2,
+      "depth": 0.8,
+      "pose": {
+       "linha": 0.0,
+       "linha_dx": -500.0,
+       "linha_dy": 600.0
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "balanco": 0.0,
+         "rabiola": 0.0
+        }
+       },
+       {
+        "t": 3.2,
+        "pose": {
+         "balanco": 3.0,
+         "rabiola": 4.5
+        },
+        "ease": "linear"
+       }
+      ]
+     },
+     "p2": {
+      "id": "pipa",
+      "x": 1350,
+      "y": 650,
+      "z": 2,
+      "depth": 0.9,
+      "pose": {
+       "linha": 0.0,
+       "linha_dx": -500.0,
+       "linha_dy": 600.0
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "balanco": 0.0,
+         "rabiola": 0.0
+        }
+       },
+       {
+        "t": 3.2,
+        "pose": {
+         "balanco": 4.0,
+         "rabiola": 6.0
+        },
+        "ease": "linear"
+       }
+      ]
+     },
+     "p3": {
+      "id": "pipa",
+      "x": 1850,
+      "y": 780,
+      "z": 2,
+      "depth": 0.7,
+      "pose": {
+       "linha": 0.0,
+       "linha_dx": -500.0,
+       "linha_dy": 600.0
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "balanco": 0.0,
+         "rabiola": 0.0
+        }
+       },
+       {
+        "t": 3.2,
+        "pose": {
+         "balanco": 3.0,
+         "rabiola": 4.5
+        },
+        "ease": "linear"
+       }
+      ]
+     }
+    },
+    "seg": 4.0
+   },
+   {
+    "cenario": "danca_xadrez_verde",
+    "fx": [
+     "confete"
+    ],
+    "callout": [
+     {
+      "t": 0.1,
+      "text": "LAURINHA E LUISINHO!",
+      "color": "rosa"
+     }
+    ],
+    "atores": {
+     "joaninha": {
+      "x": 480,
+      "turn": 0.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 800,
+      "turn": 0.1,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1120,
+      "turn": -0.1,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ]
+     },
+     "formiguinha": {
+      "x": 1440,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "linhas": 1
+   }
+  ],
+  "verso#2": [
+   {
+    "linhas": 1,
+    "cenario": "plano_parque",
+    "camera": {
+     "x": 1600,
+     "y": 540,
+     "zoom": 1.2
+    },
+    "callout": [
+     {
+      "t": 1.2,
+      "text": "HEIN?",
+      "color": "azul"
+     }
+    ],
+    "objetos": {
+     "vento": {
+      "id": "vento",
+      "x": 1600,
+      "y": 860,
+      "z": 4,
+      "depth": 1.3,
+      "keys": [
+       {
+        "t": 0,
+        "pose": {
+         "sopro": 0.0
+        }
+       },
+       {
+        "t": 6,
+        "pose": {
+         "sopro": 5.0
+        },
+        "ease": "linear"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 1500,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "pensar",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_ceu",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.1
+    },
+    "callout": [
+     {
+      "t": 1.6,
+      "text": "O AR SE MEXENDO!",
+      "color": "azul"
+     }
+    ],
+    "objetos": {
+     "vento": {
+      "id": "vento",
+      "x": 1300,
+      "y": 850,
+      "z": 4,
+      "depth": 1.5,
+      "keys": [
+       {
+        "t": 0,
+        "pose": {
+         "sopro": 0.0
+        }
+       },
+       {
+        "t": 6,
+        "pose": {
+         "sopro": 5.0
+        },
+        "ease": "linear"
+       }
+      ]
+     },
+     "pipa": {
+      "id": "pipa",
+      "x": 1500,
+      "y": 760,
+      "z": 2,
+      "depth": 0.8,
+      "pose": {
+       "linha": 0.0,
+       "linha_dx": -500.0,
+       "linha_dy": 600.0
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "balanco": 0.0,
+         "rabiola": 0.0
+        }
+       },
+       {
+        "t": 4.0,
+        "pose": {
+         "balanco": 6.0,
+         "rabiola": 9.0
+        },
+        "ease": "linear"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_ceu",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.1
+    },
+    "callout": [
+     {
+      "t": 0.5,
+      "text": "EMPURRA A PIPA!",
+      "color": "verde"
+     }
+    ],
+    "objetos": {
+     "vento": {
+      "id": "vento",
+      "x": 1100,
+      "y": 900,
+      "z": 4,
+      "depth": 1.3,
+      "keys": [
+       {
+        "t": 0,
+        "pose": {
+         "sopro": 0.0
+        }
+       },
+       {
+        "t": 6,
+        "pose": {
+         "sopro": 5.0
+        },
+        "ease": "linear"
+       }
+      ]
+     },
+     "pipa": {
+      "id": "pipa",
+      "x": 1300,
+      "y": 800,
+      "z": 2,
+      "depth": 0.9,
+      "pose": {
+       "linha": 0.0,
+       "linha_dx": -500.0,
+       "linha_dy": 600.0
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 1100,
+         "y": 900,
+         "balanco": 0.0
+        }
+       },
+       {
+        "t": 2.4,
+        "pose": {
+         "x": 1600,
+         "y": 650,
+         "balanco": 2.0
+        },
+        "ease": "out"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_ceu",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0
+    },
+    "callout": [
+     {
+      "t": 0.6,
+      "text": "CÉU AZUL!",
+      "color": "azul"
+     }
+    ],
+    "fx": [
+     "estrelas"
+    ],
+    "objetos": {
+     "pipa": {
+      "id": "pipa",
+      "x": 1300,
+      "y": 700,
+      "z": 2,
+      "depth": 0.8,
+      "pose": {
+       "linha": 0.0,
+       "linha_dx": -500.0,
+       "linha_dy": 600.0
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "balanco": 0.0,
+         "rabiola": 0.0
+        }
+       },
+       {
+        "t": 2.7,
+        "pose": {
+         "balanco": 3.0,
+         "rabiola": 4.5
+        },
+        "ease": "linear"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 900,
+      "y": 760,
+      "fly": 1,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "fly",
+        "dur": 2.4,
+        "to_x": 1050,
+        "to_y": 700
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_parque",
+    "camera": {
+     "x": 1700,
+     "y": 540,
+     "zoom": 1.1
+    },
+    "callout": [
+     {
+      "t": 0.6,
+      "text": "ATENÇÃO!",
+      "color": "laranja"
+     }
+    ],
+    "objetos": {
+     "poste": {
+      "x": 2050,
+      "y": 930,
+      "z": 1,
+      "depth": 1.0
+     }
+    },
+    "atores": {
+     "mamae": {
+      "x": 1450,
+      "turn": 0.4,
+      "acoes": [
+       {
+        "t": 0.3,
+        "do": "point",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1250,
+      "turn": 0.4,
+      "acoes": [
+       {
+        "t": 0.6,
+        "do": "shock_reaction",
+        "dur": 0.8
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_parque",
+    "camera": {
+     "x": 1500,
+     "y": 540,
+     "zoom": 1.0
+    },
+    "callout": [
+     {
+      "t": 0.4,
+      "text": "LONGE DO FIO!",
+      "color": "vermelho"
+     }
+    ],
+    "objetos": {
+     "poste": {
+      "x": 2300,
+      "y": 930,
+      "z": 1,
+      "depth": 1.0,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "alerta": 0.0
+        }
+       },
+       {
+        "t": 0.5,
+        "pose": {
+         "alerta": 1.0
+        },
+        "ease": "back"
+       }
+      ]
+     },
+     "pipa": {
+      "id": "pipa",
+      "x": 1500,
+      "y": 600,
+      "z": 2,
+      "depth": 0.75,
+      "pose": {
+       "linha": 0.0,
+       "linha_dx": -500.0,
+       "linha_dy": 600.0
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 2000,
+         "balanco": 0.0
+        }
+       },
+       {
+        "t": 2.5,
+        "pose": {
+         "x": 1000,
+         "balanco": 3.0
+        },
+        "ease": "inout"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 1050,
+      "turn": 0.4,
+      "pose": {
+       "hand_n_x": -150,
+       "hand_n_y": -150,
+       "paw_n": 1
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "walk",
+        "to_x": 850
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1300,
+      "turn": -0.4,
+      "acoes": [
+       {
+        "t": 1.0,
+        "do": "bacana",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "ponte": [
+   {
+    "linhas": 1,
+    "cenario": "danca_bolinhas_azul",
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "ABRE OS BRAÇOS!",
+      "color": "amarelo"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 640,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "bracos",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1280,
+      "turn": -0.15,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "bracos",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_ceu",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.1
+    },
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "VIRA PIPA!",
+      "color": "rosa"
+     }
+    ],
+    "objetos": {
+     "vento": {
+      "id": "vento",
+      "x": 1300,
+      "y": 850,
+      "z": 4,
+      "depth": 1.4,
+      "keys": [
+       {
+        "t": 0,
+        "pose": {
+         "sopro": 0.0
+        }
+       },
+       {
+        "t": 6,
+        "pose": {
+         "sopro": 5.0
+        },
+        "ease": "linear"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 1050,
+      "y": 720,
+      "fly": 1,
+      "pose": {
+       "hand_n_x": -200,
+       "hand_n_y": -70,
+       "hand_f_x": 200,
+       "hand_f_y": -70
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "rot": -0.15
+        }
+       },
+       {
+        "t": 1.0,
+        "pose": {
+         "rot": 0.15
+        }
+       },
+       {
+        "t": 2.0,
+        "pose": {
+         "rot": -0.1
+        }
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1550,
+      "y": 760,
+      "fly": 1,
+      "turn": -0.15,
+      "pose": {
+       "hand_n_x": -200,
+       "hand_n_y": -70,
+       "hand_f_x": 200,
+       "hand_f_y": -70
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "rot": 0.15
+        }
+       },
+       {
+        "t": 1.0,
+        "pose": {
+         "rot": -0.15
+        }
+       },
+       {
+        "t": 2.0,
+        "pose": {
+         "rot": 0.1
+        }
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "danca_bolinhas_verde",
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "BALANÇA!",
+      "color": "verde"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 640,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "balanco",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1280,
+      "turn": -0.15,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "balanco",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_parque",
+    "camera": {
+     "x": 1500,
+     "y": 540,
+     "zoom": 1.1
+    },
+    "callout": [
+     {
+      "t": 1.2,
+      "text": "UFA!",
+      "color": "azul"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 1300,
+      "y": 600,
+      "turn": 0.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "fly",
+        "dur": 2.4,
+        "to_x": 1300,
+        "to_y": 930
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1700,
+      "y": 560,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "fly",
+        "dur": 2.4,
+        "to_x": 1700,
+        "to_y": 930
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "intervalo#2": [
+   {
+    "linhas": 1,
+    "cenario": "danca_raios_azul",
+    "camera": "close:luisinho",
+    "callout": "ZUM-ZUM, QUE MASSA!",
+    "atores": {
+     "luisinho": {
+      "x": 960,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "bacana",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "cenario": "plano_parque",
+    "camera": {
+     "x": 1500,
+     "y": 540,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "titulo": "turma soltando pipa",
+    "fx": [
+     "confete"
+    ],
+    "objetos": {
+     "p1": {
+      "id": "pipa",
+      "x": 1200,
+      "y": 560,
+      "z": 2,
+      "depth": 0.7,
+      "pose": {
+       "linha": 1.0,
+       "linha_dx": -300.0,
+       "linha_dy": 700.0
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "balanco": 0.0,
+         "rabiola": 0.0
+        }
+       },
+       {
+        "t": 7,
+        "pose": {
+         "balanco": 5.0,
+         "rabiola": 7.5
+        },
+        "ease": "linear"
+       }
+      ]
+     },
+     "p2": {
+      "id": "pipa",
+      "x": 1850,
+      "y": 520,
+      "z": 2,
+      "depth": 0.7,
+      "pose": {
+       "linha": 1.0,
+       "linha_dx": 200.0,
+       "linha_dy": 720.0
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "balanco": 0.0,
+         "rabiola": 0.0
+        }
+       },
+       {
+        "t": 7,
+        "pose": {
+         "balanco": 6.0,
+         "rabiola": 9.0
+        },
+        "ease": "linear"
+       }
+      ]
+     },
+     "vento": {
+      "id": "vento",
+      "x": 1500,
+      "y": 760,
+      "z": 4,
+      "depth": 1.2,
+      "keys": [
+       {
+        "t": 0,
+        "pose": {
+         "sopro": 0.0
+        }
+       },
+       {
+        "t": 6,
+        "pose": {
+         "sopro": 5.0
+        },
+        "ease": "linear"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 1000,
+      "turn": 0.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ]
+     },
+     "formiguinha": {
+      "x": 1350,
+      "turn": 0.1,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ]
+     },
+     "joaninha": {
+      "x": 1650,
+      "turn": -0.1,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 2000,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "final#1": [
+   {
+    "linhas": 1,
+    "cenario": "danca_raios_azul",
+    "camera": "close:laurinha",
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "GOSTOU?",
+      "color": "rosa"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 960,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "apontar_camera",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "danca_bolinhas_amarelo",
+    "callout": [
+     {
+      "t": 0.4,
+      "text": "DÁ UM JOINHA!",
+      "color": "azul"
+     }
+    ],
+    "fx": [
+     "estrelas"
+    ],
+    "objetos": {
+     "joinha": {
+      "x": 1380,
+      "y": 900,
+      "z": 3,
+      "depth": 1.3,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "escala": 0.0
+        }
+       },
+       {
+        "t": 0.4,
+        "pose": {
+         "escala": 1.0
+        },
+        "ease": "back"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 680,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "bacana",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_casa_frente",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.1
+    },
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "CHAMA O PAPAI E A MAMÃE!",
+      "color": "verde"
+     }
+    ],
+    "atores": {
+     "mamae": {
+      "x": 1100,
+      "turn": 0.2,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "wave",
+        "dur": 1.2
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 1450,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "point",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "danca_raios_vermelho",
+    "callout": [
+     {
+      "t": 0.5,
+      "text": "INSCREVA-SE!",
+      "color": "vermelho"
+     }
+    ],
+    "fx": [
+     "coracoes"
+    ],
+    "objetos": {
+     "botao": {
+      "id": "botao_inscrever",
+      "x": 1260,
+      "y": 760,
+      "z": 3,
+      "depth": 1.2,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "escala": 0.0,
+         "aperta": 0.0
+        }
+       },
+       {
+        "t": 0.4,
+        "pose": {
+         "escala": 1.0
+        },
+        "ease": "back"
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "aperta": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 2.1,
+        "pose": {
+         "aperta": 0.0
+        },
+        "ease": "in"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 600,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "point",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "final#2": [
+   {
+    "linhas": 1,
+    "cenario": "plano_parque",
+    "camera": {
+     "x": 1500,
+     "y": 540,
+     "zoom": 1.0
+    },
+    "fx": [
+     "coracoes"
+    ],
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "TCHAU!",
+      "color": "azul"
+     }
+    ],
+    "objetos": {
+     "pipa": {
+      "id": "pipa",
+      "x": 1500,
+      "y": 560,
+      "z": 2,
+      "depth": 0.75,
+      "pose": {
+       "linha": 1.0,
+       "linha_dx": -450.0,
+       "linha_dy": 720.0
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "balanco": 0.0,
+         "rabiola": 0.0
+        }
+       },
+       {
+        "t": 9,
+        "pose": {
+         "balanco": 7.0,
+         "rabiola": 10.5
+        },
+        "ease": "linear"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 1150,
+      "turn": 0.15,
+      "pose": {
+       "hand_n_x": -150,
+       "hand_n_y": -150,
+       "paw_n": 1
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "tchau",
+        "dur": 3.6
+       },
+       {
+        "t": 4.0,
+        "do": "fly",
+        "dur": 1.4,
+        "to_x": 2400,
+        "to_y": 300
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1850,
+      "turn": -0.15,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "tchau",
+        "dur": 3.6
+       },
+       {
+        "t": 4.1,
+        "do": "fly",
+        "dur": 1.4,
+        "to_x": 2600,
+        "to_y": 350
+       }
+      ]
+     }
+    }
+   }
+  ]
+ }
+}

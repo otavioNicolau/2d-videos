@@ -1286,3 +1286,76 @@ class Ventilador(_Prop):
 
 
 PROPS.update({"arvore_natal": ArvoreNatal, "papai_noel": PapaiNoel, "ventilador": Ventilador})
+
+
+# ───────────────────────── 09 Pipa no Céu ─────────────────────────
+
+class Pipa(_Prop):
+    """Pipa de papel colorido (losango em 4 cores) com rabiola de lacinhos. `balanco` 0→1 balança (fase), `linha` 0→1
+    mostra a linha descendo até a mão (comprimento em `linha_dx`/`linha_dy`), `rabiola` 0→1 faz a rabiola ondular."""
+
+    def __init__(self):
+        super().__init__("pipa", "Pipa", (1200, 1000), (600, 900), 420,
+                         {"balanco": 0.0, "linha": 0.0, "linha_dx": -500.0, "linha_dy": 600.0, "rabiola": 0.0})
+
+    def paint(self, k, P):
+        a = math.sin(P["balanco"] * 2 * math.pi) * 0.18
+        cx, cy = 0.0, -560.0
+        k.c.save()
+        k.c.rotate(math.degrees(a), cx, cy)
+        top, dir_, base, esq = (cx, cy - 230), (cx + 170, cy - 30), (cx, cy + 230), (cx - 170, cy - 30)
+        for pts, cor in (((top, dir_, (cx, cy - 30)), "#E9545D"), ((dir_, base, (cx, cy - 30)), "#FFD21F"),
+                         ((base, esq, (cx, cy - 30)), "#2F86F0"), ((esq, top, (cx, cy - 30)), "#2DBE5A")):
+            shape(k, list(pts), cor, line="#534946", smooth=False)
+        ln(k, [top, base], "#7A5A2E", w=LINE * 1.2)
+        ln(k, [esq, dir_], "#7A5A2E", w=LINE * 1.2)
+        w = P["rabiola"]
+        pts = [(cx + 40 * math.sin(w * 2 * math.pi + j * 0.7), cy + 230 + j * 60) for j in range(7)]
+        ln(k, [base] + pts, "#534946", w=LINE * 0.8)
+        for j, (x, y) in enumerate(pts[1::2]):
+            c = ("#FF7FBF", "#FFD21F", "#2F86F0")[j % 3]
+            shape(k, [(x - 26, y - 14), (x, y), (x - 26, y + 14)], c, line=dark(c, 0.7), smooth=False)
+            shape(k, [(x + 26, y - 14), (x, y), (x + 26, y + 14)], c, line=dark(c, 0.7), smooth=False)
+        k.c.restore()
+        if P["linha"] > 0.05:                                     # linha descendo até a mão de quem segura
+            ln(k, [(cx, cy - 30), (cx + P["linha_dx"] * 0.5, cy + P["linha_dy"] * 0.6), (cx + P["linha_dx"], cy + P["linha_dy"])],
+               "#FFFFFF", w=LINE * 0.6)
+
+
+class Vento(_Prop):
+    """Traços de vento (redemoinhos brancos) que sopram para o lado: `sopro` 0→1 avança os traços."""
+
+    def __init__(self):
+        super().__init__("vento", "Vento", (1200, 700), (600, 600), 300, {"sopro": 0.0})
+
+    def paint(self, k, P):
+        s = P["sopro"] % 1.0
+        for j, (y, L) in enumerate(((-480, 300), (-340, 380), (-200, 260))):
+            x0 = -500 + 700 * ((s + j * 0.33) % 1.0)
+            pts = [(x0 + u * L, y + 26 * math.sin(u * math.pi * 2)) for u in (i / 10 for i in range(11))]
+            ln(k, pts, "#FFFFFF", w=LINE * 1.6)
+            ex, ey = pts[-1]
+            ln(k, [(ex, ey), (ex + 30, ey - 30), (ex + 10, ey - 50), (ex - 10, ey - 30)], "#FFFFFF", w=LINE * 1.2)
+
+
+class PosteFios(_Prop):
+    """Poste de luz com fios (perigo para a pipa); `alerta` 0→1 acende um X vermelho piscando sobre os fios."""
+
+    def __init__(self):
+        super().__init__("poste", "Poste com fios", (1200, 1000), (600, 900), 420, {"alerta": 0.0})
+
+    def paint(self, k, P):
+        box(k, -22, -860, 22, 0, "#9FB3C8", r=8)
+        box(k, -150, -840, 150, -810, "#7F93AE", r=6)
+        for x in (-130, 0, 130):
+            k.dot(x, -846, 10, _rgba("#534946"))
+        for x in (-130, 0, 130):
+            ln(k, [(x, -846), (x - 200, -800), (x - 420, -846)], "#2B2B33", w=LINE * 0.9)
+            ln(k, [(x, -846), (x + 200, -800), (x + 420, -846)], "#2B2B33", w=LINE * 0.9)
+        if P["alerta"] > 0.05:
+            r = 120 * P["alerta"]
+            ln(k, [(-r, -700 - r), (r, -700 + r)], "#E53935", w=LINE * 3)
+            ln(k, [(r, -700 - r), (-r, -700 + r)], "#E53935", w=LINE * 3)
+
+
+PROPS.update({"pipa": Pipa, "vento": Vento, "poste": PosteFios})
