@@ -305,3 +305,20 @@ def test_wave_keeps_hand_up_during_the_whole_goodbye():
                                                    "actions": [{"t": 0.0, "do": "wave", "dur": 2.4}]}, 24, 3.0)
     P = tl.evaluate_all()
     assert all(P[i]["hand_n_y"] < -75 and P[i]["hand_n_x"] < -125 for i in range(6, 56)), "a mão do tchau escorrega ou some atrás da cabeça"
+
+
+def test_every_prop_fits_the_level_canvas():
+    """O render desenha cada nível num quadro fixo (LEVEL_CANVAS/ANCHOR): o que passa da borda é cortado no vídeo
+    (a árvore de Natal saiu sem o topo, e o storyboard não mostra isso)."""
+    import numpy as np
+    from toonstudio.characters.flat_props import PROPS
+    from toonstudio.core.registry import character
+    from toonstudio.render.pipeline import LEVEL_ANCHOR, LEVEL_CANVAS
+    cortados = []
+    for pid in PROPS:
+        from toonstudio.characters.base import to_array
+        a = to_array(character(pid).render({}, 0.25, 0, 0, canvas=LEVEL_CANVAS, anchor=LEVEL_ANCHOR))
+        al = a[..., 3]
+        if al[0, :].max() > 0 or al[:, 0].max() > 0 or al[:, -1].max() > 0:
+            cortados.append(pid)
+    assert not cortados, f"objetos cortados pelo quadro do nível: {cortados}"

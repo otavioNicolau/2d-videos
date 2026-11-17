@@ -1179,7 +1179,15 @@ class ArvoreNatal(_Prop):
         super().__init__("arvore_natal", "Árvore de Natal", (900, 1200), (450, 1160), 560,
                          {"bolinhas": 1.0, "luzes": 1.0, "pisca": 0.0, "estrela": 1.0})
 
+    ESCALA = 0.72      # cabe no quadro fixo dos níveis (900 unidades acima do chão; a estrela ia até 1160 e era cortada)
+
     def paint(self, k, P):
+        k.c.save()
+        k.c.scale(self.ESCALA, self.ESCALA)
+        self._paint(k, P)
+        k.c.restore()
+
+    def _paint(self, k, P):
         verde, esc = "#2E9E4F", "#1E6E36"
         box(k, -60, -120, 60, 0, PAL["madeira"], r=8)                                  # tronco
         shape(k, [(-150, -40), (150, -40), (130, -130), (-130, -130)], "#E9545D", smooth=False)   # vaso
@@ -1221,6 +1229,12 @@ class PapaiNoel(_Prop):
         super().__init__("papai_noel", "Papai Noel de bermuda", (620, 900), (310, 860), 420, {"aceno": 0.0, "ho": 0.0})
 
     def paint(self, k, P):
+        k.c.save()
+        k.c.scale(0.9, 0.9)                 # o pompom do gorro passava do quadro do nível
+        self._paint(k, P)
+        k.c.restore()
+
+    def _paint(self, k, P):
         pele, verm = "#FFD7B5", "#E53935"
         for sx in (-1, 1):                                                  # pernas com chinelo
             box(k, sx * 70 - 28, -170, sx * 70 + 28, -20, pele, r=14)
