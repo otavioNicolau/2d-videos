@@ -109,7 +109,7 @@ def publicar(project: str, musica: Path, copiar: bool = True) -> Path:
     vin = LIBRARY / "brand" / "vinheta.mp4"
     offset = _dur(vin) if vin.exists() else 0.0
     titulo = f"{f['titulo'].upper()} 🐝 Laurinha e Luisinho (Música Infantil)"
-    tags = ", ".join(dict.fromkeys([re.sub(r"[^\w\s]", "", f["titulo"].lower()).strip(), "Laurinha e Luisinho", "música infantil",
+    tags = ", ".join(dict.fromkeys([re.sub(r"[^\w\s]", "", f["titulo"].lower().replace("-", " ")).strip(), "Laurinha e Luisinho", "música infantil",
                                     "clipe infantil", "desenho infantil", "músicas para crianças",
                                     *[d for d in f.get("dia_a_dia", [])][:3], composer.estilos()["ritmos"][f["ritmo"]]["nome"].lower()]))
     hashtags = "#musicainfantil #laurinhaeluisinho #desenhoinfantil"
