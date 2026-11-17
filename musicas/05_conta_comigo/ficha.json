@@ -81,7 +81,87 @@
  "youtube": {
   "resumo": "CONTA COMIGO! 🔟 Um, dois, três… acordei! A Laurinha conta a manhã inteira até chegar na escola, e o Luisinho pergunta: quantos dedos tem a mão? E as rodas da bicicleta? E as patinhas da formiga? À noite a contagem volta do dez até o um… e o Luisinho dorme no meio! Mostra o três, mostra o cinco, mostra o dez: conta comigo outra vez!",
   "resumo_short": "CONTA COMIGO! 🔟 Mostra o três, mostra o cinco, mostra o dez: conte com a Laurinha e o Luisinho!",
-  "curiosidade": "A gente tem dez dedinhos nas mãos (cinco em cada uma), a bicicleta tem duas rodas e a formiga tem seis patinhas"
+  "curiosidade": "A gente tem dez dedinhos nas mãos (cinco em cada uma), a bicicleta tem duas rodas e a formiga tem seis patinhas",
+  "miniatura": "CONTA\\nCOMIGO!",
+  "miniatura_cena": {
+   "fundo": "faixas",
+   "cores": [
+    [
+     45,
+     190,
+     90
+    ],
+    [
+     24,
+     181,
+     176
+    ],
+    [
+     255,
+     210,
+     31
+    ],
+    [
+     47,
+     134,
+     240
+    ]
+   ],
+   "heroi": {
+    "id": "laurinha",
+    "pose": {
+     "turn": 0.2,
+     "mouth": "D",
+     "holding": "apito",
+     "hand_n_x": -150,
+     "hand_n_y": -95,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3
+    }
+   },
+   "par": {
+    "id": "luisinho",
+    "pose": {
+     "turn": -0.2,
+     "mouth": "D",
+     "hand_n_x": -135,
+     "hand_n_y": -135,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3
+    }
+   },
+   "objetos": [
+    {
+     "id": "mao",
+     "pose": {
+      "dedos": 5,
+      "acende": 1
+     },
+     "tam": 300,
+     "x": 800,
+     "base": 730,
+     "giro": -8
+    },
+    {
+     "id": "numero",
+     "pose": {
+      "n": 10
+     },
+     "tam": 230,
+     "x": 150,
+     "base": 280,
+     "giro": -10
+    }
+   ]
+  }
  },
  "escolhida": "v1"
 }
