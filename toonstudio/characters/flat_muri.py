@@ -309,6 +309,15 @@ class FlatMuri(Character):
                 self._shape(k, ellipse_pts(q[0], q[1], 22, 16, 0, 14), L.extra["cabelo"])
         if L.bow:
             self._bow(k, rot((C[0] - 52 * f + f * s * 30, C[1] - r * 0.8), ht, C))
+        if P.get("touca", 0) > 0.5:          # touca de pijama (Conta Comigo: "Pijama!") com pompom caído
+            base_l, base_r = rot((C[0] - r * 0.86, C[1] - r * 0.42), ht, C), rot((C[0] + r * 0.86, C[1] - r * 0.42), ht, C)
+            ponta = rot((C[0] + f * r * 1.15, C[1] - r * 1.05), ht, C)
+            topo = rot((C[0] + f * r * 0.1, C[1] - r * 1.25), ht, C)
+            cor_t = "#7FA8FF" if not L.bow else "#B98CFF"
+            self._shape(k, [base_l, topo, ponta, base_r], cor_t)
+            self._shape(k, [(base_l[0], base_l[1] - 4), (base_r[0], base_r[1] - 4), (base_r[0], base_r[1] + 22),
+                            (base_l[0], base_l[1] + 22)], "#FFFFFF", smooth=False)
+            self._shape(k, ellipse_pts(ponta[0], ponta[1], 22, 22, 0, 14), "#FFFFFF")
         if L.extra.get("flor"):              # florzinha no lugar do laço (mamãe)
             q = rot((C[0] - 56 * f + f * s * 30, C[1] - r * 0.78), ht, C)
             for j in range(5):

@@ -56,7 +56,7 @@ def ln(k: Ink, pts, col: str, w: float = LINE, alpha: float = 1.0):
 # ───────────────────────── objetos de mão ─────────────────────────
 
 ITEMS = ("copo_leite", "copo_vazio", "banana", "banana_mordida", "pente", "garrafinha", "carrinho", "sombrinha", "escova",
-         "suco", "fatia_bolo", "fatia_grande", "escova_pasta", "escova_guitarra")
+         "suco", "fatia_bolo", "fatia_grande", "escova_pasta", "escova_guitarra", "apito", "sapato")
 
 
 ITEM_SCALE = 1.6
@@ -138,6 +138,16 @@ def draw_item(k: Ink, name: str, H: tuple[float, float], f: float = 1.0) -> None
                                 for u in range(7)]
             shape(k, pts, SOMBRINHA[j], smooth=False)
         k.dot(cx, cy - R * 0.62, 7, _rgba("#534946"))
+    elif name == "apito":                                   # apito de escola de samba (amarelo) com cordinha
+        shape(k, Q([(-6, -26), (30, -26), (34, -10), (30, 6), (-6, 6)]), "#FFD21F", line="#C99A1A", smooth=False)
+        shape(k, Q([(-30, -20), (-6, -20), (-6, 0), (-30, 0)]), "#FFD21F", line="#C99A1A", smooth=False)
+        k.dot(*q(14, -10), 7, _rgba("#534946"))
+        ln(k, Q([(30, -8), (52, 12), (40, 36)]), "#E9545D", w=LINE * 0.9)
+    elif name == "sapato":                                  # tênis seguro pela mão (para calçar)
+        shape(k, Q([(-40, -10), (-6, -34), (14, -30), (24, -6), (44, 0), (46, 14), (-40, 14)]), "#3C8BF0", line="#1F5FB8", smooth=False)
+        box(k, *q(-42, 10), *q(48, 22), "#FFFFFF", line="#9FB3C8", r=6) if f > 0 else box(k, *q(48, 10), *q(-42, 22), "#FFFFFF", line="#9FB3C8", r=6)
+        ln(k, Q([(-14, -22), (6, -18)]), "#FFFFFF", w=LINE * 0.9)
+        ln(k, Q([(-6, -14), (12, -10)]), "#FFFFFF", w=LINE * 0.9)
 
 
 def _banana_lado(u0, u1, n, w0=22.0, comp=118.0, curva=30.0, k_w=1.0):
@@ -880,3 +890,103 @@ class ArcoIris(_Prop):
 
 PROPS.update({"morango": Morango, "banana_grande": BananaGrande, "folha": Folha, "potes_tinta": PotesTinta,
               "arco_iris": ArcoIris})
+
+
+# ───────────────────────── 05 Conta Comigo ─────────────────────────
+
+COR_NUMERO = ("#EE3B3B", "#FF8A1F", "#FFC21A", "#2DBE5A", "#2F86F0", "#8E44EF", "#F0509A", "#18B5B0", "#FF6F3C", "#7B5CFF", "#E9545D")
+
+
+class Numero(_Prop):
+    """Número GIGANTE de 0 a 10 que pula na tela (`n` inteiro, `pop` 0→1 = surge crescendo, `pulo` 0→1 = pulinho).
+    Cada número tem a sua cor; contorno branco + borda escura (lê sobre qualquer fundo)."""
+
+    def __init__(self):
+        super().__init__("numero", "Número", (560, 600), (280, 560), 300, {"n": 1.0, "pop": 1.0, "pulo": 0.0})
+
+    def paint(self, k, P):
+        n = int(round(max(0.0, min(10.0, P["n"]))))
+        pop = max(0.0, min(1.0, P["pop"]))
+        if pop <= 0.02:
+            return
+        esc = pop * (1 + 0.15 * math.sin(math.pi * pop))           # passa um tiquinho do tamanho e volta (estica)
+        y = -60 - 70 * math.sin(math.pi * max(0.0, min(1.0, P["pulo"])))
+        cor = _rgba(COR_NUMERO[n])
+        k.c.save()
+        k.c.translate(0, y)
+        k.c.scale(esc, esc)
+        _texto(k, str(n), 0, 0, 420, (0.12, 0.12, 0.24, 1), contorno=(0.12, 0.12, 0.24, 1), borda=0.3)   # borda escura
+        _texto(k, str(n), 0, 0, 420, cor, contorno=(1, 1, 1, 1), borda=0.13)
+        k.c.restore()
+
+
+class Mao(_Prop):
+    """Mão gigante de luva (desenho infantil) mostrando `dedos` 0→5 levantados (um por um: polegar por último);
+    `acende` 0→1 = os dedos levantados ganham uma estrelinha (contando). `espelho` 1 = mão esquerda."""
+
+    def __init__(self):
+        super().__init__("mao", "Mão", (520, 700), (260, 660), 330, {"dedos": 5.0, "espelho": 0.0, "acende": 0.0})
+
+    def paint(self, k, P):
+        d = max(0.0, min(5.0, P["dedos"]))
+        sg = -1 if P.get("espelho", 0) > 0.5 else 1
+        luva, linha = "#FFFFFF", "#8FA3BC"
+        shape(k, [(sg * -110, -20), (sg * 110, -20), (sg * 90, 60), (sg * -90, 60)], "#FFD23F", line="#C99A1A", smooth=False)  # punho
+        dedos = ((-105, -300, -0.18), (-40, -340, -0.05), (25, -345, 0.05), (88, -315, 0.16))   # mínimo → indicador
+        ordem = (3, 2, 1, 0)                                         # 1º indicador, depois médio, anelar, mínimo
+        for j, (x, ytop, inc) in enumerate(dedos):
+            sobe = max(0.0, min(1.0, d - ordem.index(j)))
+            top = -150 + (ytop + 150) * sobe
+            pts = [(sg * (x - 26), -140), (sg * (x - 26 + inc * 60 * sobe), top + 20), (sg * (x + inc * 60 * sobe), top),
+                   (sg * (x + 26 + inc * 60 * sobe), top + 20), (sg * (x + 26), -140)]
+            shape(k, pts, luva, line=linha)
+            if sobe > 0.9 and P["acende"] > 0.05:
+                _estrela(k, sg * (x + inc * 60), top - 40, 20 * P["acende"], "#FFD23F")
+        shape(k, [(sg * -130, -190), (sg * 130, -190), (sg * 135, -60), (sg * 100, -10), (sg * -100, -10), (sg * -135, -60)], luva, line=linha)
+        po = max(0.0, min(1.0, d - 4))                               # polegar (5º): dobrado sobre a palma até levantar
+        if po < 0.05:                                                # dobrado: gomo deitado por cima da palma (não conta)
+            shape(k, [(sg * 120, -140), (sg * 10, -120), (sg * -10, -95), (sg * 10, -72), (sg * 120, -80)], luva, line=linha)
+            tip = (sg * 0, -96)
+        else:
+            ang = 0.5 - 1.6 * po                                     # sai de cima da palma e sobe para fora
+            bx = sg * 125
+            comp = 70 + 80 * po
+            tip = (bx + sg * math.cos(ang) * comp, -110 + math.sin(ang) * comp)
+            shape(k, [(bx, -150), (tip[0], tip[1] - 26), (tip[0] + sg * 18, tip[1]), (tip[0], tip[1] + 26), (bx, -60)], luva, line=linha)
+        ln(k, [(sg * -60, -120), (sg * -20, -100)], linha, w=LINE * 0.8)
+        if po > 0.9 and P["acende"] > 0.05:
+            _estrela(k, tip[0] + sg * 30, tip[1] - 30, 20 * P["acende"], "#FFD23F")
+
+
+class Bicicleta(_Prop):
+    """Bicicleta de lado (vista de baixo pelos pequenininhos: é enorme). `giro` gira as rodas; `brilho_rodas` 0→1
+    acende as duas rodas (contando: duas!)."""
+
+    def __init__(self):
+        super().__init__("bicicleta", "Bicicleta", (1100, 700), (550, 660), 330, {"giro": 0.0, "brilho_rodas": 0.0})
+
+    def _roda(self, k, cx, cy, R, giro, brilho):
+        shape(k, ellipse_pts(cx, cy, R, R, 0, 40), "#FFF6C2" if brilho > 0.5 else "#FFFFFF", line="#3A3A48", w=LINE * 2.4)
+        shape(k, ellipse_pts(cx, cy, R - 28, R - 28, 0, 40), "#DFF1FF", line="#9FB3C8")
+        for j in range(8):
+            a = giro * 2 * math.pi + j * math.pi / 4
+            ln(k, [(cx, cy), (cx + math.cos(a) * (R - 28), cy + math.sin(a) * (R - 28))], "#9FB3C8", w=LINE * 0.7)
+        k.dot(cx, cy, 14, _rgba("#534946"))
+        if brilho > 0.05:
+            _estrela(k, cx, cy - R - 50, 34 * brilho, "#FFD23F")
+
+    def paint(self, k, P):
+        g, b = P["giro"], P["brilho_rodas"]
+        R, y = 190, -200
+        self._roda(k, -300, y, R, g, b)
+        self._roda(k, 300, y, R, g, b)
+        quadro = "#E9545D"
+        for pts in ([(-300, y), (-40, y - 230), (230, y - 230)], [(-300, y), (20, y)], [(20, y), (-40, y - 230)],
+                    [(20, y), (230, y - 230)], [(230, y - 230), (300, y)]):
+            ln(k, pts, quadro, w=LINE * 3.2)
+        box(k, -110, y - 268, 20, y - 236, "#534946", r=14)          # selim
+        ln(k, [(230, y - 230), (250, y - 300), (310, y - 310)], "#534946", w=LINE * 2.2)   # guidão
+        shape(k, ellipse_pts(20, y, 34, 34, 0, 20), "#FFD23F", line="#C99A1A")             # pedal/coroa
+
+
+PROPS.update({"numero": Numero, "mao": Mao, "bicicleta": Bicicleta})
