@@ -10,7 +10,6 @@ duas ou três originais).
 ## Prontas (letra, ficha, cenas e YouTube)
 | Nº | Cantiga | Ritmo | Ideia do canal |
 |---|---|---|---|
-| 09 | Borboletinha | frevo (alt. pop infantil) | os dois voam atrás da borboleta; curiosidade: ela já foi lagartinha |
 | 12 | Carneirinho, Carneirão | reggae infantil (alt. batucada) | comandos (olha pro céu, pro chão, ajoelha, levanta, pula, gira); curiosidade: a lã vira blusa |
 | 15 | A Barata Diz Que Tem | rock infantil (alt. marchinha) | Dona Barata contando vantagem; a mentirinha tem perna curta; curiosidade: a barata é mais velha que o dinossauro |
 | 18 | Ciranda, Cirandinha | pop infantil (alt. ciranda) | roda da turma; só a 1ª estrofe + "entre dentro desta roda" com os nomes (sem a do anel/amor que acabou) |
@@ -23,9 +22,15 @@ duas ou três originais).
 
 Estilos escolhidos de propósito **diferentes das versões conhecidas** (decisão do usuário: deixar as clássicas com cara própria).
 
+**17/11/2026 — o Suno bloqueou a letra tradicional da Borboletinha** ("material protegido por direitos autorais": o
+filtro compara com letras de gravações conhecidas e não considera domínio público). A música saiu da lista e a 09 virou
+uma autoral (Pipa no Céu). As outras clássicas podem ser bloqueadas também: se acontecer, não trocar palavras só para
+passar no filtro — avisar e decidir (reescrever como autoral ou remover).
+
 ## Próximas (liberadas)
 | Cantiga | Situação | Observação / ideia |
 |---|---|---|
+| Borboletinha | ⛔ | bloqueada pelo filtro do Suno (17/11/2026) |
 | Marcha Soldado | ✅ | marcha com chapéu de papel; usar só a 1ª estrofe (a do quartel pegando fogo fica fora) |
 | Sapo Cururu | ✅ | reaproveita a lagoa e o sapo do ep06 |
 | Se Essa Rua Fosse Minha | ✅ | ladrilhar com pedrinhas de brilhante; rua vista de pertinho |

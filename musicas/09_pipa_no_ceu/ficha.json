@@ -1,0 +1,66 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Pipa no Céu",
+ "gancho": "pipa no céu",
+ "palavras_tema": [
+  "pipa",
+  "vento",
+  "céu",
+  "rabiola"
+ ],
+ "tipo": "brincadeira",
+ "tema": "soltar pipa no vento, longe dos fios",
+ "dia_a_dia": [
+  "soltar pipa com um adulto",
+  "brincar no parque",
+  "dia de vento"
+ ],
+ "curiosidade": "o vento é o ar se mexendo e empurra a pipa pro alto; e pipa se solta longe dos fios de luz",
+ "ritmo": "forro_pe_de_serra",
+ "bpm": 132,
+ "estrutura": "A",
+ "voz": "dueto",
+ "cantam": {
+  "verso 1": "laurinha",
+  "refrão": "coro",
+  "verso 2": "luisinho",
+  "ponte": "comandos, coro responde",
+  "final": "todo mundo"
+ },
+ "cenas": [
+  {
+   "parte": "verso 1",
+   "ideia": "parque visto de pertinho: o vento balança a grama gigante; Luisinho traz uma pipa colorida maior que os dois; Laurinha corre e solta a linha"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "a pipa sobe e dança no céu; os dois voam ao lado dela, pra esquerda e pra direita; a rabiola balança como uma fita"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "linhas de vento (traços) empurram a pipa; o papai aponta: longe do fio de luz; a pipa vai para o lado aberto do parque"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "todo mundo de braços abertos virando pipa, balançando no vento e pousando devagar"
+  },
+  {
+   "parte": "final",
+   "ideia": "convite; a pipa pousa e os dois dão tchau com a rabiola"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [
+  "xote"
+ ],
+ "status": "letra_revisada",
+ "versoes": [],
+ "youtube": {
+  "resumo": "PIPA NO CÉU! 🪁 Ventou lá fora: pega a pipa! A Laurinha e o Luisinho correm, soltam a linha e a pipa sobe, sobe, sobe e dança com o vento! Sabia que o vento é o ar se mexendo? E pipa a gente solta longe dos fios de luz, com um adulto. Abre os braços e vira pipa!",
+  "resumo_short": "PIPA NO CÉU! 🪁 Sobe, sobe e dança com o vento com a Laurinha e o Luisinho!",
+  "curiosidade": "O vento é o ar se mexendo e empurra a pipa pro alto; e pipa se solta longe dos fios de luz"
+ }
+}

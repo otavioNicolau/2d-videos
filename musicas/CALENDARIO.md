@@ -9,7 +9,7 @@ longe um do outro. Lotes futuros entram com os números seguintes (a 38 e a 39 f
 |---|---|---|---|---|---|
 | 24/11 | 07 | Pisca-Pisca de Natal | autoral | Pop infantil | **Natal (25/12)** |
 | 01/12 | 08 | Dança da Formiguinha | autoral | Funk brasileiro infantil |  |
-| 08/12 | 09 | Borboletinha | clássica | Frevo pernambucano |  |
+| 08/12 | 09 | Pipa no Céu | autoral | Forró pé de serra | (substituiu a Borboletinha: letra bloqueada pelo Suno) |
 | 15/12 | 10 | Pingo de Chuva | autoral | Reggae infantil |  |
 | 22/12 | 11 | Foguete pra Lua | autoral | Pop infantil | férias |
 | 29/12 | 12 | Carneirinho, Carneirão | clássica | Reggae infantil |  |
