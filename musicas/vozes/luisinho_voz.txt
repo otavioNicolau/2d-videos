@@ -6,10 +6,10 @@ para virar uma Voice no Suno. Não é música para o canal.
 TÍTULO: Oi, Eu Sou o Luisinho (voz)
 
 STYLE OF MUSIC:
-solo boy child vocal, 7 year old boy, bright playful cheeky voice, clear Brazilian Portuguese diction, native Brazilian accent, lead vocal upfront and dry, simple happy pop, light acoustic guitar, soft drums, handclaps, major key, 115 bpm
+solo young boy vocal, 10 year old boy, lower pitched boyish voice, chest voice, slightly raspy and mischievous, cheeky grin in the voice, clear Brazilian Portuguese diction, native Brazilian accent, lead vocal upfront and dry, simple happy pop rock, light electric guitar, soft drums, handclaps, major key, 115 bpm
 
 EXCLUDE:
-girl vocal, female vocal, adult male vocal, adult female vocal, kids choir, choir, duet, backing vocals, harmonies, autotune, heavy reverb, European Portuguese accent, Spanish accent, minor key, sad
+girl vocal, female vocal, girlish, high-pitched voice, soprano, falsetto, breathy, cute baby voice, adult male vocal, adult female vocal, kids choir, choir, duet, backing vocals, harmonies, autotune, heavy reverb, European Portuguese accent, Spanish accent, minor key, sad
 
 LYRICS:
 [Intro - guitar]
@@ -51,7 +51,9 @@ Tchau! (Zum!)
 COMO FAZER
 1. Gere 2 a 4 versões com o Style e o Exclude acima, no modelo v5.5 (é o que aceita Voices).
 2. Ouça e escolha a que soar mais como MENINO de uns 7 anos, alegre e sapeca, sem voz de menina e sem coro.
-   Se todas saírem com voz de menina ou de adulto, gere de novo (pode trocar "7 year old boy" por "young boy, 6 years old").
+   1ª tentativa (17/11): voz fina, parecendo menina → Style agora pede menino de 10 anos, voz de peito, mais grave e
+   rouquinha, e o Exclude proíbe voz aguda/falsete. Se ainda sair fina, troque "10 year old boy" por "12 year old boy"
+   e acrescente "deeper voice" no começo do Style.
 3. Na biblioteca, abra a versão escolhida → ⋯ → Create → Voice. Nome: Luisinho.
 4. Me diga o nome exato da Voice (e mande o .wav dessa versão), para eu registrar em musicas/vozes.json.
 
