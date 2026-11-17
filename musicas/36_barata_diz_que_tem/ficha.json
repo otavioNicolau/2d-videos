@@ -1,0 +1,71 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "A Barata Diz Que Tem",
+ "gancho": "a barata diz que tem",
+ "palavras_tema": [
+  "barata",
+  "saia",
+  "mentira",
+  "verdade"
+ ],
+ "tipo": "brincadeira",
+ "tema": "a barata que conta vantagem e a mentirinha de perna curta",
+ "dia_a_dia": [
+  "falar a verdade",
+  "brincadeira de roda"
+ ],
+ "curiosidade": "a barata existe desde antes dos dinossauros",
+ "ritmo": "rock_infantil",
+ "bpm": 165,
+ "estrutura": "C",
+ "voz": "dueto",
+ "cantam": {
+  "verso 1": "luisinho",
+  "refrão": "coro (cantiga tradicional)",
+  "verso 2": "laurinha",
+  "ponte": "comandos, coro responde",
+  "final": "todo mundo"
+ },
+ "cenas": [
+  {
+   "parte": "verso 1",
+   "ideia": "Dona Barata (personagem engraçada, não nojenta: antenas com laço, sorriso) chega contando vantagem para a turma"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "cada estrofe mostra o que ela diz (sete saias, sapato de veludo, cama de marfim) e depois a verdade (uma saia, pé peludo, cama de capim) com a turma rindo"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "quadro com dinossauro e a barata pequenininha ao lado; a mentirinha com perninhas curtas tropeçando"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "dança da barata: roda a saia, bate o pé, sacode a antena e pose"
+  },
+  {
+   "parte": "final",
+   "ideia": "convite; a Dona Barata rindo de si mesma e dando tchau"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [
+  "marchinha"
+ ],
+ "status": "letra_revisada",
+ "versoes": [],
+ "youtube": {
+  "resumo": "A BARATA DIZ QUE TEM! 🪳😄 A cantiga clássica em versão rock com a Laurinha e o Luisinho! A Dona Barata diz que tem sete saias de filó… é mentira da barata, ela tem é uma só! Sabia que a barata é mais velha que o dinossauro? E a mentirinha tem perna curtinha: fala a verdade, que é mais bonito!",
+  "resumo_short": "A BARATA DIZ QUE TEM! 😄 A cantiga clássica em versão rock com a Laurinha e o Luisinho!",
+  "curiosidade": "A barata existe desde antes dos dinossauros"
+ },
+ "dominio_publico": {
+  "tradicional": true,
+  "origem": "cantiga tradicional brasileira (folclore, autor desconhecido)",
+  "trecho_tradicional": "A barata diz que tem sete saias de filó / um sapato de veludo / uma cama de marfim… é mentira da barata (três estrofes tradicionais)",
+  "observacao": "estilo rock (as versões conhecidas são marchinha); versos novos com a lição da mentirinha"
+ }
+}

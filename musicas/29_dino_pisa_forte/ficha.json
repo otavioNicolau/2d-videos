@@ -1,0 +1,64 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Dino Pisa Forte",
+ "gancho": "dino pisa forte",
+ "palavras_tema": [
+  "dinossauro",
+  "dino",
+  "pezão",
+  "rugido"
+ ],
+ "tipo": "animal",
+ "tema": "o dinossauro bonzinho que pisa forte",
+ "dia_a_dia": [
+  "imaginar e brincar de dinossauro"
+ ],
+ "curiosidade": "os passarinhos são parentes dos dinossauros, e tinha dinossauro pequeno do tamanho de uma galinha",
+ "ritmo": "samba_enredo",
+ "bpm": 145,
+ "estrutura": "A",
+ "voz": "dueto",
+ "cantam": {
+  "verso 1": "luisinho",
+  "refrão": "coro",
+  "verso 2": "laurinha",
+  "ponte": "comandos, coro responde",
+  "final": "todo mundo"
+ },
+ "cenas": [
+  {
+   "parte": "verso 1",
+   "ideia": "o chão treme e as flores balançam; aparece um pezão; a câmera sobe por um pescoço comprido até um dino verde sorridente"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "dino dançando com o rabo pra lá e pra cá; os dois em cima da cabeça dele; rugido que vira risada"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "um passarinho pousa ao lado do dino e os dois se olham (parentes!); um dino pequeninho do tamanho de uma galinha"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "pisa forte, pisa fraquinho, estica o pescoço e ruge"
+  },
+  {
+   "parte": "final",
+   "ideia": "convite; o dino abaixa a cabeça para os dois darem tchau"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [
+  "rock_infantil"
+ ],
+ "status": "letra_revisada",
+ "versoes": [],
+ "youtube": {
+  "resumo": "DINO PISA FORTE! 🦕 Tremeu o chão: bum, bum! Quem vem lá? Um dinossauro de pescoção comprido, mas bonzinho, que só quer dançar! Sabia que o passarinho é parente do dino? E tinha dinossauro pequeninho do tamanho de uma galinha! Pisa forte, pisa fraquinho e faz roooar!",
+  "resumo_short": "DINO PISA FORTE! 🦕 Pisa forte e faz roooar com a Laurinha e o Luisinho!",
+  "curiosidade": "Os passarinhos são parentes dos dinossauros, e tinha dinossauro do tamanho de uma galinha"
+ }
+}

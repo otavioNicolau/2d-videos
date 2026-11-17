@@ -1,0 +1,66 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Pula Pipoca",
+ "gancho": "pula pipoca",
+ "palavras_tema": [
+  "pipoca",
+  "milho",
+  "festa junina",
+  "panela"
+ ],
+ "tipo": "danca",
+ "tema": "a pipoca que pula na festa junina",
+ "dia_a_dia": [
+  "festa junina",
+  "fazer pipoca com um adulto"
+ ],
+ "curiosidade": "o milho tem aguinha dentro: esquenta, vira vapor e estoura em pipoca",
+ "ritmo": "forro_piseiro",
+ "bpm": 160,
+ "estrutura": "D",
+ "voz": "dueto",
+ "cantam": {
+  "verso 1": "laurinha",
+  "refrão": "coro",
+  "verso 2": "luisinho",
+  "ponte": "comandos, coro responde",
+  "final": "todo mundo"
+ },
+ "cenas": [
+  {
+   "parte": "verso 1",
+   "ideia": "arraial de festa junina visto de pertinho; uma panela enorme com milhos do tamanho deles"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "os milhos viram pipocas com carinha e pulam; Laurinha e Luisinho pulam junto na batida"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "dentro do milho (quadro em corte): gotinha de água esquenta, vira nuvenzinha e ploc! a mamãe cuida da panela"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "dança da pipoca: agacha como milho, treme esquentando, pula alto; congela na parada"
+  },
+  {
+   "parte": "final",
+   "ideia": "convite; saquinhos de pipoca dando tchau"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [
+  "forro_pe_de_serra"
+ ],
+ "status": "letra_revisada",
+ "versoes": [],
+ "youtube": {
+  "resumo": "PULA PIPOCA! 🍿 Festa junina, bandeirinha no céu e a panela chiando… ploc! Sabia que o milho tem aguinha dentro? Esquenta, vira vapor e estoura! Agacha pequenininho como o milho, esquenta… e pula bem alto! Panela no fogão, só com um adulto.",
+  "resumo_short": "PULA PIPOCA! 🍿 Agacha, esquenta e pula com a Laurinha e o Luisinho!",
+  "curiosidade": "O milho tem aguinha dentro: esquenta, vira vapor e estoura em pipoca"
+ },
+ "data_comemorativa": "Festa junina (junho)"
+}

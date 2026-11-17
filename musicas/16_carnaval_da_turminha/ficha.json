@@ -1,0 +1,67 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Carnaval da Turminha",
+ "gancho": "carnaval da turminha",
+ "palavras_tema": [
+  "carnaval",
+  "fantasia",
+  "confete",
+  "sombrinha"
+ ],
+ "tipo": "festa",
+ "tema": "o bloquinho de Carnaval da turminha fantasiada",
+ "dia_a_dia": [
+  "carnaval",
+  "fantasia",
+  "jogar o lixo no lixo"
+ ],
+ "curiosidade": "o confete é papel picadinho, e depois da festa a gente junta tudo e põe no lixo",
+ "ritmo": "frevo",
+ "bpm": 160,
+ "estrutura": "A",
+ "voz": "dueto",
+ "cantam": {
+  "verso 1": "luisinho",
+  "refrão": "coro",
+  "verso 2": "laurinha",
+  "ponte": "comandos, coro responde",
+  "final": "todo mundo"
+ },
+ "cenas": [
+  {
+   "parte": "verso 1",
+   "ideia": "rua enfeitada vista de pertinho; Luisinho de capa de super-herói, Laurinha de fada com varinha e a sombrinha colorida"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "bloquinho da turma (Joaninha, Formiguinha) pulando e girando a sombrinha; confete e serpentina gigantes caindo"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "confete visto de pertinho é um disco de papel do tamanho deles; no fim todos recolhem o confete e jogam no lixo"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "abaixa, sobe, sombrinha pro alto e pulo em câmera lenta"
+  },
+  {
+   "parte": "final",
+   "ideia": "convite; a turma fantasiada dando tchau na rua"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [
+  "marchinha"
+ ],
+ "status": "letra_revisada",
+ "versoes": [],
+ "youtube": {
+  "resumo": "CARNAVAL DA TURMINHA! 🎉 A Laurinha de fada, o Luisinho de super-herói e a turma toda no bloquinho: pula, pula, gira a sombrinha, serpentina e confete! Sabia que o confete é papel picadinho? Depois da festa a gente junta tudo e põe no lixo!",
+  "resumo_short": "CARNAVAL DA TURMINHA! 🎉 Pula e gira a sombrinha com a Laurinha e o Luisinho!",
+  "curiosidade": "O confete é papel picadinho, e depois da festa a gente junta tudo e põe no lixo"
+ },
+ "data_comemorativa": "Carnaval (fevereiro)"
+}

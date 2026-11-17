@@ -1,0 +1,71 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Meu Limão, Meu Limoeiro",
+ "gancho": "meu limão, meu limoeiro",
+ "palavras_tema": [
+  "limão",
+  "limoeiro",
+  "vovó",
+  "limonada"
+ ],
+ "tipo": "brincadeira",
+ "tema": "o limoeiro da vovó e a limonada",
+ "dia_a_dia": [
+  "fazer limonada com a vovó",
+  "provar frutas azedas"
+ ],
+ "curiosidade": "o limão tem vitamina C, que ajuda o corpo a ficar fortinho",
+ "ritmo": "reggae_infantil",
+ "bpm": 86,
+ "estrutura": "R",
+ "voz": "dueto",
+ "cantam": {
+  "verso 1": "laurinha",
+  "refrão": "coro (cantiga tradicional)",
+  "verso 2": "luisinho",
+  "ponte": "comandos, coro responde",
+  "final": "todo mundo"
+ },
+ "cenas": [
+  {
+   "parte": "verso 1",
+   "ideia": "quintal da vovó: limoeiro gigante para eles, limões do tamanho de bolas"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "roda em volta do limoeiro balançando no tindolelê/tindolalá; limões dançando nos galhos"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "Luisinho morde o limão e faz careta (ha ha); a vovó explica a vitamina"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "fazer limonada: espreme, mexe, golinho e careta"
+  },
+  {
+   "parte": "final",
+   "ideia": "convite; vovó e os dois brindando limonada no tchau"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [
+  "xote"
+ ],
+ "status": "letra_revisada",
+ "versoes": [],
+ "youtube": {
+  "resumo": "MEU LIMÃO, MEU LIMOEIRO! 🍋 A cantiga clássica em versão reggae com a Laurinha, o Luisinho e a vovó! Uma vez, tindolelê, outra vez, tindolalá! No quintal da vovó tem limoeiro e limonada. Sabia que o limão tem vitamina C? Espreme, mexe, um golinho… careta de azedo!",
+  "resumo_short": "MEU LIMÃO, MEU LIMOEIRO! 🍋 A cantiga clássica em versão reggae com a Laurinha e o Luisinho!",
+  "curiosidade": "O limão tem vitamina C, que ajuda o corpo a ficar fortinho"
+ },
+ "dominio_publico": {
+  "tradicional": true,
+  "origem": "cantiga tradicional brasileira (folclore, autor desconhecido)",
+  "trecho_tradicional": "Meu limão, meu limoeiro, meu pé de jacarandá, uma vez, tindolelê, outra vez, tindolalá",
+  "observacao": "estilo reggae (as versões conhecidas são de roda/forró)"
+ }
+}

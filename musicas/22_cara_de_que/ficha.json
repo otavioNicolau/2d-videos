@@ -1,0 +1,66 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Cara de Quê?",
+ "gancho": "cara de quê",
+ "palavras_tema": [
+  "cara",
+  "feliz",
+  "triste",
+  "bravo"
+ ],
+ "tipo": "educativa",
+ "tema": "os sentimentos e como lidar com eles",
+ "dia_a_dia": [
+  "sentir raiva, medo e tristeza",
+  "pedir ajuda",
+  "respirar fundo"
+ ],
+ "curiosidade": "respirar fundinho (cheirar a flor e assoprar a velinha) acalma o coração",
+ "ritmo": "xote",
+ "bpm": 100,
+ "estrutura": "A",
+ "voz": "dueto",
+ "cantam": {
+  "verso 1": "luisinho",
+  "refrão": "coro",
+  "verso 2": "laurinha",
+  "ponte": "comandos, coro responde",
+  "final": "todo mundo"
+ },
+ "cenas": [
+  {
+   "parte": "verso 1",
+   "ideia": "Luisinho ganha um presente (feliz) e depois deixa o sorvete cair (triste); a cara dele muda grande na tela"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "quatro quadros: feliz, triste, bravo, com medo; os dois imitam cada carinha"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "Laurinha brava conta até três; com medo do trovão abraça a mamãe; triste conversa com a mamãe"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "jogo das caras para a criança imitar e a respiração da flor e da velinha"
+  },
+  {
+   "parte": "final",
+   "ideia": "convite; os dois com cara de feliz dando tchau"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [
+  "samba_infantil"
+ ],
+ "status": "letra_revisada",
+ "versoes": [],
+ "youtube": {
+  "resumo": "CARA DE QUÊ? 😀😢😠😮 Ganhou presente: cara de feliz! Caiu o sorvete: cara de triste… Cada coisa faz uma carinha, e tá tudo bem sentir! A Laurinha conta até três quando fica brava e pede um abraço quando tem medo. Cheira a florzinha, assopra a velinha e o coração acalma!",
+  "resumo_short": "CARA DE QUÊ? 😀 Feliz, triste, bravo ou com medo? Tá tudo bem sentir!",
+  "curiosidade": "Respirar fundinho, cheirando a flor e assoprando a velinha, acalma o coração"
+ }
+}

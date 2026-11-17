@@ -1,0 +1,65 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Abelhinha",
+ "gancho": "abelhinha",
+ "palavras_tema": [
+  "abelha",
+  "abelhinha",
+  "flor",
+  "mel"
+ ],
+ "tipo": "animal",
+ "tema": "a abelhinha que leva o pozinho de flor em flor e faz o mel",
+ "dia_a_dia": [
+  "olhar as flores do jardim",
+  "não mexer na colmeia"
+ ],
+ "curiosidade": "a abelha leva o pozinho de uma flor para outra, e assim nasce a fruta; e ela conta onde tem flor fazendo a dança do oito",
+ "ritmo": "forro_pe_de_serra",
+ "bpm": 132,
+ "estrutura": "A",
+ "voz": "dueto",
+ "cantam": {
+  "verso 1": "luisinho",
+  "refrão": "coro",
+  "verso 2": "laurinha",
+  "ponte": "comandos, coro responde",
+  "final": "todo mundo"
+ },
+ "cenas": [
+  {
+   "parte": "verso 1",
+   "ideia": "Luisinho escuta um zum que não é dele; uma abelhinha listrada simpática numa flor gigante; os dois se cumprimentam (primos de asinha)"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "voo de flor em flor seguindo a abelha; potinhos de mel; a colmeia ao longe"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "quadro: pozinho amarelo nas patinhas, passa para outra flor, a flor vira fruta"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "dança do oito (a abelha desenha um 8 voando) e volta para a colmeia; Laurinha avisa: colmeia a gente olha de longe"
+  },
+  {
+   "parte": "final",
+   "ideia": "convite; a abelhinha e os dois dando tchau zumbindo juntos"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [
+  "baiao"
+ ],
+ "status": "letra_revisada",
+ "versoes": [],
+ "youtube": {
+  "resumo": "ABELHINHA! 🐝🌼 O Luisinho ouviu um zum-zum que não era dele: é a abelhinha! Ela voa de flor em flor, pega o docinho e faz o mel. Sabia que a abelha leva o pozinho de uma flor pra outra e assim nasce a fruta? E ela conta onde tem flor fazendo a dança do oito!",
+  "resumo_short": "ABELHINHA! 🐝 De flor em flor com a Laurinha e o Luisinho!",
+  "curiosidade": "A abelha leva o pozinho de uma flor para outra, e assim nasce a fruta"
+ }
+}

@@ -1,0 +1,71 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Peixe Vivo",
+ "gancho": "peixe vivo",
+ "palavras_tema": [
+  "peixe",
+  "saudade",
+  "amigo",
+  "água"
+ ],
+ "tipo": "historinha",
+ "tema": "saudade do amigo que viajou, e a alegria quando ele volta",
+ "dia_a_dia": [
+  "sentir saudade",
+  "reencontrar os amigos"
+ ],
+ "curiosidade": "o peixinho dorme de olho aberto, porque não tem pálpebra",
+ "ritmo": "samba_infantil",
+ "bpm": 105,
+ "estrutura": "E",
+ "voz": "dueto",
+ "cantam": {
+  "verso 1": "luisinho",
+  "refrão": "coro (cantiga tradicional)",
+  "verso 2": "laurinha",
+  "ponte": "comandos, coro responde",
+  "final": "todo mundo"
+ },
+ "cenas": [
+  {
+   "parte": "verso 1",
+   "ideia": "Luisinho sozinho em casa olhando o aquário; ele se sente como o peixinho fora do aquário (desenho cômico, sem sofrimento)"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "o peixinho do aquário canta junto; Luisinho olha a foto dele com a Laurinha"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "o peixinho dormindo de olho aberto (Zzz com olhos abertos, engraçado); campainha toca: é a Laurinha voltando com a mala"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "os dois imitam o peixinho nadando e fazendo bolhinha, e se abraçam"
+  },
+  {
+   "parte": "final",
+   "ideia": "convite; os dois e o peixinho do aquário dando tchau"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [
+  "xote"
+ ],
+ "status": "letra_revisada",
+ "versoes": [],
+ "youtube": {
+  "resumo": "PEIXE VIVO! 🐟 A cantiga clássica virou história com a Laurinha e o Luisinho! A Laurinha viajou e o Luisinho ficou igual peixinho fora da água: como poderei viver sem a tua companhia? Sabia que o peixinho dorme de olho aberto? Toc, toc… ela voltou! Saudade passou, abraço de amigo!",
+  "resumo_short": "PEIXE VIVO! 🐟 A cantiga clássica com a Laurinha e o Luisinho!",
+  "curiosidade": "O peixinho dorme de olho aberto, porque não tem pálpebra"
+ },
+ "dominio_publico": {
+  "tradicional": true,
+  "origem": "cantiga tradicional brasileira (folclore, autor desconhecido)",
+  "trecho_tradicional": "Como pode um peixe vivo viver fora da água fria, como poderei viver sem a tua companhia (1ª estrofe)",
+  "observacao": "só a 1ª estrofe (a dos pastores zombando fica fora); virou história de saudade do amigo que viajou e volta"
+ }
+}

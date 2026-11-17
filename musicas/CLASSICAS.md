@@ -10,26 +10,29 @@ duas ou três originais).
 ## Prontas (letra, ficha, cenas e YouTube)
 | Nº | Cantiga | Ritmo | Ideia do canal |
 |---|---|---|---|
-| 10 | Borboletinha | pop infantil (alt. frevo) | os dois voam atrás da borboleta; curiosidade: ela já foi lagartinha |
-| 11 | O Sapo Não Lava o Pé | forró pé de serra (alt. baião) | chulé na lagoa (nuvenzinha verde); curiosidade: o sapo bebe água pela pele; lavar o pé no banho |
-| 12 | A Galinha do Vizinho | baião (alt. xote) | contagem dos ovos de 1 a 10; curiosidade: o pintinho nasce do ovo que a galinha choca |
-| 13 | Carneirinho, Carneirão | batucada (alt. funk infantil) | comandos (olha pro céu, pro chão, ajoelha, levanta, pula, gira); curiosidade: a lã vira blusa |
-| 14 | A Canoa Virou | samba infantil (alt. reggae) | canoa de folha na poça (mundo pequenino); quem voa não afunda; na água, sempre com um adulto |
-| 15 | Ciranda, Cirandinha | ciranda | roda da turma; só a 1ª estrofe + "entre dentro desta roda" com os nomes (sem a do anel/amor que acabou) |
+| 10 | Borboletinha | frevo (alt. pop infantil) | os dois voam atrás da borboleta; curiosidade: ela já foi lagartinha |
+| 11 | O Sapo Não Lava o Pé | funk infantil (alt. forró pé de serra) | chulé na lagoa (nuvenzinha verde); curiosidade: o sapo bebe água pela pele; lavar o pé no banho |
+| 12 | A Galinha do Vizinho | axé (alt. baião) | contagem dos ovos de 1 a 10; curiosidade: o pintinho nasce do ovo que a galinha choca |
+| 13 | Carneirinho, Carneirão | reggae infantil (alt. batucada) | comandos (olha pro céu, pro chão, ajoelha, levanta, pula, gira); curiosidade: a lã vira blusa |
+| 14 | A Canoa Virou | marchinha (alt. samba infantil) | canoa de papel no laguinho do parque; quem voa não afunda; na água, sempre com um adulto |
+| 15 | Ciranda, Cirandinha | pop infantil (alt. ciranda) | roda da turma; só a 1ª estrofe + "entre dentro desta roda" com os nomes (sem a do anel/amor que acabou) |
+
+| 36 | A Barata Diz Que Tem | rock infantil (alt. marchinha) | Dona Barata contando vantagem; a mentirinha tem perna curta; curiosidade: a barata é mais velha que o dinossauro |
+| 37 | Meu Limão, Meu Limoeiro | reggae infantil (alt. xote) | limoeiro da vovó e limonada; curiosidade: vitamina C |
+| 38 | Peixe Vivo | samba infantil (alt. xote) | só a 1ª estrofe; saudade da Laurinha que viajou e volta; o peixinho dorme de olho aberto |
+| 39 | Alecrim Dourado | baião (alt. xote) | "ai, turminha, quem te disse assim"; o alecrim é tempero da vovó |
+
+Estilos escolhidos de propósito **diferentes das versões conhecidas** (decisão do usuário: deixar as clássicas com cara própria).
 
 ## Próximas (liberadas)
 | Cantiga | Situação | Observação / ideia |
 |---|---|---|
-| A Barata Diz Que Tem | ✅ | engraçada (sete saias de filó); bom para Carnaval |
-| Meu Limão, Meu Limoeiro | ✅ | "tindolelê, tindolalá"; quintal com frutas gigantes |
 | Marcha Soldado | ✅ | marcha com chapéu de papel; usar só a 1ª estrofe (a do quartel pegando fogo fica fora) |
 | Sapo Cururu | ✅ | reaproveita a lagoa e o sapo do ep06 |
-| Peixe Vivo | ✅ | amizade ("sem a tua companhia") |
 | Se Essa Rua Fosse Minha | ✅ | ladrilhar com pedrinhas de brilhante; rua vista de pertinho |
 | Pombinha Branca | ✅ | |
 | Roda Pião | ✅ | comandos de roda |
 | Passa, Passa Gavião | ✅ | imitar profissões ("as lavadeiras fazem assim") |
-| Alecrim Dourado | ✅ | plantinha que nasce sem semear |
 | De Abóbora Faz Melão | ✅ | frutas que viram doce |
 | Cachorrinho Está Latindo | ✅ | |
 | A Gatinha Parda | ✅ | |

@@ -1,0 +1,66 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Palavrinhas Mágicas",
+ "gancho": "palavrinhas mágicas",
+ "palavras_tema": [
+  "palavrinha",
+  "por favor",
+  "obrigado",
+  "desculpa"
+ ],
+ "tipo": "rotina",
+ "tema": "por favor, obrigado, com licença e desculpa",
+ "dia_a_dia": [
+  "pedir por favor",
+  "agradecer",
+  "pedir desculpa"
+ ],
+ "curiosidade": "o sorriso pega: quando alguém sorri pra gente, a gente sorri também",
+ "ritmo": "ciranda",
+ "bpm": 105,
+ "estrutura": "A",
+ "voz": "dueto",
+ "cantam": {
+  "verso 1": "laurinha",
+  "refrão": "coro",
+  "verso 2": "luisinho",
+  "ponte": "comandos, coro responde",
+  "final": "todo mundo"
+ },
+ "cenas": [
+  {
+   "parte": "verso 1",
+   "ideia": "Luisinho quer o brinquedo da Laurinha; ela ensina; ele diz por favor e o brinquedo brilha (efeito plim)"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "cada palavrinha vira um brilho mágico que deixa o amigo sorrindo"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "Luisinho pisa no pé da Joaninha e pede desculpa; a vovó dá suquinho e ele agradece; sorriso passando de um rosto pro outro"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "cumprimentos com resposta do coro, terminando em abraço"
+  },
+  {
+   "parte": "final",
+   "ideia": "convite; todos agradecendo e dando tchau"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [
+  "xote"
+ ],
+ "status": "letra_revisada",
+ "versoes": [],
+ "youtube": {
+  "resumo": "PALAVRINHAS MÁGICAS! ✨ Por favor, obrigado, com licença e desculpa: palavrinhas que abrem portas e fazem o amigo sorrir! O Luisinho aprende a pedir por favor, pede desculpa pra Joaninha e agradece a vovó. Sabia que o sorriso pega igual risada?",
+  "resumo_short": "PALAVRINHAS MÁGICAS! ✨ Por favor, obrigado e desculpa com a Laurinha e o Luisinho!",
+  "curiosidade": "O sorriso pega: quando alguém sorri pra gente, a gente sorri também"
+ }
+}

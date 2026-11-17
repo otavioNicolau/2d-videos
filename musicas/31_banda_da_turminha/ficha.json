@@ -1,0 +1,65 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Banda da Turminha",
+ "gancho": "banda da turminha",
+ "palavras_tema": [
+  "banda",
+  "tambor",
+  "flauta",
+  "violão"
+ ],
+ "tipo": "brincadeira",
+ "tema": "a turma monta uma banda com instrumentos",
+ "dia_a_dia": [
+  "fazer música em casa",
+  "bater o ritmo com o corpo"
+ ],
+ "curiosidade": "o som é um tremidinho: o tambor treme, o tremido voa pelo ar e chega no ouvido",
+ "ritmo": "marchinha",
+ "bpm": 128,
+ "estrutura": "C",
+ "voz": "dueto",
+ "cantam": {
+  "verso 1": "luisinho",
+  "refrão": "coro",
+  "verso 2": "laurinha",
+  "ponte": "comandos, coro responde",
+  "final": "todo mundo"
+ },
+ "cenas": [
+  {
+   "parte": "verso 1",
+   "ideia": "quarto vira palco: cada um pega um instrumento (tambor, flauta, chocalho, violão)"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "a banda desfila marchando pelo jardim; cada instrumento aparece no seu verso"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "quadro: a pele do tambor treme, ondinhas voam pelo ar e chegam na orelha da Laurinha"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "percussão corporal: barriga, palma e pé para a criança fazer junto"
+  },
+  {
+   "parte": "final",
+   "ideia": "convite; a banda faz a última nota e dá tchau"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [
+  "frevo"
+ ],
+ "status": "letra_revisada",
+ "versoes": [],
+ "youtube": {
+  "resumo": "BANDA DA TURMINHA! 🥁🎺 O Luisinho no tambor, a Laurinha na flauta, a Joaninha no chocalho e a Formiguinha no violão: tum, tum, fiu, fiu, chique, chique, plém, plém! Sabia que o som é um tremidinho que voa no ar até o ouvido? Toca com a barriga, a palma e o pé!",
+  "resumo_short": "BANDA DA TURMINHA! 🥁 Tum, tum, fiu, fiu com a Laurinha e o Luisinho!",
+  "curiosidade": "O som é um tremidinho: o tambor treme, o tremido voa pelo ar e chega no ouvido"
+ }
+}

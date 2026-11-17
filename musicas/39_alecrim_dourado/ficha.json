@@ -1,0 +1,71 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Alecrim Dourado",
+ "gancho": "alecrim dourado",
+ "palavras_tema": [
+  "alecrim",
+  "campo",
+  "plantinha",
+  "cheirinho"
+ ],
+ "tipo": "brincadeira",
+ "tema": "o alecrim que nasceu sozinho no campo e vira tempero da vovó",
+ "dia_a_dia": [
+  "sentir o cheiro das plantas",
+  "ajudar a vovó na cozinha"
+ ],
+ "curiosidade": "o alecrim é tempero: a vovó põe na comida e ela fica cheirosa",
+ "ritmo": "baiao",
+ "bpm": 125,
+ "estrutura": "A",
+ "voz": "dueto",
+ "cantam": {
+  "verso 1": "laurinha",
+  "refrão": "coro (cantiga tradicional)",
+  "verso 2": "luisinho",
+  "ponte": "comandos, coro responde",
+  "final": "todo mundo"
+ },
+ "cenas": [
+  {
+   "parte": "verso 1",
+   "ideia": "campo visto de pertinho: um pé de alecrim gigante com florzinhas azuis; Laurinha sente o cheiro (corações de perfume)"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "roda no campo em volta do alecrim; a planta balança dourada no sol"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "cozinha da vovó: ela põe o alecrim na panela; Luisinho esfrega a folhinha e cheira a mão"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "cheirar, balançar como no vento, colher e entregar para a vovó"
+  },
+  {
+   "parte": "final",
+   "ideia": "convite; a vovó e os dois com raminhos de alecrim no tchau"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [
+  "xote"
+ ],
+ "status": "letra_revisada",
+ "versoes": [],
+ "youtube": {
+  "resumo": "ALECRIM DOURADO! 🌿 A cantiga clássica em versão baião com a Laurinha, o Luisinho e a vovó! Alecrim, alecrim dourado, que nasceu no campo sem ser semeado. Sabia que o alecrim é tempero? Esfrega a folhinha e cheira a mão: que cheirinho!",
+  "resumo_short": "ALECRIM DOURADO! 🌿 A cantiga clássica em versão baião com a Laurinha e o Luisinho!",
+  "curiosidade": "O alecrim é tempero: a vovó põe na comida e ela fica cheirosa"
+ },
+ "dominio_publico": {
+  "tradicional": true,
+  "origem": "cantiga tradicional brasileira (folclore, autor desconhecido)",
+  "trecho_tradicional": "Alecrim, alecrim dourado, que nasceu no campo sem ser semeado",
+  "observacao": "estilo baião; o verso 'ai, meu amor, quem te disse assim' virou 'ai, turminha, quem te disse assim'"
+ }
+}

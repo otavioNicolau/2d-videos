@@ -1,0 +1,65 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Foguete pra Lua",
+ "gancho": "foguete pra lua",
+ "palavras_tema": [
+  "lua",
+  "foguete",
+  "céu",
+  "estrela"
+ ],
+ "tipo": "aventura",
+ "tema": "viagem de foguete até a lua",
+ "dia_a_dia": [
+  "olhar a lua da janela",
+  "brincar de astronauta"
+ ],
+ "curiosidade": "a lua não tem luz própria: ela brilha com a luz do sol, igual um espelho",
+ "ritmo": "pop_infantil",
+ "bpm": 124,
+ "estrutura": "A",
+ "voz": "dueto",
+ "cantam": {
+  "verso 1": "laurinha",
+  "refrão": "coro",
+  "verso 2": "luisinho",
+  "ponte": "laurinha dá os comandos, coro responde",
+  "final": "todo mundo"
+ },
+ "cenas": [
+  {
+   "parte": "verso 1",
+   "ideia": "noite no jardim; os dois tentam voar até a lua e cansam; aparece um foguete de papelão que vira de verdade"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "contagem, decolagem com fumaça colorida, passam estrelas com carinha e um cometa"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "o sol ilumina a lua como uma lanterna num espelho (quadro simples); a lua sorri"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "pulos em câmera lenta na lua, aceno para a Terra azul e volta"
+  },
+  {
+   "parte": "final",
+   "ideia": "convite; pousam no jardim e dão tchau com o capacete"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [
+  "axe"
+ ],
+ "status": "letra_revisada",
+ "versoes": [],
+ "youtube": {
+  "resumo": "FOGUETE PRA LUA! 🚀🌙 A asinha não alcança a lua… então a Laurinha e o Luisinho vão de foguete! Cinto apertado, capacete na cabeça e vruuum! Sabia que a lua não tem luz? Ela brilha com a luz do sol, igual um espelhinho. Na lua a gente pula bem levinho… boing!",
+  "resumo_short": "FOGUETE PRA LUA! 🚀 Dez, nove, oito… vruuum com a Laurinha e o Luisinho!",
+  "curiosidade": "A lua não tem luz própria: ela brilha com a luz do sol, igual um espelho"
+ }
+}

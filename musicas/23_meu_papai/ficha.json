@@ -1,0 +1,65 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Meu Papai",
+ "gancho": "meu papai",
+ "palavras_tema": [
+  "papai",
+  "herói",
+  "abraço"
+ ],
+ "tipo": "festa",
+ "tema": "homenagem para o papai",
+ "dia_a_dia": [
+  "dia dos pais",
+  "brincar com o papai"
+ ],
+ "curiosidade": "o papai pinguim choca o ovo em pé no gelo, protegendo o filhote do frio",
+ "ritmo": "rock_infantil",
+ "bpm": 165,
+ "estrutura": "A",
+ "voz": "dueto",
+ "cantam": {
+  "verso 1": "luisinho",
+  "refrão": "coro",
+  "verso 2": "laurinha",
+  "ponte": "comandos, coro responde",
+  "final": "todo mundo"
+ },
+ "cenas": [
+  {
+   "parte": "verso 1",
+   "ideia": "papai muriçoca (novo personagem, mesmo modelo) jogando o Luisinho pro alto, fazendo cavalinho e contando história com voz de dragão"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "pega-pega no quintal, beijinho no dodói, abraço de urso"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "papai pinguim no gelo com o ovo nos pés, neve caindo; ele protege o ovo do vento"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "cavalinho, aviãozinho, cosquinha e abraço"
+  },
+  {
+   "parte": "final",
+   "ideia": "convite; os dois acenando no colo do papai"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [
+  "pop_infantil"
+ ],
+ "status": "letra_revisada",
+ "versoes": [],
+ "youtube": {
+  "resumo": "MEU PAPAI! 💙 Quem joga pro alto, faz cavalinho e conta história com voz de dragão? O papai! Ele é o meu herói, brinca de pega-pega e dá abraço de urso. Sabia que o papai pinguim choca o ovo em pé no gelo? Te amo do tamanho do mundo, papai!",
+  "resumo_short": "MEU PAPAI! 💙 Uma música para o papai com a Laurinha e o Luisinho!",
+  "curiosidade": "O papai pinguim choca o ovo em pé no gelo, protegendo o filhote do frio"
+ },
+ "data_comemorativa": "Dia dos Pais (2º domingo de agosto)"
+}
