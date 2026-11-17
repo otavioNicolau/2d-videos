@@ -51,7 +51,11 @@ def _letra_publicavel(musica: Path) -> str:
     from ..audio import composer
     out, refrao_visto = [], False
     for s in composer.secoes(musica):
-        if not s["linhas"] or s["tipo"] in ("intervalo", "virada", "bordao"):
+        if not s["linhas"] or s["tipo"] in ("intervalo", "bordao"):
+            continue
+        if s["tipo"] == "virada":                            # verso cantado logo depois da virada ("Escova de novo!")
+            if out:
+                out[-1] += "\n" + "\n".join(s["linhas"])
             continue
         if s["tipo"] == "refrao":
             if refrao_visto:
@@ -66,6 +70,7 @@ def _letra_publicavel(musica: Path) -> str:
 
 def _capitulos(song: dict, offset: float, total: float) -> list[tuple[float, str]]:
     nomes = {"intro": "Abertura", "verso": "Verso", "refrao": "Refrão", "ponte": "Curiosidade", "intervalo": "Hora de dançar",
+             "parada": "Hora da estátua",
              "final": "Tchau!"}
     from .clip_draft import blocos
     caps = [(0.0, "Abertura")]

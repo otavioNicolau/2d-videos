@@ -436,7 +436,8 @@ def _plano_scene(p: dict, occ: int, dur: float, plines: list, t0: float, cantam_
     if co:
         if isinstance(co, str):
             co = [{"t": 0.2, "text": co}]
-        sc["callouts"] = [{"t": c.get("t", 0.2), "text": c["text"], "dur": c.get("dur", 1.8),
+        # o destaque nunca passa do fim do próprio plano (senão encavala com o do plano seguinte)
+        sc["callouts"] = [{"t": c.get("t", 0.2), "text": c["text"], "dur": round(min(c.get("dur", 1.8), max(0.6, dur - c.get("t", 0.2))), 3),
                            "color": c.get("color", CORES[len(c["text"]) % len(CORES)]), "y": c.get("y", 170)} for c in co]
     sing = [s for w in atores if w in SING_CAST for s in _sing(plines, t0, t0 + dur, p.get("cantam") or cantam_bloco, w)]
     if sing:
