@@ -26,7 +26,7 @@ from .plano import Flat, PAL as PPAL, _surf
 W_INT, H = 2600, 1080
 FLOOR_Y = 760          # encontro parede/chão (o personagem pisa por volta de y 930, à frente)
 QUARTO = {"rosa": ("#FFD6EC", "#FFC2E2", "#E8B27A"), "azul": ("#D6ECFF", "#C2E0FF", "#E8B27A")}
-MOTIVOS = ("bananas", "leite", "lacos", "estrelas", "coracoes", "bolhas", "bolo", "feijao", "gotas", "respingos", "arcoiris")
+MOTIVOS = ("bananas", "leite", "lacos", "estrelas", "coracoes", "bolhas", "bolo", "feijao", "gotas", "respingos", "arcoiris", "folhas")
 
 
 def _text(c, txt, x, y, size, col, outline=None):
@@ -180,7 +180,7 @@ def ceu(rng) -> tuple[skia.Surface, int]:
 
 
 COR_MOTIVO = {"bananas": "#FFE066", "leite": "#FFFFFF", "lacos": "#FFD23F", "estrelas": "#FFFFFF", "coracoes": "#FFFFFF",
-              "bolhas": "#E8F6FF", "bolo": "#F7C948", "feijao": "#8E3B2E", "gotas": "#9CD8FF", "arcoiris": "#FFFFFF"}
+              "bolhas": "#E8F6FF", "bolo": "#F7C948", "feijao": "#8E3B2E", "gotas": "#9CD8FF", "arcoiris": "#FFFFFF", "folhas": "#5CCB6E"}
 TINTAS = ("#2F86F0", "#FFD21F", "#EE3B3B", "#2DBE5A", "#FF8A1F", "#8E44EF")   # respingos: uma cor por desenho
 
 
@@ -265,6 +265,9 @@ def _motivo(c, kind, x, y, s, col):
                                        StrokeWidth=7.5 / max(s, 1e-3) * s))
         for cx in (-42, 42):
             c.drawCircle(cx, 12, 13, p); c.drawCircle(cx, 12, 13, pl)
+    elif kind == "folhas":                                      # vitória-régia pequenininha com fendinha
+        c.drawOval(skia.Rect(-46, -20, 46, 20), p); c.drawOval(skia.Rect(-46, -20, 46, 20), pl)
+        c.drawLine(0, 0, 18, 14, pl)
     elif kind == "coracoes":
         path = skia.Path()
         path.moveTo(0, 30); path.cubicTo(-50, -4, -26, -44, 0, -18); path.cubicTo(26, -44, 50, -4, 0, 30); path.close()
@@ -344,9 +347,38 @@ def jardim(rng) -> tuple[skia.Surface, int]:
     return s, w
 
 
+def lagoa(rng) -> tuple[skia.Surface, int]:
+    """Beira da lagoa vista de pertinho: céu de tarde, árvores ao fundo, a água com brilhos e vitórias-régias,
+    margem de grama na frente (onde a turma pisa)."""
+    w = W_INT
+    s, c = _surf(w, H, 1.5)
+    F = Flat(c)
+    c.drawRect(skia.Rect(0, 0, w, H), skia.Paint(Color4f=skia.Color4f(*_rgba("#AEDCFF"))))
+    for x, y, sc in ((420, 130, 1.4), (1450, 90, 1.6), (2250, 150, 1.2)):
+        F.cloud(x, y, sc)
+    for x in range(-60, w + 200, 260):                           # mata ao fundo
+        F.oval(x, 430, 180, 140, "#5BB84F")
+        F.oval(x + 120, 400, 150, 120, "#4CAA46")
+    F.shape([(-20, 470), (w + 20, 470), (w + 20, 800), (-20, 800)], "#4FA8E8", smooth=False)      # água
+    for j in range(16):                                          # brilhos
+        x, y = (j * 397) % w, 520 + (j * 53) % 220
+        F.line([(x, y), (x + 70, y)], "#BFE6FF", w=LINE * 1.2)
+    for x, y, sx in ((350, 640, 1.0), (1700, 560, 0.7), (2300, 700, 0.9)):    # vitórias-régias ao fundo
+        F.oval(x, y, 150 * sx, 32 * sx, "#5CCB6E")
+        F.line([(x, y), (x + 40 * sx, y + 22 * sx)], "#25803A", w=LINE)
+    F.shape([(-20, 790), (w + 20, 760), (w + 20, H + 20), (-20, H + 20)], "#7BD36A", smooth=False)  # margem
+    for x in range(40, w, 110):
+        F.grass_ticks(x + (x * 7) % 40, 820 + (x * 13) % 220)
+    for x in (120, 980, 2480):                                   # taboas na margem
+        for d, h in ((-24, 330), (0, 380), (26, 300)):
+            F.line([(x + d, 800), (x + d + 6, 800 - h)], "#3F8F3A", w=LINE * 1.6)
+            F.oval(x + d + 6, 800 - h + 40, 14, 40, "#7A4A2A")
+    return s, w
+
+
 SCENES = {"plano_banheiro": banheiro, "plano_quarto_rosa": lambda rng: quarto("rosa", rng), "plano_quarto_azul": lambda rng: quarto("azul", rng),
           "plano_cozinha": cozinha, "plano_casa_frente": casa_frente, "plano_escola": escola, "plano_ceu": ceu,
-          "plano_jardim": jardim}
+          "plano_jardim": jardim, "plano_lagoa": lagoa}
 
 
 def build(bg_id: str, out_dir: Path, scale: float = 1.5, seed: int = 11) -> dict:

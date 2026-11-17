@@ -309,6 +309,17 @@ class FlatMuri(Character):
                 self._shape(k, ellipse_pts(q[0], q[1], 22, 16, 0, 14), L.extra["cabelo"])
         if L.bow:
             self._bow(k, rot((C[0] - 52 * f + f * s * 30, C[1] - r * 0.8), ht, C))
+        if P.get("chapeu", 0) > 0.5:         # chapéu de sol (Passeio na Lagoa): aba larga + copa + fita
+            cor_c = "#F5D67A"
+            aba = [rot((C[0] + dx * r, C[1] - r * 0.62 + dy * r), ht, C) for dx, dy in
+                   ((-1.45, 0.06), (-1.1, -0.12), (0.0, -0.2), (1.1, -0.12), (1.45, 0.06), (1.0, 0.12), (0.0, 0.08), (-1.0, 0.12))]
+            self._shape(k, aba, cor_c)
+            copa = [rot((C[0] + dx * r, C[1] - r * 0.62 + dy * r), ht, C) for dx, dy in
+                    ((-0.72, -0.08), (-0.6, -0.62), (0.0, -0.78), (0.6, -0.62), (0.72, -0.08))]
+            self._shape(k, copa, cor_c)
+            fita = [rot((C[0] + dx * r, C[1] - r * 0.62 + dy * r), ht, C) for dx, dy in
+                    ((-0.71, -0.12), (0.71, -0.12), (0.68, -0.3), (-0.68, -0.3))]
+            self._shape(k, fita, "#E9545D" if L.bow else "#3C8BF0", smooth=False)
         if P.get("touca", 0) > 0.5:          # touca de pijama (Conta Comigo: "Pijama!") com pompom caído
             base_l, base_r = rot((C[0] - r * 0.86, C[1] - r * 0.42), ht, C), rot((C[0] + r * 0.86, C[1] - r * 0.42), ht, C)
             ponta = rot((C[0] + f * r * 1.15, C[1] - r * 1.05), ht, C)
@@ -351,6 +362,14 @@ class FlatMuri(Character):
         nx_ = C[0] + r * 0.72 * math.sin(a_m)              # boca sempre dentro da cabeça, inclusive de perfil
         self._mouth(k, P, rot((nx_, C[1] + 52), ht, C), f, s, line)
         self._boca_fx(k, P, rot((nx_, C[1] + 52), ht, C), f)
+        if P.get("protetor", 0) > 0.05:       # protetor solar: risquinhos brancos nas bochechas e no nariz
+            a_ = min(1.0, P["protetor"])
+            for side in (-1, 1):
+                x, c = v.sphere(C[0], r * 0.9, side * 0.72)
+                if c > 0.25:
+                    q_ = rot((x, C[1] + 30), ht, C)
+                    for j in (-1, 1):
+                        k.shape(ellipse_pts(q_[0] + j * 10 * c, q_[1] + j * 4, 13 * c, 5, 0.3, 12), fill=_rgba("#FFFFFF", 0.95 * a_), line=0)
         if P.get("tinta", 0) > 0.05:          # sujo de tinta (Cadê a Cor?: "misturei tudo… marrom!")
             self._tinta(k, P["tinta"], C, r, ht)
         if P.get("suor", 0) > 0.5:            # gotinhas de suor (chegou correndo)

@@ -1009,3 +1009,150 @@ class Bicicleta(_Prop):
 
 
 PROPS.update({"numero": Numero, "mao": Mao, "bicicleta": Bicicleta})
+
+
+# ───────────────────────── 06 Passeio na Lagoa ─────────────────────────
+
+class Sapo(_Prop):
+    """Sapo cantor (objeto-personagem): `croac` 0→1 enche o papo e abre a boca; `pulo` 0→1; `microfone` 1 = taboa na mão."""
+
+    def __init__(self):
+        super().__init__("sapo", "Sapo", (520, 520), (260, 480), 230, {"croac": 0.0, "pulo": 0.0, "microfone": 0.0, "lid": 0.0})
+
+    def paint(self, k, P):
+        y0 = -90 * math.sin(math.pi * max(0.0, min(1.0, P["pulo"])))
+        verde, esc = "#5BC85B", "#2E8B3E"
+        for sx in (-1, 1):                                          # patas de trás dobradas
+            shape(k, [(sx * 70, y0 - 10), (sx * 150, y0 - 60), (sx * 170, y0 - 10), (sx * 120, y0 + 4)], verde, line=esc)
+            shape(k, ellipse_pts(sx * 150, y0 + 2, 46, 14, 0, 12), verde, line=esc)
+        shape(k, ellipse_pts(0, y0 - 110, 150, 110, 0, 32), verde, line=esc)           # corpo
+        shape(k, ellipse_pts(0, y0 - 80, 92, 62, 0, 24), "#D8F5B0", line=esc)          # barriga
+        c = max(0.0, min(1.0, P["croac"]))
+        if c > 0.05:                                                # papo cheio
+            shape(k, ellipse_pts(0, y0 - 128, 70 * c + 20, 52 * c + 12, 0, 24), "#F6E3A1", line="#C9A64A")
+        for sx in (-1, 1):                                          # olhos no alto
+            shape(k, ellipse_pts(sx * 62, y0 - 214, 44, 44, 0, 20), verde, line=esc)
+            if P.get("lid", 0) > 0.5:
+                ln(k, [(sx * 62 - 22, y0 - 214), (sx * 62, y0 - 204), (sx * 62 + 22, y0 - 214)], "#1F3A1F", w=LINE * 1.1)
+            else:
+                shape(k, ellipse_pts(sx * 62, y0 - 214, 28, 30, 0, 18), "#FFFFFF", line=esc)
+                k.dot(sx * 62 + 4, y0 - 208, 11, _rgba("#1F1F1F"))
+        if c > 0.3:
+            shape(k, ellipse_pts(0, y0 - 160, 50, 22 * c, 0, 18), "#8A2E2E", line=esc)
+        else:
+            ln(k, [(-70, y0 - 166), (0, y0 - 150), (70, y0 - 166)], "#1F3A1F", w=LINE * 1.2)
+        for sx in (-1, 1):
+            k.shape(ellipse_pts(sx * 100, y0 - 150, 18, 11, 0, 12), fill=_rgba("#FF9AAE", 0.75), line=0)
+            shape(k, [(sx * 60, y0 - 70), (sx * 80, y0 - 10), (sx * 104, y0 - 6), (sx * 84, y0 - 64)], verde, line=esc)   # bracinhos
+        if P.get("microfone", 0) > 0.5:                             # taboa de microfone
+            ln(k, [(96, y0 - 30), (120, y0 - 190)], "#3F8F3A", w=LINE * 2)
+            shape(k, ellipse_pts(124, y0 - 220, 20, 44, 0.1, 16), "#7A4A2A", line="#4E2E18")
+
+
+class Pato(_Prop):
+    """Patinho amarelo dançante: `quem` 0→1 abre o bico ("quém, quém"); `asas` 0→1 levanta as asinhas; `pulo`."""
+
+    def __init__(self):
+        super().__init__("pato", "Pato", (520, 600), (260, 560), 260, {"quem": 0.0, "asas": 0.0, "pulo": 0.0})
+
+    def paint(self, k, P):
+        y0 = -60 * math.sin(math.pi * max(0.0, min(1.0, P["pulo"])))
+        am, esc, lar = "#FFD84A", "#D9A520", "#FF8A1F"
+        for sx in (-1, 1):                                          # patinhas laranja
+            shape(k, [(sx * 40, y0 - 4), (sx * 40 + 46, y0 + 6), (sx * 40 + 10, y0 + 18), (sx * 40 - 26, y0 + 6)], lar, line="#C9661A")
+        shape(k, ellipse_pts(0, y0 - 100, 130, 95, 0, 32), am, line=esc)                # corpo
+        a = max(0.0, min(1.0, P["asas"]))
+        for sx in (-1, 1):
+            shape(k, [(sx * 110, y0 - 120), (sx * (180 + 30 * a), y0 - 150 - 70 * a), (sx * 150, y0 - 70)], am, line=esc)
+        shape(k, ellipse_pts(0, y0 - 250, 86, 82, 0, 28), am, line=esc)               # cabeça
+        b = max(0.0, min(1.0, P["quem"]))
+        shape(k, [(-46, y0 - 232), (46, y0 - 232), (60, y0 - 214), (0, y0 - 206 + 4 * b), (-60, y0 - 214)], lar, line="#C9661A")
+        shape(k, [(-44, y0 - 206), (44, y0 - 206), (30, y0 - 186 + 26 * b), (-30, y0 - 186 + 26 * b)], lar, line="#C9661A")
+        for sx in (-1, 1):
+            shape(k, ellipse_pts(sx * 34, y0 - 272, 15, 19, 0, 14), "#FFFFFF", line=esc)
+            k.dot(sx * 34 + 3, y0 - 268, 8, _rgba("#1F1F1F"))
+            k.shape(ellipse_pts(sx * 62, y0 - 238, 14, 9, 0, 12), fill=_rgba("#FF9AAE", 0.75), line=0)
+        ln(k, [(0, y0 - 330), (14, y0 - 352), (-6, y0 - 360)], esc, w=LINE * 1.2)       # topetinho
+
+
+class Girino(_Prop):
+    """Girino que vira sapo (quadros da história): `fase` 0 = girino nadando com rabo; 1→4 nascem as perninhas
+    (uma por vez); 5 = rabo sumiu (vira sapinho). `nada` 0→1 mexe o rabo."""
+
+    def __init__(self):
+        super().__init__("girino", "Girino", (620, 360), (310, 320), 170, {"fase": 0.0, "nada": 0.0})
+
+    def paint(self, k, P):
+        fase = max(0.0, min(5.0, P["fase"]))
+        cor = _mix("#4A5A6A", "#5BC85B", min(1.0, fase / 5))
+        esc = dark(cor, 0.7)
+        rabo = max(0.0, 1 - max(0.0, fase - 4))
+        w = math.sin(P["nada"] * 2 * math.pi * 3) * 26
+        if rabo > 0.05:                                             # rabo ondulando
+            pts = []
+            for j in range(13):
+                u = j / 12
+                pts.append((90 + 230 * u * rabo, -110 + w * u + 30 * (1 - u) * 0 - (40 * (1 - u)) * (j % 2) * 0))
+            top = [(x, y - 26 * (1 - j / 12)) for j, (x, y) in enumerate(pts)]
+            bot = [(x, y + 26 * (1 - j / 12)) for j, (x, y) in enumerate(pts)]
+            shape(k, top + bot[::-1], cor, line=esc)
+        # 4 perninhas, uma por vez: 1ª e 2ª = patas de TRÁS (dobradas, com pezinho de nadadeira); 3ª e 4ª = da frente
+        patas = (((60, -60), (110, -10), (70, 10)), ((40, -150), (100, -200), (60, -224)),
+                 ((-70, -50), (-60, 4), (-84, 14)), ((-80, -164), (-74, -212), (-96, -226)))
+        for i, (a0, a1, a2) in enumerate(patas):
+            g = max(0.0, min(1.0, fase - i))
+            if g <= 0.05:
+                continue
+            m = (a0[0] + (a1[0] - a0[0]) * g, a0[1] + (a1[1] - a0[1]) * g)
+            e = (m[0] + (a2[0] - a1[0]) * g, m[1] + (a2[1] - a1[1]) * g)
+            _capsula(k, a0, m, 15 if i < 2 else 12, cor, esc)
+            _capsula(k, m, e, 13 if i < 2 else 10, cor, esc)
+            if g > 0.6:                                             # pezinho em leque
+                for d in (-0.5, 0.0, 0.5):
+                    ang = math.atan2(e[1] - m[1], e[0] - m[0]) + d
+                    _capsula(k, e, (e[0] + math.cos(ang) * 24, e[1] + math.sin(ang) * 24), 7, cor, esc)
+        shape(k, ellipse_pts(-20, -110, 120, 84, 0, 28), cor, line=esc)
+        for sy in (-1, 1):
+            shape(k, ellipse_pts(-80, -150 + sy * 0, 22, 24, 0, 16), "#FFFFFF", line=esc) if sy < 0 else None
+        k.dot(-76, -146, 10, _rgba("#1F1F1F"))
+        ln(k, [(-118, -96), (-96, -86), (-74, -96)], "#1F1F1F", w=LINE)
+        k.shape(ellipse_pts(-50, -96, 14, 9, 0, 12), fill=_rgba("#FF9AAE", 0.7), line=0)
+
+
+class VitoriaRegia(_Prop):
+    """Folha de vitória-régia gigante boiando (vira palco/ilha): `balanco` 0→1 afunda e volta; `flor` 1 = florzinha rosa."""
+
+    def __init__(self):
+        super().__init__("vitoria_regia", "Vitória-régia", (1000, 360), (500, 320), 160, {"balanco": 0.0, "flor": 1.0})
+
+    def paint(self, k, P):
+        b = 18 * math.sin(math.pi * max(0.0, min(1.0, P["balanco"])))
+        shape(k, ellipse_pts(0, -40 + b, 440, 92, 0, 40), "#3FAE57", line="#25803A")
+        shape(k, ellipse_pts(0, -58 + b, 410, 72, 0, 40), "#5CCB6E", line="#25803A")
+        ln(k, [(0, -58 + b), (90, 6 + b)], "#25803A", w=LINE * 1.4)                       # a fendinha
+        for a in (-2.6, -2.0, -1.2, -0.5, 0.3):
+            ln(k, [(0, -58 + b), (math.cos(a) * 320, -58 + b + math.sin(a) * 52)], "#4BB85E", w=LINE * 0.8)
+        if P.get("flor", 0) > 0.5:
+            for j in range(6):
+                a = j * math.pi / 3
+                shape(k, ellipse_pts(-250 + math.cos(a) * 26, -96 + b + math.sin(a) * 14, 30, 16, a, 12), "#FF9AC8", line="#E0609A")
+            shape(k, ellipse_pts(-250, -98 + b, 16, 12, 0, 12), "#FFE066")
+
+
+class Taboa(_Prop):
+    """Moita de taboas (plantas da beira da lagoa, gigantes para os pequenininhos); `vento` 0→1 balança."""
+
+    def __init__(self):
+        super().__init__("taboa", "Taboa", (420, 820), (210, 790), 400, {"vento": 0.0})
+
+    def paint(self, k, P):
+        v = math.sin(P["vento"] * 2 * math.pi) * 18
+        for x, h, inc in ((-80, 640, -0.08), (0, 720, 0.0), (80, 600, 0.08), (-30, 520, -0.04), (50, 560, 0.05)):
+            tx = x + inc * h + v
+            ln(k, [(x, 0), (x + inc * h * 0.5 + v * 0.5, -h * 0.5), (tx, -h)], "#3F8F3A", w=LINE * 2)
+            shape(k, ellipse_pts(tx, -h + 70, 20, 64, inc, 16), "#7A4A2A", line="#4E2E18")
+        for x, a in ((-110, -0.5), (110, 0.5), (-40, -0.25), (40, 0.25)):                # folhas longas
+            shape(k, [(x - 12, 0), (x + 12, 0), (x + math.sin(a) * 420 + 4, -math.cos(a) * 420)], "#5BB84F", line="#2E7A30")
+
+
+PROPS.update({"sapo": Sapo, "pato": Pato, "girino": Girino, "vitoria_regia": VitoriaRegia, "taboa": Taboa})
