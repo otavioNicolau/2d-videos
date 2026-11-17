@@ -10,13 +10,13 @@ duas ou três originais).
 ## Prontas (letra, ficha, cenas e YouTube)
 | Nº | Cantiga | Ritmo | Ideia do canal |
 |---|---|---|---|
-| 12 | Carneirinho, Carneirão | reggae infantil (alt. batucada) | comandos (olha pro céu, pro chão, ajoelha, levanta, pula, gira); curiosidade: a lã vira blusa |
+| 12 | Carneirinho, Carneirão | batucada (alt. reggae infantil) | comandos (olha pro céu, pro chão, ajoelha, levanta, pula, gira); curiosidade: a lã vira blusa |
 | 15 | A Barata Diz Que Tem | rock infantil (alt. marchinha) | Dona Barata contando vantagem; a mentirinha tem perna curta; curiosidade: a barata é mais velha que o dinossauro |
-| 18 | Ciranda, Cirandinha | pop infantil (alt. ciranda) | roda da turma; só a 1ª estrofe + "entre dentro desta roda" com os nomes (sem a do anel/amor que acabou) |
-| 21 | Meu Limão, Meu Limoeiro | reggae infantil (alt. xote) | limoeiro da vovó e limonada; curiosidade: vitamina C |
-| 24 | O Sapo Não Lava o Pé | funk infantil (alt. forró pé de serra) | chulé na lagoa (nuvenzinha verde); curiosidade: o sapo bebe água pela pele; lavar o pé no banho |
-| 27 | A Canoa Virou | marchinha (alt. samba infantil) | canoa de papel no laguinho do parque; quem voa não afunda; na água, sempre com um adulto |
-| 30 | Peixe Vivo | samba infantil (alt. xote) | só a 1ª estrofe; saudade da Laurinha que viajou e volta; o peixinho dorme de olho aberto |
+| 18 | Ciranda, Cirandinha | forró piseiro (alt. pop infantil) | roda da turma; só a 1ª estrofe + "entre dentro desta roda" com os nomes (sem a do anel/amor que acabou) |
+| 21 | Meu Limão, Meu Limoeiro | samba infantil (alt. reggae infantil) | limoeiro da vovó e limonada; curiosidade: vitamina C |
+| 24 | O Sapo Não Lava o Pé | forró piseiro (alt. funk infantil) | chulé na lagoa (nuvenzinha verde); curiosidade: o sapo bebe água pela pele; lavar o pé no banho |
+| 27 | A Canoa Virou | xote (alt. marchinha) | canoa de papel no laguinho do parque; quem voa não afunda; na água, sempre com um adulto |
+| 30 | Peixe Vivo | reggae infantil (alt. samba infantil) | só a 1ª estrofe; saudade da Laurinha que viajou e volta; o peixinho dorme de olho aberto |
 | 33 | A Galinha do Vizinho | axé (alt. baião) | contagem dos ovos de 1 a 10; curiosidade: o pintinho nasce do ovo que a galinha choca |
 | 36 | Alecrim Dourado | baião (alt. xote) | "ai, turminha, quem te disse assim"; o alecrim é tempero da vovó |
 
