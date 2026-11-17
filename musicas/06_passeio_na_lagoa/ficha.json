@@ -69,11 +69,105 @@
  "alternativas": [
   "forro_pe_de_serra"
  ],
- "status": "letra_aprovada",
- "versoes": [],
+ "status": "aprovada",
+ "versoes": [
+  "v1",
+  "v2"
+ ],
  "youtube": {
   "resumo": "PASSEIO NA LAGOA! 🐸 Domingo é dia de passear com a vovó! O Luisinho leva lanchinho, garrafinha, protetor e chapéu e voa bem baixinho até a lagoa. Lá a Laurinha conta um segredo: o sapo já foi girino e nadava com rabo igual um peixinho! Arrasta o pé, bate a asinha, gira pra lá, gira pra cá: ninguém fica à toa!",
   "resumo_short": "PASSEIO NA LAGOA! 🐸 Arrasta o pé com a Laurinha, o Luisinho e a vovó na beira da lagoa!",
-  "curiosidade": "O sapo já foi girino: nadava com rabo igual um peixinho, depois nasceram quatro perninhas e ele pulou pro chão"
- }
+  "curiosidade": "O sapo já foi girino: nadava com rabo igual um peixinho, depois nasceram quatro perninhas e ele pulou pro chão",
+  "miniatura": "PASSEIO\\nNA LAGOA!",
+  "miniatura_cena": {
+   "fundo": "raios",
+   "cores": [
+    [
+     63,
+     174,
+     87
+    ],
+    [
+     79,
+     168,
+     232
+    ],
+    [
+     255,
+     210,
+     31
+    ],
+    [
+     142,
+     212,
+     99
+    ],
+    [
+     24,
+     181,
+     176
+    ],
+    [
+     255,
+     154,
+     200
+    ]
+   ],
+   "heroi": {
+    "id": "luisinho",
+    "pose": {
+     "turn": 0.2,
+     "mouth": "D",
+     "chapeu": 1,
+     "hand_n_x": -135,
+     "hand_n_y": -135,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3
+    }
+   },
+   "par": {
+    "id": "vovo",
+    "pose": {
+     "turn": -0.2,
+     "mouth": "D",
+     "chapeu": 1,
+     "hand_n_x": -135,
+     "hand_n_y": -135,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3
+    }
+   },
+   "objetos": [
+    {
+     "id": "sapo",
+     "pose": {
+      "croac": 1,
+      "microfone": 1
+     },
+     "tam": 300,
+     "x": 800,
+     "base": 720
+    },
+    {
+     "id": "pato",
+     "pose": {
+      "asas": 1,
+      "quem": 1
+     },
+     "tam": 190,
+     "x": 130,
+     "base": 280
+    }
+   ]
+  }
+ },
+ "escolhida": "v2"
 }

@@ -1,0 +1,109 @@
+{
+ "schema": "avaliacao-1.0",
+ "versoes": {
+  "v1": {
+   "arquivo": "v1.wav",
+   "duracao": 271.2,
+   "bpm": 136.0,
+   "bpm_nota": "",
+   "tom": "Dó menor",
+   "voz_inicio": 3.6,
+   "refrao_inicio": null,
+   "cantado": 88,
+   "intervalos": [
+    [
+     89.3,
+     5.0
+    ],
+    [
+     160.9,
+     4.5
+    ]
+   ],
+   "fim_depois_da_voz": 5.2,
+   "final": "corte seco",
+   "silencio_final": 0.5,
+   "acerto": 73,
+   "nao_reconhecidas": [
+    "asinha",
+    "croac",
+    "quem",
+    "lanchinho",
+    "luisinho",
+    "hein",
+    "girininho",
+    "girino",
+    "perninhas",
+    "cantor",
+    "voltinha",
+    "muricoca"
+   ],
+   "pontos_a_conferir": [
+    "andamento 136 fora da faixa do Forró piseiro (150–170)",
+    "o gancho não foi reconhecido na transcrição",
+    "duração 271 s fora do alvo 140–170 s",
+    "só 73% da letra reconhecida — ouvir a pronúncia",
+    "tom menor (o canal é sempre em tom maior)"
+   ]
+  },
+  "v2": {
+   "arquivo": "v2.wav",
+   "duracao": 232.8,
+   "bpm": 136.0,
+   "bpm_nota": "",
+   "tom": "Sol maior",
+   "voz_inicio": 3.2,
+   "refrao_inicio": 25.7,
+   "cantado": 88,
+   "intervalos": [
+    [
+     79.0,
+     11.8
+    ]
+   ],
+   "fim_depois_da_voz": 0.0,
+   "final": "corte seco",
+   "silencio_final": 0.0,
+   "acerto": 71,
+   "nao_reconhecidas": [
+    "bate",
+    "asinha",
+    "tarde",
+    "croac",
+    "quem",
+    "lanchinho",
+    "luisinho",
+    "pulou",
+    "chao",
+    "pato",
+    "muricoca",
+    "gostei"
+   ],
+   "pontos_a_conferir": [
+    "andamento 136 fora da faixa do Forró piseiro (150–170)",
+    "duração 233 s fora do alvo 140–170 s",
+    "só 71% da letra reconhecida — ouvir a pronúncia",
+    "menos de 2 intervalos de dança"
+   ]
+  }
+ },
+ "ouvido": {
+  "v1": {
+   "1 começo chama atenção": null,
+   "5 melodia combina com a letra": null,
+   "6 dá vontade de dançar": null,
+   "7 pronúncia natural": null,
+   "8 tem a cara do canal": null,
+   "9 nenhum trecho cansativo": null
+  },
+  "v2": {
+   "1 começo chama atenção": null,
+   "5 melodia combina com a letra": null,
+   "6 dá vontade de dançar": null,
+   "7 pronúncia natural": null,
+   "8 tem a cara do canal": null,
+   "9 nenhum trecho cansativo": null
+  }
+ },
+ "escolhida": "v2"
+}
