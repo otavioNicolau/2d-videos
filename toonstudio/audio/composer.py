@@ -189,10 +189,10 @@ def prompt(d: Path) -> dict:
     f = ficha(d)
     letra = (d / "letra.txt").read_text(encoding="utf-8")
     r = E["ritmos"][f["ritmo"]]
-    voz = V["vozes"][f.get("voz", "dueto")]
+    voz = V["vozes"][f.get("persona") or f.get("voz", "dueto")]     # "persona": quem conduz (uma Voice por faixa no Suno)
     res = {"titulo": f["titulo"], "ritmo": r["nome"], "bpm": f["bpm"], "style": style(f, E=E, V=V),
            "style_curto": style_curto(f, E=E, V=V), "exclude": exclude(f, E=E),
-           "lyrics": grafia_suno(expandir(letra, r["peso"], E, V)), "persona": voz.get("suno_persona"), "voz": f.get("voz", "dueto"),
+           "lyrics": grafia_suno(expandir(letra, r["peso"], E, V)), "persona": voz.get("suno_persona"), "voz": f.get("persona") or f.get("voz", "dueto"),
            "avisos": [], "alternativas": []}
     lo, hi, _ = r["bpm"]
     if not lo <= f["bpm"] <= hi:

@@ -1,0 +1,59 @@
+CRIAR A VOZ DO LUISINHO NO SUNO (música de teste, só para gerar a voz)
+
+Objetivo: uma faixa curta em que SÓ o Luisinho canta (menino, animado, sapeca), com a voz limpa e na frente,
+para virar uma Voice no Suno. Não é música para o canal.
+
+TÍTULO: Oi, Eu Sou o Luisinho (voz)
+
+STYLE OF MUSIC:
+solo boy child vocal, 7 year old boy, bright playful cheeky voice, clear Brazilian Portuguese diction, native Brazilian accent, lead vocal upfront and dry, simple happy pop, light acoustic guitar, soft drums, handclaps, major key, 115 bpm
+
+EXCLUDE:
+girl vocal, female vocal, adult male vocal, adult female vocal, kids choir, choir, duet, backing vocals, harmonies, autotune, heavy reverb, European Portuguese accent, Spanish accent, minor key, sad
+
+LYRICS:
+[Intro - guitar]
+(Zum, zum!)
+
+[Verse - solo boy child vocal]
+Oi, turminha! Tudo bem?
+Eu sou o Luizinho!
+Sou azulzinho,
+Voo baixinho!
+Gosto de pular,
+De rir e brincar,
+E quando eu me empolgo
+Eu começo a cantar!
+
+[Chorus - solo boy child vocal]
+Zum-zum, que massa!
+Zum-zum, que massa!
+Bate a asinha
+E vem comigo, vem!
+Zum-zum, que massa!
+Zum-zum, que massa!
+Eu sou o Luizinho
+E você também! (Ha ha!)
+
+[Verse - solo boy child vocal]
+Um, dois, três,
+Pula comigo!
+Ih, tropecei... (Ops!)
+Mas foi divertido!
+
+[Chorus - solo boy child vocal]
+Zum-zum, que massa!
+Zum-zum, que massa!
+Eu sou o Luizinho!
+Tchau! (Zum!)
+[End]
+
+COMO FAZER
+1. Gere 2 a 4 versões com o Style e o Exclude acima, no modelo v5.5 (é o que aceita Voices).
+2. Ouça e escolha a que soar mais como MENINO de uns 7 anos, alegre e sapeca, sem voz de menina e sem coro.
+   Se todas saírem com voz de menina ou de adulto, gere de novo (pode trocar "7 year old boy" por "young boy, 6 years old").
+3. Na biblioteca, abra a versão escolhida → ⋯ → Create → Voice. Nome: Luisinho.
+4. Me diga o nome exato da Voice (e mande o .wav dessa versão), para eu registrar em musicas/vozes.json.
+
+A partir daí, as músicas em que o Luisinho abre e conduz (ficha "persona": "luisinho") saem com a voz dele;
+as outras continuam com a voz da Laurinha.

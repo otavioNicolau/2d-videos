@@ -1,6 +1,6 @@
 {
  "schema": "vozes-1.0",
- "nota": "Vozes oficiais (BIBLIA_MUSICAL.md, seção 3). Nunca inventar voz nova por música. 'suno_persona' fica vazio até a Persona ser criada no Suno; depois registre o nome exato e de qual música/versão ela veio. A Persona 'Laurinha' canta os dois versos (o Suno não troca de cantor na mesma faixa); por enquanto é a voz do canal também nos duetos.",
+ "nota": "Vozes oficiais (BIBLIA_MUSICAL.md, seção 3). Nunca inventar voz nova por música. 'suno_persona' fica vazio até a Persona ser criada no Suno; depois registre o nome exato e de qual música/versão ela veio. O Suno aceita uma Voice por faixa: a ficha marca \"persona\" com quem conduz a música (verso 1); nas músicas do Luisinho entra a Voice dele (quando criada), nas demais a da Laurinha.",
  "vozes": {
   "laurinha": {
    "descricao": "menina, clara, doce e firme; a mais velha da turma, puxa a brincadeira",
@@ -16,7 +16,8 @@
    "tag": "Luisinho, boy child vocal",
    "bordao": "Zum-zum, que massa!",
    "suno_persona": null,
-   "criada_de": null
+   "criada_de": null,
+   "como_criar": "musicas/vozes/luisinho_voz.txt (faixa de teste só com ele, depois Create → Voice no Suno)"
   },
   "dueto": {
    "descricao": "Laurinha e Luisinho alternando versos e cantando juntos o refrão",
