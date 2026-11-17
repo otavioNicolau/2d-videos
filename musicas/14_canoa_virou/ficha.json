@@ -1,0 +1,71 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "A Canoa Virou",
+ "gancho": "a canoa virou",
+ "palavras_tema": [
+  "canoa",
+  "remar",
+  "peixinho",
+  "água"
+ ],
+ "tipo": "brincadeira",
+ "tema": "canoa de folha na poça e cuidado na água",
+ "dia_a_dia": [
+  "brincar na água só com adulto",
+  "dia depois da chuva"
+ ],
+ "curiosidade": "o peixinho respira dentro da água pelas guelrinhas; e na água a gente brinca sempre com o papai e a mamãe",
+ "ritmo": "samba_infantil",
+ "bpm": 105,
+ "estrutura": "A",
+ "voz": "dueto",
+ "cantam": {
+  "verso 1": "luisinho",
+  "refrão": "coro (cantiga tradicional)",
+  "verso 2": "laurinha",
+  "ponte": "remar e equilibrar",
+  "final": "todo mundo"
+ },
+ "cenas": [
+  {
+   "parte": "verso 1",
+   "ideia": "poça depois da chuva vista de pertinho vira um lago; uma folha vira canoa; os dois remam com palitinhos e a folha balança"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "a canoa vira (splash) e um peixinho aparece para ajudar; a Laurinha sai voando da água, sequinha"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "'quem tem asinha não afunda'; peixinho mostrando as guelrinhas; a família na beira da piscina: criança na água só com o papai e a mamãe"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "rema, balança pra lá e pra cá e equilibra sem virar ('Ufa!')"
+  },
+  {
+   "parte": "final",
+   "ideia": "convite; a turma toda na canoa de folha dando tchau"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [
+  "reggae_infantil"
+ ],
+ "status": "letra_revisada",
+ "versoes": [],
+ "dominio_publico": {
+  "tradicional": true,
+  "origem": "cantiga de roda tradicional brasileira (folclore, autor desconhecido)",
+  "trecho_tradicional": "A canoa virou, pois deixaram ela virar, foi por causa de [nome]… do fundo do mar (estrofe tradicional com os nomes da turma)",
+  "observacao": ""
+ },
+ "youtube": {
+  "resumo": "A CANOA VIROU! 🛶 Depois da chuva, uma folha vira canoa na poça e a Laurinha e o Luisinho vão remar… balança, balança e… a canoa virou! Mas quem tem asinha não afunda! O peixinho respira na água pelas guelrinhas, e a gente só brinca na água com o papai e a mamãe.",
+  "resumo_short": "A CANOA VIROU! 🛶 A cantiga clássica com a Laurinha e o Luisinho!",
+  "curiosidade": "O peixinho respira dentro da água pelas guelrinhas; e na água a gente brinca sempre com o papai e a mamãe"
+ }
+}

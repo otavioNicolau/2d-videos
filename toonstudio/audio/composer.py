@@ -364,7 +364,7 @@ def checar(d: Path) -> Checagem:
         ck.add("aviso", "idade", "confira o contexto (pode soar como xingamento): " + ", ".join(ofs))
 
     # regra do canal — nunca citar o ritmo na letra
-    gen = [w for w in GENEROS_NA_LETRA if _tem(full, w)]
+    gen = [w for w in GENEROS_NA_LETRA if _tem(full, w) and w not in f.get("titulo", "").lower()]   # título de cantiga não conta
     if gen:
         ck.add("erro", "ritmo citado", "a letra cita o ritmo: " + ", ".join(sorted(set(gen))))
 

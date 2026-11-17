@@ -1,0 +1,71 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "O Sapo Não Lava o Pé",
+ "gancho": "não lava o pé",
+ "palavras_tema": [
+  "sapo",
+  "pé",
+  "chulé",
+  "lagoa"
+ ],
+ "tipo": "animal",
+ "tema": "o sapo que não lava o pé e a hora de lavar o pé no banho",
+ "dia_a_dia": [
+  "lavar o pé no banho",
+  "secar entre os dedinhos"
+ ],
+ "curiosidade": "o sapo bebe água pela pele, mas o nosso pezinho precisa de sabão no banho",
+ "ritmo": "forro_pe_de_serra",
+ "bpm": 132,
+ "estrutura": "A",
+ "voz": "dueto",
+ "cantam": {
+  "verso 1": "luisinho",
+  "refrão": "coro (cantiga tradicional)",
+  "verso 2": "laurinha",
+  "ponte": "comandos de lavar o pé",
+  "final": "todo mundo"
+ },
+ "cenas": [
+  {
+   "parte": "verso 1",
+   "ideia": "lagoa do ep06: o sapo na vitória-régia; nuvenzinha verde de cheirinho sai do pé dele (canal bafinho), Luisinho tampa o nariz ('Eca!')"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "o sapo dançando forró de braços cruzados ('não lava porque não quer'); no 'mas que chulé!' todos tampam o nariz"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "Laurinha mostra a água entrando pela pele do sapo (gotinhas brilhando); depois banheiro: sabão com carinha e o pezinho com espuma"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "lava o pé com espuma, cosquinha entre os dedinhos, toalha, e o chulé some (nuvem verde se desfaz); o sapo finalmente lava o pé no final"
+  },
+  {
+   "parte": "final",
+   "ideia": "convite; o sapo de pé limpinho e todos dão tchau"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [
+  "baiao"
+ ],
+ "status": "letra_revisada",
+ "versoes": [],
+ "dominio_publico": {
+  "tradicional": true,
+  "origem": "cantiga de roda tradicional brasileira (folclore, autor desconhecido)",
+  "trecho_tradicional": "O sapo não lava o pé… mas que chulé! (refrão inteiro)",
+  "observacao": ""
+ },
+ "youtube": {
+  "resumo": "O SAPO NÃO LAVA O PÉ! 🐸 Na lagoa mora um sapo que não lava o pé… mas que chulé! A Laurinha conta que o sapo bebe água pela pele, mas o nosso pezinho precisa de sabão na hora do banho. Esfrega, cosquinha entre os dedinhos, seca bem… e o chulé sumiu!",
+  "resumo_short": "O SAPO NÃO LAVA O PÉ! 🐸 Mas que chulé! A cantiga clássica com a Laurinha e o Luisinho!",
+  "curiosidade": "O sapo bebe água pela pele, mas o nosso pezinho precisa de sabão no banho"
+ }
+}

@@ -1,0 +1,75 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Ciranda, Cirandinha",
+ "gancho": "ciranda cirandinha",
+ "palavras_tema": [
+  "ciranda",
+  "roda",
+  "mão",
+  "amigos"
+ ],
+ "tipo": "brincadeira",
+ "tema": "roda de amigos de mãos dadas",
+ "dia_a_dia": [
+  "brincar de roda",
+  "incluir os amigos"
+ ],
+ "curiosidade": "a ciranda é uma dança de roda de mãos dadas que vem das praias de Pernambuco",
+ "ritmo": "ciranda",
+ "bpm": 105,
+ "estrutura": "R",
+ "voz": "dueto",
+ "cantam": {
+  "verso 1": "laurinha",
+  "refrão": "coro (cantiga tradicional)",
+  "verso 2": "luisinho",
+  "ponte": "comandos de roda",
+  "final": "todo mundo"
+ },
+ "cenas": [
+  {
+   "parte": "verso 1",
+   "ideia": "jardim: Laurinha chama a turma, todos dão as mãos e formam uma roda (Joaninha, Formiguinha, Luisinho); ninguém fica de fora"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "a roda gira vista de cima (como uma flor), meia-volta e volta e meia"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "praia de Pernambuco ao entardecer com uma ciranda grande na areia; pé pra frente, pé pra trás"
+  },
+  {
+   "parte": "refrão 2",
+   "ideia": "a Laurinha entra no meio da roda, faz um versinho, acena e volta"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "pra frente, pra trás, meia-volta e abraço coletivo"
+  },
+  {
+   "parte": "final",
+   "ideia": "convite; a roda dando tchau de mãos dadas"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [
+  "samba_infantil"
+ ],
+ "status": "letra_revisada",
+ "versoes": [],
+ "dominio_publico": {
+  "tradicional": true,
+  "origem": "cantiga de roda tradicional brasileira (folclore, autor desconhecido)",
+  "trecho_tradicional": "Ciranda, cirandinha, vamos todos cirandar… volta e meia vamos dar; 'por isso, [nome], entre dentro desta roda'",
+  "observacao": "a estrofe do anel que se quebrou / amor que se acabou ficou de fora (tristeza de amor não serve para o canal)"
+ },
+ "youtube": {
+  "resumo": "CIRANDA, CIRANDINHA! 💃 Vamos todos cirandar com a Laurinha, o Luisinho, a Joaninha e a Formiguinha: dá a mão, faz a roda e ninguém fica de fora! Você sabia que a ciranda é uma dança de roda que vem das praias de Pernambuco? Pra frente, pra trás, meia-volta… e abraço!",
+  "resumo_short": "CIRANDA, CIRANDINHA! 💃 Vamos todos cirandar com a Laurinha e o Luisinho!",
+  "curiosidade": "A ciranda é uma dança de roda de mãos dadas que vem das praias de Pernambuco"
+ }
+}

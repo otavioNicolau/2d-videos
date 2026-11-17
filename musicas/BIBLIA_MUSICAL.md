@@ -219,4 +219,15 @@ Independentes da música do episódio; repetidas em todo vídeo:
 ## 11. Direitos
 
 - Letras, melodias e títulos **originais**; referência de mercado só para características gerais.
+- **Exceção (decisão do usuário, 17/11/2026): cantigas tradicionais de domínio público**, intercaladas aos poucos com as
+  originais. Catálogo e situação de cada uma em [CLASSICAS.md](CLASSICAS.md). Regras:
+  - só cantiga **tradicional de autor desconhecido** (folclore); música com autor conhecido e ainda protegida, nunca
+    (ex.: "O Pato", de Vinicius de Moraes e Toquinho);
+  - a **letra tradicional fica no refrão**, com o título conhecido (é o que as famílias buscam); os **versos são nossos**,
+    com a Laurinha, o Luisinho, o mundo pequenino, a curiosidade e o convite final;
+  - **nunca copiar** gravação, arranjo, versos extras ou vídeo de outro canal (Galinha Pintadinha, Bob Zoom etc.);
+  - trechos com conteúdo que hoje não serve (violência, castigo, tristeza de amor, estereótipo) ficam fora ou na versão
+    moderna; o Suno cria uma melodia nova (a tradicional não é garantida);
+  - se o filtro do Suno bloquear a letra tradicional, **não** trocar letras só para escapar do filtro: avisar e decidir;
+  - a ficha marca `dominio_publico` com o trecho tradicional usado.
 - Para publicar com monetização, gerar no plano pago do Suno e conferir os termos atuais antes.

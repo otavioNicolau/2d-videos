@@ -1,0 +1,71 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Carneirinho, Carneirão",
+ "gancho": "carneirinho carneirão",
+ "palavras_tema": [
+  "carneirinho",
+  "lã",
+  "brincadeira",
+  "comandos"
+ ],
+ "tipo": "danca",
+ "tema": "brincadeira de comandos do carneirinho",
+ "dia_a_dia": [
+  "brincar de roda",
+  "blusa de frio"
+ ],
+ "curiosidade": "a lã do carneirinho vira blusa de frio, e cortar a lã não dói: é igual cortar o cabelo",
+ "ritmo": "batucada",
+ "bpm": 130,
+ "estrutura": "D",
+ "voz": "dueto",
+ "cantam": {
+  "verso 1": "laurinha",
+  "refrão": "coro (cantiga tradicional, comandos)",
+  "verso 2": "luisinho",
+  "ponte": "comandos rápidos e estátua",
+  "final": "todo mundo"
+ },
+ "cenas": [
+  {
+   "parte": "verso 1",
+   "ideia": "campo verde: carneirinho fofo como nuvem pulando; a turma faz uma roda em volta dele"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "olha pro céu (todos olham para cima, nuvens-carneiro), olha pro chão, e cada comando é executado: ajoelha, levanta, senta, pula, dança"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "a lã do carneirinho sendo aparada como corte de cabelo (ele ri, não dói) e vira uma blusinha que a Laurinha veste"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "gira, palma, 'méé' e todo mundo congela em estátua"
+  },
+  {
+   "parte": "final",
+   "ideia": "convite; o carneirinho de blusinha dá tchau"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [
+  "funk_infantil"
+ ],
+ "status": "letra_revisada",
+ "versoes": [],
+ "dominio_publico": {
+  "tradicional": true,
+  "origem": "cantiga de roda tradicional brasileira (folclore, autor desconhecido)",
+  "trecho_tradicional": "Carneirinho, carneirão… manda o rei, nosso senhor, para todos se ajoelharem (comandos tradicionais; acrescentamos pular e dançar)",
+  "observacao": ""
+ },
+ "youtube": {
+  "resumo": "CARNEIRINHO, CARNEIRÃO! 🐑 A brincadeira de roda clássica com a Laurinha, o Luisinho e a turma: olha pro céu, olha pro chão… manda o rei para todos se ajoelharem, levantarem, sentarem e pularem! E você sabia que a lã do carneirinho vira blusinha? Cortar a lã não dói nadinha!",
+  "resumo_short": "CARNEIRINHO, CARNEIRÃO! 🐑 Olha pro céu, olha pro chão e brinca com a Laurinha e o Luisinho!",
+  "curiosidade": "A lã do carneirinho vira blusa de frio, e cortar a lã não dói: é igual cortar o cabelo"
+ }
+}
