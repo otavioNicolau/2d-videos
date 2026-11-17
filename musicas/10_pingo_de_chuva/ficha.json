@@ -62,12 +62,97 @@
  "alternativas": [
   "xote"
  ],
- "status": "letra_aprovada",
- "versoes": [],
+ "status": "aprovada",
+ "versoes": [
+  "v1"
+ ],
  "youtube": {
   "resumo": "PINGO DE CHUVA! 🌧️☂️ Olha a nuvem cinza: vai chover! Um pingo gigante cai na asinha do Luisinho, e a turma pega a sombrinha e a capa amarelinha. Pula na poça, splash, splash! A Laurinha conta um segredo: a água sobe pro céu, vira nuvem e cai de novo, e a plantinha agradece. Chuva fininha, chuva forte… saiu o sol!",
   "resumo_short": "PINGO DE CHUVA! 🌧️ Pula na poça e roda a sombrinha com a Laurinha e o Luisinho!",
-  "curiosidade": "A água da chuva sobe pro céu, vira nuvem e cai de novo: é o caminho da água"
+  "curiosidade": "A água da chuva sobe pro céu, vira nuvem e cai de novo: é o caminho da água",
+  "miniatura": "PINGO DE\\nCHUVA!",
+  "miniatura_cena": {
+   "fundo": "circulo",
+   "cores": [
+    [
+     47,
+     134,
+     240
+    ],
+    [
+     45,
+     190,
+     90
+    ],
+    [
+     255,
+     210,
+     31
+    ],
+    [
+     255,
+     120,
+     170
+    ]
+   ],
+   "heroi": {
+    "id": "luisinho",
+    "pose": {
+     "turn": 0.2,
+     "mouth": "D",
+     "capa": 1,
+     "holding": "sombrinha",
+     "hand_n_x": -120,
+     "hand_n_y": -150,
+     "hand_n_bend": 0.4,
+     "paw_n": 1,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3
+    }
+   },
+   "par": {
+    "id": "laurinha",
+    "pose": {
+     "turn": -0.2,
+     "mouth": "D",
+     "capa": 1,
+     "hand_n_x": -135,
+     "hand_n_y": -135,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3
+    }
+   },
+   "objetos": [
+    {
+     "id": "nuvem",
+     "pose": {
+      "cinza": 1,
+      "chove": 1,
+      "queda": 0.3,
+      "boca": 0.5
+     },
+     "tam": 330,
+     "x": 180,
+     "base": 330
+    },
+    {
+     "id": "poca",
+     "pose": {
+      "splash": 0.5
+     },
+     "tam": 360,
+     "x": 800,
+     "base": 740
+    }
+   ]
+  }
  },
- "persona": "luisinho"
+ "persona": "luisinho",
+ "escolhida": "v1"
 }

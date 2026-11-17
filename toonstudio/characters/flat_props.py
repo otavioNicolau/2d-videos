@@ -1359,3 +1359,79 @@ class PosteFios(_Prop):
 
 
 PROPS.update({"pipa": Pipa, "vento": Vento, "poste": PosteFios})
+
+
+# ───────────────────────── 10 Pingo de Chuva ─────────────────────────
+
+class Nuvem(_Prop):
+    """Nuvem fofinha com carinha. `cinza` 0→1 (branca → nuvem de chuva), `chove` 0→1 pinguinhos saindo de baixo
+    (fase em `queda`), `sobe` 0→1 vapor subindo até ela (o caminho da água)."""
+
+    def __init__(self):
+        super().__init__("nuvem", "Nuvem", (1100, 900), (550, 850), 380,
+                         {"cinza": 0.0, "chove": 0.0, "queda": 0.0, "sobe": 0.0, "boca": 0.0, "lid": 0.0})
+
+    def paint(self, k, P):
+        cor = _mix("#FFFFFF", "#9AA6B8", P["cinza"]); lin = _mix("#BFD6EA", "#6E7A8C", P["cinza"])
+        cy = -520
+        for dx, dy, r in ((-230, 40, 140), (-90, -40, 190), (110, -20, 170), (250, 50, 130), (0, 60, 170)):
+            shape(k, ellipse_pts(dx, cy + dy, r, r * 0.86, 0, 24), cor, line=lin)
+        _carinha(k, 0, cy + 20, P, "#3A4A66", "#FF9AB0", esc=1.4)
+        c = P["chove"]
+        if c > 0.05:
+            for j in range(9):
+                x = -300 + j * 75
+                y = cy + 170 + ((P["queda"] * 380 + j * 97) % 380)
+                shape(k, [(x, y - 24), (x + 11, y), (x, y + 13), (x - 11, y)], "#9CD8FF", line="#4A9BE0", alpha=min(1.0, c))
+        s = P["sobe"]
+        if s > 0.05:
+            for j in range(4):
+                x = -180 + j * 120
+                y = cy + 600 - 380 * ((s + j * 0.25) % 1.0)
+                ln(k, [(x, y), (x + 20, y - 30), (x, y - 60), (x + 20, y - 90)], "#FFFFFF", w=LINE * 1.4, alpha=0.8)
+
+
+class Poca(_Prop):
+    """Poça d'água (para eles, um lago). `splash` 0→1 respingos subindo e caindo (pulo na poça)."""
+
+    def __init__(self):
+        super().__init__("poca", "Poça", (1100, 600), (550, 500), 200, {"splash": 0.0})
+
+    def paint(self, k, P):
+        shape(k, ellipse_pts(0, -20, 430, 70, 0, 36), "#7FC8FA", line="#3E8FD6")
+        ln(k, [(-250, -30), (-150, -40)], "#FFFFFF", w=LINE * 1.2)
+        ln(k, [(120, -14), (230, -22)], "#FFFFFF", w=LINE * 1.2)
+        s = max(0.0, min(1.0, P["splash"]))
+        if 0.02 < s < 0.98:
+            for j in range(10):
+                a = math.pi * (0.1 + 0.8 * j / 9)
+                rr = 80 + 300 * s
+                x = math.cos(a) * rr
+                y = -40 - math.sin(a) * rr * 1.1 + 260 * s * s
+                shape(k, ellipse_pts(x, y, 16, 20, 0, 12), "#9CD8FF", line="#4A9BE0")
+
+
+class Plantinha(_Prop):
+    """Plantinha com carinha que cresce com a chuva (`cresce` 0→1) e agradece (`boca`)."""
+
+    def __init__(self):
+        super().__init__("plantinha", "Plantinha", (700, 900), (350, 850), 380, {"cresce": 1.0, "boca": 0.0, "lid": 0.0})
+
+    def paint(self, k, P):
+        g = 0.35 + 0.65 * max(0.0, min(1.0, P["cresce"]))
+        shape(k, [(-130, -150), (130, -150), (100, 0), (-100, 0)], "#C98A4E", line="#8E5E33", smooth=False)
+        box(k, -150, -190, 150, -150, "#D9A066", line="#8E5E33", r=10)
+        h = 460 * g
+        ln(k, [(0, -190), (0, -190 - h)], "#3DAE4E", w=LINE * 3)
+        for sgn, y in ((-1, 0.45), (1, 0.7)):
+            yy = -190 - h * y
+            shape(k, [(0, yy), (sgn * 150 * g, yy - 90 * g), (sgn * 200 * g, yy - 10 * g), (sgn * 80 * g, yy + 20 * g)], "#4CC35E", line="#2E8B3E")
+        cy = -190 - h - 70 * g
+        for j in range(6):
+            a = j * math.pi / 3
+            shape(k, ellipse_pts(math.cos(a) * 70 * g, cy + math.sin(a) * 70 * g, 52 * g, 38 * g, a, 14), "#FF8AC6", line="#E0609A")
+        shape(k, ellipse_pts(0, cy, 62 * g, 62 * g, 0, 20), "#FFE066", line="#D9A520")
+        _carinha(k, 0, cy + 4, P, "#7A4A1E", "#FF9AB0", esc=0.85 * g)
+
+
+PROPS.update({"nuvem": Nuvem, "poca": Poca, "plantinha": Plantinha})

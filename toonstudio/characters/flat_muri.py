@@ -309,6 +309,13 @@ class FlatMuri(Character):
                 self._shape(k, ellipse_pts(q[0], q[1], 22, 16, 0, 14), L.extra["cabelo"])
         if L.bow:
             self._bow(k, rot((C[0] - 52 * f + f * s * 30, C[1] - r * 0.8), ht, C))
+        if P.get("capa", 0) > 0.5:           # capuz da capa de chuva amarela (Pingo de Chuva): cobre o alto da cabeça
+            arco = [rot((C[0] + math.cos(a) * r * 1.07, C[1] - math.sin(a) * r * 1.03), ht, C)
+                    for a in [math.pi * (0.04 + 0.92 * u / 16) for u in range(17)]]
+            borda = [rot((C[0] + math.cos(a) * r * 0.96, C[1] - r * 0.30 - math.sin(a) * r * 0.42), ht, C)
+                     for a in [math.pi * (0.96 - 0.92 * u / 16) for u in range(17)]]
+            self._shape(k, arco + borda, "#FFD21F")
+            self._line(k, borda, "#E0A800", w=LINE * 1.6)
         if P.get("folha_cabeca", 0) > 0.5:   # folha carregada na cabeça (Dança da Formiguinha)
             base = rot((C[0], C[1] - r * 0.95), ht, C)
             pts = [(base[0] - 150, base[1] - 10), (base[0] - 60, base[1] - 120), (base[0] + 90, base[1] - 150),

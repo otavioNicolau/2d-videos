@@ -279,7 +279,7 @@ class Episode:
         particles = []
         for k_, fx in enumerate(s.get("fx", [])):
             spec = {"type": fx} if isinstance(fx, str) else dict(fx)
-            spec.setdefault("count", {"bolhas": 14, "confete": 60, "estrelas": 18, "coracoes": 14, "notas": 14}.get(spec["type"], 12))
+            spec.setdefault("count", {"bolhas": 14, "confete": 60, "estrelas": 18, "coracoes": 14, "notas": 14, "chuva": 70}.get(spec["type"], 12))
             spec.setdefault("seed", 7 + k_ * 13 + len(sid))
             particles.append(spec)
         job = {"resolution": [self.W, self.H], "fps": self.fps, "frames": n, "camera": cam, "fade": fade, "flash": flash,

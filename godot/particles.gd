@@ -1,6 +1,6 @@
 extends Node2D
 ## Partículas decorativas determinísticas (dependem só do número do quadro → render reproduzível).
-## Tipos: bolhas, confete, notas, estrelas, coracoes. Ficam acima dos personagens e abaixo dos textos.
+## Tipos: bolhas, confete, notas, estrelas, coracoes, chuva. Ficam acima dos personagens e abaixo dos textos.
 
 var specs: Array = []
 var frame := 0
@@ -47,6 +47,15 @@ func _draw() -> void:
 				draw_set_transform(Vector2(x2, y2), ang, Vector2(1.0, 0.35 + 0.65 * abs(sin(t * 3.0 + i))))
 				draw_rect(Rect2(-size * 0.25, -size * 0.12, size * 0.5, size * 0.24), c)
 				draw_set_transform(Vector2.ZERO, 0, Vector2.ONE)
+			elif kind == "chuva":
+				# gotinhas azuis caindo inclinadas (chuva fininha: count baixo; chuva forte: count alto)
+				var vy4 := 700.0 + 500.0 * r2
+				var y4 := fmod(r1 * (H + 200.0) + vy4 * t, H + 200.0) - 100.0
+				var x4 := fposmod(r4 * W - 0.18 * vy4 * t, W)
+				var gl := size * 0.9
+				var pts := PackedVector2Array([Vector2(x4, y4 - gl), Vector2(x4 + gl * 0.28, y4), Vector2(x4, y4 + gl * 0.32), Vector2(x4 - gl * 0.28, y4)])
+				draw_colored_polygon(pts, Color("#9CD8FF"))
+				draw_polyline(PackedVector2Array([pts[0], pts[1], pts[2], pts[3], pts[0]]), Color("#4A9BE0"), 2.0, true)
 			elif kind == "estrelas" or kind == "coracoes" or kind == "notas":
 				var vx := (r2 - 0.5) * 60.0
 				var vy3 := -(25.0 + 45.0 * r3)

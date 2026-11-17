@@ -1,0 +1,65 @@
+{
+ "schema": "avaliacao-1.0",
+ "versoes": {
+  "v1": {
+   "arquivo": "v1.wav",
+   "duracao": 157.2,
+   "bpm": 86.1,
+   "bpm_nota": "leitura 172 ajustada ×0.5",
+   "tom": "Dó maior",
+   "voz_inicio": 2.3,
+   "refrao_inicio": 35.6,
+   "cantado": 75,
+   "intervalos": [
+    [
+     6.8,
+     6.1
+    ],
+    [
+     48.4,
+     3.0
+    ],
+    [
+     53.9,
+     5.1
+    ],
+    [
+     106.9,
+     14.6
+    ]
+   ],
+   "fim_depois_da_voz": 1.8,
+   "final": "esmaecendo",
+   "silencio_final": 0.2,
+   "acerto": 73,
+   "nao_reconhecidas": [
+    "splash",
+    "plic",
+    "ploc",
+    "poca",
+    "abre",
+    "nuvem",
+    "cinza",
+    "minha",
+    "asinha",
+    "amarelinha",
+    "luisinho",
+    "nuvenzinha"
+   ],
+   "pontos_a_conferir": [
+    "só 73% da letra reconhecida — ouvir a pronúncia"
+   ]
+  }
+ },
+ "ouvido": {
+  "v1": {
+   "1 começo chama atenção": null,
+   "5 melodia combina com a letra": null,
+   "6 dá vontade de dançar": null,
+   "7 pronúncia natural": null,
+   "8 tem a cara do canal": null,
+   "9 nenhum trecho cansativo": null
+  }
+ },
+ "escolhida": "v1"
+}
