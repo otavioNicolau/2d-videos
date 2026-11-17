@@ -32,7 +32,7 @@ Laurinha e Luisinho, música infantil, músicas para crianças, clipe infantil, 
 | `capa_2560x1440.png` | Personalização → Branding → **Imagem do banner** (o centro com logo, frase e personagens aparece em todos os aparelhos) |
 | `perfil_800x800.png` | Personalização → Branding → **Imagem** (foto de perfil; o YouTube recorta em círculo — veja `perfil_previa_redonda.png`) |
 | `marca_dagua_150x150.png` | Personalização → Branding → **Marca d'água do vídeo** (exibir: "Vídeo inteiro") |
-| `miniatura_ep01_zum_zum_cheguei.png` | Miniatura personalizada do 1º vídeo |
+| (miniaturas) | Cada vídeo leva a sua: `miniatura-<música>-1280x720.jpg` na pasta "Vídeo longo" da música |
 
 ## 5. Configuração obrigatória: conteúdo para crianças
 - YouTube Studio → Configurações → Canal → Configurações avançadas → **Público: "Sim, defina este canal como conteúdo para crianças"**.

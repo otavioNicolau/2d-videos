@@ -1,68 +1,122 @@
 {
- "schema": "musica-1.0",
- "titulo": "Bate Palminha",
- "gancho": "bate palminha",
- "palavras_tema": [
-  "escola",
-  "amigo",
-  "joaninha"
- ],
- "tipo": "brincadeira",
- "tema": "brincar com os amigos depois da escola",
- "dia_a_dia": [
-  "voltar da escola",
-  "largar a mochila",
-  "lavar as mãos",
-  "chamar os amigos",
-  "dividir o lanche"
- ],
- "curiosidade": "dividir faz a festa ficar maior: quem tem amigo nunca fica sozinho",
- "ritmo": "pagodao",
- "bpm": 135,
- "estrutura": "R",
- "voz": "dueto",
- "cantam": {
-  "verso 1": "laurinha",
-  "verso 2": "luisinho",
-  "ponte": "coro",
-  "refrão": "coro"
- },
- "cenas": [
-  {
-   "parte": "verso 1",
-   "ideia": "chega da escola voando; mochila cai ('ploft'); banheiro: sabonete com carinha; destaque de espuma em fundo de bolhinhas; chama os amigos; destaque do bolo de fubá em fundo de fatias"
+  "schema": "musica-1.0",
+  "titulo": "Bate Palminha",
+  "gancho": "bate palminha",
+  "palavras_tema": [
+    "escola",
+    "amigo",
+    "joaninha"
+  ],
+  "tipo": "brincadeira",
+  "tema": "brincar com os amigos depois da escola",
+  "dia_a_dia": [
+    "voltar da escola",
+    "largar a mochila",
+    "lavar as mãos",
+    "chamar os amigos",
+    "dividir o lanche"
+  ],
+  "curiosidade": "dividir faz a festa ficar maior: quem tem amigo nunca fica sozinho",
+  "ritmo": "pagodao",
+  "bpm": 135,
+  "estrutura": "R",
+  "voz": "dueto",
+  "cantam": {
+    "verso 1": "laurinha",
+    "verso 2": "luisinho",
+    "ponte": "coro",
+    "refrão": "coro"
   },
-  {
-   "parte": "refrão",
-   "ideia": "close nas mãos (palmas) e nos pés (pezinho); roda dos 4 girando; 'vem pra roda' abre a roda para a câmera"
-  },
-  {
-   "parte": "verso 2",
-   "ideia": "joaninha chega voando com o suquinho; formiga chega correndo e ofegante; Luisinho divide o pedaço; destaque da maior fatia para a formiga"
-  },
-  {
-   "parte": "ponte",
-   "ideia": "só palmas, só pezinho, abraço coletivo com corações"
+  "cenas": [
+    {
+      "parte": "verso 1",
+      "ideia": "chega da escola voando; mochila cai ('ploft'); banheiro: sabonete com carinha; destaque de espuma em fundo de bolhinhas; chama os amigos; destaque do bolo de fubá em fundo de fatias"
+    },
+    {
+      "parte": "refrão",
+      "ideia": "close nas mãos (palmas) e nos pés (pezinho); roda dos 4 girando; 'vem pra roda' abre a roda para a câmera"
+    },
+    {
+      "parte": "verso 2",
+      "ideia": "joaninha chega voando com o suquinho; formiga chega correndo e ofegante; Luisinho divide o pedaço; destaque da maior fatia para a formiga"
+    },
+    {
+      "parte": "ponte",
+      "ideia": "só palmas, só pezinho, abraço coletivo com corações"
+    }
+  ],
+  "duracao_alvo": [
+    140,
+    170
+  ],
+  "alternativas": [
+    "samba_infantil",
+    "axe"
+  ],
+  "status": "aprovada",
+  "versoes": [
+    "v1",
+    "v2"
+  ],
+  "escolhida": "v1",
+  "youtube": {
+    "resumo": "BATE PALMINHA! 👏 A Laurinha volta da escola, larga a mochila, lava as mãozinhas com muita espuma e chama a Joaninha e a Formiguinha para comer bolo de fubá. A Joaninha traz o suquinho, a Formiguinha chega atrasadinha e o Luisinho divide o pedaço dele com ela. Bate palminha, bate o pezinho e vem pra roda, que cabe mais um!",
+    "resumo_short": "BATE PALMINHA! 👏 A Laurinha volta da escola, lava as mãozinhas com muita espuma e chama as amigas pra comer bolo de fubá. Bate palminha, bate o pezinho e vem pra roda!",
+    "curiosidade": "Dividir com os amigos faz a festa ficar maior: quem tem amigo nunca fica sozinho",
+    "miniatura": "BATE\\nPALMINHA!",
+    "miniatura_cena": {
+      "heroi": {
+        "id": "luisinho",
+        "pose": {
+          "turn": 0.2,
+          "mouth": "D",
+          "hand_n_x": 38,
+          "hand_n_y": -40,
+          "hand_f_x": 38,
+          "hand_f_y": -40,
+          "hand_n_bend": 0.7,
+          "hand_f_bend": 0.7,
+          "paw_n": 3,
+          "paw_f": 3
+        }
+      },
+      "par": {
+        "id": "laurinha",
+        "pose": {
+          "turn": -0.2,
+          "mouth": "D",
+          "hand_n_x": -135,
+          "hand_n_y": -135,
+          "hand_n_bend": 0.5,
+          "paw_n": 3,
+          "hand_f_x": 135,
+          "hand_f_y": -135,
+          "hand_f_bend": -0.5,
+          "paw_f": 3
+        },
+        "x": 1110
+      },
+      "objetos": [
+        {
+          "id": "joaninha",
+          "pose": {
+            "expr": "joy",
+            "turn": -0.2,
+            "mouth": "D",
+            "hand_n_x": -135,
+            "hand_n_y": -135,
+            "hand_n_bend": 0.5,
+            "paw_n": 3,
+            "hand_f_x": 135,
+            "hand_f_y": -135,
+            "hand_f_bend": -0.5,
+            "paw_f": 3
+          },
+          "tam": 380,
+          "x": 790,
+          "base": 710
+        }
+      ]
+    }
   }
- ],
- "duracao_alvo": [
-  140,
-  170
- ],
- "alternativas": [
-  "samba_infantil",
-  "axe"
- ],
- "status": "aprovada",
- "versoes": [
-  "v1",
-  "v2"
- ],
- "escolhida": "v1",
- "youtube": {
-  "resumo": "BATE PALMINHA! 👏 A Laurinha volta da escola, larga a mochila, lava as mãozinhas com muita espuma e chama a Joaninha e a Formiguinha para comer bolo de fubá. A Joaninha traz o suquinho, a Formiguinha chega atrasadinha e o Luisinho divide o pedaço dele com ela. Bate palminha, bate o pezinho e vem pra roda, que cabe mais um!",
-  "resumo_short": "BATE PALMINHA! 👏 A Laurinha volta da escola, lava as mãozinhas com muita espuma e chama as amigas pra comer bolo de fubá. Bate palminha, bate o pezinho e vem pra roda!",
-  "curiosidade": "Dividir com os amigos faz a festa ficar maior: quem tem amigo nunca fica sozinho",
-  "miniatura": "BATE\\nPALMINHA!"
- }
 }

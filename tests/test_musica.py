@@ -227,3 +227,21 @@ def test_skipped_repeated_line_is_dropped_from_lyrics():
              {"s": 127.04, "e": 127.28, "text": "Bate palminha!", "confianca": 0.0, "words": w(127.04, 127.2)},
              {"s": 127.28, "e": 133.9, "text": "Vem pra roda", "confianca": 1.0, "words": w(127.3, 130.0)}]
     assert [l["s"] for l in drop_skipped(lines)] == [123.7, 127.28]
+
+
+def test_published_songs_have_a_colorful_thumbnail_scene():
+    """Miniatura sem imagem da música (só personagens sobre fundo liso) não passa: cada ficha publicada descreve a cena,
+    e todos os ids existem."""
+    from pathlib import Path
+    from toonstudio.core.registry import CHARACTERS
+    for p in sorted(Path("musicas").glob("*/ficha.json")):
+        yt = json.loads(p.read_text(encoding="utf-8")).get("youtube", {})
+        if not yt.get("miniatura"):
+            continue
+        cena = yt.get("miniatura_cena")
+        assert cena and cena.get("objetos"), f"{p.parent.name}: falta youtube.miniatura_cena com os objetos da música"
+        ids = [cena["heroi"]["id"], *[o["id"] for o in cena.get("objetos", []) + cena.get("frente", [])]]
+        if cena.get("par"):
+            ids.append(cena["par"]["id"])
+        for i in ids:
+            assert i in CHARACTERS, f"{p.parent.name}: '{i}' não existe"

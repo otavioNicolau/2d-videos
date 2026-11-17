@@ -138,33 +138,72 @@ def marca_dagua() -> Path:
     return p
 
 
-def miniatura(titulo: str, nome: str, fundo: str = "raios") -> Path:
+# raios do fundo da miniatura: cores fortes e variadas (o amarelo sozinho some entre as outras miniaturas)
+CORES_RAIOS = [(255, 77, 141), (255, 206, 26), (38, 196, 106), (41, 140, 255), (142, 68, 239), (255, 138, 31)]
+TINTA = (30, 30, 60)                                               # contorno escuro do título (lê sobre qualquer cor)
+
+
+def _pose(spec: dict) -> dict:
+    p = dict(spec)
+    return {**expression(p.pop("expr", "joy")), **p}
+
+
+def _ajusta(im: Image.Image, maior: int, giro: float = 0) -> Image.Image:
+    r = maior / max(im.size)
+    im = im.resize((int(im.width * r), int(im.height * r)), Image.LANCZOS)
+    return im.rotate(giro, expand=True, resample=Image.BICUBIC) if giro else im
+
+
+def miniatura(titulo: str, nome: str, cena: dict | None = None) -> Path:
+    """Miniatura 1280×720 no padrão dos canais infantis grandes: raios coloridos, personagem em close à esquerda,
+    os objetos da música desenhados grandes e o título no canto superior direito. O canto inferior direito fica
+    livre (o YouTube cobre com a duração). `cena` vem da ficha (youtube.miniatura_cena)."""
     W, H = 1280, 720
-    img = Image.new("RGBA", (W, H), (255, 194, 26, 255))
+    cena = cena or {}
+    heroi = cena.get("heroi", {"id": "laurinha", "pose": {"turn": 0.2, "mouth": "D", "hand_n_x": -135, "hand_n_y": -135,
+                                                          "hand_n_bend": 0.5, "paw_n": 3, "hand_f_x": 135, "hand_f_y": -135,
+                                                          "hand_f_bend": -0.5, "paw_f": 3}})
+    par = cena.get("par", {"id": "luisinho" if heroi["id"] != "luisinho" else "laurinha",
+                           "pose": {"turn": -0.2, "mouth": "D", "hand_n_x": -135, "hand_n_y": -135, "hand_n_bend": 0.5,
+                                    "paw_n": 3, "hand_f_x": 135, "hand_f_y": -135, "hand_f_bend": -0.5, "paw_f": 3}})
+    cx, cy = cena.get("centro", (430, 430))
+    cores = [tuple(c) for c in cena.get("cores", CORES_RAIOS)]
+    img = Image.new("RGBA", (W, H))
     d = ImageDraw.Draw(img)
-    for k in range(24):
-        a0 = k * math.pi / 12
-        d.polygon([(W * 0.62, H * 0.55), (W * 0.62 + 1600 * math.cos(a0), H * 0.55 + 1600 * math.sin(a0)),
-                   (W * 0.62 + 1600 * math.cos(a0 + math.pi / 24), H * 0.55 + 1600 * math.sin(a0 + math.pi / 24))],
-                  fill=(255, 216, 88, 255))
-    la = _char("laurinha", CHEGUEI, 470)
-    lu = _char("luisinho", {**CHEGUEI, "turn": -0.15}, 400)
-    _paste(img, la, 760, 715)
-    _paste(img, lu, 1100, 700)
+    n = len(cores) * 2
+    for k in range(n):
+        a0 = -math.pi / 2 + k * 2 * math.pi / n
+        a1 = a0 + 2 * math.pi / n
+        d.polygon([(cx, cy), (cx + 2200 * math.cos(a0), cy + 2200 * math.sin(a0)),
+                   (cx + 2200 * math.cos(a1), cy + 2200 * math.sin(a1))], fill=cores[k % len(cores)] + (255,))
+    brilho = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    ImageDraw.Draw(brilho).ellipse([cx - 290, cy - 290, cx + 290, cy + 290], fill=(255, 255, 255, 170))
+    img.alpha_composite(brilho.filter(ImageFilter.GaussianBlur(60)))
+    if par:                                                        # o par fica atrás, à direita, cortado embaixo
+        im = _char(par["id"], _pose(par.get("pose", {})), par.get("tam", 600))
+        _paste(img, im, par.get("x", 1060), H + par.get("corte", 150))
+    for o in cena.get("objetos", []):                              # objetos da música (tam = maior lado em px)
+        im = _ajusta(_char(o["id"], o.get("pose", {}), 400), o.get("tam", 300), o.get("giro", 0))
+        _paste(img, im, o["x"], o["base"])
+    im = _char(heroi["id"], _pose(heroi.get("pose", {})), heroi.get("tam", 760))
+    _paste(img, im, heroi.get("x", cx), H + heroi.get("corte", 170))
+    for o in cena.get("frente", []):                               # objetos na frente da personagem
+        im = _ajusta(_char(o["id"], o.get("pose", {}), 400), o.get("tam", 300), o.get("giro", 0))
+        _paste(img, im, o["x"], o["base"])
     d = ImageDraw.Draw(img)
-    linhas = titulo.split("\n")
-    y = 40
-    for i, l in enumerate(linhas):
-        size = 112 if len(l) <= 10 else 92
+    y = 30
+    for i, l in enumerate(titulo.split("\n")):
+        size = 104 if len(l) <= 10 else 88
         f = ImageFont.truetype(FONT, size)
-        d.text((40, y), l, font=f, fill=(232, 62, 120) if i == 0 else (46, 112, 210), stroke_width=12, stroke_fill=(255, 255, 255))
-        y += size + 8
-    logo = _logo(300)
-    img.alpha_composite(logo, (30, H - logo.height - 20))
+        x = W - 40 - d.textlength(l, font=f)
+        d.text((x, y), l, font=f, fill=TINTA, stroke_width=22, stroke_fill=TINTA)
+        d.text((x, y), l, font=f, fill=(255, 255, 255) if i == 0 else (255, 226, 40), stroke_width=9, stroke_fill=TINTA)
+        y += size + 12
+    OUT.mkdir(parents=True, exist_ok=True)
     p = OUT / f"miniatura_{nome}.png"
     img.convert("RGB").save(p, quality=95)
     return p
 
 
 def tudo() -> list[Path]:
-    return [capa(), perfil(), marca_dagua(), miniatura("ZUM ZUM,\nCHEGUEI!", "ep01_zum_zum_cheguei")]
+    return [capa(), perfil(), marca_dagua()]          # miniaturas: uma por música, feitas no `publicar`

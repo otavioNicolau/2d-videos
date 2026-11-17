@@ -1,94 +1,143 @@
 {
- "schema": "musica-1.0",
- "titulo": "Sorriso Brilhante",
- "gancho": "sorriso brilhante",
- "palavras_tema": [
-  "escovinha",
-  "pasta",
-  "bafinho",
-  "dentinho"
- ],
- "tipo": "rotina",
- "tema": "escovar os dentes",
- "dia_a_dia": [
-  "acordar despenteado",
-  "bafinho da manhã",
-  "escovar os dentes",
-  "escovar a língua",
-  "cuspir na pia",
-  "fechar a torneira"
- ],
- "curiosidade": "pasta do tamanho de um grão de feijão, dois minutinhos de escovação e a torneira fechada para não gastar água",
- "ritmo": "rock_infantil",
- "bpm": 165,
- "estrutura": "D",
- "voz": "dueto",
- "cantam": {
-  "intro": "coro (contagem do rock)",
-  "verso 1": "luisinho",
-  "verso 2": "laurinha",
-  "paradas": "coro (Parou! Congelou!)",
-  "refrão": "coro",
-  "ponte": "laurinha pergunta, coro responde (quiz do que aprendemos)",
-  "final": "coro sorrindo para a câmera"
- },
- "cenas": [
-  {
-   "parte": "intro",
-   "ideia": "quarto azul de manhã: Luisinho dormindo; no 'um, dois, três, quatro!' o sol sobe na janela e ele pula da cama no 'zum'"
+  "schema": "musica-1.0",
+  "titulo": "Sorriso Brilhante",
+  "gancho": "sorriso brilhante",
+  "palavras_tema": [
+    "escovinha",
+    "pasta",
+    "bafinho",
+    "dentinho"
+  ],
+  "tipo": "rotina",
+  "tema": "escovar os dentes",
+  "dia_a_dia": [
+    "acordar despenteado",
+    "bafinho da manhã",
+    "escovar os dentes",
+    "escovar a língua",
+    "cuspir na pia",
+    "fechar a torneira"
+  ],
+  "curiosidade": "pasta do tamanho de um grão de feijão, dois minutinhos de escovação e a torneira fechada para não gastar água",
+  "ritmo": "rock_infantil",
+  "bpm": 165,
+  "estrutura": "D",
+  "voz": "dueto",
+  "cantam": {
+    "intro": "coro (contagem do rock)",
+    "verso 1": "luisinho",
+    "verso 2": "laurinha",
+    "paradas": "coro (Parou! Congelou!)",
+    "refrão": "coro",
+    "ponte": "laurinha pergunta, coro responde (quiz do que aprendemos)",
+    "final": "coro sorrindo para a câmera"
   },
-  {
-   "parte": "verso 1",
-   "ideia": "Luisinho de cabelo/antenas arrepiadas ('Ih!'); bafinho de dragão = nuvenzinha verde saindo da boca e a Laurinha tampa o nariz; voa pro banheiro; pega a escova; DESTAQUE: grão de feijão gigante ao lado do tubo de pasta (fundo de feijõezinhos) e a pasta caindo do tamanho do grão; 'Bora escovar!' aponta a escova pra câmera"
-  },
-  {
-   "parte": "refrão",
-   "ideia": "dança da escova (pra cima, pra baixo, rodinha) em fundo de raios; close do sorriso com brilho 'tim-tim' (estrela piscando no dente); ampulheta de 2 minutinhos virando no 'Dois minutinhos'; a escova vira guitarra nos acentos"
-  },
-  {
-   "parte": "paradas",
-   "ideia": "no 'Parou! Congelou!' todos viram estátua em poses engraçadas (escova na boca, uma perna no ar); só os olhinhos mexem; 'Escova de novo!' volta tudo"
-  },
-  {
-   "parte": "verso 2",
-   "ideia": "Laurinha no espelho: escova os da frente, os de trás (bochecha estufada), a linguinha pra lá e pra cá; cospe na pia ('Ptuí!' com respingo de espuma); fecha a torneira; DESTAQUE: gotinha d'água com carinha agradece e faz reverência (fundo de gotinhas)"
-  },
-  {
-   "parte": "intervalo",
-   "ideia": "Laurinha e Luisinho tocam guitarra-escova lado a lado em fundo de raios, com estrelinhas"
-  },
-  {
-   "parte": "ponte",
-   "ideia": "quiz: cada pergunta é um mini-cenário (sol da manhã, lanche com banana, cama de noite com lua), o coro responde e os dois mostram a escova; 'Quanto tempo?' ampulheta; 'E a pasta?' grão de feijão; 'E a torneira?' gotinha piscando; 'E o sorriso?' brilho tim-tim"
-  },
-  {
-   "parte": "solo",
-   "ideia": "solo de guitarra com a escova (Luisinho de joelhos, Laurinha balançando a cabeça); fundo danca_raios"
-  },
-  {
-   "parte": "final",
-   "ideia": "'Mostra pra mim!' os dois chegam perto da câmera e sorriem com brilho; 'Tim-tim! Tchau!' acenam e saem voando com o 'zum'"
+  "cenas": [
+    {
+      "parte": "intro",
+      "ideia": "quarto azul de manhã: Luisinho dormindo; no 'um, dois, três, quatro!' o sol sobe na janela e ele pula da cama no 'zum'"
+    },
+    {
+      "parte": "verso 1",
+      "ideia": "Luisinho de cabelo/antenas arrepiadas ('Ih!'); bafinho de dragão = nuvenzinha verde saindo da boca e a Laurinha tampa o nariz; voa pro banheiro; pega a escova; DESTAQUE: grão de feijão gigante ao lado do tubo de pasta (fundo de feijõezinhos) e a pasta caindo do tamanho do grão; 'Bora escovar!' aponta a escova pra câmera"
+    },
+    {
+      "parte": "refrão",
+      "ideia": "dança da escova (pra cima, pra baixo, rodinha) em fundo de raios; close do sorriso com brilho 'tim-tim' (estrela piscando no dente); ampulheta de 2 minutinhos virando no 'Dois minutinhos'; a escova vira guitarra nos acentos"
+    },
+    {
+      "parte": "paradas",
+      "ideia": "no 'Parou! Congelou!' todos viram estátua em poses engraçadas (escova na boca, uma perna no ar); só os olhinhos mexem; 'Escova de novo!' volta tudo"
+    },
+    {
+      "parte": "verso 2",
+      "ideia": "Laurinha no espelho: escova os da frente, os de trás (bochecha estufada), a linguinha pra lá e pra cá; cospe na pia ('Ptuí!' com respingo de espuma); fecha a torneira; DESTAQUE: gotinha d'água com carinha agradece e faz reverência (fundo de gotinhas)"
+    },
+    {
+      "parte": "intervalo",
+      "ideia": "Laurinha e Luisinho tocam guitarra-escova lado a lado em fundo de raios, com estrelinhas"
+    },
+    {
+      "parte": "ponte",
+      "ideia": "quiz: cada pergunta é um mini-cenário (sol da manhã, lanche com banana, cama de noite com lua), o coro responde e os dois mostram a escova; 'Quanto tempo?' ampulheta; 'E a pasta?' grão de feijão; 'E a torneira?' gotinha piscando; 'E o sorriso?' brilho tim-tim"
+    },
+    {
+      "parte": "solo",
+      "ideia": "solo de guitarra com a escova (Luisinho de joelhos, Laurinha balançando a cabeça); fundo danca_raios"
+    },
+    {
+      "parte": "final",
+      "ideia": "'Mostra pra mim!' os dois chegam perto da câmera e sorriem com brilho; 'Tim-tim! Tchau!' acenam e saem voando com o 'zum'"
+    }
+  ],
+  "duracao_alvo": [
+    140,
+    170
+  ],
+  "alternativas": [
+    "pop_infantil"
+  ],
+  "status": "aprovada",
+  "versoes": [
+    "v1",
+    "v2",
+    "v3",
+    "v4"
+  ],
+  "escolhida": "v1",
+  "youtube": {
+    "resumo": "SORRISO BRILHANTE! 🪥✨ O Luisinho acorda despenteado e com bafinho de dragão, voa pro banheiro e aprende com a Laurinha a escovar os dentinhos: pra cima, pra baixo, roda, rodinha! Pasta do tamanho de um grão de feijão, dois minutinhos de escovação, a linguinha também e a torneira fechada — a gotinha d'água até agradece! E quando a música parar… estátua!",
+    "resumo_short": "SORRISO BRILHANTE! 🪥✨ Pra cima, pra baixo, roda, rodinha: escova cada dentinho com a Laurinha e o Luisinho!",
+    "curiosidade": "Pasta do tamanho de um grão de feijão já basta, a escovação leva dois minutinhos e a torneira fica fechada enquanto escova",
+    "miniatura": "SORRISO\\nBRILHANTE!",
+    "miniatura_cena": {
+      "heroi": {
+        "id": "laurinha",
+        "pose": {
+          "turn": 0.25,
+          "mouth": "D",
+          "brilho": 1,
+          "holding": "escova_pasta",
+          "hand_n_x": -150,
+          "hand_n_y": -150,
+          "hand_f_x": 135,
+          "hand_f_y": -135,
+          "hand_f_bend": -0.5,
+          "paw_f": 3
+        }
+      },
+      "par": {
+        "id": "luisinho",
+        "pose": {
+          "turn": -0.2,
+          "mouth": "D",
+          "hand_n_x": -135,
+          "hand_n_y": -135,
+          "hand_n_bend": 0.5,
+          "paw_n": 3,
+          "hand_f_x": 135,
+          "hand_f_y": -135,
+          "hand_f_bend": -0.5,
+          "paw_f": 3
+        },
+        "x": 1110
+      },
+      "objetos": [
+        {
+          "id": "pasta",
+          "tam": 290,
+          "x": 815,
+          "base": 540,
+          "giro": 35
+        },
+        {
+          "id": "gotinha",
+          "tam": 140,
+          "x": 130,
+          "base": 250,
+          "giro": -10
+        }
+      ]
+    }
   }
- ],
- "duracao_alvo": [
-  140,
-  170
- ],
- "alternativas": [
-  "pop_infantil"
- ],
- "status": "aprovada",
- "versoes": [
-  "v1",
-  "v2",
-  "v3",
-  "v4"
- ],
- "escolhida": "v1",
- "youtube": {
-  "resumo": "SORRISO BRILHANTE! 🪥✨ O Luisinho acorda despenteado e com bafinho de dragão, voa pro banheiro e aprende com a Laurinha a escovar os dentinhos: pra cima, pra baixo, roda, rodinha! Pasta do tamanho de um grão de feijão, dois minutinhos de escovação, a linguinha também e a torneira fechada — a gotinha d'água até agradece! E quando a música parar… estátua!",
-  "resumo_short": "SORRISO BRILHANTE! 🪥✨ Pra cima, pra baixo, roda, rodinha: escova cada dentinho com a Laurinha e o Luisinho!",
-  "curiosidade": "Pasta do tamanho de um grão de feijão já basta, a escovação leva dois minutinhos e a torneira fica fechada enquanto escova",
-  "miniatura": "SORRISO\\nBRILHANTE!"
- }
 }

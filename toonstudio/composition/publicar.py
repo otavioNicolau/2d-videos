@@ -146,7 +146,7 @@ def publicar(project: str, musica: Path, copiar: bool = True) -> Path:
     (out / f"{slug}.srt").write_text("\n".join(srt), encoding="utf-8")
     from PIL import Image
     mt = yt.get("miniatura") or f["titulo"].upper()
-    png = miniatura(mt.replace("\\n", "\n"), slug)
+    png = miniatura(mt.replace("\\n", "\n"), slug, yt.get("miniatura_cena"))
     Image.open(png).convert("RGB").save(out / f"miniatura-{slug}-1280x720.jpg", quality=92)
     if copiar:
         n = re.match(r"^(\d+)_", musica.name)
