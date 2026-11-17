@@ -380,6 +380,16 @@ def checar(d: Path) -> Checagem:
         if not f.get(campo):
             ck.add("aviso", regra, f"ficha sem '{campo}'")
 
+    # convite do canal no final (decisão do usuário 17/11/2026): joinha + inscrever, sempre com um adulto (canal infantil)
+    fim = full[int(len(full) * 0.75):]
+    sev = "aviso" if f.get("status") == "aprovada" else "erro"      # músicas já gravadas antes da regra: só aviso
+    if not ("joinha" in fim and "inscrev" in fim):
+        ck.add(sev, "convite", "o final não convida para o joinha e para se inscrever no canal (com o papai/a mamãe)")
+    elif not any(w in fim for w in ("papai", "mamãe", "mamae", "adulto")):
+        ck.add(sev, "convite", "o convite do final precisa chamar um adulto (papai/mamãe): canal para crianças")
+    else:
+        ck.add("ok", "convite", "o final convida para o joinha e para se inscrever, com o papai/a mamãe")
+
     # 10 — animação
     mov = sorted({m for m in MOVIMENTO if _tem(full, m)})
     ck.metricas["movimentos"] = mov

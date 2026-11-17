@@ -139,6 +139,10 @@ Séries são bem-vindas: um tema que funcionou pode voltar com variações (ex.:
 7. Uma **curiosidade ou aprendizado**, dito de forma divertida.
 8. Pelo menos um bordão e o "zum" (seção 2).
 9. Movimentos que a criança pode imitar.
+10. **Convite no final** (decisão de 17/11/2026): antes do tchau, Laurinha e Luisinho convidam para o **joinha** e para
+    **se inscrever no canal**, sempre chamando o **papai e a mamãe** (canal para crianças: quem se inscreve é o adulto).
+    3–4 versos curtos, com o tema da música (ex.: "Gostou do passeio? (Gostei!) / Dá um joinha! (Joinha!) / Chama o papai
+    e a mamãe / Pra se inscrever no canal! (Zum, zum!)"). A checagem da letra acusa erro se faltar.
 
 **Nunca:**
 - citar o ritmo na letra ("é o rock da…", "é o axé…"): o ritmo vai só no Style;
