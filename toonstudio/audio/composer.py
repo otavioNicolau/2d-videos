@@ -184,6 +184,9 @@ def contradicoes(sty: str, exc: str) -> list[str]:
     return out
 
 
+LIMITE_LETRA = 5000      # campo Lyrics do Suno (conta as quebras de linha)
+
+
 def prompt(d: Path) -> dict:
     E, V = estilos(), vozes()
     f = ficha(d)
@@ -194,6 +197,8 @@ def prompt(d: Path) -> dict:
            "style_curto": style_curto(f, E=E, V=V), "exclude": exclude(f, E=E),
            "lyrics": grafia_suno(expandir(letra, r["peso"], E, V)), "persona": voz.get("suno_persona"), "voz": f.get("persona") or f.get("voz", "dueto"),
            "avisos": [], "alternativas": []}
+    if len(res["lyrics"].rstrip()) > LIMITE_LETRA:
+        res["avisos"].append(f"letra com {len(res['lyrics'].rstrip())} caracteres: passa do limite do Suno ({LIMITE_LETRA})")
     lo, hi, _ = r["bpm"]
     if not lo <= f["bpm"] <= hi:
         res["avisos"].append(f"andamento {f['bpm']} fora da faixa do {r['nome']} ({lo}–{hi})")
@@ -226,7 +231,7 @@ def texto_suno(p: dict) -> str:
         "EXCLUDE:",
         p["exclude"],
         "",
-        "LYRICS:",
+        f"LYRICS ({len(p['lyrics'].rstrip())} de {LIMITE_LETRA} caracteres no Suno; apague o campo e cole só daqui até o fim da letra):",
         "",
         p["lyrics"].rstrip(),
     ]
@@ -234,7 +239,8 @@ def texto_suno(p: dict) -> str:
         blocos += ["", "=" * 68, f"ALTERNATIVA DE RITMO: {a['ritmo']} · {a['bpm']} BPM (mesma letra)", "=" * 68,
                    "STYLE OF MUSIC:", a["style"], "", "EXCLUDE:", a["exclude"]]
         if a["lyrics"] != p["lyrics"]:
-            blocos += ["", "LYRICS (marcações ajustadas para este ritmo):", "", a["lyrics"].rstrip()]
+            blocos += ["", f"LYRICS (marcações ajustadas para este ritmo; {len(a['lyrics'].rstrip())} de {LIMITE_LETRA} caracteres):", "",
+                       a["lyrics"].rstrip()]
     if p["avisos"]:
         blocos += ["", "AVISOS:"] + [f"- {x}" for x in p["avisos"]]
     head = "GERADO por `toonstudio musica prompt` a partir de ficha.json + letra.txt — não edite aqui; edite a ficha/letra."

@@ -322,3 +322,13 @@ def test_every_prop_fits_the_level_canvas():
         if al[0, :].max() > 0 or al[:, 0].max() > 0 or al[:, -1].max() > 0:
             cortados.append(pid)
     assert not cortados, f"objetos cortados pelo quadro do nível: {cortados}"
+
+
+def test_lyrics_fit_suno_limit():
+    """Campo Lyrics do Suno aceita até 5000 caracteres (quebras de linha contam)."""
+    from pathlib import Path
+    for d in sorted(Path("musicas").glob("[0-9][0-9]_*")):
+        p = c.prompt(d)
+        assert len(p["lyrics"].rstrip()) <= c.LIMITE_LETRA, d.name
+        for a in p["alternativas"]:
+            assert len(a["lyrics"].rstrip()) <= c.LIMITE_LETRA, (d.name, a["ritmo"])
