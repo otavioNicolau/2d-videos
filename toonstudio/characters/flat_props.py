@@ -920,42 +920,61 @@ class Numero(_Prop):
         k.c.restore()
 
 
+def _capsula(k: Ink, p0, p1, r: float, fill: str, line: str) -> None:
+    """Dedo de luva: cápsula (bastão de pontas redondas) de p0 a p1, raio r."""
+    dx, dy = p1[0] - p0[0], p1[1] - p0[1]
+    L = math.hypot(dx, dy) or 1.0
+    a = math.atan2(dy, dx)
+    pts = [(p1[0] + r * math.cos(a - math.pi / 2 + math.pi * u / 10), p1[1] + r * math.sin(a - math.pi / 2 + math.pi * u / 10))
+           for u in range(11)]
+    pts += [(p0[0] + r * math.cos(a + math.pi / 2 + math.pi * u / 10), p0[1] + r * math.sin(a + math.pi / 2 + math.pi * u / 10))
+            for u in range(11)]
+    shape(k, pts, fill, line=line, smooth=False)
+
+
 class Mao(_Prop):
-    """Mão gigante de luva (desenho infantil) mostrando `dedos` 0→5 levantados (um por um: polegar por último);
-    `acende` 0→1 = os dedos levantados ganham uma estrelinha (contando). `espelho` 1 = mão esquerda."""
+    """Mão gigante de luva (desenho infantil) mostrando `dedos` 0→5 levantados (indicador primeiro, polegar por último);
+    `acende` 0→1 = estrelinha na ponta dos dedos levantados (contando). `espelho` 1 = mão esquerda.
+    Dedos-cápsula em leque saindo de TRÁS da palma, polegar redondo, punho de luva (o 1º desenho, com dedos-palito
+    retos e polegar de banana, ficou estranho — storyboard ep05)."""
 
     def __init__(self):
-        super().__init__("mao", "Mão", (520, 700), (260, 660), 330, {"dedos": 5.0, "espelho": 0.0, "acende": 0.0})
+        super().__init__("mao", "Mão", (560, 720), (280, 680), 330, {"dedos": 5.0, "espelho": 0.0, "acende": 0.0})
 
     def paint(self, k, P):
         d = max(0.0, min(5.0, P["dedos"]))
         sg = -1 if P.get("espelho", 0) > 0.5 else 1
-        luva, linha = "#FFFFFF", "#8FA3BC"
-        shape(k, [(sg * -110, -20), (sg * 110, -20), (sg * 90, 60), (sg * -90, 60)], "#FFD23F", line="#C99A1A", smooth=False)  # punho
-        dedos = ((-105, -300, -0.18), (-40, -340, -0.05), (25, -345, 0.05), (88, -315, 0.16))   # mínimo → indicador
-        ordem = (3, 2, 1, 0)                                         # 1º indicador, depois médio, anelar, mínimo
-        for j, (x, ytop, inc) in enumerate(dedos):
-            sobe = max(0.0, min(1.0, d - ordem.index(j)))
-            top = -150 + (ytop + 150) * sobe
-            pts = [(sg * (x - 26), -140), (sg * (x - 26 + inc * 60 * sobe), top + 20), (sg * (x + inc * 60 * sobe), top),
-                   (sg * (x + 26 + inc * 60 * sobe), top + 20), (sg * (x + 26), -140)]
-            shape(k, pts, luva, line=linha)
-            if sobe > 0.9 and P["acende"] > 0.05:
-                _estrela(k, sg * (x + inc * 60), top - 40, 20 * P["acende"], "#FFD23F")
-        shape(k, [(sg * -130, -190), (sg * 130, -190), (sg * 135, -60), (sg * 100, -10), (sg * -100, -10), (sg * -135, -60)], luva, line=linha)
-        po = max(0.0, min(1.0, d - 4))                               # polegar (5º): dobrado sobre a palma até levantar
-        if po < 0.05:                                                # dobrado: gomo deitado por cima da palma (não conta)
-            shape(k, [(sg * 120, -140), (sg * 10, -120), (sg * -10, -95), (sg * 10, -72), (sg * 120, -80)], luva, line=linha)
-            tip = (sg * 0, -96)
-        else:
-            ang = 0.5 - 1.6 * po                                     # sai de cima da palma e sobe para fora
-            bx = sg * 125
-            comp = 70 + 80 * po
-            tip = (bx + sg * math.cos(ang) * comp, -110 + math.sin(ang) * comp)
-            shape(k, [(bx, -150), (tip[0], tip[1] - 26), (tip[0] + sg * 18, tip[1]), (tip[0], tip[1] + 26), (bx, -60)], luva, line=linha)
-        ln(k, [(sg * -60, -120), (sg * -20, -100)], linha, w=LINE * 0.8)
-        if po > 0.9 and P["acende"] > 0.05:
-            _estrela(k, tip[0] + sg * 30, tip[1] - 30, 20 * P["acende"], "#FFD23F")
+        luva, linha = "#FFFFFF", "#7F93AE"
+        X = lambda x: sg * x
+        # (base x, base y, comprimento, ângulo em relação à vertical) — indicador, médio, anelar, mínimo
+        dedos = ((62, -200, 165, 0.10), (8, -212, 180, 0.0), (-46, -205, 168, -0.10), (-96, -185, 135, -0.22))
+        pontas = []
+        for j, (bx, by, comp, ang) in enumerate(dedos):
+            sobe = max(0.0, min(1.0, d - j))
+            L = 38 + (comp - 38) * sobe                                # dobrado: só o nó do dedo aparece
+            tip = (X(bx + math.sin(ang) * L), by - math.cos(ang) * L)
+            _capsula(k, (X(bx), by + 40), tip, 31 if j < 3 else 27, luva, linha)
+            if sobe > 0.9:
+                pontas.append((tip[0], tip[1] - 46))
+        po = max(0.0, min(1.0, d - 4))                                 # polegar
+        if po > 0.05:                                                  # levantado: sai do lado, atrás da palma
+            a = 1.15 - 0.45 * po
+            tip = (X(100 + math.sin(a) * 150), -105 - math.cos(a) * 150)
+            _capsula(k, (X(90), -90), tip, 32, luva, linha)
+            if po > 0.9:
+                pontas.append((tip[0] + X(30), tip[1] - 34))
+        palma = [(X(-128), -205), (X(-40), -230), (X(70), -228), (X(128), -190), (X(138), -110), (X(118), -38), (X(-112), -38),
+                 (X(-138), -112)]
+        shape(k, palma, luva, line=linha)
+        for x in (-50, 0, 50):                                         # costuras da luva
+            ln(k, [(X(x), -185), (X(x), -125)], linha, w=LINE * 0.8)
+        if po <= 0.05:                                                 # dobrado: deitado por cima da palma
+            _capsula(k, (X(118), -96), (X(42), -106), 30, luva, linha)
+        shape(k, [(X(-120), -52), (X(120), -52), (X(132), -8), (X(118), 50), (X(-118), 50), (X(-132), -8)], "#FFD23F",
+              line="#C99A1A")                                          # punho
+        if P["acende"] > 0.05:
+            for x, y in pontas:
+                _estrela(k, x, y, 22 * P["acende"], "#FFD23F")
 
 
 class Bicicleta(_Prop):
