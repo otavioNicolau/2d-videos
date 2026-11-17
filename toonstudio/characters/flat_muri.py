@@ -309,6 +309,16 @@ class FlatMuri(Character):
                 self._shape(k, ellipse_pts(q[0], q[1], 22, 16, 0, 14), L.extra["cabelo"])
         if L.bow:
             self._bow(k, rot((C[0] - 52 * f + f * s * 30, C[1] - r * 0.8), ht, C))
+        if P.get("folha_cabeca", 0) > 0.5:   # folha carregada na cabeça (Dança da Formiguinha)
+            base = rot((C[0], C[1] - r * 0.95), ht, C)
+            pts = [(base[0] - 150, base[1] - 10), (base[0] - 60, base[1] - 120), (base[0] + 90, base[1] - 150),
+                   (base[0] + 170, base[1] - 60), (base[0] + 120, base[1] + 10), (base[0], base[1] + 18)]
+            self._shape(k, pts, "#4CC35E")
+            self._line(k, [(base[0] - 130, base[1] - 4), (base[0] + 150, base[1] - 70)], "#2E8B3E", w=LINE * 1.1)
+            for u in (0.3, 0.55, 0.8):
+                mx, my = base[0] - 130 + 280 * u, base[1] - 4 - 66 * u
+                self._line(k, [(mx, my), (mx - 20, my - 50)], "#2E8B3E", w=LINE * 0.8)
+                self._line(k, [(mx, my), (mx + 30, my + 22)], "#2E8B3E", w=LINE * 0.8)
         if P.get("chapeu", 0) > 0.5:         # chapéu de sol (Passeio na Lagoa): aba larga + copa + fita
             cor_c = "#F5D67A"
             aba = [rot((C[0] + dx * r, C[1] - r * 0.62 + dy * r), ht, C) for dx, dy in
@@ -538,6 +548,9 @@ VOVO = FlatLook(body="#8FD9C4", belly_a="#FFE066", belly_b="#3FA98C", shoe="#E95
 # amigas da turma (música 02): mesmo modelo, detalhes próprios
 JOANINHA = FlatLook(body="#F2545B", belly_a="#F2545B", belly_b="#2B2B33", shoe="#2B2B33", sole="#FFD23F",
                     pom="#2B2B33", cheek="#FF9AAE", lashes=True, extra={"pintas": "#2B2B33", "abdomen_liso": True})
+FORMIGA_MAE = FlatLook(body="#B86A3A", belly_a="#8E4C26", belly_b="#8E4C26", shoe="#E9545D", sole="#FFE066",
+                       pom="#8E4C26", cheek="#FF8FA0", lashes=True,
+                       extra={"asas": False, "abdomen_liso": True, "patas_meio": True, "antena_cotovelo": True, "flor": "#FFD23F"})
 FORMIGUINHA = FlatLook(body="#E08A4F", belly_a="#B9652E", belly_b="#B9652E", shoe="#9B6BD9", sole="#FFE066",
                        pom="#B9652E", cheek="#FF8FA0", lashes=True,
                        extra={"asas": False, "abdomen_liso": True, "patas_meio": True, "antena_cotovelo": True})

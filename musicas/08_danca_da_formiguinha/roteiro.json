@@ -1,0 +1,1967 @@
+{
+ "schema": "roteiro-1.0",
+ "nota": "Roteiro verso a verso de 'Dança da Formiguinha' (letra aprovada em 17/11/2026; v1 trazida pelo usuário, 2:04 sem pausas de dança): fila de formigas com folha na cabeça, a família da Formiguinha, folha gigante que sozinho não dá e juntinho dá, guardar os brinquedos juntos, comandos da ponte e estátua, convite e tchau em fila.",
+ "partes": {
+  "intro": [
+   {
+    "seg": 2.0,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "titulo": "jardim visto de pertinho",
+    "objetos": {
+     "b1": {
+      "id": "formiguinha",
+      "x": 1100,
+      "y": 930,
+      "z": 2,
+      "depth": 0.55,
+      "pose": {
+       "folha_cabeca": 1.0,
+       "turn": 0.6
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 1100
+        }
+       },
+       {
+        "t": 2.0,
+        "pose": {
+         "x": 1900
+        },
+        "ease": "linear"
+       }
+      ]
+     },
+     "b2": {
+      "id": "formiguinha",
+      "x": 850,
+      "y": 930,
+      "z": 2,
+      "depth": 0.55,
+      "pose": {
+       "folha_cabeca": 1.0,
+       "turn": 0.6
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 850
+        }
+       },
+       {
+        "t": 2.0,
+        "pose": {
+         "x": 1650
+        },
+        "ease": "linear"
+       }
+      ]
+     },
+     "b3": {
+      "id": "formiguinha",
+      "x": 600,
+      "y": 930,
+      "z": 2,
+      "depth": 0.55,
+      "pose": {
+       "folha_cabeca": 1.0,
+       "turn": 0.6
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 600
+        }
+       },
+       {
+        "t": 2.0,
+        "pose": {
+         "x": 1400
+        },
+        "ease": "linear"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "danca_raios_verde",
+    "flash": true,
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "ZUM, ZUM!",
+      "color": "amarelo"
+     }
+    ],
+    "fx": [
+     "estrelas"
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 640,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "asinhas",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1280,
+      "turn": -0.15,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "asinhas",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "verso#1": [
+   {
+    "linhas": 1,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1200,
+     "y": 560,
+     "zoom": 1.2
+    },
+    "callout": [
+     {
+      "t": 0.8,
+      "text": "OLHA!",
+      "color": "rosa"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 1050,
+      "turn": 0.4,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "point",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.05
+    },
+    "callout": [
+     {
+      "t": 0.8,
+      "text": "UMA FILA!",
+      "color": "verde"
+     }
+    ],
+    "objetos": {
+     "b1": {
+      "id": "formiguinha",
+      "x": 1100,
+      "y": 930,
+      "z": 2,
+      "depth": 0.55,
+      "pose": {
+       "folha_cabeca": 1.0,
+       "turn": 0.6
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 1100
+        }
+       },
+       {
+        "t": 1.9,
+        "pose": {
+         "x": 1900
+        },
+        "ease": "linear"
+       }
+      ]
+     },
+     "b2": {
+      "id": "formiguinha",
+      "x": 850,
+      "y": 930,
+      "z": 2,
+      "depth": 0.55,
+      "pose": {
+       "folha_cabeca": 1.0,
+       "turn": 0.6
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 850
+        }
+       },
+       {
+        "t": 1.9,
+        "pose": {
+         "x": 1650
+        },
+        "ease": "linear"
+       }
+      ]
+     },
+     "b3": {
+      "id": "formiguinha",
+      "x": 600,
+      "y": 930,
+      "z": 2,
+      "depth": 0.55,
+      "pose": {
+       "folha_cabeca": 1.0,
+       "turn": 0.6
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 600
+        }
+       },
+       {
+        "t": 1.9,
+        "pose": {
+         "x": 1400
+        },
+        "ease": "linear"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 2,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.15
+    },
+    "callout": [
+     {
+      "t": 2.4,
+      "text": "OI!",
+      "color": "laranja"
+     }
+    ],
+    "objetos": {
+     "b1": {
+      "id": "formiguinha",
+      "x": 1650,
+      "y": 930,
+      "z": 2,
+      "depth": 0.6,
+      "pose": {
+       "folha_cabeca": 1.0,
+       "turn": 0.6
+      },
+      "keys": []
+     },
+     "b2": {
+      "id": "formiguinha",
+      "x": 1820,
+      "y": 930,
+      "z": 2,
+      "depth": 0.6,
+      "pose": {
+       "folha_cabeca": 1.0,
+       "turn": 0.6
+      },
+      "keys": []
+     }
+    },
+    "atores": {
+     "formiga_mae": {
+      "x": 1000,
+      "turn": 0.3,
+      "pose": {
+       "folha_cabeca": 1.0
+      }
+     },
+     "formiguinha": {
+      "x": 1350,
+      "turn": 0.1,
+      "pose": {
+       "folha_cabeca": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "wave",
+        "dur": 2.0
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 2,
+    "cenario": "padrao_folhas_amarelo",
+    "camera": "medio:formiguinha",
+    "callout": [
+     {
+      "t": 1.6,
+      "text": "UMA FOLHINHA!",
+      "color": "verde"
+     }
+    ],
+    "atores": {
+     "formiguinha": {
+      "x": 960,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "folha_cabeca": 0.0
+        }
+       },
+       {
+        "t": 1.5,
+        "pose": {
+         "folha_cabeca": 1.0
+        },
+        "ease": "step"
+       }
+      ],
+      "acoes": [
+       {
+        "t": 1.6,
+        "do": "bacana",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.15
+    },
+    "callout": [
+     {
+      "t": 0.6,
+      "text": "BORA AJUDAR?",
+      "color": "rosa"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 1130,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "folha_cabeca": 0.0
+        }
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "folha_cabeca": 1.0
+        },
+        "ease": "step"
+       }
+      ],
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "apontar_camera",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1470,
+      "turn": -0.1,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "folha_cabeca": 0.0
+        }
+       },
+       {
+        "t": 1.1,
+        "pose": {
+         "folha_cabeca": 1.0
+        },
+        "ease": "step"
+       }
+      ],
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "jump",
+        "dur": 0.8
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "refrao": [
+   {
+    "linhas": 2,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.0
+    },
+    "flash": true,
+    "callout": "DANÇA DA FORMIGUINHA!",
+    "fx": [
+     "estrelas"
+    ],
+    "atores": {
+     "formiguinha": {
+      "x": 850,
+      "turn": 0.2,
+      "pose": {
+       "folha_cabeca": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "marcha",
+        "dur": "resto"
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 1250,
+      "turn": 0.1,
+      "pose": {
+       "folha_cabeca": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "marcha",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1650,
+      "turn": -0.1,
+      "pose": {
+       "folha_cabeca": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "marcha",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 2,
+    "cenario": [
+     "danca_raios_verde",
+     "danca_raios_laranja",
+     "danca_raios_amarelo"
+    ],
+    "callout": [
+     {
+      "t": 1.6,
+      "text": "FOLHA NA CABEÇA!",
+      "color": "verde"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 640,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "folha_cabeca": 0.0
+        }
+       },
+       {
+        "t": 1.5,
+        "pose": {
+         "folha_cabeca": 1.0
+        },
+        "ease": "step"
+       }
+      ],
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "marcha",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1280,
+      "turn": -0.15,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "folha_cabeca": 0.0
+        }
+       },
+       {
+        "t": 1.6,
+        "pose": {
+         "folha_cabeca": 1.0
+        },
+        "ease": "step"
+       }
+      ],
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "marcha",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 2,
+    "cenario": [
+     "danca_xadrez_verde",
+     "danca_xadrez_azul",
+     "danca_xadrez_vermelho"
+    ],
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "PRA FRENTE! PRA TRÁS!",
+      "color": "amarelo"
+     }
+    ],
+    "atores": {
+     "formiguinha": {
+      "x": 480,
+      "turn": 0.2,
+      "pose": {
+       "folha_cabeca": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "lado_frente",
+        "dur": "resto"
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 800,
+      "turn": 0.1,
+      "pose": {
+       "folha_cabeca": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "lado_frente",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1120,
+      "turn": -0.1,
+      "pose": {
+       "folha_cabeca": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "lado_frente",
+        "dur": "resto"
+       }
+      ]
+     },
+     "joaninha": {
+      "x": 1440,
+      "turn": -0.2,
+      "pose": {
+       "folha_cabeca": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "lado_frente",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 2,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.0
+    },
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "TODO MUNDO EM FILA!",
+      "color": "laranja"
+     }
+    ],
+    "objetos": {
+     "b1": {
+      "id": "formiguinha",
+      "x": 1100,
+      "y": 930,
+      "z": 2,
+      "depth": 0.55,
+      "pose": {
+       "folha_cabeca": 1.0,
+       "turn": 0.6
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 1100
+        }
+       },
+       {
+        "t": 3.4,
+        "pose": {
+         "x": 1900
+        },
+        "ease": "linear"
+       }
+      ]
+     },
+     "b2": {
+      "id": "formiguinha",
+      "x": 850,
+      "y": 930,
+      "z": 2,
+      "depth": 0.55,
+      "pose": {
+       "folha_cabeca": 1.0,
+       "turn": 0.6
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 850
+        }
+       },
+       {
+        "t": 3.4,
+        "pose": {
+         "x": 1650
+        },
+        "ease": "linear"
+       }
+      ]
+     },
+     "b3": {
+      "id": "formiguinha",
+      "x": 600,
+      "y": 930,
+      "z": 2,
+      "depth": 0.55,
+      "pose": {
+       "folha_cabeca": 1.0,
+       "turn": 0.6
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 600
+        }
+       },
+       {
+        "t": 3.4,
+        "pose": {
+         "x": 1400
+        },
+        "ease": "linear"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "formiguinha": {
+      "x": 1150,
+      "turn": 0.6,
+      "pose": {
+       "folha_cabeca": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "walk",
+        "to_x": 1750
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 900,
+      "turn": 0.6,
+      "pose": {
+       "folha_cabeca": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "walk",
+        "to_x": 1500
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 650,
+      "turn": 0.6,
+      "pose": {
+       "folha_cabeca": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "walk",
+        "to_x": 1250
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "refrao#4": [
+   {
+    "linhas": 2,
+    "cenario": "danca_raios_verde",
+    "fx": [
+     "confete"
+    ],
+    "callout": "DANÇA DA FORMIGUINHA!",
+    "atores": {
+     "formiga_mae": {
+      "x": 420,
+      "turn": 0.2,
+      "pose": {
+       "folha_cabeca": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "marcha",
+        "dur": "resto"
+       }
+      ]
+     },
+     "formiguinha": {
+      "x": 720,
+      "turn": 0.15,
+      "pose": {
+       "folha_cabeca": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "marcha",
+        "dur": "resto"
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 1020,
+      "turn": 0.05,
+      "pose": {
+       "folha_cabeca": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "marcha",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1320,
+      "turn": -0.1,
+      "pose": {
+       "folha_cabeca": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "marcha",
+        "dur": "resto"
+       }
+      ]
+     },
+     "joaninha": {
+      "x": 1600,
+      "turn": -0.2,
+      "pose": {
+       "folha_cabeca": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "marcha",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 2,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.0
+    },
+    "fx": [
+     "confete"
+    ],
+    "callout": [
+     {
+      "t": 0.5,
+      "text": "NINGUÉM FICA PRA TRÁS!",
+      "color": "amarelo"
+     }
+    ],
+    "objetos": {
+     "b1": {
+      "id": "formiguinha",
+      "x": 1100,
+      "y": 930,
+      "z": 2,
+      "depth": 0.55,
+      "pose": {
+       "folha_cabeca": 1.0,
+       "turn": 0.6
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 1100
+        }
+       },
+       {
+        "t": 3.6,
+        "pose": {
+         "x": 1900
+        },
+        "ease": "linear"
+       }
+      ]
+     },
+     "b2": {
+      "id": "formiguinha",
+      "x": 850,
+      "y": 930,
+      "z": 2,
+      "depth": 0.55,
+      "pose": {
+       "folha_cabeca": 1.0,
+       "turn": 0.6
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 850
+        }
+       },
+       {
+        "t": 3.6,
+        "pose": {
+         "x": 1650
+        },
+        "ease": "linear"
+       }
+      ]
+     },
+     "b3": {
+      "id": "formiguinha",
+      "x": 600,
+      "y": 930,
+      "z": 2,
+      "depth": 0.55,
+      "pose": {
+       "folha_cabeca": 1.0,
+       "turn": 0.6
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 600
+        }
+       },
+       {
+        "t": 3.6,
+        "pose": {
+         "x": 1400
+        },
+        "ease": "linear"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "formiguinha": {
+      "x": 900,
+      "turn": 0.2,
+      "pose": {
+       "folha_cabeca": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "marcha",
+        "dur": "resto"
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 1250,
+      "turn": 0.1,
+      "pose": {
+       "folha_cabeca": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "marcha",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1600,
+      "turn": -0.1,
+      "pose": {
+       "folha_cabeca": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "marcha",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "intervalo#1": [
+   {
+    "linhas": 1,
+    "cenario": "danca_raios_rosa",
+    "camera": "close:laurinha",
+    "callout": "BORA, TURMINHA!",
+    "atores": {
+     "laurinha": {
+      "x": 960,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "apontar_camera",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "danca_xadrez_verde",
+    "fx": [
+     "confete"
+    ],
+    "callout": [
+     {
+      "t": 0.1,
+      "text": "LAURINHA E LUISINHO!",
+      "color": "rosa"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 640,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1280,
+      "turn": -0.15,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "verso#2": [
+   {
+    "linhas": 2,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.15
+    },
+    "callout": [
+     {
+      "t": 2.0,
+      "text": "FORTE DE MONTÃO!",
+      "color": "laranja"
+     }
+    ],
+    "objetos": {
+     "folha": {
+      "x": 1250,
+      "y": 930,
+      "z": 3,
+      "depth": 0.75,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "y": 930
+        }
+       },
+       {
+        "t": 1.4,
+        "pose": {
+         "y": 930
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.2,
+        "pose": {
+         "y": 560
+        },
+        "ease": "out"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "formiguinha": {
+      "x": 1250,
+      "turn": 0.1,
+      "acoes": [
+       {
+        "t": 1.2,
+        "do": "jump",
+        "dur": 0.6
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1700,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 2.2,
+        "do": "shock_reaction",
+        "dur": 0.9
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 2,
+    "cenario": "padrao_folhas_azul",
+    "camera": "medio:luisinho",
+    "callout": [
+     {
+      "t": 1.8,
+      "text": "MAIOR QUE ELA!",
+      "color": "verde"
+     }
+    ],
+    "objetos": {
+     "folha": {
+      "x": 1150,
+      "y": 700,
+      "z": 1,
+      "depth": 0.9
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 700,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "point",
+        "dur": 1.5
+       },
+       {
+        "t": 1.8,
+        "do": "shock_reaction",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.15
+    },
+    "callout": [
+     {
+      "t": 0.9,
+      "text": "NÃO DÁ!",
+      "color": "vermelho"
+     }
+    ],
+    "objetos": {
+     "folha": {
+      "x": 1300,
+      "y": 930,
+      "z": 3,
+      "depth": 0.75
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 1000,
+      "turn": 0.5,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "empurrar",
+        "dur": 1.2
+       },
+       {
+        "t": 1.3,
+        "do": "ofegante",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.05
+    },
+    "fx": [
+     "estrelas"
+    ],
+    "callout": [
+     {
+      "t": 0.6,
+      "text": "JUNTINHO DÁ!",
+      "color": "amarelo"
+     }
+    ],
+    "objetos": {
+     "folha": {
+      "x": 1300,
+      "y": 930,
+      "z": 3,
+      "depth": 0.75,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "y": 930
+        }
+       },
+       {
+        "t": 0.4,
+        "pose": {
+         "y": 930
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.2,
+        "pose": {
+         "y": 560
+        },
+        "ease": "out"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 1050,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.4,
+        "do": "jump",
+        "dur": 0.6
+       }
+      ]
+     },
+     "formiguinha": {
+      "x": 1300,
+      "acoes": [
+       {
+        "t": 0.4,
+        "do": "jump",
+        "dur": 0.6
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1550,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.4,
+        "do": "jump",
+        "dur": 0.6
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 2,
+    "cenario": "plano_quarto_azul",
+    "camera": {
+     "x": 1500,
+     "y": 560,
+     "zoom": 1.15
+    },
+    "fx": [
+     "estrelas"
+    ],
+    "callout": [
+     {
+      "t": 1.8,
+      "text": "TODO MUNDO JUNTO!",
+      "color": "azul"
+     }
+    ],
+    "objetos": {
+     "caixa": {
+      "id": "caixa_brinquedos",
+      "x": 1760,
+      "y": 940,
+      "z": 1,
+      "keys": [
+       {
+        "t": 1.0,
+        "pose": {
+         "carrinho": 1.0
+        }
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 1450,
+      "turn": 0.4,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "guardar",
+        "dur": 1.2
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 1150,
+      "turn": 0.4,
+      "acoes": [
+       {
+        "t": 0.6,
+        "do": "guardar",
+        "dur": 1.2
+       }
+      ]
+     },
+     "formiguinha": {
+      "x": 2050,
+      "turn": -0.4,
+      "acoes": [
+       {
+        "t": 0.4,
+        "do": "guardar",
+        "dur": 1.2
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "ponte": [
+   {
+    "linhas": 1,
+    "cenario": "danca_bolinhas_verde",
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "ABAIXA!",
+      "color": "amarelo"
+     }
+    ],
+    "atores": {
+     "formiguinha": {
+      "x": 640,
+      "turn": 0.1,
+      "pose": {
+       "folha_cabeca": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "agacha",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1280,
+      "turn": -0.1,
+      "pose": {
+       "folha_cabeca": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "agacha",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "danca_bolinhas_azul",
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "LEVANTA!",
+      "color": "verde"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 640,
+      "turn": 0.0,
+      "pose": {
+       "folha_cabeca": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "bracos",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1280,
+      "turn": -0.1,
+      "pose": {
+       "folha_cabeca": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "bracos",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "danca_bolinhas_rosa",
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "PRO LADO!",
+      "color": "azul"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 640,
+      "turn": 0.0,
+      "pose": {
+       "folha_cabeca": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "lado",
+        "dur": "resto"
+       }
+      ]
+     },
+     "formiguinha": {
+      "x": 1280,
+      "turn": -0.1,
+      "pose": {
+       "folha_cabeca": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "lado",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "danca_bolinhas_amarelo",
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "PULINHO!",
+      "color": "rosa"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 640,
+      "pose": {
+       "folha_cabeca": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "jump",
+        "dur": 0.8
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1280,
+      "turn": -0.1,
+      "pose": {
+       "folha_cabeca": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "jump",
+        "dur": 0.8
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "parada": [
+   {
+    "linhas": 1,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.1
+    },
+    "callout": [
+     {
+      "t": 0.5,
+      "text": "ESTÁTUA!",
+      "color": "vermelho"
+     }
+    ],
+    "atores": {
+     "formiguinha": {
+      "x": 900,
+      "pose": {
+       "folha_cabeca": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "estatua",
+        "dur": "resto",
+        "pose": "bracos"
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 1250,
+      "pose": {
+       "folha_cabeca": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "estatua",
+        "dur": "resto",
+        "pose": "perna"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1600,
+      "turn": -0.1,
+      "pose": {
+       "folha_cabeca": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "estatua",
+        "dur": "resto",
+        "pose": "bracos"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "intervalo#2": [
+   {
+    "linhas": 1,
+    "cenario": "danca_raios_azul",
+    "camera": "close:luisinho",
+    "callout": "ZUM-ZUM, QUE MASSA!",
+    "atores": {
+     "luisinho": {
+      "x": 960,
+      "pose": {
+       "folha_cabeca": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "bacana",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "final#1": [
+   {
+    "linhas": 1,
+    "cenario": "danca_raios_verde",
+    "camera": "close:laurinha",
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "GOSTOU?",
+      "color": "rosa"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 960,
+      "pose": {
+       "folha_cabeca": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "apontar_camera",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "danca_bolinhas_amarelo",
+    "callout": [
+     {
+      "t": 0.4,
+      "text": "DÁ UM JOINHA!",
+      "color": "azul"
+     }
+    ],
+    "fx": [
+     "estrelas"
+    ],
+    "objetos": {
+     "joinha": {
+      "x": 1380,
+      "y": 900,
+      "z": 3,
+      "depth": 1.3,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "escala": 0.0
+        }
+       },
+       {
+        "t": 0.4,
+        "pose": {
+         "escala": 1.0
+        },
+        "ease": "back"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 680,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "bacana",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_casa_frente",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.1
+    },
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "CHAMA O PAPAI E A MAMÃE!",
+      "color": "verde"
+     }
+    ],
+    "atores": {
+     "mamae": {
+      "x": 1100,
+      "turn": 0.2,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "wave",
+        "dur": 1.2
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 1450,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "point",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "danca_raios_vermelho",
+    "callout": [
+     {
+      "t": 0.5,
+      "text": "INSCREVA-SE!",
+      "color": "vermelho"
+     }
+    ],
+    "fx": [
+     "coracoes"
+    ],
+    "objetos": {
+     "botao": {
+      "id": "botao_inscrever",
+      "x": 1260,
+      "y": 760,
+      "z": 3,
+      "depth": 1.2,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "escala": 0.0,
+         "aperta": 0.0
+        }
+       },
+       {
+        "t": 0.4,
+        "pose": {
+         "escala": 1.0
+        },
+        "ease": "back"
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "aperta": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 2.1,
+        "pose": {
+         "aperta": 0.0
+        },
+        "ease": "in"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 600,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "point",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "final#2": [
+   {
+    "linhas": 1,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.05
+    },
+    "fx": [
+     "coracoes"
+    ],
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "TCHAU!",
+      "color": "verde"
+     }
+    ],
+    "objetos": {
+     "b1": {
+      "id": "formiguinha",
+      "x": 1100,
+      "y": 930,
+      "z": 2,
+      "depth": 0.55,
+      "pose": {
+       "folha_cabeca": 1.0,
+       "turn": 0.6
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 1100
+        }
+       },
+       {
+        "t": 7.0,
+        "pose": {
+         "x": 2900
+        },
+        "ease": "linear"
+       }
+      ]
+     },
+     "b2": {
+      "id": "formiguinha",
+      "x": 850,
+      "y": 930,
+      "z": 2,
+      "depth": 0.55,
+      "pose": {
+       "folha_cabeca": 1.0,
+       "turn": 0.6
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 850
+        }
+       },
+       {
+        "t": 7.0,
+        "pose": {
+         "x": 2650
+        },
+        "ease": "linear"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "formiguinha": {
+      "x": 1300,
+      "pose": {
+       "folha_cabeca": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "tchau",
+        "dur": 3.2
+       },
+       {
+        "t": 3.4,
+        "do": "walk",
+        "to_x": 2600
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 1600,
+      "turn": -0.1,
+      "pose": {
+       "folha_cabeca": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "tchau",
+        "dur": 3.0
+       },
+       {
+        "t": 3.2,
+        "do": "fly",
+        "dur": 1.2,
+        "to_x": 2500,
+        "to_y": 250
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1850,
+      "turn": -0.15,
+      "pose": {
+       "folha_cabeca": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "tchau",
+        "dur": 3.0
+       },
+       {
+        "t": 3.3,
+        "do": "fly",
+        "dur": 1.2,
+        "to_x": 2600,
+        "to_y": 300
+       }
+      ]
+     }
+    }
+   }
+  ]
+ }
+}

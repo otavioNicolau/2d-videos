@@ -63,11 +63,97 @@
   "batucada",
   "axe"
  ],
- "status": "letra_aprovada",
- "versoes": [],
+ "status": "aprovada",
+ "versoes": [
+  "v1"
+ ],
  "youtube": {
   "resumo": "DANÇA DA FORMIGUINHA! 🐜🍃 Lá no jardim tem uma fila: é a Formiguinha com a família, cada uma levando uma folhinha! A Laurinha e o Luisinho entram na dança: marcha, marcha, folha na cabeça, pra frente e pra trás! Sabia que a formiga carrega uma folha bem maior que ela? Sozinho não dá, mas juntinho dá! Abaixa, levanta… parou, estátua!",
   "resumo_short": "DANÇA DA FORMIGUINHA! 🐜 Marcha, marcha, folha na cabeça com a Laurinha e o Luisinho!",
-  "curiosidade": "A formiga carrega uma folha bem maior que ela, e juntinhas as formigas fazem tudo"
- }
+  "curiosidade": "A formiga carrega uma folha bem maior que ela, e juntinhas as formigas fazem tudo",
+  "miniatura": "DANÇA DA\\nFORMIGUINHA!",
+  "miniatura_cena": {
+   "fundo": "aneis",
+   "lado": "direita",
+   "cores": [
+    [
+     120,
+     200,
+     40
+    ],
+    [
+     255,
+     154,
+     31
+    ],
+    [
+     255,
+     214,
+     64
+    ],
+    [
+     45,
+     170,
+     80
+    ],
+    [
+     230,
+     120,
+     40
+    ]
+   ],
+   "heroi": {
+    "id": "luisinho",
+    "pose": {
+     "turn": 0.2,
+     "mouth": "D",
+     "folha_cabeca": 1,
+     "hand_n_x": -135,
+     "hand_n_y": -135,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3
+    }
+   },
+   "par": {
+    "id": "formiguinha",
+    "pose": {
+     "turn": -0.2,
+     "mouth": "D",
+     "folha_cabeca": 1,
+     "hand_n_x": -135,
+     "hand_n_y": -135,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3
+    }
+   },
+   "objetos": [
+    {
+     "id": "formiguinha",
+     "pose": {
+      "folha_cabeca": 1,
+      "turn": 0.5
+     },
+     "tam": 190,
+     "x": 760,
+     "base": 720
+    },
+    {
+     "id": "folha",
+     "tam": 260,
+     "x": 150,
+     "base": 270,
+     "giro": -15
+    }
+   ]
+  }
+ },
+ "escolhida": "v1"
 }

@@ -21,6 +21,8 @@ CHARACTERS["vovo"] = lambda: FlatMuri("vovo", "Vovó", _FV)
 from ..characters.flat_muri import JOANINHA as _FJ, FORMIGUINHA as _FF
 CHARACTERS["joaninha"] = lambda: FlatMuri("joaninha", "Joaninha", _FJ)
 CHARACTERS["formiguinha"] = lambda: FlatMuri("formiguinha", "Formiguinha", _FF)
+from ..characters.flat_muri import FORMIGA_MAE as _FMA
+CHARACTERS["formiga_mae"] = lambda: FlatMuri("formiga_mae", "Mamãe Formiga", _FMA)
 from ..characters.flat_props import PROPS as _PROPS
 for _pid, _cls in _PROPS.items():
     CHARACTERS[_pid] = _cls

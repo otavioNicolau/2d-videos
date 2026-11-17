@@ -1,0 +1,51 @@
+{
+ "schema": "avaliacao-1.0",
+ "versoes": {
+  "v1": {
+   "arquivo": "v1.wav",
+   "duracao": 124.4,
+   "bpm": 136.0,
+   "bpm_nota": "",
+   "tom": "Fá maior",
+   "voz_inicio": 0.25,
+   "refrao_inicio": 55.7,
+   "cantado": 93,
+   "intervalos": [],
+   "fim_depois_da_voz": 0.7,
+   "final": "corte seco",
+   "silencio_final": 0.6,
+   "acerto": 63,
+   "nao_reconhecidas": [
+    "marcha",
+    "junto",
+    "jardim",
+    "olha",
+    "familia",
+    "cada",
+    "leva",
+    "folhinha",
+    "ajudar",
+    "luisinho",
+    "hein",
+    "gostou"
+   ],
+   "pontos_a_conferir": [
+    "gancho só aparece em 55.7 s (referência ~35 s)",
+    "duração 124 s fora do alvo 140–170 s",
+    "só 63% da letra reconhecida — ouvir a pronúncia",
+    "menos de 2 intervalos de dança"
+   ]
+  }
+ },
+ "ouvido": {
+  "v1": {
+   "1 começo chama atenção": null,
+   "5 melodia combina com a letra": null,
+   "6 dá vontade de dançar": null,
+   "7 pronúncia natural": null,
+   "8 tem a cara do canal": null,
+   "9 nenhum trecho cansativo": null
+  }
+ },
+ "escolhida": "v1"
+}
