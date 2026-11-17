@@ -57,19 +57,37 @@ class FlatLook:
 
 
 # ── olhos e boca no giro da cabeça (BIBLIA_VISUAL §4: desenho chapado, olhos sempre redondinhos) ──
-OLHO_MAX = 0.85      # ângulo máximo (rad) do centro do olho: nunca encosta na borda da cabeça
-OLHO_SOME = 0.58     # o olho de trás some quando ficaria espremido (cos do ângulo abaixo disso)
+OLHO_MAX = 0.9       # ângulo máximo (rad) do centro do olho: nunca encosta na borda da cabeça
+PERFIL = 0.7         # giro a partir do qual o rosto está de perfil (só então o olho de trás some)
+DESLOCA_MAX = 0.52   # quanto o rosto (olhos e boca) anda para o lado do giro antes do perfil
 BOCA_MAX = 1.0
+
+
+def _rosto(v) -> tuple[float, float, float]:
+    """(sentido, deslocamento do rosto, abertura entre os olhos) para o giro da cabeça."""
+    t = max(-1.0, min(1.0, v.turn))
+    f = 1.0 if t >= 0 else -1.0
+    s = abs(t)
+    if s <= PERFIL:
+        return f, f * min(s * (math.pi / 2) * 0.92, DESLOCA_MAX), 0.42 - 0.04 * s / PERFIL
+    u = (s - PERFIL) / (1 - PERFIL)
+    return f, f * (DESLOCA_MAX + (BOCA_MAX - DESLOCA_MAX) * u), 0.38
 
 
 def _olho(v, cx: float, r: float, side: int):
     """(x, largura) do olho `side` com a cabeça girada, ou None se ele fica escondido.
-    Antes o olho seguia a esfera à risca: o de trás virava um risco grudado no contorno (giro 0,3–0,45) e,
-    de perfil, o olho que sobra afinava na borda. Agora o de trás some antes de espremer, a posição para no
-    limite seguro e o olho quase não deforma."""
-    a = side * 0.42 + v.turn * (math.pi / 2) * 0.92
-    if side * v.turn > 0 and math.cos(a) < OLHO_SOME:    # só o olho de TRÁS some; o da frente fica sempre
-        return None
+    1ª versão: o olho seguia a esfera à risca (olho de trás espremido no contorno). 2ª (17/11 cedo): o de trás sumia a
+    partir do giro 0,37 — rosto quase de frente com um olho só. Agora o rosto inteiro anda para o lado do giro, os
+    dois olhos ficam visíveis e redondinhos até o perfil (giro 0,7) e só então o de trás some."""
+    f, shift, spread = _rosto(v)
+    s = abs(max(-1.0, min(1.0, v.turn)))
+    if s <= PERFIL:
+        a = side * spread + shift
+    else:
+        if side * f > 0:                                   # de perfil: só o olho da frente
+            return None
+        u = (s - PERFIL) / (1 - PERFIL)
+        a = f * ((DESLOCA_MAX - spread) + (0.75 - (DESLOCA_MAX - spread)) * u)
     a = max(-OLHO_MAX, min(OLHO_MAX, a))
     return cx + r * 0.78 * math.sin(a), 0.75 + 0.25 * math.cos(a)
 
@@ -320,7 +338,7 @@ class FlatMuri(Character):
                             brush=Brush(LINE * 0.9, 0.0, _rgba("#534946"), 0.0), dense=True, line=LINE * 0.9)
             if len(eyes) == 2:
                 self._line(k, [(eyes[0][0] + 30, eyes[0][1] - 4), (eyes[1][0] - 30, eyes[1][1] - 4)], "#534946", w=LINE * 0.9)
-        a_m = max(-BOCA_MAX, min(BOCA_MAX, v.turn * (math.pi / 2) * 0.92))
+        a_m = max(-BOCA_MAX, min(BOCA_MAX, _rosto(v)[1]))          # boca anda junto com os olhos
         nx_ = C[0] + r * 0.72 * math.sin(a_m)              # boca sempre dentro da cabeça, inclusive de perfil
         self._mouth(k, P, rot((nx_, C[1] + 52), ht, C), f, s, line)
         self._boca_fx(k, P, rot((nx_, C[1] + 52), ht, C), f)
@@ -402,6 +420,13 @@ class FlatMuri(Character):
         rx, ry = 22 * c * es, 27 * es
         if P.get("eyes_happy", 0) > 0.5:
             self._line(k, [(ex - rx, ey + 6), (ex, ey - ry * 0.5), (ex + rx, ey + 6)], PUPIL, w=LINE * 1.15)
+        elif P["lid"] >= 0.85:                 # olho FECHADO (piscada, dormindo): curvinha para baixo, sem fresta branca
+            self._line(k, [(ex - rx, ey + 4), (ex, ey + ry * 0.42), (ex + rx, ey + 4)], PUPIL, w=LINE * 1.15)
+            if L.lashes:                        # cílios caídos no canto de fora
+                fora = -1 if side < 0 else 1
+                for d in (0.0, 0.45):
+                    p0 = (ex + fora * rx * (1 - d * 0.6), ey + 4 + d * ry * 0.22)
+                    self._line(k, [p0, (p0[0] + fora * 11, p0[1] + 9)], PUPIL, w=LINE * 0.75)
         else:
             lid = P["lid"]
             self._shape(k, ellipse_pts(ex, ey, rx, ry, 0, 18), "#FFFFFF", line=line)

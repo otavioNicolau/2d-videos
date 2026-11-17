@@ -278,3 +278,21 @@ def test_eyes_stay_round_and_inside_the_head_at_any_turn():
                 x, larg = e
                 assert larg >= 0.75, f"olho espremido no giro {t}"
                 assert abs(x) + 22 * larg <= r * 0.85, f"olho encostando na borda no giro {t}"
+
+
+def test_both_eyes_until_profile_and_full_blink():
+    """Rosto quase de frente nunca fica com um olho só (só some no perfil, giro > 0,7); a piscada fecha de verdade
+    (quadro com lid 1 exposto em 1s), em intervalos variados e com ritmo diferente para cada personagem."""
+    from toonstudio.animation.timeline import BLINK, CharTimeline
+    from toonstudio.characters.base import View
+    from toonstudio.characters.flat_muri import _olho
+    from toonstudio.core.registry import character
+    for t in [i / 20 for i in range(-14, 15)]:
+        assert _olho(View(t), 0.0, 112.0, -1) and _olho(View(t), 0.0, 112.0, 1), f"um olho só no giro {t}"
+    assert max(BLINK) == 1.0
+    tl = CharTimeline(character("laurinha"), 24, 20.0)
+    bts = tl.blink_times()
+    gaps = [b - a for a, b in zip(bts, bts[1:])]
+    assert len(bts) >= 4 and max(gaps) - min(gaps) > 0.5, "piscada em intervalo fixo (robótico)"
+    assert all(tl.exposure_at(b + 1.5 / 24) == 1 for b in bts), "piscada em 2s (some na exposição)"
+    assert bts != CharTimeline(character("luisinho"), 24, 20.0).blink_times()

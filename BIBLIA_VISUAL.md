@@ -97,6 +97,11 @@ corpo, abdômen, braços, pernas, tênis.
 
 ---
 
+### Olhos no giro e piscada
+- Com o rosto virado até o giro 0,7 aparecem os **dois** olhos, redondinhos, e o rosto inteiro (olhos e boca) anda para o lado do giro. Só no perfil (giro acima de 0,7) fica um olho.
+- O olho nunca encosta no contorno da cabeça e nunca vira um risco.
+- Piscada: meio fechado → fechado → fechado → abrindo (~0,17 s), cada quadro aparece. O olho fechado é uma curvinha para baixo (a Laurinha com os cílios caídos no canto), sem fresta branca. Intervalos variados (2,3–4,6 s), às vezes piscada dupla, e a Laurinha e o Luisinho nunca piscam juntos.
+
 ## 5. Biblioteca de elementos (mesmas regras)
 
 - **Natureza:** árvores (gota, redonda, pinheiro de triângulos arredondados), arbusto de gotas, grama com tracinhos,

@@ -22,6 +22,10 @@ CATEGORICAL = {"mouth", "back", "holding", "paw_n", "paw_f"}
 ROOT = ("x", "y", "z", "depth")
 
 
+# piscada quadro a quadro (24 fps): meio fechado → fechado → fechado → abrindo (~0,17 s)
+BLINK = (0.5, 1.0, 1.0, 0.45)
+
+
 @dataclass
 class Key:
     t: float
@@ -214,16 +218,34 @@ class CharTimeline:
                     if m in "CDH":
                         p["head_dy"] = p.get("head_dy", 0.0) - 3
                         p["head_tilt"] = p.get("head_tilt", 0.0) + 0.02
-            # piscadas automáticas a cada ~2,5–4 s (2 quadros), sem atropelar pálpebras já fechadas
-            if self.blinks:
-                seed = zlib.crc32(self.char.id.encode())
-                period = 3.1 + (seed % 7) * 0.13
-                ph = (t + (seed % 11) * 0.2) % period
-                if ph < 2.0 / self.fps * 1.01 and p["lid"] < 0.5 and p.get("eye_scale", 1) < 1.2:
-                    p["lid"] = 0.92 if ph < 1.0 / self.fps else 0.55
+            # piscadas automáticas (BLINK quadro a quadro) em intervalos variados, às vezes dupla; sem atropelar
+            # pálpebras já fechadas, olhos felizes (^^) ou olhos arregalados
+            if self.blinks and p["lid"] < 0.5 and p.get("eye_scale", 1) < 1.2 and p.get("eyes_happy", 0) < 0.5:
+                for bt in self.blink_times():
+                    k = int((t - bt) * self.fps + 1e-6)
+                    if 0 <= k < len(BLINK) and t >= bt:
+                        p["lid"] = max(p["lid"], BLINK[k])
+                        break
         return poses
 
+    def blink_times(self) -> list[float]:
+        """Inícios das piscadas: intervalo sorteado de 2,3 a 4,6 s (semente = personagem + duração da cena, então
+        Laurinha e Luisinho nunca piscam juntos nem no mesmo ritmo); 18% das vezes piscada dupla."""
+        if getattr(self, "_blinks", None) is None:
+            import random
+            rng = random.Random(zlib.crc32(f"{self.char.id}:{self.duration:.3f}".encode()))
+            out, t = [], rng.uniform(0.5, 2.0)
+            while t < self.duration - 0.2:
+                out.append(t)
+                if rng.random() < 0.18:
+                    out.append(t + 0.34)
+                t += rng.uniform(2.3, 4.6)
+            self._blinks = out
+        return self._blinks
+
     def exposure_at(self, t: float) -> int:
+        if self.blinks and any(bt <= t < bt + (len(BLINK) + 0.5) / self.fps for bt in self.blink_times()):
+            return 1                                   # piscada em 1s: cada quadro dela aparece (em 2s ela sumia)
         ex = self.default_ex
         for t0, t1, e in self.ex_spans:
             if t0 <= t < t1:

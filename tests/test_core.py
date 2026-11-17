@@ -47,8 +47,8 @@ def test_walk_exposure_on_twos_and_root_moves():
                                 "actions": [{"t": 0, "do": "walk", "to_x": 700}]}, 24, 3.0)
     cells, drawings, stage = expose(tl)
     assert len(cells) == 72
-    # em 2s: troca de desenho no máximo a cada 2 quadros
-    changes = [i for i in range(1, 72) if cells[i] != cells[i - 1]]
+    # em 2s: troca de desenho no máximo a cada 2 quadros (exceto a piscada, que é em 1s para o olho fechar de verdade)
+    changes = [i for i in range(1, 72) if cells[i] != cells[i - 1] and tl.exposure_at(i / 24) == 2]
     assert all(b - a >= 2 for a, b in zip(changes, changes[1:]))
     assert stage[-1]["x"] > stage[0]["x"] + 500
     assert len(drawings) > 20                          # desenhos de verdade, não um sprite deslizando
