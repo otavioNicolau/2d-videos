@@ -62,7 +62,11 @@ def tool(name: str) -> str:
 
 def setting(section: str, key: str, default: Any = None) -> Any:
     v = config().get(section, {}).get(key, default)
-    return os.path.expanduser(v) if isinstance(v, str) and v.startswith("~") else v
+    if isinstance(v, str) and v.startswith("~"):
+        return os.path.expanduser(v)
+    if isinstance(v, str) and v.startswith("./") or (isinstance(v, str) and v.startswith(".venv")):
+        return str(ROOT / v)                     # caminho relativo à raiz do projeto
+    return v
 
 
 def to_win(p: Path | str) -> str:

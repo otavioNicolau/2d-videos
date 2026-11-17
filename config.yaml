@@ -9,7 +9,7 @@ tools:
 audio:
   # reaproveitado do ~/videos (ADR-0006): venvs e referências de voz já existentes
   higgs_python: "~/videos/.venv-higgs/bin/python"
-  aux_python: "~/videos/.venv/bin/python"       # kokoro + faster-whisper
+  aux_python: ".venv-audio/bin/python"           # faster-whisper (o ~/videos foi removido em 17/11/2026; kokoro não é mais usado)
   voice_refs: "~/videos/library/voices/elenco"
   whisper_model: "small"
 render:
