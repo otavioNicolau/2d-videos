@@ -1,0 +1,1451 @@
+{
+  "episode": "ep05-conta-comigo",
+  "scenes": {
+    "s01_intro": {
+      "frames": 63,
+      "performers": {
+        "formiguinha": {
+          "drawings": 63,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 62
+          },
+          "empty_frames": 0
+        },
+        "laurinha": {
+          "drawings": 63,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 62
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 63,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 62
+          },
+          "empty_frames": 0
+        },
+        "joaninha": {
+          "drawings": 63,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 62
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s02_intro": {
+      "frames": 173,
+      "performers": {
+        "laurinha": {
+          "drawings": 173,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 172
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 173,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 172
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s03_verso": {
+      "frames": 130,
+      "performers": {
+        "laurinha": {
+          "drawings": 130,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 129
+          },
+          "empty_frames": 0
+        },
+        "cama": {
+          "drawings": 128,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 129
+          },
+          "empty_frames": 0
+        },
+        "lencol": {
+          "drawings": 127,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 129
+          },
+          "empty_frames": 0
+        },
+        "num": {
+          "drawings": 129,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 129
+          },
+          "empty_frames": 9
+        }
+      },
+      "issues": [
+        "num: 9 quadros vazios (ex.: [1, 2, 3, 4, 5])"
+      ],
+      "frozen_samples": 0
+    },
+    "s04_verso": {
+      "frames": 105,
+      "performers": {
+        "laurinha": {
+          "drawings": 105,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 104
+          },
+          "empty_frames": 0
+        },
+        "num": {
+          "drawings": 105,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 104
+          },
+          "empty_frames": 4
+        }
+      },
+      "issues": [
+        "num: 4 quadros vazios (ex.: [1, 2, 3, 4])"
+      ],
+      "frozen_samples": 0
+    },
+    "s05_verso": {
+      "frames": 104,
+      "performers": {
+        "laurinha": {
+          "drawings": 104,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 103
+          },
+          "empty_frames": 0
+        },
+        "mesa": {
+          "drawings": 104,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 103
+          },
+          "empty_frames": 0
+        },
+        "num": {
+          "drawings": 104,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 103
+          },
+          "empty_frames": 4
+        }
+      },
+      "issues": [
+        "num: 4 quadros vazios (ex.: [1, 2, 3, 4])"
+      ],
+      "frozen_samples": 0
+    },
+    "s06_verso": {
+      "frames": 117,
+      "performers": {
+        "laurinha": {
+          "drawings": 117,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 116
+          },
+          "empty_frames": 0
+        },
+        "num": {
+          "drawings": 115,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 116
+          },
+          "empty_frames": 7
+        }
+      },
+      "issues": [
+        "num: 7 quadros vazios (ex.: [1, 2, 3, 4, 5])"
+      ],
+      "frozen_samples": 0
+    },
+    "s07_refrao": {
+      "frames": 116,
+      "performers": {
+        "laurinha": {
+          "drawings": 116,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 115
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 116,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 115
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s08_refrao": {
+      "frames": 116,
+      "performers": {
+        "mao_e": {
+          "drawings": 116,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 115
+          },
+          "empty_frames": 0
+        },
+        "mao_d": {
+          "drawings": 116,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 115
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s09_refrao": {
+      "frames": 39,
+      "performers": {
+        "mao": {
+          "drawings": 39,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 38
+          },
+          "empty_frames": 0
+        },
+        "num": {
+          "drawings": 39,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 38
+          },
+          "empty_frames": 22
+        }
+      },
+      "issues": [
+        "num: 22 quadros vazios (ex.: [1, 2, 3, 4, 5])"
+      ],
+      "frozen_samples": 0
+    },
+    "s10_refrao": {
+      "frames": 64,
+      "performers": {
+        "mao": {
+          "drawings": 64,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 63
+          },
+          "empty_frames": 0
+        },
+        "num": {
+          "drawings": 64,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 63
+          },
+          "empty_frames": 22
+        }
+      },
+      "issues": [
+        "num: 22 quadros vazios (ex.: [1, 2, 3, 4, 5])"
+      ],
+      "frozen_samples": 0
+    },
+    "s11_refrao": {
+      "frames": 38,
+      "performers": {
+        "mao_e": {
+          "drawings": 38,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 37
+          },
+          "empty_frames": 0
+        },
+        "mao_d": {
+          "drawings": 38,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 37
+          },
+          "empty_frames": 0
+        },
+        "num": {
+          "drawings": 38,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 37
+          },
+          "empty_frames": 10
+        }
+      },
+      "issues": [
+        "num: 10 quadros vazios (ex.: [1, 2, 3, 4, 5])"
+      ],
+      "frozen_samples": 0
+    },
+    "s12_refrao": {
+      "frames": 142,
+      "performers": {
+        "formiguinha": {
+          "drawings": 142,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 141
+          },
+          "empty_frames": 0
+        },
+        "laurinha": {
+          "drawings": 142,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 141
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 142,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 141
+          },
+          "empty_frames": 0
+        },
+        "joaninha": {
+          "drawings": 142,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 141
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s13_intervalo": {
+      "frames": 50,
+      "performers": {
+        "laurinha": {
+          "drawings": 50,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 49
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s14_intervalo": {
+      "frames": 202,
+      "performers": {
+        "formiguinha": {
+          "drawings": 202,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 201
+          },
+          "empty_frames": 0
+        },
+        "laurinha": {
+          "drawings": 202,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 201
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 202,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 201
+          },
+          "empty_frames": 0
+        },
+        "joaninha": {
+          "drawings": 202,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 201
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s15_verso": {
+      "frames": 48,
+      "performers": {
+        "luisinho": {
+          "drawings": 48,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 47
+          },
+          "empty_frames": 0
+        },
+        "mao": {
+          "drawings": 48,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 47
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s16_verso": {
+      "frames": 51,
+      "performers": {
+        "luisinho": {
+          "drawings": 51,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 50
+          },
+          "empty_frames": 0
+        },
+        "bici": {
+          "drawings": 51,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 50
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s17_verso": {
+      "frames": 50,
+      "performers": {
+        "formiguinha": {
+          "drawings": 50,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 49
+          },
+          "empty_frames": 0
+        },
+        "num": {
+          "drawings": 50,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 49
+          },
+          "empty_frames": 25
+        }
+      },
+      "issues": [
+        "num: 25 quadros vazios (ex.: [1, 2, 3, 4, 5])"
+      ],
+      "frozen_samples": 0
+    },
+    "s18_verso": {
+      "frames": 59,
+      "performers": {
+        "formiguinha": {
+          "drawings": 59,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 58
+          },
+          "empty_frames": 0
+        },
+        "laurinha": {
+          "drawings": 59,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 58
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 59,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 58
+          },
+          "empty_frames": 0
+        },
+        "joaninha": {
+          "drawings": 59,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 58
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s19_refrao": {
+      "frames": 102,
+      "performers": {
+        "laurinha": {
+          "drawings": 102,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 101
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 102,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 101
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s20_refrao": {
+      "frames": 128,
+      "performers": {
+        "mao_e": {
+          "drawings": 128,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 127
+          },
+          "empty_frames": 0
+        },
+        "mao_d": {
+          "drawings": 128,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 127
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s21_refrao": {
+      "frames": 51,
+      "performers": {
+        "mao": {
+          "drawings": 51,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 50
+          },
+          "empty_frames": 0
+        },
+        "num": {
+          "drawings": 51,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 50
+          },
+          "empty_frames": 22
+        }
+      },
+      "issues": [
+        "num: 22 quadros vazios (ex.: [1, 2, 3, 4, 5])"
+      ],
+      "frozen_samples": 0
+    },
+    "s22_refrao": {
+      "frames": 51,
+      "performers": {
+        "mao": {
+          "drawings": 51,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 50
+          },
+          "empty_frames": 0
+        },
+        "num": {
+          "drawings": 51,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 50
+          },
+          "empty_frames": 22
+        }
+      },
+      "issues": [
+        "num: 22 quadros vazios (ex.: [1, 2, 3, 4, 5])"
+      ],
+      "frozen_samples": 0
+    },
+    "s23_refrao": {
+      "frames": 51,
+      "performers": {
+        "mao_e": {
+          "drawings": 51,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 50
+          },
+          "empty_frames": 0
+        },
+        "mao_d": {
+          "drawings": 51,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 50
+          },
+          "empty_frames": 0
+        },
+        "num": {
+          "drawings": 51,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 50
+          },
+          "empty_frames": 10
+        }
+      },
+      "issues": [
+        "num: 10 quadros vazios (ex.: [1, 2, 3, 4, 5])"
+      ],
+      "frozen_samples": 0
+    },
+    "s24_refrao": {
+      "frames": 77,
+      "performers": {
+        "formiguinha": {
+          "drawings": 77,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 76
+          },
+          "empty_frames": 0
+        },
+        "laurinha": {
+          "drawings": 77,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 76
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 77,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 76
+          },
+          "empty_frames": 0
+        },
+        "joaninha": {
+          "drawings": 77,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 76
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s25_ponte": {
+      "frames": 88,
+      "performers": {
+        "luisinho": {
+          "drawings": 88,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 87
+          },
+          "empty_frames": 0
+        },
+        "janela": {
+          "drawings": 88,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 87
+          },
+          "empty_frames": 0
+        },
+        "caixa": {
+          "drawings": 88,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 87
+          },
+          "empty_frames": 0
+        },
+        "num": {
+          "drawings": 88,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 87
+          },
+          "empty_frames": 6
+        }
+      },
+      "issues": [
+        "num: 6 quadros vazios (ex.: [1, 2, 3, 4, 19])"
+      ],
+      "frozen_samples": 0
+    },
+    "s26_ponte": {
+      "frames": 114,
+      "performers": {
+        "luisinho": {
+          "drawings": 114,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 113
+          },
+          "empty_frames": 0
+        },
+        "num": {
+          "drawings": 114,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 113
+          },
+          "empty_frames": 4
+        }
+      },
+      "issues": [
+        "num: 4 quadros vazios (ex.: [1, 2, 3, 4])"
+      ],
+      "frozen_samples": 0
+    },
+    "s27_ponte": {
+      "frames": 39,
+      "performers": {
+        "luisinho": {
+          "drawings": 39,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 38
+          },
+          "empty_frames": 0
+        },
+        "janela": {
+          "drawings": 39,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 38
+          },
+          "empty_frames": 0
+        },
+        "num": {
+          "drawings": 39,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 38
+          },
+          "empty_frames": 3
+        }
+      },
+      "issues": [
+        "num: 3 quadros vazios (ex.: [1, 10, 19])"
+      ],
+      "frozen_samples": 0
+    },
+    "s28_ponte": {
+      "frames": 51,
+      "performers": {
+        "luisinho": {
+          "drawings": 51,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 50
+          },
+          "empty_frames": 0
+        },
+        "cama": {
+          "drawings": 51,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 50
+          },
+          "empty_frames": 0
+        },
+        "lencol": {
+          "drawings": 51,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 50
+          },
+          "empty_frames": 0
+        },
+        "num": {
+          "drawings": 51,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 50
+          },
+          "empty_frames": 1
+        }
+      },
+      "issues": [
+        "num: 1 quadros vazios (ex.: [1])"
+      ],
+      "frozen_samples": 0
+    },
+    "s29_ponte": {
+      "frames": 50,
+      "performers": {
+        "luisinho": {
+          "drawings": 50,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 49
+          },
+          "empty_frames": 0
+        },
+        "laurinha": {
+          "drawings": 50,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 49
+          },
+          "empty_frames": 0
+        },
+        "cama": {
+          "drawings": 50,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 49
+          },
+          "empty_frames": 0
+        },
+        "lencol": {
+          "drawings": 50,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 49
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s30_ponte": {
+      "frames": 63,
+      "performers": {
+        "laurinha": {
+          "drawings": 63,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 62
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 63,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 62
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s31_intervalo": {
+      "frames": 101,
+      "performers": {
+        "luisinho": {
+          "drawings": 101,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 100
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s32_subida": {
+      "frames": 188,
+      "performers": {
+        "laurinha": {
+          "drawings": 188,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 187
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 188,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 187
+          },
+          "empty_frames": 0
+        },
+        "num": {
+          "drawings": 188,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 187
+          },
+          "empty_frames": 6
+        }
+      },
+      "issues": [
+        "num: 6 quadros vazios (ex.: [1, 2, 3, 4, 55])"
+      ],
+      "frozen_samples": 0
+    },
+    "s33_subida": {
+      "frames": 39,
+      "performers": {
+        "formiguinha": {
+          "drawings": 39,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 38
+          },
+          "empty_frames": 0
+        },
+        "laurinha": {
+          "drawings": 39,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 38
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 39,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 38
+          },
+          "empty_frames": 0
+        },
+        "joaninha": {
+          "drawings": 39,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 38
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s34_intervalo": {
+      "frames": 70,
+      "performers": {
+        "laurinha": {
+          "drawings": 70,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 69
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s35_intervalo": {
+      "frames": 144,
+      "performers": {
+        "formiguinha": {
+          "drawings": 144,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 143
+          },
+          "empty_frames": 0
+        },
+        "laurinha": {
+          "drawings": 144,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 143
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 144,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 143
+          },
+          "empty_frames": 0
+        },
+        "joaninha": {
+          "drawings": 144,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 143
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s36_intervalo": {
+      "frames": 138,
+      "performers": {
+        "laurinha": {
+          "drawings": 138,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 137
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 138,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 137
+          },
+          "empty_frames": 0
+        },
+        "n1": {
+          "drawings": 125,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 137
+          },
+          "empty_frames": 7
+        },
+        "n2": {
+          "drawings": 128,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 137
+          },
+          "empty_frames": 28
+        },
+        "n3": {
+          "drawings": 133,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 137
+          },
+          "empty_frames": 49
+        },
+        "n4": {
+          "drawings": 138,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 137
+          },
+          "empty_frames": 70
+        },
+        "n5": {
+          "drawings": 138,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 137
+          },
+          "empty_frames": 91
+        }
+      },
+      "issues": [
+        "n1: 7 quadros vazios (ex.: [1, 2, 3, 4, 5])",
+        "n2: 28 quadros vazios (ex.: [1, 2, 3, 4, 5])",
+        "n3: 49 quadros vazios (ex.: [1, 2, 3, 4, 5])",
+        "n4: 70 quadros vazios (ex.: [1, 2, 3, 4, 5])",
+        "n5: 91 quadros vazios (ex.: [1, 2, 3, 4, 5])"
+      ],
+      "frozen_samples": 0
+    },
+    "s37_intervalo": {
+      "frames": 136,
+      "performers": {
+        "formiguinha": {
+          "drawings": 136,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 135
+          },
+          "empty_frames": 0
+        },
+        "laurinha": {
+          "drawings": 136,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 135
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 136,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 135
+          },
+          "empty_frames": 0
+        },
+        "joaninha": {
+          "drawings": 136,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 135
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s38_refrao": {
+      "frames": 88,
+      "performers": {
+        "laurinha": {
+          "drawings": 88,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 87
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 88,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 87
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s39_refrao": {
+      "frames": 124,
+      "performers": {
+        "mao_e": {
+          "drawings": 124,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 123
+          },
+          "empty_frames": 0
+        },
+        "mao_d": {
+          "drawings": 124,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 123
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s40_refrao": {
+      "frames": 50,
+      "performers": {
+        "mao": {
+          "drawings": 50,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 49
+          },
+          "empty_frames": 0
+        },
+        "num": {
+          "drawings": 50,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 49
+          },
+          "empty_frames": 22
+        }
+      },
+      "issues": [
+        "num: 22 quadros vazios (ex.: [1, 2, 3, 4, 5])"
+      ],
+      "frozen_samples": 0
+    },
+    "s41_refrao": {
+      "frames": 50,
+      "performers": {
+        "mao": {
+          "drawings": 50,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 49
+          },
+          "empty_frames": 0
+        },
+        "num": {
+          "drawings": 50,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 49
+          },
+          "empty_frames": 22
+        }
+      },
+      "issues": [
+        "num: 22 quadros vazios (ex.: [1, 2, 3, 4, 5])"
+      ],
+      "frozen_samples": 0
+    },
+    "s42_refrao": {
+      "frames": 50,
+      "performers": {
+        "mao_e": {
+          "drawings": 50,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 49
+          },
+          "empty_frames": 0
+        },
+        "mao_d": {
+          "drawings": 50,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 49
+          },
+          "empty_frames": 0
+        },
+        "num": {
+          "drawings": 50,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 49
+          },
+          "empty_frames": 10
+        }
+      },
+      "issues": [
+        "num: 10 quadros vazios (ex.: [1, 2, 3, 4, 5])"
+      ],
+      "frozen_samples": 0
+    },
+    "s43_refrao": {
+      "frames": 38,
+      "performers": {
+        "formiguinha": {
+          "drawings": 38,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 37
+          },
+          "empty_frames": 0
+        },
+        "laurinha": {
+          "drawings": 38,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 37
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 38,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 37
+          },
+          "empty_frames": 0
+        },
+        "joaninha": {
+          "drawings": 38,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 37
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s44_refrao": {
+      "frames": 87,
+      "performers": {
+        "formiguinha": {
+          "drawings": 87,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 86
+          },
+          "empty_frames": 0
+        },
+        "laurinha": {
+          "drawings": 87,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 86
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 87,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 86
+          },
+          "empty_frames": 0
+        },
+        "joaninha": {
+          "drawings": 87,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 86
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s45_refrao": {
+      "frames": 62,
+      "performers": {
+        "mao_e": {
+          "drawings": 62,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 61
+          },
+          "empty_frames": 0
+        },
+        "mao_d": {
+          "drawings": 62,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 61
+          },
+          "empty_frames": 0
+        },
+        "num": {
+          "drawings": 62,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 61
+          },
+          "empty_frames": 7
+        }
+      },
+      "issues": [
+        "num: 7 quadros vazios (ex.: [1, 2, 3, 4, 5])"
+      ],
+      "frozen_samples": 0
+    },
+    "s46_refrao": {
+      "frames": 188,
+      "performers": {
+        "formiguinha": {
+          "drawings": 188,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 187
+          },
+          "empty_frames": 0
+        },
+        "laurinha": {
+          "drawings": 188,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 187
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 188,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 187
+          },
+          "empty_frames": 0
+        },
+        "joaninha": {
+          "drawings": 188,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 187
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s47_final": {
+      "frames": 141,
+      "performers": {
+        "laurinha": {
+          "drawings": 141,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 140
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 141,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 140
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    }
+  },
+  "warnings": [
+    "render final ainda não aprovado (approval.final_render = false): será gerado como CANDIDATO"
+  ],
+  "lines": {},
+  "video": "/home/otavio/2d/projects/ep05-conta-comigo/output/ep05-conta-comigo_CANDIDATO.mp4",
+  "contact_sheet": "/home/otavio/2d/projects/ep05-conta-comigo/output/prancha.png",
+  "approved": false
+}
