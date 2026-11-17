@@ -148,10 +148,14 @@ class Episode:
                  "godot": file_sha(GODOT_PROJECT / "compositor.gd"), "bg": [bg_id, bg.get("layers")],
                  "beats": [round(b, 3) for b in beats_local], "sing": sing_cues})
         comp_dir = sdir / "comp"
+        qa_p = sdir / "qa.json"
         if not force and self.state.fresh(f"scene:{sid}", h, comp_dir / f"{n:06d}.png"):
-            log(f"{sid}: sem mudanças (cache)")
-            self.report["scenes"][sid] = json.loads((sdir / "qa.json").read_text()) if (sdir / "qa.json").exists() else {}
-            return comp_dir
+            try:                                        # cena interrompida no meio da gravação: qa.json vazio → refaz
+                self.report["scenes"][sid] = json.loads(qa_p.read_text()) if qa_p.exists() else {}
+                log(f"{sid}: sem mudanças (cache)")
+                return comp_dir
+            except json.JSONDecodeError:
+                log(f"{sid}: cache incompleto (render interrompido) — refazendo")
         log(f"{sid}: animando ({n} quadros)")
         qa = {"frames": n, "performers": {}, "issues": []}
         tracks, columns = {}, []
