@@ -1,0 +1,72 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Pingo de Chuva",
+ "gancho": "pingo de chuva",
+ "palavras_tema": [
+  "chuva",
+  "pingo",
+  "sombrinha",
+  "nuvem"
+ ],
+ "tipo": "educativa",
+ "tema": "dia de chuva e o caminho da água",
+ "dia_a_dia": [
+  "dia de chuva",
+  "sombrinha e capa de chuva",
+  "pular na poça",
+  "regar as plantas"
+ ],
+ "curiosidade": "a água da chuva sobe pro céu, vira nuvem e cai de novo: é o caminho da água, e a plantinha agradece",
+ "ritmo": "reggae_infantil",
+ "bpm": 86,
+ "estrutura": "A",
+ "voz": "dueto",
+ "cantam": {
+  "intro": "coro (plic, ploc, zum)",
+  "verso 1": "luisinho",
+  "refrão": "coro",
+  "verso 2": "laurinha conta o caminho da água",
+  "ponte": "comandos: chuva fininha, chuva forte, parou, saiu o sol",
+  "final": "todo mundo"
+ },
+ "cenas": [
+  {
+   "parte": "intro",
+   "ideia": "jardim visto de pertinho com céu ficando cinza; as primeiras gotas caem, cada uma do tamanho de uma bola para eles"
+  },
+  {
+   "parte": "verso 1",
+   "ideia": "Luisinho olha a nuvem ('Ih!'); uma gota gigante cai na asinha dele ('Splash! Ai!'); pega a sombrinha e a capa amarela; os dois se abrigam embaixo de uma folha gigante, sequinhos ('Ufa!')"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "pulam na poça (que para eles é um lago) com respingos grandes; abrem a sombrinha e rodam; fundo de gotinhas"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "Laurinha conta em quadros: a água sobe em vapor até o céu, vira nuvem de algodão (nuvem com carinha), cai de novo em pingos e molha o chão; a plantinha cresce e agradece ('Obrigada!')"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "chuva fininha: andam na pontinha do pé; chuva forte: pula-pula; parou: congelam e respiram ('Ufa!'); saiu o sol: o Sol aparece sorrindo e a turma comemora"
+  },
+  {
+   "parte": "final",
+   "ideia": "convite do joinha e da inscrição com o papai e a mamãe; 'Plic, ploc, tchau!' os dois acenando embaixo da sombrinha com o sol voltando"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [
+  "xote"
+ ],
+ "status": "letra_revisada",
+ "versoes": [],
+ "youtube": {
+  "resumo": "PINGO DE CHUVA! 🌧️☂️ Olha a nuvem cinza: vai chover! Um pingo gigante cai na asinha do Luisinho, e a turma pega a sombrinha e a capa amarelinha. Pula na poça, splash, splash! A Laurinha conta um segredo: a água sobe pro céu, vira nuvem e cai de novo, e a plantinha agradece. Chuva fininha, chuva forte… saiu o sol!",
+  "resumo_short": "PINGO DE CHUVA! 🌧️ Pula na poça e roda a sombrinha com a Laurinha e o Luisinho!",
+  "curiosidade": "A água da chuva sobe pro céu, vira nuvem e cai de novo: é o caminho da água"
+ }
+}

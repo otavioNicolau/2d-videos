@@ -1,0 +1,73 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Dança da Formiguinha",
+ "gancho": "dança da formiguinha",
+ "palavras_tema": [
+  "formiga",
+  "formiguinha",
+  "fila",
+  "folha"
+ ],
+ "tipo": "danca",
+ "tema": "dança em fila com a Formiguinha e trabalho em equipe",
+ "dia_a_dia": [
+  "ajudar os amigos",
+  "guardar os brinquedos juntos",
+  "andar em fila",
+  "brincar no jardim"
+ ],
+ "curiosidade": "a formiga é muito forte: carrega uma folha bem maior que ela, e juntinhas elas fazem tudo",
+ "ritmo": "funk_infantil",
+ "bpm": 130,
+ "estrutura": "D",
+ "voz": "dueto",
+ "cantam": {
+  "intro": "coro (ô-ô, zum)",
+  "verso 1": "laurinha",
+  "refrão": "coro com comandos",
+  "verso 2": "luisinho",
+  "ponte": "comandos com parada (estátua)",
+  "final": "todo mundo"
+ },
+ "cenas": [
+  {
+   "parte": "intro",
+   "ideia": "jardim visto de pertinho: uma fila de formiguinhas passa carregando folhas; a Formiguinha (personagem da turma) acena para a câmera"
+  },
+  {
+   "parte": "verso 1",
+   "ideia": "Laurinha aponta a fila ('Olha!'); a família da Formiguinha (mamãe e irmãozinhos formiga) passa com folhinhas na cabeça; 'Bora ajudar?' Laurinha e Luisinho entram na fila"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "dança em fila: marcha no lugar, folha na cabeça (braços para cima segurando a folha), pra frente e pra trás; toda a turma em fila no fundo de bolinhas"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "Formiguinha levanta uma folha enorme sozinha ('Uau!'); Luisinho tenta e não consegue ('Não dá!'); todos juntos levantam fácil ('Dá!'); depois guardam os brinquedos juntos no quarto"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "comandos: abaixa, levanta, anda de lado, pulinho; a música para e todo mundo congela ('Parou! Formiga! Estátua!')"
+  },
+  {
+   "parte": "final",
+   "ideia": "convite do joinha e da inscrição com o papai e a mamãe; tchau da turma em fila, a Formiguinha por último"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [
+  "batucada",
+  "axe"
+ ],
+ "status": "letra_revisada",
+ "versoes": [],
+ "youtube": {
+  "resumo": "DANÇA DA FORMIGUINHA! 🐜🍃 Lá no jardim tem uma fila: é a Formiguinha com a família, cada uma levando uma folhinha! A Laurinha e o Luisinho entram na dança: marcha, marcha, folha na cabeça, pra frente e pra trás! Sabia que a formiga carrega uma folha bem maior que ela? Sozinho não dá, mas juntinho dá! Abaixa, levanta… parou, estátua!",
+  "resumo_short": "DANÇA DA FORMIGUINHA! 🐜 Marcha, marcha, folha na cabeça com a Laurinha e o Luisinho!",
+  "curiosidade": "A formiga carrega uma folha bem maior que ela, e juntinhas as formigas fazem tudo"
+ }
+}

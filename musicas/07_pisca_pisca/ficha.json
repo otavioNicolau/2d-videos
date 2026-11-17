@@ -1,0 +1,72 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Pisca-Pisca de Natal",
+ "gancho": "pisca pisca",
+ "palavras_tema": [
+  "natal",
+  "pisca-pisca",
+  "árvore",
+  "estrela"
+ ],
+ "tipo": "festa",
+ "tema": "montar a árvore de Natal em família",
+ "dia_a_dia": [
+  "montar a árvore de Natal",
+  "abraçar a família",
+  "natal em família",
+  "festa de fim de ano"
+ ],
+ "curiosidade": "no Brasil o Natal é no verão, no calorzão: tem Papai Noel de bermuda e sorvete",
+ "ritmo": "pop_infantil",
+ "bpm": 124,
+ "estrutura": "A",
+ "voz": "dueto",
+ "cantam": {
+  "intro": "coro (plim, zum)",
+  "verso 1": "laurinha",
+  "refrão": "coro",
+  "verso 2": "luisinho",
+  "ponte": "laurinha dá os comandos, coro responde",
+  "final": "todo mundo"
+ },
+ "cenas": [
+  {
+   "parte": "intro",
+   "ideia": "sala da casa em dezembro vista de pertinho: as luzinhas do pisca-pisca são do tamanho deles; acendem e apagam na batida"
+  },
+  {
+   "parte": "verso 1",
+   "ideia": "Laurinha pendura bolinha vermelha e dourada (cada uma do tamanho dela); 'quem alcança?' a câmera sobe até o topo da árvore; 'quem voa!' Laurinha e Luisinho voam levando a estrela juntos"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "pisca-pisca piscando nas cores na batida; 'acende e apaga' o fundo alterna claro/escuro; 'mão pra cima, mão pra baixo' coreografia de frente"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "Natal no calor: Papai Noel de bermuda e óculos escuros (desenho nosso), sorvete derretendo, ventilador gigante soprando as antenas; abraço na vovó e na mamãe; 'a gente junto' a família toda reunida perto da árvore"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "brincadeira de piscar: pisca o olho (piscadinha), abre e fecha as mãos, bate o pezinho; no 'um, dois, três… acendeu!' a árvore inteira acende com a estrela"
+  },
+  {
+   "parte": "final",
+   "ideia": "convite do joinha e da inscrição com o papai e a mamãe; 'Feliz Natal!' todos acenando em frente à árvore acesa"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [
+  "marchinha"
+ ],
+ "status": "letra_revisada",
+ "versoes": [],
+ "youtube": {
+  "resumo": "PISCA-PISCA DE NATAL! 🎄✨ Chegou dezembro e a árvore tá na sala! A Laurinha pendura as bolinhas, mas a estrela lá no alto… quem alcança? Quem voa! Aqui no Brasil o Natal é no calorzão, com Papai Noel de bermuda e sorvete, e o melhor presente é a família junta. Pisca o olho, pisca a mão… acendeu!",
+  "resumo_short": "PISCA-PISCA DE NATAL! 🎄 Acende e apaga com a Laurinha e o Luisinho!",
+  "curiosidade": "Aqui no Brasil o Natal é no verão: tem Papai Noel de bermuda, sorvete e ventilador"
+ }
+}
