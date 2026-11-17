@@ -1,0 +1,2727 @@
+{
+ "schema": "roteiro-1.0",
+ "nota": "Roteiro verso a verso de 'Pisca-Pisca de Natal' (letra aprovada em 17/11/2026; v2 trazida pelo usuário): árvore apagada na sala, bolinhas vermelha e dourada, a estrela que só quem voa alcança, pisca-pisca no refrão, Natal no calor com Papai Noel de bermuda, sorvete e ventilador, abraço na vovó e na mamãe, brincadeira de piscar olho, mão e pé, a árvore acende no 'um, dois, três', convite e Feliz Natal.",
+ "partes": {
+  "intro": [
+   {
+    "seg": 4.4,
+    "cenario": "plano_sala",
+    "camera": {
+     "x": 1300,
+     "y": 470,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "escurece": [
+     0.45,
+     0.25
+    ],
+    "titulo": "sala em dezembro, árvore apagada",
+    "objetos": {
+     "arvore": {
+      "id": "arvore_natal",
+      "x": 1300,
+      "y": 930,
+      "z": 1,
+      "depth": 0.72,
+      "pose": {
+       "luzes": 0.0,
+       "bolinhas": 0.0,
+       "estrela": 0.0
+      }
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_sala",
+    "camera": {
+     "x": 1300,
+     "y": 470,
+     "zoom": 1.0
+    },
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "PLIM, PLIM!",
+      "color": "amarelo"
+     }
+    ],
+    "objetos": {
+     "arvore": {
+      "id": "arvore_natal",
+      "x": 1300,
+      "y": 930,
+      "z": 1,
+      "depth": 0.72,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pisca": 0.0,
+         "bolinhas": 0.0,
+         "estrela": 0.0
+        }
+       },
+       {
+        "t": 0.65,
+        "pose": {
+         "pisca": 1.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.1,
+        "pose": {
+         "pisca": 2.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.55,
+        "pose": {
+         "pisca": 3.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.0,
+        "pose": {
+         "pisca": 4.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.45,
+        "pose": {
+         "pisca": 5.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.9,
+        "pose": {
+         "pisca": 6.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.35,
+        "pose": {
+         "pisca": 7.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.8,
+        "pose": {
+         "pisca": 8.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 4.25,
+        "pose": {
+         "pisca": 9.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 4.7,
+        "pose": {
+         "pisca": 10.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 5.15,
+        "pose": {
+         "pisca": 11.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 5.6,
+        "pose": {
+         "pisca": 12.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 6.05,
+        "pose": {
+         "pisca": 13.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 6.5,
+        "pose": {
+         "pisca": 14.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 6.95,
+        "pose": {
+         "pisca": 15.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 7.4,
+        "pose": {
+         "pisca": 16.0
+        },
+        "ease": "step"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": -250,
+      "y": 520,
+      "turn": 0.4,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "fly",
+        "dur": 2.4,
+        "to_x": 820,
+        "to_y": 930
+       }
+      ]
+     },
+     "luisinho": {
+      "x": -450,
+      "y": 460,
+      "turn": 0.4,
+      "acoes": [
+       {
+        "t": 0.5,
+        "do": "fly",
+        "dur": 2.3,
+        "to_x": 1800,
+        "to_y": 930
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "verso#1": [
+   {
+    "linhas": 1,
+    "cenario": "plano_sala",
+    "camera": {
+     "x": 1200,
+     "y": 560,
+     "zoom": 1.15
+    },
+    "callout": [
+     {
+      "t": 1.0,
+      "text": "DEZEMBRO!",
+      "color": "vermelho"
+     }
+    ],
+    "objetos": {
+     "arvore": {
+      "id": "arvore_natal",
+      "x": 1450,
+      "y": 930,
+      "z": 1,
+      "depth": 0.72,
+      "pose": {
+       "luzes": 0.0,
+       "bolinhas": 0.0,
+       "estrela": 0.0
+      }
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 900,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "cheguei",
+        "dur": 1.4
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_sala",
+    "camera": {
+     "x": 1300,
+     "y": 470,
+     "zoom": 1.0
+    },
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "ÁRVORE NA SALA!",
+      "color": "verde"
+     }
+    ],
+    "objetos": {
+     "arvore": {
+      "id": "arvore_natal",
+      "x": 1300,
+      "y": 930,
+      "z": 1,
+      "depth": 0.72,
+      "pose": {
+       "luzes": 0.0,
+       "bolinhas": 0.0,
+       "estrela": 0.0
+      }
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 800,
+      "turn": 0.4,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "point",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_sala",
+    "camera": {
+     "x": 1150,
+     "y": 560,
+     "zoom": 1.35
+    },
+    "callout": [
+     {
+      "t": 1.6,
+      "text": "PLIM!",
+      "color": "vermelho"
+     }
+    ],
+    "objetos": {
+     "arvore": {
+      "id": "arvore_natal",
+      "x": 1300,
+      "y": 930,
+      "z": 1,
+      "depth": 0.72,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "luzes": 0.0,
+         "bolinhas": 0.0,
+         "estrela": 0.0
+        }
+       },
+       {
+        "t": 1.4,
+        "pose": {
+         "bolinhas": 0.5
+        },
+        "ease": "out"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 900,
+      "turn": 0.4,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "point",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_sala",
+    "camera": {
+     "x": 1450,
+     "y": 560,
+     "zoom": 1.35
+    },
+    "callout": [
+     {
+      "t": 1.6,
+      "text": "PLIM!",
+      "color": "amarelo"
+     }
+    ],
+    "objetos": {
+     "arvore": {
+      "id": "arvore_natal",
+      "x": 1300,
+      "y": 930,
+      "z": 1,
+      "depth": 0.72,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "luzes": 0.0,
+         "bolinhas": 0.5,
+         "estrela": 0.0
+        }
+       },
+       {
+        "t": 1.4,
+        "pose": {
+         "bolinhas": 1.0
+        },
+        "ease": "out"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 1700,
+      "turn": -0.4,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "point",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_sala",
+    "camera": {
+     "x": 1300,
+     "y": 470,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "E A ESTRELA?",
+      "color": "amarelo"
+     }
+    ],
+    "objetos": {
+     "arvore": {
+      "id": "arvore_natal",
+      "x": 1300,
+      "y": 930,
+      "z": 1,
+      "depth": 0.72,
+      "pose": {
+       "luzes": 0.0,
+       "bolinhas": 1.0,
+       "estrela": 0.0
+      }
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 850,
+      "turn": 0.4,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "look_around",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "danca_bolinhas_vermelho",
+    "camera": "medio:luisinho",
+    "callout": [
+     {
+      "t": 0.5,
+      "text": "QUEM ALCANÇA?",
+      "color": "azul"
+     }
+    ],
+    "atores": {
+     "luisinho": {
+      "x": 960,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "pensar",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_sala",
+    "camera": {
+     "x": 1300,
+     "y": 470,
+     "zoom": 1.0
+    },
+    "callout": [
+     {
+      "t": 0.4,
+      "text": "QUEM VOA!",
+      "color": "rosa"
+     }
+    ],
+    "objetos": {
+     "arvore": {
+      "id": "arvore_natal",
+      "x": 1300,
+      "y": 930,
+      "z": 1,
+      "depth": 0.72,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "luzes": 0.0,
+         "bolinhas": 1.0,
+         "estrela": 0.0
+        }
+       },
+       {
+        "t": 2.4,
+        "pose": {
+         "estrela": 1.0
+        },
+        "ease": "back"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 900,
+      "y": 930,
+      "segura": "estrela_natal",
+      "pose": {
+       "hand_n_x": -150,
+       "hand_n_y": -150
+      },
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "fly",
+        "dur": 2.0,
+        "to_x": 1230,
+        "to_y": 420
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1750,
+      "y": 930,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.3,
+        "do": "fly",
+        "dur": 2.0,
+        "to_x": 1400,
+        "to_y": 450
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "refrao": [
+   {
+    "linhas": 2,
+    "cenario": "plano_sala",
+    "camera": {
+     "x": 1300,
+     "y": 470,
+     "zoom": 1.0
+    },
+    "flash": true,
+    "fx": [
+     "estrelas"
+    ],
+    "callout": "PISCA, PISCA, PISCA!",
+    "objetos": {
+     "arvore": {
+      "id": "arvore_natal",
+      "x": 1300,
+      "y": 930,
+      "z": 1,
+      "depth": 0.72,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pisca": 0.0
+        }
+       },
+       {
+        "t": 0.45,
+        "pose": {
+         "pisca": 1.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "pisca": 2.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "pisca": 3.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "pisca": 4.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.25,
+        "pose": {
+         "pisca": 5.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.7,
+        "pose": {
+         "pisca": 6.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.15,
+        "pose": {
+         "pisca": 7.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.6,
+        "pose": {
+         "pisca": 8.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 4.05,
+        "pose": {
+         "pisca": 9.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 4.5,
+        "pose": {
+         "pisca": 10.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 4.95,
+        "pose": {
+         "pisca": 11.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 5.4,
+        "pose": {
+         "pisca": 12.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 5.85,
+        "pose": {
+         "pisca": 13.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 6.3,
+        "pose": {
+         "pisca": 14.0
+        },
+        "ease": "step"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 800,
+      "turn": 0.15,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "pulinho",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1800,
+      "turn": -0.15,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "pulinho",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 2,
+    "cenario": [
+     "danca_raios_vermelho",
+     "danca_raios_verde",
+     "danca_raios_amarelo"
+    ],
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "ACENDE E APAGA!",
+      "color": "amarelo"
+     }
+    ],
+    "fx": [
+     "estrelas"
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 640,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "palmas",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1280,
+      "turn": -0.15,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "palmas",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 2,
+    "cenario": "plano_sala",
+    "camera": {
+     "x": 1300,
+     "y": 470,
+     "zoom": 1.1
+    },
+    "callout": "PISCA-PISCA DE NATAL!",
+    "objetos": {
+     "arvore": {
+      "id": "arvore_natal",
+      "x": 1300,
+      "y": 930,
+      "z": 1,
+      "depth": 0.72,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pisca": 0.0
+        }
+       },
+       {
+        "t": 0.4,
+        "pose": {
+         "pisca": 1.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.8,
+        "pose": {
+         "pisca": 2.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.2,
+        "pose": {
+         "pisca": 3.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.6,
+        "pose": {
+         "pisca": 4.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.0,
+        "pose": {
+         "pisca": 5.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.4,
+        "pose": {
+         "pisca": 6.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.8,
+        "pose": {
+         "pisca": 7.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.2,
+        "pose": {
+         "pisca": 8.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.6,
+        "pose": {
+         "pisca": 9.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 4.0,
+        "pose": {
+         "pisca": 10.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 4.4,
+        "pose": {
+         "pisca": 11.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 4.8,
+        "pose": {
+         "pisca": 12.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 5.2,
+        "pose": {
+         "pisca": 13.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 5.6,
+        "pose": {
+         "pisca": 14.0
+        },
+        "ease": "step"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 2,
+    "cenario": "plano_sala",
+    "camera": {
+     "x": 1300,
+     "y": 470,
+     "zoom": 1.0
+    },
+    "fx": [
+     "confete"
+    ],
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "MÃO PRA CIMA!",
+      "color": "verde"
+     }
+    ],
+    "objetos": {
+     "arvore": {
+      "id": "arvore_natal",
+      "x": 1300,
+      "y": 930,
+      "z": 1,
+      "depth": 0.72,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pisca": 0.0
+        }
+       },
+       {
+        "t": 0.45,
+        "pose": {
+         "pisca": 1.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "pisca": 2.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "pisca": 3.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "pisca": 4.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.25,
+        "pose": {
+         "pisca": 5.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.7,
+        "pose": {
+         "pisca": 6.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.15,
+        "pose": {
+         "pisca": 7.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.6,
+        "pose": {
+         "pisca": 8.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 4.05,
+        "pose": {
+         "pisca": 9.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 4.5,
+        "pose": {
+         "pisca": 10.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 4.95,
+        "pose": {
+         "pisca": 11.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 5.4,
+        "pose": {
+         "pisca": 12.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 5.85,
+        "pose": {
+         "pisca": 13.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 6.3,
+        "pose": {
+         "pisca": 14.0
+        },
+        "ease": "step"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 800,
+      "turn": 0.15,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "bracos",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1800,
+      "turn": -0.15,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "bracos",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "intervalo#1": [
+   {
+    "linhas": 1,
+    "cenario": "danca_raios_rosa",
+    "camera": "close:laurinha",
+    "callout": "BORA, TURMINHA!",
+    "atores": {
+     "laurinha": {
+      "x": 960,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "apontar_camera",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_sala",
+    "camera": {
+     "x": 1300,
+     "y": 470,
+     "zoom": 1.0
+    },
+    "fx": [
+     "confete"
+    ],
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "LAURINHA E LUISINHO!",
+      "color": "rosa"
+     }
+    ],
+    "objetos": {
+     "arvore": {
+      "id": "arvore_natal",
+      "x": 1300,
+      "y": 930,
+      "z": 1,
+      "depth": 0.72,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pisca": 0.0
+        }
+       },
+       {
+        "t": 0.45,
+        "pose": {
+         "pisca": 1.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "pisca": 2.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "pisca": 3.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "pisca": 4.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.25,
+        "pose": {
+         "pisca": 5.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.7,
+        "pose": {
+         "pisca": 6.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.15,
+        "pose": {
+         "pisca": 7.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.6,
+        "pose": {
+         "pisca": 8.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 4.05,
+        "pose": {
+         "pisca": 9.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 4.5,
+        "pose": {
+         "pisca": 10.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 4.95,
+        "pose": {
+         "pisca": 11.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 5.4,
+        "pose": {
+         "pisca": 12.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 5.85,
+        "pose": {
+         "pisca": 13.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 6.3,
+        "pose": {
+         "pisca": 14.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 6.75,
+        "pose": {
+         "pisca": 15.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 7.2,
+        "pose": {
+         "pisca": 16.0
+        },
+        "ease": "step"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "joaninha": {
+      "x": 700,
+      "turn": 0.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 950,
+      "turn": 0.1,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1700,
+      "turn": -0.1,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ]
+     },
+     "formiguinha": {
+      "x": 1950,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "verso#2": [
+   {
+    "linhas": 1,
+    "cenario": "plano_sala",
+    "camera": {
+     "x": 1700,
+     "y": 560,
+     "zoom": 1.25
+    },
+    "callout": [
+     {
+      "t": 1.2,
+      "text": "HEIN?",
+      "color": "azul"
+     }
+    ],
+    "objetos": {
+     "vent": {
+      "id": "ventilador",
+      "x": 2050,
+      "y": 930,
+      "z": 1,
+      "depth": 1.1,
+      "keys": [
+       {
+        "t": 0,
+        "pose": {
+         "giro": 0
+        }
+       },
+       {
+        "t": 3,
+        "pose": {
+         "giro": 6
+        }
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 1650,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "pensar",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_sala",
+    "camera": {
+     "x": 1750,
+     "y": 560,
+     "zoom": 1.3
+    },
+    "callout": [
+     {
+      "t": 1.0,
+      "text": "CALOR!",
+      "color": "laranja"
+     }
+    ],
+    "objetos": {
+     "vent": {
+      "id": "ventilador",
+      "x": 2050,
+      "y": 930,
+      "z": 1,
+      "depth": 1.1,
+      "keys": [
+       {
+        "t": 0,
+        "pose": {
+         "giro": 0
+        }
+       },
+       {
+        "t": 3,
+        "pose": {
+         "giro": 8
+        }
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 1650,
+      "turn": 0.4,
+      "pose": {
+       "despenteado": 1
+      },
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "ofegante",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "padrao_estrelas_azul",
+    "callout": [
+     {
+      "t": 0.8,
+      "text": "PAPAI NOEL DE BERMUDA!",
+      "color": "vermelho"
+     }
+    ],
+    "objetos": {
+     "noel": {
+      "id": "papai_noel",
+      "x": 960,
+      "y": 1040,
+      "z": 2,
+      "depth": 1.3,
+      "keys": [
+       {
+        "t": 0,
+        "pose": {
+         "aceno": 0,
+         "ho": 0
+        }
+       },
+       {
+        "t": 1.0,
+        "pose": {
+         "ho": 1
+        }
+       },
+       {
+        "t": 1.4,
+        "pose": {
+         "ho": 0
+        }
+       },
+       {
+        "t": 2.6,
+        "pose": {
+         "aceno": 1
+        },
+        "ease": "linear"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_sala",
+    "camera": {
+     "x": 1650,
+     "y": 560,
+     "zoom": 1.3
+    },
+    "callout": [
+     {
+      "t": 0.4,
+      "text": "SORVETE!",
+      "color": "rosa"
+     }
+    ],
+    "objetos": {
+     "vent": {
+      "id": "ventilador",
+      "x": 2050,
+      "y": 930,
+      "z": 1,
+      "depth": 1.1,
+      "keys": [
+       {
+        "t": 0,
+        "pose": {
+         "giro": 0
+        }
+       },
+       {
+        "t": 3,
+        "pose": {
+         "giro": 8
+        }
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 1400,
+      "turn": 0.3,
+      "segura": "sorvete",
+      "acoes": [
+       {
+        "t": 0.3,
+        "do": "comer",
+        "dur": 1.4,
+        "item": "sorvete"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1700,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "sorriso",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_sala",
+    "camera": {
+     "x": 1100,
+     "y": 560,
+     "zoom": 1.3
+    },
+    "callout": [
+     {
+      "t": 0.6,
+      "text": "ABRAÇO!",
+      "color": "verde"
+     }
+    ],
+    "objetos": {
+     "arvore": {
+      "id": "arvore_natal",
+      "x": 1550,
+      "y": 930,
+      "z": 1,
+      "depth": 0.72,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pisca": 0.0
+        }
+       },
+       {
+        "t": 0.45,
+        "pose": {
+         "pisca": 1.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "pisca": 2.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "pisca": 3.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "pisca": 4.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.25,
+        "pose": {
+         "pisca": 5.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.7,
+        "pose": {
+         "pisca": 6.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.15,
+        "pose": {
+         "pisca": 7.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.6,
+        "pose": {
+         "pisca": 8.0
+        },
+        "ease": "step"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "vovo": {
+      "x": 900,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "abraco",
+        "dur": "resto"
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 1130,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "abraco",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_sala",
+    "camera": {
+     "x": 1100,
+     "y": 560,
+     "zoom": 1.3
+    },
+    "callout": [
+     {
+      "t": 0.6,
+      "text": "ABRAÇO!",
+      "color": "rosa"
+     }
+    ],
+    "objetos": {
+     "arvore": {
+      "id": "arvore_natal",
+      "x": 1550,
+      "y": 930,
+      "z": 1,
+      "depth": 0.72,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pisca": 0.0
+        }
+       },
+       {
+        "t": 0.45,
+        "pose": {
+         "pisca": 1.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "pisca": 2.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "pisca": 3.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "pisca": 4.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.25,
+        "pose": {
+         "pisca": 5.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.7,
+        "pose": {
+         "pisca": 6.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.15,
+        "pose": {
+         "pisca": 7.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.6,
+        "pose": {
+         "pisca": 8.0
+        },
+        "ease": "step"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "mamae": {
+      "x": 900,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "abraco",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1130,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "abraco",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 2,
+    "cenario": "plano_sala",
+    "camera": {
+     "x": 1300,
+     "y": 470,
+     "zoom": 1.0
+    },
+    "fx": [
+     "coracoes"
+    ],
+    "callout": [
+     {
+      "t": 1.6,
+      "text": "A GENTE JUNTO!",
+      "color": "vermelho"
+     }
+    ],
+    "objetos": {
+     "arvore": {
+      "id": "arvore_natal",
+      "x": 1300,
+      "y": 930,
+      "z": 1,
+      "depth": 0.72,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pisca": 0.0
+        }
+       },
+       {
+        "t": 0.45,
+        "pose": {
+         "pisca": 1.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "pisca": 2.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "pisca": 3.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "pisca": 4.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.25,
+        "pose": {
+         "pisca": 5.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.7,
+        "pose": {
+         "pisca": 6.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.15,
+        "pose": {
+         "pisca": 7.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.6,
+        "pose": {
+         "pisca": 8.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 4.05,
+        "pose": {
+         "pisca": 9.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 4.5,
+        "pose": {
+         "pisca": 10.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 4.95,
+        "pose": {
+         "pisca": 11.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 5.4,
+        "pose": {
+         "pisca": 12.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 5.85,
+        "pose": {
+         "pisca": 13.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 6.3,
+        "pose": {
+         "pisca": 14.0
+        },
+        "ease": "step"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "vovo": {
+      "x": 700,
+      "turn": 0.3
+     },
+     "laurinha": {
+      "x": 930,
+      "turn": 0.15,
+      "acoes": [
+       {
+        "t": 0.3,
+        "do": "sorriso",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1700,
+      "turn": -0.15,
+      "acoes": [
+       {
+        "t": 0.3,
+        "do": "sorriso",
+        "dur": "resto"
+       }
+      ]
+     },
+     "mamae": {
+      "x": 1920,
+      "turn": -0.3
+     }
+    }
+   }
+  ],
+  "ponte": [
+   {
+    "linhas": 1,
+    "cenario": "danca_bolinhas_amarelo",
+    "camera": "close:laurinha",
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "PISCA O OLHO!",
+      "color": "rosa"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 960,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "lid": 0.0
+        }
+       },
+       {
+        "t": 0.5,
+        "pose": {
+         "lid": 1.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.8,
+        "pose": {
+         "lid": 0.0
+        },
+        "ease": "step"
+       }
+      ],
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "sorriso",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "danca_bolinhas_azul",
+    "camera": "medio:luisinho",
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "PISCA A MÃO!",
+      "color": "azul"
+     }
+    ],
+    "atores": {
+     "luisinho": {
+      "x": 960,
+      "pose": {
+       "hand_n_x": -150,
+       "hand_n_y": -95,
+       "hand_f_x": 150,
+       "hand_f_y": -95,
+       "hand_n_bend": 0.5,
+       "hand_f_bend": -0.5
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "paw_n": 3,
+         "paw_f": 3
+        }
+       },
+       {
+        "t": 0.35,
+        "pose": {
+         "paw_n": 0,
+         "paw_f": 0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.7,
+        "pose": {
+         "paw_n": 3,
+         "paw_f": 3
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.05,
+        "pose": {
+         "paw_n": 0,
+         "paw_f": 0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.4,
+        "pose": {
+         "paw_n": 3,
+         "paw_f": 3
+        },
+        "ease": "step"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "danca_bolinhas_verde",
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "PISCA O PÉ!",
+      "color": "verde"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 640,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "pezinho",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1280,
+      "turn": -0.15,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "pezinho",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "danca_raios_vermelho",
+    "fx": [
+     "estrelas"
+    ],
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "TODO MUNDO!",
+      "color": "amarelo"
+     }
+    ],
+    "atores": {
+     "joaninha": {
+      "x": 480,
+      "turn": 0.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 800,
+      "turn": 0.1,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1120,
+      "turn": -0.1,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ]
+     },
+     "formiguinha": {
+      "x": 1440,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_sala",
+    "camera": {
+     "x": 1300,
+     "y": 470,
+     "zoom": 1.0
+    },
+    "callout": [
+     {
+      "t": 2.6,
+      "text": "ACENDEU!",
+      "color": "amarelo"
+     }
+    ],
+    "objetos": {
+     "arvore": {
+      "id": "arvore_natal",
+      "x": 1300,
+      "y": 930,
+      "z": 1,
+      "depth": 0.72,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "luzes": 0.0,
+         "estrela": 0.4
+        }
+       },
+       {
+        "t": 2.5,
+        "pose": {
+         "luzes": 1.0,
+         "estrela": 1.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.9,
+        "pose": {
+         "pisca": 1.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.3,
+        "pose": {
+         "pisca": 2.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.7,
+        "pose": {
+         "pisca": 3.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 4.1,
+        "pose": {
+         "pisca": 4.0
+        },
+        "ease": "step"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 800,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "point",
+        "dur": 2.4
+       },
+       {
+        "t": 2.6,
+        "do": "jump",
+        "dur": 0.8
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1800,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "point",
+        "dur": 2.4
+       },
+       {
+        "t": 2.7,
+        "do": "jump",
+        "dur": 0.8
+       }
+      ]
+     }
+    },
+    "escurece": [
+     0.45,
+     0.0
+    ]
+   }
+  ],
+  "intervalo#2": [
+   {
+    "linhas": 1,
+    "cenario": "danca_raios_verde",
+    "camera": "close:luisinho",
+    "callout": "ZUM-ZUM, QUE MASSA!",
+    "atores": {
+     "luisinho": {
+      "x": 960,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "bacana",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "final#1": [
+   {
+    "linhas": 1,
+    "cenario": "danca_raios_vermelho",
+    "camera": "close:laurinha",
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "GOSTOU?",
+      "color": "rosa"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 960,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "apontar_camera",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "danca_bolinhas_amarelo",
+    "callout": [
+     {
+      "t": 0.4,
+      "text": "DÁ UM JOINHA!",
+      "color": "azul"
+     }
+    ],
+    "fx": [
+     "estrelas"
+    ],
+    "objetos": {
+     "joinha": {
+      "x": 1380,
+      "y": 900,
+      "z": 3,
+      "depth": 1.3,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "escala": 0.0
+        }
+       },
+       {
+        "t": 0.4,
+        "pose": {
+         "escala": 1.0
+        },
+        "ease": "back"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 680,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "bacana",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_sala",
+    "camera": {
+     "x": 1200,
+     "y": 560,
+     "zoom": 1.15
+    },
+    "callout": [
+     {
+      "t": 0.4,
+      "text": "CHAMA O PAPAI E A MAMÃE!",
+      "color": "verde"
+     }
+    ],
+    "objetos": {
+     "arvore": {
+      "id": "arvore_natal",
+      "x": 1550,
+      "y": 930,
+      "z": 1,
+      "depth": 0.72,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pisca": 0.0
+        }
+       },
+       {
+        "t": 0.45,
+        "pose": {
+         "pisca": 1.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "pisca": 2.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "pisca": 3.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "pisca": 4.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.25,
+        "pose": {
+         "pisca": 5.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.7,
+        "pose": {
+         "pisca": 6.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.15,
+        "pose": {
+         "pisca": 7.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.6,
+        "pose": {
+         "pisca": 8.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 4.05,
+        "pose": {
+         "pisca": 9.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 4.5,
+        "pose": {
+         "pisca": 10.0
+        },
+        "ease": "step"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "mamae": {
+      "x": 950,
+      "turn": 0.2,
+      "acoes": [
+       {
+        "t": 0.3,
+        "do": "wave",
+        "dur": 1.6
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 1250,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "point",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "danca_raios_vermelho",
+    "callout": [
+     {
+      "t": 0.6,
+      "text": "INSCREVA-SE!",
+      "color": "vermelho"
+     }
+    ],
+    "fx": [
+     "coracoes"
+    ],
+    "objetos": {
+     "botao": {
+      "id": "botao_inscrever",
+      "x": 1260,
+      "y": 760,
+      "z": 3,
+      "depth": 1.2,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "escala": 0.0,
+         "aperta": 0.0
+        }
+       },
+       {
+        "t": 0.4,
+        "pose": {
+         "escala": 1.0
+        },
+        "ease": "back"
+       },
+       {
+        "t": 2.2,
+        "pose": {
+         "aperta": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 2.5,
+        "pose": {
+         "aperta": 0.0
+        },
+        "ease": "in"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 600,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "point",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "final#2": [
+   {
+    "linhas": 1,
+    "cenario": "plano_sala",
+    "camera": {
+     "x": 1300,
+     "y": 470,
+     "zoom": 1.0,
+     "zoom_fim": 1.05
+    },
+    "fx": [
+     "estrelas"
+    ],
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "FELIZ NATAL!",
+      "color": "vermelho"
+     }
+    ],
+    "objetos": {
+     "arvore": {
+      "id": "arvore_natal",
+      "x": 1300,
+      "y": 930,
+      "z": 1,
+      "depth": 0.72,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pisca": 0.0
+        }
+       },
+       {
+        "t": 0.45,
+        "pose": {
+         "pisca": 1.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "pisca": 2.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "pisca": 3.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "pisca": 4.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.25,
+        "pose": {
+         "pisca": 5.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.7,
+        "pose": {
+         "pisca": 6.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.15,
+        "pose": {
+         "pisca": 7.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.6,
+        "pose": {
+         "pisca": 8.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 4.05,
+        "pose": {
+         "pisca": 9.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 4.5,
+        "pose": {
+         "pisca": 10.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 4.95,
+        "pose": {
+         "pisca": 11.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 5.4,
+        "pose": {
+         "pisca": 12.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 5.85,
+        "pose": {
+         "pisca": 13.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 6.3,
+        "pose": {
+         "pisca": 14.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 6.75,
+        "pose": {
+         "pisca": 15.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 7.2,
+        "pose": {
+         "pisca": 16.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 7.65,
+        "pose": {
+         "pisca": 17.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 8.1,
+        "pose": {
+         "pisca": 18.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 8.55,
+        "pose": {
+         "pisca": 19.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 9.0,
+        "pose": {
+         "pisca": 20.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 9.45,
+        "pose": {
+         "pisca": 21.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 9.9,
+        "pose": {
+         "pisca": 22.0
+        },
+        "ease": "step"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "vovo": {
+      "x": 600,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "tchau",
+        "dur": "resto"
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 850,
+      "turn": 0.15,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "tchau",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1750,
+      "turn": -0.15,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "tchau",
+        "dur": "resto"
+       }
+      ]
+     },
+     "mamae": {
+      "x": 2000,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "tchau",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ]
+ }
+}

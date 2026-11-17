@@ -62,11 +62,92 @@
  "alternativas": [
   "marchinha"
  ],
- "status": "letra_aprovada",
- "versoes": [],
+ "status": "aprovada",
+ "versoes": [
+  "v1",
+  "v2"
+ ],
  "youtube": {
   "resumo": "PISCA-PISCA DE NATAL! 🎄✨ Chegou dezembro e a árvore tá na sala! A Laurinha pendura as bolinhas, mas a estrela lá no alto… quem alcança? Quem voa! Aqui no Brasil o Natal é no calorzão, com Papai Noel de bermuda e sorvete, e o melhor presente é a família junta. Pisca o olho, pisca a mão… acendeu!",
   "resumo_short": "PISCA-PISCA DE NATAL! 🎄 Acende e apaga com a Laurinha e o Luisinho!",
-  "curiosidade": "Aqui no Brasil o Natal é no verão: tem Papai Noel de bermuda, sorvete e ventilador"
- }
+  "curiosidade": "Aqui no Brasil o Natal é no verão: tem Papai Noel de bermuda, sorvete e ventilador",
+  "miniatura": "PISCA-PISCA\\nDE NATAL!",
+  "miniatura_cena": {
+   "fundo": "circulo",
+   "cores": [
+    [
+     214,
+     40,
+     40
+    ],
+    [
+     30,
+     140,
+     70
+    ],
+    [
+     255,
+     200,
+     40
+    ],
+    [
+     230,
+     60,
+     60
+    ]
+   ],
+   "heroi": {
+    "id": "laurinha",
+    "pose": {
+     "turn": 0.2,
+     "mouth": "D",
+     "holding": "estrela_natal",
+     "hand_n_x": -150,
+     "hand_n_y": -150,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3
+    }
+   },
+   "par": {
+    "id": "luisinho",
+    "pose": {
+     "turn": -0.2,
+     "mouth": "D",
+     "hand_n_x": -135,
+     "hand_n_y": -135,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3
+    }
+   },
+   "objetos": [
+    {
+     "id": "arvore_natal",
+     "pose": {
+      "pisca": 1
+     },
+     "tam": 430,
+     "x": 830,
+     "base": 735
+    },
+    {
+     "id": "papai_noel",
+     "pose": {
+      "ho": 1
+     },
+     "tam": 220,
+     "x": 140,
+     "base": 300
+    }
+   ]
+  }
+ },
+ "escolhida": "v2"
 }

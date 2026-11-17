@@ -1,0 +1,103 @@
+{
+ "schema": "avaliacao-1.0",
+ "versoes": {
+  "v1": {
+   "arquivo": "v1.wav",
+   "duracao": 189.8,
+   "bpm": 143.6,
+   "bpm_nota": "",
+   "tom": "Ré maior",
+   "voz_inicio": 4.7,
+   "refrao_inicio": null,
+   "cantado": 79,
+   "intervalos": [
+    [
+     7.3,
+     6.5
+    ],
+    [
+     33.9,
+     2.5
+    ],
+    [
+     132.2,
+     11.8
+    ]
+   ],
+   "fim_depois_da_voz": 1.1,
+   "final": "esmaecendo",
+   "silencio_final": 0.1,
+   "acerto": 66,
+   "nao_reconhecidas": [
+    "pisca",
+    "plim",
+    "chegou",
+    "arvore",
+    "laurinha",
+    "luisinho",
+    "aqui",
+    "bermuda",
+    "dois",
+    "tres"
+   ],
+   "pontos_a_conferir": [
+    "andamento 144 fora da faixa do Pop infantil (115–130)",
+    "o gancho não foi reconhecido na transcrição",
+    "duração 190 s fora do alvo 140–170 s",
+    "só 66% da letra reconhecida — ouvir a pronúncia"
+   ]
+  },
+  "v2": {
+   "arquivo": "v2.wav",
+   "duracao": 177.1,
+   "bpm": 107.7,
+   "bpm_nota": "leitura 161 ajustada ×0.666667",
+   "tom": "Sol maior",
+   "voz_inicio": 4.9,
+   "refrao_inicio": null,
+   "cantado": 90,
+   "intervalos": [
+    [
+     171.0,
+     2.6
+    ]
+   ],
+   "fim_depois_da_voz": 0.1,
+   "final": "esmaecendo",
+   "silencio_final": 0.0,
+   "acerto": 66,
+   "nao_reconhecidas": [
+    "pisca",
+    "plim",
+    "dourada",
+    "luisinho",
+    "acendeu"
+   ],
+   "pontos_a_conferir": [
+    "andamento 108 fora da faixa do Pop infantil (115–130)",
+    "o gancho não foi reconhecido na transcrição",
+    "só 66% da letra reconhecida — ouvir a pronúncia",
+    "menos de 2 intervalos de dança"
+   ]
+  }
+ },
+ "ouvido": {
+  "v1": {
+   "1 começo chama atenção": null,
+   "5 melodia combina com a letra": null,
+   "6 dá vontade de dançar": null,
+   "7 pronúncia natural": null,
+   "8 tem a cara do canal": null,
+   "9 nenhum trecho cansativo": null
+  },
+  "v2": {
+   "1 começo chama atenção": null,
+   "5 melodia combina com a letra": null,
+   "6 dá vontade de dançar": null,
+   "7 pronúncia natural": null,
+   "8 tem a cara do canal": null,
+   "9 nenhum trecho cansativo": null
+  }
+ },
+ "escolhida": "v2"
+}
