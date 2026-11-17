@@ -34,6 +34,7 @@ transcrição da voz só para contar versos e repetições; nada da letra delas 
 | Andamento | dois grupos: **~130 BPM** (Sorvete, Neneco, Pintinho, Teréu, Trem) e **~160–172** (Batidão, Calango, Celular, Escola); Rock do Billy ~108; 4 ambíguas (metade/dobro) | não é tudo 172: a faixa de cada ritmo em `estilos.json` vale |
 | Tom | **13 de 13 em tom maior** | sempre maior |
 | Mixagem | bateria ~36% e voz ~37% (empatadas no topo); baixo ~12% | bateria tão alta quanto a voz nos ritmos de peso forte |
+| Mixagem em 4 faixas (17/11, Celular do Vovô, pedido do usuário: "esse tipo de toque") | bateria 36%, **baixo 19%**, **instrumentos 23%**, **voz 23%**; as nossas saíam com voz 32–43%, baixo 13–16% e instrumentos 9–19% (arranjo magro, voz alta) | Style do canal pede banda cheia, baixo saltado, teclados e metais, voz dentro da mistura; tirado o "vocals buried" do Exclude |
 | Tempo cantado | 46–76% (mediana 62%) | deixar ~1/3 da música para dançar |
 | **Verso** | **3 a 5 palavras** (mediana 4), **1 a 2 s** cada | versos curtos; nossos versos de 6–8 palavras são longos |
 | Variedade | 31–72 linhas cantadas, mas só **8–31 diferentes** (mediana ~23); 57–100% das linhas se repetem | poucas ideias, muito bem repetidas |

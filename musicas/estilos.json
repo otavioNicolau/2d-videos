@@ -18,12 +18,13 @@
    "repeated chorus",
    "medley"
   ],
-  "duracao": "short song under 2 minutes 40 seconds, ends after the last chorus"
+  "duracao": "short song under 2 minutes 40 seconds, ends after the last chorus",
+  "producao": "full band arrangement, bouncy prominent bassline, rich keyboards and brass, vocals sitting in the mix with the band, polished professional kids music production"
  },
  "peso": {
   "forte": {
-   "descricao": "festa: bateria e percussão fortes, empatadas com a voz (medição da referência: ~36% × ~37%), virada antes de cada refrão, intervalos só de batucada",
-   "style": "heavy drum-driven beat, vocals and drums equally upfront, clear lead vocals, big drum fills before every chorus, percussion breakdowns",
+   "descricao": "festa: bateria forte, baixo saltado e banda cheia; voz dentro da mistura (medição 4 faixas da referência Celular do Vovô: bateria 36%, baixo 19%, instrumentos 23%, voz 23%)",
+   "style": "heavy drum-driven beat, punchy kick and snare, big drum fills before every chorus, percussion breakdowns",
    "exclude": [
     "slow",
     "ballad",
@@ -31,7 +32,7 @@
     "weak drums",
     "quiet beat",
     "acoustic only",
-    "vocals buried"
+    "thin arrangement"
    ],
    "intervalo": "[Drum Break - {s} seconds, heavy drums and percussion only]"
   },
@@ -42,7 +43,8 @@
     "slow",
     "ballad",
     "weak drums",
-    "quiet beat"
+    "quiet beat",
+    "thin arrangement"
    ],
    "intervalo": "[Instrumental Break - {s} seconds, percussion and groove]"
   },

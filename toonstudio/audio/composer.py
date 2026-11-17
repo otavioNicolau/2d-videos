@@ -147,7 +147,7 @@ def style(f: dict, ritmo: str | None = None, bpm: int | None = None, E: dict | N
     p = E["peso"][r["peso"]]
     bpm = bpm or (f["bpm"] if rid == f["ritmo"] else r["bpm"][2])
     voz = V["vozes"][f.get("voz", "dueto")]["style"]
-    parts = [E["canal"].get("duracao", ""), r["genero"], f"{bpm} bpm", p["style"], r["bateria"], r["instrumentos"], r["clima"], f.get("style_extra", ""),
+    parts = [E["canal"].get("duracao", ""), r["genero"], f"{bpm} bpm", p["style"], E["canal"].get("producao", ""), r["bateria"], r["instrumentos"], r["clima"], f.get("style_extra", ""),
              voz, V["coro"]["style"], E["canal"]["sempre"]]
     return ", ".join(x for x in parts if x)
 
