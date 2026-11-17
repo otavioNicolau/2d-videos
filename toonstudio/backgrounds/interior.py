@@ -26,7 +26,7 @@ from .plano import Flat, PAL as PPAL, _surf
 W_INT, H = 2600, 1080
 FLOOR_Y = 760          # encontro parede/chão (o personagem pisa por volta de y 930, à frente)
 QUARTO = {"rosa": ("#FFD6EC", "#FFC2E2", "#E8B27A"), "azul": ("#D6ECFF", "#C2E0FF", "#E8B27A")}
-MOTIVOS = ("bananas", "leite", "lacos", "estrelas", "coracoes", "bolhas", "bolo", "feijao", "gotas")
+MOTIVOS = ("bananas", "leite", "lacos", "estrelas", "coracoes", "bolhas", "bolo", "feijao", "gotas", "respingos", "arcoiris")
 
 
 def _text(c, txt, x, y, size, col, outline=None):
@@ -180,7 +180,8 @@ def ceu(rng) -> tuple[skia.Surface, int]:
 
 
 COR_MOTIVO = {"bananas": "#FFE066", "leite": "#FFFFFF", "lacos": "#FFD23F", "estrelas": "#FFFFFF", "coracoes": "#FFFFFF",
-              "bolhas": "#E8F6FF", "bolo": "#F7C948", "feijao": "#8E3B2E", "gotas": "#9CD8FF"}
+              "bolhas": "#E8F6FF", "bolo": "#F7C948", "feijao": "#8E3B2E", "gotas": "#9CD8FF", "arcoiris": "#FFFFFF"}
+TINTAS = ("#2F86F0", "#FFD21F", "#EE3B3B", "#2DBE5A", "#FF8A1F", "#8E44EF")   # respingos: uma cor por desenho
 
 
 def _motivo(c, kind, x, y, s, col):
@@ -245,6 +246,25 @@ def _motivo(c, kind, x, y, s, col):
         path.cubicTo(-12, 34, -24, 26, -24, 10); path.cubicTo(-24, 0, -14, -12, 0, -34); path.close()
         c.drawPath(path, p); c.drawPath(path, pl)
         c.drawCircle(-9, 8, 5, skia.Paint(AntiAlias=True, Color4f=skia.Color4f(1, 1, 1, 1)))
+    elif kind == "respingos":                                   # mancha de tinta com gotinhas em volta
+        path = skia.Path()
+        for j in range(24):
+            t = j / 24 * 2 * math.pi
+            r = 34 * (1 + 0.3 * math.sin(5 * t) + 0.12 * math.sin(3 * t + 1))
+            (path.moveTo if j == 0 else path.lineTo)(r * math.cos(t), r * math.sin(t))
+        path.close()
+        c.drawPath(path, p); c.drawPath(path, pl)
+        for dx, dy, r in ((52, -20, 8), (-48, 30, 6), (30, 50, 7)):
+            c.drawCircle(dx, dy, r, p); c.drawCircle(dx, dy, r, pl)
+    elif kind == "arcoiris":                                    # arco-íris pequeno com nuvenzinhas
+        for i, cc in enumerate(("#EE3B3B", "#FF8A1F", "#FFD21F", "#2DBE5A", "#2F86F0", "#8E44EF")):
+            r = 54 - i * 7
+            arc = skia.Path()
+            arc.addArc(skia.Rect(-r, -r + 10, r, r + 10), 180, 180)
+            c.drawPath(arc, skia.Paint(AntiAlias=True, Color4f=skia.Color4f(*_rgba(cc)), Style=skia.Paint.kStroke_Style,
+                                       StrokeWidth=7.5 / max(s, 1e-3) * s))
+        for cx in (-42, 42):
+            c.drawCircle(cx, 12, 13, p); c.drawCircle(cx, 12, 13, pl)
     elif kind == "coracoes":
         path = skia.Path()
         path.moveTo(0, 30); path.cubicTo(-50, -4, -26, -44, 0, -18); path.cubicTo(26, -44, 50, -4, 0, 30); path.close()
@@ -264,7 +284,8 @@ def padrao(kind: str, color: str, scale: float, gap: int = 180):
             x = k * gap + (gap / 2 if r % 2 else 0)
             ang = 0.35 if (r + k) % 2 else -0.35
             c.save(); c.translate(x, r * gap); c.rotate(math.degrees(ang))
-            _motivo(c, kind, 0, 0, 1.2, COR_MOTIVO.get(kind, light))
+            cor_m = TINTAS[(r * 3 + k) % len(TINTAS)] if kind == "respingos" else COR_MOTIVO.get(kind, light)
+            _motivo(c, kind, 0, 0, 1.2, cor_m)
             c.restore()
     return s, w, h, P_
 
@@ -294,8 +315,38 @@ def banheiro(rng) -> tuple[skia.Surface, int]:
     return s, W_INT
 
 
+def jardim(rng) -> tuple[skia.Surface, int]:
+    """Jardim visto por quem é pequenininho (mundo pequenino): hastes de flores e folhas de grama GIGANTES, céu, chão de grama."""
+    w = W_INT
+    s, c = _surf(w, H, 1.5)
+    F = Flat(c)
+    c.drawRect(skia.Rect(0, 0, w, H), skia.Paint(Color4f=skia.Color4f(*_rgba("#A8D8FF"))))
+    for x, y, sc in ((300, 140, 1.4), (1150, 90, 1.7), (2050, 160, 1.3)):
+        F.cloud(x, y, sc)
+    flores = (("#FF6FA8", "#FFD23F"), ("#FFFFFF", "#FFC21A"), ("#9B6CFF", "#FFE066"), ("#FF8A1F", "#FFF3B0"), ("#3C8BF0", "#FFFFFF"))
+    for i, x in enumerate(range(160, w, 420)):                  # flores gigantes ao fundo (haste + folha + flor)
+        topo = 170 + (i * 97) % 180
+        F.shape([(x - 16, FLOOR_Y + 20), (x - 12, topo), (x + 12, topo), (x + 16, FLOOR_Y + 20)], "#3DAE4E", smooth=False)
+        F.leaf(x + 14, topo + 300, 170, -0.5, "#4CC35E")
+        F.leaf(x - 14, topo + 420, 150, math.pi + 0.5, "#4CC35E")
+        petala, miolo = flores[i % len(flores)]
+        for j in range(8):
+            a = j * math.pi / 4
+            F.oval(x + math.cos(a) * 92, topo + math.sin(a) * 92, 62, 42, petala, a=a)
+        F.oval(x, topo, 64, 64, miolo)
+    for i, x in enumerate(range(0, w + 120, 130)):               # folhas de grama altas na frente do fundo
+        h = 260 + (i * 53) % 160
+        lean = 40 if i % 2 else -30
+        F.shape([(x - 34, FLOOR_Y + 40), (x + lean, FLOOR_Y - h), (x + 34, FLOOR_Y + 40)], "#5CCB5F" if i % 2 else "#49B84F")
+    F.shape([(-20, FLOOR_Y), (w + 20, FLOOR_Y), (w + 20, H + 20), (-20, H + 20)], "#7BD36A", smooth=False)
+    for x in range(40, w, 90):                                  # tufinhos no chão
+        F.grass_ticks(x + (x * 7) % 40, FLOOR_Y + 60 + (x * 13) % 220)
+    return s, w
+
+
 SCENES = {"plano_banheiro": banheiro, "plano_quarto_rosa": lambda rng: quarto("rosa", rng), "plano_quarto_azul": lambda rng: quarto("azul", rng),
-          "plano_cozinha": cozinha, "plano_casa_frente": casa_frente, "plano_escola": escola, "plano_ceu": ceu}
+          "plano_cozinha": cozinha, "plano_casa_frente": casa_frente, "plano_escola": escola, "plano_ceu": ceu,
+          "plano_jardim": jardim}
 
 
 def build(bg_id: str, out_dir: Path, scale: float = 1.5, seed: int = 11) -> dict:
