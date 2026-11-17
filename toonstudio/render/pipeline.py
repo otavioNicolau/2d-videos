@@ -568,6 +568,14 @@ class Episode:
     def run(self, only: list[str] | None = None, force: bool = False) -> Path:
         t0 = time.time()
         self.check()
+        # render interrompido (sessão fechada no meio) deixa .json vazios no cache: a cena inteira é refeita
+        for vazio in self.build.rglob("*.json") if self.build.exists() else []:
+            if vazio.stat().st_size == 0:
+                cena = next((pp for pp in vazio.parents if pp.parent.name == "scenes"), None)
+                log(f"cache incompleto: {vazio.relative_to(self.build)} — refazendo")
+                vazio.unlink()
+                if cena is not None:
+                    shutil.rmtree(cena, ignore_errors=True)
         bgs = self.background()
         song = self.song()
         lines = self.voices()
