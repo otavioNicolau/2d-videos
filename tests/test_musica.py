@@ -245,3 +245,19 @@ def test_published_songs_have_a_colorful_thumbnail_scene():
             ids.append(cena["par"]["id"])
         for i in ids:
             assert i in CHARACTERS, f"{p.parent.name}: '{i}' não existe"
+
+
+def test_thumbnails_do_not_repeat_background():
+    """Cada miniatura tem fundo próprio: a combinação (formato, cores) não se repete entre músicas."""
+    from pathlib import Path
+    from toonstudio.composition.canal import FUNDOS
+    vistos = {}
+    for p in sorted(Path("musicas").glob("*/ficha.json")):
+        cena = json.loads(p.read_text(encoding="utf-8")).get("youtube", {}).get("miniatura_cena")
+        if not cena:
+            continue
+        assert cena.get("fundo") in FUNDOS and len(cena.get("cores", [])) >= 3, f"{p.parent.name}: defina fundo e cores"
+        chave = (cena["fundo"], tuple(map(tuple, cena["cores"])))
+        assert chave not in vistos, f"{p.parent.name} repete o fundo de {vistos.get(chave)}"
+        assert tuple(map(tuple, cena["cores"])) not in [k[1] for k in vistos], f"{p.parent.name} repete as cores de outra música"
+        vistos[chave] = p.parent.name

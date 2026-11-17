@@ -146,10 +146,10 @@ Elemento que falhar em qualquer item é corrigido antes de entrar. A verificaç�
 - Sem molas exageradas, sem braço de borracha, sem câmera pulsando.
 
 ## 7b. Miniatura (YouTube, 1280×720)
-- Fundo: raios em 6 cores fortes (rosa, amarelo, verde, azul, roxo, laranja) saindo de trás da personagem-destaque, com halo branco suave.
-- Personagem-destaque grande à esquerda, cortada na cintura, com o objeto da música na mão; o par à direita, menor.
+- Fundo: cada vídeo tem CORES e FORMATO próprios (nunca repetir a combinação de outro vídeo). Formatos: `raios` (leque), `faixas` (listras diagonais), `circulo` (fundo cortado na diagonal + círculo grande atrás da personagem), `aneis` (círculos concêntricos). 4 cores fortes, ligadas ao tema, que contrastem com a personagem (Luisinho azul não vai sobre azul).
+- Personagem-destaque grande, cortada na cintura, com o objeto da música na mão; o par do outro lado, menor. Alternar o lado entre os vídeos (`lado: direita` espelha a cena e leva o título para a esquerda).
 - Objetos-tema da música desenhados grandes (ex.: tubo de pasta e gotinha, janela e sol, joaninha). Nunca miniatura sem imagem da música.
-- Título no canto superior direito: 1ª linha branca, 2ª amarela, contorno escuro grosso. Sem logo.
+- Título no canto superior oposto ao destaque: 1ª linha branca, 2ª amarela, contorno escuro grosso. Sem logo.
 - Canto inferior direito sem nada importante (o YouTube cobre com a duração). Alternar a personagem-destaque entre os vídeos.
 - A cena fica na ficha da música (`youtube.miniatura_cena`) e é gerada no `publicar`.
 

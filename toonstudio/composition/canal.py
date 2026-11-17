@@ -9,7 +9,7 @@ from __future__ import annotations
 import math
 from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageFilter, ImageFont
+from PIL import Image, ImageDraw, ImageFilter, ImageFont, ImageOps
 
 from ..backgrounds import registry
 from ..characters.base import expression
@@ -154,6 +154,51 @@ def _ajusta(im: Image.Image, maior: int, giro: float = 0) -> Image.Image:
     return im.rotate(giro, expand=True, resample=Image.BICUBIC) if giro else im
 
 
+FUNDOS = ("raios", "faixas", "circulo", "aneis")                   # formato do fundo: muda de um vídeo para o outro
+
+
+def _halo(img: Image.Image, cx: float, cy: float, r: float = 290, a: int = 170) -> None:
+    h = Image.new("RGBA", img.size, (0, 0, 0, 0))
+    ImageDraw.Draw(h).ellipse([cx - r, cy - r, cx + r, cy + r], fill=(255, 255, 255, a))
+    img.alpha_composite(h.filter(ImageFilter.GaussianBlur(60)))
+
+
+def _fundo(formato: str, cores: list, cx: float, cy: float, W: int, H: int) -> Image.Image:
+    """Fundo chapado da miniatura. raios = leque saindo da personagem; faixas = listras diagonais largas;
+    circulo = fundo cortado na diagonal com um círculo grande atrás da personagem; aneis = círculos concêntricos."""
+    if formato not in FUNDOS:
+        raise ValueError(f"fundo de miniatura desconhecido: {formato} (use {FUNDOS})")
+    img = Image.new("RGBA", (W, H), cores[0] + (255,))
+    d = ImageDraw.Draw(img)
+    if formato == "raios":
+        n = len(cores) * 2
+        for k in range(n):
+            a0 = -math.pi / 2 + k * 2 * math.pi / n
+            a1 = a0 + 2 * math.pi / n
+            d.polygon([(cx, cy), (cx + 2200 * math.cos(a0), cy + 2200 * math.sin(a0)),
+                       (cx + 2200 * math.cos(a1), cy + 2200 * math.sin(a1))], fill=cores[k % len(cores)] + (255,))
+        _halo(img, cx, cy)
+    elif formato == "faixas":
+        larg, inc = 190, 0.55                                      # listras inclinadas (sobem para a direita)
+        for k in range(-12, 20):
+            x0 = k * larg
+            d.polygon([(x0, H), (x0 + larg, H), (x0 + larg + H * inc, 0), (x0 + H * inc, 0)], fill=cores[k % len(cores)] + (255,))
+        _halo(img, cx, cy, 300, 190)
+    elif formato == "circulo":
+        d.polygon([(0, 0), (W * 0.62, 0), (W * 0.40, H), (0, H)], fill=cores[0] + (255,))
+        d.polygon([(W * 0.62, 0), (W, 0), (W, H * 0.55), (W * 0.52, H * 0.55)], fill=cores[1] + (255,))
+        d.polygon([(W * 0.52, H * 0.55), (W, H * 0.55), (W, H), (W * 0.40, H)], fill=cores[3 % len(cores)] + (255,))
+        r = 330
+        d.ellipse([cx - r - 18, cy - r - 18, cx + r + 18, cy + r + 18], fill=(255, 255, 255, 255))
+        d.ellipse([cx - r, cy - r, cx + r, cy + r], fill=cores[2 % len(cores)] + (255,))
+        _halo(img, cx, cy, 220, 120)
+    else:                                                          # aneis
+        for i, r in enumerate(range(1500, 0, -120)):
+            d.ellipse([cx - r, cy - r, cx + r, cy + r], fill=cores[i % len(cores)] + (255,))
+        _halo(img, cx, cy, 260, 150)
+    return img
+
+
 def miniatura(titulo: str, nome: str, cena: dict | None = None) -> Path:
     """Miniatura 1280×720 no padrão dos canais infantis grandes: raios coloridos, personagem em close à esquerda,
     os objetos da música desenhados grandes e o título no canto superior direito. O canto inferior direito fica
@@ -168,17 +213,7 @@ def miniatura(titulo: str, nome: str, cena: dict | None = None) -> Path:
                                     "paw_n": 3, "hand_f_x": 135, "hand_f_y": -135, "hand_f_bend": -0.5, "paw_f": 3}})
     cx, cy = cena.get("centro", (430, 430))
     cores = [tuple(c) for c in cena.get("cores", CORES_RAIOS)]
-    img = Image.new("RGBA", (W, H))
-    d = ImageDraw.Draw(img)
-    n = len(cores) * 2
-    for k in range(n):
-        a0 = -math.pi / 2 + k * 2 * math.pi / n
-        a1 = a0 + 2 * math.pi / n
-        d.polygon([(cx, cy), (cx + 2200 * math.cos(a0), cy + 2200 * math.sin(a0)),
-                   (cx + 2200 * math.cos(a1), cy + 2200 * math.sin(a1))], fill=cores[k % len(cores)] + (255,))
-    brilho = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    ImageDraw.Draw(brilho).ellipse([cx - 290, cy - 290, cx + 290, cy + 290], fill=(255, 255, 255, 170))
-    img.alpha_composite(brilho.filter(ImageFilter.GaussianBlur(60)))
+    img = _fundo(cena.get("fundo", "raios"), cores, cx, cy, W, H)
     if par:                                                        # o par fica atrás, à direita, cortado embaixo
         im = _char(par["id"], _pose(par.get("pose", {})), par.get("tam", 600))
         _paste(img, im, par.get("x", 1060), H + par.get("corte", 150))
@@ -190,12 +225,15 @@ def miniatura(titulo: str, nome: str, cena: dict | None = None) -> Path:
     for o in cena.get("frente", []):                               # objetos na frente da personagem
         im = _ajusta(_char(o["id"], o.get("pose", {}), 400), o.get("tam", 300), o.get("giro", 0))
         _paste(img, im, o["x"], o["base"])
+    espelho = cena.get("lado") == "direita"                       # destaque à direita e título à esquerda
+    if espelho:
+        img = ImageOps.mirror(img)
     d = ImageDraw.Draw(img)
     y = 30
     for i, l in enumerate(titulo.split("\n")):
         size = 104 if len(l) <= 10 else 88
         f = ImageFont.truetype(FONT, size)
-        x = W - 40 - d.textlength(l, font=f)
+        x = 40 if espelho else W - 40 - d.textlength(l, font=f)
         d.text((x, y), l, font=f, fill=TINTA, stroke_width=22, stroke_fill=TINTA)
         d.text((x, y), l, font=f, fill=(255, 255, 255) if i == 0 else (255, 226, 40), stroke_width=9, stroke_fill=TINTA)
         y += size + 12
