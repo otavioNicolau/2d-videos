@@ -1,5 +1,9 @@
 # Calendário de publicação (sugestão)
 
+**Produção: na ordem dos números (07, 08, 09…)** — decisão do usuário em 17/11/2026. Os vídeos ficam prontos na
+pasta e a publicação segue a tabela abaixo (intercalada e com as datas). As músicas de data (16, 18, 19, 20, 23, 25)
+precisam estar prontas antes da semana delas.
+
 Ritmo de **1 vídeo por semana** a partir de 24/11/2026 (semana = data de referência; ajuste conforme a produção).
 Padrão: **2 autorais + 1 clássica** (domínio público, ver [CLASSICAS.md](CLASSICAS.md)). Músicas de data entram
 2 a 3 semanas antes do dia. Temas parecidos ficam longe um do outro (ex.: contagem da Galinha longe da 05 Conta
