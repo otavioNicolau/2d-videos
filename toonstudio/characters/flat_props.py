@@ -871,9 +871,11 @@ class ArcoIris(_Prop):
             ext = [(-r1 * math.cos(a), -60 - r1 * math.sin(a)) for a in np.linspace(0, a_fim, 40)]
             inn = [(-r2 * math.cos(a), -60 - r2 * math.sin(a)) for a in np.linspace(a_fim, 0, 40)]
             shape(k, ext + inn, c, line=dark(c, 0.8), smooth=False)
-        for cx in (-R0 + 3 * w, R0 - 3 * w):                       # nuvens nas pontas
-            for dx, dy, r in ((-90, -10, 70), (0, -50, 90), (90, -10, 70), (0, 10, 80)):
-                shape(k, ellipse_pts(cx + dx, -40 + dy, r, r * 0.85, 0, 20), "#FFFFFF", line="#BFD6EA")
+        nv = min(1.0, n * 1.5)                                    # nuvens nascem junto com a 1ª faixa
+        if nv > 0.05:
+            for cx in (-R0 + 3 * w, R0 - 3 * w):                   # nuvens nas pontas
+                for dx, dy, r in ((-90, -10, 70), (0, -50, 90), (90, -10, 70), (0, 10, 80)):
+                    shape(k, ellipse_pts(cx + dx * nv, -40 + dy * nv, r * nv, r * 0.85 * nv, 0, 20), "#FFFFFF", line="#BFD6EA")
 
 
 PROPS.update({"morango": Morango, "banana_grande": BananaGrande, "folha": Folha, "potes_tinta": PotesTinta,

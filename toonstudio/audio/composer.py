@@ -636,6 +636,7 @@ def tipo_secao(tag: str) -> str:
     t = tag.lower()
     for chave, tipo in (("intro", "intro"), ("verse", "verso"), ("chorus", "refrao"), ("bridge", "ponte"), ("outro", "final"),
                         ("shout", "bordao"), ("drum fill", "virada"), ("percussion fill", "virada"), ("stop", "parada"),
+                        ("build", "subida"),
                         ("end", "fim")):
         if t.startswith(chave):
             return tipo

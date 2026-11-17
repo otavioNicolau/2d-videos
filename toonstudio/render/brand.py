@@ -55,7 +55,8 @@ def _esc(t: str) -> str:
 
 CALLOUT_COLORS = {"amarelo": ("&H003FD2FF", "&H001565E0"), "rosa": ("&H00B36FF7", "&H006A1FB0"),
                   "azul": ("&H00F08B3C", "&H00803010"), "verde": ("&H0067CB4F", "&H00206B1A"),
-                  "laranja": ("&H004DB0FF", "&H000A50C8")}
+                  "laranja": ("&H004DB0FF", "&H000A50C8"), "vermelho": ("&H003B3BEE", "&H0015158A"),
+                  "roxo": ("&H00F55C9B", "&H008C1E4A"), "marrom": ("&H00406A9A", "&H00142E4A")}
 
 
 def ass(out: Path, W: int, H: int, lines: list[dict], card: str | None, footer: str | None, duration: float,

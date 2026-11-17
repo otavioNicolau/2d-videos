@@ -350,12 +350,13 @@ def dance(char, st, a):
 @action("wave", "interaction", "Acenar para a câmera (tchau/oi), mão balançando.", {"dur": "s"})
 def wave(char, st, a):
     d = float(a.get("dur", 1.2))
-    keys = [(0.0, {}, "step"), (0.15, {"hand_n_x": -55, "hand_n_y": -80, "hand_n_bend": 0.35, "paw_n": 3}, "back")]
+    # mão bem no alto e para fora da cabeça (na altura do peito ela some no corpo — storyboard ep04)
+    keys = [(0.0, {}, "step"), (0.15, {"hand_n_x": -115, "hand_n_y": -138, "hand_n_bend": 0.5, "paw_n": 3}, "back")]
     t, k = 0.15, 0
     while t < d:
         t += 0.16
         k += 1
-        keys.append((t, {"hand_n_x": -55 + (22 if k % 2 else -8)}, "inout"))
+        keys.append((t, {"hand_n_x": -115 + (26 if k % 2 else -10)}, "inout"))
     keys.append((d + 0.25, {"hand_n_x": -14, "hand_n_y": 82, "hand_n_bend": 0.2, "paw_n": 0}, "inout"))
     return ActionResult(keys=keys, dur=d + 0.25, ex=1)
 

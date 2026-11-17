@@ -70,7 +70,7 @@ def _letra_publicavel(musica: Path) -> str:
 
 def _capitulos(song: dict, offset: float, total: float) -> list[tuple[float, str]]:
     nomes = {"intro": "Abertura", "verso": "Verso", "refrao": "Refrão", "ponte": "Curiosidade", "intervalo": "Hora de dançar",
-             "parada": "Hora da estátua",
+             "parada": "Hora da estátua", "subida": "Todo mundo junto",
              "final": "Tchau!"}
     from .clip_draft import blocos
     caps = [(0.0, "Abertura")]

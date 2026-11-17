@@ -1,0 +1,1986 @@
+{
+ "schema": "roteiro-1.0",
+ "nota": "Roteiro verso a verso de 'Cadê a Cor?' (letra aprovada no chat em 17/11/2026; versão v2 escolhida pelo usuário): mundo pequenino no jardim, cores que acendem no 'cadê?', Luisinho mistura tintas e fica marrom, quiz com a Laurinha rosinha e o Luisinho azulzinho, arco-íris cor por cor e despedida da turma nas repetições do 'tchau' que o Suno cantou.",
+ "partes": {
+  "intro": [
+   {
+    "seg": 4.5,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "atores": {
+     "laurinha": {
+      "x": -250,
+      "y": 500,
+      "turn": 0.4,
+      "acoes": [
+       {
+        "t": 0.3,
+        "do": "fly",
+        "dur": 2.2,
+        "to_x": 1150,
+        "to_y": 930
+       }
+      ]
+     },
+     "luisinho": {
+      "x": -450,
+      "y": 420,
+      "turn": 0.4,
+      "acoes": [
+       {
+        "t": 0.6,
+        "do": "fly",
+        "dur": 2.4,
+        "to_x": 1480,
+        "to_y": 930
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "danca_raios_vermelho",
+    "flash": true,
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "ZUM, ZUM!",
+      "color": "amarelo"
+     }
+    ],
+    "fx": [
+     "estrelas"
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 700,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "asinhas",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1220,
+      "turn": -0.15,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "asinhas",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "verso#1": [
+   {
+    "linhas": 1,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1350,
+     "y": 560,
+     "zoom": 1.25
+    },
+    "callout": [
+     {
+      "t": 1.4,
+      "text": "VERMELHO!",
+      "color": "vermelho"
+     }
+    ],
+    "objetos": {
+     "morango": {
+      "x": 1620,
+      "y": 940,
+      "z": 2,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "cor": 0.0
+        }
+       },
+       {
+        "t": 1.3,
+        "pose": {
+         "cor": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "cor": 1.0
+        },
+        "ease": "out"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 1120,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "look_around",
+        "dur": 1.2
+       },
+       {
+        "t": 1.4,
+        "do": "point",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.2
+    },
+    "callout": [
+     {
+      "t": 1.1,
+      "text": "AMARELO!",
+      "color": "amarelo"
+     }
+    ],
+    "objetos": {
+     "banana": {
+      "id": "banana_grande",
+      "x": 1450,
+      "y": 960,
+      "z": 2,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "cor": 0.0
+        }
+       },
+       {
+        "t": 1.0,
+        "pose": {
+         "cor": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.5,
+        "pose": {
+         "cor": 1.0
+        },
+        "ease": "out"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 1000,
+      "y": 620,
+      "turn": 0.4,
+      "acoes": [
+       {
+        "t": 1.2,
+        "do": "fly",
+        "dur": 0.6,
+        "to_x": 1080,
+        "to_y": 800
+       },
+       {
+        "t": 1.9,
+        "do": "fly",
+        "dur": 0.5,
+        "to_x": 1500,
+        "to_y": 930
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.2
+    },
+    "callout": [
+     {
+      "t": 1.2,
+      "text": "AZUL!",
+      "color": "azul"
+     }
+    ],
+    "objetos": {
+     "mochila": {
+      "x": 1640,
+      "y": 960,
+      "z": 2,
+      "depth": 4.2,
+      "pose": {
+       "azul": 1.0
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "cor": 0.0
+        }
+       },
+       {
+        "t": 1.1,
+        "pose": {
+         "cor": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.6,
+        "pose": {
+         "cor": 1.0
+        },
+        "ease": "out"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 1050,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "look_around",
+        "dur": 1.0
+       },
+       {
+        "t": 1.3,
+        "do": "point",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.2
+    },
+    "callout": [
+     {
+      "t": 1.3,
+      "text": "VERDE!",
+      "color": "verde"
+     }
+    ],
+    "objetos": {
+     "folha": {
+      "x": 1300,
+      "y": 990,
+      "z": 2,
+      "depth": 1.3,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "cor": 0.0
+        }
+       },
+       {
+        "t": 1.2,
+        "pose": {
+         "cor": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.7,
+        "pose": {
+         "cor": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 2.0,
+        "pose": {
+         "balanco": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.4,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 1080,
+      "y": 620,
+      "turn": 0.2,
+      "acoes": [
+       {
+        "t": 1.8,
+        "do": "fly",
+        "dur": 0.5,
+        "to_x": 1120,
+        "to_y": 880
+       },
+       {
+        "t": 2.4,
+        "do": "jump",
+        "dur": 0.8
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1560,
+      "y": 600,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 1.9,
+        "do": "fly",
+        "dur": 0.5,
+        "to_x": 1500,
+        "to_y": 880
+       },
+       {
+        "t": 2.5,
+        "do": "jump",
+        "dur": 0.8
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "refrao": [
+   {
+    "linhas": 2,
+    "cenario": [
+     "danca_raios_vermelho",
+     "danca_raios_laranja",
+     "danca_raios_verde"
+    ],
+    "flash": true,
+    "callout": "CADÊ A COR?",
+    "fx": [
+     "estrelas"
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 700,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "look_around",
+        "dur": 1.6
+       },
+       {
+        "t": 1.7,
+        "do": "dance",
+        "style": "pulinho",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1220,
+      "turn": -0.15,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "look_around",
+        "dur": 1.6
+       },
+       {
+        "t": 1.8,
+        "do": "dance",
+        "style": "pulinho",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 2,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.15
+    },
+    "fx": [
+     "confete"
+    ],
+    "callout": [
+     {
+      "t": 1.6,
+      "text": "MOSTRA A SUA COR!",
+      "color": "laranja"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 1130,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "pulinho",
+        "dur": 1.6
+       },
+       {
+        "t": 1.7,
+        "do": "bacana",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1470,
+      "turn": -0.1,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "pulinho",
+        "dur": 1.6
+       },
+       {
+        "t": 1.7,
+        "do": "bacana",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 2,
+    "cenario": [
+     "danca_bolinhas_amarelo",
+     "danca_bolinhas_verde",
+     "danca_xadrez_vermelho"
+    ],
+    "callout": "CADÊ A COR?",
+    "fx": [
+     "estrelas"
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 760,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "lado",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1160,
+      "turn": -0.15,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "lado",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 2,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.05
+    },
+    "fx": [
+     "estrelas"
+    ],
+    "callout": [
+     {
+      "t": 1.6,
+      "text": "ARCO-ÍRIS!",
+      "color": "roxo"
+     }
+    ],
+    "objetos": {
+     "arco": {
+      "id": "arco_iris",
+      "x": 1300,
+      "y": 900,
+      "z": 1,
+      "depth": 1.5,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "faixas": 0.0
+        }
+       },
+       {
+        "t": 0.4,
+        "pose": {
+         "faixas": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.4,
+        "pose": {
+         "faixas": 6.0
+        },
+        "ease": "out"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 1120,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "bracos",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1480,
+      "turn": -0.1,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "bracos",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "intervalo#1": [
+   {
+    "linhas": 1,
+    "cenario": "danca_raios_rosa",
+    "camera": "close:laurinha",
+    "callout": "BORA, TURMINHA!",
+    "atores": {
+     "laurinha": {
+      "x": 960,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "apontar_camera",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "danca_xadrez_verde",
+    "fx": [
+     "confete"
+    ],
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "LAURINHA E LUISINHO!",
+      "color": "rosa"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 620,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 960,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ]
+     },
+     "joaninha": {
+      "x": 1300,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "verso#2": [
+   {
+    "linhas": 1,
+    "cenario": "padrao_respingos_amarelo",
+    "callout": [
+     {
+      "t": 1.2,
+      "text": "VERDE!",
+      "color": "verde"
+     }
+    ],
+    "objetos": {
+     "potes": {
+      "id": "potes_tinta",
+      "x": 820,
+      "y": 1000,
+      "z": 2,
+      "depth": 1.25,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "esq": 1,
+         "dir": 2,
+         "meio": 4,
+         "derrama": 0.0,
+         "nivel": 0.0,
+         "explode": 0.0
+        }
+       },
+       {
+        "t": 0.2,
+        "pose": {
+         "derrama": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.0,
+        "pose": {
+         "derrama": 1.0,
+         "nivel": 0.9
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 1.1,
+        "pose": {
+         "explode": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "explode": 1.0
+        },
+        "ease": "out"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 1700,
+      "turn": -0.35,
+      "depth": 1.2,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "point",
+        "dur": 0.8
+       },
+       {
+        "t": 1.1,
+        "do": "bacana",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "padrao_respingos_azul",
+    "callout": [
+     {
+      "t": 1.2,
+      "text": "LARANJA!",
+      "color": "laranja"
+     }
+    ],
+    "objetos": {
+     "potes": {
+      "id": "potes_tinta",
+      "x": 820,
+      "y": 1000,
+      "z": 2,
+      "depth": 1.25,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "esq": 3,
+         "dir": 2,
+         "meio": 5,
+         "derrama": 0.0,
+         "nivel": 0.0,
+         "explode": 0.0
+        }
+       },
+       {
+        "t": 0.2,
+        "pose": {
+         "derrama": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.0,
+        "pose": {
+         "derrama": 1.0,
+         "nivel": 0.9
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 1.1,
+        "pose": {
+         "explode": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "explode": 1.0
+        },
+        "ease": "out"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 1700,
+      "turn": -0.35,
+      "depth": 1.2,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "point",
+        "dur": 0.8
+       },
+       {
+        "t": 1.1,
+        "do": "bacana",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "padrao_respingos_amarelo",
+    "callout": [
+     {
+      "t": 1.2,
+      "text": "ROXO!",
+      "color": "roxo"
+     }
+    ],
+    "objetos": {
+     "potes": {
+      "id": "potes_tinta",
+      "x": 820,
+      "y": 1000,
+      "z": 2,
+      "depth": 1.25,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "esq": 1,
+         "dir": 3,
+         "meio": 6,
+         "derrama": 0.0,
+         "nivel": 0.0,
+         "explode": 0.0
+        }
+       },
+       {
+        "t": 0.2,
+        "pose": {
+         "derrama": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.0,
+        "pose": {
+         "derrama": 1.0,
+         "nivel": 0.9
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 1.1,
+        "pose": {
+         "explode": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "explode": 1.0
+        },
+        "ease": "out"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 1700,
+      "turn": -0.35,
+      "depth": 1.2,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "point",
+        "dur": 0.8
+       },
+       {
+        "t": 1.1,
+        "do": "bacana",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "danca_bolinhas_roxo",
+    "fx": [
+     "estrelas"
+    ],
+    "callout": "QUE MÁGICA!",
+    "atores": {
+     "laurinha": {
+      "x": 740,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "palmas",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1180,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "point",
+        "dur": 0.8
+       },
+       {
+        "t": 1.1,
+        "do": "bacana",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "padrao_respingos_azul",
+    "callout": [
+     {
+      "t": 1.2,
+      "text": "MARROM!",
+      "color": "marrom"
+     }
+    ],
+    "objetos": {
+     "potes": {
+      "id": "potes_tinta",
+      "x": 820,
+      "y": 1000,
+      "z": 2,
+      "depth": 1.25,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "esq": 0,
+         "dir": 0,
+         "meio": 7,
+         "derrama": 0.0,
+         "nivel": 0.0,
+         "explode": 0.0
+        }
+       },
+       {
+        "t": 0.2,
+        "pose": {
+         "derrama": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.0,
+        "pose": {
+         "derrama": 1.0,
+         "nivel": 0.9
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 1.1,
+        "pose": {
+         "explode": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "explode": 1.0
+        },
+        "ease": "out"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 1700,
+      "turn": -0.35,
+      "depth": 1.2,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "tinta": 0.0
+        }
+       },
+       {
+        "t": 1.1,
+        "pose": {
+         "tinta": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.6,
+        "pose": {
+         "tinta": 1.0
+        },
+        "ease": "out"
+       }
+      ],
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "point",
+        "dur": 0.8
+       },
+       {
+        "t": 1.1,
+        "do": "shock_reaction",
+        "dur": 0.8
+       },
+       {
+        "t": 2.0,
+        "do": "laugh",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "intervalo#2": [
+   {
+    "linhas": 1,
+    "cenario": "danca_raios_amarelo",
+    "camera": "close:luisinho",
+    "callout": "ZUM-ZUM, QUE MASSA!",
+    "atores": {
+     "luisinho": {
+      "x": 960,
+      "pose": {
+       "tinta": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "bacana",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "ponte": [
+   {
+    "linhas": 1,
+    "cenario": "plano_ceu",
+    "camera": {
+     "x": 1250,
+     "y": 600,
+     "zoom": 1.3
+    },
+    "callout": [
+     {
+      "t": 0.9,
+      "text": "AZUL!",
+      "color": "azul"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 1150,
+      "y": 900,
+      "fly": 1,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "point",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_ceu",
+    "camera": {
+     "x": 1300,
+     "y": 600,
+     "zoom": 1.2
+    },
+    "callout": [
+     {
+      "t": 0.8,
+      "text": "AMARELO!",
+      "color": "amarelo"
+     }
+    ],
+    "objetos": {
+     "sol": {
+      "x": 1560,
+      "y": 1000,
+      "z": 1,
+      "depth": 1.3,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "giro": 0.0
+        }
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "giro": 0.5
+        }
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 1000,
+      "y": 900,
+      "fly": 1,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "point",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "padrao_lacos_roxo",
+    "camera": "close:laurinha",
+    "callout": [
+     {
+      "t": 0.8,
+      "text": "ROSINHA!",
+      "color": "rosa"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 960,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "ajeitar_laco",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "danca_bolinhas_amarelo",
+    "camera": "close:luisinho",
+    "callout": [
+     {
+      "t": 0.9,
+      "text": "AZULZINHO!",
+      "color": "azul"
+     }
+    ],
+    "atores": {
+     "luisinho": {
+      "x": 960,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "bacana",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.15
+    },
+    "callout": "PRO LADO… PRO OUTRO!",
+    "atores": {
+     "laurinha": {
+      "x": 1130,
+      "turn": 0.05,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "lado",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1470,
+      "turn": -0.05,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "lado",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.15
+    },
+    "callout": [
+     {
+      "t": 0.9,
+      "text": "RODA… E PULA!",
+      "color": "verde"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 1130,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "roda",
+        "dur": 1.1
+       },
+       {
+        "t": 1.2,
+        "do": "jump",
+        "dur": 0.7
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1470,
+      "turn": -0.1,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "roda",
+        "dur": 1.1
+       },
+       {
+        "t": 1.2,
+        "do": "jump",
+        "dur": 0.7
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "subida": [
+   {
+    "linhas": 3,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.08,
+     "zoom_fim": 1.0
+    },
+    "callout": [
+     {
+      "t": 0.1,
+      "text": "VERMELHO! LARANJA!",
+      "color": "vermelho",
+      "dur": 1.6
+     },
+     {
+      "t": 1.8,
+      "text": "AMARELO! VERDE!",
+      "color": "verde",
+      "dur": 1.8
+     },
+     {
+      "t": 3.8,
+      "text": "AZUL E ROXO!",
+      "color": "roxo",
+      "dur": 1.5
+     }
+    ],
+    "objetos": {
+     "arco": {
+      "id": "arco_iris",
+      "x": 1300,
+      "y": 900,
+      "z": 1,
+      "depth": 1.6,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "faixas": 0.0
+        }
+       },
+       {
+        "t": 0.6,
+        "pose": {
+         "faixas": 1.0
+        }
+       },
+       {
+        "t": 1.3,
+        "pose": {
+         "faixas": 2.0
+        }
+       },
+       {
+        "t": 2.2,
+        "pose": {
+         "faixas": 3.0
+        }
+       },
+       {
+        "t": 2.9,
+        "pose": {
+         "faixas": 4.0
+        }
+       },
+       {
+        "t": 4.1,
+        "pose": {
+         "faixas": 5.0
+        }
+       },
+       {
+        "t": 4.7,
+        "pose": {
+         "faixas": 6.0
+        }
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 1050,
+      "turn": 0.1,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "palmas",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1550,
+      "turn": -0.1,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "palmas",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0,
+     "zoom_fim": 1.04
+    },
+    "fx": [
+     "estrelas"
+    ],
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "UAU!",
+      "color": "amarelo"
+     }
+    ],
+    "objetos": {
+     "arco": {
+      "id": "arco_iris",
+      "x": 1300,
+      "y": 900,
+      "z": 1,
+      "depth": 1.6,
+      "pose": {
+       "faixas": 6.0
+      }
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 820,
+      "y": 930,
+      "acoes": [
+       {
+        "t": 0.3,
+        "do": "fly",
+        "dur": 2.4,
+        "to_x": 1980,
+        "to_y": 740
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 460,
+      "y": 930,
+      "acoes": [
+       {
+        "t": 0.5,
+        "do": "fly",
+        "dur": 2.4,
+        "to_x": 1600,
+        "to_y": 800
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "intervalo#3": [
+   {
+    "linhas": 1,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0
+    },
+    "fx": [
+     "confete"
+    ],
+    "callout": "BORA, TURMINHA!",
+    "objetos": {
+     "arco": {
+      "id": "arco_iris",
+      "x": 1300,
+      "y": 900,
+      "z": 1,
+      "depth": 1.6,
+      "pose": {
+       "faixas": 6.0
+      }
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 1000,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1300,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ]
+     },
+     "joaninha": {
+      "x": 1600,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ]
+     },
+     "formiguinha": {
+      "x": 700,
+      "turn": 0.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "refrao#4": [
+   {
+    "linhas": 2,
+    "cenario": "danca_raios_roxo",
+    "flash": true,
+    "callout": "CADÊ A COR?",
+    "fx": [
+     "confete"
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 620,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "pulinho",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 960,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "pulinho",
+        "dur": "resto"
+       }
+      ]
+     },
+     "joaninha": {
+      "x": 1300,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "pulinho",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 2,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0
+    },
+    "fx": [
+     "confete"
+    ],
+    "callout": [
+     {
+      "t": 1.8,
+      "text": "ARCO-ÍRIS!",
+      "color": "roxo"
+     }
+    ],
+    "objetos": {
+     "arco": {
+      "id": "arco_iris",
+      "x": 1300,
+      "y": 900,
+      "z": 1,
+      "depth": 1.6,
+      "pose": {
+       "faixas": 6.0
+      }
+     }
+    },
+    "atores": {
+     "formiguinha": {
+      "x": 700,
+      "turn": 0.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "bracos",
+        "dur": "resto"
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 1050,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "bracos",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1350,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "bracos",
+        "dur": "resto"
+       }
+      ]
+     },
+     "joaninha": {
+      "x": 1650,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "bracos",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "final": [
+   {
+    "linhas": 1,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.2
+    },
+    "callout": "TCHAU, TURMINHA!",
+    "atores": {
+     "laurinha": {
+      "x": 1130,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "tchau",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1470,
+      "turn": -0.1,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "tchau",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "danca_bolinhas_rosa",
+    "camera": "medio:joaninha",
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "TCHAU!",
+      "color": "vermelho"
+     }
+    ],
+    "atores": {
+     "joaninha": {
+      "x": 960,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "tchau",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "seg": 4.6,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.1
+    },
+    "titulo": "amigos da música dançando",
+    "objetos": {
+     "morango": {
+      "x": 1700,
+      "y": 950,
+      "z": 2,
+      "pose": {
+       "cara": 1.0
+      },
+      "keys": [
+       {
+        "t": 0.4,
+        "pose": {
+         "pulo": 0.0
+        }
+       },
+       {
+        "t": 0.8,
+        "pose": {
+         "pulo": 1.0
+        }
+       },
+       {
+        "t": 1.2,
+        "pose": {
+         "pulo": 0.0
+        }
+       },
+       {
+        "t": 2.4,
+        "pose": {
+         "pulo": 0.0
+        }
+       },
+       {
+        "t": 2.8,
+        "pose": {
+         "pulo": 1.0
+        }
+       },
+       {
+        "t": 3.2,
+        "pose": {
+         "pulo": 0.0
+        }
+       }
+      ]
+     }
+    },
+    "atores": {
+     "formiguinha": {
+      "x": 1050,
+      "turn": 0.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ]
+     },
+     "joaninha": {
+      "x": 1350,
+      "turn": 0.1,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "danca_bolinhas_verde",
+    "camera": "medio:formiguinha",
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "TCHAU!",
+      "color": "amarelo"
+     }
+    ],
+    "atores": {
+     "formiguinha": {
+      "x": 960,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "tchau",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_ceu",
+    "camera": {
+     "x": 1300,
+     "y": 600,
+     "zoom": 1.15
+    },
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "TCHAU!",
+      "color": "laranja"
+     }
+    ],
+    "objetos": {
+     "sol": {
+      "x": 1300,
+      "y": 1040,
+      "z": 1,
+      "depth": 1.4,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "giro": 0.0
+        }
+       },
+       {
+        "t": 3.0,
+        "pose": {
+         "giro": 0.6
+        }
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": -200,
+      "y": 700,
+      "turn": 0.4,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "fly",
+        "dur": 3.2,
+        "to_x": 1000,
+        "to_y": 640
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 2800,
+      "y": 720,
+      "turn": -0.4,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "fly",
+        "dur": 3.2,
+        "to_x": 1640,
+        "to_y": 660
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.05
+    },
+    "fx": [
+     "coracoes"
+    ],
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "TCHAU, TURMINHA!",
+      "color": "rosa"
+     }
+    ],
+    "objetos": {
+     "arco": {
+      "id": "arco_iris",
+      "x": 1300,
+      "y": 900,
+      "z": 1,
+      "depth": 1.6,
+      "pose": {
+       "faixas": 6.0
+      }
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 1130,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "wave",
+        "dur": 2.6
+       },
+       {
+        "t": 3.0,
+        "do": "fly",
+        "dur": 1.2,
+        "to_x": 2400,
+        "to_y": 250
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1470,
+      "turn": -0.1,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "wave",
+        "dur": 2.6
+       },
+       {
+        "t": 3.1,
+        "do": "fly",
+        "dur": 1.2,
+        "to_x": 2500,
+        "to_y": 300
+       }
+      ]
+     }
+    }
+   }
+  ]
+ }
+}

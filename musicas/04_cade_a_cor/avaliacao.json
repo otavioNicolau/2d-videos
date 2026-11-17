@@ -1,0 +1,195 @@
+{
+ "schema": "avaliacao-1.0",
+ "versoes": {
+  "v1": {
+   "arquivo": "v1.wav",
+   "duracao": 149.8,
+   "bpm": 136.0,
+   "bpm_nota": "",
+   "tom": "Ré# maior",
+   "voz_inicio": 0.05,
+   "refrao_inicio": 64.9,
+   "cantado": 94,
+   "intervalos": [
+    [
+     43.0,
+     4.3
+    ]
+   ],
+   "fim_depois_da_voz": 1.1,
+   "final": "esmaecendo",
+   "silencio_final": 0.6,
+   "acerto": 43,
+   "nao_reconhecidas": [
+    "arco",
+    "iris",
+    "vermelho",
+    "cima",
+    "luisinho",
+    "morango",
+    "banana",
+    "mochila",
+    "folhinha",
+    "magica",
+    "azulzinho",
+    "lado"
+   ],
+   "pontos_a_conferir": [
+    "gancho só aparece em 64.9 s (referência ~35 s)",
+    "só 43% da letra reconhecida — ouvir a pronúncia",
+    "menos de 2 intervalos de dança"
+   ]
+  },
+  "v2": {
+   "arquivo": "v2.wav",
+   "duracao": 146.7,
+   "bpm": 136.0,
+   "bpm_nota": "",
+   "tom": "Ré# maior",
+   "voz_inicio": 0.05,
+   "refrao_inicio": 30.0,
+   "cantado": 92,
+   "intervalos": [],
+   "fim_depois_da_voz": 1.2,
+   "final": "esmaecendo",
+   "silencio_final": 0.8,
+   "acerto": 64,
+   "nao_reconhecidas": [
+    "mostra",
+    "luisinho",
+    "morango",
+    "banana",
+    "mochila",
+    "folhinha",
+    "rosinha",
+    "azulzinho",
+    "roda"
+   ],
+   "pontos_a_conferir": [
+    "só 64% da letra reconhecida — ouvir a pronúncia",
+    "menos de 2 intervalos de dança"
+   ]
+  },
+  "v3": {
+   "arquivo": "v3.wav",
+   "duracao": 173.1,
+   "bpm": 143.6,
+   "bpm_nota": "",
+   "tom": "Fá maior",
+   "voz_inicio": 2.55,
+   "refrao_inicio": 20.4,
+   "cantado": 64,
+   "intervalos": [
+    [
+     37.6,
+     2.9
+    ],
+    [
+     68.5,
+     5.4
+    ],
+    [
+     94.5,
+     15.5
+    ],
+    [
+     137.7,
+     7.2
+    ],
+    [
+     146.3,
+     13.6
+    ]
+   ],
+   "fim_depois_da_voz": 3.0,
+   "final": "esmaecendo",
+   "silencio_final": 0.6,
+   "acerto": 50,
+   "nao_reconhecidas": [
+    "turminha",
+    "laurinha",
+    "luisinho",
+    "massa",
+    "rosinha",
+    "azulzinho",
+    "roda"
+   ],
+   "pontos_a_conferir": [
+    "só 50% da letra reconhecida — ouvir a pronúncia"
+   ]
+  },
+  "v4": {
+   "arquivo": "v4.wav",
+   "duracao": 140.4,
+   "bpm": 143.6,
+   "bpm_nota": "",
+   "tom": "Fá maior",
+   "voz_inicio": 5.5,
+   "refrao_inicio": null,
+   "cantado": 76,
+   "intervalos": [
+    [
+     37.4,
+     3.8
+    ],
+    [
+     103.3,
+     4.0
+    ]
+   ],
+   "fim_depois_da_voz": 7.9,
+   "final": "corte seco",
+   "silencio_final": 0.0,
+   "acerto": 60,
+   "nao_reconhecidas": [
+    "cade",
+    "arco",
+    "iris",
+    "luisinho",
+    "marrom",
+    "azulzinho",
+    "olha",
+    "tchau"
+   ],
+   "pontos_a_conferir": [
+    "o gancho não foi reconhecido na transcrição",
+    "só 60% da letra reconhecida — ouvir a pronúncia"
+   ]
+  }
+ },
+ "ouvido": {
+  "v1": {
+   "1 começo chama atenção": null,
+   "5 melodia combina com a letra": null,
+   "6 dá vontade de dançar": null,
+   "7 pronúncia natural": null,
+   "8 tem a cara do canal": null,
+   "9 nenhum trecho cansativo": null
+  },
+  "v2": {
+   "1 começo chama atenção": null,
+   "5 melodia combina com a letra": null,
+   "6 dá vontade de dançar": null,
+   "7 pronúncia natural": null,
+   "8 tem a cara do canal": null,
+   "9 nenhum trecho cansativo": null
+  },
+  "v3": {
+   "1 começo chama atenção": null,
+   "5 melodia combina com a letra": null,
+   "6 dá vontade de dançar": null,
+   "7 pronúncia natural": null,
+   "8 tem a cara do canal": null,
+   "9 nenhum trecho cansativo": null
+  },
+  "v4": {
+   "1 começo chama atenção": null,
+   "5 melodia combina com a letra": null,
+   "6 dá vontade de dançar": null,
+   "7 pronúncia natural": null,
+   "8 tem a cara do canal": null,
+   "9 nenhum trecho cansativo": null
+  }
+ },
+ "escolhida": "v2"
+}
