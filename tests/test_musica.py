@@ -261,3 +261,20 @@ def test_thumbnails_do_not_repeat_background():
         assert chave not in vistos, f"{p.parent.name} repete o fundo de {vistos.get(chave)}"
         assert tuple(map(tuple, cena["cores"])) not in [k[1] for k in vistos], f"{p.parent.name} repete as cores de outra música"
         vistos[chave] = p.parent.name
+
+
+def test_eyes_stay_round_and_inside_the_head_at_any_turn():
+    """Olho de trás não vira risco grudado no contorno; o da frente nunca some (nem de perfil)."""
+    from toonstudio.characters.base import View
+    from toonstudio.characters.flat_muri import _olho
+    r = 112.0                                  # raio da cabeça em FlatMuri
+    for t in [i / 20 for i in range(-20, 21)]:
+        v = View(t)
+        frente = -1 if t >= 0 else 1
+        assert _olho(v, 0.0, r, frente) is not None, f"olho da frente sumiu no giro {t}"
+        for side in (-1, 1):
+            e = _olho(v, 0.0, r, side)
+            if e:
+                x, larg = e
+                assert larg >= 0.75, f"olho espremido no giro {t}"
+                assert abs(x) + 22 * larg <= r * 0.85, f"olho encostando na borda no giro {t}"

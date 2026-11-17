@@ -55,6 +55,25 @@ class FlatLook:
     extra: dict = field(default_factory=dict)
 
 
+
+# ── olhos e boca no giro da cabeça (BIBLIA_VISUAL §4: desenho chapado, olhos sempre redondinhos) ──
+OLHO_MAX = 0.85      # ângulo máximo (rad) do centro do olho: nunca encosta na borda da cabeça
+OLHO_SOME = 0.58     # o olho de trás some quando ficaria espremido (cos do ângulo abaixo disso)
+BOCA_MAX = 1.0
+
+
+def _olho(v, cx: float, r: float, side: int):
+    """(x, largura) do olho `side` com a cabeça girada, ou None se ele fica escondido.
+    Antes o olho seguia a esfera à risca: o de trás virava um risco grudado no contorno (giro 0,3–0,45) e,
+    de perfil, o olho que sobra afinava na borda. Agora o de trás some antes de espremer, a posição para no
+    limite seguro e o olho quase não deforma."""
+    a = side * 0.42 + v.turn * (math.pi / 2) * 0.92
+    if side * v.turn > 0 and math.cos(a) < OLHO_SOME:    # só o olho de TRÁS some; o da frente fica sempre
+        return None
+    a = max(-OLHO_MAX, min(OLHO_MAX, a))
+    return cx + r * 0.78 * math.sin(a), 0.75 + 0.25 * math.cos(a)
+
+
 class FlatMuri(Character):
     flies = True
 
@@ -286,21 +305,23 @@ class FlatMuri(Character):
                 q = rot((x, C[1] + 34), ht, C)
                 k.shape(ellipse_pts(q[0], q[1], 22 * c, 20, 0, 16), fill=_rgba(L.cheek, 0.85 * P.get("blush", 1.0)), line=0)
         for side in (-1, 1):
-            x, c = v.sphere(C[0], r * 0.78, side * 0.42)
-            if c > 0.3:
-                self._eye(k, P, rot((x, C[1] - 8), ht, C), c, side, f, s, line)
+            e = _olho(v, C[0], r, side)
+            if e:
+                self._eye(k, P, rot((e[0], C[1] - 8), ht, C), e[1], side, f, s, line)
         if L.extra.get("oculos"):            # óculos redondos (vovó)
             eyes = []
             for side in (-1, 1):
-                x, c = v.sphere(C[0], r * 0.78, side * 0.42)
-                if c > 0.3:
+                e = _olho(v, C[0], r, side)
+                if e:
+                    x, c = e
                     q = rot((x, C[1] - 8), ht, C)
                     eyes.append(q)
                     k.shape(ellipse_pts(q[0], q[1], 34 * c, 34, 0, 20), fill=None,
                             brush=Brush(LINE * 0.9, 0.0, _rgba("#534946"), 0.0), dense=True, line=LINE * 0.9)
             if len(eyes) == 2:
                 self._line(k, [(eyes[0][0] + 30, eyes[0][1] - 4), (eyes[1][0] - 30, eyes[1][1] - 4)], "#534946", w=LINE * 0.9)
-        nx_, _ = v.sphere(C[0], r * 0.72, 0.0)            # boca sempre dentro da cabeça, inclusive de perfil
+        a_m = max(-BOCA_MAX, min(BOCA_MAX, v.turn * (math.pi / 2) * 0.92))
+        nx_ = C[0] + r * 0.72 * math.sin(a_m)              # boca sempre dentro da cabeça, inclusive de perfil
         self._mouth(k, P, rot((nx_, C[1] + 52), ht, C), f, s, line)
         self._boca_fx(k, P, rot((nx_, C[1] + 52), ht, C), f)
         if P.get("suor", 0) > 0.5:            # gotinhas de suor (chegou correndo)
