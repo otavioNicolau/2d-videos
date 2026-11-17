@@ -112,11 +112,12 @@ def perfil() -> Path:
         a0 = k * math.pi / 8
         d.polygon([(S / 2, S / 2), (S / 2 + 900 * math.cos(a0), S / 2 + 900 * math.sin(a0)),
                    (S / 2 + 900 * math.cos(a0 + math.pi / 16), S / 2 + 900 * math.sin(a0 + math.pi / 16))], fill=(255, 225, 110, 255))
-    la = _char("laurinha", {**expression("joy"), "turn": 0.2, "mouth": "D"}, 560)
-    lu = _char("luisinho", {**expression("joy"), "turn": -0.2, "mouth": "D"}, 540)
-    # dois rostos inteiros dentro do círculo, lado a lado
-    _paste(img, la, 255, 860)
-    _paste(img, lu, 555, 860)
+    baixo = {"hand_n_x": -30, "hand_n_y": 150, "hand_f_x": 30, "hand_f_y": 150}     # braços para baixo, fora do recorte
+    la = _char("laurinha", {**expression("joy"), "turn": 0.2, "mouth": "D", **baixo}, 820)
+    lu = _char("luisinho", {**expression("joy"), "turn": -0.2, "mouth": "D", **baixo}, 791)
+    # close: os dois rostos grandes (leem no ícone pequeno), com antenas e laço inteiros dentro do círculo
+    _paste(img, la, 200, 940)
+    _paste(img, lu, 600, 940)
     mask = Image.new("L", (S, S), 0)
     ImageDraw.Draw(mask).ellipse([0, 0, S, S], fill=255)
     p = OUT / "perfil_800x800.png"
