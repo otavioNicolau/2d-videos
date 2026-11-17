@@ -56,7 +56,7 @@ def ln(k: Ink, pts, col: str, w: float = LINE, alpha: float = 1.0):
 # ───────────────────────── objetos de mão ─────────────────────────
 
 ITEMS = ("copo_leite", "copo_vazio", "banana", "banana_mordida", "pente", "garrafinha", "carrinho", "sombrinha", "escova",
-         "suco", "fatia_bolo", "fatia_grande", "escova_pasta", "escova_guitarra", "apito", "sapato")
+         "suco", "fatia_bolo", "fatia_grande", "escova_pasta", "escova_guitarra", "apito", "sapato", "estrela_natal", "sorvete")
 
 
 ITEM_SCALE = 1.6
@@ -143,6 +143,14 @@ def draw_item(k: Ink, name: str, H: tuple[float, float], f: float = 1.0) -> None
         shape(k, Q([(-30, -20), (-6, -20), (-6, 0), (-30, 0)]), "#FFD21F", line="#C99A1A", smooth=False)
         k.dot(*q(14, -10), 7, _rgba("#534946"))
         ln(k, Q([(30, -8), (52, 12), (40, 36)]), "#E9545D", w=LINE * 0.9)
+    elif name == "estrela_natal":                           # estrela da ponta da árvore, segura no alto
+        cx, cy = q(0, -46)
+        pts = [(cx + math.cos(-math.pi / 2 + j * math.pi / 5) * (44 if j % 2 == 0 else 19) * S,
+                cy + math.sin(-math.pi / 2 + j * math.pi / 5) * (44 if j % 2 == 0 else 19) * S) for j in range(10)]
+        shape(k, pts, "#FFD21F", line="#C99A1A", smooth=False)
+    elif name == "sorvete":                                 # casquinha com bola de morango
+        shape(k, Q([(-22, -40), (22, -40), (0, 30)]), "#E8B27A", line="#B5741F", smooth=False)
+        shape(k, [q(x, y) for x, y in [(-30, -40), (-26, -70), (0, -86), (26, -70), (30, -40)]], "#FF9AC8", line="#E0609A")
     elif name == "sapato":                                  # tênis seguro pela mão (para calçar)
         shape(k, Q([(-40, -10), (-6, -34), (14, -30), (24, -6), (44, 0), (46, 14), (-40, 14)]), "#3C8BF0", line="#1F5FB8", smooth=False)
         box(k, *q(-42, 10), *q(48, 22), "#FFFFFF", line="#9FB3C8", r=6) if f > 0 else box(k, *q(48, 10), *q(-42, 22), "#FFFFFF", line="#9FB3C8", r=6)
@@ -1156,3 +1164,111 @@ class Taboa(_Prop):
 
 
 PROPS.update({"sapo": Sapo, "pato": Pato, "girino": Girino, "vitoria_regia": VitoriaRegia, "taboa": Taboa})
+
+
+# ───────────────────────── 07 Pisca-Pisca de Natal ─────────────────────────
+
+PISCA = ("#FF4D4D", "#FFD21F", "#2F86F0", "#2DBE5A", "#FF7FBF")
+
+
+class ArvoreNatal(_Prop):
+    """Árvore de Natal gigante (para eles). `bolinhas` 0→1 aparecem; `pisca` fase do pisca-pisca (inteiro = qual
+    cor acende; luzes apagadas quando `luzes` 0); `estrela` 0→1 a estrela no topo (1 = colocada e brilhando)."""
+
+    def __init__(self):
+        super().__init__("arvore_natal", "Árvore de Natal", (900, 1200), (450, 1160), 560,
+                         {"bolinhas": 1.0, "luzes": 1.0, "pisca": 0.0, "estrela": 1.0})
+
+    def paint(self, k, P):
+        verde, esc = "#2E9E4F", "#1E6E36"
+        box(k, -60, -120, 60, 0, PAL["madeira"], r=8)                                  # tronco
+        shape(k, [(-150, -40), (150, -40), (130, -130), (-130, -130)], "#E9545D", smooth=False)   # vaso
+        for i, (y, w) in enumerate(((-130, 400), (-430, 320), (-700, 240))):           # três andares
+            shape(k, [(-w, y), (w, y), (0, y - 380)], verde, line=esc, smooth=False)
+            for j in range(-3, 4):
+                shape(k, ellipse_pts(j * w / 3.6, y - 6, w / 7.5, 20, 0, 12), verde, line=esc)
+        ph = P["pisca"]; on = P["luzes"] > 0.5
+        n = 0
+        for row, (y, w) in enumerate(((-210, 300), (-470, 240), (-720, 170), (-920, 90))):    # fio do pisca-pisca
+            pts = [(-w + 2 * w * u / 10, y + 26 * math.sin(math.pi * u / 10 * 2 + row)) for u in range(11)]
+            ln(k, pts, "#2B2B33", w=LINE * 0.8)
+            for x, yy in pts[1:-1:2]:
+                c = PISCA[n % len(PISCA)]
+                aceso = on and (int(ph) + n) % 2 == 0
+                if aceso:
+                    k.shape(ellipse_pts(x, yy + 20, 48, 48, 0, 16), fill=_rgba(c, 0.35), line=0)
+                shape(k, ellipse_pts(x, yy + 20, 21, 27, 0, 14), c if aceso else _mix(c, "#555566", 0.55), line=dark(c, 0.7))
+                n += 1
+        b = max(0.0, min(1.0, P["bolinhas"]))
+        for j, (x, y, c) in enumerate(((-220, -260, "#E9545D"), (160, -300, "#FFD23F"), (-60, -390, "#2F86F0"),
+                                        (-150, -560, "#FFD23F"), (130, -600, "#E9545D"), (0, -800, "#FF7FBF"), (-260, -170, "#FFD23F"), (250, -190, "#2F86F0"))):
+            if b > j / 8:
+                shape(k, ellipse_pts(x, y, 30, 30, 0, 16), c, line=dark(c, 0.7))
+                ln(k, [(x - 12, y - 10), (x - 4, y - 18)], "#FFFFFF", w=LINE * 0.8)
+        e = max(0.0, min(1.0, P["estrela"]))
+        if e > 0.05:
+            _estrela(k, 0, -1090 + 120 * (1 - e), 70 * (0.5 + 0.5 * e), "#FFD21F")
+            if e > 0.95:
+                for j in range(8):
+                    a = j * math.pi / 4
+                    ln(k, [(math.cos(a) * 90, -1090 + math.sin(a) * 90), (math.cos(a) * 125, -1090 + math.sin(a) * 125)], "#FFE680", w=LINE)
+
+
+class PapaiNoel(_Prop):
+    """Papai Noel de bermuda e óculos escuros (Natal no calor): `aceno` 0→1 balança a mão; `ho` 0→1 abre a boca."""
+
+    def __init__(self):
+        super().__init__("papai_noel", "Papai Noel de bermuda", (620, 900), (310, 860), 420, {"aceno": 0.0, "ho": 0.0})
+
+    def paint(self, k, P):
+        pele, verm = "#FFD7B5", "#E53935"
+        for sx in (-1, 1):                                                  # pernas com chinelo
+            box(k, sx * 70 - 28, -170, sx * 70 + 28, -20, pele, r=14)
+            box(k, sx * 70 - 50, -24, sx * 70 + 50, 0, "#2F86F0", r=10)
+        shape(k, [(-150, -340), (150, -340), (140, -160), (-140, -160)], "#3C8BF0", smooth=False)   # bermuda florida
+        for x, y in ((-90, -290), (60, -250), (-20, -200), (100, -310)):
+            _estrela(k, x, y, 16, "#FFD23F")
+        shape(k, ellipse_pts(0, -470, 170, 170, 0, 30), verm, line="#A82020")                # barrigão de camiseta
+        box(k, -170, -390, 170, -350, "#2B2B33", r=8)                                         # cinto
+        box(k, -30, -398, 30, -342, "#FFD23F", r=6)
+        a = math.sin(P["aceno"] * math.pi * 4) * 20
+        ln(k, [(-150, -540), (-230, -600), (-250 + a, -700)], pele, w=LINE * 3)               # braço acenando
+        shape(k, ellipse_pts(-250 + a, -715, 30, 30, 0, 14), pele)
+        ln(k, [(150, -540), (220, -470)], pele, w=LINE * 3)
+        shape(k, ellipse_pts(0, -700, 110, 110, 0, 28), pele, line="#D9A27A")                 # cabeça
+        shape(k, [(-120, -720), (120, -720), (100, -830), (40, -880), (160, -900), (200, -860), (-100, -800)], verm, line="#A82020")  # gorro
+        shape(k, ellipse_pts(196, -870, 26, 26, 0, 14), "#FFFFFF", line="#C9D6E0")
+        box(k, -130, -742, 130, -704, "#FFFFFF", line="#C9D6E0", r=16)
+        shape(k, [(-110, -660), (110, -660), (90, -560), (0, -520), (-90, -560)], "#FFFFFF", line="#C9D6E0")   # barba
+        for sx in (-1, 1):                                                  # óculos escuros
+            shape(k, ellipse_pts(sx * 45, -690, 38, 26, 0, 16), "#2B2B33")
+        ln(k, [(-8, -690), (8, -690)], "#2B2B33", w=LINE)
+        ho = max(0.0, min(1.0, P["ho"]))
+        shape(k, ellipse_pts(0, -630, 30, 8 + 22 * ho, 0, 14), "#8A2E2E", line="#5E1E1E")
+
+
+class Ventilador(_Prop):
+    """Ventilador de chão gigante: `giro` gira as pás; `vento` 0→1 linhas de vento saindo."""
+
+    def __init__(self):
+        super().__init__("ventilador", "Ventilador", (620, 860), (310, 820), 400, {"giro": 0.0, "vento": 1.0})
+
+    def paint(self, k, P):
+        box(k, -140, -30, 140, 0, "#9FB3C8", r=14)
+        box(k, -18, -420, 18, -30, "#B8C4D0", r=8)
+        cx, cy, R = 0, -560, 200
+        for j in range(3):
+            a = P["giro"] * 2 * math.pi + j * 2 * math.pi / 3
+            p1 = (cx + math.cos(a - 0.35) * R, cy + math.sin(a - 0.35) * R)
+            p2 = (cx + math.cos(a + 0.35) * R, cy + math.sin(a + 0.35) * R)
+            shape(k, [(cx, cy), p1, p2], "#7FC8FA", line="#3E8FD6")
+        shape(k, ellipse_pts(cx, cy, 34, 34, 0, 14), "#3E8FD6")
+        shape(k, ellipse_pts(cx, cy, R + 20, R + 20, 0, 40), "#FFFFFF", line="#9FB3C8", alpha=0.25)
+        for j in range(-2, 3):
+            ln(k, [(cx - R - 40, cy), (cx - R - 30, cy)], "#9FB3C8")
+        if P["vento"] > 0.05:
+            for j, y in enumerate((-640, -560, -480)):
+                ln(k, [(-260, y), (-340, y + 10 * math.sin(j)), (-420, y)], "#BFE6FF", w=LINE * 1.2)
+
+
+PROPS.update({"arvore_natal": ArvoreNatal, "papai_noel": PapaiNoel, "ventilador": Ventilador})

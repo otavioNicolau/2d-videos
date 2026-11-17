@@ -376,9 +376,37 @@ def lagoa(rng) -> tuple[skia.Surface, int]:
     return s, w
 
 
+def sala(rng) -> tuple[skia.Surface, int]:
+    """Sala da casa em dezembro: parede creme com listrinhas, janela com dia de sol (Natal no calor), sofá e tapete.
+    A árvore de Natal é prop (acende/apaga); aqui fica só o cenário."""
+    s, c = _surf(W_INT, H, 1.5)
+    F = Flat(c)
+    c.drawRect(skia.Rect(0, 0, W_INT, H), skia.Paint(Color4f=skia.Color4f(*_rgba("#FFF1D6"))))
+    for x in range(0, W_INT, 90):                                 # listrinhas verticais
+        c.drawRect(skia.Rect(x, 0, x + 30, FLOOR_Y - 30), skia.Paint(Color4f=skia.Color4f(*_rgba("#FFE7BF"))))
+    F.shape([(-20, FLOOR_Y - 30), (W_INT + 20, FLOOR_Y - 30), (W_INT + 20, FLOOR_Y), (-20, FLOOR_Y)], "#FFFFFF", smooth=False)
+    _floor(F, W_INT, "#E8B27A")
+    F.oval(W_INT * 0.5, 960, 460, 74, "#E9545D")                 # tapete vermelho com borda verde
+    F.oval(W_INT * 0.5, 960, 380, 56, "#3DAE57")
+    x0, y0 = 300, 180                                            # janela: dia de sol lá fora
+    F.shape([(x0, y0), (x0 + 380, y0), (x0 + 380, y0 + 330), (x0, y0 + 330)], "#FFFFFF", smooth=False)
+    F.shape([(x0 + 20, y0 + 20), (x0 + 360, y0 + 20), (x0 + 360, y0 + 310), (x0 + 20, y0 + 310)], "#9CCBFA", smooth=False)
+    F.oval(x0 + 280, y0 + 90, 46, 46, "#FFD23F")
+    F.line([(x0 + 190, y0 + 20), (x0 + 190, y0 + 310)], "#FFFFFF", w=LINE * 2)
+    F.line([(x0 + 20, y0 + 165), (x0 + 360, y0 + 165)], "#FFFFFF", w=LINE * 2)
+    for j in range(9):                                           # festão de bolinhas em cima da janela
+        F.oval(x0 + 10 + j * 45, y0 - 8 + 14 * math.sin(j * 0.9), 13, 13, ("#E9545D", "#FFD23F", "#3DAE57")[j % 3])
+    sx = 1950                                                    # sofá
+    F.shape([(sx, 560), (sx + 520, 560), (sx + 520, 720), (sx, 720)], "#3C8BF0", smooth=True)
+    F.shape([(sx - 40, 650), (sx + 560, 650), (sx + 560, 780), (sx - 40, 780)], "#2F6FD0", smooth=True)
+    for k in (sx + 90, sx + 390):
+        F.oval(k, 610, 70, 48, "#FFD23F")
+    return s, W_INT
+
+
 SCENES = {"plano_banheiro": banheiro, "plano_quarto_rosa": lambda rng: quarto("rosa", rng), "plano_quarto_azul": lambda rng: quarto("azul", rng),
           "plano_cozinha": cozinha, "plano_casa_frente": casa_frente, "plano_escola": escola, "plano_ceu": ceu,
-          "plano_jardim": jardim, "plano_lagoa": lagoa}
+          "plano_jardim": jardim, "plano_lagoa": lagoa, "plano_sala": sala}
 
 
 def build(bg_id: str, out_dir: Path, scale: float = 1.5, seed: int = 11) -> dict:
