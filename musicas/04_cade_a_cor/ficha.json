@@ -12,10 +12,11 @@
  "tipo": "educativa",
  "tema": "cores, misturas de cores e o arco-íris",
  "dia_a_dia": [
-  "lanche (morango, banana)",
+  "cores para crianças",
+  "lanche",
+  "pintura com tinta",
   "mochila da escola",
-  "folhinha no jardim",
-  "pintura com tinta guache"
+  "folhinha no jardim"
  ],
  "curiosidade": "as cores se misturam: azul com amarelo dá verde, vermelho com amarelo dá laranja, azul com vermelho dá roxo — e misturando tudo vira marrom",
  "ritmo": "axe",
@@ -148,7 +149,8 @@
      "hand_f_y": -135,
      "hand_f_bend": -0.5,
      "paw_f": 3
-    }
+    },
+    "x": 1150
    },
    "objetos": [
     {
@@ -161,9 +163,9 @@
       "nivel": 0.9,
       "explode": 0.45
      },
-     "tam": 440,
-     "x": 820,
-     "base": 700
+     "tam": 360,
+     "x": 700,
+     "base": 735
     },
     {
      "id": "arco_iris",
