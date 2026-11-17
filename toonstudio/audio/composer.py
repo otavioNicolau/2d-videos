@@ -147,7 +147,7 @@ def style(f: dict, ritmo: str | None = None, bpm: int | None = None, E: dict | N
     p = E["peso"][r["peso"]]
     bpm = bpm or (f["bpm"] if rid == f["ritmo"] else r["bpm"][2])
     voz = V["vozes"][f.get("voz", "dueto")]["style"]
-    parts = [r["genero"], f"{bpm} bpm", p["style"], r["bateria"], r["instrumentos"], r["clima"], f.get("style_extra", ""),
+    parts = [E["canal"].get("duracao", ""), r["genero"], f"{bpm} bpm", p["style"], r["bateria"], r["instrumentos"], r["clima"], f.get("style_extra", ""),
              voz, V["coro"]["style"], E["canal"]["sempre"]]
     return ", ".join(x for x in parts if x)
 
@@ -161,7 +161,7 @@ def style_curto(f: dict, ritmo: str | None = None, E: dict | None = None, V: dic
     bpm = f["bpm"] if rid == f["ritmo"] else r["bpm"][2]
     peso = {"forte": "heavy drum-driven beat, big drum fills", "media": "strong punchy groove",
             "marcada": "steady marked groove"}[r["peso"]]
-    return ", ".join([r["genero"].split(",")[0], f"{bpm} bpm", peso, r["bateria"].split(",")[0],
+    return ", ".join([x for x in [E["canal"].get("duracao", "")] if x] + [r["genero"].split(",")[0], f"{bpm} bpm", peso, r["bateria"].split(",")[0],
                       V["vozes"][f.get("voz", "dueto")]["style"], "major key, Brazilian Portuguese"])
 
 
