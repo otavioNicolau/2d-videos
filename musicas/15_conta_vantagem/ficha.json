@@ -1,0 +1,71 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Conta Vantagem!",
+ "gancho": "conta vantagem",
+ "palavras_tema": [
+  "barata",
+  "vantagem",
+  "mentira",
+  "verdade"
+ ],
+ "tipo": "brincadeira",
+ "tema": "a Dona Barata que conta vantagem, e a mentirinha de perna curta",
+ "dia_a_dia": [
+  "falar a verdade",
+  "brincadeira de roda"
+ ],
+ "curiosidade": "a barata existe desde antes dos dinossauros",
+ "ritmo": "rock_infantil",
+ "bpm": 165,
+ "estrutura": "B",
+ "voz": "dueto",
+ "cantam": {
+  "verso 1": "luisinho",
+  "refrão": "coro",
+  "verso 2": "laurinha",
+  "ponte": "comandos, coro responde",
+  "final": "todo mundo"
+ },
+ "cenas": [
+  {
+   "parte": "intro",
+   "ideia": "a Dona Barata (antenas com laço, sorriso; engraçada, não nojenta) entra fazendo pose"
+  },
+  {
+   "parte": "verso 1",
+   "ideia": "nariz em pé, desfilando para a turma; a Laurinha e o Luisinho se olham: lá vem mentirinha"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "ela diz que tem mil sapatos e aparece com um só; diz que mora num castelo e é um buraquinho; a turma ri"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "a mentirinha ganha perninhas curtas e tropeça; a Dona Barata fala a verdade e todos aplaudem"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "dança da barata: pose de chique, nariz em pé, tropeço e risada"
+  },
+  {
+   "parte": "final",
+   "ideia": "convite; a Dona Barata ri de si mesma no tchau"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [
+  "marchinha"
+ ],
+ "status": "letra_revisada",
+ "versoes": [],
+ "youtube": {
+  "resumo": "CONTA VANTAGEM! 🪳😄 Chegou a Dona Barata toda arrumadinha… e contando vantagem! Diz que tem mil sapatos? Mentira, tem um só! Diz que mora num castelo? Mora num buraquinho! A mentirinha tem perna curtinha e tropeça: fala a verdade, que é mais bonito!",
+  "resumo_short": "CONTA VANTAGEM! 😄 A Dona Barata e a mentirinha de perna curta, com a Laurinha e o Luisinho!",
+  "curiosidade": "A barata existe desde antes dos dinossauros"
+ },
+ "persona": "luisinho",
+ "revisao": "clássica convertida em autoral 18/11/2026 (o Suno bloqueia letras tradicionais)"
+}

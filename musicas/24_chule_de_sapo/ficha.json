@@ -1,0 +1,67 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Chulé de Sapo!",
+ "gancho": "que chulé",
+ "palavras_tema": [
+  "sapo",
+  "pé",
+  "chulé",
+  "lagoa"
+ ],
+ "tipo": "animal",
+ "tema": "o sapo de pé fedido e a hora de lavar o pé no banho",
+ "dia_a_dia": [
+  "lavar o pé no banho",
+  "secar entre os dedinhos"
+ ],
+ "curiosidade": "o sapo bebe água pela pele, mas o nosso pezinho precisa de sabão no banho",
+ "ritmo": "forro_piseiro",
+ "bpm": 160,
+ "estrutura": "A",
+ "voz": "dueto",
+ "cantam": {
+  "verso 1": "luisinho",
+  "refrão": "coro",
+  "verso 2": "laurinha",
+  "ponte": "comandos de lavar o pé",
+  "final": "todo mundo"
+ },
+ "cenas": [
+  {
+   "parte": "verso 1",
+   "ideia": "lagoa: o sapo na vitória-régia; nuvenzinha verde de cheirinho sai do pé dele; o Luisinho tampa o nariz"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "o sapo dança forró de pé levantado; no \"eca, que chulé!\" todos tampam o nariz"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "gotinhas brilhando entrando pela pele do sapo; depois banheiro: sabão com carinha e o pé com espuma"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "lava o pé com espuma, cosquinha entre os dedinhos, toalha, e a nuvem de chulé some"
+  },
+  {
+   "parte": "final",
+   "ideia": "convite; o sapo de pé limpinho dá tchau"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [
+  "funk_infantil"
+ ],
+ "status": "letra_revisada",
+ "versoes": [],
+ "youtube": {
+  "resumo": "CHULÉ DE SAPO! 🐸 Lá na lagoa mora o sapo… ih, que cheirinho! Eca, que chulé: é o pé do sapo! O sapo bebe água pela pele, mas o nosso pezinho precisa de sabão na hora do banho. Esfrega, cosquinha entre os dedinhos, seca bem… e o chulé sumiu!",
+  "resumo_short": "CHULÉ DE SAPO! 🐸 Eca, que chulé! Lava o pé com a Laurinha e o Luisinho!",
+  "curiosidade": "O sapo bebe água pela pele, mas o nosso pezinho precisa de sabão no banho"
+ },
+ "persona": "luisinho",
+ "revisao": "clássica convertida em autoral 18/11/2026 (o Suno bloqueia letras tradicionais)"
+}

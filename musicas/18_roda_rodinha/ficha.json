@@ -1,0 +1,66 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Roda, Rodinha!",
+ "gancho": "roda rodinha",
+ "palavras_tema": [
+  "roda",
+  "mão",
+  "amigos",
+  "rodinha"
+ ],
+ "tipo": "brincadeira",
+ "tema": "roda de amigos de mãos dadas: ninguém fica de fora",
+ "dia_a_dia": [
+  "brincar de roda",
+  "incluir os amigos"
+ ],
+ "curiosidade": "na roda todo mundo dá a mão e ninguém fica de fora",
+ "ritmo": "forro_piseiro",
+ "bpm": 160,
+ "estrutura": "R",
+ "voz": "dueto",
+ "cantam": {
+  "verso 1": "laurinha",
+  "refrão": "coro",
+  "verso 2": "luisinho",
+  "ponte": "comandos de roda",
+  "final": "todo mundo"
+ },
+ "cenas": [
+  {
+   "parte": "verso 1",
+   "ideia": "jardim: a Laurinha chama a turma e todos dão as mãos, formando uma roda"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "a roda gira vista de cima (como uma flor); quem está de fora é chamado e entra"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "cada um entra no meio da roda e faz um passinho; os outros imitam"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "pra frente, pra trás, meia-volta e abraço coletivo"
+  },
+  {
+   "parte": "final",
+   "ideia": "convite; a roda dando tchau de mãos dadas"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [
+  "pop_infantil"
+ ],
+ "status": "letra_revisada",
+ "versoes": [],
+ "youtube": {
+  "resumo": "RODA, RODINHA! 💃 Chama a turminha e dá a mão: a Laurinha, o Luisinho, a Joaninha e a Formiguinha fazem uma roda em que ninguém fica de fora! Quem entra no meio faz um passinho e todo mundo imita. Pra frente, pra trás, meia-volta… e abraço!",
+  "resumo_short": "RODA, RODINHA! 💃 Dá a mão e entra na roda com a Laurinha e o Luisinho!",
+  "curiosidade": "Na roda todo mundo dá a mão e ninguém fica de fora"
+ },
+ "revisao": "clássica convertida em autoral 18/11/2026 (o Suno bloqueia letras tradicionais)"
+}

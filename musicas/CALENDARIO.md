@@ -2,7 +2,7 @@
 
 **O número da música é a ordem de publicação** (decisão do usuário em 17/11/2026: fica fácil seguir o número).
 Produção e publicação seguem a mesma ordem: 07, 08, 09… Ritmo de 1 vídeo por semana a partir de 24/11/2026; padrão
-**2 autorais + 1 clássica** ([CLASSICAS.md](CLASSICAS.md)); músicas de data 2 a 3 semanas antes do dia; temas parecidos
+só músicas autorais (o Suno bloqueia letras de cantigas tradicionais — ver [CLASSICAS.md](CLASSICAS.md)); músicas de data 2 a 3 semanas antes do dia; temas parecidos
 longe um do outro. Lotes futuros entram com os números seguintes (a 38 e a 39 ficam reservadas para as datas delas).
 
 | Semana | Nº | Música | Tipo | Ritmo | Observação |
@@ -12,33 +12,33 @@ longe um do outro. Lotes futuros entram com os números seguintes (a 38 e a 39 f
 | 08/12 | 09 | Pipa no Céu | autoral | Forró pé de serra | (substituiu a Borboletinha: letra bloqueada pelo Suno) |
 | 15/12 | 10 | Pingo de Chuva | autoral | Reggae infantil |  |
 | 22/12 | 11 | Foguete pra Lua | autoral | Eletrônica infantil | férias |
-| 29/12 | 12 | Carneirinho, Carneirão | clássica | Batucada (percussão brasileira) |  |
+| 29/12 | 12 | Méé, Carneirinho! | autoral | Batucada (percussão brasileira) |  |
 | 05/01 | 13 | Castelo de Areia | autoral | Axé | férias de verão |
 | 12/01 | 14 | Que Forma É Essa? | autoral | Pagodão baiano |  |
-| 19/01 | 15 | A Barata Diz Que Tem | clássica | Rock infantil |  |
+| 19/01 | 15 | Conta Vantagem! | autoral | Rock infantil |  |
 | 26/01 | 16 | Carnaval da Turminha | autoral | Frevo pernambucano | **Carnaval (09/02/2027)** |
 | 02/02 | 17 | Dino Pisa Forte | autoral | Samba-enredo |  |
-| 09/02 | 18 | Ciranda, Cirandinha | clássica | Forró piseiro |  |
+| 09/02 | 18 | Roda, Rodinha! | autoral | Forró piseiro |  |
 | 16/02 | 19 | Cara de Quê? | autoral | Xote | volta às aulas |
 | 23/02 | 20 | Polvo de Oito Braços | autoral | Batucada (percussão brasileira) |  |
-| 02/03 | 21 | Meu Limão, Meu Limoeiro | clássica | Samba infantil |  |
+| 02/03 | 21 | Careta de Limão! | autoral | Samba infantil |  |
 | 09/03 | 22 | Bi-Bi, Fom-Fom! | autoral | Pop infantil |  |
 | 16/03 | 23 | Pula, Coelhinho! | autoral | Funk brasileiro infantil | **Páscoa (28/03/2027)** |
-| 23/03 | 24 | O Sapo Não Lava o Pé | clássica | Forró piseiro |  |
+| 23/03 | 24 | Chulé de Sapo! | autoral | Forró piseiro |  |
 | 30/03 | 25 | Devagar, Devagarinho | autoral | Reggae infantil |  |
 | 06/04 | 26 | Banda da Turminha | autoral | Marchinha de carnaval |  |
-| 13/04 | 27 | A Canoa Virou | clássica | Xote |  |
+| 13/04 | 27 | Canoa de Papel | autoral | Xote |  |
 | 20/04 | 28 | Tum-Tum do Coração | autoral | Pagodão baiano |  |
 | 27/04 | 29 | Mamãe Querida | autoral | Samba infantil | **Dia das Mães (09/05/2027)** |
-| 04/05 | 30 | Peixe Vivo | clássica | Reggae infantil |  |
+| 04/05 | 30 | Blub, Blub, Peixinho! | autoral | Reggae infantil |  |
 | 11/05 | 31 | Abelhinha | autoral | Forró pé de serra |  |
 | 18/05 | 32 | Palavrinha Mágica | autoral | Ciranda |  |
-| 25/05 | 33 | A Galinha do Vizinho | clássica | Sertanejo infantil (country) |  |
+| 25/05 | 33 | Ovinho no Ninho | autoral | Sertanejo infantil (country) |  |
 | 01/06 | 34 | Pula Pipoca | autoral | Forró piseiro | **Festa junina** |
 | 08/06 | 35 | Pescoço de Girafa | autoral | Xote |  |
 | 15/06 | 36 | Atchim! | autoral | Baião |  |
 | 22/06 | 37 | Quando Eu Crescer | autoral | Disco infantil |  |
-| 29/06 → 19/07 | — | (próximo lote: 2 autorais + 1 clássica) | | | |
+| 29/06 → 19/07 | — | (próximo lote) | | | |
 | 26/07 | 38 | Meu Papai | autoral | Rock infantil | **Dia dos Pais (08/08/2027)** |
 | 27/09 | 39 | Dia de Brincar | autoral | Axé | **Dia das Crianças (12/10/2027)** |
 

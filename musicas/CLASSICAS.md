@@ -1,63 +1,22 @@
-# Cantigas clássicas (domínio público) — catálogo
+# Cantigas clássicas — situação (18/11/2026)
 
-Base: [BIBLIA_MUSICAL.md §11](BIBLIA_MUSICAL.md). Formato do canal: **refrão tradicional + versos nossos** (Laurinha,
-Luisinho, mundo pequenino, curiosidade, convite do joinha). Intercalar com as músicas originais (uma clássica a cada
-duas ou três originais).
+**As cantigas tradicionais não estão sendo produzidas.** O filtro do Suno bloqueou a letra da Borboletinha (17/11) e a
+do Carneirinho, Carneirão (18/11) como "material protegido por direitos autorais": ele compara com letras de gravações
+conhecidas e não considera domínio público. Decisão do usuário: transformar todas em músicas **autorais** com o mesmo
+tema, ritmo e cenas, sem nenhum verso tradicional (e sem trocar palavras para driblar o filtro).
 
-**Situação:** ✅ liberada (cantiga tradicional) · ⚠️ com cuidado (usar só a parte indicada / versão moderna) ·
-🔎 verificar a autoria antes · ⛔ fora (tem autor e está protegida, ou o conteúdo não serve)
-
-## Prontas (letra, ficha, cenas e YouTube)
-| Nº | Cantiga | Ritmo | Ideia do canal |
-|---|---|---|---|
-| 12 | Carneirinho, Carneirão | batucada (alt. reggae infantil) | comandos (olha pro céu, pro chão, ajoelha, levanta, pula, gira); curiosidade: a lã vira blusa |
-| 15 | A Barata Diz Que Tem | rock infantil (alt. marchinha) | Dona Barata contando vantagem; a mentirinha tem perna curta; curiosidade: a barata é mais velha que o dinossauro |
-| 18 | Ciranda, Cirandinha | forró piseiro (alt. pop infantil) | roda da turma; só a 1ª estrofe + "entre dentro desta roda" com os nomes (sem a do anel/amor que acabou) |
-| 21 | Meu Limão, Meu Limoeiro | samba infantil (alt. reggae infantil) | limoeiro da vovó e limonada; curiosidade: vitamina C |
-| 24 | O Sapo Não Lava o Pé | forró piseiro (alt. funk infantil) | chulé na lagoa (nuvenzinha verde); curiosidade: o sapo bebe água pela pele; lavar o pé no banho |
-| 27 | A Canoa Virou | xote (alt. marchinha) | canoa de papel no laguinho do parque; quem voa não afunda; na água, sempre com um adulto |
-| 30 | Peixe Vivo | reggae infantil (alt. samba infantil) | só a 1ª estrofe; saudade da Laurinha que viajou e volta; o peixinho dorme de olho aberto |
-| 33 | A Galinha do Vizinho | sertanejo infantil (alt. axé) | contagem dos ovos de 1 a 10; curiosidade: o pintinho nasce do ovo que a galinha choca |
-
-Estilos escolhidos de propósito **diferentes das versões conhecidas** (decisão do usuário: deixar as clássicas com cara própria).
-
-**17/11/2026 — o Suno bloqueou a letra tradicional da Borboletinha** ("material protegido por direitos autorais": o
-filtro compara com letras de gravações conhecidas e não considera domínio público). A música saiu da lista e a 09 virou
-uma autoral (Pipa no Céu). As outras clássicas podem ser bloqueadas também: se acontecer, não trocar palavras só para
-passar no filtro — avisar e decidir (reescrever como autoral ou remover).
-
-## Próximas (liberadas)
-| Cantiga | Situação | Observação / ideia |
+| Nº | Era | Virou (autoral) |
 |---|---|---|
-| Borboletinha | ⛔ | bloqueada pelo filtro do Suno (17/11/2026) |
-| Alecrim Dourado | ⛔ | trocada na auditoria (letra arcaica, tema parado); a 36 virou "Atchim!" (autoral) |
-| Marcha Soldado | ✅ | marcha com chapéu de papel; usar só a 1ª estrofe (a do quartel pegando fogo fica fora) |
-| Sapo Cururu | ✅ | reaproveita a lagoa e o sapo do ep06 |
-| Se Essa Rua Fosse Minha | ✅ | ladrilhar com pedrinhas de brilhante; rua vista de pertinho |
-| Pombinha Branca | ✅ | |
-| Roda Pião | ✅ | comandos de roda |
-| Passa, Passa Gavião | ✅ | imitar profissões ("as lavadeiras fazem assim") |
-| De Abóbora Faz Melão | ✅ | frutas que viram doce |
-| Cachorrinho Está Latindo | ✅ | |
-| A Gatinha Parda | ✅ | |
-| Fui à Espanha | ✅ | chapéu azul e branco |
-| O Meu Galinho | ✅ | o galinho perdido que volta |
-| Nesta Rua | ✅ | |
-| Capelinha de Melão | ✅ | São João (junho) |
-| Pai Francisco | ✅ | |
-| A Linda Rosa Juvenil | ✅ | conto com bruxa: deixar leve |
-| Terezinha de Jesus | ✅ | |
-| A Velha a Fiar | ⚠️ | cumulativa (mosca, aranha, rato, gato…): o fim tradicional fala da morte — trocar o fim |
-| A Machadinha | ⚠️ | ok, mas machado na mão de criança: só a dança |
-| O Pobre e o Rico | ⚠️ | brincadeira de roda antiga sobre casamento; deixar para depois |
-| Fui no Itororó | ⚠️ | só a 1ª estrofe (a parte "uma noite não é nada" fica fora) |
-| Cai, Cai Balão | ⚠️ | soltar balão é crime e causa incêndio: só com balão de papel no chão / bexiga, nunca soltar |
-| O Cravo e a Rosa | ⚠️ | o cravo "brigou" e a rosa ficou "despedaçada": só em versão em que eles fazem as pazes |
-| Atirei o Pau no Gato | ⚠️ | só a versão moderna "Não atire o pau no gato" (cuidar dos animais) |
-| Samba Lelê | ⚠️ | a letra tradicional fala em "umas boas palmadas": só a versão sem castigo |
-| Escravos de Jó | ⚠️ | jogo de passar o copo; o título fala de escravidão — decidir antes de usar |
-| Meu Pintinho Amarelinho | 🔎 | autoria não confirmada (há estudo que trata como domínio público); verificar antes |
-| O Sapo na Lagoa | 🔎 | confirmar qual versão é a tradicional |
-| O Trem de Ferro | 🔎 | se for o poema "Trem de Ferro" de Manuel Bandeira (protegido até 2039), fica fora |
-| Indiozinhos | ⛔ | versão de "Ten Little Indians": retrata indígenas como objetos de contagem; não usar |
-| O Pato | ⛔ | Vinicius de Moraes e Toquinho (Arca de Noé, 1980): obra protegida |
+| 09 | Borboletinha | Pipa no Céu (outro tema) |
+| 12 | Carneirinho, Carneirão | Méé, Carneirinho! ("o carneirinho mandou…") |
+| 15 | A Barata Diz Que Tem | Conta Vantagem! (Dona Barata e a mentirinha de perna curta) |
+| 18 | Ciranda, Cirandinha | Roda, Rodinha! |
+| 21 | Meu Limão, Meu Limoeiro | Careta de Limão! |
+| 24 | O Sapo Não Lava o Pé | Chulé de Sapo! |
+| 27 | A Canoa Virou | Canoa de Papel |
+| 30 | Peixe Vivo | Blub, Blub, Peixinho! |
+| 33 | A Galinha do Vizinho | Ovinho no Ninho |
+| 36 | Alecrim Dourado | Atchim! (outro tema, na auditoria) |
+
+Se um dia voltar a usar cantigas: só com outra ferramenta de geração que aceite domínio público, conferindo a origem de
+cada uma (a lista antiga está no histórico do git deste arquivo).

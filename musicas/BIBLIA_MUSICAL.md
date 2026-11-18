@@ -239,7 +239,8 @@ Independentes da música do episódio; repetidas em todo vídeo:
 ## 11. Direitos
 
 - Letras, melodias e títulos **originais**; referência de mercado só para características gerais.
-- **Exceção (decisão do usuário, 17/11/2026): cantigas tradicionais de domínio público**, intercaladas aos poucos com as
+- **Cantigas tradicionais: suspensas em 18/11/2026** — o Suno bloqueia as letras (ver [CLASSICAS.md](CLASSICAS.md)); todas viraram autorais.
+  Regras que valiam quando eram usadas (17/11/2026): cantigas de domínio público intercaladas aos poucos com as
   originais. Catálogo e situação de cada uma em [CLASSICAS.md](CLASSICAS.md). Regras:
   - só cantiga **tradicional de autor desconhecido** (folclore); música com autor conhecido e ainda protegida, nunca
     (ex.: "O Pato", de Vinicius de Moraes e Toquinho);

@@ -1,0 +1,67 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Blub, Blub, Peixinho!",
+ "gancho": "blub blub peixinho",
+ "palavras_tema": [
+  "peixinho",
+  "saudade",
+  "amigo",
+  "água"
+ ],
+ "tipo": "historinha",
+ "tema": "saudade do amigo que viajou, e a festa quando ele volta",
+ "dia_a_dia": [
+  "sentir saudade",
+  "reencontrar os amigos"
+ ],
+ "curiosidade": "o peixinho faz bolhinhas e nada com a nadadeira e o rabinho",
+ "ritmo": "reggae_infantil",
+ "bpm": 86,
+ "estrutura": "E",
+ "voz": "dueto",
+ "cantam": {
+  "verso 1": "luisinho",
+  "refrão": "coro",
+  "verso 2": "laurinha",
+  "ponte": "comandos, coro responde",
+  "final": "todo mundo"
+ },
+ "cenas": [
+  {
+   "parte": "verso 1",
+   "ideia": "o Luisinho sozinho olhando o aquário, igual peixinho fora da água; toc-toc: a Laurinha voltou com a mala"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "os dois nadam no ar como peixinhos, fazendo bolhinhas; o peixinho do aquário dança junto"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "imitação do peixe: boca de peixe, bolhinha, nadadeira, rabinho"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "nadar pra frente, de lado, mergulho e abraço de amigos"
+  },
+  {
+   "parte": "final",
+   "ideia": "convite; os dois e o peixinho do aquário dão tchau"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [
+  "samba_infantil"
+ ],
+ "status": "letra_revisada",
+ "versoes": [],
+ "youtube": {
+  "resumo": "BLUB, BLUB, PEIXINHO! 🐟 A Laurinha viajou e o Luisinho ficou igual peixinho fora da água… toc, toc: ela voltou! Blub, blub, nada, nada: voltou a alegria! Faz boca de peixe, bolhinha, nadadeira e rabinho! Nada pra frente, de lado e abraço de amigo!",
+  "resumo_short": "BLUB, BLUB, PEIXINHO! 🐟 Nade com a Laurinha e o Luisinho!",
+  "curiosidade": "O peixinho faz bolhinhas e nada com a nadadeira e o rabinho"
+ },
+ "persona": "luisinho",
+ "revisao": "clássica convertida em autoral 18/11/2026 (o Suno bloqueia letras tradicionais)"
+}

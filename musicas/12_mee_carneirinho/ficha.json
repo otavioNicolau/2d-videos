@@ -1,0 +1,70 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Méé, Carneirinho!",
+ "gancho": "méé carneirinho",
+ "palavras_tema": [
+  "carneirinho",
+  "méé",
+  "lã",
+  "mandou"
+ ],
+ "tipo": "danca",
+ "tema": "brincadeira de \"o carneirinho mandou\" com comandos",
+ "dia_a_dia": [
+  "brincar de roda",
+  "blusa de frio"
+ ],
+ "curiosidade": "a lã do carneirinho vira blusinha quentinha de frio",
+ "ritmo": "batucada",
+ "bpm": 130,
+ "estrutura": "D",
+ "voz": "dueto",
+ "cantam": {
+  "verso 1": "laurinha",
+  "refrão": "coro",
+  "verso 2": "luisinho",
+  "ponte": "comandos rápidos e estátua (a música para)",
+  "final": "todo mundo"
+ },
+ "cenas": [
+  {
+   "parte": "intro",
+   "ideia": "campo visto de pertinho: um carneirinho fofo como nuvem pula na tela no \"Méé!\""
+  },
+  {
+   "parte": "verso 1",
+   "ideia": "o carneirinho chama a turma para brincar de \"o carneirinho mandou\""
+  },
+  {
+   "parte": "refrão",
+   "ideia": "a cada \"o carneirinho mandou…\" um comando novo e todos fazem: pular, sentar, girar, abaixar, dançar"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "vento frio (Brrr!): a lã do carneirinho vira uma blusinha quentinha que a Laurinha veste"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "gira, palma, 'méé' e a música para: estátua"
+  },
+  {
+   "parte": "final",
+   "ideia": "convite; o carneirinho de blusinha dá tchau"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [
+  "reggae_infantil"
+ ],
+ "status": "letra_revisada",
+ "versoes": [],
+ "youtube": {
+  "resumo": "MÉÉ, CARNEIRINHO! 🐑 Lá no campo tem um carneirinho que quer brincar: o carneirinho mandou… todo mundo pular! Sentar! Girar! Abaixar! Dançar! Brrr, que friozinho: a lã do carneirinho vira blusinha quentinha. Gira, bate palma, faz méé… estátua!",
+  "resumo_short": "MÉÉ, CARNEIRINHO! 🐑 O carneirinho mandou… brinque com a Laurinha e o Luisinho!",
+  "curiosidade": "A lã do carneirinho vira blusinha quentinha de frio"
+ },
+ "revisao": "clássica convertida em autoral 18/11/2026 (o Suno bloqueia letras tradicionais)"
+}
