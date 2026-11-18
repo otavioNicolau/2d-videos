@@ -1,0 +1,5451 @@
+{
+ "schema": "1.1",
+ "id": "ep15-bolha-de-sabao",
+ "title": "Bolha de Sabão",
+ "logline": "Clipe de \"Bolha de Sabão\" — a bolha de sabão gigante que levou o gato pra passear. Montado do roteiro verso a verso (roteiro.json).",
+ "fps": 30,
+ "resolution": [
+  1920,
+  1080
+ ],
+ "background": "plano_parque",
+ "soundtrack": {
+  "file": "musica/trabalho.wav",
+  "analysis": "analise/song.json",
+  "start": 0.0,
+  "end": 168.5667,
+  "fade_out": 0.6,
+  "beat_grid": "full"
+ },
+ "captions": {
+  "lyrics": "analise/letra.json",
+  "style": "palavra_a_palavra"
+ },
+ "overlays": {
+  "logo": true,
+  "channel": [
+   "LAURINHA",
+   "e Luisinho"
+  ]
+ },
+ "cast": {
+  "laurinha": {
+   "character": "laurinha"
+  },
+  "luisinho": {
+   "character": "luisinho"
+  },
+  "pote": {
+   "character": "potinho"
+  },
+  "b1": {
+   "character": "bolha"
+  },
+  "b2": {
+   "character": "bolha"
+  },
+  "b3": {
+   "character": "bolha"
+  },
+  "b4": {
+   "character": "bolha"
+  },
+  "b5": {
+   "character": "bolha"
+  },
+  "bolha": {
+   "character": "bolha"
+  },
+  "gato": {
+   "character": "gato"
+  },
+  "b6": {
+   "character": "bolha"
+  },
+  "joinha": {
+   "character": "joinha"
+  },
+  "mamae": {
+   "character": "mamae"
+  },
+  "botao": {
+   "character": "botao_inscrever"
+  }
+ },
+ "approval": {
+  "storyboard": true,
+  "final_render": false
+ },
+ "scenes": [
+  {
+   "id": "s01_intro",
+   "title": "Bolha de sabão! Zum, zum!",
+   "duration": 9.3667,
+   "description": "Bolha de sabão! Zum, zum! / Bolha de sabão!",
+   "background": "plano_campo",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "x": 1300,
+      "y": 540.0,
+      "zoom": 1.0
+     },
+     {
+      "t": 9.367,
+      "x": 1300,
+      "y": 540.0,
+      "zoom": 1.08,
+      "ease": "inout"
+     }
+    ],
+    "beat": {
+     "pulse": 0.0,
+     "bar_zoom": 0.04,
+     "sway": 6,
+     "bounce": 0
+    }
+   },
+   "characters": {
+    "laurinha": {
+     "start": {
+      "x": -250,
+      "y": 520,
+      "turn": 0.4,
+      "expr": "happy",
+      "z": 3
+     },
+     "exposure": 1,
+     "actions": [
+      {
+       "t": 0.3,
+       "do": "fly",
+       "dur": 2.2,
+       "to_x": 1150,
+       "to_y": 930
+      }
+     ]
+    }
+   },
+   "props": {
+    "pote": {
+     "start": {
+      "x": 1500,
+      "y": 940,
+      "z": 3,
+      "depth": 0.9
+     },
+     "exposure": 1
+    },
+    "b1": {
+     "start": {
+      "x": 700,
+      "y": 1000,
+      "z": 4,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.35
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 1000,
+        "x": 700
+       }
+      },
+      {
+       "t": 9.33,
+       "pose": {
+        "y": 480,
+        "x": 660
+       },
+       "ease": "linear",
+       "in": 9.3
+      }
+     ]
+    },
+    "b2": {
+     "start": {
+      "x": 960,
+      "y": 1060,
+      "z": 4,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.308
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 1060,
+        "x": 960
+       }
+      },
+      {
+       "t": 9.33,
+       "pose": {
+        "y": 460,
+        "x": 1000
+       },
+       "ease": "linear",
+       "in": 9.3
+      }
+     ]
+    },
+    "b3": {
+     "start": {
+      "x": 1220,
+      "y": 1000,
+      "z": 4,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.26599999999999996
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 1000,
+        "x": 1220
+       }
+      },
+      {
+       "t": 9.33,
+       "pose": {
+        "y": 320,
+        "x": 1180
+       },
+       "ease": "linear",
+       "in": 9.3
+      }
+     ]
+    },
+    "b4": {
+     "start": {
+      "x": 1480,
+      "y": 1060,
+      "z": 4,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.35
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 1060,
+        "x": 1480
+       }
+      },
+      {
+       "t": 9.33,
+       "pose": {
+        "y": 540,
+        "x": 1520
+       },
+       "ease": "linear",
+       "in": 9.3
+      }
+     ]
+    },
+    "b5": {
+     "start": {
+      "x": 1740,
+      "y": 1000,
+      "z": 4,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.308
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 1000,
+        "x": 1740
+       }
+      },
+      {
+       "t": 9.33,
+       "pose": {
+        "y": 400,
+        "x": 1700
+       },
+       "ease": "linear",
+       "in": 9.3
+      }
+     ]
+    }
+   },
+   "callouts": [
+    {
+     "t": 1.5,
+     "text": "BOLHA DE SABÃO!",
+     "dur": 1.8,
+     "color": "azul",
+     "y": 170
+    }
+   ],
+   "sing": [
+    {
+     "who": "laurinha",
+     "from": 1.5,
+     "to": 5.08
+    },
+    {
+     "who": "laurinha",
+     "from": 5.54,
+     "to": 7.08
+    }
+   ]
+  },
+  {
+   "id": "s02_verso",
+   "title": "Peguei o potinho de sabão,",
+   "duration": 6.3666,
+   "description": "Peguei o potinho de sabão, / Assoprei bem devagarinho,",
+   "background": "plano_campo",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "x": 1300,
+      "y": 640,
+      "zoom": 1.35
+     },
+     {
+      "t": 6.367,
+      "x": 1300,
+      "y": 640,
+      "zoom": 1.42,
+      "ease": "inout"
+     }
+    ],
+    "beat": {
+     "pulse": 0.0,
+     "bar_zoom": 0.04,
+     "sway": 6,
+     "bounce": 0
+    }
+   },
+   "characters": {
+    "laurinha": {
+     "start": {
+      "x": 1050,
+      "y": 930,
+      "turn": 0.4,
+      "expr": "happy",
+      "z": 3,
+      "mouth": "O"
+     },
+     "exposure": 1,
+     "actions": [
+      {
+       "t": 0.2,
+       "do": "point",
+       "dur": 6.167
+      }
+     ]
+    }
+   },
+   "props": {
+    "pote": {
+     "start": {
+      "x": 1450,
+      "y": 940,
+      "z": 3,
+      "depth": 1.0
+     },
+     "exposure": 1
+    },
+    "bolha": {
+     "start": {
+      "x": 1250,
+      "y": 760,
+      "z": 3,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.5
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "tam": 0.0
+       }
+      },
+      {
+       "t": 6.26,
+       "pose": {
+        "tam": 0.5
+       },
+       "ease": "out",
+       "in": 6.23
+      }
+     ]
+    }
+   },
+   "sing": [
+    {
+     "who": "laurinha",
+     "from": 0.393,
+     "to": 6.357
+    }
+   ],
+   "transition_in": {
+    "type": "deslizar_dir",
+    "dur": 0.4
+   }
+  },
+  {
+   "id": "s03_verso",
+   "title": "Saiu uma bolha gigante,",
+   "duration": 7.7334,
+   "description": "Saiu uma bolha gigante, / Maior que o meu vizinho!",
+   "background": "plano_campo",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "x": 1300,
+      "y": 540.0,
+      "zoom": 1.0
+     },
+     {
+      "t": 7.733,
+      "x": 1300,
+      "y": 540.0,
+      "zoom": 1.04,
+      "ease": "inout"
+     }
+    ],
+    "beat": {
+     "pulse": 0.0,
+     "bar_zoom": 0.04,
+     "sway": 6,
+     "bounce": 0
+    }
+   },
+   "characters": {
+    "laurinha": {
+     "start": {
+      "x": 700,
+      "y": 930,
+      "turn": 0.4,
+      "expr": "happy",
+      "z": 3
+     },
+     "exposure": 1,
+     "actions": [
+      {
+       "t": 0.2,
+       "do": "cheguei",
+       "dur": 7.533
+      }
+     ]
+    },
+    "luisinho": {
+     "start": {
+      "x": 1900,
+      "y": 930,
+      "turn": -0.4,
+      "expr": "surprised",
+      "z": 3
+     },
+     "exposure": 1,
+     "actions": [
+      {
+       "t": 3.38,
+       "do": "take"
+      }
+     ]
+    }
+   },
+   "props": {
+    "bolha": {
+     "start": {
+      "x": 1300,
+      "y": 930,
+      "z": 3,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.9
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "tam": 0.4
+       }
+      },
+      {
+       "t": 4.18,
+       "pose": {
+        "tam": 1.0
+       },
+       "ease": "out",
+       "in": 4.15
+      }
+     ]
+    }
+   },
+   "callouts": [
+    {
+     "t": 2.98,
+     "text": "GIGANTE!",
+     "dur": 1.8,
+     "color": "rosa",
+     "y": 170
+    }
+   ],
+   "sing": [
+    {
+     "who": "laurinha",
+     "from": 0.307,
+     "to": 7.723
+    }
+   ]
+  },
+  {
+   "id": "s04_verso",
+   "title": "Ela pegou o gato",
+   "duration": 4.0666,
+   "description": "Ela pegou o gato / E levou ele pro ar,",
+   "background": "plano_campo",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "x": 1300,
+      "y": 540.0,
+      "zoom": 1.05
+     },
+     {
+      "t": 4.067,
+      "x": 1300,
+      "y": 540.0,
+      "zoom": 1.0,
+      "ease": "inout"
+     }
+    ],
+    "beat": {
+     "pulse": 0.0,
+     "bar_zoom": 0.04,
+     "sway": 6,
+     "bounce": 0
+    }
+   },
+   "characters": {
+    "laurinha": {
+     "start": {
+      "x": 650,
+      "y": 930,
+      "turn": 0.4,
+      "expr": "happy",
+      "z": 3
+     },
+     "exposure": 1,
+     "actions": [
+      {
+       "t": 2.71,
+       "do": "take"
+      }
+     ]
+    }
+   },
+   "props": {
+    "gato": {
+     "start": {
+      "x": 1300,
+      "y": 930,
+      "z": 2,
+      "depth": 0.75
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "assusta": 0.0
+       }
+      },
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 930
+       }
+      },
+      {
+       "t": 2.71,
+       "pose": {
+        "assusta": 1.0
+       },
+       "ease": "out",
+       "in": 2.68
+      },
+      {
+       "t": 2.81,
+       "pose": {
+        "y": 930
+       },
+       "in": 2.78
+      },
+      {
+       "t": 3.99,
+       "pose": {
+        "y": 720
+       },
+       "ease": "inout",
+       "in": 1.15
+      }
+     ]
+    },
+    "bolha": {
+     "start": {
+      "x": 1300,
+      "y": 960,
+      "z": 3,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.95
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "x": 900
+       }
+      },
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 960
+       }
+      },
+      {
+       "t": 2.61,
+       "pose": {
+        "x": 1300
+       },
+       "ease": "inout",
+       "in": 2.58
+      },
+      {
+       "t": 2.81,
+       "pose": {
+        "y": 960
+       },
+       "in": 2.78
+      },
+      {
+       "t": 3.99,
+       "pose": {
+        "y": 750
+       },
+       "ease": "inout",
+       "in": 1.15
+      }
+     ]
+    }
+   },
+   "callouts": [
+    {
+     "t": 2.51,
+     "text": "O GATO!",
+     "dur": 1.557,
+     "color": "laranja",
+     "y": 170
+    }
+   ],
+   "sing": [
+    {
+     "who": "laurinha",
+     "from": 0.193,
+     "to": 4.057
+    }
+   ]
+  },
+  {
+   "id": "s05_verso",
+   "title": "O gato fez miau",
+   "duration": 5.8667,
+   "description": "O gato fez miau / E foi passear!",
+   "background": "plano_campo",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "x": 1300,
+      "y": 540.0,
+      "zoom": 1.0
+     },
+     {
+      "t": 5.867,
+      "x": 1300,
+      "y": 540.0,
+      "zoom": 1.06,
+      "ease": "inout"
+     }
+    ],
+    "beat": {
+     "pulse": 0.0,
+     "bar_zoom": 0.04,
+     "sway": 6,
+     "bounce": 0
+    }
+   },
+   "characters": {
+    "laurinha": {
+     "start": {
+      "x": 900,
+      "y": 930,
+      "turn": 0.3,
+      "expr": "happy",
+      "z": 3,
+      "fly": 0
+     },
+     "exposure": 1,
+     "actions": [
+      {
+       "t": 0.2,
+       "do": "laugh",
+       "dur": 5.667
+      }
+     ]
+    }
+   },
+   "props": {
+    "gato": {
+     "start": {
+      "x": 500,
+      "y": 770,
+      "z": 2,
+      "depth": 0.7
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "x": 450
+       }
+      },
+      {
+       "t": 1.39,
+       "pose": {
+        "miau": 0.0
+       }
+      },
+      {
+       "t": 1.54,
+       "pose": {
+        "miau": 1.0
+       },
+       "in": 0.12
+      },
+      {
+       "t": 2.04,
+       "pose": {
+        "miau": 0.0,
+        "aceno": 1.0
+       },
+       "in": 0.47
+      },
+      {
+       "t": 5.75,
+       "pose": {
+        "x": 2200
+       },
+       "ease": "inout",
+       "in": 5.72
+      }
+     ]
+    },
+    "bolha": {
+     "start": {
+      "x": 450,
+      "y": 800,
+      "z": 3,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.9
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "x": 450
+       }
+      },
+      {
+       "t": 5.75,
+       "pose": {
+        "x": 2200
+       },
+       "ease": "inout",
+       "in": 5.72
+      }
+     ]
+    }
+   },
+   "callouts": [
+    {
+     "t": 1.44,
+     "text": "MIAU!",
+     "dur": 1.8,
+     "color": "amarelo",
+     "y": 170
+    }
+   ],
+   "sing": [
+    {
+     "who": "laurinha",
+     "from": 0.127,
+     "to": 1.714
+    },
+    {
+     "who": "laurinha",
+     "from": 2.247,
+     "to": 4.047
+    }
+   ]
+  },
+  {
+   "id": "s06_refrao",
+   "title": "Bolha de sabão, voa!",
+   "duration": 7.2,
+   "description": "Bolha de sabão, voa! / Sobe, sobe, devagar! / Bolha de sabão, voa! / Ploc! Estourou no ar!",
+   "background": "plano_campo",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "x": 1300,
+      "y": 540.0,
+      "zoom": 1.0
+     },
+     {
+      "t": 7.2,
+      "x": 1300,
+      "y": 540.0,
+      "zoom": 1.05,
+      "ease": "inout"
+     }
+    ],
+    "beat": {
+     "pulse": 0.0,
+     "bar_zoom": 0.04,
+     "sway": 6,
+     "bounce": 0
+    }
+   },
+   "characters": {
+    "laurinha": {
+     "start": {
+      "x": 650,
+      "y": 930,
+      "turn": 0.35,
+      "expr": "happy",
+      "z": 3
+     },
+     "exposure": 1,
+     "actions": [
+      {
+       "t": 0.0,
+       "do": "dance",
+       "style": "bracos",
+       "dur": 5.61
+      },
+      {
+       "t": 5.91,
+       "do": "laugh",
+       "dur": 1.29
+      }
+     ]
+    },
+    "luisinho": {
+     "start": {
+      "x": 1950,
+      "y": 930,
+      "turn": -0.35,
+      "expr": "happy",
+      "z": 3
+     },
+     "exposure": 1,
+     "actions": [
+      {
+       "t": 0.0,
+       "do": "dance",
+       "style": "pulinho",
+       "dur": 5.61
+      },
+      {
+       "t": 6.01,
+       "do": "laugh",
+       "dur": 1.19
+      }
+     ]
+    }
+   },
+   "props": {
+    "bolha": {
+     "start": {
+      "x": 1300,
+      "y": 900,
+      "z": 3,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.95
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 900
+       }
+      },
+      {
+       "t": 5.61,
+       "pose": {
+        "y": 640
+       },
+       "ease": "inout",
+       "in": 5.58
+      },
+      {
+       "t": 5.66,
+       "pose": {
+        "estoura": 0.0
+       }
+      },
+      {
+       "t": 6.11,
+       "pose": {
+        "estoura": 1.0
+       },
+       "ease": "out",
+       "in": 0.42
+      }
+     ]
+    },
+    "gato": {
+     "start": {
+      "x": 1300,
+      "y": 870,
+      "z": 2,
+      "depth": 0.75
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 870
+       }
+      },
+      {
+       "t": 5.61,
+       "pose": {
+        "y": 610
+       },
+       "ease": "inout",
+       "in": 5.58
+      },
+      {
+       "t": 5.76,
+       "pose": {
+        "assusta": 1.0
+       }
+      },
+      {
+       "t": 6.51,
+       "pose": {
+        "y": 930
+       },
+       "ease": "in",
+       "in": 0.87
+      },
+      {
+       "t": 7.109999999999999,
+       "pose": {
+        "assusta": 0.0
+       },
+       "ease": "out",
+       "in": 1.32
+      }
+     ]
+    }
+   },
+   "flash_in": true,
+   "callouts": [
+    {
+     "t": 0.15,
+     "text": "BOLHA DE SABÃO!",
+     "dur": 1.8,
+     "color": "azul",
+     "y": 170
+    },
+    {
+     "t": 5.71,
+     "text": "PLOC!",
+     "dur": 1.49,
+     "color": "vermelho",
+     "y": 170
+    }
+   ],
+   "sing": [
+    {
+     "who": "laurinha",
+     "from": 0.04,
+     "to": 7.19
+    },
+    {
+     "who": "luisinho",
+     "from": 0.04,
+     "to": 7.19
+    }
+   ],
+   "transition_in": {
+    "type": "deslizar_esq",
+    "dur": 0.4
+   }
+  },
+  {
+   "id": "s07_refrao",
+   "title": "Bolha de sabão, voa!",
+   "duration": 7.2,
+   "description": "Bolha de sabão, voa! / Sobe, sobe, devagar! / Bolha de sabão, voa! / Ploc! Estourou no ar!",
+   "background": "danca_bolinhas_azul",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "x": 960,
+      "y": 560,
+      "zoom": 1.0
+     },
+     {
+      "t": 7.2,
+      "x": 960,
+      "y": 560,
+      "zoom": 1.06,
+      "ease": "inout"
+     }
+    ],
+    "beat": {
+     "pulse": 0.0,
+     "bar_zoom": 0.04,
+     "sway": 6,
+     "bounce": 0
+    }
+   },
+   "characters": {
+    "laurinha": {
+     "start": {
+      "x": 560,
+      "y": 1010,
+      "turn": 0.25,
+      "expr": "happy",
+      "z": 3,
+      "depth": 1.15
+     },
+     "exposure": 1,
+     "actions": [
+      {
+       "t": 0.0,
+       "do": "dance",
+       "style": "pulinho",
+       "dur": 7.2
+      }
+     ]
+    },
+    "luisinho": {
+     "start": {
+      "x": 1360,
+      "y": 1010,
+      "turn": -0.25,
+      "expr": "happy",
+      "z": 3,
+      "depth": 1.15
+     },
+     "exposure": 1,
+     "actions": [
+      {
+       "t": 0.0,
+       "do": "dance",
+       "style": "gingado",
+       "dur": 7.2
+      }
+     ]
+    }
+   },
+   "props": {
+    "b1": {
+     "start": {
+      "x": 300,
+      "y": 1000,
+      "z": 4,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.45
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 1000,
+        "x": 300
+       }
+      },
+      {
+       "t": 5.62,
+       "pose": {
+        "estoura": 0.0
+       }
+      },
+      {
+       "t": 5.97,
+       "pose": {
+        "estoura": 1.0
+       },
+       "ease": "out",
+       "in": 0.32
+      },
+      {
+       "t": 7.15,
+       "pose": {
+        "y": 520,
+        "x": 260
+       },
+       "ease": "linear",
+       "in": 7.12
+      }
+     ]
+    },
+    "b2": {
+     "start": {
+      "x": 570,
+      "y": 1060,
+      "z": 4,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.396
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 1060,
+        "x": 570
+       }
+      },
+      {
+       "t": 5.7,
+       "pose": {
+        "estoura": 0.0
+       }
+      },
+      {
+       "t": 6.05,
+       "pose": {
+        "estoura": 1.0
+       },
+       "ease": "out",
+       "in": 0.32
+      },
+      {
+       "t": 7.15,
+       "pose": {
+        "y": 500,
+        "x": 610
+       },
+       "ease": "linear",
+       "in": 7.12
+      }
+     ]
+    },
+    "b3": {
+     "start": {
+      "x": 840,
+      "y": 1000,
+      "z": 4,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.342
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 1000,
+        "x": 840
+       }
+      },
+      {
+       "t": 5.78,
+       "pose": {
+        "estoura": 0.0
+       }
+      },
+      {
+       "t": 6.13,
+       "pose": {
+        "estoura": 1.0
+       },
+       "ease": "out",
+       "in": 0.32
+      },
+      {
+       "t": 7.15,
+       "pose": {
+        "y": 360,
+        "x": 800
+       },
+       "ease": "linear",
+       "in": 7.12
+      }
+     ]
+    },
+    "b4": {
+     "start": {
+      "x": 1110,
+      "y": 1060,
+      "z": 4,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.45
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 1060,
+        "x": 1110
+       }
+      },
+      {
+       "t": 5.86,
+       "pose": {
+        "estoura": 0.0
+       }
+      },
+      {
+       "t": 6.21,
+       "pose": {
+        "estoura": 1.0
+       },
+       "ease": "out",
+       "in": 0.32
+      },
+      {
+       "t": 7.15,
+       "pose": {
+        "y": 580,
+        "x": 1150
+       },
+       "ease": "linear",
+       "in": 7.12
+      }
+     ]
+    },
+    "b5": {
+     "start": {
+      "x": 1380,
+      "y": 1000,
+      "z": 4,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.396
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 1000,
+        "x": 1380
+       }
+      },
+      {
+       "t": 5.94,
+       "pose": {
+        "estoura": 0.0
+       }
+      },
+      {
+       "t": 6.29,
+       "pose": {
+        "estoura": 1.0
+       },
+       "ease": "out",
+       "in": 0.32
+      },
+      {
+       "t": 7.15,
+       "pose": {
+        "y": 440,
+        "x": 1340
+       },
+       "ease": "linear",
+       "in": 7.12
+      }
+     ]
+    },
+    "b6": {
+     "start": {
+      "x": 1650,
+      "y": 1060,
+      "z": 4,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.342
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 1060,
+        "x": 1650
+       }
+      },
+      {
+       "t": 6.0200000000000005,
+       "pose": {
+        "estoura": 0.0
+       }
+      },
+      {
+       "t": 6.37,
+       "pose": {
+        "estoura": 1.0
+       },
+       "ease": "out",
+       "in": 0.32
+      },
+      {
+       "t": 7.15,
+       "pose": {
+        "y": 420,
+        "x": 1690
+       },
+       "ease": "linear",
+       "in": 7.12
+      }
+     ]
+    }
+   },
+   "fx": [
+    "estrelas"
+   ],
+   "callouts": [
+    {
+     "t": 0.2,
+     "text": "SOBE, SOBE!",
+     "dur": 1.8,
+     "color": "amarelo",
+     "y": 170
+    },
+    {
+     "t": 5.67,
+     "text": "PLOC!",
+     "dur": 1.53,
+     "color": "vermelho",
+     "y": 170
+    }
+   ],
+   "sing": [
+    {
+     "who": "laurinha",
+     "from": 0.16,
+     "to": 7.19
+    },
+    {
+     "who": "luisinho",
+     "from": 0.16,
+     "to": 7.19
+    }
+   ]
+  },
+  {
+   "id": "s08_intervalo",
+   "title": "Bora, turminha!",
+   "duration": 1.9333,
+   "description": "Bora, turminha!",
+   "background": "danca_raios_rosa",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "x": 960,
+      "y": 630,
+      "zoom": 1.75
+     },
+     {
+      "t": 1.933,
+      "x": 960,
+      "y": 630,
+      "zoom": 1.81,
+      "ease": "inout"
+     }
+    ],
+    "beat": {
+     "pulse": 0.0,
+     "bar_zoom": 0.04,
+     "sway": 6,
+     "bounce": 0
+    }
+   },
+   "characters": {
+    "laurinha": {
+     "start": {
+      "x": 960,
+      "y": 1010,
+      "turn": 0.15,
+      "expr": "happy",
+      "z": 3,
+      "depth": 1.3
+     },
+     "exposure": 1,
+     "actions": [
+      {
+       "t": 0.1,
+       "do": "apontar_camera",
+       "dur": 1.833
+      }
+     ]
+    }
+   },
+   "callouts": [
+    {
+     "t": 0.2,
+     "text": "BORA, TURMINHA!",
+     "dur": 1.733,
+     "color": "amarelo",
+     "y": 170
+    }
+   ],
+   "sing": [
+    {
+     "who": "laurinha",
+     "from": 0.3,
+     "to": 1.92
+    }
+   ],
+   "transition_in": {
+    "type": "cortina",
+    "dur": 0.4
+   }
+  },
+  {
+   "id": "s09_intervalo",
+   "title": "dança com o gato e as bolhinhas",
+   "duration": 6.1667,
+   "description": "",
+   "background": "plano_campo",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "x": 1300,
+      "y": 540.0,
+      "zoom": 1.0
+     },
+     {
+      "t": 6.167,
+      "x": 1300,
+      "y": 540.0,
+      "zoom": 1.06,
+      "ease": "inout"
+     }
+    ],
+    "beat": {
+     "pulse": 0.0,
+     "bar_zoom": 0.04,
+     "sway": 6,
+     "bounce": 0
+    }
+   },
+   "characters": {
+    "laurinha": {
+     "start": {
+      "x": 750,
+      "y": 930,
+      "turn": 0.3,
+      "expr": "happy",
+      "z": 3
+     },
+     "exposure": 1,
+     "actions": [
+      {
+       "t": 0.0,
+       "do": "dance",
+       "style": "bracos",
+       "dur": 6.167
+      }
+     ]
+    },
+    "luisinho": {
+     "start": {
+      "x": 1850,
+      "y": 930,
+      "turn": -0.3,
+      "expr": "happy",
+      "z": 3
+     },
+     "exposure": 1,
+     "actions": [
+      {
+       "t": 0.0,
+       "do": "dance",
+       "style": "pulinho",
+       "dur": 6.167
+      }
+     ]
+    }
+   },
+   "props": {
+    "gato": {
+     "start": {
+      "x": 1300,
+      "y": 930,
+      "z": 2,
+      "depth": 0.8
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "rabo": 0.0
+       }
+      },
+      {
+       "t": 6.09,
+       "pose": {
+        "rabo": 4.0
+       },
+       "ease": "linear",
+       "in": 6.06
+      }
+     ]
+    },
+    "b1": {
+     "start": {
+      "x": 500,
+      "y": 1000,
+      "z": 4,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.35
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 1000,
+        "x": 500
+       }
+      },
+      {
+       "t": 6.14,
+       "pose": {
+        "y": 550,
+        "x": 460
+       },
+       "ease": "linear",
+       "in": 6.11
+      }
+     ]
+    },
+    "b2": {
+     "start": {
+      "x": 950,
+      "y": 1060,
+      "z": 4,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.308
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 1060,
+        "x": 950
+       }
+      },
+      {
+       "t": 6.14,
+       "pose": {
+        "y": 530,
+        "x": 990
+       },
+       "ease": "linear",
+       "in": 6.11
+      }
+     ]
+    },
+    "b3": {
+     "start": {
+      "x": 1400,
+      "y": 1000,
+      "z": 4,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.26599999999999996
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 1000,
+        "x": 1400
+       }
+      },
+      {
+       "t": 6.14,
+       "pose": {
+        "y": 390,
+        "x": 1360
+       },
+       "ease": "linear",
+       "in": 6.11
+      }
+     ]
+    },
+    "b4": {
+     "start": {
+      "x": 1850,
+      "y": 1060,
+      "z": 4,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.35
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 1060,
+        "x": 1850
+       }
+      },
+      {
+       "t": 6.14,
+       "pose": {
+        "y": 610,
+        "x": 1890
+       },
+       "ease": "linear",
+       "in": 6.11
+      }
+     ]
+    }
+   },
+   "fx": [
+    "notas"
+   ]
+  },
+  {
+   "id": "s10_ponte",
+   "title": "Assopra pra cima!",
+   "duration": 4.0667,
+   "description": "Assopra pra cima! / Assopra pro lado!",
+   "background": "plano_campo",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "x": 1300,
+      "y": 540.0,
+      "zoom": 1.0
+     },
+     {
+      "t": 4.067,
+      "x": 1300,
+      "y": 540.0,
+      "zoom": 1.06,
+      "ease": "inout"
+     }
+    ],
+    "beat": {
+     "pulse": 0.0,
+     "bar_zoom": 0.04,
+     "sway": 6,
+     "bounce": 0
+    }
+   },
+   "characters": {
+    "laurinha": {
+     "start": {
+      "x": 800,
+      "y": 930,
+      "turn": 0.35,
+      "expr": "happy",
+      "z": 3
+     },
+     "exposure": 1,
+     "actions": [
+      {
+       "t": 0.0,
+       "do": "dance",
+       "style": "bracos",
+       "dur": 3.75
+      },
+      {
+       "t": 3.85,
+       "do": "dance",
+       "style": "lado",
+       "dur": 0.3
+      }
+     ]
+    },
+    "luisinho": {
+     "start": {
+      "x": 1850,
+      "y": 930,
+      "turn": -0.35,
+      "expr": "happy",
+      "z": 3
+     },
+     "exposure": 1,
+     "actions": [
+      {
+       "t": 0.0,
+       "do": "dance",
+       "style": "bracos",
+       "dur": 3.75
+      },
+      {
+       "t": 3.85,
+       "do": "dance",
+       "style": "lado",
+       "dur": 0.3
+      }
+     ]
+    }
+   },
+   "props": {
+    "b1": {
+     "start": {
+      "x": 1300,
+      "y": 760,
+      "z": 3,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.5
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 760,
+        "x": 1300
+       }
+      },
+      {
+       "t": 3.75,
+       "pose": {
+        "y": 380
+       },
+       "ease": "inout",
+       "in": 3.72
+      },
+      {
+       "t": 3.94,
+       "pose": {
+        "x": 2000
+       },
+       "ease": "inout",
+       "in": 3.91
+      }
+     ]
+    }
+   },
+   "callouts": [
+    {
+     "t": 0.2,
+     "text": "PRA CIMA!",
+     "dur": 1.8,
+     "color": "azul",
+     "y": 170
+    },
+    {
+     "t": 3.85,
+     "text": "PRO LADO!",
+     "dur": 0.6,
+     "color": "verde",
+     "y": 170
+    }
+   ],
+   "sing": [
+    {
+     "who": "laurinha",
+     "from": 0.1,
+     "to": 2.5
+    },
+    {
+     "who": "laurinha",
+     "from": 2.86,
+     "to": 4.057
+    }
+   ],
+   "transition_in": {
+    "type": "giro",
+    "dur": 0.4
+   }
+  },
+  {
+   "id": "s11_ponte",
+   "title": "Pega a bolhinha",
+   "duration": 4.4666,
+   "description": "Pega a bolhinha / Com o dedo esticado!",
+   "background": "plano_campo",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "x": 1250,
+      "y": 520,
+      "zoom": 1.35
+     },
+     {
+      "t": 4.467,
+      "x": 1250,
+      "y": 520,
+      "zoom": 1.4,
+      "ease": "inout"
+     }
+    ],
+    "beat": {
+     "pulse": 0.0,
+     "bar_zoom": 0.04,
+     "sway": 6,
+     "bounce": 0
+    }
+   },
+   "characters": {
+    "laurinha": {
+     "start": {
+      "x": 1050,
+      "y": 930,
+      "turn": 0.4,
+      "expr": "happy",
+      "z": 3
+     },
+     "exposure": 1,
+     "actions": [
+      {
+       "t": 2.23,
+       "do": "point",
+       "dur": 2.237
+      }
+     ]
+    }
+   },
+   "props": {
+    "b1": {
+     "start": {
+      "x": 1400,
+      "y": 600,
+      "z": 3,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.35
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 640
+       }
+      },
+      {
+       "t": 2.63,
+       "pose": {
+        "y": 560
+       },
+       "ease": "inout",
+       "in": 2.6
+      },
+      {
+       "t": 2.78,
+       "pose": {
+        "estoura": 0.0
+       }
+      },
+      {
+       "t": 3.13,
+       "pose": {
+        "estoura": 1.0
+       },
+       "ease": "out",
+       "in": 0.32
+      }
+     ]
+    }
+   },
+   "callouts": [
+    {
+     "t": 2.83,
+     "text": "PLOC!",
+     "dur": 1.637,
+     "color": "vermelho",
+     "y": 170
+    }
+   ],
+   "sing": [
+    {
+     "who": "laurinha",
+     "from": 0.273,
+     "to": 4.093
+    }
+   ]
+  },
+  {
+   "id": "s12_verso",
+   "title": "Peguei o potinho de sabão,",
+   "duration": 7.1667,
+   "description": "Peguei o potinho de sabão, / Assoprei bem devagarinho,",
+   "background": "plano_campo",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "x": 1300,
+      "y": 640,
+      "zoom": 1.35
+     },
+     {
+      "t": 7.167,
+      "x": 1300,
+      "y": 640,
+      "zoom": 1.42,
+      "ease": "inout"
+     }
+    ],
+    "beat": {
+     "pulse": 0.0,
+     "bar_zoom": 0.04,
+     "sway": 6,
+     "bounce": 0
+    }
+   },
+   "characters": {
+    "laurinha": {
+     "start": {
+      "x": 1050,
+      "y": 930,
+      "turn": 0.4,
+      "expr": "happy",
+      "z": 3,
+      "mouth": "O"
+     },
+     "exposure": 1,
+     "actions": [
+      {
+       "t": 0.2,
+       "do": "point",
+       "dur": 6.967
+      }
+     ]
+    }
+   },
+   "props": {
+    "pote": {
+     "start": {
+      "x": 1450,
+      "y": 940,
+      "z": 3,
+      "depth": 1.0
+     },
+     "exposure": 1
+    },
+    "bolha": {
+     "start": {
+      "x": 1250,
+      "y": 760,
+      "z": 3,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.5
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "tam": 0.0
+       }
+      },
+      {
+       "t": 7.07,
+       "pose": {
+        "tam": 0.5
+       },
+       "ease": "out",
+       "in": 7.04
+      }
+     ]
+    }
+   },
+   "sing": [
+    {
+     "who": "laurinha",
+     "from": 0.287,
+     "to": 6.567
+    }
+   ],
+   "transition_in": {
+    "type": "deslizar_esq",
+    "dur": 0.4
+   }
+  },
+  {
+   "id": "s13_verso",
+   "title": "Saiu uma bolha gigante,",
+   "duration": 7.2,
+   "description": "Saiu uma bolha gigante, / Maior que o meu vizinho!",
+   "background": "plano_campo",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "x": 1300,
+      "y": 540.0,
+      "zoom": 1.0
+     },
+     {
+      "t": 7.2,
+      "x": 1300,
+      "y": 540.0,
+      "zoom": 1.04,
+      "ease": "inout"
+     }
+    ],
+    "beat": {
+     "pulse": 0.0,
+     "bar_zoom": 0.04,
+     "sway": 6,
+     "bounce": 0
+    }
+   },
+   "characters": {
+    "laurinha": {
+     "start": {
+      "x": 700,
+      "y": 930,
+      "turn": 0.4,
+      "expr": "happy",
+      "z": 3
+     },
+     "exposure": 1,
+     "actions": [
+      {
+       "t": 0.2,
+       "do": "cheguei",
+       "dur": 7.0
+      }
+     ]
+    },
+    "luisinho": {
+     "start": {
+      "x": 1900,
+      "y": 930,
+      "turn": -0.4,
+      "expr": "surprised",
+      "z": 3
+     },
+     "exposure": 1,
+     "actions": [
+      {
+       "t": 2.4499999999999997,
+       "do": "take"
+      }
+     ]
+    }
+   },
+   "props": {
+    "bolha": {
+     "start": {
+      "x": 1300,
+      "y": 930,
+      "z": 3,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.9
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "tam": 0.4
+       }
+      },
+      {
+       "t": 3.25,
+       "pose": {
+        "tam": 1.0
+       },
+       "ease": "out",
+       "in": 3.22
+      }
+     ]
+    }
+   },
+   "callouts": [
+    {
+     "t": 2.05,
+     "text": "GIGANTE!",
+     "dur": 1.8,
+     "color": "rosa",
+     "y": 170
+    }
+   ],
+   "sing": [
+    {
+     "who": "laurinha",
+     "from": 0.12,
+     "to": 6.62
+    }
+   ]
+  },
+  {
+   "id": "s14_verso",
+   "title": "Ela pegou o gato",
+   "duration": 3.5667,
+   "description": "Ela pegou o gato / E levou ele pro ar,",
+   "background": "plano_campo",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "x": 1300,
+      "y": 540.0,
+      "zoom": 1.05
+     },
+     {
+      "t": 3.567,
+      "x": 1300,
+      "y": 540.0,
+      "zoom": 1.0,
+      "ease": "inout"
+     }
+    ],
+    "beat": {
+     "pulse": 0.0,
+     "bar_zoom": 0.04,
+     "sway": 6,
+     "bounce": 0
+    }
+   },
+   "characters": {
+    "laurinha": {
+     "start": {
+      "x": 650,
+      "y": 930,
+      "turn": 0.4,
+      "expr": "happy",
+      "z": 3
+     },
+     "exposure": 1,
+     "actions": [
+      {
+       "t": 2.2199999999999998,
+       "do": "take"
+      }
+     ]
+    }
+   },
+   "props": {
+    "gato": {
+     "start": {
+      "x": 1300,
+      "y": 930,
+      "z": 2,
+      "depth": 0.75
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "assusta": 0.0
+       }
+      },
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 930
+       }
+      },
+      {
+       "t": 2.2199999999999998,
+       "pose": {
+        "assusta": 1.0
+       },
+       "ease": "out",
+       "in": 2.19
+      },
+      {
+       "t": 2.32,
+       "pose": {
+        "y": 930
+       },
+       "in": 2.29
+      },
+      {
+       "t": 3.48,
+       "pose": {
+        "y": 720
+       },
+       "ease": "inout",
+       "in": 1.13
+      }
+     ]
+    },
+    "bolha": {
+     "start": {
+      "x": 1300,
+      "y": 960,
+      "z": 3,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.95
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "x": 900
+       }
+      },
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 960
+       }
+      },
+      {
+       "t": 2.12,
+       "pose": {
+        "x": 1300
+       },
+       "ease": "inout",
+       "in": 2.09
+      },
+      {
+       "t": 2.32,
+       "pose": {
+        "y": 960
+       },
+       "in": 2.29
+      },
+      {
+       "t": 3.48,
+       "pose": {
+        "y": 750
+       },
+       "ease": "inout",
+       "in": 1.13
+      }
+     ]
+    }
+   },
+   "callouts": [
+    {
+     "t": 2.02,
+     "text": "O GATO!",
+     "dur": 1.547,
+     "color": "laranja",
+     "y": 170
+    }
+   ],
+   "sing": [
+    {
+     "who": "laurinha",
+     "from": 0.14,
+     "to": 3.557
+    }
+   ]
+  },
+  {
+   "id": "s15_verso",
+   "title": "O gato fez miau",
+   "duration": 5.8,
+   "description": "O gato fez miau / E foi passear!",
+   "background": "plano_ceu",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "x": 1300,
+      "y": 540.0,
+      "zoom": 1.0
+     },
+     {
+      "t": 5.8,
+      "x": 1300,
+      "y": 540.0,
+      "zoom": 1.06,
+      "ease": "inout"
+     }
+    ],
+    "beat": {
+     "pulse": 0.0,
+     "bar_zoom": 0.04,
+     "sway": 6,
+     "bounce": 0
+    }
+   },
+   "characters": {
+    "laurinha": {
+     "start": {
+      "x": 900,
+      "y": 820,
+      "turn": 0.3,
+      "expr": "happy",
+      "z": 3,
+      "fly": 1
+     },
+     "exposure": 1,
+     "actions": [
+      {
+       "t": 0.2,
+       "do": "laugh",
+       "dur": 5.6
+      }
+     ]
+    },
+    "luisinho": {
+     "start": {
+      "x": 200,
+      "y": 700,
+      "turn": 0.4,
+      "expr": "happy",
+      "z": 3,
+      "fly": 1
+     },
+     "exposure": 1,
+     "actions": [
+      {
+       "t": 0.4,
+       "do": "fly",
+       "dur": 5.0,
+       "to_x": 1900,
+       "to_y": 640
+      }
+     ]
+    }
+   },
+   "props": {
+    "gato": {
+     "start": {
+      "x": 500,
+      "y": 770,
+      "z": 2,
+      "depth": 0.7
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "x": 450
+       }
+      },
+      {
+       "t": 1.39,
+       "pose": {
+        "miau": 0.0
+       }
+      },
+      {
+       "t": 1.54,
+       "pose": {
+        "miau": 1.0
+       },
+       "in": 0.12
+      },
+      {
+       "t": 2.04,
+       "pose": {
+        "miau": 0.0,
+        "aceno": 1.0
+       },
+       "in": 0.47
+      },
+      {
+       "t": 5.7,
+       "pose": {
+        "x": 2200
+       },
+       "ease": "inout",
+       "in": 5.67
+      }
+     ]
+    },
+    "bolha": {
+     "start": {
+      "x": 450,
+      "y": 800,
+      "z": 3,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.9
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "x": 450
+       }
+      },
+      {
+       "t": 5.7,
+       "pose": {
+        "x": 2200
+       },
+       "ease": "inout",
+       "in": 5.67
+      }
+     ]
+    }
+   },
+   "callouts": [
+    {
+     "t": 1.44,
+     "text": "MIAU!",
+     "dur": 1.8,
+     "color": "amarelo",
+     "y": 170
+    }
+   ],
+   "sing": [
+    {
+     "who": "laurinha",
+     "from": 0.033,
+     "to": 1.686
+    },
+    {
+     "who": "laurinha",
+     "from": 2.193,
+     "to": 4.493
+    }
+   ]
+  },
+  {
+   "id": "s16_refrao",
+   "title": "Bolha de sabão, voa!",
+   "duration": 7.1666,
+   "description": "Bolha de sabão, voa! / Sobe, sobe, devagar! / Bolha de sabão, voa! / Ploc! Estourou no ar!",
+   "background": "plano_campo",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "x": 1300,
+      "y": 540.0,
+      "zoom": 1.0
+     },
+     {
+      "t": 7.167,
+      "x": 1300,
+      "y": 540.0,
+      "zoom": 1.05,
+      "ease": "inout"
+     }
+    ],
+    "beat": {
+     "pulse": 0.0,
+     "bar_zoom": 0.04,
+     "sway": 6,
+     "bounce": 0
+    }
+   },
+   "characters": {
+    "laurinha": {
+     "start": {
+      "x": 650,
+      "y": 930,
+      "turn": 0.35,
+      "expr": "happy",
+      "z": 3
+     },
+     "exposure": 1,
+     "actions": [
+      {
+       "t": 0.0,
+       "do": "dance",
+       "style": "bracos",
+       "dur": 5.53
+      },
+      {
+       "t": 5.83,
+       "do": "laugh",
+       "dur": 1.337
+      }
+     ]
+    },
+    "luisinho": {
+     "start": {
+      "x": 1950,
+      "y": 930,
+      "turn": -0.35,
+      "expr": "happy",
+      "z": 3
+     },
+     "exposure": 1,
+     "actions": [
+      {
+       "t": 0.0,
+       "do": "dance",
+       "style": "pulinho",
+       "dur": 5.53
+      },
+      {
+       "t": 5.93,
+       "do": "laugh",
+       "dur": 1.237
+      }
+     ]
+    }
+   },
+   "props": {
+    "bolha": {
+     "start": {
+      "x": 1300,
+      "y": 900,
+      "z": 3,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.95
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 900
+       }
+      },
+      {
+       "t": 5.53,
+       "pose": {
+        "y": 640
+       },
+       "ease": "inout",
+       "in": 5.5
+      },
+      {
+       "t": 5.58,
+       "pose": {
+        "estoura": 0.0
+       }
+      },
+      {
+       "t": 6.03,
+       "pose": {
+        "estoura": 1.0
+       },
+       "ease": "out",
+       "in": 0.42
+      }
+     ]
+    },
+    "gato": {
+     "start": {
+      "x": 1300,
+      "y": 870,
+      "z": 2,
+      "depth": 0.75
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 870
+       }
+      },
+      {
+       "t": 5.53,
+       "pose": {
+        "y": 610
+       },
+       "ease": "inout",
+       "in": 5.5
+      },
+      {
+       "t": 5.68,
+       "pose": {
+        "assusta": 1.0
+       }
+      },
+      {
+       "t": 6.43,
+       "pose": {
+        "y": 930
+       },
+       "ease": "in",
+       "in": 0.87
+      },
+      {
+       "t": 7.029999999999999,
+       "pose": {
+        "assusta": 0.0
+       },
+       "ease": "out",
+       "in": 1.32
+      }
+     ]
+    }
+   },
+   "flash_in": true,
+   "callouts": [
+    {
+     "t": 0.15,
+     "text": "BOLHA DE SABÃO!",
+     "dur": 1.8,
+     "color": "rosa",
+     "y": 170
+    },
+    {
+     "t": 5.63,
+     "text": "PLOC!",
+     "dur": 1.537,
+     "color": "vermelho",
+     "y": 170
+    }
+   ],
+   "sing": [
+    {
+     "who": "laurinha",
+     "from": 0.053,
+     "to": 7.157
+    },
+    {
+     "who": "luisinho",
+     "from": 0.053,
+     "to": 7.157
+    }
+   ],
+   "transition_in": {
+    "type": "giro",
+    "dur": 0.4
+   }
+  },
+  {
+   "id": "s17_refrao",
+   "title": "Bolha de sabão, voa!",
+   "duration": 7.1334,
+   "description": "Bolha de sabão, voa! / Sobe, sobe, devagar! / Bolha de sabão, voa! / Ploc! Estourou no ar!",
+   "background": "danca_ondas_rosa",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "x": 960,
+      "y": 560,
+      "zoom": 1.0
+     },
+     {
+      "t": 7.133,
+      "x": 960,
+      "y": 560,
+      "zoom": 1.06,
+      "ease": "inout"
+     }
+    ],
+    "beat": {
+     "pulse": 0.0,
+     "bar_zoom": 0.04,
+     "sway": 6,
+     "bounce": 0
+    }
+   },
+   "characters": {
+    "laurinha": {
+     "start": {
+      "x": 560,
+      "y": 1010,
+      "turn": 0.25,
+      "expr": "happy",
+      "z": 3,
+      "depth": 1.15
+     },
+     "exposure": 1,
+     "actions": [
+      {
+       "t": 0.0,
+       "do": "dance",
+       "style": "pulinho",
+       "dur": 7.133
+      }
+     ]
+    },
+    "luisinho": {
+     "start": {
+      "x": 1360,
+      "y": 1010,
+      "turn": -0.25,
+      "expr": "happy",
+      "z": 3,
+      "depth": 1.15
+     },
+     "exposure": 1,
+     "actions": [
+      {
+       "t": 0.0,
+       "do": "dance",
+       "style": "gingado",
+       "dur": 7.133
+      }
+     ]
+    }
+   },
+   "props": {
+    "b1": {
+     "start": {
+      "x": 300,
+      "y": 1000,
+      "z": 4,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.45
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 1000,
+        "x": 300
+       }
+      },
+      {
+       "t": 5.55,
+       "pose": {
+        "estoura": 0.0
+       }
+      },
+      {
+       "t": 5.8999999999999995,
+       "pose": {
+        "estoura": 1.0
+       },
+       "ease": "out",
+       "in": 0.32
+      },
+      {
+       "t": 7.1,
+       "pose": {
+        "y": 520,
+        "x": 260
+       },
+       "ease": "linear",
+       "in": 7.07
+      }
+     ]
+    },
+    "b2": {
+     "start": {
+      "x": 570,
+      "y": 1060,
+      "z": 4,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.396
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 1060,
+        "x": 570
+       }
+      },
+      {
+       "t": 5.63,
+       "pose": {
+        "estoura": 0.0
+       }
+      },
+      {
+       "t": 5.9799999999999995,
+       "pose": {
+        "estoura": 1.0
+       },
+       "ease": "out",
+       "in": 0.32
+      },
+      {
+       "t": 7.1,
+       "pose": {
+        "y": 500,
+        "x": 610
+       },
+       "ease": "linear",
+       "in": 7.07
+      }
+     ]
+    },
+    "b3": {
+     "start": {
+      "x": 840,
+      "y": 1000,
+      "z": 4,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.342
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 1000,
+        "x": 840
+       }
+      },
+      {
+       "t": 5.71,
+       "pose": {
+        "estoura": 0.0
+       }
+      },
+      {
+       "t": 6.06,
+       "pose": {
+        "estoura": 1.0
+       },
+       "ease": "out",
+       "in": 0.32
+      },
+      {
+       "t": 7.1,
+       "pose": {
+        "y": 360,
+        "x": 800
+       },
+       "ease": "linear",
+       "in": 7.07
+      }
+     ]
+    },
+    "b4": {
+     "start": {
+      "x": 1110,
+      "y": 1060,
+      "z": 4,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.45
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 1060,
+        "x": 1110
+       }
+      },
+      {
+       "t": 5.79,
+       "pose": {
+        "estoura": 0.0
+       }
+      },
+      {
+       "t": 6.14,
+       "pose": {
+        "estoura": 1.0
+       },
+       "ease": "out",
+       "in": 0.32
+      },
+      {
+       "t": 7.1,
+       "pose": {
+        "y": 580,
+        "x": 1150
+       },
+       "ease": "linear",
+       "in": 7.07
+      }
+     ]
+    },
+    "b5": {
+     "start": {
+      "x": 1380,
+      "y": 1000,
+      "z": 4,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.396
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 1000,
+        "x": 1380
+       }
+      },
+      {
+       "t": 5.87,
+       "pose": {
+        "estoura": 0.0
+       }
+      },
+      {
+       "t": 6.22,
+       "pose": {
+        "estoura": 1.0
+       },
+       "ease": "out",
+       "in": 0.32
+      },
+      {
+       "t": 7.1,
+       "pose": {
+        "y": 440,
+        "x": 1340
+       },
+       "ease": "linear",
+       "in": 7.07
+      }
+     ]
+    },
+    "b6": {
+     "start": {
+      "x": 1650,
+      "y": 1060,
+      "z": 4,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.342
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 1060,
+        "x": 1650
+       }
+      },
+      {
+       "t": 5.95,
+       "pose": {
+        "estoura": 0.0
+       }
+      },
+      {
+       "t": 6.3,
+       "pose": {
+        "estoura": 1.0
+       },
+       "ease": "out",
+       "in": 0.32
+      },
+      {
+       "t": 7.1,
+       "pose": {
+        "y": 420,
+        "x": 1690
+       },
+       "ease": "linear",
+       "in": 7.07
+      }
+     ]
+    }
+   },
+   "fx": [
+    "estrelas"
+   ],
+   "callouts": [
+    {
+     "t": 0.2,
+     "text": "SOBE, SOBE!",
+     "dur": 1.8,
+     "color": "amarelo",
+     "y": 170
+    },
+    {
+     "t": 5.6,
+     "text": "PLOC!",
+     "dur": 1.533,
+     "color": "vermelho",
+     "y": 170
+    }
+   ],
+   "sing": [
+    {
+     "who": "laurinha",
+     "from": 0.167,
+     "to": 7.123
+    },
+    {
+     "who": "luisinho",
+     "from": 0.167,
+     "to": 7.123
+    }
+   ]
+  },
+  {
+   "id": "s18_intervalo",
+   "title": "Bora, turminha!",
+   "duration": 1.7666,
+   "description": "Bora, turminha!",
+   "background": "danca_bolinhas_rosa",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "x": 960,
+      "y": 630,
+      "zoom": 1.75
+     },
+     {
+      "t": 1.767,
+      "x": 960,
+      "y": 630,
+      "zoom": 1.81,
+      "ease": "inout"
+     }
+    ],
+    "beat": {
+     "pulse": 0.0,
+     "bar_zoom": 0.04,
+     "sway": 6,
+     "bounce": 0
+    }
+   },
+   "characters": {
+    "laurinha": {
+     "start": {
+      "x": 960,
+      "y": 1010,
+      "turn": 0.15,
+      "expr": "happy",
+      "z": 3,
+      "depth": 1.3
+     },
+     "exposure": 1,
+     "actions": [
+      {
+       "t": 0.1,
+       "do": "apontar_camera",
+       "dur": 1.667
+      }
+     ]
+    }
+   },
+   "callouts": [
+    {
+     "t": 0.2,
+     "text": "BORA, TURMINHA!",
+     "dur": 1.567,
+     "color": "amarelo",
+     "y": 170
+    }
+   ],
+   "sing": [
+    {
+     "who": "laurinha",
+     "from": 0.313,
+     "to": 1.753
+    }
+   ],
+   "transition_in": {
+    "type": "deslizar_cima",
+    "dur": 0.4
+   }
+  },
+  {
+   "id": "s19_intervalo",
+   "title": "dança com o gato e as bolhinhas",
+   "duration": 6.7,
+   "description": "",
+   "background": "plano_campo",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "x": 1300,
+      "y": 540.0,
+      "zoom": 1.0
+     },
+     {
+      "t": 6.7,
+      "x": 1300,
+      "y": 540.0,
+      "zoom": 1.06,
+      "ease": "inout"
+     }
+    ],
+    "beat": {
+     "pulse": 0.0,
+     "bar_zoom": 0.04,
+     "sway": 6,
+     "bounce": 0
+    }
+   },
+   "characters": {
+    "laurinha": {
+     "start": {
+      "x": 750,
+      "y": 930,
+      "turn": 0.3,
+      "expr": "happy",
+      "z": 3
+     },
+     "exposure": 1,
+     "actions": [
+      {
+       "t": 0.0,
+       "do": "dance",
+       "style": "festa",
+       "dur": 6.7
+      }
+     ]
+    },
+    "luisinho": {
+     "start": {
+      "x": 1850,
+      "y": 930,
+      "turn": -0.3,
+      "expr": "happy",
+      "z": 3
+     },
+     "exposure": 1,
+     "actions": [
+      {
+       "t": 0.0,
+       "do": "dance",
+       "style": "lado",
+       "dur": 6.7
+      }
+     ]
+    }
+   },
+   "props": {
+    "gato": {
+     "start": {
+      "x": 1300,
+      "y": 930,
+      "z": 2,
+      "depth": 0.8
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "rabo": 0.0
+       }
+      },
+      {
+       "t": 6.62,
+       "pose": {
+        "rabo": 4.0
+       },
+       "ease": "linear",
+       "in": 6.59
+      }
+     ]
+    },
+    "b1": {
+     "start": {
+      "x": 500,
+      "y": 1000,
+      "z": 4,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.35
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 1000,
+        "x": 500
+       }
+      },
+      {
+       "t": 6.67,
+       "pose": {
+        "y": 550,
+        "x": 460
+       },
+       "ease": "linear",
+       "in": 6.64
+      }
+     ]
+    },
+    "b2": {
+     "start": {
+      "x": 950,
+      "y": 1060,
+      "z": 4,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.308
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 1060,
+        "x": 950
+       }
+      },
+      {
+       "t": 6.67,
+       "pose": {
+        "y": 530,
+        "x": 990
+       },
+       "ease": "linear",
+       "in": 6.64
+      }
+     ]
+    },
+    "b3": {
+     "start": {
+      "x": 1400,
+      "y": 1000,
+      "z": 4,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.26599999999999996
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 1000,
+        "x": 1400
+       }
+      },
+      {
+       "t": 6.67,
+       "pose": {
+        "y": 390,
+        "x": 1360
+       },
+       "ease": "linear",
+       "in": 6.64
+      }
+     ]
+    },
+    "b4": {
+     "start": {
+      "x": 1850,
+      "y": 1060,
+      "z": 4,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.35
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 1060,
+        "x": 1850
+       }
+      },
+      {
+       "t": 6.67,
+       "pose": {
+        "y": 610,
+        "x": 1890
+       },
+       "ease": "linear",
+       "in": 6.64
+      }
+     ]
+    }
+   },
+   "fx": [
+    "notas"
+   ]
+  },
+  {
+   "id": "s20_ponte",
+   "title": "Assopra pra cima!",
+   "duration": 3.5667,
+   "description": "Assopra pra cima! / Assopra pro lado!",
+   "background": "plano_campo",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "x": 1300,
+      "y": 540.0,
+      "zoom": 1.0
+     },
+     {
+      "t": 3.567,
+      "x": 1300,
+      "y": 540.0,
+      "zoom": 1.06,
+      "ease": "inout"
+     }
+    ],
+    "beat": {
+     "pulse": 0.0,
+     "bar_zoom": 0.04,
+     "sway": 6,
+     "bounce": 0
+    }
+   },
+   "characters": {
+    "laurinha": {
+     "start": {
+      "x": 800,
+      "y": 930,
+      "turn": 0.35,
+      "expr": "happy",
+      "z": 3
+     },
+     "exposure": 1,
+     "actions": [
+      {
+       "t": 0.0,
+       "do": "dance",
+       "style": "bracos",
+       "dur": 3.28
+      },
+      {
+       "t": 3.38,
+       "do": "dance",
+       "style": "lado",
+       "dur": 0.3
+      }
+     ]
+    },
+    "luisinho": {
+     "start": {
+      "x": 1850,
+      "y": 930,
+      "turn": -0.35,
+      "expr": "happy",
+      "z": 3
+     },
+     "exposure": 1,
+     "actions": [
+      {
+       "t": 0.0,
+       "do": "dance",
+       "style": "bracos",
+       "dur": 3.28
+      },
+      {
+       "t": 3.38,
+       "do": "dance",
+       "style": "lado",
+       "dur": 0.3
+      }
+     ]
+    }
+   },
+   "props": {
+    "b1": {
+     "start": {
+      "x": 1300,
+      "y": 760,
+      "z": 3,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.5
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 760,
+        "x": 1300
+       }
+      },
+      {
+       "t": 3.28,
+       "pose": {
+        "y": 380
+       },
+       "ease": "inout",
+       "in": 3.25
+      },
+      {
+       "t": 3.45,
+       "pose": {
+        "x": 2000
+       },
+       "ease": "inout",
+       "in": 3.42
+      }
+     ]
+    }
+   },
+   "callouts": [
+    {
+     "t": 0.2,
+     "text": "PRA CIMA!",
+     "dur": 1.8,
+     "color": "azul",
+     "y": 170
+    },
+    {
+     "t": 3.38,
+     "text": "PRO LADO!",
+     "dur": 0.6,
+     "color": "verde",
+     "y": 170
+    }
+   ],
+   "sing": [
+    {
+     "who": "laurinha",
+     "from": 0.067,
+     "to": 3.557
+    }
+   ],
+   "transition_in": {
+    "type": "circulo",
+    "dur": 0.4
+   }
+  },
+  {
+   "id": "s21_ponte",
+   "title": "Pega a bolhinha",
+   "duration": 4.0,
+   "description": "Pega a bolhinha / Com o dedo esticado!",
+   "background": "plano_campo",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "x": 1250,
+      "y": 520,
+      "zoom": 1.35
+     },
+     {
+      "t": 4.0,
+      "x": 1250,
+      "y": 520,
+      "zoom": 1.4,
+      "ease": "inout"
+     }
+    ],
+    "beat": {
+     "pulse": 0.0,
+     "bar_zoom": 0.04,
+     "sway": 6,
+     "bounce": 0
+    }
+   },
+   "characters": {
+    "laurinha": {
+     "start": {
+      "x": 1050,
+      "y": 930,
+      "turn": 0.4,
+      "expr": "happy",
+      "z": 3
+     },
+     "exposure": 1,
+     "actions": [
+      {
+       "t": 2.2,
+       "do": "point",
+       "dur": 1.8
+      }
+     ]
+    }
+   },
+   "props": {
+    "b1": {
+     "start": {
+      "x": 1400,
+      "y": 600,
+      "z": 3,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.35
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 640
+       }
+      },
+      {
+       "t": 2.6,
+       "pose": {
+        "y": 560
+       },
+       "ease": "inout",
+       "in": 2.57
+      },
+      {
+       "t": 2.75,
+       "pose": {
+        "estoura": 0.0
+       }
+      },
+      {
+       "t": 3.1,
+       "pose": {
+        "estoura": 1.0
+       },
+       "ease": "out",
+       "in": 0.32
+      }
+     ]
+    }
+   },
+   "callouts": [
+    {
+     "t": 2.8,
+     "text": "PLOC!",
+     "dur": 1.2,
+     "color": "vermelho",
+     "y": 170
+    }
+   ],
+   "sing": [
+    {
+     "who": "laurinha",
+     "from": 0.28,
+     "to": 3.99
+    }
+   ]
+  },
+  {
+   "id": "s22_refrao",
+   "title": "Bolha de sabão, voa!",
+   "duration": 7.1333,
+   "description": "Bolha de sabão, voa! / Sobe, sobe, devagar! / Bolha de sabão, voa! / Ploc! Estourou no ar!",
+   "background": "plano_campo",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "x": 1300,
+      "y": 540.0,
+      "zoom": 1.0
+     },
+     {
+      "t": 7.133,
+      "x": 1300,
+      "y": 540.0,
+      "zoom": 1.05,
+      "ease": "inout"
+     }
+    ],
+    "beat": {
+     "pulse": 0.0,
+     "bar_zoom": 0.04,
+     "sway": 6,
+     "bounce": 0
+    }
+   },
+   "characters": {
+    "laurinha": {
+     "start": {
+      "x": 650,
+      "y": 930,
+      "turn": 0.35,
+      "expr": "happy",
+      "z": 3
+     },
+     "exposure": 1,
+     "actions": [
+      {
+       "t": 0.0,
+       "do": "dance",
+       "style": "bracos",
+       "dur": 5.59
+      },
+      {
+       "t": 5.89,
+       "do": "laugh",
+       "dur": 1.243
+      }
+     ]
+    },
+    "luisinho": {
+     "start": {
+      "x": 1950,
+      "y": 930,
+      "turn": -0.35,
+      "expr": "happy",
+      "z": 3
+     },
+     "exposure": 1,
+     "actions": [
+      {
+       "t": 0.0,
+       "do": "dance",
+       "style": "pulinho",
+       "dur": 5.59
+      },
+      {
+       "t": 5.99,
+       "do": "laugh",
+       "dur": 1.143
+      }
+     ]
+    }
+   },
+   "props": {
+    "bolha": {
+     "start": {
+      "x": 1300,
+      "y": 900,
+      "z": 3,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.95
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 900
+       }
+      },
+      {
+       "t": 5.590000000000001,
+       "pose": {
+        "y": 640
+       },
+       "ease": "inout",
+       "in": 5.56
+      },
+      {
+       "t": 5.640000000000001,
+       "pose": {
+        "estoura": 0.0
+       }
+      },
+      {
+       "t": 6.090000000000001,
+       "pose": {
+        "estoura": 1.0
+       },
+       "ease": "out",
+       "in": 0.42
+      }
+     ]
+    },
+    "gato": {
+     "start": {
+      "x": 1300,
+      "y": 870,
+      "z": 2,
+      "depth": 0.75
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 870
+       }
+      },
+      {
+       "t": 5.590000000000001,
+       "pose": {
+        "y": 610
+       },
+       "ease": "inout",
+       "in": 5.56
+      },
+      {
+       "t": 5.74,
+       "pose": {
+        "assusta": 1.0
+       }
+      },
+      {
+       "t": 6.49,
+       "pose": {
+        "y": 930
+       },
+       "ease": "in",
+       "in": 0.87
+      },
+      {
+       "t": 7.065,
+       "pose": {
+        "assusta": 0.0
+       },
+       "ease": "out",
+       "in": 1.295
+      }
+     ]
+    }
+   },
+   "flash_in": true,
+   "callouts": [
+    {
+     "t": 0.15,
+     "text": "BOLHA DE SABÃO!",
+     "dur": 1.8,
+     "color": "roxo",
+     "y": 170
+    },
+    {
+     "t": 5.69,
+     "text": "PLOC!",
+     "dur": 1.443,
+     "color": "vermelho",
+     "y": 170
+    }
+   ],
+   "sing": [
+    {
+     "who": "laurinha",
+     "from": 0.0,
+     "to": 7.123
+    },
+    {
+     "who": "luisinho",
+     "from": 0.0,
+     "to": 7.123
+    }
+   ],
+   "transition_in": {
+    "type": "giro",
+    "dur": 0.4
+   }
+  },
+  {
+   "id": "s23_refrao",
+   "title": "Bolha de sabão, voa!",
+   "duration": 7.0667,
+   "description": "Bolha de sabão, voa! / Sobe, sobe, devagar! / Bolha de sabão, voa! / Ploc! Estourou no ar!",
+   "background": "danca_xadrez_azul",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "x": 960,
+      "y": 560,
+      "zoom": 1.0
+     },
+     {
+      "t": 7.067,
+      "x": 960,
+      "y": 560,
+      "zoom": 1.06,
+      "ease": "inout"
+     }
+    ],
+    "beat": {
+     "pulse": 0.0,
+     "bar_zoom": 0.04,
+     "sway": 6,
+     "bounce": 0
+    }
+   },
+   "characters": {
+    "laurinha": {
+     "start": {
+      "x": 560,
+      "y": 1010,
+      "turn": 0.25,
+      "expr": "happy",
+      "z": 3,
+      "depth": 1.15
+     },
+     "exposure": 1,
+     "actions": [
+      {
+       "t": 0.0,
+       "do": "dance",
+       "style": "festa",
+       "dur": 7.067
+      }
+     ]
+    },
+    "luisinho": {
+     "start": {
+      "x": 1360,
+      "y": 1010,
+      "turn": -0.25,
+      "expr": "happy",
+      "z": 3,
+      "depth": 1.15
+     },
+     "exposure": 1,
+     "actions": [
+      {
+       "t": 0.0,
+       "do": "dance",
+       "style": "festa",
+       "dur": 7.067
+      }
+     ]
+    }
+   },
+   "props": {
+    "b1": {
+     "start": {
+      "x": 300,
+      "y": 1000,
+      "z": 4,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.45
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 1000,
+        "x": 300
+       }
+      },
+      {
+       "t": 5.63,
+       "pose": {
+        "estoura": 0.0
+       }
+      },
+      {
+       "t": 5.9799999999999995,
+       "pose": {
+        "estoura": 1.0
+       },
+       "ease": "out",
+       "in": 0.32
+      },
+      {
+       "t": 7.03,
+       "pose": {
+        "y": 520,
+        "x": 260
+       },
+       "ease": "linear",
+       "in": 7.0
+      }
+     ]
+    },
+    "b2": {
+     "start": {
+      "x": 570,
+      "y": 1060,
+      "z": 4,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.396
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 1060,
+        "x": 570
+       }
+      },
+      {
+       "t": 5.71,
+       "pose": {
+        "estoura": 0.0
+       }
+      },
+      {
+       "t": 6.06,
+       "pose": {
+        "estoura": 1.0
+       },
+       "ease": "out",
+       "in": 0.32
+      },
+      {
+       "t": 7.03,
+       "pose": {
+        "y": 500,
+        "x": 610
+       },
+       "ease": "linear",
+       "in": 7.0
+      }
+     ]
+    },
+    "b3": {
+     "start": {
+      "x": 840,
+      "y": 1000,
+      "z": 4,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.342
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 1000,
+        "x": 840
+       }
+      },
+      {
+       "t": 5.79,
+       "pose": {
+        "estoura": 0.0
+       }
+      },
+      {
+       "t": 6.14,
+       "pose": {
+        "estoura": 1.0
+       },
+       "ease": "out",
+       "in": 0.32
+      },
+      {
+       "t": 7.03,
+       "pose": {
+        "y": 360,
+        "x": 800
+       },
+       "ease": "linear",
+       "in": 7.0
+      }
+     ]
+    },
+    "b4": {
+     "start": {
+      "x": 1110,
+      "y": 1060,
+      "z": 4,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.45
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 1060,
+        "x": 1110
+       }
+      },
+      {
+       "t": 5.87,
+       "pose": {
+        "estoura": 0.0
+       }
+      },
+      {
+       "t": 6.22,
+       "pose": {
+        "estoura": 1.0
+       },
+       "ease": "out",
+       "in": 0.32
+      },
+      {
+       "t": 7.03,
+       "pose": {
+        "y": 580,
+        "x": 1150
+       },
+       "ease": "linear",
+       "in": 7.0
+      }
+     ]
+    },
+    "b5": {
+     "start": {
+      "x": 1380,
+      "y": 1000,
+      "z": 4,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.396
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 1000,
+        "x": 1380
+       }
+      },
+      {
+       "t": 5.95,
+       "pose": {
+        "estoura": 0.0
+       }
+      },
+      {
+       "t": 6.3,
+       "pose": {
+        "estoura": 1.0
+       },
+       "ease": "out",
+       "in": 0.32
+      },
+      {
+       "t": 7.03,
+       "pose": {
+        "y": 440,
+        "x": 1340
+       },
+       "ease": "linear",
+       "in": 7.0
+      }
+     ]
+    },
+    "b6": {
+     "start": {
+      "x": 1650,
+      "y": 1060,
+      "z": 4,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.342
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 1060,
+        "x": 1650
+       }
+      },
+      {
+       "t": 6.03,
+       "pose": {
+        "estoura": 0.0
+       }
+      },
+      {
+       "t": 6.38,
+       "pose": {
+        "estoura": 1.0
+       },
+       "ease": "out",
+       "in": 0.32
+      },
+      {
+       "t": 7.03,
+       "pose": {
+        "y": 420,
+        "x": 1690
+       },
+       "ease": "linear",
+       "in": 7.0
+      }
+     ]
+    }
+   },
+   "fx": [
+    "confete"
+   ],
+   "callouts": [
+    {
+     "t": 0.2,
+     "text": "SOBE, SOBE!",
+     "dur": 1.8,
+     "color": "amarelo",
+     "y": 170
+    },
+    {
+     "t": 5.68,
+     "text": "PLOC!",
+     "dur": 1.387,
+     "color": "vermelho",
+     "y": 170
+    }
+   ],
+   "sing": [
+    {
+     "who": "laurinha",
+     "from": 0.167,
+     "to": 7.057
+    },
+    {
+     "who": "luisinho",
+     "from": 0.167,
+     "to": 7.057
+    }
+   ]
+  },
+  {
+   "id": "s24_refrao",
+   "title": "Bolha de sabão, voa!",
+   "duration": 7.5333,
+   "description": "Bolha de sabão, voa! / Sobe, sobe, devagar! / Bolha de sabão, voa! / Ploc! Estourou no ar!",
+   "background": "plano_campo",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "x": 1300,
+      "y": 540.0,
+      "zoom": 1.0
+     },
+     {
+      "t": 7.533,
+      "x": 1300,
+      "y": 540.0,
+      "zoom": 1.05,
+      "ease": "inout"
+     }
+    ],
+    "beat": {
+     "pulse": 0.0,
+     "bar_zoom": 0.04,
+     "sway": 6,
+     "bounce": 0
+    }
+   },
+   "characters": {
+    "laurinha": {
+     "start": {
+      "x": 650,
+      "y": 930,
+      "turn": 0.35,
+      "expr": "happy",
+      "z": 3
+     },
+     "exposure": 1,
+     "actions": [
+      {
+       "t": 0.0,
+       "do": "dance",
+       "style": "bracos",
+       "dur": 5.6
+      },
+      {
+       "t": 5.9,
+       "do": "laugh",
+       "dur": 1.633
+      }
+     ]
+    },
+    "luisinho": {
+     "start": {
+      "x": 1950,
+      "y": 930,
+      "turn": -0.35,
+      "expr": "happy",
+      "z": 3
+     },
+     "exposure": 1,
+     "actions": [
+      {
+       "t": 0.0,
+       "do": "dance",
+       "style": "pulinho",
+       "dur": 5.6
+      },
+      {
+       "t": 6.0,
+       "do": "laugh",
+       "dur": 1.533
+      }
+     ]
+    }
+   },
+   "props": {
+    "bolha": {
+     "start": {
+      "x": 1300,
+      "y": 900,
+      "z": 3,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.95
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 900
+       }
+      },
+      {
+       "t": 5.6000000000000005,
+       "pose": {
+        "y": 640
+       },
+       "ease": "inout",
+       "in": 5.57
+      },
+      {
+       "t": 5.65,
+       "pose": {
+        "estoura": 0.0
+       }
+      },
+      {
+       "t": 6.1000000000000005,
+       "pose": {
+        "estoura": 1.0
+       },
+       "ease": "out",
+       "in": 0.42
+      }
+     ]
+    },
+    "gato": {
+     "start": {
+      "x": 1300,
+      "y": 870,
+      "z": 2,
+      "depth": 0.75
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 870
+       }
+      },
+      {
+       "t": 5.6000000000000005,
+       "pose": {
+        "y": 610
+       },
+       "ease": "inout",
+       "in": 5.57
+      },
+      {
+       "t": 5.75,
+       "pose": {
+        "assusta": 1.0
+       }
+      },
+      {
+       "t": 6.5,
+       "pose": {
+        "y": 930
+       },
+       "ease": "in",
+       "in": 0.87
+      },
+      {
+       "t": 7.1,
+       "pose": {
+        "assusta": 0.0
+       },
+       "ease": "out",
+       "in": 1.32
+      }
+     ]
+    }
+   },
+   "flash_in": true,
+   "callouts": [
+    {
+     "t": 0.15,
+     "text": "BOLHA DE SABÃO!",
+     "dur": 1.8,
+     "color": "laranja",
+     "y": 170
+    },
+    {
+     "t": 5.7,
+     "text": "PLOC!",
+     "dur": 1.8,
+     "color": "vermelho",
+     "y": 170
+    }
+   ],
+   "sing": [
+    {
+     "who": "laurinha",
+     "from": 0.3,
+     "to": 7.45
+    },
+    {
+     "who": "luisinho",
+     "from": 0.3,
+     "to": 7.45
+    }
+   ],
+   "transition_in": {
+    "type": "deslizar_esq",
+    "dur": 0.4
+   }
+  },
+  {
+   "id": "s25_refrao",
+   "title": "Bolha de sabão, voa!",
+   "duration": 10.6,
+   "description": "Bolha de sabão, voa! / Sobe, sobe, devagar! / Bolha de sabão, voa! / Ploc! Estourou no ar!",
+   "background": "danca_raios_amarelo",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "x": 960,
+      "y": 560,
+      "zoom": 1.0
+     },
+     {
+      "t": 10.6,
+      "x": 960,
+      "y": 560,
+      "zoom": 1.06,
+      "ease": "inout"
+     }
+    ],
+    "beat": {
+     "pulse": 0.0,
+     "bar_zoom": 0.04,
+     "sway": 6,
+     "bounce": 0
+    }
+   },
+   "characters": {
+    "laurinha": {
+     "start": {
+      "x": 560,
+      "y": 1010,
+      "turn": 0.25,
+      "expr": "happy",
+      "z": 3,
+      "depth": 1.15
+     },
+     "exposure": 1,
+     "actions": [
+      {
+       "t": 0.0,
+       "do": "dance",
+       "style": "festa",
+       "dur": 8.99
+      },
+      {
+       "t": 9.09,
+       "do": "laugh",
+       "dur": 1.51
+      }
+     ]
+    },
+    "luisinho": {
+     "start": {
+      "x": 1360,
+      "y": 1010,
+      "turn": -0.25,
+      "expr": "happy",
+      "z": 3,
+      "depth": 1.15
+     },
+     "exposure": 1,
+     "actions": [
+      {
+       "t": 0.0,
+       "do": "dance",
+       "style": "festa",
+       "dur": 8.99
+      },
+      {
+       "t": 9.19,
+       "do": "laugh",
+       "dur": 1.41
+      }
+     ]
+    }
+   },
+   "props": {
+    "b1": {
+     "start": {
+      "x": 300,
+      "y": 1000,
+      "z": 4,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.45
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 1000,
+        "x": 300
+       }
+      },
+      {
+       "t": 5.1000000000000005,
+       "pose": {
+        "estoura": 0.0
+       }
+      },
+      {
+       "t": 5.45,
+       "pose": {
+        "estoura": 1.0
+       },
+       "ease": "out",
+       "in": 0.32
+      },
+      {
+       "t": 10.54,
+       "pose": {
+        "y": 520,
+        "x": 260
+       },
+       "ease": "linear",
+       "in": 10.51
+      }
+     ]
+    },
+    "b2": {
+     "start": {
+      "x": 570,
+      "y": 1060,
+      "z": 4,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.396
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 1060,
+        "x": 570
+       }
+      },
+      {
+       "t": 5.180000000000001,
+       "pose": {
+        "estoura": 0.0
+       }
+      },
+      {
+       "t": 5.53,
+       "pose": {
+        "estoura": 1.0
+       },
+       "ease": "out",
+       "in": 0.32
+      },
+      {
+       "t": 10.54,
+       "pose": {
+        "y": 500,
+        "x": 610
+       },
+       "ease": "linear",
+       "in": 10.51
+      }
+     ]
+    },
+    "b3": {
+     "start": {
+      "x": 840,
+      "y": 1000,
+      "z": 4,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.342
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 1000,
+        "x": 840
+       }
+      },
+      {
+       "t": 5.26,
+       "pose": {
+        "estoura": 0.0
+       }
+      },
+      {
+       "t": 5.609999999999999,
+       "pose": {
+        "estoura": 1.0
+       },
+       "ease": "out",
+       "in": 0.32
+      },
+      {
+       "t": 10.54,
+       "pose": {
+        "y": 360,
+        "x": 800
+       },
+       "ease": "linear",
+       "in": 10.51
+      }
+     ]
+    },
+    "b4": {
+     "start": {
+      "x": 1110,
+      "y": 1060,
+      "z": 4,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.45
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 1060,
+        "x": 1110
+       }
+      },
+      {
+       "t": 5.34,
+       "pose": {
+        "estoura": 0.0
+       }
+      },
+      {
+       "t": 5.6899999999999995,
+       "pose": {
+        "estoura": 1.0
+       },
+       "ease": "out",
+       "in": 0.32
+      },
+      {
+       "t": 10.54,
+       "pose": {
+        "y": 580,
+        "x": 1150
+       },
+       "ease": "linear",
+       "in": 10.51
+      }
+     ]
+    },
+    "b5": {
+     "start": {
+      "x": 1380,
+      "y": 1000,
+      "z": 4,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.396
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 1000,
+        "x": 1380
+       }
+      },
+      {
+       "t": 5.42,
+       "pose": {
+        "estoura": 0.0
+       }
+      },
+      {
+       "t": 5.77,
+       "pose": {
+        "estoura": 1.0
+       },
+       "ease": "out",
+       "in": 0.32
+      },
+      {
+       "t": 10.54,
+       "pose": {
+        "y": 440,
+        "x": 1340
+       },
+       "ease": "linear",
+       "in": 10.51
+      }
+     ]
+    },
+    "b6": {
+     "start": {
+      "x": 1650,
+      "y": 1060,
+      "z": 4,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.342
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 1060,
+        "x": 1650
+       }
+      },
+      {
+       "t": 5.5,
+       "pose": {
+        "estoura": 0.0
+       }
+      },
+      {
+       "t": 5.85,
+       "pose": {
+        "estoura": 1.0
+       },
+       "ease": "out",
+       "in": 0.32
+      },
+      {
+       "t": 10.54,
+       "pose": {
+        "y": 420,
+        "x": 1690
+       },
+       "ease": "linear",
+       "in": 10.51
+      }
+     ]
+    }
+   },
+   "fx": [
+    "confete"
+   ],
+   "callouts": [
+    {
+     "t": 0.2,
+     "text": "SOBE, SOBE!",
+     "dur": 1.8,
+     "color": "amarelo",
+     "y": 170
+    },
+    {
+     "t": 5.15,
+     "text": "PLOC!",
+     "dur": 1.8,
+     "color": "vermelho",
+     "y": 170
+    }
+   ],
+   "sing": [
+    {
+     "who": "laurinha",
+     "from": 0.0,
+     "to": 7.667
+    },
+    {
+     "who": "luisinho",
+     "from": 0.0,
+     "to": 7.667
+    }
+   ]
+  },
+  {
+   "id": "s26_intervalo",
+   "title": "festa das bolhas",
+   "duration": 2.2,
+   "description": "",
+   "background": "danca_raios_laranja",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "x": 960,
+      "y": 560,
+      "zoom": 1.0
+     },
+     {
+      "t": 2.2,
+      "x": 960,
+      "y": 560,
+      "zoom": 1.06,
+      "ease": "inout"
+     }
+    ],
+    "beat": {
+     "pulse": 0.0,
+     "bar_zoom": 0.04,
+     "sway": 6,
+     "bounce": 0
+    }
+   },
+   "characters": {
+    "laurinha": {
+     "start": {
+      "x": 560,
+      "y": 1010,
+      "turn": 0.15,
+      "expr": "happy",
+      "z": 3,
+      "depth": 1.15
+     },
+     "exposure": 1,
+     "actions": [
+      {
+       "t": 0.0,
+       "do": "dance",
+       "style": "festa",
+       "dur": 2.2
+      }
+     ]
+    },
+    "luisinho": {
+     "start": {
+      "x": 1360,
+      "y": 1010,
+      "turn": -0.2,
+      "expr": "happy",
+      "z": 3,
+      "depth": 1.15
+     },
+     "exposure": 1,
+     "actions": [
+      {
+       "t": 0.0,
+       "do": "dance",
+       "style": "festa",
+       "dur": 2.2
+      }
+     ]
+    }
+   },
+   "props": {
+    "b1": {
+     "start": {
+      "x": 400,
+      "y": 1000,
+      "z": 4,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.4
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 1000,
+        "x": 400
+       }
+      },
+      {
+       "t": 2.16,
+       "pose": {
+        "y": 600,
+        "x": 360
+       },
+       "ease": "linear",
+       "in": 2.13
+      }
+     ]
+    },
+    "b2": {
+     "start": {
+      "x": 680,
+      "y": 1060,
+      "z": 4,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.35200000000000004
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 1060,
+        "x": 680
+       }
+      },
+      {
+       "t": 2.16,
+       "pose": {
+        "y": 580,
+        "x": 720
+       },
+       "ease": "linear",
+       "in": 2.13
+      }
+     ]
+    },
+    "b3": {
+     "start": {
+      "x": 960,
+      "y": 1000,
+      "z": 4,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.30400000000000005
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 1000,
+        "x": 960
+       }
+      },
+      {
+       "t": 2.16,
+       "pose": {
+        "y": 440,
+        "x": 920
+       },
+       "ease": "linear",
+       "in": 2.13
+      }
+     ]
+    },
+    "b4": {
+     "start": {
+      "x": 1240,
+      "y": 1060,
+      "z": 4,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.4
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 1060,
+        "x": 1240
+       }
+      },
+      {
+       "t": 2.16,
+       "pose": {
+        "y": 660,
+        "x": 1280
+       },
+       "ease": "linear",
+       "in": 2.13
+      }
+     ]
+    },
+    "b5": {
+     "start": {
+      "x": 1520,
+      "y": 1000,
+      "z": 4,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.35200000000000004
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "y": 1000,
+        "x": 1520
+       }
+      },
+      {
+       "t": 2.16,
+       "pose": {
+        "y": 520,
+        "x": 1480
+       },
+       "ease": "linear",
+       "in": 2.13
+      }
+     ]
+    }
+   },
+   "fx": [
+    "confete"
+   ],
+   "transition_in": {
+    "type": "circulo",
+    "dur": 0.4
+   }
+  },
+  {
+   "id": "s27_final",
+   "title": "Gostou da bolha?",
+   "duration": 2.2,
+   "description": "Gostou da bolha?",
+   "background": "danca_raios_azul",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "x": 960,
+      "y": 630,
+      "zoom": 1.75
+     },
+     {
+      "t": 2.2,
+      "x": 960,
+      "y": 630,
+      "zoom": 1.81,
+      "ease": "inout"
+     }
+    ],
+    "beat": {
+     "pulse": 0.0,
+     "bar_zoom": 0.04,
+     "sway": 6,
+     "bounce": 0
+    }
+   },
+   "characters": {
+    "laurinha": {
+     "start": {
+      "x": 960,
+      "y": 1010,
+      "turn": 0.15,
+      "expr": "happy",
+      "z": 3,
+      "depth": 1.3
+     },
+     "exposure": 1,
+     "actions": [
+      {
+       "t": 0.1,
+       "do": "apontar_camera",
+       "dur": 2.1
+      }
+     ]
+    }
+   },
+   "callouts": [
+    {
+     "t": 0.3,
+     "text": "GOSTOU?",
+     "dur": 1.8,
+     "color": "rosa",
+     "y": 170
+    }
+   ],
+   "sing": [
+    {
+     "who": "laurinha",
+     "from": 0.3,
+     "to": 1.747
+    }
+   ],
+   "transition_in": {
+    "type": "deslizar_esq",
+    "dur": 0.4
+   }
+  },
+  {
+   "id": "s28_final",
+   "title": "Dá um joinha!",
+   "duration": 1.3334,
+   "description": "Dá um joinha!",
+   "background": "danca_bolinhas_amarelo",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "x": 960,
+      "y": 560,
+      "zoom": 1.0
+     },
+     {
+      "t": 1.333,
+      "x": 960,
+      "y": 560,
+      "zoom": 1.06,
+      "ease": "inout"
+     }
+    ],
+    "beat": {
+     "pulse": 0.0,
+     "bar_zoom": 0.04,
+     "sway": 6,
+     "bounce": 0
+    }
+   },
+   "characters": {
+    "laurinha": {
+     "start": {
+      "x": 680,
+      "y": 1010,
+      "turn": 0.15,
+      "expr": "happy",
+      "z": 3,
+      "depth": 1.3
+     },
+     "exposure": 1,
+     "actions": [
+      {
+       "t": 0.2,
+       "do": "bacana",
+       "dur": 1.133
+      }
+     ]
+    }
+   },
+   "props": {
+    "joinha": {
+     "start": {
+      "x": 1380,
+      "y": 900,
+      "z": 3,
+      "depth": 1.3
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "escala": 0.0
+       }
+      },
+      {
+       "t": 0.4,
+       "pose": {
+        "escala": 1.0
+       },
+       "ease": "back",
+       "in": 0.37
+      }
+     ]
+    }
+   },
+   "fx": [
+    "estrelas"
+   ],
+   "callouts": [
+    {
+     "t": 0.4,
+     "text": "DÁ UM JOINHA!",
+     "dur": 0.933,
+     "color": "azul",
+     "y": 170
+    }
+   ],
+   "sing": [
+    {
+     "who": "laurinha",
+     "from": 0.007,
+     "to": 1.287
+    }
+   ]
+  },
+  {
+   "id": "s29_final",
+   "title": "Chama o papai e a mamãe",
+   "duration": 2.6666,
+   "description": "Chama o papai e a mamãe",
+   "background": "plano_casa_frente",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "x": 1300,
+      "y": 540,
+      "zoom": 1.1
+     },
+     {
+      "t": 2.667,
+      "x": 1300,
+      "y": 540,
+      "zoom": 1.1500000000000001,
+      "ease": "inout"
+     }
+    ],
+    "beat": {
+     "pulse": 0.0,
+     "bar_zoom": 0.04,
+     "sway": 6,
+     "bounce": 0
+    }
+   },
+   "characters": {
+    "mamae": {
+     "start": {
+      "x": 1100,
+      "y": 930,
+      "turn": 0.2,
+      "expr": "happy",
+      "z": 3
+     },
+     "exposure": 1,
+     "actions": [
+      {
+       "t": 0.2,
+       "do": "wave",
+       "dur": 1.4
+      }
+     ]
+    },
+    "laurinha": {
+     "start": {
+      "x": 1450,
+      "y": 930,
+      "turn": -0.3,
+      "expr": "happy",
+      "z": 3
+     },
+     "exposure": 1,
+     "actions": [
+      {
+       "t": 0.1,
+       "do": "point",
+       "dur": 2.567
+      }
+     ]
+    }
+   },
+   "callouts": [
+    {
+     "t": 0.3,
+     "text": "CHAMA O PAPAI E A MAMÃE!",
+     "dur": 1.8,
+     "color": "verde",
+     "y": 170
+    }
+   ],
+   "sing": [
+    {
+     "who": "laurinha",
+     "from": 0.0,
+     "to": 2.033
+    }
+   ]
+  },
+  {
+   "id": "s30_final",
+   "title": "Pra se inscrever no canal! Zum, zum!",
+   "duration": 4.3667,
+   "description": "Pra se inscrever no canal! Zum, zum!",
+   "background": "danca_raios_vermelho",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "x": 960,
+      "y": 560,
+      "zoom": 1.0
+     },
+     {
+      "t": 4.367,
+      "x": 960,
+      "y": 560,
+      "zoom": 1.06,
+      "ease": "inout"
+     }
+    ],
+    "beat": {
+     "pulse": 0.0,
+     "bar_zoom": 0.04,
+     "sway": 6,
+     "bounce": 0
+    }
+   },
+   "characters": {
+    "laurinha": {
+     "start": {
+      "x": 600,
+      "y": 1010,
+      "turn": 0.15,
+      "expr": "happy",
+      "z": 3,
+      "depth": 1.3
+     },
+     "exposure": 1,
+     "actions": [
+      {
+       "t": 0.2,
+       "do": "point",
+       "dur": 4.167
+      }
+     ]
+    }
+   },
+   "props": {
+    "botao": {
+     "start": {
+      "x": 1260,
+      "y": 760,
+      "z": 3,
+      "depth": 1.2
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "escala": 0.0,
+        "aperta": 0.0
+       }
+      },
+      {
+       "t": 0.4,
+       "pose": {
+        "escala": 1.0
+       },
+       "ease": "back",
+       "in": 0.37
+      },
+      {
+       "t": 1.6,
+       "pose": {
+        "aperta": 1.0
+       },
+       "ease": "out",
+       "in": 1.57
+      },
+      {
+       "t": 1.9,
+       "pose": {
+        "aperta": 0.0
+       },
+       "ease": "in",
+       "in": 0.27
+      }
+     ]
+    }
+   },
+   "fx": [
+    "coracoes"
+   ],
+   "callouts": [
+    {
+     "t": 0.5,
+     "text": "INSCREVA-SE!",
+     "dur": 1.8,
+     "color": "vermelho",
+     "y": 170
+    }
+   ],
+   "sing": [
+    {
+     "who": "laurinha",
+     "from": 0.0,
+     "to": 4.127
+    }
+   ]
+  },
+  {
+   "id": "s31_final",
+   "title": "Bolha de sabão! Tchau! Ploc!",
+   "duration": 4.9667,
+   "description": "Bolha de sabão! Tchau! Ploc!",
+   "background": "plano_campo",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "x": 1300,
+      "y": 540.0,
+      "zoom": 1.0
+     },
+     {
+      "t": 4.967,
+      "x": 1300,
+      "y": 540.0,
+      "zoom": 1.08,
+      "ease": "inout"
+     }
+    ],
+    "beat": {
+     "pulse": 0.0,
+     "bar_zoom": 0.04,
+     "sway": 6,
+     "bounce": 0
+    }
+   },
+   "characters": {
+    "laurinha": {
+     "start": {
+      "x": 750,
+      "y": 930,
+      "turn": 0.3,
+      "expr": "happy",
+      "z": 3
+     },
+     "exposure": 1,
+     "actions": [
+      {
+       "t": 0.0,
+       "do": "dance",
+       "style": "tchau",
+       "dur": 2.15
+      },
+      {
+       "t": 2.45,
+       "do": "laugh",
+       "dur": 2.517
+      }
+     ]
+    },
+    "luisinho": {
+     "start": {
+      "x": 1900,
+      "y": 930,
+      "turn": -0.3,
+      "expr": "happy",
+      "z": 3
+     },
+     "exposure": 1,
+     "actions": [
+      {
+       "t": 0.0,
+       "do": "dance",
+       "style": "tchau",
+       "dur": 2.15
+      },
+      {
+       "t": 2.55,
+       "do": "laugh",
+       "dur": 2.417
+      }
+     ]
+    }
+   },
+   "props": {
+    "gato": {
+     "start": {
+      "x": 1300,
+      "y": 770,
+      "z": 2,
+      "depth": 0.7
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 0.0,
+       "pose": {
+        "aceno": 1.0
+       }
+      },
+      {
+       "t": 2.15,
+       "pose": {
+        "y": 770
+       }
+      },
+      {
+       "t": 2.95,
+       "pose": {
+        "y": 930,
+        "aceno": 0.0
+       },
+       "ease": "in",
+       "in": 0.77
+      }
+     ]
+    },
+    "bolha": {
+     "start": {
+      "x": 1300,
+      "y": 800,
+      "z": 3,
+      "tam": 1.0,
+      "estoura": 0.0,
+      "depth": 0.9
+     },
+     "exposure": 1,
+     "keys": [
+      {
+       "t": 2.1,
+       "pose": {
+        "estoura": 0.0
+       }
+      },
+      {
+       "t": 2.55,
+       "pose": {
+        "estoura": 1.0
+       },
+       "ease": "out",
+       "in": 0.42
+      }
+     ]
+    }
+   },
+   "fx": [
+    "coracoes"
+   ],
+   "callouts": [
+    {
+     "t": 1.51,
+     "text": "TCHAU!",
+     "dur": 1.8,
+     "color": "amarelo",
+     "y": 170
+    },
+    {
+     "t": 2.15,
+     "text": "PLOC!",
+     "dur": 1.8,
+     "color": "vermelho",
+     "y": 170
+    }
+   ],
+   "sing": [
+    {
+     "who": "laurinha",
+     "from": 0.3,
+     "to": 2.47
+    }
+   ],
+   "transition_in": {
+    "type": "zoom",
+    "dur": 0.4
+   },
+   "transition_out": "fade"
+  }
+ ]
+}
