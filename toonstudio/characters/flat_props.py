@@ -1698,3 +1698,165 @@ class Pinguim(_Prop):
 
 
 PROPS.update({"pinguim": Pinguim})
+
+
+# ───────────────────────── 14 Castelo de Areia ─────────────────────────
+
+AREIA, AREIA_L, AREIA_E = "#F3D58A", "#C9A24E", "#E6C26E"
+
+
+class CasteloAreia(_Prop):
+    """Castelo de areia que cresce: `nivel` 0 = montinho, 1 = torre, 2 = + ponte e torre pequena, 3 = + bandeira;
+    `derruba` 0→1 a onda desmancha (vira montinho achatado com pedacinhos)."""
+
+    def __init__(self):
+        super().__init__("castelo_areia", "Castelo de areia", (1000, 760), (500, 720), 460, {"nivel": 3.0, "derruba": 0.0})
+
+    def paint(self, k, P):
+        nv = max(0.0, min(3.0, P["nivel"]))
+        d = max(0.0, min(1.0, P["derruba"]))
+        esm = 1 - 0.85 * d                                              # altura que sobra quando a onda passa
+        shape(k, ellipse_pts(0, -10, 300 + 60 * d, 46 + 10 * d, 0, 30), AREIA_E, line=AREIA_L)    # base espalhada
+        if d > 0.6:
+            for x, y, r in ((-260, -20, 26), (230, -14, 22), (-120, -40, 18), (300, -30, 16), (60, -46, 20)):
+                shape(k, ellipse_pts(x, y, r, r * 0.7, 0, 12), AREIA, line=AREIA_L)
+        h0 = 120 * esm
+        shape(k, [(-220, -10), (220, -10), (200, -10 - h0), (-200, -10 - h0)], AREIA, line=AREIA_L, smooth=False)   # muralha
+        if d < 0.7:
+            for x in range(-200, 201, 50):                              # ameias
+                box(k, x - 16, -10 - h0 - 26 * esm, x + 16, -10 - h0, AREIA, line=AREIA_L, r=3)
+        if nv >= 1 and d < 0.9:                                          # torre do meio (feita com o baldinho)
+            t = min(1.0, nv) * esm
+            shape(k, [(-80, -10 - h0), (80, -10 - h0), (66, -10 - h0 - 200 * t), (-66, -10 - h0 - 200 * t)], AREIA, line=AREIA_L, smooth=False)
+            for x in (-60, -20, 20, 60):
+                box(k, x - 14, -10 - h0 - 200 * t - 26 * t, x + 14, -10 - h0 - 200 * t, AREIA, line=AREIA_L, r=3)
+            shape(k, ellipse_pts(0, -10 - h0 - 110 * t, 22, 30 * t, 0, 14), "#8C6A2E", line=AREIA_L)          # janela
+            for y in (-40, -90, -150):                                    # marquinhas do baldinho
+                ln(k, [(-62, -10 - h0 + y * t * 0.9), (62, -10 - h0 + y * t * 0.9)], AREIA_L, w=LINE * 0.6)
+        if nv >= 2 and d < 0.8:                                          # ponte + torrinhas laterais
+            for sx in (-1, 1):
+                shape(k, [(sx * 170 - 46, -10 - h0), (sx * 170 + 46, -10 - h0), (sx * 170 + 38, -10 - h0 - 90 * esm),
+                          (sx * 170 - 38, -10 - h0 - 90 * esm)], AREIA, line=AREIA_L, smooth=False)
+            shape(k, [(-60, -10), (60, -10), (60, -60 * esm), (40, -84 * esm), (-40, -84 * esm), (-60, -60 * esm)], "#8C6A2E", line=AREIA_L)
+        if nv >= 3 and d < 0.5:                                          # bandeirinha no alto
+            topo = -10 - h0 - 226 * esm
+            ln(k, [(0, topo), (0, topo - 110)], "#7A5A2E", w=LINE * 1.2)
+            shape(k, [(2, topo - 110), (78, topo - 92), (2, topo - 70)], "#E9545D", line="#B83A42", smooth=False)
+        for x, y in ((-150, -50), (130, -60), (-40, -30)):                # conchinhas
+            shape(k, ellipse_pts(x, y * esm, 12, 9, 0.3, 10), "#FFB3C7", line="#E07A9A")
+
+
+class Siri(_Prop):
+    """Siri (caranguejinho) vermelho-alaranjado: `anda` fase das perninhas (anda de ladinho), `pinca` 0→1 abre as pinças,
+    `aceno` 0→1 levanta a pinça direita (tchauzinho), `pulo`, `lid`."""
+
+    def __init__(self):
+        super().__init__("siri", "Siri", (760, 560), (380, 520), 200, {"anda": 0.0, "pinca": 0.0, "aceno": 0.0, "pulo": 0.0, "lid": 0.0})
+
+    def paint(self, k, P):
+        cor, lin = "#F2603A", "#B83A1E"
+        y0 = -90 * math.sin(math.pi * max(0.0, min(1.0, P["pulo"])))
+        f = math.sin(2 * math.pi * P["anda"])
+        for side in (-1, 1):                                             # perninhas (3 de cada lado)
+            for j in range(3):
+                bx = side * (60 + 26 * j)
+                lev = 14 * f * (1 if (j % 2 == 0) == (side > 0) else -1)
+                ln(k, [(bx, y0 - 60), (bx + side * 40, y0 - 40 - lev), (bx + side * 52, y0 - 4 - max(0, lev))], lin, w=LINE * 1.5)
+        a = max(0.0, min(1.0, P["aceno"]))
+        for side in (-1, 1):                                             # braços + pinças
+            up = a if side > 0 else 0.0
+            om = (side * 100, y0 - 100)
+            pin = (side * (170 - 40 * up), y0 - 170 - 120 * up)
+            ln(k, [om, ((om[0] + pin[0]) / 2 + side * 20, (om[1] + pin[1]) / 2), pin], cor, w=LINE * 2.6)
+            ab = 0.25 + 0.5 * max(0.0, min(1.0, P["pinca"]))
+            shape(k, ellipse_pts(pin[0], pin[1], 34, 26, 0, 16), cor, line=lin)
+            shape(k, [(pin[0] + side * 10, pin[1] - 8), (pin[0] + side * 60, pin[1] - 40 * ab - 10), (pin[0] + side * 30, pin[1] - 4)],
+                  cor, line=lin, smooth=False)
+        shape(k, ellipse_pts(0, y0 - 90, 120, 66, 0, 28), cor, line=lin)          # casco
+        for side in (-1, 1):                                             # olhos no talinho
+            ln(k, [(side * 30, y0 - 140), (side * 40, y0 - 186)], lin, w=LINE * 1.4)
+            if P["lid"] > 0.5:
+                ln(k, [(side * 40 - 12, y0 - 196), (side * 40, y0 - 188), (side * 40 + 12, y0 - 196)], "#222222", w=LINE)
+            else:
+                shape(k, ellipse_pts(side * 40, y0 - 196, 18, 20, 0, 14), "#FFFFFF", line=lin)
+                k.dot(side * 40 + 3, y0 - 192, 8, _rgba("#1F1F1F"))
+        ln(k, [(-30, y0 - 80), (0, y0 - 66), (30, y0 - 80)], "#7A2412", w=LINE * 1.2)
+        for side in (-1, 1):
+            k.shape(ellipse_pts(side * 66, y0 - 86, 14, 9, 0, 12), fill=_rgba("#FFB0A0", 0.85), line=0)
+
+
+class Baldinho(_Prop):
+    """Baldinho de praia vermelho com pazinha amarela. `vira` 0→1 vira de boca pra baixo (faz a torre); `cheio` 1 mostra areia."""
+
+    def __init__(self):
+        super().__init__("baldinho", "Baldinho e pazinha", (560, 520), (280, 480), 220, {"vira": 0.0, "cheio": 1.0})
+
+    def paint(self, k, P):
+        v = max(0.0, min(1.0, P["vira"]))
+        ang = math.pi * v
+        def T(x, y):
+            c, s = math.cos(ang), math.sin(ang)
+            cx, cy = 0.0, -90.0
+            dx, dy = x - cx, y - cy
+            return (cx + dx * c - dy * s, cy + dx * s + dy * c)
+        shape(k, [T(-80, -170), T(80, -170), T(60, -10), T(-60, -10)], "#E9545D", line="#B83A42", smooth=False)
+        shape(k, [T(-88, -180), T(88, -180), T(88, -160), T(-88, -160)], "#FF7A85", line="#B83A42", smooth=False)
+        if P.get("cheio", 1.0) > 0.5 and v < 0.3:
+            shape(k, ellipse_pts(0, -176, 76, 18, 0, 18), AREIA, line=AREIA_L)
+        if v < 0.5:                                                        # alça e pazinha (somem com o balde virado)
+            ln(k, [T(-80, -170), T(0, -250), T(80, -170)], "#B83A42", w=LINE * 1.1)
+            ln(k, [(110, -10), (150, -200)], "#F2B21A", w=LINE * 2.2)
+            shape(k, [(100, -10), (124, -10), (130, 30), (94, 30)], "#FFD23F", line="#C99A12", smooth=False)
+
+
+class Onda(_Prop):
+    """Onda do mar que chega na areia: crista azul com espuma branca enrolando. `altura` 0→1 tamanho; `quebra` 0→1 a espuma
+    desaba para a frente (direção do `lado`)."""
+
+    def __init__(self):
+        super().__init__("onda", "Onda", (1300, 900), (650, 860), 520, {"altura": 1.0, "quebra": 0.0, "lado": 1.0})
+
+    def paint(self, k, P):
+        sx = 1.0 if P["lado"] >= 0 else -1.0
+        h = 140 + 420 * max(0.0, min(1.0, P["altura"]))
+        q = max(0.0, min(1.0, P["quebra"]))
+        corpo = [(-500 * sx, 0), (-500 * sx, -h * 0.35), (-260 * sx, -h * 0.75), (0, -h), (170 * sx, -h * (0.95 - 0.4 * q)),
+                 (280 * sx, -h * (0.7 - 0.5 * q)), (310 * sx, -h * 0.3 * (1 - q)), (500 * sx, 0)]   # cabe no quadro do nível (±650)
+        shape(k, corpo, "#4FA8E8", line="#2E7FC0")
+        shape(k, [(x * 0.92, y * 0.6) for x, y in corpo], "#7CC4F5", line="#4FA8E8")
+        for j in range(7):                                                # espuma
+            a = j / 6
+            x = (-60 + 380 * a) * sx
+            y = -h * (1 - 0.6 * a * (0.4 + q))
+            shape(k, ellipse_pts(x, y, 46 - 3 * j, 36 - 2 * j, 0, 14), "#FFFFFF", line="#BFE0F5")
+        for x in (-400, -160, 120):
+            ln(k, [(x * sx, -h * 0.4), ((x + 80) * sx, -h * 0.45)], "#BFE6FF", w=LINE)
+
+
+class Peixinho(_Prop):
+    """Peixinho dourado com carinha: `nada` fase do rabinho; `boca` 0→1 (blub); `lado`."""
+
+    def __init__(self):
+        super().__init__("peixinho", "Peixinho", (560, 420), (280, 380), 170, {"nada": 0.0, "boca": 0.0, "lado": 1.0, "lid": 0.0})
+
+    def paint(self, k, P):
+        sx = 1.0 if P["lado"] >= 0 else -1.0
+        w = math.sin(2 * math.pi * P["nada"]) * 22
+        cor, lin = "#FF9A2E", "#C9661A"
+        shape(k, [(-90 * sx, -110), (-190 * sx, -170 + w), (-170 * sx, -110), (-190 * sx, -50 + w)], cor, line=lin)   # rabo
+        shape(k, ellipse_pts(0, -110, 120, 76, 0, 28), cor, line=lin)
+        shape(k, [(-10 * sx, -180), (50 * sx, -210), (60 * sx, -176)], cor, line=lin)                                   # barbatana
+        for x in (-40, 0):
+            ln(k, [(x * sx, -170), ((x + 10) * sx, -60)], "#FFC56E", w=LINE)
+        e = (56 * sx, -128)
+        if P["lid"] > 0.5:
+            ln(k, [(e[0] - 12, e[1]), (e[0], e[1] - 8), (e[0] + 12, e[1])], "#222222", w=LINE)
+        else:
+            shape(k, ellipse_pts(e[0], e[1], 18, 20, 0, 14), "#FFFFFF", line=lin)
+            k.dot(e[0] + 4 * sx, e[1] + 3, 8, _rgba("#1F1F1F"))
+        b = max(0.0, min(1.0, P["boca"]))
+        shape(k, ellipse_pts(104 * sx, -96, 10, 6 + 10 * b, 0, 12), "#C63A3A", line=lin)
+        k.shape(ellipse_pts(70 * sx, -96, 13, 8, 0, 12), fill=_rgba("#FF9AB0", 0.8), line=0)
+
+
+PROPS.update({"castelo_areia": CasteloAreia, "siri": Siri, "baldinho": Baldinho, "onda": Onda, "peixinho": Peixinho})

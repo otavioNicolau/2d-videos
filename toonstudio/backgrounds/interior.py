@@ -516,9 +516,48 @@ def mar_gelado(rng) -> tuple[skia.Surface, int]:
     return s, w
 
 
+def praia(rng) -> tuple[skia.Surface, int]:
+    """Praia de férias vista de pertinho: céu de verão, mar com ondinhas, areia dourada com conchinhas e estrelas-do-mar,
+    guarda-sol listrado ao fundo (castelo, siri e onda são props)."""
+    w = W_INT
+    s, c = _surf(w, H, 1.5)
+    F = Flat(c)
+    c.drawRect(skia.Rect(0, 0, w, H), skia.Paint(Color4f=skia.Color4f(*_rgba("#9ED8FF"))))
+    for x, y, sc in ((420, 150, 1.3), (1500, 110, 1.6), (2150, 210, 1.0)):
+        F.cloud(x, y, sc)
+    F.shape([(-20, 470), (w + 20, 470), (w + 20, 690), (-20, 690)], "#3FA2E6", smooth=False)
+    for j in range(18):
+        x, y = (j * 173) % w, 500 + (j * 41) % 160
+        F.line([(x, y), (x + 40, y - 10), (x + 80, y)], "#BFE6FF", w=LINE)
+    F.shape([(-20, 670), (w * 0.3, 650), (w * 0.6, 680), (w + 20, 660), (w + 20, 700), (-20, 700)], "#FFFFFF")      # espuma da beira
+    F.shape([(-20, 690), (w + 20, 680), (w + 20, H + 20), (-20, H + 20)], "#F3D58A")
+    for x0 in (2150,):                                                   # guarda-sol
+        F.line([(x0, 760), (x0 + 30, 470)], "#8C6A2E", w=LINE * 1.6)
+        cores = ("#E9545D", "#FFFFFF", "#3C8BF0", "#FFFFFF", "#E9545D")
+        for i, col in enumerate(cores):
+            a0, a1 = math.pi + i * math.pi / 5, math.pi + (i + 1) * math.pi / 5
+            pts = [(x0 + 30, 470)] + [(x0 + 30 + math.cos(a0 + (a1 - a0) * t / 6) * 230, 520 + math.sin(a0 + (a1 - a0) * t / 6) * 90)
+                                     for t in range(7)]
+            F.shape(pts, col, smooth=False)
+    for j in range(16):                                                   # conchinhas e estrelinhas
+        x, y = (j * 211 + 70) % w, 780 + (j * 59) % 240
+        if j % 3 == 0:
+            F.oval(x, y, 14, 10, "#FFB3C7")
+        elif j % 3 == 1:
+            pts = []
+            for i in range(10):
+                r = 22 if i % 2 == 0 else 9
+                a = -math.pi / 2 + i * math.pi / 5
+                pts.append((x + math.cos(a) * r, y + math.sin(a) * r))
+            F.shape(pts, "#FF9A2E", smooth=False)
+        else:
+            F.line([(x - 10, y), (x + 10, y - 4)], "#E6C26E", w=LINE)
+    return s, w
+
+
 SCENES = {"plano_banheiro": banheiro, "plano_quarto_rosa": lambda rng: quarto("rosa", rng), "plano_quarto_azul": lambda rng: quarto("azul", rng),
           "plano_cozinha": cozinha, "plano_casa_frente": casa_frente, "plano_escola": escola, "plano_ceu": ceu,
-          "plano_jardim": jardim, "plano_lagoa": lagoa, "plano_sala": sala, "plano_espaco": espaco, "plano_lua": lua_chao, "plano_campo": campo, "plano_gelo": gelo, "plano_mar_gelado": mar_gelado}
+          "plano_jardim": jardim, "plano_lagoa": lagoa, "plano_sala": sala, "plano_espaco": espaco, "plano_lua": lua_chao, "plano_campo": campo, "plano_gelo": gelo, "plano_mar_gelado": mar_gelado, "plano_praia": praia}
 
 
 def build(bg_id: str, out_dir: Path, scale: float = 1.5, seed: int = 11) -> dict:
