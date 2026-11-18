@@ -25,6 +25,7 @@ VÍDEOS (nesta ordem):
 11 Foguete pra Lua
 12 Méé, Carneirinho!
 13 Andar de Pinguim
+14 Castelo de Areia
 
 ────────────────────────────────────────────────────────────
 2) Músicas de Bichos 🐸🐜🐑🐧
@@ -78,6 +79,17 @@ VÍDEOS:
 11 Foguete pra Lua
 
 ────────────────────────────────────────────────────────────
+6) Brincadeiras ao ar livre 🪁   (criar com a 14)
+────────────────────────────────────────────────────────────
+DESCRIÇÃO:
+Músicas infantis para brincar lá fora: soltar pipa, fazer castelo de areia na praia, bolha de sabão e muito mais com a
+Laurinha e o Luisinho! ☀️
+
+VÍDEOS:
+09 Pipa no Céu
+14 Castelo de Areia
+
+────────────────────────────────────────────────────────────
 Mais tarde (quando tiver 3 vídeos ou mais):
 - Músicas de Natal 🎄 — 07 Pisca-Pisca de Natal + as próximas de festa
-- Brincadeiras ao ar livre 🪁 — 09 Pipa no Céu, 14 Castelo de Areia, 15 Bolha de Sabão…
+- Comidinhas 🍕 — 24 Pão de Queijo, 33 Brigadeiro, 38 Olha a Pamonha!, 48 Macarrão que Não Acaba
