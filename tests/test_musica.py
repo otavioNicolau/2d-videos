@@ -353,5 +353,5 @@ def test_master_tames_harsh_suno_highs():
     estridente = [2.0, 24.0, 43.0, 16.0, 10.0, 2.5, 1.5]
     _, ganhos = cadeia_eq(estridente)
     assert len(ganhos) == len(FAIXAS)
-    assert ganhos[0] > 3 and ganhos[4] < -2 and ganhos[6] < -4
+    assert ganhos[0] > 3 and ganhos[4] < -1 and ganhos[5] < -3 and ganhos[6] < -4
     assert all(abs(g) <= 9.0 for g in ganhos)

@@ -25,8 +25,9 @@ import soundfile as sf
 from ..core.config import tool
 
 # (limite inferior, limite superior, frequência central do ajuste, largura em oitavas, % alvo da energia)
-FAIXAS = [(20, 60, 45, 1.2, 18.7), (60, 250, 120, 1.6, 29.0), (250, 1000, 500, 1.8, 34.0), (1000, 2500, 1600, 1.3, 12.0),
-          (2500, 6000, 3800, 1.3, 4.0), (6000, 10000, 7800, 0.9, 0.8), (10000, 16000, 12500, 0.9, 0.2)]
+# alvo = mediana de 18 músicas da referência (referencias/animadinhos/analise, 18/11/2026)
+FAIXAS = [(20, 60, 45, 1.2, 15.3), (60, 250, 120, 1.6, 31.1), (250, 1000, 500, 1.8, 36.5), (1000, 2500, 1600, 1.3, 11.1),
+          (2500, 6000, 3800, 1.3, 5.9), (6000, 10000, 7800, 0.9, 0.7), (10000, 16000, 12500, 0.9, 0.3)]
 ALVO_LUFS, PICO_DBTP = -14.0, -1.0
 FORCA, LIMITE_DB = 0.75, 9.0
 

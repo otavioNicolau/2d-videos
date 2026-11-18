@@ -44,6 +44,9 @@ transcrição da voz só para contar versos e repetições; nada da letra delas 
 | Grito do canal | 10 de 13, logo após a intro (~10–14 s) e dentro dos intervalos, até 8 vezes | nosso equivalente: os bordões |
 | Final | corte seco e ~4 s de silêncio (tela final) | terminar com batida final limpa (`[End]`); a chamada entra no vídeo |
 | Cortes de cena | ~4 a 22 por minuto (mediana ~10: um corte a cada ~6 s) | cortar na batida a cada 3–6 s |
+| **Instrumentos** (18/11, reconhecedor de sons PANNs/AudioSet no instrumental, Celular do Vovô e Dança do Calango × nossas 11–13) | deles: **sintetizador, teclado, piano/piano elétrico, sampler e efeitos de desenho ("boing")**; bateria acústica, metais e guitarra ≈ 0; gêneros: "funny music", "video game music", latina/africana. Nossas: **bateria acústica (caixa, bumbo, viradas, aro), metais (trompete, trombone, sax), chocalho**; zero sintetizador/teclado; gêneros: swing, ska, salsa | o "toque" deles é **produção de teclado** (synth + piano elétrico + percussão programada + efeitos), não banda ao vivo |
+| **Batida** (18/11, bateria separada, ataques por semicolcheia) | caixa/palma e chimbal/shaker **no contratempo** (o "e" entre os tempos), quase nunca em cima do tempo; bumbo sincopado | as nossas batiam caixa e chimbal **em cima do tempo** (jeito de rock/pop de banda) |
+| **Som final** (18/11) | presença 2,5–6 kHz 3–4%, agudo 6–16 kHz ~0,8%, sub 16–22%, masterizado alto | as nossas: presença 10–11%, agudo 3–7%, sub 2–8% (estridente, fino) → masterização automática no `final` |
 
 ## 2. Identidade do canal
 

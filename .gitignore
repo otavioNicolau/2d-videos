@@ -28,3 +28,6 @@ musicas/**/*.mp3
 musicas/**/*.m4a
 library/audio/marca/tema_*.wav
 godot/override.cfg
+
+# referências de terceiros (Animadinhos etc.) — só para consulta, nunca versionar
+/referencias/
