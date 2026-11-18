@@ -1,0 +1,70 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Dorme, Acorda!",
+ "gancho": "dorme acorda",
+ "palavras_tema": [
+  "dorme",
+  "acorda",
+  "sono",
+  "galo"
+ ],
+ "tipo": "brincadeira",
+ "tema": "brincadeira de dormir e acordar cada vez mais rápido, com pegadinha",
+ "dia_a_dia": [
+  "hora de dormir",
+  "acordar de manhã",
+  "brincadeira de comandos"
+ ],
+ "curiosidade": "o galo canta de manhã cedinho e acorda todo mundo",
+ "ritmo": "funk_infantil",
+ "bpm": 130,
+ "estrutura": "D",
+ "voz": "dueto",
+ "cantam": {
+  "verso 1": "luisinho",
+  "refrão": "coro",
+  "verso 2": "laurinha",
+  "ponte": "comandos, coro responde",
+  "final": "todo mundo"
+ },
+ "cenas": [
+  {
+   "parte": "intro",
+   "ideia": "quarto azul: o Luisinho de olho fechado, ronca e acorda num pulo"
+  },
+  {
+   "parte": "verso 1",
+   "ideia": "fecha o olhinho, deita na cama, boceja: tá com sono"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "dorme (deita e ronca, Zzz na tela) / acorda (pula de braços para cima), cada volta mais rápido; no fim ele cochila de verdade e a Laurinha acorda"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "galo cantando na janela, despertador tocando, sol entrando, espreguiçada"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "dorme, acorda, dorme… a música para: quem dormiu de verdade? todos riem"
+  },
+  {
+   "parte": "final",
+   "ideia": "convite; o Luisinho boceja no tchau"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [],
+ "status": "letra_revisada",
+ "versoes": [],
+ "youtube": {
+  "resumo": "DORME, ACORDA! 😴⏰ Fecha o olhinho, deita a cabeça… dorme! Ronc, ronc! Acorda! Ê! A brincadeira vai ficando cada vez mais rápida… e o Luisinho cochilou de verdade! O galo canta, o despertador toca e o sol entra na janela: bom dia!",
+  "resumo_short": "DORME, ACORDA! 😴 Ronc, ronc… acorda! Brinque com a Laurinha e o Luisinho!",
+  "curiosidade": "O galo canta de manhã cedinho e acorda todo mundo"
+ },
+ "origem": "brincadeiras com o corpo (18/11/2026), inspiradas no gênero de No Ritmo Quá Quá / Morto-Vivo — nada copiado",
+ "persona": "luisinho"
+}

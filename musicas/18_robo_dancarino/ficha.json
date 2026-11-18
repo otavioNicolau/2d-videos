@@ -1,0 +1,66 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Robô Dançarino",
+ "gancho": "robô dançarino",
+ "palavras_tema": [
+  "robô",
+  "botão",
+  "pilha",
+  "dança"
+ ],
+ "tipo": "danca",
+ "tema": "dançar como robô, travar e acabar a pilha",
+ "dia_a_dia": [
+  "dança do robô",
+  "brincadeira de estátua",
+  "imaginação"
+ ],
+ "curiosidade": "o robô precisa de energia (pilha ou bateria) para funcionar, igual a gente precisa de comida",
+ "ritmo": "eletronica_infantil",
+ "bpm": 124,
+ "estrutura": "D",
+ "voz": "dueto",
+ "cantam": {
+  "verso 1": "luisinho",
+  "refrão": "coro",
+  "verso 2": "laurinha",
+  "ponte": "comandos, coro responde",
+  "final": "todo mundo"
+ },
+ "cenas": [
+  {
+   "parte": "verso 1",
+   "ideia": "o Luisinho acha um botão no quarto e aperta: o Luisinho vira um robô (antenas piscando)"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "dança de robô: braço duro, perna dura, vira e trava; luzinhas piscando no fundo"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "a pilha acaba: os movimentos ficam lentos até ele desligar; a Laurinha encaixa uma pilha gigante e ele religa"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "liga, trava, liga… a música para e ele fica parado… e liga de novo!"
+  },
+  {
+   "parte": "final",
+   "ideia": "convite; o robô acena duro no tchau"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [],
+ "status": "letra_revisada",
+ "versoes": [],
+ "youtube": {
+  "resumo": "ROBÔ DANÇARINO! 🤖 O Luisinho achou um botão, apertou… e virou robô! Braço duro, perna dura, vira, vira… trava! Ih, a pilha tá acabando: devagar… desligou! Recarrega e liga de novo: bip, bop! Dance de robô com a Laurinha e o Luisinho!",
+  "resumo_short": "ROBÔ DANÇARINO! 🤖 Bip, bop! Dance de robô com a Laurinha e o Luisinho!",
+  "curiosidade": "O robô precisa de energia (pilha ou bateria) para funcionar, igual a gente precisa de comida"
+ },
+ "origem": "brincadeiras com o corpo (18/11/2026), inspiradas no gênero de No Ritmo Quá Quá / Morto-Vivo — nada copiado",
+ "persona": "luisinho"
+}

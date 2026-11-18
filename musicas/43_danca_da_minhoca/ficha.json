@@ -1,0 +1,66 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Dança da Minhoca",
+ "gancho": "dança da minhoca",
+ "palavras_tema": [
+  "minhoca",
+  "terra",
+  "estica",
+  "encolhe"
+ ],
+ "tipo": "animal",
+ "tema": "a minhoca que estica, encolhe, se enrola e some na terra",
+ "dia_a_dia": [
+  "bichinhos do jardim",
+  "plantas",
+  "dança de bicho"
+ ],
+ "curiosidade": "a minhoca cava caminhos na terra e deixa a terra fofinha para as plantas",
+ "ritmo": "forro_piseiro",
+ "bpm": 160,
+ "estrutura": "A",
+ "voz": "dueto",
+ "cantam": {
+  "verso 1": "luisinho",
+  "refrão": "coro",
+  "verso 2": "laurinha",
+  "ponte": "comandos, coro responde",
+  "final": "todo mundo"
+ },
+ "cenas": [
+  {
+   "parte": "verso 1",
+   "ideia": "jardim depois da chuva visto de pertinho: uma minhoca rosa simpática sai da terra, comprida como um trem para eles"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "a minhoca dança: estica, encolhe, se enrola e some num buraquinho (cadê?) e aparece de novo"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "corte da terra (quadro): a minhoca cava caminhos, a terra fica fofinha e uma plantinha cresce"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "os dois deitados no chão imitando a minhoca: estica, encolhe… achou!"
+  },
+  {
+   "parte": "final",
+   "ideia": "convite; a minhoca acena com a pontinha"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [],
+ "status": "letra_revisada",
+ "versoes": [],
+ "youtube": {
+  "resumo": "DANÇA DA MINHOCA! 🪱 Choveu no jardim e saiu da terra… comprida, comprida: é a minhoca! Estica e encolhe, se enrola e some… cadê? Ela cava a terra, deixa tudo fofinho e a plantinha cresce! Deita no chão e dança junto!",
+  "resumo_short": "DANÇA DA MINHOCA! 🪱 Estica e encolhe com a Laurinha e o Luisinho!",
+  "curiosidade": "A minhoca cava caminhos na terra e deixa a terra fofinha para as plantas"
+ },
+ "origem": "brincadeiras com o corpo (18/11/2026), inspiradas no gênero de No Ritmo Quá Quá / Morto-Vivo — nada copiado",
+ "persona": "luisinho"
+}

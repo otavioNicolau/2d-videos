@@ -1,0 +1,65 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Bicho Faz Assim!",
+ "gancho": "bicho faz assim",
+ "palavras_tema": [
+  "bicho",
+  "sapo",
+  "cobra",
+  "macaco"
+ ],
+ "tipo": "animal",
+ "tema": "o coro fala o bicho e todo mundo imita o jeito dele",
+ "dia_a_dia": [
+  "imitar bichos",
+  "sons dos animais",
+  "brincadeira de imitar"
+ ],
+ "curiosidade": "cada bicho se mexe de um jeito: o sapo pula, a cobra rasteja e o passarinho voa",
+ "ritmo": "pagodao",
+ "bpm": 135,
+ "estrutura": "B",
+ "voz": "dueto",
+ "cantam": {
+  "verso 1": "laurinha",
+  "refrão": "coro",
+  "verso 2": "luisinho",
+  "ponte": "comandos, coro responde",
+  "final": "todo mundo"
+ },
+ "cenas": [
+  {
+   "parte": "verso 1",
+   "ideia": "a Laurinha apresenta a brincadeira; a cada bicho, ele aparece grandão ao lado dela"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "aparece o bicho (sapo, cobra, macaco, elefante, passarinho, jacaré) e os dois imitam: pulam, rastejam, coçam, fazem tromba, voam, abrem a boca"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "e a muriçoca? o Luisinho bate as asas e, em vez de picar, dá um abraço"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "rapidinho: os bichos passam um atrás do outro e os dois mal conseguem acompanhar"
+  },
+  {
+   "parte": "final",
+   "ideia": "convite; todos os bichos acenam no tchau"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [],
+ "status": "letra_revisada",
+ "versoes": [],
+ "youtube": {
+  "resumo": "BICHO FAZ ASSIM! 🐸🐍🐒🐘 A Laurinha fala o bicho e todo mundo imita: o sapo pula, a cobra faz ssss, o macaco coça, o elefante faz fuuum com a tromba, o passarinho voa e o jacaré… nhac! E a muriçoca? Em vez de picar, dá abraço!",
+  "resumo_short": "BICHO FAZ ASSIM! 🐸 Imite os bichos com a Laurinha e o Luisinho!",
+  "curiosidade": "Cada bicho se mexe de um jeito: o sapo pula, a cobra rasteja e o passarinho voa"
+ },
+ "origem": "brincadeiras com o corpo (18/11/2026), inspiradas no gênero de No Ritmo Quá Quá / Morto-Vivo — nada copiado"
+}

@@ -1,0 +1,65 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Quente ou Frio?",
+ "gancho": "quente ou frio",
+ "palavras_tema": [
+  "quente",
+  "frio",
+  "calor",
+  "treme"
+ ],
+ "tipo": "brincadeira",
+ "tema": "se abanar no calor e tremer no frio, alternando cada vez mais rápido",
+ "dia_a_dia": [
+  "calor e frio",
+  "vestir casaco",
+  "brincadeira de comandos"
+ ],
+ "curiosidade": "quando faz frio a gente treme, e tremer esquenta o corpo",
+ "ritmo": "samba_infantil",
+ "bpm": 105,
+ "estrutura": "D",
+ "voz": "dueto",
+ "cantam": {
+  "verso 1": "laurinha",
+  "refrão": "coro",
+  "verso 2": "luisinho",
+  "ponte": "comandos, coro responde",
+  "final": "todo mundo"
+ },
+ "cenas": [
+  {
+   "parte": "verso 1",
+   "ideia": "a Laurinha num sol de rachar (suor, se abana) e de repente neve (treme, dentes batendo)"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "o fundo alterna sol e neve na batida; os dois se abanam no calor e tremem no frio, cada vez mais rápido"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "calor: sorvete; frio: casaco; praia: calor; gelo com pinguim: brrr"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "calor, frio, calor, frio… a música para: morninho! (ah, bom!)"
+  },
+  {
+   "parte": "final",
+   "ideia": "convite; os dois de casaco e óculos de sol ao mesmo tempo no tchau"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [],
+ "status": "letra_revisada",
+ "versoes": [],
+ "youtube": {
+  "resumo": "QUENTE OU FRIO? ☀️❄️ Que calor! Abana, abana! Que frio! Brrr, treme! A brincadeira vai alternando cada vez mais rápido… até ficar morninho! No calor: sorvete; no frio: casaco. Sabia que tremer esquenta o corpo?",
+  "resumo_short": "QUENTE OU FRIO? ☀️❄️ Abana no calor e treme no frio com a Laurinha e o Luisinho!",
+  "curiosidade": "Quando faz frio a gente treme, e tremer esquenta o corpo"
+ },
+ "origem": "brincadeiras com o corpo (18/11/2026), inspiradas no gênero de No Ritmo Quá Quá / Morto-Vivo — nada copiado"
+}

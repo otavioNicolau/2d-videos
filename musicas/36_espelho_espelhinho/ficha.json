@@ -1,0 +1,66 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Espelho, Espelhinho",
+ "gancho": "espelho espelhinho",
+ "palavras_tema": [
+  "espelho",
+  "igual",
+  "copiar",
+  "careta"
+ ],
+ "tipo": "brincadeira",
+ "tema": "brincadeira de imitar o amigo como num espelho",
+ "dia_a_dia": [
+  "brincar com os amigos",
+  "imitar",
+  "caretas"
+ ],
+ "curiosidade": "no espelho a mão direita parece a esquerda: tudo fica trocadinho",
+ "ritmo": "disco_infantil",
+ "bpm": 118,
+ "estrutura": "B",
+ "voz": "dueto",
+ "cantam": {
+  "verso 1": "luisinho",
+  "refrão": "coro",
+  "verso 2": "laurinha",
+  "ponte": "comandos, coro responde",
+  "final": "todo mundo"
+ },
+ "cenas": [
+  {
+   "parte": "verso 1",
+   "ideia": "quarto com um espelho grande: o Luisinho de um lado, o reflexo (a Laurinha) do outro, fazendo igual"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "cada comando é feito pelos dois ao mesmo tempo, espelhados; a câmera convida a criança a fazer junto"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "agora a Laurinha copia, mas erra de lado (ha ha): no espelho tudo fica trocado"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "concurso de caretas no espelho: careta, piscadinha, língua e gargalhada"
+  },
+  {
+   "parte": "final",
+   "ideia": "convite; os dois dão tchau um para o outro pelo espelho"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [],
+ "status": "letra_revisada",
+ "versoes": [],
+ "youtube": {
+  "resumo": "ESPELHO, ESPELHINHO! 🪞 Eu faço assim, você faz igual! Mão pra cima, uma voltinha, pula num pé, faz careta… Agora troca: a Laurinha copia o Luisinho… ih, errou! No espelho tudo fica trocadinho. Faça igual junto com eles!",
+  "resumo_short": "ESPELHO, ESPELHINHO! 🪞 Faça igual com a Laurinha e o Luisinho!",
+  "curiosidade": "No espelho a mão direita parece a esquerda: tudo fica trocadinho"
+ },
+ "origem": "brincadeiras com o corpo (18/11/2026), inspiradas no gênero de No Ritmo Quá Quá / Morto-Vivo — nada copiado",
+ "persona": "luisinho"
+}

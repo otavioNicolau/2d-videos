@@ -1,0 +1,66 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Andar de Pinguim",
+ "gancho": "andar de pinguim",
+ "palavras_tema": [
+  "pinguim",
+  "gelo",
+  "escorrega",
+  "nadar"
+ ],
+ "tipo": "animal",
+ "tema": "imitar o jeito de andar do pinguim",
+ "dia_a_dia": [
+  "bichos do gelo",
+  "imitar bichos",
+  "dança de bicho"
+ ],
+ "curiosidade": "o pinguim tem asa mas não voa no céu: ele \"voa\" nadando debaixo d'água",
+ "ritmo": "frevo",
+ "bpm": 160,
+ "estrutura": "R",
+ "voz": "dueto",
+ "cantam": {
+  "verso 1": "luisinho",
+  "refrão": "coro",
+  "verso 2": "laurinha",
+  "ponte": "comandos, coro responde",
+  "final": "todo mundo"
+ },
+ "cenas": [
+  {
+   "parte": "verso 1",
+   "ideia": "o Luisinho voa até o gelo (Brrr!) e encontra um pinguim simpático de casaca"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "fila de pinguins andando de pé grudado e balançando; os dois imitam atrás"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "o pinguim escorrega de barriga no gelo, mergulha e \"voa\" debaixo d'água; tenta voar no céu e cai (ha ha)"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "braço colado, pé de pato, escorrega e abraço coletivo para esquentar"
+  },
+  {
+   "parte": "final",
+   "ideia": "convite; os pinguins acenando com as asinhas"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [],
+ "status": "letra_revisada",
+ "versoes": [],
+ "youtube": {
+  "resumo": "ANDAR DE PINGUIM! 🐧 O Luisinho voou pro gelo e encontrou o pinguim de casaca preta! Pé grudadinho, tic, tic, balança, balança: todo mundo andando de pinguim! Ele escorrega de barriga, mergulha e na água parece que voa… mas no céu não dá!",
+  "resumo_short": "ANDAR DE PINGUIM! 🐧 Pé grudadinho e balança com a Laurinha e o Luisinho!",
+  "curiosidade": "O pinguim tem asa mas não voa no céu: ele \"voa\" nadando debaixo d'água"
+ },
+ "origem": "brincadeiras com o corpo (18/11/2026), inspiradas no gênero de No Ritmo Quá Quá / Morto-Vivo — nada copiado",
+ "persona": "luisinho"
+}

@@ -1,46 +1,49 @@
 # Calendário de publicação
 
-**O número da música é a ordem de publicação** (decisão do usuário em 17/11/2026: fica fácil seguir o número).
-Produção e publicação seguem a mesma ordem: 07, 08, 09… Ritmo de 1 vídeo por semana a partir de 24/11/2026; padrão
-só músicas autorais (o Suno bloqueia letras de cantigas tradicionais — ver [CLASSICAS.md](CLASSICAS.md)); músicas de data 2 a 3 semanas antes do dia; temas parecidos
-longe um do outro. Lotes futuros entram com os números seguintes (a 38 e a 39 ficam reservadas para as datas delas).
+**O número da música é a ordem de publicação** (decisão do usuário, 17/11/2026). Produção e publicação seguem a mesma
+ordem. 1 vídeo por semana a partir de 29/12/2026 para a 12; músicas de data entram 2–3 semanas antes do dia. Todas
+autorais (o Suno bloqueia cantigas tradicionais — [CLASSICAS.md](CLASSICAS.md)). As brincadeiras com o corpo
+(18/11/2026) estão intercaladas entre as demais; nenhum ritmo se repete em sequência e nenhuma estrutura 3 vezes seguidas.
 
-| Semana | Nº | Música | Tipo | Ritmo | Observação |
-|---|---|---|---|---|---|
-| 24/11 | 07 | Pisca-Pisca de Natal | autoral | Pop infantil | **Natal (25/12)** |
-| 01/12 | 08 | Dança da Formiguinha | autoral | Funk brasileiro infantil |  |
-| 08/12 | 09 | Pipa no Céu | autoral | Forró pé de serra | (substituiu a Borboletinha: letra bloqueada pelo Suno) |
-| 15/12 | 10 | Pingo de Chuva | autoral | Reggae infantil |  |
-| 22/12 | 11 | Foguete pra Lua | autoral | Eletrônica infantil | férias |
-| 29/12 | 12 | Méé, Carneirinho! | autoral | Batucada (percussão brasileira) |  |
-| 05/01 | 13 | Castelo de Areia | autoral | Axé | férias de verão |
-| 12/01 | 14 | Que Forma É Essa? | autoral | Pagodão baiano |  |
-| 19/01 | 15 | Conta Vantagem! | autoral | Rock infantil |  |
-| 26/01 | 16 | Carnaval da Turminha | autoral | Frevo pernambucano | **Carnaval (09/02/2027)** |
-| 02/02 | 17 | Dino Pisa Forte | autoral | Samba-enredo |  |
-| 09/02 | 18 | Roda, Rodinha! | autoral | Forró piseiro |  |
-| 16/02 | 19 | Cara de Quê? | autoral | Xote | volta às aulas |
-| 23/02 | 20 | Polvo de Oito Braços | autoral | Batucada (percussão brasileira) |  |
-| 02/03 | 21 | Careta de Limão! | autoral | Samba infantil |  |
-| 09/03 | 22 | Bi-Bi, Fom-Fom! | autoral | Pop infantil |  |
-| 16/03 | 23 | Pula, Coelhinho! | autoral | Funk brasileiro infantil | **Páscoa (28/03/2027)** |
-| 23/03 | 24 | Chulé de Sapo! | autoral | Forró piseiro |  |
-| 30/03 | 25 | Devagar, Devagarinho | autoral | Reggae infantil |  |
-| 06/04 | 26 | Banda da Turminha | autoral | Marchinha de carnaval |  |
-| 13/04 | 27 | Canoa de Papel | autoral | Xote |  |
-| 20/04 | 28 | Tum-Tum do Coração | autoral | Pagodão baiano |  |
-| 27/04 | 29 | Mamãe Querida | autoral | Samba infantil | **Dia das Mães (09/05/2027)** |
-| 04/05 | 30 | Blub, Blub, Peixinho! | autoral | Reggae infantil |  |
-| 11/05 | 31 | Abelhinha | autoral | Forró pé de serra |  |
-| 18/05 | 32 | Palavrinha Mágica | autoral | Ciranda |  |
-| 25/05 | 33 | Ovinho no Ninho | autoral | Sertanejo infantil (country) |  |
-| 01/06 | 34 | Pula Pipoca | autoral | Forró piseiro | **Festa junina** |
-| 08/06 | 35 | Pescoço de Girafa | autoral | Xote |  |
-| 15/06 | 36 | Atchim! | autoral | Baião |  |
-| 22/06 | 37 | Quando Eu Crescer | autoral | Disco infantil |  |
-| 29/06 → 19/07 | — | (próximo lote) | | | |
-| 26/07 | 38 | Meu Papai | autoral | Rock infantil | **Dia dos Pais (08/08/2027)** |
-| 27/09 | 39 | Dia de Brincar | autoral | Axé | **Dia das Crianças (12/10/2027)** |
+Já publicadas: 01 Zum Zum, Cheguei!, 02 Bate Palminha, 03 Sorriso Brilhante, 04 Cadê a Cor?, 05 Conta Comigo, 06 Passeio na Lagoa, 07 Pisca-Pisca de Natal, 08 Dança da Formiguinha, 09 Pipa no Céu, 10 Pingo de Chuva, 11 Foguete pra Lua.
 
-Já publicadas: 01 Zum Zum, Cheguei!, 02 Bate Palminha, 03 Sorriso Brilhante, 04 Cadê a Cor?, 05 Conta Comigo,
-06 Passeio na Lagoa.
+| Semana | Nº | Música | Ritmo | Estrutura | Voz (Suno) | Observação |
+|---|---|---|---|---|---|---|
+| 29/12/2026 | 12 | Méé, Carneirinho! | Batucada (percussão brasileira) | D | Laurinha |  |
+| 05/01/2027 | 13 | Andar de Pinguim | Frevo pernambucano | R | Luisinho |  |
+| 12/01/2027 | 14 | Castelo de Areia | Axé | A | Laurinha | férias de verão |
+| 19/01/2027 | 15 | Bolha de Sabão | Pop infantil | R | Laurinha |  |
+| 26/01/2027 | 16 | Carnaval da Turminha | Frevo pernambucano | A | Luisinho | **Carnaval (09/02/2027)** |
+| 02/02/2027 | 17 | Que Forma É Essa? | Pagodão baiano | B | Laurinha |  |
+| 09/02/2027 | 18 | Robô Dançarino | Eletrônica infantil | D | Luisinho |  |
+| 16/02/2027 | 19 | Conta Vantagem! | Rock infantil | B | Luisinho |  |
+| 23/02/2027 | 20 | Dino Pisa Forte | Samba-enredo | A | Luisinho |  |
+| 02/03/2027 | 21 | Dorme, Acorda! | Funk brasileiro infantil | D | Luisinho |  |
+| 09/03/2027 | 22 | Roda, Rodinha! | Forró piseiro | R | Laurinha |  |
+| 16/03/2027 | 23 | Pula, Coelhinho! | Funk brasileiro infantil | D | Luisinho | **Páscoa (28/03/2027)** |
+| 23/03/2027 | 24 | Cara de Quê? | Xote | R | Luisinho |  |
+| 30/03/2027 | 25 | Polvo de Oito Braços | Batucada (percussão brasileira) | F | Luisinho |  |
+| 06/04/2027 | 26 | Gelatina! | Reggae infantil | R | Laurinha |  |
+| 13/04/2027 | 27 | Careta de Limão! | Samba infantil | R | Laurinha |  |
+| 20/04/2027 | 28 | Do Pé à Cabeça! | Axé | C | Laurinha |  |
+| 27/04/2027 | 29 | Mamãe Querida | Samba infantil | R | Laurinha | **Dia das Mães (09/05/2027)** |
+| 04/05/2027 | 30 | Bi-Bi, Fom-Fom! | Pop infantil | B | Laurinha |  |
+| 11/05/2027 | 31 | Chulé de Sapo! | Forró piseiro | A | Luisinho |  |
+| 18/05/2027 | 32 | Bicho Faz Assim! | Pagodão baiano | B | Laurinha |  |
+| 25/05/2027 | 33 | Devagar, Devagarinho | Reggae infantil | D | Laurinha |  |
+| 01/06/2027 | 34 | Pula Pipoca | Forró piseiro | D | Laurinha | **Festa junina** |
+| 08/06/2027 | 35 | Banda da Turminha | Marchinha de carnaval | C | Luisinho |  |
+| 15/06/2027 | 36 | Espelho, Espelhinho | Disco infantil | B | Luisinho |  |
+| 22/06/2027 | 37 | Canoa de Papel | Xote | R | Luisinho |  |
+| 29/06/2027 | 38 | Tum-Tum do Coração | Pagodão baiano | D | Luisinho |  |
+| 06/07/2027 | 39 | Blub, Blub, Peixinho! | Reggae infantil | E | Luisinho |  |
+| 13/07/2027 | 40 | Quente ou Frio? | Samba infantil | D | Laurinha |  |
+| 20/07/2027 | 41 | Abelhinha | Forró pé de serra | A | Luisinho |  |
+| 26/07/2027 | 42 | Meu Papai | Rock infantil | R | Luisinho | **Dia dos Pais (08/08/2027)** |
+| 03/08/2027 | 43 | Dança da Minhoca | Forró piseiro | A | Luisinho |  |
+| 10/08/2027 | 44 | Palavrinha Mágica | Ciranda | R | Laurinha |  |
+| 17/08/2027 | 45 | Ovinho no Ninho | Sertanejo infantil (country) | F | Laurinha |  |
+| 24/08/2027 | 46 | Pescoço de Girafa | Xote | R | Luisinho |  |
+| 31/08/2027 | 47 | Atchim! | Baião | D | Luisinho |  |
+| 07/09/2027 | 48 | Quando Eu Crescer | Disco infantil | B | Laurinha |  |
+| 27/09/2027 | 49 | Dia de Brincar | Axé | C | Laurinha | **Dia das Crianças (12/10/2027)** — 2 semanas antes |
