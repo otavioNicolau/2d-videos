@@ -26,6 +26,7 @@ VÍDEOS (nesta ordem):
 12 Méé, Carneirinho!
 13 Andar de Pinguim
 14 Castelo de Areia
+15 Bolha de Sabão
 
 ────────────────────────────────────────────────────────────
 2) Músicas de Bichos 🐸🐜🐑🐧
@@ -88,6 +89,7 @@ Laurinha e o Luisinho! ☀️
 VÍDEOS:
 09 Pipa no Céu
 14 Castelo de Areia
+15 Bolha de Sabão
 
 ────────────────────────────────────────────────────────────
 Mais tarde (quando tiver 3 vídeos ou mais):

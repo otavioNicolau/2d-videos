@@ -58,11 +58,109 @@
  ],
  "youtube": {
   "resumo": "BOLHA DE SABÃO! 🫧 A Laurinha assoprou bem devagarinho e saiu uma bolha gigante… que levou o gato pra passear no ar! Assopra pra cima, assopra pro lado… ploc!",
-  "resumo_short": "BOLHA DE SABÃO! 🫧 Assopra e estoura as bolhas com a Laurinha e o Luisinho!",
-  "curiosidade": "A bolha de sabão brilha com as cores do arco-íris"
+  "resumo_short": "BOLHA DE SABÃO! 🫧 A bolha levou o gato pra passear! Ploc!",
+  "curiosidade": "A bolha de sabão brilha com as cores do arco-íris",
+  "miniatura_cena": {
+   "fundo": "raios",
+   "cores": [
+    [
+     160,
+     220,
+     255
+    ],
+    [
+     255,
+     154,
+     200
+    ],
+    [
+     255,
+     224,
+     102
+    ],
+    [
+     140,
+     210,
+     130
+    ],
+    [
+     180,
+     140,
+     255
+    ]
+   ],
+   "heroi": {
+    "id": "laurinha",
+    "pose": {
+     "turn": 0.2,
+     "mouth": "D",
+     "hand_n_x": -135,
+     "hand_n_y": -135,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3
+    }
+   },
+   "par": {
+    "id": "luisinho",
+    "pose": {
+     "turn": -0.2,
+     "mouth": "D",
+     "hand_n_x": -135,
+     "hand_n_y": -135,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3
+    }
+   },
+   "objetos": [
+    {
+     "id": "bolha",
+     "pose": {
+      "tam": 0.5
+     },
+     "tam": 150,
+     "x": 150,
+     "base": 330
+    }
+   ],
+   "frente": [
+    {
+     "id": "gato",
+     "pose": {
+      "miau": 1,
+      "assusta": 0.6
+     },
+     "tam": 250,
+     "x": 700,
+     "base": 640
+    },
+    {
+     "id": "bolha",
+     "pose": {
+      "tam": 1
+     },
+     "tam": 430,
+     "x": 700,
+     "base": 700
+    }
+   ]
+  }
  },
  "origem": "brincadeiras com o corpo (18/11/2026), inspiradas no gênero de No Ritmo Quá Quá / Morto-Vivo — nada copiado",
  "persona": "laurinha",
  "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz)",
- "escolhida": "v1"
+ "escolhida": "v1",
+ "playlists": [
+  "Brincadeiras ao ar livre 🪁"
+ ],
+ "capitulos": {
+  "ponte": "Assopra pra cima, pro lado"
+ }
 }
