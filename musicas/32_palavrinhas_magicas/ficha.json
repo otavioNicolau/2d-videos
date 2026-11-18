@@ -1,7 +1,7 @@
 {
  "schema": "musica-1.0",
- "titulo": "Palavrinhas Mágicas",
- "gancho": "palavrinhas mágicas",
+ "titulo": "Palavrinha Mágica",
+ "gancho": "palavrinha mágica",
  "palavras_tema": [
   "palavrinha",
   "por favor",
@@ -18,7 +18,7 @@
  "curiosidade": "o sorriso pega: quando alguém sorri pra gente, a gente sorri também",
  "ritmo": "ciranda",
  "bpm": 105,
- "estrutura": "A",
+ "estrutura": "R",
  "voz": "dueto",
  "cantam": {
   "verso 1": "laurinha",
@@ -30,23 +30,19 @@
  "cenas": [
   {
    "parte": "verso 1",
-   "ideia": "Luisinho quer o brinquedo da Laurinha; ela ensina; ele diz por favor e o brinquedo brilha (efeito plim)"
+   "ideia": "por favor: a porta abre com brilho (plim); obrigada: a flor sorri"
   },
   {
    "parte": "refrão",
-   "ideia": "cada palavrinha vira um brilho mágico que deixa o amigo sorrindo"
+   "ideia": "cada \"palavrinha mágica\" solta estrelinhas e algo acontece (\"plim! funcionou!\")"
   },
   {
    "parte": "verso 2",
-   "ideia": "Luisinho pisa no pé da Joaninha e pede desculpa; a vovó dá suquinho e ele agradece; sorriso passando de um rosto pro outro"
+   "ideia": "o Luisinho pisa no pé da Joaninha, pede desculpa e a amizade volta com abraço"
   },
   {
    "parte": "ponte",
-   "ideia": "cumprimentos com resposta do coro, terminando em abraço"
-  },
-  {
-   "parte": "final",
-   "ideia": "convite; todos agradecendo e dando tchau"
+   "ideia": "jogo baixinho/alto: cochicha por favor, grita POR FAVOR"
   }
  ],
  "duracao_alvo": [
@@ -59,8 +55,9 @@
  "status": "letra_revisada",
  "versoes": [],
  "youtube": {
-  "resumo": "PALAVRINHAS MÁGICAS! ✨ Por favor, obrigado, com licença e desculpa: palavrinhas que abrem portas e fazem o amigo sorrir! O Luisinho aprende a pedir por favor, pede desculpa pra Joaninha e agradece a vovó. Sabia que o sorriso pega igual risada?",
-  "resumo_short": "PALAVRINHAS MÁGICAS! ✨ Por favor, obrigado e desculpa com a Laurinha e o Luisinho!",
+  "resumo": "PALAVRINHA MÁGICA! ✨ Por favor: a porta abriu! Obrigada: a flor sorriu! Fala bem bonito… plim, funcionou! O Luisinho pisou no pé da Joaninha, pediu desculpa e a amizade voltou. Bem baixinho… por favor! Bem alto… POR FAVOR!",
+  "resumo_short": "PALAVRINHA MÁGICA! ✨ Plim! Funcionou! Com a Laurinha e o Luisinho",
   "curiosidade": "O sorriso pega: quando alguém sorri pra gente, a gente sorri também"
- }
+ },
+ "revisao": "auditoria 17/11/2026 (docs/auditoria/AUDITORIA_MUSICAS_11-39.md)"
 }

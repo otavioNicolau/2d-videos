@@ -17,8 +17,7 @@ duas ou três originais).
 | 24 | O Sapo Não Lava o Pé | forró piseiro (alt. funk infantil) | chulé na lagoa (nuvenzinha verde); curiosidade: o sapo bebe água pela pele; lavar o pé no banho |
 | 27 | A Canoa Virou | xote (alt. marchinha) | canoa de papel no laguinho do parque; quem voa não afunda; na água, sempre com um adulto |
 | 30 | Peixe Vivo | reggae infantil (alt. samba infantil) | só a 1ª estrofe; saudade da Laurinha que viajou e volta; o peixinho dorme de olho aberto |
-| 33 | A Galinha do Vizinho | axé (alt. baião) | contagem dos ovos de 1 a 10; curiosidade: o pintinho nasce do ovo que a galinha choca |
-| 36 | Alecrim Dourado | baião (alt. xote) | "ai, turminha, quem te disse assim"; o alecrim é tempero da vovó |
+| 33 | A Galinha do Vizinho | sertanejo infantil (alt. axé) | contagem dos ovos de 1 a 10; curiosidade: o pintinho nasce do ovo que a galinha choca |
 
 Estilos escolhidos de propósito **diferentes das versões conhecidas** (decisão do usuário: deixar as clássicas com cara própria).
 
@@ -31,6 +30,7 @@ passar no filtro — avisar e decidir (reescrever como autoral ou remover).
 | Cantiga | Situação | Observação / ideia |
 |---|---|---|
 | Borboletinha | ⛔ | bloqueada pelo filtro do Suno (17/11/2026) |
+| Alecrim Dourado | ⛔ | trocada na auditoria (letra arcaica, tema parado); a 36 virou "Atchim!" (autoral) |
 | Marcha Soldado | ✅ | marcha com chapéu de papel; usar só a 1ª estrofe (a do quartel pegando fogo fica fora) |
 | Sapo Cururu | ✅ | reaproveita a lagoa e o sapo do ep06 |
 | Se Essa Rua Fosse Minha | ✅ | ladrilhar com pedrinhas de brilhante; rua vista de pertinho |

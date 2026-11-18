@@ -332,3 +332,16 @@ def test_lyrics_fit_suno_limit():
         assert len(p["lyrics"].rstrip()) <= c.LIMITE_LETRA, d.name
         for a in p["alternativas"]:
             assert len(a["lyrics"].rstrip()) <= c.LIMITE_LETRA, (d.name, a["ritmo"])
+
+
+def test_catalogue_is_not_one_formula():
+    """Auditoria 17/11/2026: no lote 11+ o "Sabia que…" aparece em no máximo ~1/3 das músicas e nenhuma estrutura se
+    repete em 3 músicas seguidas (o mercado alterna bloco-que-volta, paradas, cumulativa, pergunta e resposta…)."""
+    import re
+    from pathlib import Path
+    lote = [d for d in sorted(Path("musicas").glob("[0-9][0-9]_*")) if int(d.name[:2]) >= 11]
+    sabia = [d.name for d in lote if re.search(r"^Sabia que", (d / "letra.txt").read_text(encoding="utf-8"), re.M)]
+    assert len(sabia) <= round(len(lote) / 3) + 1, f"'Sabia que' em {len(sabia)} de {len(lote)}: {sabia}"
+    est = [c.ficha(d).get("estrutura") for d in lote]
+    for i in range(len(est) - 2):
+        assert not (est[i] == est[i + 1] == est[i + 2]), f"estrutura {est[i]} em 3 seguidas a partir de {lote[i].name}"

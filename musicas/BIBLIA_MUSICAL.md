@@ -145,6 +145,25 @@ Séries são bem-vindas: um tema que funcionou pode voltar com variações (ex.:
     3–4 versos curtos, com o tema da música (ex.: "Gostou do passeio? (Gostei!) / Dá um joinha! (Joinha!) / Chama o papai
     e a mamãe / Pra se inscrever no canal! (Zum, zum!)"). A checagem da letra acusa erro se faltar.
 
+### Diretrizes da auditoria (17/11/2026 — `docs/auditoria/AUDITORIA_MUSICAS_11-39.md`)
+O que mais prende a criança nas nossas melhores letras (Dino, Pipoca, Tum-Tum, Sapo): o refrão é **um som + um gesto +
+uma graça**, sem explicação. Regras para toda música nova (a checagem avisa as marcadas com ✓):
+1. Diversão primeiro: "Sabia que…" no máximo em 1 de cada 3 músicas ✓; o fato entra como jogo, piada ou desafio.
+2. Refrão = 4 linhas cantadas 2 vezes, até 5 linhas diferentes ✓, com um som e um gesto.
+3. Até ~25 linhas diferentes na música ✓ (referência: mediana ~23). Repetir é virtude.
+4. Gancho = título = 2–3 palavras, 8–12 vezes ✓, entrando até ~30 s contando a vinheta.
+5. Rodízio de estrutura (R, D, C, B, F, E): nunca a mesma em 3 músicas seguidas ✓.
+6. A abertura promete a música (o gancho ou o som principal), não um "(X! Zum, zum!)" genérico ✓.
+7. Um momento de surpresa por música: o Luisinho erra e o coro corrige, estátua, tempo dobrado, refrão que muda o final,
+   cochicho que vira grito.
+8. Pontes em rodízio: comandos, estátua, rápido/devagar, baixinho/alto, imitação de bicho, contagem, pergunta e resposta.
+9. Refrão sem moral: boas maneiras e emoções entram como ação ou consequência.
+10. Um formato educativo de cada tipo só uma vez (contagem, quiz de cores/formas, lista de profissões).
+11. "(Hein?)" e "(Ê!)" no máximo 2–3 vezes por música; diminutivo só onde soa natural.
+12. Ritmo pelo tema e pelo movimento, sem repetir em sequência; eletrônica, disco e sertanejo infantil também valem.
+13. Clássica: testar a letra no Suno antes de produzir.
+14. Pergunta final: a criança vai cantar o refrão sozinha amanhã?
+
 **Nunca:**
 - citar o ritmo na letra ("é o rock da…", "é o axé…"): o ritmo vai só no Style;
 - letra longa, verso difícil de cantar, rima forçada, repetição sem propósito;

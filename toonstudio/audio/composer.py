@@ -351,7 +351,7 @@ def checar(d: Path) -> Checagem:
     if longos:
         ck.add("aviso", "verso", f"{len(longos)} verso(s) com mais de 7 palavras, ex.: \"{longos[0]}\"")
     ck.add("ok" if med <= 5 else "aviso", "verso", f"mediana de {med} palavras por verso (ideal 3–5)")
-    if len(set(map(_norm, canto))) > 32:
+    if len(set(map(_norm, canto))) > 25:
         ck.add("aviso", "variedade", f"{len(set(map(_norm, canto)))} linhas diferentes (referência ~20–25)")
     run, prev, maxrun = 0, None, 0
     for l in map(_norm, canto):
@@ -395,6 +395,19 @@ def checar(d: Path) -> Checagem:
         ck.add(sev, "convite", "o convite do final precisa chamar um adulto (papai/mamãe): canal para crianças")
     else:
         ck.add("ok", "convite", "o final convida para o joinha e para se inscrever, com o papai/a mamãe")
+
+    # auditoria 17/11/2026 (docs/auditoria): refrão curto, sem aula no meio, abertura que promete a música
+    refs = re.findall(r"^\[Chorus[^\]]*\]\n((?:(?!\[|\n\n).*\n?)+)", letra, flags=re.M)
+    if refs:
+        linhas_ref = [x for x in (_norm(re.sub(r"\([^)]*\)", "", l)) for l in refs[0].strip().splitlines()) if x]
+        ck.metricas["refrao_diferentes"] = len(set(linhas_ref))
+        if len(set(linhas_ref)) > 5:
+            ck.add("aviso", "refrão", f"refrão com {len(set(linhas_ref))} linhas diferentes (ideal: 4 linhas cantadas 2×, até 5 diferentes)")
+    if re.search(r"^Sabia que", letra, flags=re.M):
+        ck.metricas["sabia_que"] = True
+        ck.add("aviso", "aula", "verso com \"Sabia que…\": no máximo 1 em cada 3 músicas (o fato entra como jogo ou piada)")
+    if re.search(r"^\(.*Zum, zum!\)$", letra.split("\n\n")[0], flags=re.M):
+        ck.add("aviso", "abertura", "abertura genérica \"(X! Zum, zum!)\": prefira o gancho ou o som da música")
 
     # 10 — animação
     mov = sorted({m for m in MOVIMENTO if _tem(full, m)})

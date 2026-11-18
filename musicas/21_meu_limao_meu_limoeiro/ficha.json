@@ -14,7 +14,7 @@
   "fazer limonada com a vovó",
   "provar frutas azedas"
  ],
- "curiosidade": "o limão tem vitamina C, que ajuda o corpo a ficar fortinho",
+ "curiosidade": "limão azedo faz careta! (e a limonada da vovó é docinha)",
  "ritmo": "samba_infantil",
  "bpm": 105,
  "estrutura": "R",
@@ -29,23 +29,19 @@
  "cenas": [
   {
    "parte": "verso 1",
-   "ideia": "quintal da vovó: limoeiro gigante para eles, limões do tamanho de bolas"
+   "ideia": "quintal da vovó com limoeiro gigante; a Laurinha morde o limão"
   },
   {
    "parte": "refrão",
-   "ideia": "roda em volta do limoeiro balançando no tindolelê/tindolalá; limões dançando nos galhos"
+   "ideia": "roda em volta do limoeiro balançando no tindolelê/tindolalá"
   },
   {
    "parte": "verso 2",
-   "ideia": "Luisinho morde o limão e faz careta (ha ha); a vovó explica a vitamina"
+   "ideia": "jogo de careta: azedo (careta enorme), doce (sorriso), azedo de novo, todos riem"
   },
   {
    "parte": "ponte",
-   "ideia": "fazer limonada: espreme, mexe, golinho e careta"
-  },
-  {
-   "parte": "final",
-   "ideia": "convite; vovó e os dois brindando limonada no tchau"
+   "ideia": "espreme, mexe, golinho: limonada da vovó"
   }
  ],
  "duracao_alvo": [
@@ -58,14 +54,15 @@
  "status": "letra_revisada",
  "versoes": [],
  "youtube": {
-  "resumo": "MEU LIMÃO, MEU LIMOEIRO! 🍋 A cantiga clássica em versão reggae com a Laurinha, o Luisinho e a vovó! Uma vez, tindolelê, outra vez, tindolalá! No quintal da vovó tem limoeiro e limonada. Sabia que o limão tem vitamina C? Espreme, mexe, um golinho… careta de azedo!",
-  "resumo_short": "MEU LIMÃO, MEU LIMOEIRO! 🍋 A cantiga clássica em versão reggae com a Laurinha e o Luisinho!",
-  "curiosidade": "O limão tem vitamina C, que ajuda o corpo a ficar fortinho"
+  "resumo": "MEU LIMÃO, MEU LIMOEIRO! 🍋 A cantiga clássica em versão samba com a Laurinha, o Luisinho e a vovó! Uma vez, tindolelê, outra vez, tindolalá! No quintal da vovó tem limão no pé… morde pra ver: careta de azedo! Espreme, mexe, um golinho: limonada da vovó!",
+  "resumo_short": "MEU LIMÃO, MEU LIMOEIRO! 🍋 Tindolelê, tindolalá com a Laurinha e o Luisinho!",
+  "curiosidade": "Limão azedo faz careta, e a limonada da vovó é docinha"
  },
  "dominio_publico": {
   "tradicional": true,
   "origem": "cantiga tradicional brasileira (folclore, autor desconhecido)",
   "trecho_tradicional": "Meu limão, meu limoeiro, meu pé de jacarandá, uma vez, tindolelê, outra vez, tindolalá",
   "observacao": "estilo reggae (as versões conhecidas são de roda/forró) · estilo Samba infantil (diferente das versões conhecidas)"
- }
+ },
+ "revisao": "auditoria 17/11/2026 (docs/auditoria/AUDITORIA_MUSICAS_11-39.md)"
 }

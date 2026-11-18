@@ -1,0 +1,72 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Atchim!",
+ "gancho": "atchim atchim",
+ "palavras_tema": [
+  "atchim",
+  "espirro",
+  "nariz",
+  "saúde"
+ ],
+ "tipo": "rotina",
+ "tema": "espirrar no cotovelo e lavar a mão (com muito espirro engraçado)",
+ "dia_a_dia": [
+  "espirrar no cotovelo",
+  "dizer saúde",
+  "lavar as mãos"
+ ],
+ "curiosidade": "espirro a gente faz no cotovelo, e depois lava a mão",
+ "ritmo": "baiao",
+ "bpm": 125,
+ "estrutura": "D",
+ "voz": "dueto",
+ "cantam": {
+  "verso 1": "luisinho",
+  "refrão": "coro",
+  "verso 2": "laurinha",
+  "ponte": "suspense do espirro, coro",
+  "final": "todo mundo"
+ },
+ "cenas": [
+  {
+   "parte": "intro",
+   "ideia": "close no nariz do Luisinho: aaa… aaa… ATCHIM! (as antenas balançam)"
+  },
+  {
+   "parte": "verso 1",
+   "ideia": "coceguinha no nariz, tá vindo, segura… ATCHIM! e a Laurinha responde \"Saúde!\""
+  },
+  {
+   "parte": "refrão",
+   "ideia": "espirro no cotovelo (gesto) e lavar a mão no fim, com espuma"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "espirros de bichos: elefante (enorme), ratinho (pequenininho), muriçoca (atchim-zum!)"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "suspense: aaa… aaa… parou! não saiu… ATCHIM!"
+  },
+  {
+   "parte": "final",
+   "ideia": "convite; todos espirram juntos no tchau (\"Saúde!\")"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [
+  "forro_piseiro"
+ ],
+ "status": "letra_revisada",
+ "versoes": [],
+ "youtube": {
+  "resumo": "ATCHIM! 🤧 Coceguinha no nariz… tá vindo… ATCHIM! O Luisinho espirra, a Laurinha diz \"Saúde!\" e a turma aprende: espirro a gente faz no cotovelo, e depois lava a mão! E como espirra o elefante? E o ratinho? E a muriçoca? Atchim-zum!",
+  "resumo_short": "ATCHIM! 🤧 No cotovelo, sim! Espirre junto com a Laurinha e o Luisinho!",
+  "curiosidade": "Espirro a gente faz no cotovelo, e depois lava a mão"
+ },
+ "persona": "luisinho",
+ "revisao": "auditoria 17/11/2026 (docs/auditoria/AUDITORIA_MUSICAS_11-39.md)"
+}

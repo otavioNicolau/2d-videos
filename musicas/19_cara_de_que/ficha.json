@@ -15,10 +15,10 @@
   "pedir ajuda",
   "respirar fundo"
  ],
- "curiosidade": "respirar fundinho (cheirar a flor e assoprar a velinha) acalma o coração",
+ "curiosidade": "respirar fundinho, cheirando a flor e assoprando a velinha, acalma o coração",
  "ritmo": "xote",
  "bpm": 100,
- "estrutura": "A",
+ "estrutura": "R",
  "voz": "dueto",
  "cantam": {
   "verso 1": "luisinho",
@@ -30,23 +30,19 @@
  "cenas": [
   {
    "parte": "verso 1",
-   "ideia": "Luisinho ganha um presente (feliz) e depois deixa o sorvete cair (triste); a cara dele muda grande na tela"
+   "ideia": "o Luisinho faz cada cara em close: feliz, bravo, susto, sono"
   },
   {
    "parte": "refrão",
-   "ideia": "quatro quadros: feliz, triste, bravo, com medo; os dois imitam cada carinha"
+   "ideia": "a câmera aponta para a criança: \"mostra pra mim a tua carinha\"; os dois fazem caras diferentes"
   },
   {
    "parte": "verso 2",
-   "ideia": "Laurinha brava conta até três; com medo do trovão abraça a mamãe; triste conversa com a mamãe"
+   "ideia": "a Laurinha conta até três quando fica brava, pede abraço quando fica triste, chama a mamãe com medo"
   },
   {
    "parte": "ponte",
-   "ideia": "jogo das caras para a criança imitar e a respiração da flor e da velinha"
-  },
-  {
-   "parte": "final",
-   "ideia": "convite; os dois com cara de feliz dando tchau"
+   "ideia": "respiração da flor e da velinha, devagar, e volta a cara de feliz"
   }
  ],
  "duracao_alvo": [
@@ -59,9 +55,10 @@
  "status": "letra_revisada",
  "versoes": [],
  "youtube": {
-  "resumo": "CARA DE QUÊ? 😀😢😠😮 Ganhou presente: cara de feliz! Caiu o sorvete: cara de triste… Cada coisa faz uma carinha, e tá tudo bem sentir! A Laurinha conta até três quando fica brava e pede um abraço quando tem medo. Cheira a florzinha, assopra a velinha e o coração acalma!",
-  "resumo_short": "CARA DE QUÊ? 😀 Feliz, triste, bravo ou com medo? Tá tudo bem sentir!",
+  "resumo": "CARA DE QUÊ? 😀😠😮😴 Cara de feliz, cara de bravo, cara de susto, cara de sono… mostra pra mim a tua carinha! Ficou bravo? Conta até três. Ficou triste? Pede um abraço. Tudo bem sentir! Cheira a florzinha, assopra a velinha… e cara de feliz!",
+  "resumo_short": "CARA DE QUÊ? 😀 Mostra a tua carinha com a Laurinha e o Luisinho!",
   "curiosidade": "Respirar fundinho, cheirando a flor e assoprando a velinha, acalma o coração"
  },
- "persona": "luisinho"
+ "persona": "luisinho",
+ "revisao": "auditoria 17/11/2026 (docs/auditoria/AUDITORIA_MUSICAS_11-39.md)"
 }

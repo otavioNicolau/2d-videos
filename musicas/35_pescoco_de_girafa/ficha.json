@@ -14,10 +14,10 @@
   "bichos da savana",
   "esticar o corpo"
  ],
- "curiosidade": "a girafa tem a língua roxinha e comprida e dorme bem pouquinho, às vezes em pé",
+ "curiosidade": "a girafa tem a língua roxinha e comprida: alcança até a orelha",
  "ritmo": "xote",
  "bpm": 100,
- "estrutura": "A",
+ "estrutura": "R",
  "voz": "dueto",
  "cantam": {
   "verso 1": "luisinho",
@@ -29,23 +29,19 @@
  "cenas": [
   {
    "parte": "verso 1",
-   "ideia": "Luisinho voa até a copa de uma árvore da savana e encontra a cabeça de uma girafa simpática mastigando"
+   "ideia": "o Luisinho voa até a copa e encontra a cabeça da girafa"
   },
   {
    "parte": "refrão",
-   "ideia": "a câmera desce pelo pescoço comprido; os dois escorregam pelo pescoço como escorregador"
+   "ideia": "todos esticam o pescoço cada vez mais alto até pegar a folhinha (nhac!)"
   },
   {
    "parte": "verso 2",
-   "ideia": "a girafa mostra a língua roxinha e alcança a orelha; cochila em pé (Shhh!)"
+   "ideia": "a girafa mostra a língua roxa e limpa a orelha com ela (eca! ha ha!)"
   },
   {
    "parte": "ponte",
-   "ideia": "alongamento: estica o pescoço, ponta do pé, mastiga, abaixa para beber (pernas abertas igual girafa)"
-  },
-  {
-   "parte": "final",
-   "ideia": "convite; a girafa abaixa a cabeça para o tchau"
+   "ideia": "alongamento: pontinha do pé, estica o braço, abaixa pra beber água"
   }
  ],
  "duracao_alvo": [
@@ -58,9 +54,10 @@
  "status": "letra_revisada",
  "versoes": [],
  "youtube": {
-  "resumo": "PESCOÇO DE GIRAFA! 🦒 O Luisinho voou até a copa da árvore e encontrou… a cabeça da girafa! Lá do alto ela vê tudinho e pega a folha do topo. Sabia que a girafa tem a língua roxinha e comprida e dorme bem pouquinho, às vezes em pé? Estica o pescoço na pontinha do pé!",
-  "resumo_short": "PESCOÇO DE GIRAFA! 🦒 Estica o pescoço com a Laurinha e o Luisinho!",
-  "curiosidade": "A girafa tem a língua roxinha e comprida e dorme bem pouquinho, às vezes em pé"
+  "resumo": "PESCOÇO DE GIRAFA! 🦒 O Luisinho voou lá no alto e encontrou a girafa! Estica, estica, mais alto, mais alto… pegou a folhinha! Sabia que a língua da girafa é roxinha e ela limpa a orelha com a língua? Eca! Na pontinha do pé, estica o braço e abaixa pra beber!",
+  "resumo_short": "PESCOÇO DE GIRAFA! 🦒 Estica, estica com a Laurinha e o Luisinho!",
+  "curiosidade": "A girafa tem a língua roxinha e comprida: alcança até a orelha"
  },
- "persona": "luisinho"
+ "persona": "luisinho",
+ "revisao": "auditoria 17/11/2026 (docs/auditoria/AUDITORIA_MUSICAS_11-39.md)"
 }

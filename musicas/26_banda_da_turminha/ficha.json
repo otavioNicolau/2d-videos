@@ -14,7 +14,7 @@
   "fazer música em casa",
   "bater o ritmo com o corpo"
  ],
- "curiosidade": "o som é um tremidinho: o tambor treme, o tremido voa pelo ar e chega no ouvido",
+ "curiosidade": "dá pra fazer música com o corpo: barriga, palma e pé",
  "ritmo": "marchinha",
  "bpm": 128,
  "estrutura": "C",
@@ -29,23 +29,19 @@
  "cenas": [
   {
    "parte": "verso 1",
-   "ideia": "quarto vira palco: cada um pega um instrumento (tambor, flauta, chocalho, violão)"
+   "ideia": "o Luisinho acha um tambor, a Laurinha uma flauta: começa a banda"
   },
   {
    "parte": "refrão",
-   "ideia": "a banda desfila marchando pelo jardim; cada instrumento aparece no seu verso"
+   "ideia": "cumulativo: cada refrão soma um instrumento (tambor e flauta → +chocalho → +violão) e a banda marcha"
   },
   {
    "parte": "verso 2",
-   "ideia": "quadro: a pele do tambor treme, ondinhas voam pelo ar e chegam na orelha da Laurinha"
+   "ideia": "a Joaninha chega com o chocalho e a Formiguinha com o violão: a banda cresce"
   },
   {
    "parte": "ponte",
-   "ideia": "percussão corporal: barriga, palma e pé para a criança fazer junto"
-  },
-  {
-   "parte": "final",
-   "ideia": "convite; a banda faz a última nota e dá tchau"
+   "ideia": "percussão com o corpo: barriga, palma e pé"
   }
  ],
  "duracao_alvo": [
@@ -58,9 +54,10 @@
  "status": "letra_revisada",
  "versoes": [],
  "youtube": {
-  "resumo": "BANDA DA TURMINHA! 🥁🎺 O Luisinho no tambor, a Laurinha na flauta, a Joaninha no chocalho e a Formiguinha no violão: tum, tum, fiu, fiu, chique, chique, plém, plém! Sabia que o som é um tremidinho que voa no ar até o ouvido? Toca com a barriga, a palma e o pé!",
+  "resumo": "BANDA DA TURMINHA! 🥁🎺 O Luisinho achou um tambor, a Laurinha uma flauta… bora montar uma banda? A cada refrão entra um instrumento: tum, tum, fiu, fiu, chique, chique, plém, plém! A Joaninha e a Formiguinha chegam e a banda cresce. Toca com a barriga, a palma e o pé!",
   "resumo_short": "BANDA DA TURMINHA! 🥁 Tum, tum, fiu, fiu com a Laurinha e o Luisinho!",
-  "curiosidade": "O som é um tremidinho: o tambor treme, o tremido voa pelo ar e chega no ouvido"
+  "curiosidade": "Dá pra fazer música com o corpo: barriga, palma e pé"
  },
- "persona": "luisinho"
+ "persona": "luisinho",
+ "revisao": "auditoria 17/11/2026 (ajuste pequeno)"
 }

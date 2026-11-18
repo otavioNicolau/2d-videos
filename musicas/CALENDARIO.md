@@ -11,7 +11,7 @@ longe um do outro. Lotes futuros entram com os números seguintes (a 38 e a 39 f
 | 01/12 | 08 | Dança da Formiguinha | autoral | Funk brasileiro infantil |  |
 | 08/12 | 09 | Pipa no Céu | autoral | Forró pé de serra | (substituiu a Borboletinha: letra bloqueada pelo Suno) |
 | 15/12 | 10 | Pingo de Chuva | autoral | Reggae infantil |  |
-| 22/12 | 11 | Foguete pra Lua | autoral | Pop infantil | férias |
+| 22/12 | 11 | Foguete pra Lua | autoral | Eletrônica infantil | férias |
 | 29/12 | 12 | Carneirinho, Carneirão | clássica | Batucada (percussão brasileira) |  |
 | 05/01 | 13 | Castelo de Areia | autoral | Axé | férias de verão |
 | 12/01 | 14 | Que Forma É Essa? | autoral | Pagodão baiano |  |
@@ -32,12 +32,12 @@ longe um do outro. Lotes futuros entram com os números seguintes (a 38 e a 39 f
 | 27/04 | 29 | Mamãe Querida | autoral | Samba infantil | **Dia das Mães (09/05/2027)** |
 | 04/05 | 30 | Peixe Vivo | clássica | Reggae infantil |  |
 | 11/05 | 31 | Abelhinha | autoral | Forró pé de serra |  |
-| 18/05 | 32 | Palavrinhas Mágicas | autoral | Ciranda |  |
-| 25/05 | 33 | A Galinha do Vizinho | clássica | Axé |  |
+| 18/05 | 32 | Palavrinha Mágica | autoral | Ciranda |  |
+| 25/05 | 33 | A Galinha do Vizinho | clássica | Sertanejo infantil (country) |  |
 | 01/06 | 34 | Pula Pipoca | autoral | Forró piseiro | **Festa junina** |
 | 08/06 | 35 | Pescoço de Girafa | autoral | Xote |  |
-| 15/06 | 36 | Alecrim Dourado | clássica | Baião |  |
-| 22/06 | 37 | Quando Eu Crescer | autoral | Frevo pernambucano |  |
+| 15/06 | 36 | Atchim! | autoral | Baião |  |
+| 22/06 | 37 | Quando Eu Crescer | autoral | Disco infantil |  |
 | 29/06 → 19/07 | — | (próximo lote: 2 autorais + 1 clássica) | | | |
 | 26/07 | 38 | Meu Papai | autoral | Rock infantil | **Dia dos Pais (08/08/2027)** |
 | 27/09 | 39 | Dia de Brincar | autoral | Axé | **Dia das Crianças (12/10/2027)** |

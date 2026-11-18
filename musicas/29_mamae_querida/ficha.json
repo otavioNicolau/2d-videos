@@ -17,7 +17,7 @@
  "curiosidade": "a mamãe canguru carrega o filhote numa bolsinha na barriga",
  "ritmo": "samba_infantil",
  "bpm": 105,
- "estrutura": "A",
+ "estrutura": "R",
  "voz": "dueto",
  "cantam": {
   "verso 1": "laurinha",
@@ -29,23 +29,19 @@
  "cenas": [
   {
    "parte": "verso 1",
-   "ideia": "Laurinha na ponta do pé desenhando um coração e levando café na cama para a Mamãe (personagem mamãe)"
+   "ideia": "a Laurinha na ponta do pé leva café na cama para a mamãe"
   },
   {
    "parte": "refrão",
-   "ideia": "abraço apertado; corações flutuando; 'daqui até a lua' a câmera sobe até a lua e volta"
+   "ideia": "abraço e beijo; no \"até a lua\" os braços sobem e a câmera sobe até a lua"
   },
   {
    "parte": "verso 2",
-   "ideia": "lembranças: mamãe dando beijinho no dodói, cantando para dormir; Luisinho leva um copo d'água para a mamãe dele"
+   "ideia": "quiz das mamães bichos: canguru com bolsinha, passarinho no ninho, galinha chocando, a mamãe muriçoca abraçando"
   },
   {
    "parte": "ponte",
-   "ideia": "quadros das mamães bichinhos: canguru com a bolsinha, passarinho no ninho, galinha no ovo; e a mamãe muriçoca abraçando"
-  },
-  {
-   "parte": "final",
-   "ideia": "convite; os dois dando tchau ao lado da mamãe"
+   "ideia": "gestos para fazer na mãe de verdade: abraço apertado, beijinho, coração com a mão"
   }
  ],
  "duracao_alvo": [
@@ -58,9 +54,10 @@
  "status": "letra_revisada",
  "versoes": [],
  "youtube": {
-  "resumo": "MAMÃE QUERIDA! 💗 Pé ante pé, a Laurinha prepara um coração e um café na caminha para a mamãe. Ela ensina, cuida do dodói e canta pra gente dormir: hoje quem cuida somos nós! Sabia que a mamãe canguru carrega o filhote numa bolsinha? Te amo daqui até a lua, mamãe!",
-  "resumo_short": "MAMÃE QUERIDA! 💗 Uma música para a mamãe com a Laurinha e o Luisinho!",
+  "resumo": "MAMÃE QUERIDA! 💗 Pé ante pé, a Laurinha leva café na caminha pra mamãe. Te amo daqui até a lua! E a mamãe canguru leva o filhote na bolsinha, a mamãe passarinho faz o ninho, a mamãe galinha choca o ovo… e a minha mamãe me dá abraço! Abraço apertado, beijinho e coração com a mão!",
+  "resumo_short": "MAMÃE QUERIDA! 💗 Te amo daqui até a lua! Com a Laurinha e o Luisinho",
   "curiosidade": "A mamãe canguru carrega o filhote numa bolsinha na barriga"
  },
- "data_comemorativa": "Dia das Mães (2º domingo de maio)"
+ "data_comemorativa": "Dia das Mães (2º domingo de maio)",
+ "revisao": "auditoria 17/11/2026 (docs/auditoria/AUDITORIA_MUSICAS_11-39.md)"
 }

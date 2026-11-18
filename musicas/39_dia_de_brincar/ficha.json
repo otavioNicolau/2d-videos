@@ -19,7 +19,7 @@
  "curiosidade": "a amarelinha é brincada no mundo inteiro, cada lugar com um nome diferente",
  "ritmo": "axe",
  "bpm": 140,
- "estrutura": "A",
+ "estrutura": "C",
  "voz": "dueto",
  "cantam": {
   "verso 1": "laurinha",
@@ -31,23 +31,19 @@
  "cenas": [
   {
    "parte": "verso 1",
-   "ideia": "quintal com bandeirinhas de Dia das Crianças; a turma chega com bola e corda"
+   "ideia": "Dia das Crianças: a turma chega chamando todo mundo"
   },
   {
    "parte": "refrão",
-   "ideia": "montagem rápida: pega-pega, esconde-esconde atrás da flor, amarelinha riscada no chão"
+   "ideia": "cumulativo: cada volta soma uma brincadeira (pega-pega → esconde-esconde → amarelinha → pula-corda)"
   },
   {
    "parte": "verso 2",
-   "ideia": "pula corda contando, esconde-esconde (Achei!), gol; um globo mostra crianças de vários lugares na amarelinha"
+   "ideia": "\"mais uma?\": esconde-esconde (achei!) e amarelinha (pulei!)"
   },
   {
    "parte": "ponte",
    "ideia": "amarelinha guiada: num pé, nos dois, gira, senta e grita viva"
-  },
-  {
-   "parte": "final",
-   "ideia": "convite; a turma toda pulando e acenando"
   }
  ],
  "duracao_alvo": [
@@ -60,9 +56,10 @@
  "status": "letra_revisada",
  "versoes": [],
  "youtube": {
-  "resumo": "DIA DE BRINCAR! 🎈 Hoje é o nosso dia, Dia das Crianças! Pega a bola, pega a corda e chama todo mundo: pega-pega, esconde-esconde e amarelinha! Sabia que a amarelinha é brincada no mundo inteiro? Criança feliz brinca junto e brinca bem!",
-  "resumo_short": "DIA DE BRINCAR! 🎈 Pega-pega, esconde-esconde e amarelinha com a Laurinha e o Luisinho!",
+  "resumo": "DIA DE BRINCAR! 🎈 Hoje é o nosso dia, Dia das Crianças! Pega-pega… mais uma? Esconde-esconde! Mais uma? Amarelinha! E pula corda: um, dois, três! A cada volta entra uma brincadeira nova. Num pé só, nos dois, gira, senta e grita: viva!",
+  "resumo_short": "DIA DE BRINCAR! 🎈 Pega-pega, esconde-esconde, amarelinha e pula corda com a Laurinha e o Luisinho!",
   "curiosidade": "A amarelinha é brincada no mundo inteiro, cada lugar com um nome diferente"
  },
- "data_comemorativa": "Dia das Crianças (12 de outubro)"
+ "data_comemorativa": "Dia das Crianças (12 de outubro)",
+ "revisao": "auditoria 17/11/2026 (docs/auditoria/AUDITORIA_MUSICAS_11-39.md)"
 }

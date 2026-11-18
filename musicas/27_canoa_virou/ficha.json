@@ -15,10 +15,10 @@
   "passeio no parque",
   "dobradura de papel"
  ],
- "curiosidade": "o peixinho respira dentro da água pelas guelrinhas; e na água a gente brinca sempre com o papai e a mamãe",
+ "curiosidade": "quem tem asinha não afunda; e na água a gente brinca sempre com o papai e a mamãe",
  "ritmo": "xote",
  "bpm": 100,
- "estrutura": "A",
+ "estrutura": "R",
  "voz": "dueto",
  "cantam": {
   "verso 1": "luisinho",
@@ -30,23 +30,19 @@
  "cenas": [
   {
    "parte": "verso 1",
-   "ideia": "laguinho do parque visto de pertinho: Luisinho dobra um papel que vira canoa; os dois remam com palitinhos e a canoa balança"
+   "ideia": "o Luisinho dobra um papel que vira canoa no laguinho do parque; rema, balança e vai virar"
   },
   {
    "parte": "refrão",
-   "ideia": "a canoa vira (splash) e um peixinho aparece para ajudar; a Laurinha sai voando da água, sequinha"
+   "ideia": "a canoa vira (splash); o nome muda a cada volta: Laurinha, Luisinho, turminha"
   },
   {
    "parte": "verso 2",
-   "ideia": "'quem tem asinha não afunda'; peixinho mostrando as guelrinhas; a família na beira da piscina: criança na água só com o papai e a mamãe"
+   "ideia": "a Laurinha sai voando da água, sequinha"
   },
   {
    "parte": "ponte",
-   "ideia": "rema, balança pra lá e pra cá e equilibra sem virar ('Ufa!')"
-  },
-  {
-   "parte": "final",
-   "ideia": "convite; a turma toda na canoa de folha dando tchau"
+   "ideia": "remar e equilibrar: pra lá, pra cá, não virou!"
   }
  ],
  "duracao_alvo": [
@@ -65,9 +61,10 @@
   "observacao": "estilo Xote (diferente das versões conhecidas)"
  },
  "youtube": {
-  "resumo": "A CANOA VIROU! 🛶 A cantiga clássica em versão marchinha! No laguinho do parque, um papel dobrado vira canoa e a Laurinha e o Luisinho vão remar… balança, balança e… a canoa virou! Mas quem tem asinha não afunda! O peixinho respira na água pelas guelrinhas, e a gente só brinca na água com o papai e a mamãe.",
+  "resumo": "A CANOA VIROU! 🛶 A cantiga clássica em versão xote! Um papel dobrado vira canoa, rema, rema… a canoa virou! Foi por causa da Laurinha, do Luisinho, da turminha toda! Mas quem tem asinha não afunda. Rema pra frente, balança pra lá e pra cá… e na água, sempre com o papai e a mamãe!",
   "resumo_short": "A CANOA VIROU! 🛶 A cantiga clássica com a Laurinha e o Luisinho!",
-  "curiosidade": "O peixinho respira dentro da água pelas guelrinhas; e na água a gente brinca sempre com o papai e a mamãe"
+  "curiosidade": "Quem tem asinha não afunda; e na água a gente brinca sempre com o papai e a mamãe"
  },
- "persona": "luisinho"
+ "persona": "luisinho",
+ "revisao": "auditoria 17/11/2026 (docs/auditoria/AUDITORIA_MUSICAS_11-39.md)"
 }

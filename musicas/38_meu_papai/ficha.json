@@ -16,7 +16,7 @@
  "curiosidade": "o papai pinguim choca o ovo em pé no gelo, protegendo o filhote do frio",
  "ritmo": "rock_infantil",
  "bpm": 165,
- "estrutura": "A",
+ "estrutura": "R",
  "voz": "dueto",
  "cantam": {
   "verso 1": "luisinho",
@@ -28,23 +28,19 @@
  "cenas": [
   {
    "parte": "verso 1",
-   "ideia": "papai muriçoca (novo personagem, mesmo modelo) jogando o Luisinho pro alto, fazendo cavalinho e contando história com voz de dragão"
+   "ideia": "papai joga pro alto, faz cavalinho, conta história com voz de dragão"
   },
   {
    "parte": "refrão",
-   "ideia": "pega-pega no quintal, beijinho no dodói, abraço de urso"
+   "ideia": "abraço de urso e cavalinho (upa, upa)"
   },
   {
    "parte": "verso 2",
-   "ideia": "papai pinguim no gelo com o ovo nos pés, neve caindo; ele protege o ovo do vento"
+   "ideia": "papai pinguim chocando o ovo no pé, no gelo"
   },
   {
    "parte": "ponte",
-   "ideia": "cavalinho, aviãozinho, cosquinha e abraço"
-  },
-  {
-   "parte": "final",
-   "ideia": "convite; os dois acenando no colo do papai"
+   "ideia": "cavalinho, aviãozinho, cosquinha, abraço de urso"
   }
  ],
  "duracao_alvo": [
@@ -57,10 +53,11 @@
  "status": "letra_revisada",
  "versoes": [],
  "youtube": {
-  "resumo": "MEU PAPAI! 💙 Quem joga pro alto, faz cavalinho e conta história com voz de dragão? O papai! Ele é o meu herói, brinca de pega-pega e dá abraço de urso. Sabia que o papai pinguim choca o ovo em pé no gelo? Te amo do tamanho do mundo, papai!",
-  "resumo_short": "MEU PAPAI! 💙 Uma música para o papai com a Laurinha e o Luisinho!",
+  "resumo": "MEU PAPAI! 💙 Quem me joga pro alto? Quem faz cavalinho? Quem tem voz de dragão? É o meu papai! Abraço de urso e upa, upa, upa! E o papai pinguim choca o ovo no pé, no frio do gelo. Cavalinho, aviãozinho, cosquinha e abraço de urso!",
+  "resumo_short": "MEU PAPAI! 💙 Abraço de urso e upa, upa! Com a Laurinha e o Luisinho",
   "curiosidade": "O papai pinguim choca o ovo em pé no gelo, protegendo o filhote do frio"
  },
  "data_comemorativa": "Dia dos Pais (2º domingo de agosto)",
- "persona": "luisinho"
+ "persona": "luisinho",
+ "revisao": "auditoria 17/11/2026 (docs/auditoria/AUDITORIA_MUSICAS_11-39.md)"
 }

@@ -13,10 +13,10 @@
   "brincar de faz de conta",
   "profissões"
  ],
- "curiosidade": "a veterinária é a médica dos bichinhos",
- "ritmo": "frevo",
- "bpm": 160,
- "estrutura": "C",
+ "curiosidade": "cada profissão tem o seu som: a sirene do bombeiro e o tum-tum do estetoscópio da médica",
+ "ritmo": "disco_infantil",
+ "bpm": 118,
+ "estrutura": "B",
  "voz": "dueto",
  "cantam": {
   "verso 1": "laurinha",
@@ -28,23 +28,19 @@
  "cenas": [
   {
    "parte": "verso 1",
-   "ideia": "quarto com uma caixa de fantasias; Laurinha pergunta o que vai ser quando crescer"
+   "ideia": "sirene e mangueira: a Laurinha de bombeira apaga o fogo; adivinha quem é"
   },
   {
    "parte": "refrão",
-   "ideia": "os dois experimentam fantasias rápidas diante do espelho; sonhos em balõezinhos"
+   "ideia": "\"tchan, tchan, tchan!\" e a revelação muda a cada volta (bombeiro, médica, o que eu quiser) com luz de palco"
   },
   {
    "parte": "verso 2",
-   "ideia": "a cada pergunta uma cena: médica com estetoscópio, professora no quadro, cozinheiro com chapéu alto, veterinária com cachorrinho; Luisinho de piloto"
+   "ideia": "tum-tum do estetoscópio, \"diz aaah\": o Luisinho de médico"
   },
   {
    "parte": "ponte",
-   "ideia": "mímica de cada profissão para a criança imitar"
-  },
-  {
-   "parte": "final",
-   "ideia": "convite; os dois fantasiados dando tchau"
+   "ideia": "mímica: cozinheiro, professora, piloto de foguete; a câmera pergunta à criança \"e você?\""
   }
  ],
  "duracao_alvo": [
@@ -52,13 +48,14 @@
   170
  ],
  "alternativas": [
-  "baiao"
+  "frevo"
  ],
  "status": "letra_revisada",
  "versoes": [],
  "youtube": {
-  "resumo": "QUANDO EU CRESCER! 👩‍⚕️👨‍🍳 O que eu vou ser quando crescer? A Laurinha e o Luisinho brincam de faz de conta: médica que cuida do dodói, professora que ensina o ABC, cozinheiro, veterinária que cuida dos bichinhos… Eu vou ser o que eu quiser e vou ajudar você!",
-  "resumo_short": "QUANDO EU CRESCER! 👩‍⚕️ Brinque de faz de conta com a Laurinha e o Luisinho!",
-  "curiosidade": "A veterinária é a médica dos bichinhos"
- }
+  "resumo": "QUANDO EU CRESCER! 👩‍🚒👩‍⚕️ Uóóó, uóóó! Mangueira na mão… quem é? Bombeiro! Tum-tum, diz \"aaah\"… quem é? Médica! Adivinha, adivinha… tchan, tchan, tchan! Mexe a panela, escreve no quadro, pilota o foguete… e você, vai ser o quê? O que eu quiser!",
+  "resumo_short": "QUANDO EU CRESCER! 👩‍🚒 Adivinha a profissão pelo som com a Laurinha e o Luisinho!",
+  "curiosidade": "Cada profissão tem o seu som: a sirene do bombeiro e o tum-tum do estetoscópio da médica"
+ },
+ "revisao": "auditoria 17/11/2026 (docs/auditoria/AUDITORIA_MUSICAS_11-39.md)"
 }
