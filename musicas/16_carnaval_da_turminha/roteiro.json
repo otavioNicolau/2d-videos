@@ -1,0 +1,2580 @@
+{
+ "schema": "roteiro-1.0",
+ "nota": "Roteiro de 'Carnaval da Turminha' (take v1 de 18/11/2026, 2:29, uma voz — Luisinho, estilo E5): o bloquinho no salão com as fantasias trocadas (sapo de princesa, formiga de leão, vovó bailarina, vovô tubarão) e o Luisinho de sombrinha de frevo; ponte de comandos de frevo. Gerado por scripts/roteiros/ep16_carnaval_da_turminha.py.",
+ "partes": {
+  "intro": [
+   {
+    "linhas": 2,
+    "cenario": "plano_salao",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "fx": [
+     "confete"
+    ],
+    "callout": [
+     {
+      "t": 2.4,
+      "text": "CARNAVAL DA TURMINHA!",
+      "color": "amarelo"
+     }
+    ],
+    "atores": {
+     "luisinho": {
+      "x": -250,
+      "y": 520,
+      "turn": 0.4,
+      "segura": "sombrinha",
+      "acoes": [
+       {
+        "t": 0.3,
+        "do": "fly",
+        "dur": 2.2,
+        "to_x": 1300,
+        "to_y": 930
+       },
+       {
+        "t": 2.8,
+        "do": "dance",
+        "style": "frevo",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "luisinho"
+    ]
+   },
+   {
+    "linhas": 1,
+    "cenario": "danca_raios_amarelo",
+    "fx": [
+     "confete"
+    ],
+    "callout": [
+     {
+      "t": 0.15,
+      "text": "LAURINHA E LUISINHO!",
+      "color": "rosa"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 560,
+      "turn": 0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "frevo",
+        "dur": "resto"
+       }
+      ],
+      "segura": "sombrinha",
+      "y": 1010,
+      "depth": 1.15
+     },
+     "luisinho": {
+      "x": 1360,
+      "turn": -0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "frevo",
+        "dur": "resto"
+       }
+      ],
+      "segura": "sombrinha",
+      "y": 1010,
+      "depth": 1.15
+     }
+    },
+    "cantam": [
+     "luisinho"
+    ]
+   }
+  ],
+  "verso#1": [
+   {
+    "linhas": 2,
+    "cenario": "plano_salao",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "fx": [
+     "confete"
+    ],
+    "callout": [
+     {
+      "t": 1.2,
+      "text": "CONFETE!",
+      "color": "verde"
+     }
+    ],
+    "atores": {
+     "luisinho": {
+      "x": 1300,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "frevo",
+        "dur": "resto"
+       }
+      ],
+      "segura": "sombrinha"
+     }
+    },
+    "cantam": [
+     "luisinho"
+    ]
+   },
+   {
+    "linhas": 2,
+    "cenario": "plano_salao",
+    "camera": {
+     "x": 1300,
+     "y": 600,
+     "zoom": 1.15,
+     "zoom_fim": 1.2
+    },
+    "callout": [
+     {
+      "t": 0.4,
+      "text": "PRINCESA?!",
+      "color": "rosa"
+     },
+     {
+      "t": 1.7,
+      "text": "LEÃO!",
+      "color": "laranja"
+     }
+    ],
+    "objetos": {
+     "sapo": {
+      "id": "sapo",
+      "x": 1050,
+      "y": 935,
+      "z": 2,
+      "depth": 0.85,
+      "pose": {
+       "coroa": 1.0
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "croac": 0.0
+        }
+       },
+       {
+        "t": 0.6,
+        "pose": {
+         "pulo": 1.0,
+         "croac": 1.0
+        },
+        "ease": "linear"
+       },
+       {
+        "t": 1.0,
+        "pose": {
+         "croac": 0.0
+        }
+       }
+      ]
+     }
+    },
+    "atores": {
+     "formiguinha": {
+      "x": 1600,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 1.4,
+        "do": "cheguei",
+        "dur": "resto"
+       }
+      ],
+      "pose": {
+       "juba": 1.0
+      }
+     }
+    },
+    "cantam": [
+     "luisinho"
+    ]
+   },
+   {
+    "linhas": 2,
+    "cenario": "plano_salao",
+    "camera": {
+     "x": 1300,
+     "y": 600,
+     "zoom": 1.15,
+     "zoom_fim": 1.2
+    },
+    "callout": [
+     {
+      "t": 0.4,
+      "text": "BAILARINA!",
+      "color": "rosa"
+     },
+     {
+      "t": 1.7,
+      "text": "TUBARÃO!",
+      "color": "azul"
+     }
+    ],
+    "atores": {
+     "vovo": {
+      "x": 1000,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "turn",
+        "to": -0.4
+       },
+       {
+        "t": 0.4,
+        "do": "turn",
+        "to": 0.4
+       },
+       {
+        "t": 0.8,
+        "do": "dance",
+        "style": "bracos",
+        "dur": "resto"
+       }
+      ],
+      "pose": {
+       "tutu": 1.0
+      }
+     },
+     "vovozinho": {
+      "x": 1650,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 1.5,
+        "do": "take"
+       },
+       {
+        "t": 2.2,
+        "do": "laugh",
+        "dur": "resto"
+       }
+      ],
+      "pose": {
+       "tubarao": 1.0
+      }
+     }
+    },
+    "cantam": [
+     "luisinho"
+    ]
+   },
+   {
+    "linhas": 2,
+    "cenario": "plano_salao",
+    "camera": "medio:luisinho",
+    "fx": [
+     "estrelas"
+    ],
+    "callout": [
+     {
+      "t": 0.4,
+      "text": "SOMBRINHA!",
+      "color": "amarelo"
+     }
+    ],
+    "atores": {
+     "luisinho": {
+      "x": 1300,
+      "turn": 0.1,
+      "segura": "sombrinha",
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "cheguei",
+        "dur": 1.0
+       },
+       {
+        "t": 1.3,
+        "do": "jump",
+        "dur": 0.9
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "luisinho"
+    ]
+   }
+  ],
+  "verso#2": [
+   {
+    "linhas": 2,
+    "cenario": "plano_salao",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "fx": [
+     "confete"
+    ],
+    "callout": [
+     {
+      "t": 1.2,
+      "text": "CONFETE!",
+      "color": "verde"
+     }
+    ],
+    "atores": {
+     "luisinho": {
+      "x": 1300,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "frevo",
+        "dur": "resto"
+       }
+      ],
+      "segura": "sombrinha"
+     }
+    },
+    "cantam": [
+     "luisinho"
+    ]
+   },
+   {
+    "linhas": 2,
+    "cenario": "plano_salao",
+    "camera": {
+     "x": 1300,
+     "y": 600,
+     "zoom": 1.3,
+     "zoom_fim": 1.35
+    },
+    "callout": [
+     {
+      "t": 0.4,
+      "text": "PRINCESA?!",
+      "color": "rosa"
+     },
+     {
+      "t": 1.7,
+      "text": "LEÃO!",
+      "color": "laranja"
+     }
+    ],
+    "objetos": {
+     "sapo": {
+      "id": "sapo",
+      "x": 1050,
+      "y": 935,
+      "z": 2,
+      "depth": 0.85,
+      "pose": {
+       "coroa": 1.0
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "croac": 0.0
+        }
+       },
+       {
+        "t": 0.6,
+        "pose": {
+         "pulo": 1.0,
+         "croac": 1.0
+        },
+        "ease": "linear"
+       },
+       {
+        "t": 1.0,
+        "pose": {
+         "croac": 0.0
+        }
+       }
+      ]
+     }
+    },
+    "atores": {
+     "formiguinha": {
+      "x": 1600,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 1.4,
+        "do": "cheguei",
+        "dur": "resto"
+       }
+      ],
+      "pose": {
+       "juba": 1.0
+      }
+     }
+    },
+    "cantam": [
+     "luisinho"
+    ]
+   },
+   {
+    "linhas": 2,
+    "cenario": "plano_salao",
+    "camera": {
+     "x": 1300,
+     "y": 600,
+     "zoom": 1.3,
+     "zoom_fim": 1.35
+    },
+    "callout": [
+     {
+      "t": 0.4,
+      "text": "BAILARINA!",
+      "color": "rosa"
+     },
+     {
+      "t": 1.7,
+      "text": "TUBARÃO!",
+      "color": "azul"
+     }
+    ],
+    "atores": {
+     "vovo": {
+      "x": 1000,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "turn",
+        "to": -0.4
+       },
+       {
+        "t": 0.4,
+        "do": "turn",
+        "to": 0.4
+       },
+       {
+        "t": 0.8,
+        "do": "dance",
+        "style": "bracos",
+        "dur": "resto"
+       }
+      ],
+      "pose": {
+       "tutu": 1.0
+      }
+     },
+     "vovozinho": {
+      "x": 1650,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 1.5,
+        "do": "take"
+       },
+       {
+        "t": 2.2,
+        "do": "laugh",
+        "dur": "resto"
+       }
+      ],
+      "pose": {
+       "tubarao": 1.0
+      }
+     }
+    },
+    "cantam": [
+     "luisinho"
+    ]
+   },
+   {
+    "linhas": 2,
+    "cenario": "plano_salao",
+    "camera": "medio:luisinho",
+    "fx": [
+     "estrelas"
+    ],
+    "callout": [
+     {
+      "t": 0.4,
+      "text": "SOMBRINHA!",
+      "color": "amarelo"
+     }
+    ],
+    "atores": {
+     "luisinho": {
+      "x": 1300,
+      "turn": 0.1,
+      "segura": "sombrinha",
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "cheguei",
+        "dur": 1.0
+       },
+       {
+        "t": 1.3,
+        "do": "jump",
+        "dur": 0.9
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "luisinho"
+    ]
+   }
+  ],
+  "refrao#1": [
+   {
+    "linhas": 4,
+    "cenario": "plano_salao",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "flash": true,
+    "fx": [
+     "confete"
+    ],
+    "callout": [
+     {
+      "t": 0.15,
+      "text": "CARNAVAL DA TURMINHA!",
+      "color": "amarelo"
+     },
+     {
+      "t": 1.8,
+      "text": "ABRE A RODA!",
+      "color": "azul"
+     }
+    ],
+    "atores": {
+     "formiguinha": {
+      "x": 450,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ],
+      "pose": {
+       "juba": 1.0
+      },
+      "z": 1,
+      "depth": 0.85
+     },
+     "vovo": {
+      "x": 2150,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ],
+      "pose": {
+       "tutu": 1.0
+      },
+      "z": 1,
+      "depth": 0.9
+     },
+     "vovozinho": {
+      "x": 1750,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "marcha",
+        "dur": "resto"
+       }
+      ],
+      "pose": {
+       "tubarao": 1.0
+      },
+      "z": 1,
+      "depth": 0.9
+     },
+     "laurinha": {
+      "x": 950,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "frevo",
+        "dur": "resto"
+       }
+      ],
+      "segura": "sombrinha"
+     },
+     "luisinho": {
+      "x": 1450,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "frevo",
+        "dur": "resto"
+       }
+      ],
+      "segura": "sombrinha"
+     }
+    },
+    "objetos": {
+     "sapo": {
+      "id": "sapo",
+      "x": 700,
+      "y": 935,
+      "z": 2,
+      "depth": 0.85,
+      "pose": {
+       "coroa": 1.0
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0
+        }
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "luisinho"
+    ]
+   },
+   {
+    "linhas": 4,
+    "cenario": "danca_xadrez_verde",
+    "fx": [
+     "estrelas"
+    ],
+    "callout": [
+     {
+      "t": 1.6,
+      "text": "NINGUÉM FICA SEM DANÇAR!",
+      "color": "rosa"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 500,
+      "turn": 0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "frevo",
+        "dur": "resto"
+       }
+      ],
+      "segura": "sombrinha",
+      "y": 1010,
+      "depth": 1.15
+     },
+     "luisinho": {
+      "x": 1420,
+      "turn": -0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "frevo",
+        "dur": "resto"
+       }
+      ],
+      "segura": "sombrinha",
+      "y": 1010,
+      "depth": 1.15
+     }
+    },
+    "objetos": {
+     "sapo": {
+      "id": "sapo",
+      "x": 960,
+      "y": 1010,
+      "z": 2,
+      "depth": 0.8,
+      "pose": {
+       "coroa": 1.0
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear"
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear"
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear"
+       },
+       {
+        "t": 2.7,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear"
+       },
+       {
+        "t": 3.6,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear"
+       },
+       {
+        "t": 4.5,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "luisinho"
+    ]
+   }
+  ],
+  "refrao#2": [
+   {
+    "linhas": 4,
+    "cenario": "plano_salao",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "flash": true,
+    "fx": [
+     "confete"
+    ],
+    "callout": [
+     {
+      "t": 0.15,
+      "text": "CARNAVAL DA TURMINHA!",
+      "color": "rosa"
+     },
+     {
+      "t": 1.8,
+      "text": "ABRE A RODA!",
+      "color": "azul"
+     }
+    ],
+    "atores": {
+     "formiguinha": {
+      "x": 450,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ],
+      "pose": {
+       "juba": 1.0
+      },
+      "z": 1,
+      "depth": 0.85
+     },
+     "vovo": {
+      "x": 2150,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ],
+      "pose": {
+       "tutu": 1.0
+      },
+      "z": 1,
+      "depth": 0.9
+     },
+     "vovozinho": {
+      "x": 1750,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "marcha",
+        "dur": "resto"
+       }
+      ],
+      "pose": {
+       "tubarao": 1.0
+      },
+      "z": 1,
+      "depth": 0.9
+     },
+     "laurinha": {
+      "x": 950,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "frevo",
+        "dur": "resto"
+       }
+      ],
+      "segura": "sombrinha"
+     },
+     "luisinho": {
+      "x": 1450,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "frevo",
+        "dur": "resto"
+       }
+      ],
+      "segura": "sombrinha"
+     }
+    },
+    "objetos": {
+     "sapo": {
+      "id": "sapo",
+      "x": 700,
+      "y": 935,
+      "z": 2,
+      "depth": 0.85,
+      "pose": {
+       "coroa": 1.0
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0
+        }
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "luisinho"
+    ]
+   },
+   {
+    "linhas": 4,
+    "cenario": "danca_bolinhas_rosa",
+    "fx": [
+     "estrelas"
+    ],
+    "callout": [
+     {
+      "t": 1.6,
+      "text": "NINGUÉM FICA SEM DANÇAR!",
+      "color": "rosa"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 500,
+      "turn": 0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "frevo",
+        "dur": "resto"
+       }
+      ],
+      "segura": "sombrinha",
+      "y": 1010,
+      "depth": 1.15
+     },
+     "luisinho": {
+      "x": 1420,
+      "turn": -0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "frevo",
+        "dur": "resto"
+       }
+      ],
+      "segura": "sombrinha",
+      "y": 1010,
+      "depth": 1.15
+     }
+    },
+    "objetos": {
+     "sapo": {
+      "id": "sapo",
+      "x": 960,
+      "y": 1010,
+      "z": 2,
+      "depth": 0.8,
+      "pose": {
+       "coroa": 1.0
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear"
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear"
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear"
+       },
+       {
+        "t": 2.7,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear"
+       },
+       {
+        "t": 3.6,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear"
+       },
+       {
+        "t": 4.5,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "luisinho"
+    ]
+   }
+  ],
+  "refrao#3": [
+   {
+    "linhas": 4,
+    "cenario": "plano_salao",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "flash": true,
+    "fx": [
+     "confete"
+    ],
+    "callout": [
+     {
+      "t": 0.15,
+      "text": "CARNAVAL DA TURMINHA!",
+      "color": "verde"
+     },
+     {
+      "t": 1.8,
+      "text": "ABRE A RODA!",
+      "color": "azul"
+     }
+    ],
+    "atores": {
+     "formiguinha": {
+      "x": 450,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ],
+      "pose": {
+       "juba": 1.0
+      },
+      "z": 1,
+      "depth": 0.85
+     },
+     "vovo": {
+      "x": 2150,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ],
+      "pose": {
+       "tutu": 1.0
+      },
+      "z": 1,
+      "depth": 0.9
+     },
+     "vovozinho": {
+      "x": 1750,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "marcha",
+        "dur": "resto"
+       }
+      ],
+      "pose": {
+       "tubarao": 1.0
+      },
+      "z": 1,
+      "depth": 0.9
+     },
+     "laurinha": {
+      "x": 950,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "frevo",
+        "dur": "resto"
+       }
+      ],
+      "segura": "sombrinha"
+     },
+     "luisinho": {
+      "x": 1450,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "frevo",
+        "dur": "resto"
+       }
+      ],
+      "segura": "sombrinha"
+     }
+    },
+    "objetos": {
+     "sapo": {
+      "id": "sapo",
+      "x": 700,
+      "y": 935,
+      "z": 2,
+      "depth": 0.85,
+      "pose": {
+       "coroa": 1.0
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0
+        }
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "luisinho"
+    ]
+   },
+   {
+    "linhas": 4,
+    "cenario": "danca_ondas_azul",
+    "fx": [
+     "confete"
+    ],
+    "callout": [
+     {
+      "t": 1.6,
+      "text": "NINGUÉM FICA SEM DANÇAR!",
+      "color": "rosa"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 500,
+      "turn": 0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "frevo",
+        "dur": "resto"
+       }
+      ],
+      "segura": "sombrinha",
+      "y": 1010,
+      "depth": 1.15
+     },
+     "luisinho": {
+      "x": 1420,
+      "turn": -0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "frevo",
+        "dur": "resto"
+       }
+      ],
+      "segura": "sombrinha",
+      "y": 1010,
+      "depth": 1.15
+     }
+    },
+    "objetos": {
+     "sapo": {
+      "id": "sapo",
+      "x": 960,
+      "y": 1010,
+      "z": 2,
+      "depth": 0.8,
+      "pose": {
+       "coroa": 1.0
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear"
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear"
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear"
+       },
+       {
+        "t": 2.7,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear"
+       },
+       {
+        "t": 3.6,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear"
+       },
+       {
+        "t": 4.5,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "luisinho"
+    ]
+   }
+  ],
+  "refrao#4": [
+   {
+    "linhas": 4,
+    "cenario": "plano_salao",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "flash": true,
+    "fx": [
+     "confete"
+    ],
+    "callout": [
+     {
+      "t": 0.15,
+      "text": "CARNAVAL DA TURMINHA!",
+      "color": "laranja"
+     },
+     {
+      "t": 1.8,
+      "text": "ABRE A RODA!",
+      "color": "azul"
+     }
+    ],
+    "atores": {
+     "formiguinha": {
+      "x": 450,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ],
+      "pose": {
+       "juba": 1.0
+      },
+      "z": 1,
+      "depth": 0.85
+     },
+     "vovo": {
+      "x": 2150,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ],
+      "pose": {
+       "tutu": 1.0
+      },
+      "z": 1,
+      "depth": 0.9
+     },
+     "vovozinho": {
+      "x": 1750,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "marcha",
+        "dur": "resto"
+       }
+      ],
+      "pose": {
+       "tubarao": 1.0
+      },
+      "z": 1,
+      "depth": 0.9
+     },
+     "laurinha": {
+      "x": 950,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "frevo",
+        "dur": "resto"
+       }
+      ],
+      "segura": "sombrinha"
+     },
+     "luisinho": {
+      "x": 1450,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "frevo",
+        "dur": "resto"
+       }
+      ],
+      "segura": "sombrinha"
+     }
+    },
+    "objetos": {
+     "sapo": {
+      "id": "sapo",
+      "x": 700,
+      "y": 935,
+      "z": 2,
+      "depth": 0.85,
+      "pose": {
+       "coroa": 1.0
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0
+        }
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "luisinho"
+    ]
+   },
+   {
+    "linhas": 4,
+    "cenario": "danca_raios_laranja",
+    "fx": [
+     "confete"
+    ],
+    "callout": [
+     {
+      "t": 1.6,
+      "text": "NINGUÉM FICA SEM DANÇAR!",
+      "color": "rosa"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 500,
+      "turn": 0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "frevo",
+        "dur": 5.92
+       },
+       {
+        "t": 6.02,
+        "do": "laugh",
+        "dur": "resto"
+       }
+      ],
+      "segura": "sombrinha",
+      "y": 1010,
+      "depth": 1.15
+     },
+     "luisinho": {
+      "x": 1420,
+      "turn": -0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "frevo",
+        "dur": 5.92
+       },
+       {
+        "t": 6.02,
+        "do": "laugh",
+        "dur": "resto"
+       }
+      ],
+      "segura": "sombrinha",
+      "y": 1010,
+      "depth": 1.15
+     }
+    },
+    "objetos": {
+     "sapo": {
+      "id": "sapo",
+      "x": 960,
+      "y": 1010,
+      "z": 2,
+      "depth": 0.8,
+      "pose": {
+       "coroa": 1.0
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear"
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear"
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear"
+       },
+       {
+        "t": 2.7,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear"
+       },
+       {
+        "t": 3.6,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear"
+       },
+       {
+        "t": 4.5,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear"
+       },
+       {
+        "t": 5.4,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear"
+       },
+       {
+        "t": 6.3,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "luisinho"
+    ]
+   }
+  ],
+  "intervalo#1": [
+   {
+    "linhas": 1,
+    "cenario": "danca_raios_roxo",
+    "camera": "medio:luisinho",
+    "fx": [
+     "confete"
+    ],
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "ZUM-ZUM, QUE MASSA!",
+      "color": "amarelo"
+     }
+    ],
+    "atores": {
+     "luisinho": {
+      "x": 960,
+      "segura": "sombrinha",
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "bacana",
+        "dur": 1.4
+       },
+       {
+        "t": 1.6,
+        "do": "dance",
+        "style": "frevo",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "luisinho"
+    ]
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_salao",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "fx": [
+     "confete"
+    ],
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "LAURINHA E LUISINHO!",
+      "color": "rosa"
+     }
+    ],
+    "atores": {
+     "formiguinha": {
+      "x": 450,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ],
+      "pose": {
+       "juba": 1.0
+      },
+      "z": 1,
+      "depth": 0.85
+     },
+     "vovo": {
+      "x": 2150,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ],
+      "pose": {
+       "tutu": 1.0
+      },
+      "z": 1,
+      "depth": 0.9
+     },
+     "vovozinho": {
+      "x": 1750,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "marcha",
+        "dur": "resto"
+       }
+      ],
+      "pose": {
+       "tubarao": 1.0
+      },
+      "z": 1,
+      "depth": 0.9
+     },
+     "laurinha": {
+      "x": 950,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "frevo",
+        "dur": "resto"
+       }
+      ],
+      "segura": "sombrinha"
+     },
+     "luisinho": {
+      "x": 1450,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "frevo",
+        "dur": "resto"
+       }
+      ],
+      "segura": "sombrinha"
+     }
+    },
+    "objetos": {
+     "sapo": {
+      "id": "sapo",
+      "x": 700,
+      "y": 935,
+      "z": 2,
+      "depth": 0.85,
+      "pose": {
+       "coroa": 1.0
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0
+        }
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "luisinho"
+    ]
+   }
+  ],
+  "intervalo#2": [
+   {
+    "linhas": 1,
+    "cenario": "danca_bolinhas_azul",
+    "camera": "medio:luisinho",
+    "fx": [
+     "confete"
+    ],
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "ZUM-ZUM, QUE MASSA!",
+      "color": "amarelo"
+     }
+    ],
+    "atores": {
+     "luisinho": {
+      "x": 960,
+      "segura": "sombrinha",
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "bacana",
+        "dur": 1.4
+       },
+       {
+        "t": 1.6,
+        "do": "dance",
+        "style": "frevo",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "luisinho"
+    ]
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_salao",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "fx": [
+     "confete"
+    ],
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "LAURINHA E LUISINHO!",
+      "color": "rosa"
+     }
+    ],
+    "atores": {
+     "formiguinha": {
+      "x": 450,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ],
+      "pose": {
+       "juba": 1.0
+      },
+      "z": 1,
+      "depth": 0.85
+     },
+     "vovo": {
+      "x": 2150,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ],
+      "pose": {
+       "tutu": 1.0
+      },
+      "z": 1,
+      "depth": 0.9
+     },
+     "vovozinho": {
+      "x": 1750,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "marcha",
+        "dur": "resto"
+       }
+      ],
+      "pose": {
+       "tubarao": 1.0
+      },
+      "z": 1,
+      "depth": 0.9
+     },
+     "laurinha": {
+      "x": 950,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "frevo",
+        "dur": "resto"
+       }
+      ],
+      "segura": "sombrinha"
+     },
+     "luisinho": {
+      "x": 1450,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "frevo",
+        "dur": "resto"
+       }
+      ],
+      "segura": "sombrinha"
+     }
+    },
+    "objetos": {
+     "sapo": {
+      "id": "sapo",
+      "x": 700,
+      "y": 935,
+      "z": 2,
+      "depth": 0.85,
+      "pose": {
+       "coroa": 1.0
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0
+        }
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "luisinho"
+    ]
+   }
+  ],
+  "intervalo#3": [
+   {
+    "seg": 9.03,
+    "cenario": "plano_salao",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "titulo": "o bloco desfila",
+    "fx": [
+     "confete"
+    ],
+    "atores": {
+     "vovozinho": {
+      "x": -400,
+      "turn": 0.4,
+      "pose": {
+       "tubarao": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "walk",
+        "to_x": 1200
+       }
+      ]
+     },
+     "vovo": {
+      "x": -700,
+      "turn": 0.4,
+      "pose": {
+       "tutu": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "walk",
+        "to_x": 900
+       }
+      ]
+     },
+     "formiguinha": {
+      "x": -1000,
+      "turn": 0.4,
+      "pose": {
+       "juba": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "walk",
+        "to_x": 600
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 800,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "frevo",
+        "dur": "resto"
+       }
+      ],
+      "segura": "sombrinha",
+      "z": 4
+     },
+     "luisinho": {
+      "x": 1800,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "frevo",
+        "dur": "resto"
+       }
+      ],
+      "segura": "sombrinha",
+      "z": 4
+     }
+    },
+    "cantam": [
+     "luisinho"
+    ]
+   }
+  ],
+  "ponte#1": [
+   {
+    "linhas": 2,
+    "cenario": "plano_salao",
+    "camera": {
+     "x": 1300,
+     "y": 600,
+     "zoom": 1.2,
+     "zoom_fim": 1.25
+    },
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "PRA CIMA!",
+      "color": "amarelo"
+     },
+     {
+      "t": 1.58,
+      "text": "PRA BAIXO!",
+      "color": "azul"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 1000,
+      "turn": 0.3,
+      "segura": "sombrinha",
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "bracos",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1600,
+      "turn": -0.3,
+      "segura": "sombrinha",
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "bracos",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "luisinho"
+    ]
+   },
+   {
+    "linhas": 2,
+    "cenario": "plano_salao",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.05,
+     "zoom_fim": 1.1
+    },
+    "fx": [
+     "confete"
+    ],
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "AGACHA!",
+      "color": "laranja"
+     },
+     {
+      "t": 1.4,
+      "text": "PULA!",
+      "color": "verde"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 950,
+      "turn": 0.3,
+      "segura": "sombrinha",
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "agacha",
+        "dur": 1.2
+       },
+       {
+        "t": 1.4,
+        "do": "jump",
+        "dur": 1.0
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1650,
+      "turn": -0.3,
+      "segura": "sombrinha",
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "agacha",
+        "dur": 1.2
+       },
+       {
+        "t": 1.5,
+        "do": "jump",
+        "dur": 1.0
+       }
+      ]
+     }
+    },
+    "objetos": {
+     "sapo": {
+      "id": "sapo",
+      "x": 1300,
+      "y": 935,
+      "z": 2,
+      "depth": 0.85,
+      "pose": {
+       "coroa": 1.0
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0
+        }
+       },
+       {
+        "t": 1.4,
+        "pose": {
+         "pulo": 0.0
+        }
+       },
+       {
+        "t": 2.1,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "luisinho"
+    ]
+   }
+  ],
+  "ponte#2": [
+   {
+    "linhas": 2,
+    "cenario": "plano_salao",
+    "camera": {
+     "x": 1300,
+     "y": 600,
+     "zoom": 1.2,
+     "zoom_fim": 1.25
+    },
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "PRA CIMA!",
+      "color": "amarelo"
+     },
+     {
+      "t": 1.58,
+      "text": "PRA BAIXO!",
+      "color": "azul"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 1000,
+      "turn": 0.3,
+      "segura": "sombrinha",
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "bracos",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1600,
+      "turn": -0.3,
+      "segura": "sombrinha",
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "bracos",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "luisinho"
+    ]
+   },
+   {
+    "linhas": 2,
+    "cenario": "plano_salao",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.05,
+     "zoom_fim": 1.1
+    },
+    "fx": [
+     "confete"
+    ],
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "AGACHA!",
+      "color": "laranja"
+     },
+     {
+      "t": 1.68,
+      "text": "PULA!",
+      "color": "verde"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 950,
+      "turn": 0.3,
+      "segura": "sombrinha",
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "agacha",
+        "dur": 1.48
+       },
+       {
+        "t": 1.68,
+        "do": "jump",
+        "dur": 1.0
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1650,
+      "turn": -0.3,
+      "segura": "sombrinha",
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "agacha",
+        "dur": 1.48
+       },
+       {
+        "t": 1.78,
+        "do": "jump",
+        "dur": 1.0
+       }
+      ]
+     }
+    },
+    "objetos": {
+     "sapo": {
+      "id": "sapo",
+      "x": 1300,
+      "y": 935,
+      "z": 2,
+      "depth": 0.85,
+      "pose": {
+       "coroa": 1.0
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0
+        }
+       },
+       {
+        "t": 1.68,
+        "pose": {
+         "pulo": 0.0
+        }
+       },
+       {
+        "t": 2.38,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "luisinho"
+    ]
+   }
+  ],
+  "final#1": [
+   {
+    "linhas": 1,
+    "cenario": "danca_raios_azul",
+    "camera": "close:luisinho",
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "GOSTOU?",
+      "color": "rosa"
+     }
+    ],
+    "atores": {
+     "luisinho": {
+      "x": 960,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "apontar_camera",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "luisinho"
+    ]
+   },
+   {
+    "linhas": 1,
+    "cenario": "danca_bolinhas_amarelo",
+    "callout": [
+     {
+      "t": 0.4,
+      "text": "DÁ UM JOINHA!",
+      "color": "azul"
+     }
+    ],
+    "fx": [
+     "estrelas"
+    ],
+    "objetos": {
+     "joinha": {
+      "x": 1380,
+      "y": 900,
+      "z": 3,
+      "depth": 1.3,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "escala": 0.0
+        }
+       },
+       {
+        "t": 0.4,
+        "pose": {
+         "escala": 1.0
+        },
+        "ease": "back"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 680,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "bacana",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "luisinho"
+    ]
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_casa_frente",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.1
+    },
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "CHAMA O PAPAI E A MAMÃE!",
+      "color": "verde"
+     }
+    ],
+    "atores": {
+     "mamae": {
+      "x": 1100,
+      "turn": 0.2,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "wave",
+        "dur": 1.4
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1450,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "point",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "luisinho"
+    ]
+   },
+   {
+    "linhas": 1,
+    "cenario": "danca_raios_vermelho",
+    "callout": [
+     {
+      "t": 0.5,
+      "text": "INSCREVA-SE!",
+      "color": "vermelho"
+     }
+    ],
+    "fx": [
+     "coracoes"
+    ],
+    "objetos": {
+     "botao": {
+      "id": "botao_inscrever",
+      "x": 1260,
+      "y": 760,
+      "z": 3,
+      "depth": 1.2,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "escala": 0.0,
+         "aperta": 0.0
+        }
+       },
+       {
+        "t": 0.4,
+        "pose": {
+         "escala": 1.0
+        },
+        "ease": "back"
+       },
+       {
+        "t": 1.6,
+        "pose": {
+         "aperta": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 1.9,
+        "pose": {
+         "aperta": 0.0
+        },
+        "ease": "in"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 600,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "point",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "luisinho"
+    ]
+   }
+  ],
+  "final#2": [
+   {
+    "linhas": 1,
+    "cenario": "plano_salao",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0,
+     "zoom_fim": 1.1
+    },
+    "fx": [
+     "confete"
+    ],
+    "callout": [
+     {
+      "t": 1.6,
+      "text": "TCHAU!",
+      "color": "amarelo"
+     }
+    ],
+    "atores": {
+     "formiguinha": {
+      "x": 450,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "tchau",
+        "dur": 4.0
+       },
+       {
+        "t": 4.2,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ],
+      "pose": {
+       "juba": 1.0
+      },
+      "z": 1,
+      "depth": 0.85
+     },
+     "vovo": {
+      "x": 2150,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "tchau",
+        "dur": 4.0
+       },
+       {
+        "t": 4.2,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ],
+      "pose": {
+       "tutu": 1.0
+      },
+      "z": 1,
+      "depth": 0.9
+     },
+     "vovozinho": {
+      "x": 1750,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "tchau",
+        "dur": 4.0
+       },
+       {
+        "t": 4.2,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ],
+      "pose": {
+       "tubarao": 1.0
+      },
+      "z": 1,
+      "depth": 0.9
+     },
+     "laurinha": {
+      "x": 950,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "tchau",
+        "dur": 4.0
+       },
+       {
+        "t": 4.2,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ],
+      "segura": "sombrinha"
+     },
+     "luisinho": {
+      "x": 1450,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "tchau",
+        "dur": 4.0
+       },
+       {
+        "t": 4.2,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ],
+      "segura": "sombrinha"
+     }
+    },
+    "objetos": {
+     "sapo": {
+      "id": "sapo",
+      "x": 700,
+      "y": 935,
+      "z": 2,
+      "depth": 0.85,
+      "pose": {
+       "coroa": 1.0
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0
+        }
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "luisinho"
+    ]
+   }
+  ]
+ }
+}

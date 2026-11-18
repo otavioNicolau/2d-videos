@@ -1025,7 +1025,7 @@ class Sapo(_Prop):
     """Sapo cantor (objeto-personagem): `croac` 0→1 enche o papo e abre a boca; `pulo` 0→1; `microfone` 1 = taboa na mão."""
 
     def __init__(self):
-        super().__init__("sapo", "Sapo", (520, 520), (260, 480), 230, {"croac": 0.0, "pulo": 0.0, "microfone": 0.0, "lid": 0.0})
+        super().__init__("sapo", "Sapo", (520, 520), (260, 480), 230, {"croac": 0.0, "pulo": 0.0, "microfone": 0.0, "lid": 0.0, "coroa": 0.0})
 
     def paint(self, k, P):
         y0 = -90 * math.sin(math.pi * max(0.0, min(1.0, P["pulo"])))
@@ -1038,6 +1038,10 @@ class Sapo(_Prop):
         c = max(0.0, min(1.0, P["croac"]))
         if c > 0.05:                                                # papo cheio
             shape(k, ellipse_pts(0, y0 - 128, 70 * c + 20, 52 * c + 12, 0, 24), "#F6E3A1", line="#C9A64A")
+        if P.get("coroa", 0) > 0.5:                                 # fantasia de princesa (Carnaval da Turminha)
+            shape(k, [(-44, y0 - 238), (-44, y0 - 290), (-22, y0 - 262), (0, y0 - 302), (22, y0 - 262), (44, y0 - 290), (44, y0 - 238)],
+                  "#FFD23F", line="#D9A520", smooth=False)
+            k.dot(0, y0 - 270, 8, _rgba("#FF7FBF"))
         for sx in (-1, 1):                                          # olhos no alto
             shape(k, ellipse_pts(sx * 62, y0 - 214, 44, 44, 0, 20), verde, line=esc)
             if P.get("lid", 0) > 0.5:

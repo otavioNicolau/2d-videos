@@ -555,9 +555,39 @@ def praia(rng) -> tuple[skia.Surface, int]:
     return s, w
 
 
+def salao(rng) -> tuple[skia.Surface, int]:
+    """Salão de carnaval (Carnaval da Turminha): parede colorida com serpentinas e bandeirinhas, máscaras penduradas,
+    chão de tábua com confete espalhado."""
+    w = W_INT
+    s, c = _surf(w, H, 1.5)
+    F = Flat(c)
+    c.drawRect(skia.Rect(0, 0, w, H), skia.Paint(Color4f=skia.Color4f(*_rgba("#7B5CFF"))))
+    for x in range(0, w, 260):                                              # faixas na parede
+        F.shape([(x, 0), (x + 130, 0), (x + 130, FLOOR_Y), (x, FLOOR_Y)], "#6A4BEA", smooth=False)
+    cores = ("#FFD23F", "#FF7FBF", "#2DBE5A", "#3C8BF0", "#FF8A1F")
+    for fila, y0 in enumerate((70, 190)):                                   # bandeirinhas
+        pts = [(x, y0 + 40 * math.sin(x / 300 + fila)) for x in range(-20, w + 40, 40)]
+        F.line(pts, "#FFFFFF", w=LINE)
+        for i, (x, y) in enumerate(pts[::3]):
+            F.shape([(x - 22, y), (x + 22, y), (x, y + 48)], cores[(i + fila) % len(cores)], smooth=False)
+    for i in range(40):                                                     # serpentinas
+        x, y = rng.uniform(0, w), rng.uniform(260, 620)
+        pts = [(x + 14 * math.sin(j * 0.9), y + j * 14) for j in range(7)]
+        F.line(pts, cores[i % len(cores)], w=LINE * 1.2)
+    for x in (420, 1300, 2180):                                             # máscaras de carnaval
+        F.oval(x, 360, 90, 50, "#FFD23F")
+        F.oval(x - 36, 355, 20, 14, "#7B5CFF")
+        F.oval(x + 36, 355, 20, 14, "#7B5CFF")
+    _floor(F, w, "#E8B27A")
+    for i in range(260):                                                    # confete no chão
+        x, y = rng.uniform(0, w), rng.uniform(FLOOR_Y + 10, H)
+        F.oval(x, y, 6, 4, cores[i % len(cores)], line=False, a=rng.uniform(0, 3))
+    return s, w
+
+
 SCENES = {"plano_banheiro": banheiro, "plano_quarto_rosa": lambda rng: quarto("rosa", rng), "plano_quarto_azul": lambda rng: quarto("azul", rng),
           "plano_cozinha": cozinha, "plano_casa_frente": casa_frente, "plano_escola": escola, "plano_ceu": ceu,
-          "plano_jardim": jardim, "plano_lagoa": lagoa, "plano_sala": sala, "plano_espaco": espaco, "plano_lua": lua_chao, "plano_campo": campo, "plano_gelo": gelo, "plano_mar_gelado": mar_gelado, "plano_praia": praia}
+          "plano_jardim": jardim, "plano_lagoa": lagoa, "plano_sala": sala, "plano_espaco": espaco, "plano_lua": lua_chao, "plano_campo": campo, "plano_gelo": gelo, "plano_mar_gelado": mar_gelado, "plano_praia": praia, "plano_salao": salao}
 
 
 def build(bg_id: str, out_dir: Path, scale: float = 1.5, seed: int = 11) -> dict:

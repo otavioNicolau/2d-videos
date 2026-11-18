@@ -109,7 +109,7 @@ class FlatMuri(Character):
                 "mouth": "X", "smile": 0.8, "brow_y": 0.2, "blush": 1.0, "stars": 0.0, "speed": 0.0,
                 "holding": "", "wing_phase": 0.0, "bank": 0.0, "dangle": 0.0, "hair_bounce": 0.0,
                 "fly": 0.0, "rot_pivot": 0.55, "bigode": 0.0, "mochila": 0.0, "buzz": 0.0, "suor": 0.0,
-                "despenteado": 0.0, "bafinho": 0.0, "espuma": 0.0, "brilho": 0.0, "cuspe": 0.0, "blusa": 0.0,
+                "despenteado": 0.0, "bafinho": 0.0, "espuma": 0.0, "brilho": 0.0, "cuspe": 0.0, "blusa": 0.0, "juba": 0.0, "tubarao": 0.0, "coroa": 0.0, "tutu": 0.0,
             })
 
     # ------------------------------------------------------------------ primitivas chapadas
@@ -166,6 +166,11 @@ class FlatMuri(Character):
             for dx, dy, r in ((-24, -52, 9), (22, -46, 10), (-28, -12, 8), (26, -10, 9)):
                 q = T((dx, dy))
                 ink.shape(ellipse_pts(q[0], q[1], r, r, 0, 12), fill=_rgba(L.extra["pintas"]), line=0)
+        if P.get("tutu", 0) > 0.5:             # saia de bailarina (fantasia): babados cor-de-rosa na cintura
+            self._shape(ink, [T(p_) for p_ in ((-58, -4), (58, -4), (104, 34), (60, 44), (0, 40), (-60, 44), (-104, 34))], "#FF9AC8", line="#E0609A")
+            for j in range(7):                      # babados
+                q = T((-84 + j * 28, 38))
+                ink.shape(ellipse_pts(q[0], q[1], 20, 12, 0, 12), fill=_rgba("#FFC7E3"), line=0)
         if P.get("blusa", 0) > 0.5:            # blusinha de lã do carneirinho (Méé, Carneirinho!): fofa, gola e barra canelada
             la, gola = "#FFF7EC", ("#FF8CC0" if L.bow else "#7DB8FF")
             corpo = [T(p) for p in ((0, -84), (34, -78), (50, -46), (50, -8), (30, 16), (0, 20), (-30, 16), (-50, -8), (-50, -46), (-34, -78))]
@@ -316,6 +321,19 @@ class FlatMuri(Character):
             q = rot((C[0] + f * s * 10, C[1] - r * 0.98), ht, C)
             self._shape(k, ellipse_pts(q[0], q[1], 46, 40, 0, 24), L.extra["coque"])
             self._line(k, [(q[0] - 30, q[1] + 18), (q[0] + 30, q[1] + 18)], dark(L.extra["coque"]), w=LINE)
+        if P.get("juba", 0) > 0.5 and not v.back:   # fantasia de leão (Carnaval da Turminha): juba atrás da cabeça
+            for j in range(18):                     # juba fofa: bolotas sobrepostas em dois tons
+                a = j * 2 * math.pi / 18
+                rr = r * (1.16 if j % 2 else 1.04)
+                q = rot((C[0] + math.cos(a) * rr, C[1] + math.sin(a) * rr * 0.96), ht, C)
+                self._shape(k, ellipse_pts(q[0], q[1], r * 0.3, r * 0.3, 0, 16), "#C9772E" if j % 2 else "#A85A1E", line="#7A3E12")
+            for side in (-1, 1):                    # orelhinhas de leão
+                q = rot((C[0] + side * r * 0.62, C[1] - r * 0.86), ht, C)
+                self._shape(k, ellipse_pts(q[0], q[1], r * 0.2, r * 0.2, 0, 14), "#C9772E", line="#7A3E12")
+                self._shape(k, ellipse_pts(q[0], q[1], r * 0.1, r * 0.1, 0, 12), "#F2B27A")
+        if P.get("tubarao", 0) > 0.5:          # fantasia de tubarão: barbatana em cima da cabeça
+            self._shape(k, [rot(p_, ht, C) for p_ in ((C[0] - 40, C[1] - r * 0.8), (C[0] + 6, C[1] - r * 1.75),
+                                                      (C[0] + 46, C[1] - r * 1.5), (C[0] + 52, C[1] - r * 0.78))], "#8FA3B8", line="#5E7186")
         self._shape(k, ellipse_pts(C[0], C[1], r, r * 0.94, ht, 32), L.body)
         if L.extra.get("cabelo"):            # franjinha grisalha (vovó)
             for j in range(5):
@@ -393,6 +411,13 @@ class FlatMuri(Character):
         nx_ = C[0] + r * 0.72 * math.sin(a_m)              # boca sempre dentro da cabeça, inclusive de perfil
         self._mouth(k, P, rot((nx_, C[1] + 52), ht, C), f, s, line)
         self._boca_fx(k, P, rot((nx_, C[1] + 52), ht, C), f)
+        if L.extra.get("bigodao") and not v.back:   # bigodão do vovô
+            for side in (-1, 1):
+                q = rot((nx_ + side * 26, C[1] + 34), ht, C)
+                self._shape(k, ellipse_pts(q[0], q[1], 30, 14, side * 0.35, 14), L.extra["bigodao"], line="#B8B8C8")
+        if P.get("coroa", 0) > 0.5 and not v.back:   # coroa (fantasia de princesa)
+            base = [rot((C[0] + x, C[1] - r * 0.92 + y), ht, C) for x, y in ((-48, 6), (-48, -34), (-24, -12), (0, -46), (24, -12), (48, -34), (48, 6))]
+            self._shape(k, base, "#FFD23F", line="#D9A520", smooth=False)
         if P.get("protetor", 0) > 0.05:       # protetor solar: risquinhos brancos nas bochechas e no nariz
             a_ = min(1.0, P["protetor"])
             for side in (-1, 1):
@@ -571,6 +596,8 @@ MAMAE = FlatLook(body="#C9A6F2", belly_a="#FFE066", belly_b="#9B6BD9", shoe="#9B
                  pom="#9B6BD9", cheek="#FF8FC4", lashes=True, extra={"colar": "#FFFFFF", "flor": "#FF7FBF"})
 VOVO = FlatLook(body="#8FD9C4", belly_a="#FFE066", belly_b="#3FA98C", shoe="#E9545D", sole="#FFFFFF",
                 pom="#3FA98C", cheek="#FF9AAE", lashes=True, extra={"oculos": True, "coque": "#E4E4EE", "cabelo": "#E4E4EE"})
+VOVOZINHO = FlatLook(body="#9CC3E6", belly_a="#FFE066", belly_b="#4F7FB0", shoe="#4F7FB0", sole="#FFFFFF",
+                     pom="#4F7FB0", cheek="#FF9AAE", extra={"oculos": True, "bigodao": "#E4E4EE", "cabelo": "#E4E4EE"})
 # amigas da turma (música 02): mesmo modelo, detalhes próprios
 JOANINHA = FlatLook(body="#F2545B", belly_a="#F2545B", belly_b="#2B2B33", shoe="#2B2B33", sole="#FFD23F",
                     pom="#2B2B33", cheek="#FF9AAE", lashes=True, extra={"pintas": "#2B2B33", "abdomen_liso": True})

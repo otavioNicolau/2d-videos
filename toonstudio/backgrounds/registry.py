@@ -9,7 +9,7 @@ from ..core.config import LIBRARY, ROOT, file_sha
 STATIC = {"floresta_clareira": "forest", "sertao": "sertao", "fofo_parque": "fofo", "fofo_cidade": "fofo", "fofo_praia": "fofo", "plano_parque": "plano"}
 
 
-INTERIOR = ("plano_banheiro", "plano_quarto_rosa", "plano_quarto_azul", "plano_cozinha", "plano_casa_frente", "plano_escola", "plano_ceu", "plano_jardim", "plano_lagoa", "plano_sala", "plano_espaco", "plano_lua", "plano_campo", "plano_gelo", "plano_mar_gelado", "plano_praia")
+INTERIOR = ("plano_banheiro", "plano_quarto_rosa", "plano_quarto_azul", "plano_cozinha", "plano_casa_frente", "plano_escola", "plano_ceu", "plano_jardim", "plano_lagoa", "plano_sala", "plano_espaco", "plano_lua", "plano_campo", "plano_gelo", "plano_mar_gelado", "plano_praia", "plano_salao")
 
 
 def known(bg_id: str) -> bool:
