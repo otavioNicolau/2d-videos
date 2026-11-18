@@ -1,0 +1,58 @@
+{
+ "schema": "avaliacao-1.0",
+ "versoes": {
+  "v1": {
+   "arquivo": "v1.wav",
+   "duracao": 168.6,
+   "bpm": 136.0,
+   "bpm_nota": "",
+   "tom": "Ré maior",
+   "voz_inicio": 2.0,
+   "refrao_inicio": null,
+   "cantado": 79,
+   "intervalos": [
+    [
+     50.0,
+     6.9
+    ],
+    [
+     104.7,
+     6.5
+    ],
+    [
+     150.8,
+     2.8
+    ]
+   ],
+   "fim_depois_da_voz": 2.2,
+   "final": "corte seco",
+   "silencio_final": 0.0,
+   "acerto": 81,
+   "nao_reconhecidas": [
+    "ploc",
+    "assopra",
+    "assoprei",
+    "miau",
+    "pega",
+    "bolhinha",
+    "gostou",
+    "chama"
+   ],
+   "pontos_a_conferir": [
+    "andamento 136 fora da faixa do Pop infantil (115–130)",
+    "o gancho não foi reconhecido na transcrição"
+   ]
+  }
+ },
+ "ouvido": {
+  "v1": {
+   "1 começo chama atenção": null,
+   "5 melodia combina com a letra": null,
+   "6 dá vontade de dançar": null,
+   "7 pronúncia natural": null,
+   "8 tem a cara do canal": null,
+   "9 nenhum trecho cansativo": null
+  }
+ },
+ "escolhida": "v1"
+}

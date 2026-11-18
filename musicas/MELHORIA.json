@@ -312,5 +312,33 @@
    "teclado/synth reconhecido (baixo)",
    "percussão (chocalho/batucada) (alto)"
   ]
+ },
+ {
+  "musica": "15",
+  "titulo": "Bolha de Sabão",
+  "estilo": "E5",
+  "medidas": {
+   "voz_%": 44.8,
+   "bateria_%": 34.1,
+   "baixo_%": 5.6,
+   "outros_%": 15.5,
+   "largura_voz": 0.113,
+   "batidas_identicas": 0.71,
+   "duracao_s": 168.6,
+   "teclado_eletronico": 0.014,
+   "bateria_banda": 0.009,
+   "percussao": 0.009,
+   "metais": 0.001
+  },
+  "acertos": "5/10",
+  "nota": 4,
+  "obs": "take v1 — usuário: 'as batidas ficaram legal, acredito que melhorou' (nota 4, acima da 14)",
+  "falhas": [
+   "baixo no som (%) (baixo)",
+   "outros instrumentos (%) (alto)",
+   "largura da voz (0 = uma voz no centro) (alto)",
+   "batida de teclado (loop igual) (baixo)",
+   "teclado/synth reconhecido (baixo)"
+  ]
  }
 ]
