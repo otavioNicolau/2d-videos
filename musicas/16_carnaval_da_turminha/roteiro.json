@@ -8,9 +8,9 @@
     "cenario": "plano_salao",
     "camera": {
      "x": 1300,
-     "y": 540,
-     "zoom": 1.0,
-     "zoom_fim": 1.08
+     "y": 600,
+     "zoom": 1.1,
+     "zoom_fim": 1.2
     },
     "fx": [
      "confete"
@@ -105,9 +105,9 @@
     "cenario": "plano_salao",
     "camera": {
      "x": 1300,
-     "y": 540,
-     "zoom": 1.0,
-     "zoom_fim": 1.06
+     "y": 610,
+     "zoom": 1.2,
+     "zoom_fim": 1.26
     },
     "fx": [
      "confete"
@@ -328,9 +328,9 @@
     "cenario": "plano_salao",
     "camera": {
      "x": 1300,
-     "y": 540,
-     "zoom": 1.0,
-     "zoom_fim": 1.06
+     "y": 610,
+     "zoom": 1.2,
+     "zoom_fim": 1.26
     },
     "fx": [
      "confete"
@@ -551,9 +551,9 @@
     "cenario": "plano_salao",
     "camera": {
      "x": 1300,
-     "y": 560,
-     "zoom": 1.0,
-     "zoom_fim": 1.06
+     "y": 620,
+     "zoom": 1.15,
+     "zoom_fim": 1.2
     },
     "flash": true,
     "fx": [
@@ -573,7 +573,7 @@
     ],
     "atores": {
      "formiguinha": {
-      "x": 450,
+      "x": 640,
       "turn": 0.3,
       "acoes": [
        {
@@ -590,7 +590,7 @@
       "depth": 0.85
      },
      "vovo": {
-      "x": 2150,
+      "x": 1960,
       "turn": -0.3,
       "acoes": [
        {
@@ -607,7 +607,7 @@
       "depth": 0.9
      },
      "vovozinho": {
-      "x": 1750,
+      "x": 1720,
       "turn": -0.2,
       "acoes": [
        {
@@ -624,7 +624,7 @@
       "depth": 0.9
      },
      "laurinha": {
-      "x": 950,
+      "x": 1060,
       "turn": 0.3,
       "acoes": [
        {
@@ -637,7 +637,7 @@
       "segura": "sombrinha"
      },
      "luisinho": {
-      "x": 1450,
+      "x": 1420,
       "turn": -0.2,
       "acoes": [
        {
@@ -653,7 +653,7 @@
     "objetos": {
      "sapo": {
       "id": "sapo",
-      "x": 700,
+      "x": 850,
       "y": 935,
       "z": 2,
       "depth": 0.85,
@@ -786,9 +786,9 @@
     "cenario": "plano_salao",
     "camera": {
      "x": 1300,
-     "y": 560,
-     "zoom": 1.0,
-     "zoom_fim": 1.06
+     "y": 620,
+     "zoom": 1.15,
+     "zoom_fim": 1.2
     },
     "flash": true,
     "fx": [
@@ -808,7 +808,7 @@
     ],
     "atores": {
      "formiguinha": {
-      "x": 450,
+      "x": 640,
       "turn": 0.3,
       "acoes": [
        {
@@ -825,7 +825,7 @@
       "depth": 0.85
      },
      "vovo": {
-      "x": 2150,
+      "x": 1960,
       "turn": -0.3,
       "acoes": [
        {
@@ -842,7 +842,7 @@
       "depth": 0.9
      },
      "vovozinho": {
-      "x": 1750,
+      "x": 1720,
       "turn": -0.2,
       "acoes": [
        {
@@ -859,7 +859,7 @@
       "depth": 0.9
      },
      "laurinha": {
-      "x": 950,
+      "x": 1060,
       "turn": 0.3,
       "acoes": [
        {
@@ -872,7 +872,7 @@
       "segura": "sombrinha"
      },
      "luisinho": {
-      "x": 1450,
+      "x": 1420,
       "turn": -0.2,
       "acoes": [
        {
@@ -888,7 +888,7 @@
     "objetos": {
      "sapo": {
       "id": "sapo",
-      "x": 700,
+      "x": 850,
       "y": 935,
       "z": 2,
       "depth": 0.85,
@@ -1021,9 +1021,9 @@
     "cenario": "plano_salao",
     "camera": {
      "x": 1300,
-     "y": 560,
-     "zoom": 1.0,
-     "zoom_fim": 1.06
+     "y": 620,
+     "zoom": 1.15,
+     "zoom_fim": 1.2
     },
     "flash": true,
     "fx": [
@@ -1043,7 +1043,7 @@
     ],
     "atores": {
      "formiguinha": {
-      "x": 450,
+      "x": 640,
       "turn": 0.3,
       "acoes": [
        {
@@ -1060,7 +1060,7 @@
       "depth": 0.85
      },
      "vovo": {
-      "x": 2150,
+      "x": 1960,
       "turn": -0.3,
       "acoes": [
        {
@@ -1077,7 +1077,7 @@
       "depth": 0.9
      },
      "vovozinho": {
-      "x": 1750,
+      "x": 1720,
       "turn": -0.2,
       "acoes": [
        {
@@ -1094,7 +1094,7 @@
       "depth": 0.9
      },
      "laurinha": {
-      "x": 950,
+      "x": 1060,
       "turn": 0.3,
       "acoes": [
        {
@@ -1107,7 +1107,7 @@
       "segura": "sombrinha"
      },
      "luisinho": {
-      "x": 1450,
+      "x": 1420,
       "turn": -0.2,
       "acoes": [
        {
@@ -1123,7 +1123,7 @@
     "objetos": {
      "sapo": {
       "id": "sapo",
-      "x": 700,
+      "x": 850,
       "y": 935,
       "z": 2,
       "depth": 0.85,
@@ -1256,9 +1256,9 @@
     "cenario": "plano_salao",
     "camera": {
      "x": 1300,
-     "y": 560,
-     "zoom": 1.0,
-     "zoom_fim": 1.06
+     "y": 620,
+     "zoom": 1.15,
+     "zoom_fim": 1.2
     },
     "flash": true,
     "fx": [
@@ -1278,7 +1278,7 @@
     ],
     "atores": {
      "formiguinha": {
-      "x": 450,
+      "x": 640,
       "turn": 0.3,
       "acoes": [
        {
@@ -1295,7 +1295,7 @@
       "depth": 0.85
      },
      "vovo": {
-      "x": 2150,
+      "x": 1960,
       "turn": -0.3,
       "acoes": [
        {
@@ -1312,7 +1312,7 @@
       "depth": 0.9
      },
      "vovozinho": {
-      "x": 1750,
+      "x": 1720,
       "turn": -0.2,
       "acoes": [
        {
@@ -1329,7 +1329,7 @@
       "depth": 0.9
      },
      "laurinha": {
-      "x": 950,
+      "x": 1060,
       "turn": 0.3,
       "acoes": [
        {
@@ -1342,7 +1342,7 @@
       "segura": "sombrinha"
      },
      "luisinho": {
-      "x": 1450,
+      "x": 1420,
       "turn": -0.2,
       "acoes": [
        {
@@ -1358,7 +1358,7 @@
     "objetos": {
      "sapo": {
       "id": "sapo",
-      "x": 700,
+      "x": 850,
       "y": 935,
       "z": 2,
       "depth": 0.85,
@@ -1552,9 +1552,9 @@
     "cenario": "plano_salao",
     "camera": {
      "x": 1300,
-     "y": 540,
-     "zoom": 1.0,
-     "zoom_fim": 1.06
+     "y": 610,
+     "zoom": 1.2,
+     "zoom_fim": 1.26
     },
     "fx": [
      "confete"
@@ -1568,7 +1568,7 @@
     ],
     "atores": {
      "formiguinha": {
-      "x": 450,
+      "x": 640,
       "turn": 0.3,
       "acoes": [
        {
@@ -1585,7 +1585,7 @@
       "depth": 0.85
      },
      "vovo": {
-      "x": 2150,
+      "x": 1960,
       "turn": -0.3,
       "acoes": [
        {
@@ -1602,7 +1602,7 @@
       "depth": 0.9
      },
      "vovozinho": {
-      "x": 1750,
+      "x": 1720,
       "turn": -0.2,
       "acoes": [
        {
@@ -1619,7 +1619,7 @@
       "depth": 0.9
      },
      "laurinha": {
-      "x": 950,
+      "x": 1060,
       "turn": 0.3,
       "acoes": [
        {
@@ -1632,7 +1632,7 @@
       "segura": "sombrinha"
      },
      "luisinho": {
-      "x": 1450,
+      "x": 1420,
       "turn": -0.2,
       "acoes": [
        {
@@ -1648,7 +1648,7 @@
     "objetos": {
      "sapo": {
       "id": "sapo",
-      "x": 700,
+      "x": 850,
       "y": 935,
       "z": 2,
       "depth": 0.85,
@@ -1713,9 +1713,9 @@
     "cenario": "plano_salao",
     "camera": {
      "x": 1300,
-     "y": 540,
-     "zoom": 1.0,
-     "zoom_fim": 1.06
+     "y": 610,
+     "zoom": 1.2,
+     "zoom_fim": 1.26
     },
     "fx": [
      "confete"
@@ -1729,7 +1729,7 @@
     ],
     "atores": {
      "formiguinha": {
-      "x": 450,
+      "x": 640,
       "turn": 0.3,
       "acoes": [
        {
@@ -1746,7 +1746,7 @@
       "depth": 0.85
      },
      "vovo": {
-      "x": 2150,
+      "x": 1960,
       "turn": -0.3,
       "acoes": [
        {
@@ -1763,7 +1763,7 @@
       "depth": 0.9
      },
      "vovozinho": {
-      "x": 1750,
+      "x": 1720,
       "turn": -0.2,
       "acoes": [
        {
@@ -1780,7 +1780,7 @@
       "depth": 0.9
      },
      "laurinha": {
-      "x": 950,
+      "x": 1060,
       "turn": 0.3,
       "acoes": [
        {
@@ -1793,7 +1793,7 @@
       "segura": "sombrinha"
      },
      "luisinho": {
-      "x": 1450,
+      "x": 1420,
       "turn": -0.2,
       "acoes": [
        {
@@ -1809,7 +1809,7 @@
     "objetos": {
      "sapo": {
       "id": "sapo",
-      "x": 700,
+      "x": 850,
       "y": 935,
       "z": 2,
       "depth": 0.85,
@@ -1837,9 +1837,9 @@
     "cenario": "plano_salao",
     "camera": {
      "x": 1300,
-     "y": 540,
-     "zoom": 1.0,
-     "zoom_fim": 1.06
+     "y": 610,
+     "zoom": 1.2,
+     "zoom_fim": 1.26
     },
     "titulo": "o bloco desfila",
     "fx": [
@@ -1981,9 +1981,9 @@
     "cenario": "plano_salao",
     "camera": {
      "x": 1300,
-     "y": 560,
-     "zoom": 1.05,
-     "zoom_fim": 1.1
+     "y": 620,
+     "zoom": 1.2,
+     "zoom_fim": 1.25
     },
     "fx": [
      "confete"
@@ -2002,7 +2002,7 @@
     ],
     "atores": {
      "laurinha": {
-      "x": 950,
+      "x": 1000,
       "turn": 0.3,
       "segura": "sombrinha",
       "acoes": [
@@ -2135,9 +2135,9 @@
     "cenario": "plano_salao",
     "camera": {
      "x": 1300,
-     "y": 560,
-     "zoom": 1.05,
-     "zoom_fim": 1.1
+     "y": 620,
+     "zoom": 1.2,
+     "zoom_fim": 1.25
     },
     "fx": [
      "confete"
@@ -2156,7 +2156,7 @@
     ],
     "atores": {
      "laurinha": {
-      "x": 950,
+      "x": 1000,
       "turn": 0.3,
       "segura": "sombrinha",
       "acoes": [
@@ -2428,9 +2428,9 @@
     "cenario": "plano_salao",
     "camera": {
      "x": 1300,
-     "y": 540,
-     "zoom": 1.0,
-     "zoom_fim": 1.1
+     "y": 620,
+     "zoom": 1.15,
+     "zoom_fim": 1.22
     },
     "fx": [
      "confete"
@@ -2444,7 +2444,7 @@
     ],
     "atores": {
      "formiguinha": {
-      "x": 450,
+      "x": 640,
       "turn": 0.3,
       "acoes": [
        {
@@ -2467,7 +2467,7 @@
       "depth": 0.85
      },
      "vovo": {
-      "x": 2150,
+      "x": 1960,
       "turn": -0.3,
       "acoes": [
        {
@@ -2490,7 +2490,7 @@
       "depth": 0.9
      },
      "vovozinho": {
-      "x": 1750,
+      "x": 1720,
       "turn": -0.2,
       "acoes": [
        {
@@ -2513,7 +2513,7 @@
       "depth": 0.9
      },
      "laurinha": {
-      "x": 950,
+      "x": 1060,
       "turn": 0.3,
       "acoes": [
        {
@@ -2532,7 +2532,7 @@
       "segura": "sombrinha"
      },
      "luisinho": {
-      "x": 1450,
+      "x": 1420,
       "turn": -0.2,
       "acoes": [
        {
@@ -2554,7 +2554,7 @@
     "objetos": {
      "sapo": {
       "id": "sapo",
-      "x": 700,
+      "x": 850,
       "y": 935,
       "z": 2,
       "depth": 0.85,

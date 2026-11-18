@@ -19,7 +19,7 @@ letra = json.loads((PROJ / "analise" / "letra.json").read_text(encoding="utf-8")
 BEATS = song["beats"]
 LINES = letra["lines"]
 SALAO = "plano_salao"
-CAM = {"x": 1300, "y": 540, "zoom": 1.0, "zoom_fim": 1.06}
+CAM = {"x": 1300, "y": 610, "zoom": 1.2, "zoom_fim": 1.26}
 LA, LU = "laurinha", "luisinho"
 SOMB = "sombrinha"
 
@@ -69,12 +69,12 @@ FANT = {"formiguinha": {"juba": 1.0}, "vovo": {"tutu": 1.0}, "vovozinho": {"tuba
 
 def turma_toda(festa="festa"):
     """O bloco inteiro fantasiado (os dois na frente)."""
-    return {"atores": {"formiguinha": ator(450, 0.3, FANT["formiguinha"], z=1, depth=0.85),
-                       "vovo": ator(2150, -0.3, FANT["vovo"], z=1, depth=0.9),
-                       "vovozinho": ator(1750, -0.2, FANT["vovozinho"], z=1, depth=0.9,
+    return {"atores": {"formiguinha": ator(640, 0.3, FANT["formiguinha"], z=1, depth=0.85),
+                       "vovo": ator(1960, -0.3, FANT["vovo"], z=1, depth=0.9),
+                       "vovozinho": ator(1720, -0.2, FANT["vovozinho"], z=1, depth=0.9,
                                          acoes=[{"t": 0.0, "do": "dance", "style": "marcha", "dur": "resto"}]),
-                       LA: frevo(950, 0.3), LU: frevo(1450, -0.2)},
-            "objetos": {"sapo": SAPO(700, keys=[{"t": 0.0, "pose": {"pulo": 0.0}}])}}
+                       LA: frevo(1060, 0.3), LU: frevo(1420, -0.2)},
+            "objetos": {"sapo": SAPO(850, keys=[{"t": 0.0, "pose": {"pulo": 0.0}}])}}
 
 
 partes: dict = {}
@@ -82,7 +82,7 @@ partes: dict = {}
 # ───────── intro: o salão enfeitado; o Luisinho chega de sombrinha; o grito do canal
 P = starts("intro#1", [2, 1])
 partes["intro"] = [
-    {"linhas": 2, "cenario": SALAO, "camera": {"x": 1300, "y": 540, "zoom": 1.0, "zoom_fim": 1.08}, "fx": ["confete"],
+    {"linhas": 2, "cenario": SALAO, "camera": {"x": 1300, "y": 600, "zoom": 1.1, "zoom_fim": 1.2}, "fx": ["confete"],
      "callout": [call(2.4, "CARNAVAL DA TURMINHA!", "amarelo")],
      "atores": {LU: {"x": -250, "y": 520, "turn": 0.4, "segura": SOMB, "acoes": [{"t": 0.3, "do": "fly", "dur": 2.2, "to_x": 1300, "to_y": 930},
                                                                                   {"t": 2.8, "do": "dance", "style": "frevo", "dur": "resto"}]}}},
@@ -122,7 +122,7 @@ BG = {1: "danca_xadrez_verde", 2: "danca_bolinhas_rosa", 3: "danca_ondas_azul", 
 def refrao(n):
     P = starts(f"refrao#{n}", [4, 4])
     t = turma_toda()
-    p1 = {"linhas": 4, "cenario": SALAO, "camera": {"x": 1300, "y": 560, "zoom": 1.0, "zoom_fim": 1.06}, "flash": True, "fx": ["confete"],
+    p1 = {"linhas": 4, "cenario": SALAO, "camera": {"x": 1300, "y": 620, "zoom": 1.15, "zoom_fim": 1.2}, "flash": True, "fx": ["confete"],
           "callout": [call(0.15, "CARNAVAL DA TURMINHA!", ["amarelo", "rosa", "verde", "laranja"][n - 1]), call(1.8, "ABRE A RODA!", "azul")],
           **t}
     t1 = P[1][1] - P[1][0]
@@ -171,9 +171,9 @@ def ponte(key):
          "callout": [call(0.2, "PRA CIMA!", "amarelo"), call(round(va[-1]["s"] - a0, 2) if len(va) > 1 else 1.4, "PRA BAIXO!", "azul")],
          "atores": {LA: {"x": 1000, "turn": 0.3, "segura": SOMB, "acoes": [{"t": 0.0, "do": "dance", "style": "bracos", "dur": "resto"}]},
                     LU: {"x": 1600, "turn": -0.3, "segura": SOMB, "acoes": [{"t": 0.0, "do": "dance", "style": "bracos", "dur": "resto"}]}}},
-        {"linhas": 2, "cenario": SALAO, "camera": {"x": 1300, "y": 560, "zoom": 1.05, "zoom_fim": 1.1}, "fx": ["confete"],
+        {"linhas": 2, "cenario": SALAO, "camera": {"x": 1300, "y": 620, "zoom": 1.2, "zoom_fim": 1.25}, "fx": ["confete"],
          "callout": [call(0.2, "AGACHA!", "laranja"), call(round(vb[-1]["s"] - b0, 2) if len(vb) > 1 else 1.5, "PULA!", "verde")],
-         "atores": {LA: {"x": 950, "turn": 0.3, "segura": SOMB, "acoes": [{"t": 0.0, "do": "dance", "style": "agacha", "dur": round(max(0.6, (vb[-1]["s"] - b0) - 0.2), 2) if len(vb) > 1 else 1.3},
+         "atores": {LA: {"x": 1000, "turn": 0.3, "segura": SOMB, "acoes": [{"t": 0.0, "do": "dance", "style": "agacha", "dur": round(max(0.6, (vb[-1]["s"] - b0) - 0.2), 2) if len(vb) > 1 else 1.3},
                                                                       {"t": round((vb[-1]["s"] - b0) if len(vb) > 1 else 1.5, 2), "do": "jump", "dur": 1.0}]},
                     LU: {"x": 1650, "turn": -0.3, "segura": SOMB, "acoes": [{"t": 0.0, "do": "dance", "style": "agacha", "dur": round(max(0.6, (vb[-1]["s"] - b0) - 0.2), 2) if len(vb) > 1 else 1.3},
                                                                          {"t": round((vb[-1]["s"] - b0 + 0.1) if len(vb) > 1 else 1.6, 2), "do": "jump", "dur": 1.0}]}},
@@ -202,7 +202,7 @@ partes["final#1"] = [
 t = turma_toda()
 for w in t["atores"]:
     t["atores"][w]["acoes"] = [{"t": 0.0, "do": "dance", "style": "tchau", "dur": 4.0}, {"t": 4.2, "do": "dance", "style": "festa", "dur": "resto"}]
-partes["final#2"] = [{"linhas": 1, "cenario": SALAO, "camera": {"x": 1300, "y": 540, "zoom": 1.0, "zoom_fim": 1.1}, "fx": ["confete"],
+partes["final#2"] = [{"linhas": 1, "cenario": SALAO, "camera": {"x": 1300, "y": 620, "zoom": 1.15, "zoom_fim": 1.22}, "fx": ["confete"],
                       "callout": [call(1.6, "TCHAU!", "amarelo")], **t}]
 
 for chave, planos in partes.items():
