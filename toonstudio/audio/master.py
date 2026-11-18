@@ -82,3 +82,36 @@ def masterizar(entrada: Path, saida: Path, passadas: int = 2) -> dict:
         p.unlink()
     return {"perfil_antes": [round(x, 1) for x in perfil(entrada)], "perfil_depois": [round(x, 1) for x in perfil(saida)],
             "ganhos_db": ganhos_tot, "loudnorm": m}
+
+
+# ───────────── rebalanceamento voz × batida (18/11/2026) ─────────────
+# Referência (18 músicas, mediana do peso de cada parte separada): voz 41,5 · bateria 37,8 · baixo 11,1 · outros 8,9 %.
+# O Suno entrega a voz muito na frente (nossas 01–13: voz 58 · bateria 28 · baixo 7 · outros 7 %).
+PESO_ALVO = {"vocals": 41.5, "drums": 37.8, "bass": 11.1, "other": 8.9}
+LIMITE_PARTE_DB = 4.5
+
+
+def rebalancear(entrada: Path, saida: Path) -> dict:
+    """Separa voz/bateria/baixo/outros (Demucs) e soma de novo com ganhos que aproximam o peso da referência
+    (correção parcial, limitada a ±4,5 dB por parte). A masterização vem depois e acerta volume e timbre."""
+    import tempfile
+    from ..core.config import ROOT
+    with tempfile.TemporaryDirectory() as td:
+        py = ROOT / ".venv-audio" / "bin" / "python"
+        subprocess.run([str(py), "-m", "demucs", "-n", "htdemucs", "-o", td, str(entrada)], check=True, capture_output=True)
+        sd = Path(td) / "htdemucs" / entrada.stem
+        partes = {k: sf.read(str(sd / f"{k}.wav"), dtype="float32") for k in PESO_ALVO}
+        sr = partes["vocals"][1]
+        x = {k: v[0] for k, v in partes.items()}
+    en = {k: float((v ** 2).mean()) for k, v in x.items()}
+    tot = sum(en.values()) or 1.0
+    antes = {k: round(100 * v / tot, 1) for k, v in en.items()}
+    ganhos = {k: max(-LIMITE_PARTE_DB, min(LIMITE_PARTE_DB, FORCA * 10 * math.log10(PESO_ALVO[k] / max(antes[k], 0.1))))
+              for k in PESO_ALVO}
+    mix = sum(x[k] * 10 ** (ganhos[k] / 20) for k in PESO_ALVO)
+    pico = float(np.abs(mix).max()) or 1.0
+    sf.write(str(saida), (mix / pico * 0.9).astype(np.float32), sr)
+    en2 = {k: en[k] * 10 ** (ganhos[k] / 10) for k in PESO_ALVO}
+    t2 = sum(en2.values())
+    return {"peso_antes": antes, "peso_depois": {k: round(100 * v / t2, 1) for k, v in en2.items()},
+            "ganhos_db": {k: round(v, 1) for k, v in ganhos.items()}}

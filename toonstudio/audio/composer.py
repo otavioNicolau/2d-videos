@@ -8,7 +8,7 @@ Este módulo
   * mede as versões geradas no Suno (andamento, começo, refrão, intervalos, pronúncia pela transcrição) para o humano escolher.
 
 Atalhos aceitos em letra.txt (traduzidos pelo peso da batida do ritmo):
-  [Virada]             → [Drum Fill] nos ritmos de peso forte; [Percussion Fill] nos de peso médio; some nos de peso marcado
+  [Virada]             → [Keyboard Fill] nos ritmos de peso forte e médio; some nos de peso marcado (18/11: sem virada de bateria)
   [Intervalo 8s]       → intervalo instrumental do peso do ritmo (estilos.json → peso → intervalo)
   [Bordão laurinha]    → [Shout - Laurinha] Bora, turminha!   (bordão de vozes.json)
 """
@@ -99,7 +99,7 @@ def parse(letra: str) -> list[tuple[str, str]]:
 def expandir(letra: str, peso: str, E: dict, V: dict) -> str:
     """Traduz os atalhos ([Virada], [Intervalo Ns], [Bordão x]) para marcações do Suno."""
     intervalo = E["peso"][peso]["intervalo"]
-    fill = {"forte": "[Drum Fill]", "media": "[Percussion Fill]", "marcada": ""}[peso]
+    fill = {"forte": "[Keyboard Fill]", "media": "[Keyboard Fill]", "marcada": ""}[peso]   # 18/11: sem virada de bateria (referência)
     out = []
     for raw in letra.splitlines():
         s = raw.strip()
@@ -159,7 +159,7 @@ def style_curto(f: dict, ritmo: str | None = None, E: dict | None = None, V: dic
     rid = ritmo or f["ritmo"]
     r = E["ritmos"][rid]
     bpm = f["bpm"] if rid == f["ritmo"] else r["bpm"][2]
-    peso = {"forte": "heavy drum-driven beat, big drum fills", "media": "strong punchy groove",
+    peso = {"forte": "punchy electronic beat, strong kick and claps", "media": "strong punchy groove",
             "marcada": "steady marked groove"}[r["peso"]]
     return ", ".join([x for x in [E["canal"].get("duracao", "")] if x] + [r["genero"].split(",")[0], f"{bpm} bpm", peso, r["bateria"].split(",")[0],
                       V["vozes"][f.get("voz", "dueto")]["style"], "major key, Brazilian Portuguese"])
@@ -298,7 +298,7 @@ def estimar_duracao(seq: list[tuple[str, str]]) -> float:
             low = txt.lower()
             if low.startswith(("intro",)):
                 t += 4.0
-            elif low.startswith(("virada", "drum fill", "percussion fill")):
+            elif low.startswith(("virada", "drum fill", "percussion fill", "keyboard fill")):
                 t += 1.5
             elif low.startswith(("outro",)):
                 t += 3.0
@@ -657,14 +657,14 @@ def escolher(d: Path, versao: str) -> str:
 
 # ───────────────────────── partes da música (F5) ─────────────────────────
 
-INSTRUMENTAL = ("intro", "drum break", "instrumental break", "drum fill", "percussion fill", "guitar solo", "stop", "end",
+INSTRUMENTAL = ("intro", "drum break", "instrumental break", "drum fill", "percussion fill", "keyboard fill", "guitar solo", "stop", "end",
                 "solo", "break")
 
 
 def tipo_secao(tag: str) -> str:
     t = tag.lower()
     for chave, tipo in (("intro", "intro"), ("verse", "verso"), ("chorus", "refrao"), ("bridge", "ponte"), ("outro", "final"),
-                        ("shout", "bordao"), ("drum fill", "virada"), ("percussion fill", "virada"), ("stop", "parada"),
+                        ("shout", "bordao"), ("drum fill", "virada"), ("percussion fill", "virada"), ("keyboard fill", "virada"), ("stop", "parada"),
                         ("build", "subida"),
                         ("end", "fim")):
         if t.startswith(chave):

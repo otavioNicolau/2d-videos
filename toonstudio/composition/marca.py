@@ -83,16 +83,18 @@ def final(project: str) -> Path:
                     "-c:v", "libx264", "-preset", "slow", "-crf", "17", "-c:a", "pcm_s16le",
                     str(cru.with_suffix(".mov"))], check=True)
     # masterização (18/11): EQ casado com a referência + −14 LUFS / −1 dBTP — o som cru do Suno é estridente no volume alto
-    from ..audio.master import masterizar
+    from ..audio.master import masterizar, rebalancear
     bruto, mestre = out.with_name(out.stem + "_audio_cru.wav"), out.with_name(out.stem + "_audio_master.wav")
+    rebal = out.with_name(out.stem + "_audio_rebal.wav")
     subprocess.run([tool("ffmpeg"), "-y", "-loglevel", "error", "-i", str(cru.with_suffix(".mov")), "-vn", "-c:a", "pcm_s16le",
                     str(bruto)], check=True)
-    rel = masterizar(bruto, mestre)
+    rb = rebalancear(bruto, rebal)               # voz × batida no peso da referência (o Suno põe a voz muito na frente)
+    rel = {"rebalanceamento": rb, **masterizar(rebal, mestre)}
     subprocess.run([tool("ffmpeg"), "-y", "-loglevel", "error", "-i", str(cru.with_suffix(".mov")), "-i", str(mestre),
                     "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-c:a", "aac", "-b:a", "256k", "-movflags", "+faststart", str(out)],
                    check=True)
     (out_dir / "master.json").write_text(json.dumps(rel, indent=1, default=float), encoding="utf-8")
-    for p in (cru.with_suffix(".mov"), bruto, mestre):
+    for p in (cru.with_suffix(".mov"), bruto, rebal, mestre):
         p.unlink(missing_ok=True)
     return out
 

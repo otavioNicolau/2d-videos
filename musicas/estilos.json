@@ -16,37 +16,40 @@
    "long song",
    "extended outro",
    "repeated chorus",
-   "medley"
+   "medley",
+   "full band",
+   "drum fills",
+   "drum solo",
+   "busy arrangement",
+   "live drum kit"
   ],
   "duracao": "short song under 2 minutes 40 seconds, ends after the last chorus",
-  "producao": "full band arrangement, bouncy prominent bassline, rich keyboards and brass, vocals sitting in the mix with the band, polished professional kids music production"
+  "producao": "lean kids keyboard production, bright piano, electric piano or synth lead, punchy electronic drum machine beat with claps, bouncy synth bass, playful cartoon sound effects (boing, toy bells, whistles), vocals clear and level with the beat, polished professional kids music production",
+  "nota_producao": "18/11/2026: análise de 18 músicas da Animadinhos (musicas/REFERENCIA_ANIMADINHOS.md): arranjo enxuto de teclado/eletrônico, voz e batida empatadas (41 × 38 %), efeitos de desenho; as nossas saíam com banda + batucada e voz a 58 %."
  },
  "peso": {
   "forte": {
-   "descricao": "festa: bateria forte, baixo saltado e banda cheia; voz dentro da mistura (medição 4 faixas da referência Celular do Vovô: bateria 36%, baixo 19%, instrumentos 23%, voz 23%)",
-   "style": "heavy drum-driven beat, punchy kick and snare, big drum fills before every chorus, percussion breakdowns",
+   "descricao": "festa: batida eletrônica forte (bumbo e palmas), voz e batida empatadas (referência: voz 41 %, bateria 38 %)",
+   "style": "strong kick and claps, short keyboard riff before every chorus",
    "exclude": [
     "slow",
     "ballad",
     "soft drums",
     "weak drums",
-    "quiet beat",
-    "acoustic only",
-    "thin arrangement"
+    "quiet beat"
    ],
-   "intervalo": "[Drum Break - {s} seconds, heavy drums and percussion only]"
+   "intervalo": "[Instrumental Break - {s} seconds, beat and keyboard riff]"
   },
   "media": {
    "descricao": "groove forte e bem marcado, percussão presente",
-   "style": "strong punchy groove, drums upfront, clear beat",
+   "style": "strong punchy groove, beat upfront, clear danceable rhythm",
    "exclude": [
     "slow",
     "ballad",
     "weak drums",
-    "quiet beat",
-    "thin arrangement"
+    "quiet beat"
    ],
-   "intervalo": "[Instrumental Break - {s} seconds, percussion and groove]"
+   "intervalo": "[Instrumental Break - {s} seconds, beat and keyboard riff]"
   },
   "marcada": {
    "descricao": "groove marcado e dançante, sem bateria pesada",
@@ -59,7 +62,7 @@
     "lullaby",
     "sleepy"
    ],
-   "intervalo": "[Instrumental Break - {s} seconds, groove and percussion]"
+   "intervalo": "[Instrumental Break - {s} seconds, groove and keyboard]"
   }
  },
  "ritmos": {
@@ -72,8 +75,8 @@
    ],
    "peso": "forte",
    "genero": "frevo pernambucano, Brazilian carnival",
-   "bateria": "marching snare rolls, surdo, frevo snare groove",
-   "instrumentos": "big brass band, trumpets, trombones, saxophones",
+   "bateria": "electronic frevo beat, fast snare rolls, surdo kick",
+   "instrumentos": "keyboard brass section (synth trumpets), bright piano",
    "clima": "euphoric street carnival",
    "temas": [
     "carnaval",
@@ -99,8 +102,8 @@
    ],
    "peso": "forte",
    "genero": "marchinha de carnaval, Brazilian carnival march",
-   "bateria": "marching snare, bass drum on every beat, crash cymbals",
-   "instrumentos": "brass band, tuba, trumpets, clarinet",
+   "bateria": "marching beat on drum machine, kick on every beat, claps",
+   "instrumentos": "keyboard brass, toy glockenspiel, piano",
    "clima": "festive sing-along",
    "temas": [
     "carnaval",
@@ -124,8 +127,8 @@
    ],
    "peso": "forte",
    "genero": "axé music, Bahia carnival",
-   "bateria": "samba-reggae drums, timbau, surdo, repique",
-   "instrumentos": "electric guitar, brass stabs",
+   "bateria": "electronic axé beat, timbau samples, loud claps",
+   "instrumentos": "bright keyboard riffs, synth brass stabs, piano",
    "clima": "euphoric party, call and response",
    "temas": [
     "dança",
@@ -150,8 +153,8 @@
    ],
    "peso": "forte",
    "genero": "pagodão baiano, Bahia party percussion",
-   "bateria": "timbau, surdo, repique, tantã, pandeiro, loud claps",
-   "instrumentos": "cavaquinho, bass",
+   "bateria": "pagodão beat on drum machine, timbau samples, loud claps",
+   "instrumentos": "keyboard riffs, synth bass, cavaquinho",
    "clima": "euphoric, call and response",
    "temas": [
     "amizade",
@@ -176,8 +179,8 @@
    ],
    "peso": "forte",
    "genero": "forró piseiro, northeastern Brazil party",
-   "bateria": "electronic kick on every beat, zabumba, triângulo",
-   "instrumentos": "sanfona accordion, keyboard, bass",
+   "bateria": "piseiro electronic kick on every beat, zabumba samples, triangle",
+   "instrumentos": "piseiro keyboard (teclado) lead with accordion sound, synth bass",
    "clima": "festa junina energy",
    "temas": [
     "são joão",
@@ -203,8 +206,8 @@
    ],
    "peso": "media",
    "genero": "forró pé de serra, traditional northeastern Brazil",
-   "bateria": "zabumba, triângulo",
-   "instrumentos": "sanfona accordion, acoustic bass",
+   "bateria": "zabumba and triangle on a light electronic beat",
+   "instrumentos": "keyboard (teclado) with accordion sound, piano, bass",
    "clima": "joyful country dance",
    "temas": [
     "são joão",
@@ -218,10 +221,7 @@
     "E",
     "C"
    ],
-   "exclude": [
-    "electronic",
-    "synth"
-   ]
+   "exclude": []
   },
   "baiao": {
    "nome": "Baião",
@@ -232,8 +232,8 @@
    ],
    "peso": "media",
    "genero": "baião, northeastern Brazil",
-   "bateria": "zabumba baião groove, triângulo, agogô",
-   "instrumentos": "sanfona accordion, viola caipira",
+   "bateria": "baião groove, zabumba samples, triangle, agogô",
+   "instrumentos": "keyboard (teclado) baião riff with accordion sound, bass",
    "clima": "bouncy and proud",
    "temas": [
     "sertão",
@@ -247,10 +247,7 @@
     "A",
     "C"
    ],
-   "exclude": [
-    "electronic",
-    "synth"
-   ]
+   "exclude": []
   },
   "xote": {
    "nome": "Xote",
@@ -261,8 +258,8 @@
    ],
    "peso": "marcada",
    "genero": "xote, northeastern Brazil, swaying couple dance",
-   "bateria": "zabumba xote groove, triângulo",
-   "instrumentos": "sanfona accordion, acoustic guitar",
+   "bateria": "xote groove, zabumba samples, triangle",
+   "instrumentos": "keyboard (teclado) melody with accordion sound, bass",
    "clima": "sweet and swaying",
    "temas": [
     "carinho",
@@ -276,10 +273,7 @@
     "A",
     "E"
    ],
-   "exclude": [
-    "electronic",
-    "synth"
-   ]
+   "exclude": []
   },
   "samba_infantil": {
    "nome": "Samba infantil",
@@ -290,8 +284,8 @@
    ],
    "peso": "media",
    "genero": "samba, Brazilian kids samba, roda de samba",
-   "bateria": "pandeiro, surdo, tamborim, chocalho, claps",
-   "instrumentos": "cavaquinho, 7-string acoustic guitar",
+   "bateria": "samba beat with pandeiro and tamborim samples, claps, electronic kick",
+   "instrumentos": "cavaquinho, bright piano, synth bass",
    "clima": "warm and joyful",
    "temas": [
     "amizade",
@@ -305,10 +299,7 @@
     "B",
     "C"
    ],
-   "exclude": [
-    "electronic",
-    "synth"
-   ]
+   "exclude": []
   },
   "samba_enredo": {
    "nome": "Samba-enredo",
@@ -319,8 +310,8 @@
    ],
    "peso": "forte",
    "genero": "samba-enredo, escola de samba carnival parade",
-   "bateria": "full bateria, surdos marking the beat, caixa, tamborim, agogô, cuíca, whistle",
-   "instrumentos": "cavaquinho",
+   "bateria": "electronic samba beat, surdos marking the beat, caixa and tamborim samples, whistle",
+   "instrumentos": "keyboard, synth brass, cavaquinho",
    "clima": "grand parade",
    "temas": [
     "desfile",
@@ -345,8 +336,8 @@
    ],
    "peso": "forte",
    "genero": "Brazilian batucada, drum line party",
-   "bateria": "surdo, caixa, repique, timbau, agogô, whistle",
-   "instrumentos": "kids chant over drums",
+   "bateria": "batucada samples (surdo, repique, agogô) on an electronic kick, whistle",
+   "instrumentos": "keyboard stabs, kids chant",
    "clima": "tribal fun, call and response",
    "temas": [
     "dança",
@@ -372,8 +363,8 @@
    ],
    "peso": "marcada",
    "genero": "ciranda pernambucana, circle dance, swaying",
-   "bateria": "bombo marking every beat, ganzá, caixa",
-   "instrumentos": "acoustic guitar, flute, light brass",
+   "bateria": "bombo marking every beat, ganzá, light electronic beat",
+   "instrumentos": "piano, keyboard flute, acoustic guitar",
    "clima": "gentle and joyful, everyone holding hands",
    "temas": [
     "roda",
@@ -387,10 +378,7 @@
     "A",
     "C"
    ],
-   "exclude": [
-    "electronic",
-    "synth"
-   ]
+   "exclude": []
   },
   "pop_infantil": {
    "nome": "Pop infantil",
@@ -401,8 +389,8 @@
    ],
    "peso": "media",
    "genero": "upbeat kids pop, bright and catchy",
-   "bateria": "four-on-the-floor kick, handclaps, snappy snare",
-   "instrumentos": "synths, ukulele, glockenspiel, bass",
+   "bateria": "drum machine, handclaps, snappy snare",
+   "instrumentos": "bright piano, synth lead, glockenspiel, toy sounds, synth bass",
    "clima": "sunny and bouncy",
    "temas": [
     "rotina",
@@ -428,8 +416,8 @@
    ],
    "peso": "marcada",
    "genero": "kids reggae, sunny and relaxed",
-   "bateria": "one drop drum groove, rimshot, shaker",
-   "instrumentos": "skank guitar, organ bubble, bass",
+   "bateria": "one drop on drum machine, rimshot, shaker",
+   "instrumentos": "organ bubble, piano skank, synth bass",
    "clima": "happy and laid back",
    "temas": [
     "chuva",
@@ -548,8 +536,8 @@
    ],
    "peso": "media",
    "genero": "kids disco funk, groovy and shiny",
-   "bateria": "four-on-the-floor kick, open hi-hat on offbeats, handclaps",
-   "instrumentos": "funky guitar, disco strings, slap bass, brass hits",
+   "bateria": "four-on-the-floor drum machine, handclaps, open hi-hat on offbeats",
+   "instrumentos": "synth strings, electric piano, synth bass",
    "clima": "party dress-up fun",
    "temas": [
     "fantasia",
@@ -574,8 +562,8 @@
    ],
    "peso": "media",
    "genero": "kids sertanejo country, Brazilian farm song",
-   "bateria": "country shuffle drums, stomp and clap",
-   "instrumentos": "acoustic guitar, viola caipira, sanfona accordion, bass",
+   "bateria": "country stomp and clap on a light beat",
+   "instrumentos": "acoustic guitar, viola caipira, keyboard, bass",
    "clima": "cheerful farm party",
    "temas": [
     "fazenda",
@@ -589,8 +577,36 @@
     "A",
     "C"
    ],
+   "exclude": []
+  },
+  "latino_infantil": {
+   "nome": "Latino infantil (reggaeton/suingueira)",
+   "bpm": [
+    92,
+    115,
+    100
+   ],
+   "peso": "media",
+   "genero": "kids reggaeton, Latin dance pop, Brazilian suingueira",
+   "bateria": "dembow beat on drum machine, claps, shaker",
+   "instrumentos": "bright piano, synth lead, marimba, synth bass",
+   "clima": "bouncy, playful, swaying dance",
+   "temas": [
+    "dança",
+    "comandos",
+    "bichos",
+    "comida",
+    "brincadeira"
+   ],
+   "estruturas": [
+    "R",
+    "A"
+   ],
    "exclude": [
-    "electronic"
+    "sensual",
+    "adult themes",
+    "explicit",
+    "aggressive"
    ]
   }
  }

@@ -33,6 +33,8 @@ def test_all_channel_songs_pass_the_bible_checks():
 
 def test_suno_txt_is_generated_not_hand_edited():
     for d in c.todas():
+        if (d / "versoes").exists():          # já gravada: o suno.txt registra o Style que foi usado de verdade
+            continue
         assert (d / "suno.txt").read_text(encoding="utf-8") == c.texto_suno(c.prompt(d)), \
             f"{d.name}/suno.txt desatualizado: rode `toonstudio musica prompt {d.name}`"
 
@@ -53,7 +55,8 @@ def test_shortcuts_follow_the_beat_weight():
     E, V = c.estilos(), c.vozes()
     letra = "[Virada]\n[Chorus]\nBate!\n[Bordão laurinha]\n[Intervalo 8s]\n"
     forte = c.expandir(letra, "forte", E, V)
-    assert "[Drum Fill]" in forte and "[Drum Break - 8 seconds" in forte and "Bora, turminha!" in forte
+    assert "[Keyboard Fill]" in forte and "[Instrumental Break - 8 seconds" in forte and "Bora, turminha!" in forte
+    assert "Drum Fill" not in forte                                   # 18/11: referência sem virada de bateria
     marcada = c.expandir(letra, "marcada", E, V)
     assert "Drum" not in marcada and "[Instrumental Break - 8 seconds" in marcada
 
