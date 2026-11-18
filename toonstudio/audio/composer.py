@@ -445,6 +445,10 @@ def checar(d: Path) -> Checagem:
     if peso == "marcada" and any("heavy" in t for t in low):
         ck.add("aviso", "marcações", "marcação 'heavy' num ritmo de batida marcada")
 
+    # respostinhas (18/11): a referência quase não tem (≈0,7 por 100 palavras); no Suno viram voz de fundo
+    nresp = len(re.findall(r"\([^)]*\)", "\n".join(l for l in letra.splitlines() if not l.strip().startswith("["))))
+    if nresp > 6:
+        ck.add("aviso", "respostas", f"{nresp} respostas entre parênteses (referência: quase nenhuma; uma voz só, sem respostinha em todo verso)")
     # duração estimada
     est = estimar_duracao(seq)
     ck.metricas["duracao_estimada"] = est

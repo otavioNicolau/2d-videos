@@ -1,0 +1,69 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Macarrão que Não Acaba",
+ "gancho": "macarrão que não acaba",
+ "palavras_tema": [
+  "macarrão",
+  "fio",
+  "slurp",
+  "garfo"
+ ],
+ "tipo": "comida",
+ "tema": "o fio de macarrão que não acaba e dá a volta no mundo",
+ "dia_a_dia": [
+  "almoço",
+  "macarronada",
+  "comer sozinho com o garfo"
+ ],
+ "curiosidade": "tem macarrão comprido, curtinho, em forma de concha e de lacinho",
+ "ritmo": "disco_infantil",
+ "bpm": 118,
+ "estrutura": "R",
+ "voz": "laurinha",
+ "cenas": [
+  {
+   "parte": "intro",
+   "ideia": "a mesa do almoço; o prato fumegante de macarrão"
+  },
+  {
+   "parte": "verso 1",
+   "ideia": "a Laurinha puxa um fio que não acaba: sai pela janela e volta pela porta"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "enrola, enrola no garfo (o fio vira um novelo gigante) — slurp!"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "o fio atravessa a cozinha, o quintal, dá a volta na lua e cai de volta no prato"
+  },
+  {
+   "parte": "final",
+   "ideia": "convite; a Laurinha com bigode de molho dando tchau"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [
+  "funk_infantil"
+ ],
+ "status": "letra_revisada",
+ "versoes": [],
+ "youtube": {
+  "resumo": "MACARRÃO QUE NÃO ACABA! 🍝 A Laurinha enrolou o garfo, puxou um fiozinho… e o macarrão não acabou! Passou pela janela, pela cozinha, pelo quintal, deu a volta na lua e caiu de volta no prato. Slurp!",
+  "resumo_short": "MACARRÃO QUE NÃO ACABA! 🍝 Slurp!",
+  "curiosidade": ""
+ },
+ "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz)",
+ "persona": "laurinha",
+ "playlists": [
+  "Músicas Infantis da Laurinha e do Luisinho 🐝"
+ ],
+ "cantam": {
+  "verso": "laurinha",
+  "refrão": "laurinha",
+  "ponte": "laurinha"
+ }
+}

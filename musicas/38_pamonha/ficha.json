@@ -1,0 +1,69 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Olha a Pamonha!",
+ "gancho": "olha a pamonha",
+ "palavras_tema": [
+  "pamonha",
+  "milho",
+  "quero",
+  "carro da pamonha"
+ ],
+ "tipo": "comida",
+ "tema": "o carro da pamonha passando na rua, e a pamonha de chocolate que ninguém nunca viu",
+ "dia_a_dia": [
+  "festa junina",
+  "milho verde",
+  "comida de São João"
+ ],
+ "curiosidade": "a pamonha é feita de milho verde ralado e cozida dentro da palha do milho",
+ "ritmo": "xote",
+ "bpm": 100,
+ "estrutura": "A",
+ "voz": "laurinha",
+ "cenas": [
+  {
+   "parte": "intro",
+   "ideia": "a rua; o carrinho da pamonha buzinando (com corneta) vem chegando"
+  },
+  {
+   "parte": "verso 1",
+   "ideia": "a pamonha embrulhada na palha como num cobertor; a Laurinha morde e derrete de alegria"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "a turma corre atrás do carrinho gritando 'eu quero!'"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "de queijo? quero! de doce? quero! de chocolate?! (pamonha marrom imaginária) mas eu quero!"
+  },
+  {
+   "parte": "final",
+   "ideia": "convite; todos com pamonha na mão dando tchau para o carrinho"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [
+  "baiao"
+ ],
+ "status": "letra_revisada",
+ "versoes": [],
+ "youtube": {
+  "resumo": "OLHA A PAMONHA! 🌽 Lá vem o carro da pamonha buzinando na rua! Tem pamonha de queijo, tem pamonha de doce… e de chocolate? Ninguém nunca viu… mas a Laurinha quer!",
+  "resumo_short": "OLHA A PAMONHA! 🌽 Quem quer? Eu quero!",
+  "curiosidade": ""
+ },
+ "persona": "laurinha",
+ "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz)",
+ "playlists": [
+  "Músicas Infantis da Laurinha e do Luisinho 🐝"
+ ],
+ "cantam": {
+  "verso": "laurinha",
+  "refrão": "laurinha",
+  "ponte": "laurinha (pergunta e responde)"
+ }
+}

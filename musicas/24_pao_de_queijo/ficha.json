@@ -1,0 +1,69 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Pão de Queijo",
+ "gancho": "pão de queijo",
+ "palavras_tema": [
+  "pão de queijo",
+  "vovó",
+  "estica",
+  "uai"
+ ],
+ "tipo": "comida",
+ "tema": "o pão de queijo da vovó mineira que estica até a lua",
+ "dia_a_dia": [
+  "lanche da tarde",
+  "comida da vovó",
+  "pão de queijo quentinho"
+ ],
+ "curiosidade": "o pão de queijo nasceu em Minas Gerais",
+ "ritmo": "xote",
+ "bpm": 100,
+ "estrutura": "R",
+ "voz": "luisinho",
+ "cenas": [
+  {
+   "parte": "intro",
+   "ideia": "a cozinha da vovó; a fornada sai fumegando do forno"
+  },
+  {
+   "parte": "verso 1",
+   "ideia": "o Luisinho morde, o queijo estica até o telhado, passa pela lua e volta (cena absurda)"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "o queijo estica e não solta da boca do Luisinho; a vovó traz mais um"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "comandos: estica pro lado, pro outro, pra cima… nhac!"
+  },
+  {
+   "parte": "final",
+   "ideia": "convite; a vovó e o Luisinho com a cesta de pão de queijo dando tchau"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [
+  "sertanejo_infantil"
+ ],
+ "status": "letra_revisada",
+ "versoes": [],
+ "youtube": {
+  "resumo": "PÃO DE QUEIJO, UAI! 🧀 A vovó de Minas fez pão de queijo quentinho… o Luisinho deu uma mordida e o queijo esticou, esticou, passou pela lua e voltou! Estica pro lado, estica pro outro… nhac!",
+  "resumo_short": "PÃO DE QUEIJO, UAI! 🧀 Estica, estica com o Luisinho!",
+  "curiosidade": ""
+ },
+ "persona": "luisinho",
+ "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz)",
+ "playlists": [
+  "Músicas Infantis da Laurinha e do Luisinho 🐝"
+ ],
+ "cantam": {
+  "verso": "luisinho",
+  "refrão": "luisinho",
+  "ponte": "luisinho (comandos)"
+ }
+}

@@ -12,6 +12,21 @@ Fonte única das regras: o passo a passo do Suno ([COMO_USAR_NO_SUNO.md](COMO_US
 
 ---
 
+## 0. Jeito de escrever (18/11/2026 — análise da referência, aprovado pelo usuário; vale para toda letra nova)
+Detalhes em [REFERENCIA_ANIMADINHOS.md](REFERENCIA_ANIMADINHOS.md).
+1. **Premissa engraçada numa frase**: um personagem com um exagero (o queijo que estica até a lua, a vovó de patinete que
+   ninguém alcança, o macarrão que não acaba). Nada de "aula".
+2. **Molde que troca uma palavra** ("estica pro lado / pro outro / pra cima"; "foi o sapo? foi a formiga?"; "passou pela
+   cozinha / pelo quintal / pela lua").
+3. **Rima em todo par de versos**, palavras simples.
+4. **O bloco repete igual**: verso → refrão → intervalo → ponte → **o mesmo verso** → refrão → intervalo → ponte → refrão
+   forte → convite. Poucas linhas diferentes (~22).
+5. **Uma voz narra a música inteira** (a Persona da ficha). Sem respostinha em todo verso: no máximo um "ê!/vai!" no refrão.
+   (No Suno, texto entre parênteses vira voz de fundo — o gerador já converte, mas a letra nova nem usa.)
+6. **Falar com quem assiste**: comandos ("estica pro lado") e perguntas ("foi você?").
+7. **Lição só se for piada**; curiosidade vai só na descrição.
+8. Temas: mais **comida**, **personagens engraçados** (série da Vovó), **São João** em junho; títulos com som engraçado.
+
 ## 1. O que aprendemos com o mercado (referência: Animadinhos)
 
 Estudamos características gerais do gênero, **nunca** letras, melodias, arranjos, personagens ou títulos.

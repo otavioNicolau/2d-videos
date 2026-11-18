@@ -1,0 +1,69 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Quadrilha da Turminha",
+ "gancho": "quadrilha da turminha",
+ "palavras_tema": [
+  "quadrilha",
+  "junho",
+  "balancê",
+  "anarriê"
+ ],
+ "tipo": "festa",
+ "tema": "a quadrilha de São João da turminha, com o sapo atrapalhado",
+ "dia_a_dia": [
+  "festa junina",
+  "quadrilha",
+  "São João"
+ ],
+ "curiosidade": "na quadrilha, 'anarriê' quer dizer 'para trás'",
+ "ritmo": "forro_pe_de_serra",
+ "bpm": 132,
+ "estrutura": "R",
+ "voz": "luisinho",
+ "cenas": [
+  {
+   "parte": "intro",
+   "ideia": "quintal enfeitado: bandeirinhas, chapéus de palha, mesa de milho"
+  },
+  {
+   "parte": "verso 1",
+   "ideia": "os pares se formam: sapo e joaninha, grilo e formiga; o Luisinho de marcador"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "balancê; 'olha a chuva!' todo mundo se encolhe… 'é mentira!'"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "olha a cobra (é mentira!), caminho da roça, anarriê… o sapo escorrega e cai, todo mundo ri"
+  },
+  {
+   "parte": "final",
+   "ideia": "convite; a turma em fila dando tchau com o chapéu"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [
+  "baiao"
+ ],
+ "status": "letra_revisada",
+ "versoes": [],
+ "youtube": {
+  "resumo": "QUADRILHA DA TURMINHA! 🌽🎉 Chegou junho: bandeirinha no varal, chapéu de palha e festa no quintal! O sapo dança com a joaninha, o grilo com a formiga… balancê! Olha a chuva! É mentira! Anarriê… e o sapo escorregou!",
+  "resumo_short": "QUADRILHA DA TURMINHA! 🌽 Balancê com o Luisinho!",
+  "curiosidade": ""
+ },
+ "persona": "luisinho",
+ "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz)",
+ "playlists": [
+  "Músicas Infantis da Laurinha e do Luisinho 🐝"
+ ],
+ "cantam": {
+  "verso": "luisinho",
+  "refrão": "luisinho",
+  "ponte": "luisinho (marcador da quadrilha)"
+ }
+}

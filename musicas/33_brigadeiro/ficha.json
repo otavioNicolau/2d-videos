@@ -1,0 +1,69 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Brigadeiro",
+ "gancho": "brigadeiro",
+ "palavras_tema": [
+  "brigadeiro",
+  "festa",
+  "parabéns",
+  "quem comeu"
+ ],
+ "tipo": "comida",
+ "tema": "o brigadeiro que sumiu da festa: quem comeu?",
+ "dia_a_dia": [
+  "festa de aniversário",
+  "docinho",
+  "parabéns pra você"
+ ],
+ "curiosidade": "o brigadeiro foi inventado aqui no Brasil",
+ "ritmo": "latino_infantil",
+ "bpm": 100,
+ "estrutura": "R",
+ "voz": "laurinha",
+ "cenas": [
+  {
+   "parte": "intro",
+   "ideia": "festa de aniversário: balões, chapéus e o prato cheio de brigadeiro"
+  },
+  {
+   "parte": "verso 1",
+   "ideia": "na hora do parabéns, o prato está vazio! cara de susto geral"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "a Laurinha detetive com lupa pergunta para cada um (e para quem assiste)"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "o sapo? não. a formiga? não. o Luisinho? sim! nariz e bochecha sujos de chocolate"
+  },
+  {
+   "parte": "final",
+   "ideia": "convite; o Luisinho ri com a boca de chocolate e oferece o último brigadeiro"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [
+  "pagodao"
+ ],
+ "status": "letra_revisada",
+ "versoes": [],
+ "youtube": {
+  "resumo": "BRIGADEIRO! 🍫 Hoje é festa, tem balão e chapéu… mas na hora do parabéns o prato está vazio! Quem comeu o brigadeiro? Foi o sapo? Não! Foi a formiga? Não! Foi o Luisinho… tem chocolate até no nariz!",
+  "resumo_short": "BRIGADEIRO! 🍫 Quem comeu? Descubra com a Laurinha!",
+  "curiosidade": ""
+ },
+ "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz)",
+ "persona": "laurinha",
+ "playlists": [
+  "Músicas Infantis da Laurinha e do Luisinho 🐝"
+ ],
+ "cantam": {
+  "verso": "laurinha",
+  "refrão": "laurinha",
+  "ponte": "laurinha (pergunta para quem assiste)"
+ }
+}

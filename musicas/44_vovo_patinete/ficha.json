@@ -1,0 +1,69 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Vovó Patinete",
+ "gancho": "vovó patinete",
+ "palavras_tema": [
+  "vovó",
+  "patinete",
+  "capacete",
+  "fiu"
+ ],
+ "tipo": "humor",
+ "tema": "a vovó radical que ganhou um patinete e ninguém alcança",
+ "dia_a_dia": [
+  "andar de patinete com capacete",
+  "vovó",
+  "brincar na rua com um adulto"
+ ],
+ "curiosidade": "para andar de patinete a gente usa capacete",
+ "ritmo": "latino_infantil",
+ "bpm": 100,
+ "estrutura": "R",
+ "voz": "laurinha",
+ "cenas": [
+  {
+   "parte": "intro",
+   "ideia": "a vovó desembrulha o patinete cor-de-rosa e põe o capacete"
+  },
+  {
+   "parte": "verso 1",
+   "ideia": "a vovó dispara pela rua: passa pelo cachorro, pelo vovô (o chapéu dele voa)"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "fiu! só fica o rastro de vento; ninguém alcança a vovó"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "comandos: segura o guidão, pé no chão, impulso… a curva e o 'iiih!'"
+  },
+  {
+   "parte": "final",
+   "ideia": "convite; a vovó freia, pisca e dá tchau com a buzininha"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [
+  "pop_infantil"
+ ],
+ "status": "letra_revisada",
+ "versoes": [],
+ "youtube": {
+  "resumo": "VOVÓ PATINETE! 🛴👵 A vovó ganhou um patinete cor-de-rosa, botou o capacete e… fiu! Passou pelo cachorro, passou pelo vovô e ninguém alcançou! Segura o guidão, dá impulso e faz a curva!",
+  "resumo_short": "VOVÓ PATINETE! 🛴 Fiu! Ninguém alcança a vovó!",
+  "curiosidade": ""
+ },
+ "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz)",
+ "persona": "laurinha",
+ "playlists": [
+  "Músicas Infantis da Laurinha e do Luisinho 🐝"
+ ],
+ "cantam": {
+  "verso": "laurinha",
+  "refrão": "laurinha",
+  "ponte": "laurinha (comandos)"
+ }
+}
