@@ -42,6 +42,49 @@
    "pontos_a_conferir": [
     "só 73% da letra reconhecida — ouvir a pronúncia"
    ]
+  },
+  "v2": {
+   "arquivo": "v2.wav",
+   "duracao": 166.8,
+   "bpm": 143.6,
+   "bpm_nota": "",
+   "tom": "Sol maior",
+   "voz_inicio": 2.05,
+   "refrao_inicio": 1.9,
+   "cantado": 70,
+   "intervalos": [
+    [
+     7.8,
+     7.4
+    ],
+    [
+     44.1,
+     7.6
+    ],
+    [
+     71.0,
+     6.6
+    ],
+    [
+     106.0,
+     4.2
+    ],
+    [
+     139.2,
+     9.8
+    ]
+   ],
+   "fim_depois_da_voz": 1.9,
+   "final": "esmaecendo",
+   "silencio_final": 0.0,
+   "acerto": 86,
+   "nao_reconhecidas": [
+    "siri",
+    "alta",
+    "cava",
+    "pula"
+   ],
+   "pontos_a_conferir": []
   }
  },
  "ouvido": {
@@ -52,7 +95,15 @@
    "7 pronúncia natural": null,
    "8 tem a cara do canal": null,
    "9 nenhum trecho cansativo": null
+  },
+  "v2": {
+   "1 começo chama atenção": null,
+   "5 melodia combina com a letra": null,
+   "6 dá vontade de dançar": null,
+   "7 pronúncia natural": null,
+   "8 tem a cara do canal": null,
+   "9 nenhum trecho cansativo": null
   }
  },
- "escolhida": "v1"
+ "escolhida": "v2"
 }

@@ -163,7 +163,11 @@ def style(f: dict, ritmo: str | None = None, bpm: int | None = None, E: dict | N
     p = E["peso"][r["peso"]]
     bpm = bpm or (f["bpm"] if rid == f["ritmo"] else r["bpm"][2])
     voz = V["vozes"][f.get("voz", "dueto")]["style"]
-    parts = [E["canal"].get("duracao", ""), r["genero"], f"{bpm} bpm", p["style"], E["canal"].get("producao", ""), r["bateria"], r["instrumentos"], r["clima"], f.get("style_extra", ""),
+    # 18/11 (take v2 da 14): o Suno pesa mais o começo do Style — "teclado arranjador" vem antes do ritmo, e o ritmo entra como
+    # "groove" (o nome sozinho, ex. "axé music, Bahia carnival", puxava percussão ao vivo e batida variada)
+    genero = r["genero"].split(",")[0].strip()
+    parts = [E["canal"].get("duracao", ""), E["canal"].get("abertura", ""), f"{genero} groove", f"{bpm} bpm", r["bateria"], p["style"],
+             E["canal"].get("producao", ""), r["instrumentos"], r["clima"], f.get("style_extra", ""),
              voz, V["coro"].get("style", ""), E["canal"]["sempre"]]
     return ", ".join(x for x in parts if x)
 
