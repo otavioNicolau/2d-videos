@@ -63,7 +63,7 @@ def bolha(x, y=930, depth=0.8, z=3, tam=1.0, keys=None):
     return {"id": "bolha", "x": x, "y": y, "z": z, "depth": depth, "pose": {"tam": tam, "estoura": 0.0}, "keys": keys or []}
 
 
-def gato(x, y=930, depth=0.55, z=2, keys=None, pose=None):
+def gato(x, y=930, depth=0.75, z=2, keys=None, pose=None):
     return {"id": "gato", "x": x, "y": y, "z": z, "depth": depth, "pose": pose or {}, "keys": keys or []}
 
 
@@ -109,19 +109,19 @@ def verso(key, variante=1):
                      LU: {"x": 1900, "turn": -0.4, "expr": "surprised", "acoes": [{"t": max(0.2, tg + 0.4), "do": "take"}]}}}
     # 5–6: a bolha pega o gato e leva pro ar
     tgato = tp(c0, vc, "gato", default=0.6)
-    sobe = [{"t": 0.0, "pose": {"y": 930}}, {"t": max(0.3, tgato + 0.6), "pose": {"y": 930}}, {"t": round(c1 - c0 - 0.1, 2), "pose": {"y": 560}, "ease": "inout"}]
+    sobe = [{"t": 0.0, "pose": {"y": 930}}, {"t": max(0.3, tgato + 0.6), "pose": {"y": 930}}, {"t": round(c1 - c0 - 0.1, 2), "pose": {"y": 720}, "ease": "inout"}]
     p3 = {"linhas": 2, "cenario": JARDIM, "camera": {"x": 1300, "y": 520, "zoom": 1.05, "zoom_fim": 1.0},
           "callout": [call(tgato + 0.3, "O GATO!", "laranja")],
           "objetos": {"gato": gato(1300, 930, keys=[{"t": 0.0, "pose": {"assusta": 0.0}}, {"t": tgato + 0.5, "pose": {"assusta": 1.0}, "ease": "out"}] + [dict(k) for k in sobe]),
-                      "bolha": bolha(1300, 960, depth=0.75, keys=[{"t": 0.0, "pose": {"x": 900}}, {"t": max(0.2, tgato + 0.4), "pose": {"x": 1300}, "ease": "inout"}]
+                      "bolha": bolha(1300, 960, depth=0.95, keys=[{"t": 0.0, "pose": {"x": 900}}, {"t": max(0.2, tgato + 0.4), "pose": {"x": 1300}, "ease": "inout"}]
                                      + [{"t": k["t"], "pose": {"y": k["pose"]["y"] + 30}, **({"ease": k["ease"]} if "ease" in k else {})} for k in sobe])},
           "atores": {LA: {"x": 650, "turn": 0.4, "acoes": [{"t": max(0.2, tgato + 0.5), "do": "take"}]}}}
     # 7–8: "miau" e vai passear no ar (atravessa o céu)
     tm = tp(d0, vd, "miau", default=0.8)
     p4 = {"linhas": 2, "cenario": JARDIM if variante == 1 else "plano_ceu", "camera": CAM, "callout": [call(tm, "MIAU!", "amarelo")],
-          "objetos": {"gato": gato(500, 560, depth=0.5, keys=[{"t": 0.0, "pose": {"x": 450}}, {"t": round(d1 - d0 - 0.1, 2), "pose": {"x": 2200}, "ease": "inout"},
+          "objetos": {"gato": gato(500, 770, depth=0.7, keys=[{"t": 0.0, "pose": {"x": 450}}, {"t": round(d1 - d0 - 0.1, 2), "pose": {"x": 2200}, "ease": "inout"},
                                                                 {"t": max(0.05, tm - 0.05), "pose": {"miau": 0.0}}, {"t": tm + 0.1, "pose": {"miau": 1.0}}, {"t": tm + 0.6, "pose": {"miau": 0.0, "aceno": 1.0}}]),
-                      "bolha": bolha(450, 590, depth=0.7, keys=[{"t": 0.0, "pose": {"x": 450}}, {"t": round(d1 - d0 - 0.1, 2), "pose": {"x": 2200}, "ease": "inout"}])},
+                      "bolha": bolha(450, 800, depth=0.9, keys=[{"t": 0.0, "pose": {"x": 450}}, {"t": round(d1 - d0 - 0.1, 2), "pose": {"x": 2200}, "ease": "inout"}])},
           "atores": {LA: {"x": 900, "y": 930 if variante == 1 else 820, "turn": 0.3, "fly": 0 if variante == 1 else 1,
                           "acoes": [{"t": 0.2, "do": "laugh", "dur": "resto"}]}}}
     if variante == 2:                                          # 2ª vez: o Luisinho voa atrás da bolha
@@ -140,10 +140,10 @@ def refrao(n):
     (a0, a1, va), (b0, b1, vb) = starts(f"refrao#{n}", [4, 4])
     tpl = tp(a0, va, "ploc", "poque", "plóqui", default=5.6)
     # 1º plano: a bolha com o gato sobe devagar… ploc! o gato cai de pé no jardim
-    sobe = [{"t": 0.0, "pose": {"y": 900}}, {"t": max(0.3, tpl - 0.1), "pose": {"y": 420}, "ease": "inout"}]
+    sobe = [{"t": 0.0, "pose": {"y": 900}}, {"t": max(0.3, tpl - 0.1), "pose": {"y": 640}, "ease": "inout"}]
     p1 = {"linhas": 4, "cenario": JARDIM, "camera": {"x": 1300, "y": 520, "zoom": 1.0, "zoom_fim": 1.05}, "flash": True,
           "callout": [call(0.15, "BOLHA DE SABÃO!", cor), call(tpl, "PLOC!", "vermelho")],
-          "objetos": {"bolha": bolha(1300, 900, depth=0.75, keys=[dict(k) for k in sobe] + [{"t": max(0.05, tpl - 0.05), "pose": {"estoura": 0.0}},
+          "objetos": {"bolha": bolha(1300, 900, depth=0.95, keys=[dict(k) for k in sobe] + [{"t": max(0.05, tpl - 0.05), "pose": {"estoura": 0.0}},
                                                                                          {"t": tpl + 0.4, "pose": {"estoura": 1.0}, "ease": "out"}]),
                       "gato": gato(1300, 870, keys=[dict(k, pose={"y": k["pose"]["y"] - 30}) for k in sobe] +
                                    [{"t": tpl + 0.05, "pose": {"assusta": 1.0}}, {"t": tpl + 0.8, "pose": {"y": 930}, "ease": "in"},
@@ -180,7 +180,7 @@ def intervalo(key, bg_close, n):
     return [{"linhas": 1, "cenario": bg_close, "camera": "close:laurinha", "callout": "BORA, TURMINHA!",
              "atores": {LA: {"x": 960, "acoes": [{"t": 0.1, "do": "apontar_camera", "dur": "resto"}]}}},
             {"seg": round(t1 - fim, 2), "cenario": JARDIM, "camera": CAM, "titulo": "dança com o gato e as bolhinhas", "fx": ["notas"],
-             "objetos": {"gato": gato(1300, 930, depth=0.6, keys=[{"t": 0.0, "pose": {"rabo": 0.0}}, {"t": round(t1 - fim - 0.1, 2), "pose": {"rabo": 4.0}, "ease": "linear"}]),
+             "objetos": {"gato": gato(1300, 930, depth=0.8, keys=[{"t": 0.0, "pose": {"rabo": 0.0}}, {"t": round(t1 - fim - 0.1, 2), "pose": {"rabo": 4.0}, "ease": "linear"}]),
                          **bolhinhas(fim, t1, n=4, x0=500, dx=450, depth=0.35, sobe=450)},
              "atores": {LA: {"x": 750, "turn": 0.3, "acoes": [{"t": 0.0, "do": "dance", "style": ["festa", "bracos"][n % 2], "dur": "resto"}]},
                         LU: {"x": 1850, "turn": -0.3, "acoes": [{"t": 0.0, "do": "dance", "style": ["lado", "pulinho"][n % 2], "dur": "resto"}]}}}]
@@ -233,8 +233,8 @@ tpl = tp(t0, v, "ploc", "plóqui", "poque", default=2.0)
 partes["final#2"] = [
     {"linhas": 1, "cenario": JARDIM, "camera": {"x": 1300, "y": 540, "zoom": 1.0, "zoom_fim": 1.08}, "fx": ["coracoes"],
      "callout": [call(tp(t0, v, "tchau", default=1.0), "TCHAU!", "amarelo"), call(tpl, "PLOC!", "vermelho")],
-     "objetos": {"gato": gato(1300, 600, depth=0.5, keys=[{"t": 0.0, "pose": {"aceno": 1.0}}, {"t": max(0.1, tpl), "pose": {"y": 600}}, {"t": tpl + 0.8, "pose": {"y": 930, "aceno": 0.0}, "ease": "in"}]),
-                 "bolha": bolha(1300, 630, depth=0.7, keys=[{"t": max(0.05, tpl - 0.05), "pose": {"estoura": 0.0}}, {"t": tpl + 0.4, "pose": {"estoura": 1.0}, "ease": "out"}])},
+     "objetos": {"gato": gato(1300, 770, depth=0.7, keys=[{"t": 0.0, "pose": {"aceno": 1.0}}, {"t": max(0.1, tpl), "pose": {"y": 770}}, {"t": tpl + 0.8, "pose": {"y": 930, "aceno": 0.0}, "ease": "in"}]),
+                 "bolha": bolha(1300, 800, depth=0.9, keys=[{"t": max(0.05, tpl - 0.05), "pose": {"estoura": 0.0}}, {"t": tpl + 0.4, "pose": {"estoura": 1.0}, "ease": "out"}])},
      "atores": {LA: {"x": 750, "turn": 0.3, "acoes": [{"t": 0.0, "do": "dance", "style": "tchau", "dur": round(max(1.0, tpl), 2)}, {"t": round(tpl + 0.3, 2), "do": "laugh", "dur": "resto"}]},
                 LU: {"x": 1900, "turn": -0.3, "acoes": [{"t": 0.0, "do": "dance", "style": "tchau", "dur": round(max(1.0, tpl), 2)}, {"t": round(tpl + 0.4, 2), "do": "laugh", "dur": "resto"}]}}},
 ]
