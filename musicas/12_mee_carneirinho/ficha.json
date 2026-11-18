@@ -37,7 +37,7 @@
   },
   {
    "parte": "refrão",
-   "ideia": "a cada \"o carneirinho mandou…\" um comando novo e todos fazem: pular, sentar, girar, abaixar, dançar; no último, todo mundo se abraça"
+   "ideia": "a cada \"o carneirinho mandou…\" um comando novo e todos fazem: pular, sentar, girar, abaixar, bater palma, bater o pé, dançar; no último, todo mundo se abraça"
   },
   {
    "parte": "verso 2",
@@ -45,11 +45,15 @@
   },
   {
    "parte": "ponte",
-   "ideia": "pula a cerquinha, come capim (nhac!), faz 'méé' e a música para: estátua"
+   "ideia": "pula a cerquinha, come capim (nhac!), faz 'méé' e a música para: estátua; \"de novo!\" e a brincadeira se repete"
+  },
+  {
+   "parte": "verso 3",
+   "ideia": "esconde-esconde: o carneirinho some no meio das nuvens-carneirinho; uma nuvem faz \"méé\"… achei! Depois, palma e pé"
   },
   {
    "parte": "final",
-   "ideia": "convite; o carneirinho de blusinha dá tchau"
+   "ideia": "convite (joinha, papai e mamãe, inscreva-se); a turma de blusinha dá tchau com o carneirinho no campo"
   }
  ],
  "duracao_alvo": [
@@ -59,12 +63,104 @@
  "alternativas": [
   "reggae_infantil"
  ],
- "status": "letra_revisada",
- "versoes": [],
+ "status": "aprovada",
+ "versoes": [
+  "v1",
+  "v2"
+ ],
  "youtube": {
-  "resumo": "MÉÉ, CARNEIRINHO! 🐑 Lá no campo tem um carneirinho que manda e a gente faz: o carneirinho mandou… todo mundo pular! Sentar! Girar! Abaixar! Dançar! Abraçar! Brrr, que friozinho: a lã do carneirinho vira blusinha quentinha. Pula a cerquinha, come capim, faz méé… estátua!",
+  "resumo": "MÉÉ, CARNEIRINHO! 🐑 Lá no campo tem um carneirinho que manda e a gente faz: o carneirinho mandou… todo mundo pular! Sentar! Girar! Abaixar! Bater palma! Bater o pé! Dançar! Abraçar! Brrr, que friozinho: a lã do carneirinho vira blusinha quentinha. Pula a cerquinha, come capim, faz méé… estátua! E cadê o carneirinho? Sumiu na nuvem!",
   "resumo_short": "MÉÉ, CARNEIRINHO! 🐑 O carneirinho mandou… brinque com a Laurinha e o Luisinho!",
-  "curiosidade": "A lã do carneirinho vira blusinha quentinha de frio"
+  "curiosidade": "A lã do carneirinho vira blusinha quentinha de frio",
+  "miniatura_cena": {
+   "fundo": "aneis",
+   "cores": [
+    [
+     110,
+     200,
+     255
+    ],
+    [
+     120,
+     210,
+     90
+    ],
+    [
+     255,
+     150,
+     200
+    ],
+    [
+     255,
+     224,
+     120
+    ],
+    [
+     90,
+     180,
+     70
+    ]
+   ],
+   "heroi": {
+    "id": "laurinha",
+    "pose": {
+     "turn": 0.2,
+     "mouth": "D",
+     "blusa": 1,
+     "hand_n_x": -135,
+     "hand_n_y": -135,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3
+    }
+   },
+   "par": {
+    "id": "luisinho",
+    "pose": {
+     "turn": -0.2,
+     "mouth": "D",
+     "blusa": 1,
+     "hand_n_x": -135,
+     "hand_n_y": -135,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3
+    }
+   },
+   "objetos": [
+    {
+     "id": "nuvem",
+     "pose": {
+      "boca": 0.5
+     },
+     "tam": 230,
+     "x": 160,
+     "base": 290
+    }
+   ],
+   "frente": [
+    {
+     "id": "carneirinho",
+     "pose": {
+      "mee": 1,
+      "lado": -1
+     },
+     "tam": 400,
+     "x": 690,
+     "base": 745
+    }
+   ]
+  }
  },
- "revisao": "clássica convertida em autoral 18/11/2026 (o Suno bloqueia letras tradicionais)"
+ "revisao": "18/11/2026: letra aumentada (take v1 saiu com 1:43 e o Suno completou com a cantiga tradicional): intro 2×, ponte 2×, verso 3 + refrão palma/pé",
+ "escolhida": "v2",
+ "capitulos": {
+  "ponte": "Pula a cerquinha"
+ }
 }

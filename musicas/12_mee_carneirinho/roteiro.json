@@ -1,0 +1,5759 @@
+{
+ "schema": "roteiro-1.0",
+ "nota": "Roteiro verso a verso de 'Méé, Carneirinho!' (take v2 de 18/11/2026, 2:20; letra aumentada): no campo, o carneirinho é o chefe da brincadeira — a cada \"o carneirinho mandou…\" todo mundo faz o comando junto (pular, sentar, girar, abaixar, palma, pé, dançar, abraçar); a lã vira blusinha quentinha no frio; ponte da cerquinha/capim/estátua 2×; esconde-esconde nas nuvens; convite e tchau. Gerado por scripts/roteiros/ep12_mee_carneirinho.py.",
+ "partes": {
+  "intro": [
+   {
+    "linhas": 1,
+    "cenario": "plano_campo",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "callout": [
+     {
+      "t": 2.0,
+      "text": "MÉÉ!",
+      "color": "rosa"
+     }
+    ],
+    "objetos": {
+     "carneirinho": {
+      "id": "carneirinho",
+      "x": 1300,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 2900
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0
+        }
+       },
+       {
+        "t": 0.64,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear"
+       },
+       {
+        "t": 1.082,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear"
+       },
+       {
+        "t": 1.523,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear"
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "x": 1300
+        },
+        "ease": "out"
+       },
+       {
+        "t": 1.95,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 2.06,
+        "pose": {
+         "mee": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 3.58,
+        "pose": {
+         "mee": 0.0
+        },
+        "ease": "in"
+       },
+       {
+        "t": 4.19,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 4.3,
+        "pose": {
+         "mee": 1.0
+        },
+        "ease": "out"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_campo",
+    "camera": "aberto",
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "MÉÉ, CARNEIRINHO!",
+      "color": "amarelo"
+     }
+    ],
+    "objetos": {
+     "carneirinho": {
+      "id": "carneirinho",
+      "x": 1300,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 0.08,
+        "pose": {
+         "mee": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 0.418,
+        "pose": {
+         "balanco": -1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 0.65,
+        "pose": {
+         "mee": 0.0
+        },
+        "ease": "in"
+       },
+       {
+        "t": 0.859,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 1.3,
+        "pose": {
+         "balanco": -1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 1.741,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 2.183,
+        "pose": {
+         "balanco": -1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 2.647,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 2.8600000000000003,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 2.97,
+        "pose": {
+         "mee": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 3.088,
+        "pose": {
+         "balanco": -1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 3.529,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 3.994,
+        "pose": {
+         "balanco": -1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 4.2,
+        "pose": {
+         "mee": 0.0
+        },
+        "ease": "in"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": -300,
+      "y": 600,
+      "turn": 0.4,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "fly",
+        "dur": 2.2,
+        "to_x": 860,
+        "to_y": 930
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 2900,
+      "y": 560,
+      "turn": -0.4,
+      "acoes": [
+       {
+        "t": 0.5,
+        "do": "fly",
+        "dur": 2.2,
+        "to_x": 1760,
+        "to_y": 930
+       }
+      ]
+     }
+    }
+   },
+   {
+    "seg": 6.02,
+    "cenario": "plano_campo",
+    "camera": {
+     "x": 1300,
+     "y": 600,
+     "zoom": 1.12,
+     "zoom_fim": 1.18
+    },
+    "titulo": "a turma dança com o carneirinho",
+    "fx": [
+     "notas"
+    ],
+    "objetos": {
+     "carneirinho": {
+      "id": "carneirinho",
+      "x": 1300,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0
+        }
+       },
+       {
+        "t": 0.238,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 0.679,
+        "pose": {
+         "balanco": -1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 0.942,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear"
+       },
+       {
+        "t": 1.12,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 1.562,
+        "pose": {
+         "balanco": -1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 2.026,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 2.467,
+        "pose": {
+         "balanco": -1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 2.73,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear"
+       },
+       {
+        "t": 2.908,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 3.349,
+        "pose": {
+         "balanco": -1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 3.814,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 4.255,
+        "pose": {
+         "balanco": -1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 4.518,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear"
+       },
+       {
+        "t": 4.696,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 5.137,
+        "pose": {
+         "balanco": -1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 5.579,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 860,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "pulinho",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1760,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "gingado",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "verso#1": [
+   {
+    "linhas": 1,
+    "cenario": "plano_campo",
+    "camera": "medio:laurinha",
+    "callout": [
+     {
+      "t": 1.73,
+      "text": "OLHA!",
+      "color": "azul"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 900,
+      "turn": 0.4,
+      "acoes": [
+       {
+        "t": 0.3,
+        "do": "point",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_campo",
+    "camera": {
+     "x": 1500,
+     "y": 560,
+     "zoom": 1.2,
+     "zoom_fim": 1.26
+    },
+    "callout": [
+     {
+      "t": 1.2,
+      "text": "MÉÉ!",
+      "color": "rosa"
+     }
+    ],
+    "objetos": {
+     "cerca": {
+      "id": "cerquinha",
+      "x": 1500,
+      "y": 960,
+      "z": 3,
+      "depth": 1.2
+     },
+     "carneirinho": {
+      "id": "carneirinho",
+      "x": 1500,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "y": 1300
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 0.5,
+        "pose": {
+         "y": 930
+        },
+        "ease": "back"
+       },
+       {
+        "t": 1.15,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 1.26,
+        "pose": {
+         "mee": 1.0
+        },
+        "ease": "out"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_campo",
+    "camera": {
+     "x": 1300,
+     "y": 520,
+     "zoom": 1.25,
+     "zoom_fim": 1.3
+    },
+    "callout": [
+     {
+      "t": 1.0,
+      "text": "FOFINHO!",
+      "color": "amarelo"
+     }
+    ],
+    "objetos": {
+     "carneirinho": {
+      "id": "carneirinho",
+      "x": 1300,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "balanco": 0.5
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 0.441,
+        "pose": {
+         "balanco": -0.5
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 0.882,
+        "pose": {
+         "balanco": 0.5
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 1.347,
+        "pose": {
+         "balanco": -0.5
+        },
+        "ease": "inout"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 700,
+      "y": 700,
+      "fly": 1,
+      "turn": 0.4,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "fly",
+        "dur": 1.2,
+        "to_x": 1260,
+        "to_y": 520
+       },
+       {
+        "t": 1.4,
+        "do": "abraco",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_campo",
+    "camera": "aberto",
+    "callout": [
+     {
+      "t": 1.69,
+      "text": "BORA!",
+      "color": "verde"
+     }
+    ],
+    "objetos": {
+     "carneirinho": {
+      "id": "carneirinho",
+      "x": 1300,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 0.3,
+        "pose": {
+         "mee": 1.0
+        }
+       },
+       {
+        "t": 0.8,
+        "pose": {
+         "mee": 0.0
+        }
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 850,
+      "turn": 0.4,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "cheguei",
+        "dur": 1.2
+       },
+       {
+        "t": 1.4,
+        "do": "jump",
+        "dur": 0.8
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1760,
+      "turn": -0.4,
+      "acoes": [
+       {
+        "t": 0.3,
+        "do": "cheguei",
+        "dur": 1.2
+       },
+       {
+        "t": 1.5,
+        "do": "jump",
+        "dur": 0.8
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "refrao#1": [
+   {
+    "linhas": 2,
+    "cenario": "danca_xadrez_verde",
+    "fx": [
+     "estrelas"
+    ],
+    "callout": [
+     {
+      "t": 0.15,
+      "text": "MÉÉ, CARNEIRINHO!",
+      "color": "amarelo"
+     }
+    ],
+    "objetos": {
+     "carneirinho": {
+      "id": "carneirinho",
+      "x": 960,
+      "y": 1010,
+      "z": 2,
+      "depth": 0.95,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 0.05,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 0.16,
+        "pose": {
+         "mee": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 0.442,
+        "pose": {
+         "balanco": -1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 0.88,
+        "pose": {
+         "mee": 0.0
+        },
+        "ease": "in"
+       },
+       {
+        "t": 0.883,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 1.324,
+        "pose": {
+         "balanco": -1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 1.53,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 1.6400000000000001,
+        "pose": {
+         "mee": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 1.765,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 1.94,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 1.99,
+        "pose": {
+         "mee": 0.0
+        },
+        "ease": "in"
+       },
+       {
+        "t": 2.05,
+        "pose": {
+         "mee": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 2.206,
+        "pose": {
+         "balanco": -1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 2.4,
+        "pose": {
+         "mee": 0.0
+        },
+        "ease": "in"
+       },
+       {
+        "t": 2.647,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 470,
+      "y": 1010,
+      "depth": 1.15,
+      "turn": 0.25,
+      "pose": {},
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "pulinho",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1450,
+      "y": 1010,
+      "depth": 1.15,
+      "turn": -0.25,
+      "pose": {},
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "gingado",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "flash": true
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_campo",
+    "camera": {
+     "x": 1250,
+     "y": 470,
+     "zoom": 1.45,
+     "zoom_fim": 1.5
+    },
+    "callout": [
+     {
+      "t": 1.73,
+      "text": "O QUÊ?",
+      "color": "laranja"
+     }
+    ],
+    "objetos": {
+     "carneirinho": {
+      "id": "carneirinho",
+      "x": 1300,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.05,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 0.19,
+        "pose": {
+         "mee": 0.8
+        }
+       },
+       {
+        "t": 0.31,
+        "pose": {
+         "mee": 0.8
+        }
+       },
+       {
+        "t": 0.37,
+        "pose": {
+         "mee": 0.2
+        }
+       },
+       {
+        "t": 0.49,
+        "pose": {
+         "mee": 0.2
+        }
+       },
+       {
+        "t": 1.09,
+        "pose": {
+         "mee": 0.8
+        }
+       },
+       {
+        "t": 1.27,
+        "pose": {
+         "mee": 0.2
+        }
+       },
+       {
+        "t": 1.63,
+        "pose": {
+         "mee": 0.0
+        }
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 930,
+      "turn": 0.45,
+      "pose": {},
+      "acoes": [
+       {
+        "t": 1.53,
+        "do": "pensar",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_campo",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.08,
+     "zoom_fim": 1.14
+    },
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "PULA!",
+      "color": "amarelo"
+     }
+    ],
+    "objetos": {
+     "carneirinho": {
+      "id": "carneirinho",
+      "x": 1300,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0
+        }
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 820,
+      "turn": 0.35,
+      "pose": {},
+      "acoes": [
+       {
+        "t": 0.15,
+        "do": "jump",
+        "dur": 0.9
+       },
+       {
+        "t": 1.1,
+        "do": "jump",
+        "dur": 0.8
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1800,
+      "turn": -0.35,
+      "pose": {},
+      "acoes": [
+       {
+        "t": 0.25,
+        "do": "jump",
+        "dur": 0.9
+       },
+       {
+        "t": 1.2,
+        "do": "jump",
+        "dur": 0.8
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 2,
+    "cenario": "danca_bolinhas_rosa",
+    "fx": [
+     "notas"
+    ],
+    "callout": [
+     {
+      "t": 0.15,
+      "text": "MÉÉ, CARNEIRINHO!",
+      "color": "amarelo"
+     }
+    ],
+    "objetos": {
+     "carneirinho": {
+      "id": "carneirinho",
+      "x": 960,
+      "y": 1010,
+      "z": 2,
+      "depth": 0.95,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 0.14,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 0.25,
+        "pose": {
+         "mee": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 0.441,
+        "pose": {
+         "balanco": -1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 0.84,
+        "pose": {
+         "mee": 0.0
+        },
+        "ease": "in"
+       },
+       {
+        "t": 0.882,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 1.346,
+        "pose": {
+         "balanco": -1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 1.53,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 1.6400000000000001,
+        "pose": {
+         "mee": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 1.787,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 2.0500000000000003,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 2.1,
+        "pose": {
+         "mee": 0.0
+        },
+        "ease": "in"
+       },
+       {
+        "t": 2.16,
+        "pose": {
+         "mee": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 2.229,
+        "pose": {
+         "balanco": -1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 2.62,
+        "pose": {
+         "mee": 0.0
+        },
+        "ease": "in"
+       },
+       {
+        "t": 2.67,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 470,
+      "y": 1010,
+      "depth": 1.15,
+      "turn": 0.25,
+      "pose": {},
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "pulinho",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1450,
+      "y": 1010,
+      "depth": 1.15,
+      "turn": -0.25,
+      "pose": {},
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "gingado",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_campo",
+    "camera": {
+     "x": 1250,
+     "y": 470,
+     "zoom": 1.45,
+     "zoom_fim": 1.5
+    },
+    "callout": [
+     {
+      "t": 1.71,
+      "text": "O QUÊ?",
+      "color": "laranja"
+     }
+    ],
+    "objetos": {
+     "carneirinho": {
+      "id": "carneirinho",
+      "x": 1300,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.05,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 0.17,
+        "pose": {
+         "mee": 0.8
+        }
+       },
+       {
+        "t": 0.29,
+        "pose": {
+         "mee": 0.8
+        }
+       },
+       {
+        "t": 0.35,
+        "pose": {
+         "mee": 0.2
+        }
+       },
+       {
+        "t": 0.47,
+        "pose": {
+         "mee": 0.2
+        }
+       },
+       {
+        "t": 1.11,
+        "pose": {
+         "mee": 0.8
+        }
+       },
+       {
+        "t": 1.29,
+        "pose": {
+         "mee": 0.2
+        }
+       },
+       {
+        "t": 1.61,
+        "pose": {
+         "mee": 0.0
+        }
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 930,
+      "turn": 0.45,
+      "pose": {},
+      "acoes": [
+       {
+        "t": 1.51,
+        "do": "pensar",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_campo",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.08,
+     "zoom_fim": 1.14
+    },
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "SENTEI!",
+      "color": "verde"
+     }
+    ],
+    "objetos": {
+     "carneirinho": {
+      "id": "carneirinho",
+      "x": 1300,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "senta": 0.0
+        }
+       },
+       {
+        "t": 0.5,
+        "pose": {
+         "senta": 1.0
+        },
+        "ease": "out"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 820,
+      "turn": 0.35,
+      "pose": {},
+      "acoes": [
+       {
+        "t": 0.3,
+        "do": "sit"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1800,
+      "turn": -0.35,
+      "pose": {},
+      "acoes": [
+       {
+        "t": 0.4,
+        "do": "sit"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "refrao#2": [
+   {
+    "linhas": 2,
+    "cenario": "danca_ondas_azul",
+    "fx": [
+     "estrelas"
+    ],
+    "callout": [
+     {
+      "t": 0.15,
+      "text": "MÉÉ, CARNEIRINHO!",
+      "color": "rosa"
+     }
+    ],
+    "objetos": {
+     "carneirinho": {
+      "id": "carneirinho",
+      "x": 960,
+      "y": 1010,
+      "z": 2,
+      "depth": 0.95,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 0.039999999999999994,
+        "pose": {
+         "mee": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 0.441,
+        "pose": {
+         "balanco": -1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 0.883,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 1.347,
+        "pose": {
+         "balanco": -1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 1.43,
+        "pose": {
+         "mee": 0.0
+        },
+        "ease": "in"
+       },
+       {
+        "t": 1.788,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 1.94,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 2.05,
+        "pose": {
+         "mee": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 2.206,
+        "pose": {
+         "balanco": -1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 2.4400000000000004,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 2.49,
+        "pose": {
+         "mee": 0.0
+        },
+        "ease": "in"
+       },
+       {
+        "t": 2.5500000000000003,
+        "pose": {
+         "mee": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 2.671,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 2.99,
+        "pose": {
+         "mee": 0.0
+        },
+        "ease": "in"
+       },
+       {
+        "t": 3.112,
+        "pose": {
+         "balanco": -1.0
+        },
+        "ease": "inout"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 470,
+      "y": 1010,
+      "depth": 1.15,
+      "turn": 0.25,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "bracos",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1450,
+      "y": 1010,
+      "depth": 1.15,
+      "turn": -0.25,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "lado",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "flash": true
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_campo",
+    "camera": {
+     "x": 1250,
+     "y": 470,
+     "zoom": 1.45,
+     "zoom_fim": 1.5
+    },
+    "callout": [
+     {
+      "t": 1.68,
+      "text": "O QUÊ?",
+      "color": "laranja"
+     }
+    ],
+    "objetos": {
+     "carneirinho": {
+      "id": "carneirinho",
+      "x": 1300,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.05,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 0.12,
+        "pose": {
+         "mee": 0.8
+        }
+       },
+       {
+        "t": 0.3,
+        "pose": {
+         "mee": 0.2
+        }
+       },
+       {
+        "t": 0.34,
+        "pose": {
+         "mee": 0.8
+        }
+       },
+       {
+        "t": 0.52,
+        "pose": {
+         "mee": 0.2
+        }
+       },
+       {
+        "t": 1.08,
+        "pose": {
+         "mee": 0.8
+        }
+       },
+       {
+        "t": 1.26,
+        "pose": {
+         "mee": 0.2
+        }
+       },
+       {
+        "t": 1.58,
+        "pose": {
+         "mee": 0.0
+        }
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 930,
+      "turn": 0.45,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 1.48,
+        "do": "pensar",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_campo",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.08,
+     "zoom_fim": 1.14
+    },
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "GIREI!",
+      "color": "roxo"
+     }
+    ],
+    "objetos": {
+     "carneirinho": {
+      "id": "carneirinho",
+      "x": 1300,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "lado": 1
+        }
+       },
+       {
+        "t": 0.2,
+        "pose": {
+         "lado": -1
+        }
+       },
+       {
+        "t": 0.5,
+        "pose": {
+         "lado": 1
+        }
+       },
+       {
+        "t": 0.8,
+        "pose": {
+         "lado": -1
+        }
+       },
+       {
+        "t": 1.1,
+        "pose": {
+         "lado": 1
+        }
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 820,
+      "turn": 0.35,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.15,
+        "do": "turn",
+        "to": -0.5
+       },
+       {
+        "t": 0.55,
+        "do": "turn",
+        "to": 0.5
+       },
+       {
+        "t": 0.95,
+        "do": "turn",
+        "to": -0.5
+       },
+       {
+        "t": 1.35,
+        "do": "turn",
+        "to": 0.35
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1800,
+      "turn": -0.35,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "turn",
+        "to": 0.5
+       },
+       {
+        "t": 0.6,
+        "do": "turn",
+        "to": -0.5
+       },
+       {
+        "t": 1.0,
+        "do": "turn",
+        "to": 0.5
+       },
+       {
+        "t": 1.4,
+        "do": "turn",
+        "to": -0.35
+       }
+      ]
+     }
+    },
+    "fx": [
+     "estrelas"
+    ]
+   },
+   {
+    "linhas": 2,
+    "cenario": "danca_raios_laranja",
+    "fx": [
+     "notas"
+    ],
+    "callout": [
+     {
+      "t": 0.15,
+      "text": "MÉÉ, CARNEIRINHO!",
+      "color": "rosa"
+     }
+    ],
+    "objetos": {
+     "carneirinho": {
+      "id": "carneirinho",
+      "x": 960,
+      "y": 1010,
+      "z": 2,
+      "depth": 0.95,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 0.2,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 0.31,
+        "pose": {
+         "mee": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 0.442,
+        "pose": {
+         "balanco": -1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 0.86,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 0.87,
+        "pose": {
+         "mee": 0.0
+        },
+        "ease": "in"
+       },
+       {
+        "t": 1.324,
+        "pose": {
+         "balanco": -1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 1.52,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 1.6300000000000001,
+        "pose": {
+         "mee": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 1.742,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 2.0300000000000002,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 2.08,
+        "pose": {
+         "mee": 0.0
+        },
+        "ease": "in"
+       },
+       {
+        "t": 2.14,
+        "pose": {
+         "mee": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 2.183,
+        "pose": {
+         "balanco": -1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 2.59,
+        "pose": {
+         "mee": 0.0
+        },
+        "ease": "in"
+       },
+       {
+        "t": 2.624,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 470,
+      "y": 1010,
+      "depth": 1.15,
+      "turn": 0.25,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "bracos",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1450,
+      "y": 1010,
+      "depth": 1.15,
+      "turn": -0.25,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "lado",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_campo",
+    "camera": {
+     "x": 1250,
+     "y": 470,
+     "zoom": 1.45,
+     "zoom_fim": 1.5
+    },
+    "callout": [
+     {
+      "t": 1.68,
+      "text": "O QUÊ?",
+      "color": "laranja"
+     }
+    ],
+    "objetos": {
+     "carneirinho": {
+      "id": "carneirinho",
+      "x": 1300,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.05,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 0.16,
+        "pose": {
+         "mee": 0.8
+        }
+       },
+       {
+        "t": 0.28,
+        "pose": {
+         "mee": 0.8
+        }
+       },
+       {
+        "t": 0.33999999999999997,
+        "pose": {
+         "mee": 0.2
+        }
+       },
+       {
+        "t": 0.46,
+        "pose": {
+         "mee": 0.2
+        }
+       },
+       {
+        "t": 1.04,
+        "pose": {
+         "mee": 0.8
+        }
+       },
+       {
+        "t": 1.22,
+        "pose": {
+         "mee": 0.2
+        }
+       },
+       {
+        "t": 1.58,
+        "pose": {
+         "mee": 0.0
+        }
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 930,
+      "turn": 0.45,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 1.48,
+        "do": "pensar",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_campo",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.08,
+     "zoom_fim": 1.14
+    },
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "ABAIXEI!",
+      "color": "azul"
+     }
+    ],
+    "objetos": {
+     "carneirinho": {
+      "id": "carneirinho",
+      "x": 1300,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "senta": 0.0
+        }
+       },
+       {
+        "t": 0.4,
+        "pose": {
+         "senta": 0.7
+        },
+        "ease": "out"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 820,
+      "turn": 0.35,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "agacha",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1800,
+      "turn": -0.35,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "agacha",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "refrao#3": [
+   {
+    "linhas": 2,
+    "cenario": "danca_xadrez_azul",
+    "fx": [
+     "estrelas"
+    ],
+    "callout": [
+     {
+      "t": 0.15,
+      "text": "MÉÉ, CARNEIRINHO!",
+      "color": "azul"
+     }
+    ],
+    "objetos": {
+     "carneirinho": {
+      "id": "carneirinho",
+      "x": 960,
+      "y": 1010,
+      "z": 2,
+      "depth": 0.95,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 0.06,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 0.16999999999999998,
+        "pose": {
+         "mee": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 0.441,
+        "pose": {
+         "balanco": -1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 0.883,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 1.29,
+        "pose": {
+         "mee": 0.0
+        },
+        "ease": "in"
+       },
+       {
+        "t": 1.324,
+        "pose": {
+         "balanco": -1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 1.765,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 1.94,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 2.05,
+        "pose": {
+         "mee": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 2.183,
+        "pose": {
+         "balanco": -1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 2.49,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 2.54,
+        "pose": {
+         "mee": 0.0
+        },
+        "ease": "in"
+       },
+       {
+        "t": 2.6,
+        "pose": {
+         "mee": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 2.624,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 3.065,
+        "pose": {
+         "balanco": -1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 3.09,
+        "pose": {
+         "mee": 0.0
+        },
+        "ease": "in"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 470,
+      "y": 1010,
+      "depth": 1.15,
+      "turn": 0.25,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "twist",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1450,
+      "y": 1010,
+      "depth": 1.15,
+      "turn": -0.25,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "passinho",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "flash": true
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_campo",
+    "camera": {
+     "x": 1250,
+     "y": 470,
+     "zoom": 1.45,
+     "zoom_fim": 1.5
+    },
+    "callout": [
+     {
+      "t": 1.68,
+      "text": "O QUÊ?",
+      "color": "laranja"
+     }
+    ],
+    "objetos": {
+     "carneirinho": {
+      "id": "carneirinho",
+      "x": 1300,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.05,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 0.14,
+        "pose": {
+         "mee": 0.8
+        }
+       },
+       {
+        "t": 0.3,
+        "pose": {
+         "mee": 0.8
+        }
+       },
+       {
+        "t": 0.32,
+        "pose": {
+         "mee": 0.2
+        }
+       },
+       {
+        "t": 0.48,
+        "pose": {
+         "mee": 0.2
+        }
+       },
+       {
+        "t": 1.06,
+        "pose": {
+         "mee": 0.8
+        }
+       },
+       {
+        "t": 1.24,
+        "pose": {
+         "mee": 0.2
+        }
+       },
+       {
+        "t": 1.58,
+        "pose": {
+         "mee": 0.0
+        }
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 930,
+      "turn": 0.45,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 1.48,
+        "do": "pensar",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_campo",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.08,
+     "zoom_fim": 1.14
+    },
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "PLÁ, PLÁ!",
+      "color": "rosa"
+     }
+    ],
+    "objetos": {
+     "carneirinho": {
+      "id": "carneirinho",
+      "x": 1300,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 0.441,
+        "pose": {
+         "balanco": -1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 0.836,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 1.277,
+        "pose": {
+         "balanco": -1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 1.718,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 820,
+      "turn": 0.35,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "palmas",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1800,
+      "turn": -0.35,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "palmas",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "fx": [
+     "estrelas"
+    ]
+   },
+   {
+    "linhas": 2,
+    "cenario": "danca_bolinhas_amarelo",
+    "fx": [
+     "notas"
+    ],
+    "callout": [
+     {
+      "t": 0.15,
+      "text": "MÉÉ, CARNEIRINHO!",
+      "color": "azul"
+     }
+    ],
+    "objetos": {
+     "carneirinho": {
+      "id": "carneirinho",
+      "x": 960,
+      "y": 1010,
+      "z": 2,
+      "depth": 0.95,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 0.009999999999999995,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 0.12,
+        "pose": {
+         "mee": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 0.441,
+        "pose": {
+         "balanco": -1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 0.46,
+        "pose": {
+         "mee": 0.0
+        },
+        "ease": "in"
+       },
+       {
+        "t": 0.882,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 1.05,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 1.1600000000000001,
+        "pose": {
+         "mee": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 1.323,
+        "pose": {
+         "balanco": -1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 1.65,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 1.7,
+        "pose": {
+         "mee": 0.0
+        },
+        "ease": "in"
+       },
+       {
+        "t": 1.76,
+        "pose": {
+         "mee": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 1.764,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 2.206,
+        "pose": {
+         "balanco": -1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 2.3,
+        "pose": {
+         "mee": 0.0
+        },
+        "ease": "in"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 470,
+      "y": 1010,
+      "depth": 1.15,
+      "turn": 0.25,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "twist",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1450,
+      "y": 1010,
+      "depth": 1.15,
+      "turn": -0.25,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "passinho",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_campo",
+    "camera": {
+     "x": 1250,
+     "y": 470,
+     "zoom": 1.45,
+     "zoom_fim": 1.5
+    },
+    "callout": [
+     {
+      "t": 1.66,
+      "text": "O QUÊ?",
+      "color": "laranja"
+     }
+    ],
+    "objetos": {
+     "carneirinho": {
+      "id": "carneirinho",
+      "x": 1300,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.05,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 0.13,
+        "pose": {
+         "mee": 0.8
+        }
+       },
+       {
+        "t": 0.29,
+        "pose": {
+         "mee": 0.8
+        }
+       },
+       {
+        "t": 0.31,
+        "pose": {
+         "mee": 0.2
+        }
+       },
+       {
+        "t": 0.47,
+        "pose": {
+         "mee": 0.2
+        }
+       },
+       {
+        "t": 1.05,
+        "pose": {
+         "mee": 0.8
+        }
+       },
+       {
+        "t": 1.23,
+        "pose": {
+         "mee": 0.2
+        }
+       },
+       {
+        "t": 1.56,
+        "pose": {
+         "mee": 0.0
+        }
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 930,
+      "turn": 0.45,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 1.46,
+        "do": "pensar",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_campo",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.08,
+     "zoom_fim": 1.14
+    },
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "PÁ, PÁ!",
+      "color": "laranja"
+     }
+    ],
+    "objetos": {
+     "carneirinho": {
+      "id": "carneirinho",
+      "x": 1300,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pe": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 0.441,
+        "pose": {
+         "pe": 0.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 0.883,
+        "pose": {
+         "pe": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 1.3,
+        "pose": {
+         "pe": 0.0
+        },
+        "ease": "out"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 820,
+      "turn": 0.35,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "pezinho",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1800,
+      "turn": -0.35,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "pezinho",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "refrao#4": [
+   {
+    "linhas": 2,
+    "cenario": "danca_raios_rosa",
+    "fx": [
+     "estrelas"
+    ],
+    "callout": [
+     {
+      "t": 0.15,
+      "text": "MÉÉ, CARNEIRINHO!",
+      "color": "verde"
+     }
+    ],
+    "objetos": {
+     "carneirinho": {
+      "id": "carneirinho",
+      "x": 960,
+      "y": 1010,
+      "z": 2,
+      "depth": 0.95,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 0.039999999999999994,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 0.15,
+        "pose": {
+         "mee": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 0.441,
+        "pose": {
+         "balanco": -1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 0.882,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 0.89,
+        "pose": {
+         "mee": 0.0
+        },
+        "ease": "in"
+       },
+       {
+        "t": 1.323,
+        "pose": {
+         "balanco": -1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 1.44,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 1.55,
+        "pose": {
+         "mee": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 1.741,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 2.0100000000000002,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 2.06,
+        "pose": {
+         "mee": 0.0
+        },
+        "ease": "in"
+       },
+       {
+        "t": 2.12,
+        "pose": {
+         "mee": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 2.182,
+        "pose": {
+         "balanco": -1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 2.624,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 2.63,
+        "pose": {
+         "mee": 0.0
+        },
+        "ease": "in"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 470,
+      "y": 1010,
+      "depth": 1.15,
+      "turn": 0.25,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1450,
+      "y": 1010,
+      "depth": 1.15,
+      "turn": -0.25,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "flash": true
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_campo",
+    "camera": {
+     "x": 1250,
+     "y": 470,
+     "zoom": 1.45,
+     "zoom_fim": 1.5
+    },
+    "callout": [
+     {
+      "t": 1.68,
+      "text": "O QUÊ?",
+      "color": "laranja"
+     }
+    ],
+    "objetos": {
+     "carneirinho": {
+      "id": "carneirinho",
+      "x": 1300,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.05,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 0.17,
+        "pose": {
+         "mee": 0.8
+        }
+       },
+       {
+        "t": 0.31,
+        "pose": {
+         "mee": 0.8
+        }
+       },
+       {
+        "t": 0.35,
+        "pose": {
+         "mee": 0.2
+        }
+       },
+       {
+        "t": 0.49,
+        "pose": {
+         "mee": 0.2
+        }
+       },
+       {
+        "t": 1.07,
+        "pose": {
+         "mee": 0.8
+        }
+       },
+       {
+        "t": 1.25,
+        "pose": {
+         "mee": 0.2
+        }
+       },
+       {
+        "t": 1.58,
+        "pose": {
+         "mee": 0.0
+        }
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 930,
+      "turn": 0.45,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 1.48,
+        "do": "pensar",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_campo",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.08,
+     "zoom_fim": 1.14
+    },
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "DANCEI!",
+      "color": "rosa"
+     }
+    ],
+    "objetos": {
+     "carneirinho": {
+      "id": "carneirinho",
+      "x": 1300,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0
+        }
+       },
+       {
+        "t": 0.352,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear"
+       },
+       {
+        "t": 0.418,
+        "pose": {
+         "balanco": -1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 0.86,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 1.212,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear"
+       },
+       {
+        "t": 1.301,
+        "pose": {
+         "balanco": -1.0
+        },
+        "ease": "inout"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 820,
+      "turn": 0.35,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1800,
+      "turn": -0.35,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "fx": [
+     "notas"
+    ]
+   },
+   {
+    "linhas": 2,
+    "cenario": "danca_ondas_verde",
+    "fx": [
+     "notas"
+    ],
+    "callout": [
+     {
+      "t": 0.15,
+      "text": "MÉÉ, CARNEIRINHO!",
+      "color": "verde"
+     }
+    ],
+    "objetos": {
+     "carneirinho": {
+      "id": "carneirinho",
+      "x": 960,
+      "y": 1010,
+      "z": 2,
+      "depth": 0.95,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 0.09999999999999999,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 0.21,
+        "pose": {
+         "mee": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 0.441,
+        "pose": {
+         "balanco": -1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 0.5,
+        "pose": {
+         "mee": 0.0
+        },
+        "ease": "in"
+       },
+       {
+        "t": 0.882,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 1.323,
+        "pose": {
+         "balanco": -1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 1.54,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 1.6500000000000001,
+        "pose": {
+         "mee": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 1.741,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 1.9100000000000001,
+        "pose": {
+         "mee": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 1.94,
+        "pose": {
+         "mee": 0.0
+        },
+        "ease": "in"
+       },
+       {
+        "t": 2.182,
+        "pose": {
+         "balanco": -1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 2.2,
+        "pose": {
+         "mee": 0.0
+        },
+        "ease": "in"
+       },
+       {
+        "t": 2.624,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 470,
+      "y": 1010,
+      "depth": 1.15,
+      "turn": 0.25,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1450,
+      "y": 1010,
+      "depth": 1.15,
+      "turn": -0.25,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_campo",
+    "camera": {
+     "x": 1250,
+     "y": 470,
+     "zoom": 1.45,
+     "zoom_fim": 1.5
+    },
+    "callout": [
+     {
+      "t": 1.24,
+      "text": "O QUÊ?",
+      "color": "laranja"
+     }
+    ],
+    "objetos": {
+     "carneirinho": {
+      "id": "carneirinho",
+      "x": 1300,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.05,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 0.12,
+        "pose": {
+         "mee": 0.8
+        }
+       },
+       {
+        "t": 0.28,
+        "pose": {
+         "mee": 0.8
+        }
+       },
+       {
+        "t": 0.3,
+        "pose": {
+         "mee": 0.2
+        }
+       },
+       {
+        "t": 0.46,
+        "pose": {
+         "mee": 0.2
+        }
+       },
+       {
+        "t": 1.06,
+        "pose": {
+         "mee": 0.8
+        }
+       },
+       {
+        "t": 1.14,
+        "pose": {
+         "mee": 0.0
+        }
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 930,
+      "turn": 0.45,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 1.04,
+        "do": "pensar",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_campo",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.15,
+     "zoom_fim": 1.25
+    },
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "ABRAÇO!",
+      "color": "vermelho"
+     }
+    ],
+    "objetos": {
+     "carneirinho": {
+      "id": "carneirinho",
+      "x": 1300,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "lid": 0.0
+        }
+       },
+       {
+        "t": 0.6,
+        "pose": {
+         "lid": 1.0
+        }
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 980,
+      "turn": 0.35,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "abraco",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1700,
+      "turn": -0.35,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.3,
+        "do": "abraco",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "fx": [
+     "coracoes"
+    ]
+   }
+  ],
+  "intervalo#1": [
+   {
+    "linhas": 1,
+    "cenario": "danca_raios_roxo",
+    "camera": "close:laurinha",
+    "callout": "BORA, TURMINHA!",
+    "atores": {
+     "laurinha": {
+      "x": 960,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "apontar_camera",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_campo",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "fx": [
+     "confete"
+    ],
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "LAURINHA E LUISINHO!",
+      "color": "rosa"
+     }
+    ],
+    "objetos": {
+     "carneirinho": {
+      "id": "carneirinho",
+      "x": 1300,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0
+        }
+       },
+       {
+        "t": 0.352,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear"
+       },
+       {
+        "t": 0.441,
+        "pose": {
+         "balanco": -1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 0.882,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 1.234,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear"
+       },
+       {
+        "t": 1.323,
+        "pose": {
+         "balanco": -1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 1.764,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 2.116,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear"
+       },
+       {
+        "t": 2.205,
+        "pose": {
+         "balanco": -1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 2.647,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 2.999,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear"
+       },
+       {
+        "t": 3.088,
+        "pose": {
+         "balanco": -1.0
+        },
+        "ease": "inout"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 820,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1800,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "intervalo#2": [
+   {
+    "linhas": 1,
+    "cenario": "danca_bolinhas_azul",
+    "camera": "medio:luisinho",
+    "fx": [
+     "confete"
+    ],
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "ZUM-ZUM, QUE MASSA!",
+      "color": "amarelo"
+     }
+    ],
+    "atores": {
+     "luisinho": {
+      "x": 960,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "bacana",
+        "dur": 1.4
+       },
+       {
+        "t": 1.6,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "verso#2": [
+   {
+    "linhas": 1,
+    "cenario": "plano_campo",
+    "camera": "medio:luisinho",
+    "callout": [
+     {
+      "t": 0.08,
+      "text": "BRRR!",
+      "color": "azul"
+     }
+    ],
+    "atores": {
+     "luisinho": {
+      "x": 1500,
+      "turn": -0.2,
+      "expr": "scared",
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "shock_reaction",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_campo",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "callout": [
+     {
+      "t": 1.05,
+      "text": "UUUU!",
+      "color": "roxo"
+     }
+    ],
+    "objetos": {
+     "vento": {
+      "id": "vento",
+      "x": 1300,
+      "y": 700,
+      "z": 4,
+      "depth": 1.7,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 300
+        }
+       }
+      ]
+     },
+     "carneirinho": {
+      "id": "carneirinho",
+      "x": 1300,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "balanco": 0.6
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 0.441,
+        "pose": {
+         "balanco": -0.6
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 0.859,
+        "pose": {
+         "balanco": 0.6
+        },
+        "ease": "inout"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 1850,
+      "turn": -0.4,
+      "expr": "scared",
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "shock_reaction",
+        "dur": "resto"
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 760,
+      "turn": 0.4,
+      "expr": "scared",
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "shock_reaction",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_campo",
+    "camera": {
+     "x": 1300,
+     "y": 500,
+     "zoom": 1.4,
+     "zoom_fim": 1.48
+    },
+    "callout": [
+     {
+      "t": 0.4,
+      "text": "LÃ QUENTINHA!",
+      "color": "amarelo"
+     }
+    ],
+    "objetos": {
+     "carneirinho": {
+      "id": "carneirinho",
+      "x": 1300,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "balanco": 0.4
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 0.442,
+        "pose": {
+         "balanco": -0.4
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 0.6,
+        "pose": {
+         "mee": 0.6
+        }
+       },
+       {
+        "t": 0.86,
+        "pose": {
+         "balanco": 0.4
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 1.1,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 1.324,
+        "pose": {
+         "balanco": -0.4
+        },
+        "ease": "inout"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_campo",
+    "camera": "medio:luisinho",
+    "flash": true,
+    "fx": [
+     "estrelas"
+    ],
+    "callout": [
+     {
+      "t": 1.41,
+      "text": "BLUSINHA!",
+      "color": "rosa"
+     }
+    ],
+    "atores": {
+     "luisinho": {
+      "x": 1300,
+      "turn": 0.1,
+      "pose": {
+       "blusa": 1.0
+      },
+      "expr": "joy",
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "cheguei",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_campo",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "fx": [
+     "coracoes"
+    ],
+    "callout": [
+     {
+      "t": 1.58,
+      "text": "HUM!",
+      "color": "laranja"
+     }
+    ],
+    "objetos": {
+     "carneirinho": {
+      "id": "carneirinho",
+      "x": 1300,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "balanco": 0.5
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 0.418,
+        "pose": {
+         "balanco": -0.5
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 0.859,
+        "pose": {
+         "balanco": 0.5
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 1.3,
+        "pose": {
+         "balanco": -0.5
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 1.742,
+        "pose": {
+         "balanco": 0.5
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 2.183,
+        "pose": {
+         "balanco": -0.5
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 2.624,
+        "pose": {
+         "balanco": 0.5
+        },
+        "ease": "inout"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 820,
+      "turn": 0.35,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "abraco",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1800,
+      "turn": -0.35,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "abraco",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "ponte#1": [
+   {
+    "linhas": 1,
+    "cenario": "plano_campo",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "callout": [
+     {
+      "t": 1.27,
+      "text": "HOP!",
+      "color": "laranja"
+     }
+    ],
+    "objetos": {
+     "cerca": {
+      "id": "cerquinha",
+      "x": 1300,
+      "y": 950,
+      "z": 3,
+      "depth": 1.0
+     },
+     "carneirinho": {
+      "id": "carneirinho",
+      "x": 700,
+      "y": 930,
+      "z": 4,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1,
+       "altura": 2.3
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 700,
+         "pulo": 0.0
+        }
+       },
+       {
+        "t": 0.77,
+        "pose": {
+         "x": 850,
+         "pulo": 0.0
+        }
+       },
+       {
+        "t": 1.52,
+        "pose": {
+         "x": 1650,
+         "pulo": 1.0
+        },
+        "ease": "linear"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_campo",
+    "camera": {
+     "x": 1350,
+     "y": 600,
+     "zoom": 1.35,
+     "zoom_fim": 1.4
+    },
+    "callout": [
+     {
+      "t": 1.0,
+      "text": "NHAC!",
+      "color": "verde"
+     }
+    ],
+    "objetos": {
+     "capim": {
+      "id": "capim",
+      "x": 1600,
+      "y": 960,
+      "z": 3,
+      "depth": 1.0,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "come": 0.0
+        }
+       },
+       {
+        "t": 1.0,
+        "pose": {
+         "come": 0.0
+        }
+       },
+       {
+        "t": 1.2,
+        "pose": {
+         "come": 0.8
+        },
+        "ease": "out"
+       }
+      ]
+     },
+     "carneirinho": {
+      "id": "carneirinho",
+      "x": 1250,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "come": 0.0,
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 0.7,
+        "pose": {
+         "come": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 1.0,
+        "pose": {
+         "mee": 0.7
+        }
+       },
+       {
+        "t": 1.25,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 1.6,
+        "pose": {
+         "come": 0.0
+        },
+        "ease": "inout"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_campo",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "callout": [
+     {
+      "t": 0.61,
+      "text": "MÉÉ!",
+      "color": "rosa"
+     }
+    ],
+    "objetos": {
+     "carneirinho": {
+      "id": "carneirinho",
+      "x": 1300,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 0.441,
+        "pose": {
+         "balanco": -1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 0.5599999999999999,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 0.6699999999999999,
+        "pose": {
+         "mee": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 0.82,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 0.882,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 0.9299999999999999,
+        "pose": {
+         "mee": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 0.96,
+        "pose": {
+         "mee": 0.0
+        },
+        "ease": "in"
+       },
+       {
+        "t": 1.323,
+        "pose": {
+         "balanco": -1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 1.67,
+        "pose": {
+         "mee": 0.0
+        },
+        "ease": "in"
+       },
+       {
+        "t": 1.764,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 820,
+      "turn": 0.35,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "pulinho",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1800,
+      "turn": -0.35,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "pulinho",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "ponte#2": [
+   {
+    "linhas": 1,
+    "cenario": "plano_campo",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.1,
+     "zoom_fim": 1.1
+    },
+    "flash": true,
+    "callout": [
+     {
+      "t": 0.1,
+      "text": "ESTÁTUA!",
+      "color": "vermelho"
+     }
+    ],
+    "objetos": {
+     "carneirinho": {
+      "id": "carneirinho",
+      "x": 1300,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1,
+       "pe": 1.0,
+       "mee": 0.5
+      },
+      "keys": []
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 820,
+      "turn": 0.35,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "estatua",
+        "pose": "perna",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1800,
+      "turn": -0.35,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "estatua",
+        "pose": "bracos",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "danca_raios_vermelho",
+    "camera": "close:laurinha",
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "DE NOVO!",
+      "color": "amarelo"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 960,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "apontar_camera",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_campo",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "callout": [
+     {
+      "t": 1.28,
+      "text": "HOP!",
+      "color": "laranja"
+     }
+    ],
+    "objetos": {
+     "cerca": {
+      "id": "cerquinha",
+      "x": 1300,
+      "y": 950,
+      "z": 3,
+      "depth": 1.0
+     },
+     "carneirinho": {
+      "id": "carneirinho",
+      "x": 700,
+      "y": 930,
+      "z": 4,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1,
+       "altura": 2.3
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 700,
+         "pulo": 0.0
+        }
+       },
+       {
+        "t": 0.78,
+        "pose": {
+         "x": 850,
+         "pulo": 0.0
+        }
+       },
+       {
+        "t": 1.53,
+        "pose": {
+         "x": 1650,
+         "pulo": 1.0
+        },
+        "ease": "linear"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 1120,
+      "y": 900,
+      "z": 1,
+      "depth": 0.85,
+      "turn": 0.2,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "jump",
+        "dur": 0.9
+       },
+       {
+        "t": 1.0,
+        "do": "cheguei",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1480,
+      "y": 900,
+      "z": 1,
+      "depth": 0.85,
+      "turn": -0.2,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "jump",
+        "dur": 0.9
+       },
+       {
+        "t": 1.1,
+        "do": "cheguei",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_campo",
+    "camera": {
+     "x": 1350,
+     "y": 600,
+     "zoom": 1.35,
+     "zoom_fim": 1.4
+    },
+    "callout": [
+     {
+      "t": 0.99,
+      "text": "NHAC!",
+      "color": "verde"
+     }
+    ],
+    "objetos": {
+     "capim": {
+      "id": "capim",
+      "x": 1600,
+      "y": 960,
+      "z": 3,
+      "depth": 1.0,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "come": 0.0
+        }
+       },
+       {
+        "t": 0.99,
+        "pose": {
+         "come": 0.0
+        }
+       },
+       {
+        "t": 1.19,
+        "pose": {
+         "come": 0.8
+        },
+        "ease": "out"
+       }
+      ]
+     },
+     "carneirinho": {
+      "id": "carneirinho",
+      "x": 1250,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "come": 0.0,
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 0.69,
+        "pose": {
+         "come": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 0.99,
+        "pose": {
+         "mee": 0.7
+        }
+       },
+       {
+        "t": 1.24,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 1.5899999999999999,
+        "pose": {
+         "come": 0.0
+        },
+        "ease": "inout"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 1900,
+      "turn": -0.4,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "eat",
+        "dur": 1.0
+       },
+       {
+        "t": 1.2,
+        "do": "laugh",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_campo",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "callout": [
+     {
+      "t": 0.55,
+      "text": "MÉÉ!",
+      "color": "rosa"
+     }
+    ],
+    "objetos": {
+     "carneirinho": {
+      "id": "carneirinho",
+      "x": 1300,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 0.441,
+        "pose": {
+         "balanco": -1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 0.5,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 0.6100000000000001,
+        "pose": {
+         "mee": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 0.7999999999999999,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 0.882,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "mee": 0.0
+        },
+        "ease": "in"
+       },
+       {
+        "t": 0.9099999999999999,
+        "pose": {
+         "mee": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 1.323,
+        "pose": {
+         "balanco": -1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 1.63,
+        "pose": {
+         "mee": 0.0
+        },
+        "ease": "in"
+       },
+       {
+        "t": 1.764,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "inout"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 820,
+      "turn": 0.35,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "pulinho",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1800,
+      "turn": -0.35,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "pulinho",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "ponte#3": [
+   {
+    "linhas": 1,
+    "cenario": "plano_campo",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.1,
+     "zoom_fim": 1.1
+    },
+    "flash": true,
+    "callout": [
+     {
+      "t": 0.1,
+      "text": "ESTÁTUA!",
+      "color": "vermelho"
+     }
+    ],
+    "objetos": {
+     "carneirinho": {
+      "id": "carneirinho",
+      "x": 1300,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1,
+       "pe": 1.0,
+       "mee": 0.5
+      },
+      "keys": []
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 820,
+      "turn": 0.35,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "estatua",
+        "pose": "bracos",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1800,
+      "turn": -0.35,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "estatua",
+        "pose": "perna",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "verso#3": [
+   {
+    "linhas": 1,
+    "cenario": "plano_campo",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "callout": [
+     {
+      "t": 0.02,
+      "text": "CADÊ?",
+      "color": "azul"
+     }
+    ],
+    "objetos": {
+     "cerca": {
+      "id": "cerquinha",
+      "x": 1300,
+      "y": 950,
+      "z": 3,
+      "depth": 1.0
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 820,
+      "turn": 0.35,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "look_around",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1800,
+      "turn": -0.35,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.3,
+        "do": "pensar",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_ceu",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "callout": [
+     {
+      "t": 1.24,
+      "text": "UAU!",
+      "color": "rosa"
+     }
+    ],
+    "objetos": {
+     "n1": {
+      "id": "nuvem",
+      "x": 600,
+      "y": 1080,
+      "z": 1,
+      "depth": 0.6,
+      "pose": {
+       "cara": 0.0
+      }
+     },
+     "n2": {
+      "id": "nuvem",
+      "x": 2050,
+      "y": 1060,
+      "z": 1,
+      "depth": 0.55,
+      "pose": {
+       "cara": 0.0
+      }
+     },
+     "carneirinho": {
+      "id": "carneirinho",
+      "x": 1300,
+      "y": 880,
+      "z": 2,
+      "depth": 0.8,
+      "pose": {
+       "lado": 1,
+       "esconde": 1.0
+      },
+      "keys": []
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 600,
+      "y": 860,
+      "fly": 1,
+      "turn": 0.4,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "fly",
+        "dur": 1.2,
+        "to_x": 820,
+        "to_y": 800
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 2050,
+      "y": 840,
+      "fly": 1,
+      "turn": -0.4,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "fly",
+        "dur": 1.2,
+        "to_x": 1800,
+        "to_y": 780
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_ceu",
+    "camera": {
+     "x": 1150,
+     "y": 680,
+     "zoom": 1.3,
+     "zoom_fim": 1.34
+    },
+    "callout": [
+     {
+      "t": 1.07,
+      "text": "MÉÉ!",
+      "color": "amarelo"
+     }
+    ],
+    "objetos": {
+     "n1": {
+      "id": "nuvem",
+      "x": 600,
+      "y": 1080,
+      "z": 1,
+      "depth": 0.6,
+      "pose": {
+       "cara": 0.0
+      }
+     },
+     "n2": {
+      "id": "nuvem",
+      "x": 2050,
+      "y": 1060,
+      "z": 1,
+      "depth": 0.55,
+      "pose": {
+       "cara": 0.0
+      }
+     },
+     "carneirinho": {
+      "id": "carneirinho",
+      "x": 1300,
+      "y": 880,
+      "z": 2,
+      "depth": 0.8,
+      "pose": {
+       "lado": 1,
+       "esconde": 1.0
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "balanco": 0.0
+        }
+       },
+       {
+        "t": 1.07,
+        "pose": {
+         "balanco": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 1.37,
+        "pose": {
+         "balanco": -1.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 1.67,
+        "pose": {
+         "balanco": 0.0
+        },
+        "ease": "inout"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 820,
+      "y": 880,
+      "fly": 1,
+      "turn": 0.4,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 1.07,
+        "do": "take"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_ceu",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "flash": true,
+    "fx": [
+     "estrelas"
+    ],
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "ACHEI!",
+      "color": "verde"
+     }
+    ],
+    "objetos": {
+     "n1": {
+      "id": "nuvem",
+      "x": 600,
+      "y": 1080,
+      "z": 1,
+      "depth": 0.6,
+      "pose": {
+       "cara": 0.0
+      }
+     },
+     "n2": {
+      "id": "nuvem",
+      "x": 2050,
+      "y": 1060,
+      "z": 1,
+      "depth": 0.55,
+      "pose": {
+       "cara": 0.0
+      }
+     },
+     "carneirinho": {
+      "id": "carneirinho",
+      "x": 1300,
+      "y": 880,
+      "z": 2,
+      "depth": 0.8,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "mee": 1.0
+        }
+       },
+       {
+        "t": 0.5,
+        "pose": {
+         "mee": 0.0
+        }
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 820,
+      "y": 800,
+      "fly": 1,
+      "turn": 0.4,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "point",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1800,
+      "y": 780,
+      "fly": 1,
+      "turn": -0.4,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "laugh",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "final#1": [
+   {
+    "linhas": 1,
+    "cenario": "danca_raios_azul",
+    "camera": "close:laurinha",
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "GOSTOU?",
+      "color": "rosa"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 960,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "apontar_camera",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "danca_bolinhas_amarelo",
+    "callout": [
+     {
+      "t": 0.4,
+      "text": "DÁ UM JOINHA!",
+      "color": "azul"
+     }
+    ],
+    "fx": [
+     "estrelas"
+    ],
+    "objetos": {
+     "joinha": {
+      "x": 1380,
+      "y": 900,
+      "z": 3,
+      "depth": 1.3,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "escala": 0.0
+        }
+       },
+       {
+        "t": 0.4,
+        "pose": {
+         "escala": 1.0
+        },
+        "ease": "back"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 680,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "bacana",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_casa_frente",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.1
+    },
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "CHAMA O PAPAI E A MAMÃE!",
+      "color": "verde"
+     }
+    ],
+    "atores": {
+     "mamae": {
+      "x": 1100,
+      "turn": 0.2,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "wave",
+        "dur": 1.4
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 1450,
+      "turn": -0.3,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "point",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "danca_raios_vermelho",
+    "callout": [
+     {
+      "t": 0.5,
+      "text": "INSCREVA-SE!",
+      "color": "vermelho"
+     }
+    ],
+    "fx": [
+     "coracoes"
+    ],
+    "objetos": {
+     "botao": {
+      "id": "botao_inscrever",
+      "x": 1260,
+      "y": 760,
+      "z": 3,
+      "depth": 1.2,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "escala": 0.0,
+         "aperta": 0.0
+        }
+       },
+       {
+        "t": 0.4,
+        "pose": {
+         "escala": 1.0
+        },
+        "ease": "back"
+       },
+       {
+        "t": 1.6,
+        "pose": {
+         "aperta": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 1.9,
+        "pose": {
+         "aperta": 0.0
+        },
+        "ease": "in"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 600,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "point",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "final#2": [
+   {
+    "linhas": 1,
+    "cenario": "plano_campo",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "fx": [
+     "coracoes"
+    ],
+    "callout": [
+     {
+      "t": 1.17,
+      "text": "TCHAU!",
+      "color": "amarelo"
+     }
+    ],
+    "objetos": {
+     "carneirinho": {
+      "id": "carneirinho",
+      "x": 1300,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "balanco": 0.6
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 0.2,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 0.31,
+        "pose": {
+         "mee": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 0.418,
+        "pose": {
+         "balanco": -0.6
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 0.6,
+        "pose": {
+         "mee": 0.0
+        },
+        "ease": "in"
+       },
+       {
+        "t": 0.859,
+        "pose": {
+         "balanco": 0.6
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 1.3,
+        "pose": {
+         "balanco": -0.6
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 1.718,
+        "pose": {
+         "balanco": 0.6
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 2.159,
+        "pose": {
+         "balanco": -0.6
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 2.577,
+        "pose": {
+         "balanco": 0.6
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 3.018,
+        "pose": {
+         "balanco": -0.6
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 3.46,
+        "pose": {
+         "balanco": 0.6
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 3.68,
+        "pose": {
+         "mee": 0.0
+        }
+       },
+       {
+        "t": 3.79,
+        "pose": {
+         "mee": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 3.901,
+        "pose": {
+         "balanco": -0.6
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 4.08,
+        "pose": {
+         "mee": 0.0
+        },
+        "ease": "in"
+       },
+       {
+        "t": 4.435,
+        "pose": {
+         "balanco": 0.6
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 4.969,
+        "pose": {
+         "balanco": -0.6
+        },
+        "ease": "inout"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 820,
+      "turn": 0.3,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "tchau",
+        "dur": 3.4
+       },
+       {
+        "t": 3.7,
+        "do": "fly",
+        "dur": 1.4,
+        "to_x": -300,
+        "to_y": 300
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1800,
+      "turn": -0.3,
+      "pose": {
+       "blusa": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "tchau",
+        "dur": 3.4
+       },
+       {
+        "t": 3.8,
+        "do": "fly",
+        "dur": 1.4,
+        "to_x": 2900,
+        "to_y": 350
+       }
+      ]
+     }
+    }
+   }
+  ]
+ }
+}

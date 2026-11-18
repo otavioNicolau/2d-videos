@@ -1,0 +1,106 @@
+{
+ "schema": "avaliacao-1.0",
+ "versoes": {
+  "v1": {
+   "arquivo": "v1.wav",
+   "duracao": 225.5,
+   "bpm": 136.0,
+   "bpm_nota": "",
+   "tom": "Lá# maior",
+   "voz_inicio": 2.15,
+   "refrao_inicio": null,
+   "cantado": 89,
+   "intervalos": [
+    [
+     105.7,
+     2.8
+    ],
+    [
+     221.4,
+     3.1
+    ]
+   ],
+   "fim_depois_da_voz": 0.4,
+   "final": "esmaecendo",
+   "silencio_final": 0.4,
+   "acerto": 49,
+   "nao_reconhecidas": [
+    "brrr",
+    "blusinha",
+    "pular",
+    "pulei",
+    "sentar",
+    "luisinho",
+    "soprou",
+    "uuuu",
+    "girar",
+    "cerquinha",
+    "capim",
+    "nhac"
+   ],
+   "pontos_a_conferir": [
+    "o gancho não foi reconhecido na transcrição",
+    "duração 226 s fora do alvo 140–170 s",
+    "só 49% da letra reconhecida — ouvir a pronúncia"
+   ]
+  },
+  "v2": {
+   "arquivo": "v2.wav",
+   "duracao": 140.4,
+   "bpm": 136.0,
+   "bpm_nota": "",
+   "tom": "Fá maior",
+   "voz_inicio": 2.0,
+   "refrao_inicio": null,
+   "cantado": 90,
+   "intervalos": [
+    [
+     9.1,
+     6.8
+    ]
+   ],
+   "fim_depois_da_voz": 1.6,
+   "final": "corte seco",
+   "silencio_final": 0.8,
+   "acerto": 61,
+   "nao_reconhecidas": [
+    "brrr",
+    "blusinha",
+    "pula",
+    "cerquinha",
+    "capim",
+    "nhac",
+    "bater",
+    "manda",
+    "pular",
+    "pulei",
+    "sentar",
+    "laurinha"
+   ],
+   "pontos_a_conferir": [
+    "o gancho não foi reconhecido na transcrição",
+    "só 61% da letra reconhecida — ouvir a pronúncia",
+    "menos de 2 intervalos de dança"
+   ]
+  }
+ },
+ "ouvido": {
+  "v1": {
+   "1 começo chama atenção": null,
+   "5 melodia combina com a letra": null,
+   "6 dá vontade de dançar": null,
+   "7 pronúncia natural": null,
+   "8 tem a cara do canal": null,
+   "9 nenhum trecho cansativo": null
+  },
+  "v2": {
+   "1 começo chama atenção": null,
+   "5 melodia combina com a letra": null,
+   "6 dá vontade de dançar": null,
+   "7 pronúncia natural": null,
+   "8 tem a cara do canal": null,
+   "9 nenhum trecho cansativo": null
+  }
+ },
+ "escolhida": "v2"
+}

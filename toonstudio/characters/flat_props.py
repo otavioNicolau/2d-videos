@@ -1369,14 +1369,15 @@ class Nuvem(_Prop):
 
     def __init__(self):
         super().__init__("nuvem", "Nuvem", (1100, 900), (550, 850), 380,
-                         {"cinza": 0.0, "chove": 0.0, "queda": 0.0, "sobe": 0.0, "boca": 0.0, "lid": 0.0})
+                         {"cinza": 0.0, "chove": 0.0, "queda": 0.0, "sobe": 0.0, "boca": 0.0, "lid": 0.0, "cara": 1.0})
 
     def paint(self, k, P):
         cor = _mix("#FFFFFF", "#9AA6B8", P["cinza"]); lin = _mix("#BFD6EA", "#6E7A8C", P["cinza"])
         cy = -520
         for dx, dy, r in ((-230, 40, 140), (-90, -40, 190), (110, -20, 170), (250, 50, 130), (0, 60, 170)):
             shape(k, ellipse_pts(dx, cy + dy, r, r * 0.86, 0, 24), cor, line=lin)
-        _carinha(k, 0, cy + 20, P, "#3A4A66", "#FF9AB0", esc=1.4)
+        if P.get("cara", 1.0) > 0.5:                                    # cara 0 = nuvem sem carinha (esconde-esconde)
+            _carinha(k, 0, cy + 20, P, "#3A4A66", "#FF9AB0", esc=1.4)
         c = P["chove"]
         if c > 0.05:
             for j in range(9):
@@ -1516,3 +1517,108 @@ class Cometa(_Prop):
 
 
 PROPS.update({"foguete": Foguete, "lua": LuaCara, "terra": Terra, "cometa": Cometa})
+
+
+# ───────────────────────── 12 Méé, Carneirinho! ─────────────────────────
+
+
+class Carneirinho(_Prop):
+    """Carneirinho fofo (lã = nuvenzinha de bolinhas brancas, carinha rosada, perninhas cinza).
+    Canais: `mee` 0→1 abre a boca (méé!); `pulo` 0→1 arco do pulo; `senta` 0→1 senta (perninhas dobram);
+    `balanco` −1…1 inclina o corpo (dança); `pe` 0→1 levanta a patinha da frente (bate o pé);
+    `esconde` 0→1 some cabeça e perninhas: vira uma nuvem (esconde-esconde); `lado` 1 olha p/ direita, −1 p/ esquerda;
+    `come` 0→1 abaixa a cabeça (come capim); `lid` fecha os olhos; `altura` multiplica a altura do pulo (cerquinha)."""
+
+    def __init__(self):
+        super().__init__("carneirinho", "Carneirinho", (1000, 780), (500, 740), 440,
+                         {"mee": 0.0, "pulo": 0.0, "senta": 0.0, "balanco": 0.0, "pe": 0.0, "esconde": 0.0, "lado": 1.0,
+                          "come": 0.0, "lid": 0.0, "altura": 1.0})
+
+    def paint(self, k, P):
+        sx = 1.0 if P["lado"] >= 0 else -1.0
+        senta = max(0.0, min(1.0, P["senta"]))
+        y0 = -150 * P.get("altura", 1.0) * math.sin(math.pi * max(0.0, min(1.0, P["pulo"]))) + 70 * senta
+        ang = 0.12 * max(-1.0, min(1.0, P["balanco"]))
+        esc = max(0.0, min(1.0, P["esconde"]))
+        come = max(0.0, min(1.0, P["come"]))
+        cx, cy = 0.0, -250.0
+
+        def T(x, y):
+            x, y = x * sx, y
+            dx, dy = x - cx, y - cy
+            c, s = math.cos(ang), math.sin(ang)
+            return (cx + dx * c - dy * s, cy + dx * s + dy * c + y0)
+
+        def oval(x, y, rx, ry, fill, line, a=0.0, alpha=1.0):
+            q = T(x, y)
+            shape(k, ellipse_pts(q[0], q[1], rx, ry, a + ang, 22), fill, line=line, alpha=alpha)
+
+        branco, lin = "#FFFFFF", _mix("#B9C6D8", "#BFD6EA", esc)
+        perna, casco = "#5A5A66", "#33333C"
+        if esc < 0.5:                                                       # perninhas (atrás e na frente)
+            for x, frente in ((-120, False), (60, False), (-60, True), (130, True)):
+                lev = 60 * max(0.0, min(1.0, P["pe"])) if (frente and x > 0) else 0.0
+                topo, base = (x, -150), (x + (14 if senta > 0.5 else 0), -10 - lev - 120 * senta * (0.7 if frente else 1))
+                if senta > 0.9 and not frente:
+                    continue
+                a, b = T(*topo), T(*base)
+                b = (b[0], min(b[1] + 0 * y0, b[1]))
+                _capsula(k, a, b, 17, dark(perna, 0.9) if not frente else perna, casco)
+                shape(k, ellipse_pts(b[0], b[1] + 6, 22, 13, 0, 14), casco, line=casco)
+        # lã: bolinhas que formam a nuvem do corpo (contorno por fora, depois o recheio sem linha)
+        bolas = [(-190, -250, 78), (-130, -320, 86), (-30, -350, 92), (80, -330, 86), (170, -270, 76), (150, -190, 72),
+                 (40, -160, 82), (-80, -160, 82), (-180, -190, 70), (0, -250, 120)]
+        for x, y, r in bolas:
+            oval(x, y, r, r * 0.92, branco, lin)
+        for x, y, r in bolas:
+            q = T(x, y)
+            k.shape(ellipse_pts(q[0], q[1], r - 5, r * 0.92 - 5, ang, 22), fill=_rgba(branco), line=0)
+        for x, y in ((-120, -280), (30, -300), (110, -230), (-40, -200), (-170, -230)):   # cachinhos (traço)
+            q = T(x, y)
+            ln(k, [(q[0] - 16, q[1] + 4), (q[0] - 4, q[1] - 10), (q[0] + 10, q[1] - 2), (q[0] + 2, q[1] + 8)], lin, w=LINE * 0.8)
+        oval(-240, -280, 40, 36, branco, lin)                              # rabinho
+        if esc > 0.5:
+            return
+        # cabeça (na frente, do lado que ele olha)
+        hx, hy = 210, -300 + 90 * come
+        rosto, rlin = "#FBE2D4", "#D8A48E"
+        for s_ in (-1, 1):                                                 # orelhinhas caídas
+            q = T(hx + s_ * 78, hy - 30)
+            shape(k, ellipse_pts(q[0], q[1], 48, 22, ang + s_ * 0.5 * sx, 16), "#F6C2B2", line=rlin)
+        oval(hx, hy, 82, 92, rosto, rlin)
+        for dx, dy, r in ((-40, -80, 34), (0, -98, 38), (40, -80, 34)):    # topete de lã
+            oval(hx + dx, hy + dy, r, r * 0.9, branco, lin)
+        q = T(hx, hy + 6)
+        _carinha(k, q[0], q[1], {"lid": P["lid"], "boca": max(0.0, min(1.0, P["mee"]))}, "#6A3A2E", "#FF8FA8", esc=1.15)
+
+
+class Cerquinha(_Prop):
+    """Cerquinha de madeira do campo (três estacas e duas travessas) — o carneirinho e a turma pulam por cima."""
+
+    def __init__(self):
+        super().__init__("cerquinha", "Cerquinha", (760, 340), (380, 310), 230, {})
+
+    def paint(self, k, P):
+        mad, lin = "#D9A066", "#9A6634"
+        for y in (-170, -80):
+            box(k, -330, y - 18, 330, y + 18, mad, line=lin, r=8)
+        for x in (-290, 0, 290):
+            shape(k, [(x - 28, 0), (x + 28, 0), (x + 28, -210), (x, -244), (x - 28, -210)], mad, line=lin, smooth=False)
+            ln(k, [(x - 8, -40), (x - 8, -150)], dark(mad, 0.85), w=LINE * 0.7)
+
+
+class Capim(_Prop):
+    """Tufo de capim verdinho. `come` 0→1 vai sumindo de cima para baixo (nhac!)."""
+
+    def __init__(self):
+        super().__init__("capim", "Capim", (420, 320), (210, 300), 200, {"come": 0.0})
+
+    def paint(self, k, P):
+        g = 1.0 - 0.75 * max(0.0, min(1.0, P["come"]))
+        for x, h, inc, col in ((-110, 170, -0.5, "#49B84F"), (-60, 230, -0.25, "#5CCB5F"), (0, 260, 0.0, "#49B84F"),
+                               (60, 220, 0.3, "#5CCB5F"), (110, 160, 0.55, "#49B84F"), (-20, 190, 0.12, "#6BD86A")):
+            hh = h * g
+            shape(k, [(x - 22, 0), (x + inc * hh, -hh), (x + 22, 0)], col, line="#2E8B3E")
+
+
+PROPS.update({"carneirinho": Carneirinho, "cerquinha": Cerquinha, "capim": Capim})

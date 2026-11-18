@@ -109,7 +109,7 @@ class FlatMuri(Character):
                 "mouth": "X", "smile": 0.8, "brow_y": 0.2, "blush": 1.0, "stars": 0.0, "speed": 0.0,
                 "holding": "", "wing_phase": 0.0, "bank": 0.0, "dangle": 0.0, "hair_bounce": 0.0,
                 "fly": 0.0, "rot_pivot": 0.55, "bigode": 0.0, "mochila": 0.0, "buzz": 0.0, "suor": 0.0,
-                "despenteado": 0.0, "bafinho": 0.0, "espuma": 0.0, "brilho": 0.0, "cuspe": 0.0,
+                "despenteado": 0.0, "bafinho": 0.0, "espuma": 0.0, "brilho": 0.0, "cuspe": 0.0, "blusa": 0.0,
             })
 
     # ------------------------------------------------------------------ primitivas chapadas
@@ -166,6 +166,20 @@ class FlatMuri(Character):
             for dx, dy, r in ((-24, -52, 9), (22, -46, 10), (-28, -12, 8), (26, -10, 9)):
                 q = T((dx, dy))
                 ink.shape(ellipse_pts(q[0], q[1], r, r, 0, 12), fill=_rgba(L.extra["pintas"]), line=0)
+        if P.get("blusa", 0) > 0.5:            # blusinha de lã do carneirinho (Méé, Carneirinho!): fofa, gola e barra canelada
+            la, gola = "#FFF7EC", ("#FF8CC0" if L.bow else "#7DB8FF")
+            corpo = [T(p) for p in ((0, -84), (34, -78), (50, -46), (50, -8), (30, 16), (0, 20), (-30, 16), (-50, -8), (-50, -46), (-34, -78))]
+            self._shape(ink, corpo, la, line="#C9B9A6")
+            for j in range(7):                 # bolinhas de lã na borda (fofura)
+                q = T((-44 + j * 14.6, 16 - 4 * math.sin(j * 0.9)))
+                ink.shape(ellipse_pts(q[0], q[1], 9, 7, 0, 10), fill=_rgba(la), line=0)
+            gp = [T(p) for p in ((-30, -86), (30, -86), (36, -70), (-36, -70))]
+            self._shape(ink, gp, gola, smooth=False)
+            bp = [T(p) for p in ((-48, 2), (48, 2), (40, 20), (-40, 20))]
+            self._shape(ink, bp, gola, smooth=False)
+            for dx in (-14, 0, 14):            # trancinha do tricô
+                self._line(ink, [T((dx - 5, -58)), T((dx, -48)), T((dx + 5, -58))], "#D9C7B0", w=LINE * 0.7)
+                self._line(ink, [T((dx - 5, -36)), T((dx, -26)), T((dx + 5, -36))], "#D9C7B0", w=LINE * 0.7)
         if P.get("mochila", 0) > 0.5:          # alças por cima dos ombros
             for side in (-1, 1):
                 self._line(ink, [T((side * 26 - f * s * 10, -76)), T((side * 30, -20))], "#3E7BD6" if not L.bow else "#F0509A", w=LINE * 1.6)

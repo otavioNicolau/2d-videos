@@ -433,7 +433,7 @@ def checar(d: Path) -> Checagem:
     est = estimar_duracao(seq)
     ck.metricas["duracao_estimada"] = est
     lo, hi = f.get("duracao_alvo", [140, 170])
-    if est < lo - 20:
+    if est < lo:  # sem folga: a 12 (estimativa 122 s) saiu com 103 s e o Suno completou com outra letra
         ck.add("aviso", "duração", f"estimativa {est:.0f} s, abaixo do alvo {lo}–{hi} s (estimativa grosseira)")
     elif est > hi + 20:
         ck.add("aviso", "duração", f"estimativa {est:.0f} s, acima do alvo {lo}–{hi} s (estimativa grosseira)")

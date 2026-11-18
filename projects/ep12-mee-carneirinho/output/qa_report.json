@@ -1,0 +1,1632 @@
+{
+  "episode": "ep12-mee-carneirinho",
+  "scenes": {
+    "s01_intro": {
+      "frames": 146,
+      "performers": {
+        "carneirinho": {
+          "drawings": 146,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 145
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s02_intro": {
+      "frames": 126,
+      "performers": {
+        "laurinha": {
+          "drawings": 126,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 125
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 126,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 125
+          },
+          "empty_frames": 0
+        },
+        "carneirinho": {
+          "drawings": 126,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 125
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s03_intro": {
+      "frames": 180,
+      "performers": {
+        "laurinha": {
+          "drawings": 180,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 179
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 180,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 179
+          },
+          "empty_frames": 0
+        },
+        "carneirinho": {
+          "drawings": 178,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 179
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s04_verso": {
+      "frames": 67,
+      "performers": {
+        "laurinha": {
+          "drawings": 67,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 66
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s05_verso": {
+      "frames": 66,
+      "performers": {
+        "cerca": {
+          "drawings": 66,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 65
+          },
+          "empty_frames": 0
+        },
+        "carneirinho": {
+          "drawings": 66,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 65
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s06_verso": {
+      "frames": 53,
+      "performers": {
+        "laurinha": {
+          "drawings": 53,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 52
+          },
+          "empty_frames": 0
+        },
+        "carneirinho": {
+          "drawings": 53,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 52
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s07_verso": {
+      "frames": 54,
+      "performers": {
+        "laurinha": {
+          "drawings": 54,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 53
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 54,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 53
+          },
+          "empty_frames": 0
+        },
+        "carneirinho": {
+          "drawings": 54,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 53
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s08_refrao": {
+      "frames": 92,
+      "performers": {
+        "laurinha": {
+          "drawings": 92,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 91
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 92,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 91
+          },
+          "empty_frames": 0
+        },
+        "carneirinho": {
+          "drawings": 92,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 91
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s09_refrao": {
+      "frames": 67,
+      "performers": {
+        "laurinha": {
+          "drawings": 67,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 66
+          },
+          "empty_frames": 0
+        },
+        "carneirinho": {
+          "drawings": 67,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 66
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s10_refrao": {
+      "frames": 53,
+      "performers": {
+        "laurinha": {
+          "drawings": 53,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 52
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 53,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 52
+          },
+          "empty_frames": 0
+        },
+        "carneirinho": {
+          "drawings": 53,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 52
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s11_refrao": {
+      "frames": 94,
+      "performers": {
+        "laurinha": {
+          "drawings": 94,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 93
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 94,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 93
+          },
+          "empty_frames": 0
+        },
+        "carneirinho": {
+          "drawings": 94,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 93
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s12_refrao": {
+      "frames": 66,
+      "performers": {
+        "laurinha": {
+          "drawings": 66,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 65
+          },
+          "empty_frames": 0
+        },
+        "carneirinho": {
+          "drawings": 66,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 65
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s13_refrao": {
+      "frames": 67,
+      "performers": {
+        "laurinha": {
+          "drawings": 67,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 66
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 67,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 66
+          },
+          "empty_frames": 0
+        },
+        "carneirinho": {
+          "drawings": 67,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 66
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s14_intervalo": {
+      "frames": 39,
+      "performers": {
+        "laurinha": {
+          "drawings": 39,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 38
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s15_intervalo": {
+      "frames": 106,
+      "performers": {
+        "laurinha": {
+          "drawings": 106,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 105
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 106,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 105
+          },
+          "empty_frames": 0
+        },
+        "carneirinho": {
+          "drawings": 106,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 105
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s16_verso": {
+      "frames": 66,
+      "performers": {
+        "luisinho": {
+          "drawings": 66,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 65
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s17_verso": {
+      "frames": 40,
+      "performers": {
+        "luisinho": {
+          "drawings": 40,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 39
+          },
+          "empty_frames": 0
+        },
+        "laurinha": {
+          "drawings": 40,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 39
+          },
+          "empty_frames": 0
+        },
+        "vento": {
+          "drawings": 40,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 39
+          },
+          "empty_frames": 0
+        },
+        "carneirinho": {
+          "drawings": 40,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 39
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s18_verso": {
+      "frames": 53,
+      "performers": {
+        "carneirinho": {
+          "drawings": 53,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 52
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s19_verso": {
+      "frames": 79,
+      "performers": {
+        "luisinho": {
+          "drawings": 79,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 78
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s20_verso": {
+      "frames": 92,
+      "performers": {
+        "laurinha": {
+          "drawings": 92,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 91
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 92,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 91
+          },
+          "empty_frames": 0
+        },
+        "carneirinho": {
+          "drawings": 92,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 91
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s21_refrao": {
+      "frames": 107,
+      "performers": {
+        "laurinha": {
+          "drawings": 107,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 106
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 107,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 106
+          },
+          "empty_frames": 0
+        },
+        "carneirinho": {
+          "drawings": 107,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 106
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s22_refrao": {
+      "frames": 65,
+      "performers": {
+        "laurinha": {
+          "drawings": 65,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 64
+          },
+          "empty_frames": 0
+        },
+        "carneirinho": {
+          "drawings": 65,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 64
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s23_refrao": {
+      "frames": 54,
+      "performers": {
+        "laurinha": {
+          "drawings": 54,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 53
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 54,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 53
+          },
+          "empty_frames": 0
+        },
+        "carneirinho": {
+          "drawings": 54,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 53
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s24_refrao": {
+      "frames": 93,
+      "performers": {
+        "laurinha": {
+          "drawings": 93,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 92
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 93,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 92
+          },
+          "empty_frames": 0
+        },
+        "carneirinho": {
+          "drawings": 93,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 92
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s25_refrao": {
+      "frames": 65,
+      "performers": {
+        "laurinha": {
+          "drawings": 65,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 64
+          },
+          "empty_frames": 0
+        },
+        "carneirinho": {
+          "drawings": 65,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 64
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s26_refrao": {
+      "frames": 66,
+      "performers": {
+        "laurinha": {
+          "drawings": 66,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 65
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 66,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 65
+          },
+          "empty_frames": 0
+        },
+        "carneirinho": {
+          "drawings": 66,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 65
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s27_ponte": {
+      "frames": 53,
+      "performers": {
+        "cerca": {
+          "drawings": 53,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 52
+          },
+          "empty_frames": 0
+        },
+        "carneirinho": {
+          "drawings": 53,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 52
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s28_ponte": {
+      "frames": 53,
+      "performers": {
+        "capim": {
+          "drawings": 53,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 52
+          },
+          "empty_frames": 0
+        },
+        "carneirinho": {
+          "drawings": 53,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 52
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s29_ponte": {
+      "frames": 65,
+      "performers": {
+        "laurinha": {
+          "drawings": 65,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 64
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 65,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 64
+          },
+          "empty_frames": 0
+        },
+        "carneirinho": {
+          "drawings": 65,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 64
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s30_ponte": {
+      "frames": 40,
+      "performers": {
+        "laurinha": {
+          "drawings": 40,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 39
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 40,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 39
+          },
+          "empty_frames": 0
+        },
+        "carneirinho": {
+          "drawings": 40,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 39
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s31_ponte": {
+      "frames": 53,
+      "performers": {
+        "laurinha": {
+          "drawings": 53,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 52
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s32_ponte": {
+      "frames": 52,
+      "performers": {
+        "laurinha": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        },
+        "cerca": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        },
+        "carneirinho": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s33_ponte": {
+      "frames": 53,
+      "performers": {
+        "luisinho": {
+          "drawings": 30,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 29
+          },
+          "empty_frames": 0
+        },
+        "capim": {
+          "drawings": 53,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 52
+          },
+          "empty_frames": 0
+        },
+        "carneirinho": {
+          "drawings": 53,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 52
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s34_ponte": {
+      "frames": 65,
+      "performers": {
+        "laurinha": {
+          "drawings": 65,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 64
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 65,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 64
+          },
+          "empty_frames": 0
+        },
+        "carneirinho": {
+          "drawings": 65,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 64
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s35_ponte": {
+      "frames": 40,
+      "performers": {
+        "laurinha": {
+          "drawings": 40,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 39
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 40,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 39
+          },
+          "empty_frames": 0
+        },
+        "carneirinho": {
+          "drawings": 40,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 39
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s36_intervalo": {
+      "frames": 92,
+      "performers": {
+        "luisinho": {
+          "drawings": 92,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 91
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s37_verso": {
+      "frames": 65,
+      "performers": {
+        "laurinha": {
+          "drawings": 65,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 64
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 65,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 64
+          },
+          "empty_frames": 0
+        },
+        "cerca": {
+          "drawings": 65,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 64
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s38_verso": {
+      "frames": 40,
+      "performers": {
+        "laurinha": {
+          "drawings": 40,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 39
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 40,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 39
+          },
+          "empty_frames": 0
+        },
+        "n1": {
+          "drawings": 40,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 39
+          },
+          "empty_frames": 0
+        },
+        "n2": {
+          "drawings": 40,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 39
+          },
+          "empty_frames": 0
+        },
+        "carneirinho": {
+          "drawings": 40,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 39
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s39_verso": {
+      "frames": 79,
+      "performers": {
+        "laurinha": {
+          "drawings": 79,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 78
+          },
+          "empty_frames": 0
+        },
+        "n1": {
+          "drawings": 79,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 78
+          },
+          "empty_frames": 0
+        },
+        "n2": {
+          "drawings": 79,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 78
+          },
+          "empty_frames": 0
+        },
+        "carneirinho": {
+          "drawings": 79,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 78
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s40_verso": {
+      "frames": 39,
+      "performers": {
+        "laurinha": {
+          "drawings": 39,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 38
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 23,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 22
+          },
+          "empty_frames": 0
+        },
+        "n1": {
+          "drawings": 39,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 38
+          },
+          "empty_frames": 0
+        },
+        "n2": {
+          "drawings": 39,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 38
+          },
+          "empty_frames": 0
+        },
+        "carneirinho": {
+          "drawings": 39,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 38
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s41_refrao": {
+      "frames": 105,
+      "performers": {
+        "laurinha": {
+          "drawings": 105,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 104
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 105,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 104
+          },
+          "empty_frames": 0
+        },
+        "carneirinho": {
+          "drawings": 105,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 104
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s42_refrao": {
+      "frames": 66,
+      "performers": {
+        "laurinha": {
+          "drawings": 66,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 65
+          },
+          "empty_frames": 0
+        },
+        "carneirinho": {
+          "drawings": 66,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 65
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s43_refrao": {
+      "frames": 64,
+      "performers": {
+        "laurinha": {
+          "drawings": 64,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 63
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 64,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 63
+          },
+          "empty_frames": 0
+        },
+        "carneirinho": {
+          "drawings": 64,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 63
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s44_refrao": {
+      "frames": 80,
+      "performers": {
+        "laurinha": {
+          "drawings": 80,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 79
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 80,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 79
+          },
+          "empty_frames": 0
+        },
+        "carneirinho": {
+          "drawings": 80,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 79
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s45_refrao": {
+      "frames": 65,
+      "performers": {
+        "laurinha": {
+          "drawings": 65,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 64
+          },
+          "empty_frames": 0
+        },
+        "carneirinho": {
+          "drawings": 65,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 64
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s46_refrao": {
+      "frames": 52,
+      "performers": {
+        "laurinha": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        },
+        "carneirinho": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s47_refrao": {
+      "frames": 92,
+      "performers": {
+        "laurinha": {
+          "drawings": 92,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 91
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 92,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 91
+          },
+          "empty_frames": 0
+        },
+        "carneirinho": {
+          "drawings": 92,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 91
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s48_refrao": {
+      "frames": 65,
+      "performers": {
+        "laurinha": {
+          "drawings": 65,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 64
+          },
+          "empty_frames": 0
+        },
+        "carneirinho": {
+          "drawings": 65,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 64
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s49_refrao": {
+      "frames": 52,
+      "performers": {
+        "laurinha": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        },
+        "carneirinho": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s50_refrao": {
+      "frames": 92,
+      "performers": {
+        "laurinha": {
+          "drawings": 92,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 91
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 92,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 91
+          },
+          "empty_frames": 0
+        },
+        "carneirinho": {
+          "drawings": 92,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 91
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s51_refrao": {
+      "frames": 52,
+      "performers": {
+        "laurinha": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        },
+        "carneirinho": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s52_refrao": {
+      "frames": 65,
+      "performers": {
+        "laurinha": {
+          "drawings": 65,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 64
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 65,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 64
+          },
+          "empty_frames": 0
+        },
+        "carneirinho": {
+          "drawings": 65,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 64
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s53_final": {
+      "frames": 91,
+      "performers": {
+        "laurinha": {
+          "drawings": 91,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 90
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s54_final": {
+      "frames": 52,
+      "performers": {
+        "luisinho": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        },
+        "joinha": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 5
+        }
+      },
+      "issues": [
+        "joinha: 5 quadros vazios (ex.: [1, 2, 3, 4, 5])"
+      ],
+      "frozen_samples": 0
+    },
+    "s55_final": {
+      "frames": 52,
+      "performers": {
+        "mamae": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        },
+        "laurinha": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s56_final": {
+      "frames": 131,
+      "performers": {
+        "laurinha": {
+          "drawings": 131,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 130
+          },
+          "empty_frames": 0
+        },
+        "botao": {
+          "drawings": 129,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 130
+          },
+          "empty_frames": 5
+        }
+      },
+      "issues": [
+        "botao: 5 quadros vazios (ex.: [1, 2, 3, 4, 5])"
+      ],
+      "frozen_samples": 0
+    },
+    "s57_final": {
+      "frames": 191,
+      "performers": {
+        "laurinha": {
+          "drawings": 191,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 190
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 191,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 190
+          },
+          "empty_frames": 0
+        },
+        "carneirinho": {
+          "drawings": 180,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 190
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    }
+  },
+  "warnings": [
+    "render final ainda não aprovado (approval.final_render = false): será gerado como CANDIDATO",
+    "storyboard s01_intro: pendente",
+    "storyboard s02_intro: pendente",
+    "storyboard s03_intro: pendente",
+    "storyboard s04_verso: pendente",
+    "storyboard s05_verso: pendente",
+    "storyboard s06_verso: pendente",
+    "storyboard s07_verso: pendente",
+    "storyboard s08_refrao: pendente",
+    "storyboard s09_refrao: pendente",
+    "storyboard s10_refrao: pendente",
+    "storyboard s11_refrao: pendente",
+    "storyboard s12_refrao: pendente",
+    "storyboard s13_refrao: pendente",
+    "storyboard s14_intervalo: pendente",
+    "storyboard s15_intervalo: pendente",
+    "storyboard s16_verso: pendente",
+    "storyboard s17_verso: pendente",
+    "storyboard s18_verso: pendente",
+    "storyboard s19_verso: pendente",
+    "storyboard s20_verso: pendente",
+    "storyboard s21_refrao: pendente",
+    "storyboard s22_refrao: pendente",
+    "storyboard s23_refrao: pendente",
+    "storyboard s24_refrao: pendente",
+    "storyboard s25_refrao: pendente",
+    "storyboard s26_refrao: pendente",
+    "storyboard s27_ponte: pendente",
+    "storyboard s28_ponte: pendente",
+    "storyboard s29_ponte: pendente",
+    "storyboard s30_ponte: pendente",
+    "storyboard s31_ponte: pendente",
+    "storyboard s32_ponte: pendente",
+    "storyboard s33_ponte: pendente",
+    "storyboard s34_ponte: pendente",
+    "storyboard s35_ponte: pendente",
+    "storyboard s36_intervalo: pendente",
+    "storyboard s37_verso: pendente",
+    "storyboard s38_verso: pendente",
+    "storyboard s39_verso: pendente",
+    "storyboard s40_verso: pendente",
+    "storyboard s41_refrao: pendente",
+    "storyboard s42_refrao: pendente",
+    "storyboard s43_refrao: pendente",
+    "storyboard s44_refrao: pendente",
+    "storyboard s45_refrao: pendente",
+    "storyboard s46_refrao: pendente",
+    "storyboard s47_refrao: pendente",
+    "storyboard s48_refrao: pendente",
+    "storyboard s49_refrao: pendente",
+    "storyboard s50_refrao: pendente",
+    "storyboard s51_refrao: pendente",
+    "storyboard s52_refrao: pendente",
+    "storyboard s53_final: pendente",
+    "storyboard s54_final: pendente",
+    "storyboard s55_final: pendente",
+    "storyboard s56_final: pendente",
+    "storyboard s57_final: pendente"
+  ],
+  "lines": {},
+  "video": "/home/otavio/2d/projects/ep12-mee-carneirinho/output/ep12-mee-carneirinho_CANDIDATO.mp4",
+  "contact_sheet": "/home/otavio/2d/projects/ep12-mee-carneirinho/output/prancha.png",
+  "approved": false
+}

@@ -49,7 +49,7 @@ def _slug(musica: Path) -> str:
 def _letra_publicavel(musica: Path) -> str:
     """Letra para a descrição: sem marcações do Suno, refrão repetido só indicado, nomes com a grafia do canal."""
     from ..audio import composer
-    out, refrao_visto = [], False
+    out, refrao_visto = [], None
     for s in composer.secoes(musica):
         if not s["linhas"] or s["tipo"] in ("intervalo", "bordao"):
             continue
@@ -58,20 +58,21 @@ def _letra_publicavel(musica: Path) -> str:
                 out[-1] += "\n" + "\n".join(s["linhas"])
             continue
         if s["tipo"] == "refrao":
-            if refrao_visto:
+            if refrao_visto is not None and s["linhas"] == refrao_visto:   # só o refrão IGUAL vira "(Refrão)"
                 if out[-1] != "(Refrão)":                    # refrão repetido em seguida: indica uma vez só
                     out.append("(Refrão)")
                 continue
-            refrao_visto = True
+            if refrao_visto is None:                          # refrão com comandos/versos novos sai por extenso
+                refrao_visto = s["linhas"]
         linhas = [re.sub(r"\s+", " ", l.replace("Lau-ri-nha", "Laurinha").replace("Luizinho", "Luisinho")) for l in s["linhas"]]
         out.append("\n".join(linhas))
     return "\n\n".join(out)
 
 
-def _capitulos(song: dict, offset: float, total: float) -> list[tuple[float, str]]:
-    nomes = {"intro": "Abertura", "verso": "Verso", "refrao": "Refrão", "ponte": "Curiosidade", "intervalo": "Hora de dançar",
+def _capitulos(song: dict, offset: float, total: float, nomes_ficha: dict | None = None) -> list[tuple[float, str]]:
+    nomes = {"intro": "Abertura", "verso": "Verso", "refrao": "Refrão", "ponte": "Hora da brincadeira", "intervalo": "Hora de dançar",
              "parada": "Hora da estátua", "subida": "Todo mundo junto",
-             "final": "Tchau!"}
+             "final": "Tchau!", **(nomes_ficha or {})}           # ficha.capitulos troca o nome de uma parte (ex.: ponte)
     from .clip_draft import blocos
     caps = [(0.0, "Abertura")]
     nv = 0
@@ -122,7 +123,7 @@ def publicar(project: str, musica: Path, copiar: bool = True) -> Path:
              "OBS.: canal para crianças — comentários ficam desativados pelo YouTube (não há comentário fixado)."]
     (out / f"{slug}.descricao.txt").write_text("\n".join(desc) + "\n", encoding="utf-8")
     song = json.loads((pdir / "analise" / "song.json").read_text(encoding="utf-8"))
-    caps = _capitulos(song, offset, total)
+    caps = _capitulos(song, offset, total, f.get("capitulos"))
     ytx = ["Capítulos:"] + [f"{_ts(t)} {n}" for t, n in caps] if caps else ["(vídeo curto: sem capítulos)"]
     ytx += ["", "Configurações do envio:", "- Público: SIM, é conteúdo para crianças", "- Categoria: Música",
             "- Idioma do vídeo: Português (Brasil)", f"- Legenda: enviar {slug}.srt (Português)",

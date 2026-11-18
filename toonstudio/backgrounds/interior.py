@@ -433,9 +433,38 @@ def lua_chao(rng) -> tuple[skia.Surface, int]:
     return s, w
 
 
+def campo(rng) -> tuple[skia.Surface, int]:
+    """Campo do carneirinho (Méé, Carneirinho!): céu azul com nuvens fofas, morrinhos verdes que se sobrepõem,
+    cerquinha de madeira ao fundo, florzinhas e tufinhos no gramado da frente (onde a turma pisa)."""
+    w = W_INT
+    s, c = _surf(w, H, 1.5)
+    F = Flat(c)
+    c.drawRect(skia.Rect(0, 0, w, H), skia.Paint(Color4f=skia.Color4f(*_rgba("#9ED6FF"))))
+    F.oval(2280, 150, 90, 90, "#FFE066")                                    # solzinho
+    for x, y, sc in ((260, 130, 1.5), (900, 210, 1.2), (1500, 110, 1.7), (2000, 250, 1.1)):
+        F.cloud(x, y, sc)
+    for col, base, amp, per, ph in (("#8EDB7A", 560, 120, 520, 0.0), ("#74CC66", 640, 100, 430, 1.3)):
+        pts = [(-60, H + 20)] + [(x, base - amp * (0.5 + 0.5 * math.sin(x / per * math.pi + ph))) for x in np.linspace(-60, w + 60, 120)] \
+            + [(w + 60, H + 20)]
+        F.shape(pts, col, smooth=False)
+    for x in range(-40, w + 80, 170):                                        # cerquinha comprida ao fundo
+        F.shape([(x - 12, 720), (x + 12, 720), (x + 12, 600), (x, 588), (x - 12, 600)], "#D9A066", smooth=False)
+    for y in (630, 680):
+        F.shape([(-40, y - 9), (w + 40, y - 9), (w + 40, y + 9), (-40, y + 9)], "#D9A066", smooth=False)
+    F.shape([(-20, FLOOR_Y - 20), (w * 0.35, FLOOR_Y - 40), (w * 0.7, FLOOR_Y - 10), (w + 20, FLOOR_Y - 30), (w + 20, H + 20), (-20, H + 20)],
+            "#7BD36A")
+    flores = ("#FFFFFF", "#FFD23F", "#FF8AC6", "#B98CFF")
+    for j, x in enumerate(range(60, w, 150)):                                # florzinhas e tufos no gramado
+        y = FLOOR_Y + 30 + (j * 67) % 250
+        F.grass_ticks(x + (j * 31) % 60, y)
+        if j % 2 == 0:
+            F.flower(x + 50, y + 20, flores[j // 2 % len(flores)])
+    return s, w
+
+
 SCENES = {"plano_banheiro": banheiro, "plano_quarto_rosa": lambda rng: quarto("rosa", rng), "plano_quarto_azul": lambda rng: quarto("azul", rng),
           "plano_cozinha": cozinha, "plano_casa_frente": casa_frente, "plano_escola": escola, "plano_ceu": ceu,
-          "plano_jardim": jardim, "plano_lagoa": lagoa, "plano_sala": sala, "plano_espaco": espaco, "plano_lua": lua_chao}
+          "plano_jardim": jardim, "plano_lagoa": lagoa, "plano_sala": sala, "plano_espaco": espaco, "plano_lua": lua_chao, "plano_campo": campo}
 
 
 def build(bg_id: str, out_dir: Path, scale: float = 1.5, seed: int = 11) -> dict:

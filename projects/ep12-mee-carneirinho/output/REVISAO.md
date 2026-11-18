@@ -1,0 +1,133 @@
+# Revisão — Méé, Carneirinho!
+
+- Vídeo: `ep12-mee-carneirinho_CANDIDATO.mp4`
+- Prancha: `prancha.png`
+- Aprovação humana do render final: **PENDENTE (vídeo é candidato)**
+
+## Falas (QA por transcrição cega)
+
+| cena | texto | ouvido | sim. | dur. |
+|---|---|---|---|---|
+
+## Cenas
+
+- **s01_intro** — 146 quadros; carneirinho: 146 desenhos
+- **s02_intro** — 126 quadros; laurinha: 126 desenhos, luisinho: 126 desenhos, carneirinho: 126 desenhos
+- **s03_intro** — 180 quadros; laurinha: 180 desenhos, luisinho: 180 desenhos, carneirinho: 178 desenhos
+- **s04_verso** — 67 quadros; laurinha: 67 desenhos
+- **s05_verso** — 66 quadros; cerca: 66 desenhos, carneirinho: 66 desenhos
+- **s06_verso** — 53 quadros; laurinha: 53 desenhos, carneirinho: 53 desenhos
+- **s07_verso** — 54 quadros; laurinha: 54 desenhos, luisinho: 54 desenhos, carneirinho: 54 desenhos
+- **s08_refrao** — 92 quadros; laurinha: 92 desenhos, luisinho: 92 desenhos, carneirinho: 92 desenhos
+- **s09_refrao** — 67 quadros; laurinha: 67 desenhos, carneirinho: 67 desenhos
+- **s10_refrao** — 53 quadros; laurinha: 53 desenhos, luisinho: 53 desenhos, carneirinho: 53 desenhos
+- **s11_refrao** — 94 quadros; laurinha: 94 desenhos, luisinho: 94 desenhos, carneirinho: 94 desenhos
+- **s12_refrao** — 66 quadros; laurinha: 66 desenhos, carneirinho: 66 desenhos
+- **s13_refrao** — 67 quadros; laurinha: 67 desenhos, luisinho: 67 desenhos, carneirinho: 67 desenhos
+- **s14_intervalo** — 39 quadros; laurinha: 39 desenhos
+- **s15_intervalo** — 106 quadros; laurinha: 106 desenhos, luisinho: 106 desenhos, carneirinho: 106 desenhos
+- **s16_verso** — 66 quadros; luisinho: 66 desenhos
+- **s17_verso** — 40 quadros; luisinho: 40 desenhos, laurinha: 40 desenhos, vento: 40 desenhos, carneirinho: 40 desenhos
+- **s18_verso** — 53 quadros; carneirinho: 53 desenhos
+- **s19_verso** — 79 quadros; luisinho: 79 desenhos
+- **s20_verso** — 92 quadros; laurinha: 92 desenhos, luisinho: 92 desenhos, carneirinho: 92 desenhos
+- **s21_refrao** — 107 quadros; laurinha: 107 desenhos, luisinho: 107 desenhos, carneirinho: 107 desenhos
+- **s22_refrao** — 65 quadros; laurinha: 65 desenhos, carneirinho: 65 desenhos
+- **s23_refrao** — 54 quadros; laurinha: 54 desenhos, luisinho: 54 desenhos, carneirinho: 54 desenhos
+- **s24_refrao** — 93 quadros; laurinha: 93 desenhos, luisinho: 93 desenhos, carneirinho: 93 desenhos
+- **s25_refrao** — 65 quadros; laurinha: 65 desenhos, carneirinho: 65 desenhos
+- **s26_refrao** — 66 quadros; laurinha: 66 desenhos, luisinho: 66 desenhos, carneirinho: 66 desenhos
+- **s27_ponte** — 53 quadros; cerca: 53 desenhos, carneirinho: 53 desenhos
+- **s28_ponte** — 53 quadros; capim: 53 desenhos, carneirinho: 53 desenhos
+- **s29_ponte** — 65 quadros; laurinha: 65 desenhos, luisinho: 65 desenhos, carneirinho: 65 desenhos
+- **s30_ponte** — 40 quadros; laurinha: 40 desenhos, luisinho: 40 desenhos, carneirinho: 40 desenhos
+- **s31_ponte** — 53 quadros; laurinha: 53 desenhos
+- **s32_ponte** — 52 quadros; laurinha: 52 desenhos, luisinho: 52 desenhos, cerca: 52 desenhos, carneirinho: 52 desenhos
+- **s33_ponte** — 53 quadros; luisinho: 30 desenhos, capim: 53 desenhos, carneirinho: 53 desenhos
+- **s34_ponte** — 65 quadros; laurinha: 65 desenhos, luisinho: 65 desenhos, carneirinho: 65 desenhos
+- **s35_ponte** — 40 quadros; laurinha: 40 desenhos, luisinho: 40 desenhos, carneirinho: 40 desenhos
+- **s36_intervalo** — 92 quadros; luisinho: 92 desenhos
+- **s37_verso** — 65 quadros; laurinha: 65 desenhos, luisinho: 65 desenhos, cerca: 65 desenhos
+- **s38_verso** — 40 quadros; laurinha: 40 desenhos, luisinho: 40 desenhos, n1: 40 desenhos, n2: 40 desenhos, carneirinho: 40 desenhos
+- **s39_verso** — 79 quadros; laurinha: 79 desenhos, n1: 79 desenhos, n2: 79 desenhos, carneirinho: 79 desenhos
+- **s40_verso** — 39 quadros; laurinha: 39 desenhos, luisinho: 23 desenhos, n1: 39 desenhos, n2: 39 desenhos, carneirinho: 39 desenhos
+- **s41_refrao** — 105 quadros; laurinha: 105 desenhos, luisinho: 105 desenhos, carneirinho: 105 desenhos
+- **s42_refrao** — 66 quadros; laurinha: 66 desenhos, carneirinho: 66 desenhos
+- **s43_refrao** — 64 quadros; laurinha: 64 desenhos, luisinho: 64 desenhos, carneirinho: 64 desenhos
+- **s44_refrao** — 80 quadros; laurinha: 80 desenhos, luisinho: 80 desenhos, carneirinho: 80 desenhos
+- **s45_refrao** — 65 quadros; laurinha: 65 desenhos, carneirinho: 65 desenhos
+- **s46_refrao** — 52 quadros; laurinha: 52 desenhos, luisinho: 52 desenhos, carneirinho: 52 desenhos
+- **s47_refrao** — 92 quadros; laurinha: 92 desenhos, luisinho: 92 desenhos, carneirinho: 92 desenhos
+- **s48_refrao** — 65 quadros; laurinha: 65 desenhos, carneirinho: 65 desenhos
+- **s49_refrao** — 52 quadros; laurinha: 52 desenhos, luisinho: 52 desenhos, carneirinho: 52 desenhos
+- **s50_refrao** — 92 quadros; laurinha: 92 desenhos, luisinho: 92 desenhos, carneirinho: 92 desenhos
+- **s51_refrao** — 52 quadros; laurinha: 52 desenhos, carneirinho: 52 desenhos
+- **s52_refrao** — 65 quadros; laurinha: 65 desenhos, luisinho: 65 desenhos, carneirinho: 65 desenhos
+- **s53_final** — 91 quadros; laurinha: 91 desenhos
+- **s54_final** — 52 quadros; luisinho: 52 desenhos, joinha: 52 desenhos
+  - ⚠ joinha: 5 quadros vazios (ex.: [1, 2, 3, 4, 5])
+- **s55_final** — 52 quadros; mamae: 52 desenhos, laurinha: 52 desenhos
+- **s56_final** — 131 quadros; laurinha: 131 desenhos, botao: 129 desenhos
+  - ⚠ botao: 5 quadros vazios (ex.: [1, 2, 3, 4, 5])
+- **s57_final** — 191 quadros; laurinha: 191 desenhos, luisinho: 191 desenhos, carneirinho: 180 desenhos
+
+## Avisos
+
+- render final ainda não aprovado (approval.final_render = false): será gerado como CANDIDATO
+- storyboard s01_intro: pendente
+- storyboard s02_intro: pendente
+- storyboard s03_intro: pendente
+- storyboard s04_verso: pendente
+- storyboard s05_verso: pendente
+- storyboard s06_verso: pendente
+- storyboard s07_verso: pendente
+- storyboard s08_refrao: pendente
+- storyboard s09_refrao: pendente
+- storyboard s10_refrao: pendente
+- storyboard s11_refrao: pendente
+- storyboard s12_refrao: pendente
+- storyboard s13_refrao: pendente
+- storyboard s14_intervalo: pendente
+- storyboard s15_intervalo: pendente
+- storyboard s16_verso: pendente
+- storyboard s17_verso: pendente
+- storyboard s18_verso: pendente
+- storyboard s19_verso: pendente
+- storyboard s20_verso: pendente
+- storyboard s21_refrao: pendente
+- storyboard s22_refrao: pendente
+- storyboard s23_refrao: pendente
+- storyboard s24_refrao: pendente
+- storyboard s25_refrao: pendente
+- storyboard s26_refrao: pendente
+- storyboard s27_ponte: pendente
+- storyboard s28_ponte: pendente
+- storyboard s29_ponte: pendente
+- storyboard s30_ponte: pendente
+- storyboard s31_ponte: pendente
+- storyboard s32_ponte: pendente
+- storyboard s33_ponte: pendente
+- storyboard s34_ponte: pendente
+- storyboard s35_ponte: pendente
+- storyboard s36_intervalo: pendente
+- storyboard s37_verso: pendente
+- storyboard s38_verso: pendente
+- storyboard s39_verso: pendente
+- storyboard s40_verso: pendente
+- storyboard s41_refrao: pendente
+- storyboard s42_refrao: pendente
+- storyboard s43_refrao: pendente
+- storyboard s44_refrao: pendente
+- storyboard s45_refrao: pendente
+- storyboard s46_refrao: pendente
+- storyboard s47_refrao: pendente
+- storyboard s48_refrao: pendente
+- storyboard s49_refrao: pendente
+- storyboard s50_refrao: pendente
+- storyboard s51_refrao: pendente
+- storyboard s52_refrao: pendente
+- storyboard s53_final: pendente
+- storyboard s54_final: pendente
+- storyboard s55_final: pendente
+- storyboard s56_final: pendente
+- storyboard s57_final: pendente
