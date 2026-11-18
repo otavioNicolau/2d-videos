@@ -18,34 +18,32 @@
  "ritmo": "forro_piseiro",
  "bpm": 160,
  "estrutura": "D",
- "voz": "dueto",
+ "voz": "laurinha",
  "cantam": {
-  "verso 1": "laurinha",
-  "refrão": "coro",
-  "verso 2": "luisinho",
-  "ponte": "comandos, coro responde",
-  "final": "todo mundo"
+  "verso": "laurinha",
+  "refrão": "laurinha",
+  "ponte": "laurinha (comandos)"
  },
  "cenas": [
   {
+   "parte": "intro",
+   "ideia": "a festa junina: bandeirinhas e a panela no fogão (com um adulto)"
+  },
+  {
    "parte": "verso 1",
-   "ideia": "arraial de festa junina visto de pertinho; uma panela enorme com milhos do tamanho deles"
+   "ideia": "as pipocas pulam: no chapéu do vovô, até a lua"
   },
   {
    "parte": "refrão",
-   "ideia": "os milhos viram pipocas com carinha e pulam; Laurinha e Luisinho pulam junto na batida"
-  },
-  {
-   "parte": "verso 2",
-   "ideia": "dentro do milho (quadro em corte): gotinha de água esquenta, vira nuvenzinha e ploc! a mamãe cuida da panela"
+   "ideia": "todo mundo pula como pipoca a cada 'ploc'"
   },
   {
    "parte": "ponte",
-   "ideia": "dança da pipoca: agacha como milho, treme esquentando, pula alto; congela na parada"
+   "ideia": "comandos: agacha como milhinho, treme… e pula!"
   },
   {
    "parte": "final",
-   "ideia": "convite; saquinhos de pipoca dando tchau"
+   "ideia": "convite; o balde de pipoca e todos dando tchau"
   }
  ],
  "duracao_alvo": [
@@ -58,9 +56,11 @@
  "status": "letra_revisada",
  "versoes": [],
  "youtube": {
-  "resumo": "PULA PIPOCA! 🍿 Festa junina, bandeirinha no céu e a panela chiando… ploc! Sabia que o milho tem aguinha dentro? Esquenta, vira vapor e estoura! Agacha pequenininho como o milho, esquenta… e pula bem alto! Panela no fogão, só com um adulto.",
+  "resumo": "PULA PIPOCA! 🍿 Na festa de São João, o milhinho na panela fez ploc, ploc… uma pipoca caiu no chapéu do vovô, outra foi pra lua! Agacha, treme, treme… e pula!",
   "resumo_short": "PULA PIPOCA! 🍿 Agacha, esquenta e pula com a Laurinha e o Luisinho!",
   "curiosidade": "O milho tem aguinha dentro: esquenta, vira vapor e estoura em pipoca"
  },
- "data_comemorativa": "Festa junina (junho)"
+ "data_comemorativa": "Festa junina (junho)",
+ "persona": "laurinha",
+ "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz)"
 }

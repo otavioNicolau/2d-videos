@@ -18,30 +18,32 @@
  "ritmo": "xote",
  "bpm": 100,
  "estrutura": "R",
- "voz": "dueto",
+ "voz": "luisinho",
  "cantam": {
-  "verso 1": "luisinho",
-  "refrão": "coro",
-  "verso 2": "laurinha",
-  "ponte": "comandos, coro responde",
-  "final": "todo mundo"
+  "verso": "luisinho",
+  "refrão": "luisinho",
+  "ponte": "luisinho (comandos)"
  },
  "cenas": [
   {
+   "parte": "intro",
+   "ideia": "a savana; a girafa comendo folhas no alto da árvore"
+  },
+  {
    "parte": "verso 1",
-   "ideia": "o Luisinho voa até a copa e encontra a cabeça da girafa"
+   "ideia": "ela acha o chapéu, pega a pipa presa, o balão… e dá um beijo na lua"
   },
   {
    "parte": "refrão",
-   "ideia": "todos esticam o pescoço cada vez mais alto até pegar a folhinha (nhac!)"
-  },
-  {
-   "parte": "verso 2",
-   "ideia": "a girafa mostra a língua roxa e limpa a orelha com ela (eca! ha ha!)"
+   "ideia": "o pescoço estica além da tela"
   },
   {
    "parte": "ponte",
-   "ideia": "alongamento: pontinha do pé, estica o braço, abaixa pra beber água"
+   "ideia": "comandos: estica o pescoço, olha pra cima, pra baixo, come a folhinha"
+  },
+  {
+   "parte": "final",
+   "ideia": "convite; a girafa baixa a cabeça até o Luisinho e dá tchau"
   }
  ],
  "duracao_alvo": [
@@ -54,10 +56,10 @@
  "status": "letra_revisada",
  "versoes": [],
  "youtube": {
-  "resumo": "PESCOÇO DE GIRAFA! 🦒 O Luisinho voou lá no alto e encontrou a girafa! Estica, estica, mais alto, mais alto… pegou a folhinha! Sabia que a língua da girafa é roxinha e ela limpa a orelha com a língua? Eca! Na pontinha do pé, estica o braço e abaixa pra beber!",
+  "resumo": "PESCOÇO DE GIRAFA! 🦒 A girafa tem um pescoço tão comprido que achou o chapéu, pegou a pipa presa, pegou o balão… e deu um beijo na lua! Estica o pescoço e come a folhinha!",
   "resumo_short": "PESCOÇO DE GIRAFA! 🦒 Estica, estica com a Laurinha e o Luisinho!",
   "curiosidade": "A girafa tem a língua roxinha e comprida: alcança até a orelha"
  },
  "persona": "luisinho",
- "revisao": "auditoria 17/11/2026 (docs/auditoria/AUDITORIA_MUSICAS_11-39.md)"
+ "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz)"
 }

@@ -19,34 +19,32 @@
  "ritmo": "eletronica_infantil",
  "bpm": 124,
  "estrutura": "D",
- "voz": "dueto",
+ "voz": "luisinho",
  "cantam": {
-  "verso 1": "luisinho",
-  "refrão": "coro",
-  "verso 2": "laurinha",
-  "ponte": "comandos, coro responde",
-  "final": "todo mundo"
+  "verso": "luisinho",
+  "refrão": "luisinho",
+  "ponte": "luisinho (comandos)"
  },
  "cenas": [
   {
+   "parte": "intro",
+   "ideia": "a oficina do Luisinho: parafusos, botões e um robô de caixa"
+  },
+  {
    "parte": "verso 1",
-   "ideia": "o Luisinho acha um botão no quarto e aperta: o Luisinho vira um robô (antenas piscando)"
+   "ideia": "o botão vermelho; o robô dança sem parar até a pilha acabar (pfff!)"
   },
   {
    "parte": "refrão",
-   "ideia": "dança de robô: braço duro, perna dura, vira e trava; luzinhas piscando no fundo"
-  },
-  {
-   "parte": "verso 2",
-   "ideia": "a pilha acaba: os movimentos ficam lentos até ele desligar; a Laurinha encaixa uma pilha gigante e ele religa"
+   "ideia": "trava e volta, trava e volta no tempo da batida"
   },
   {
    "parte": "ponte",
-   "ideia": "liga, trava, liga… a música para e ele fica parado… e liga de novo!"
+   "ideia": "comandos: braço de robô, perna de robô, gira a cabeça… a pilha acaba"
   },
   {
    "parte": "final",
-   "ideia": "convite; o robô acena duro no tchau"
+   "ideia": "convite; o Luisinho troca a pilha e o robô dá tchau com a mão de pinça"
   }
  ],
  "duracao_alvo": [
@@ -57,10 +55,11 @@
  "status": "letra_revisada",
  "versoes": [],
  "youtube": {
-  "resumo": "ROBÔ DANÇARINO! 🤖 O Luisinho achou um botão, apertou… e virou robô! Braço duro, perna dura, vira, vira… trava! Ih, a pilha tá acabando: devagar… desligou! Recarrega e liga de novo: bip, bop! Dance de robô com a Laurinha e o Luisinho!",
+  "resumo": "ROBÔ DANÇARINO! 🤖 O Luisinho montou um robozinho, apertou o botão vermelho… e ele não parou mais de dançar! Bip, bop, travou! Bip, bop, voltou! Até a pilha acabar… pfff!",
   "resumo_short": "ROBÔ DANÇARINO! 🤖 Bip, bop! Dance de robô com a Laurinha e o Luisinho!",
   "curiosidade": "O robô precisa de energia (pilha ou bateria) para funcionar, igual a gente precisa de comida"
  },
  "origem": "brincadeiras com o corpo (18/11/2026), inspiradas no gênero de No Ritmo Quá Quá / Morto-Vivo — nada copiado",
- "persona": "luisinho"
+ "persona": "luisinho",
+ "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz)"
 }

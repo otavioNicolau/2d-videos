@@ -18,34 +18,32 @@
  "ritmo": "samba_infantil",
  "bpm": 105,
  "estrutura": "R",
- "voz": "dueto",
+ "voz": "laurinha",
  "cantam": {
-  "verso 1": "laurinha",
-  "refrão": "coro",
-  "verso 2": "luisinho",
-  "ponte": "comandos, coro responde",
-  "final": "todo mundo"
+  "verso": "laurinha",
+  "refrão": "laurinha",
+  "ponte": "laurinha (comandos)"
  },
  "cenas": [
   {
+   "parte": "intro",
+   "ideia": "o quintal da vovó com o pé de limão"
+  },
+  {
    "parte": "verso 1",
-   "ideia": "quintal da vovó com limoeiro gigante (para eles); a Laurinha morde o limão"
+   "ideia": "a Laurinha morde o limão: olho fecha, boca entorta, cabelo arrepia"
   },
   {
    "parte": "refrão",
-   "ideia": "close nas caretas de azedo, uma maior que a outra; a turma ri"
-  },
-  {
-   "parte": "verso 2",
-   "ideia": "concurso de caretas: azedo (enorme), doce (sorriso), azedo de novo; quem fez a maior?"
+   "ideia": "careta em close a cada 'careta de limão'"
   },
   {
    "parte": "ponte",
-   "ideia": "espreme, mexe, golinho: a limonada da vovó"
+   "ideia": "o vovô e a vovó mordem e fazem caretas; a câmera chama a criança"
   },
   {
    "parte": "final",
-   "ideia": "convite; a vovó e os dois brindando limonada"
+   "ideia": "convite; limonada com canudinho e o sorriso de volta"
   }
  ],
  "duracao_alvo": [
@@ -58,9 +56,10 @@
  "status": "letra_revisada",
  "versoes": [],
  "youtube": {
-  "resumo": "CARETA DE LIMÃO! 🍋 No quintal da vovó tem limão no pé… morde pra ver: aaai! Azedinho, azedão: careta de limão! Quem faz a maior careta? Depois a vovó espreme, mexe e… limonada! Um golinho: hum!",
+  "resumo": "CARETA DE LIMÃO! 🍋 A Laurinha mordeu um limãozinho do quintal da vovó e… o olho fechou, a boca entortou e o cabelo arrepiou! O vovô mordeu: careta! A vovó mordeu: careta! Agora é a sua vez!",
   "resumo_short": "CARETA DE LIMÃO! 🍋 Azedinho, azedão: faça careta com a Laurinha e o Luisinho!",
   "curiosidade": "Limão azedo faz careta, e com água e um pouquinho de açúcar vira limonada"
  },
- "revisao": "clássica convertida em autoral 18/11/2026 (o Suno bloqueia letras tradicionais)"
+ "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz)",
+ "persona": "laurinha"
 }

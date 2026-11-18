@@ -9,7 +9,7 @@
   "triângulo"
  ],
  "tipo": "educativa",
- "tema": "as formas: círculo, quadrado, triângulo e oval",
+ "tema": "as formas escondidas na mesa do lanche",
  "dia_a_dia": [
   "formas na casa",
   "pizza e presente"
@@ -18,30 +18,32 @@
  "ritmo": "pagodao",
  "bpm": 135,
  "estrutura": "B",
- "voz": "dueto",
+ "voz": "laurinha",
  "cantam": {
-  "verso 1": "laurinha",
-  "refrão": "coro",
-  "verso 2": "luisinho",
-  "ponte": "comandos, coro responde",
-  "final": "todo mundo"
+  "verso": "laurinha",
+  "refrão": "laurinha",
+  "ponte": "laurinha (comandos)"
  },
  "cenas": [
   {
+   "parte": "intro",
+   "ideia": "a mesa do lanche cheia de comidas com formas"
+  },
+  {
    "parte": "verso 1",
-   "ideia": "a Laurinha mostra coisas redondas (bola, roda, lua cheia) e o círculo se desenha no ar"
+   "ideia": "pizza redonda, torrada quadrada, queijo triângulo, ovo oval; o Luisinho abre a boca em 'O'"
   },
   {
    "parte": "refrão",
-   "ideia": "os dois desenham formas no ar com o dedo; a forma aparece em traço de giz colorido"
-  },
-  {
-   "parte": "verso 2",
-   "ideia": "o Luisinho erra (\"o telhado é quadrado!\"), o coro corrige \"Triângulo!\" e ele ri"
+   "ideia": "a forma aparece desenhada em cima de cada comida; a criança adivinha"
   },
   {
    "parte": "ponte",
-   "ideia": "desenhar com o corpo: círculo com o braço, quadrado com o dedo, telhado com as mãos; o ovo aparece: oval!"
+   "ideia": "pergunta e resposta: a pizza? círculo! o presente? quadrado!…"
+  },
+  {
+   "parte": "final",
+   "ideia": "convite; os dois formam um coração com as mãos"
   }
  ],
  "duracao_alvo": [
@@ -54,9 +56,10 @@
  "status": "letra_revisada",
  "versoes": [],
  "youtube": {
-  "resumo": "QUE FORMA É ESSA? 🔺🟦⚪ A bola é redonda, a roda é redonda… isso é um círculo! Desenha no ar e fala pra mim! O Luisinho diz que o telhado é quadrado… ih, errou! É triângulo! Faz um círculo com o braço, um quadrado com o dedo, um telhado com a mão… e o ovo? É oval!",
+  "resumo": "QUE FORMA É ESSA? 🍕🟦🔺 Na mesa do lanche tem pizza redondinha, torrada quadrada, queijo triângulo e ovo oval! Adivinha a forma com a Laurinha: quem acertou primeiro?",
   "resumo_short": "QUE FORMA É ESSA? 🔺 Desenha no ar e adivinha com a Laurinha e o Luisinho!",
   "curiosidade": "O ovo não é redondo nem quadrado: a forma dele se chama oval"
  },
- "revisao": "auditoria 17/11/2026 (docs/auditoria/AUDITORIA_MUSICAS_11-39.md)"
+ "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz)",
+ "persona": "laurinha"
 }

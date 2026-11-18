@@ -3,10 +3,10 @@
  "titulo": "Bi-Bi, Fom-Fom!",
  "gancho": "bi-bi, fom-fom",
  "palavras_tema": [
-  "carro",
-  "rua",
+  "carrinho",
   "ônibus",
-  "sinal"
+  "sinal",
+  "buzina"
  ],
  "tipo": "educativa",
  "tema": "os barulhos dos veículos e o sinal de trânsito",
@@ -18,34 +18,32 @@
  "ritmo": "pop_infantil",
  "bpm": 124,
  "estrutura": "B",
- "voz": "dueto",
+ "voz": "laurinha",
  "cantam": {
-  "verso 1": "laurinha",
-  "refrão": "coro",
-  "verso 2": "luisinho",
-  "ponte": "comandos, coro responde",
-  "final": "todo mundo"
+  "verso": "laurinha",
+  "refrão": "laurinha",
+  "ponte": "laurinha (comandos)"
  },
  "cenas": [
   {
+   "parte": "intro",
+   "ideia": "a Laurinha no carrinho de brinquedo saindo na rua de brinquedo"
+  },
+  {
    "parte": "verso 1",
-   "ideia": "janela da casa: rua vista de pertinho, carros e caminhão enormes passando"
+   "ideia": "o ônibus na frente, a motinha atrás; o sinal vermelho para tudo, o verde libera"
   },
   {
    "parte": "refrão",
-   "ideia": "carro com carinha buzinando, ônibus amarelo; a família atravessa na faixa de mão dada"
-  },
-  {
-   "parte": "verso 2",
-   "ideia": "moto, trem, avião e caminhão passam fazendo o som; ônibus escolar amarelo brilhando ao longe"
+   "ideia": "o cachorro atravessando na frente do carrinho (bi-bi!)"
   },
   {
    "parte": "ponte",
-   "ideia": "semáforo gigante: vermelho todos param, amarelo atenção, verde podem ir (dança de parar e andar)"
+   "ideia": "cada veículo com o seu barulho: caminhão, moto, trem, carrinho"
   },
   {
    "parte": "final",
-   "ideia": "convite; os carrinhos buzinando o tchau"
+   "ideia": "convite; a fila de veículos buzinando e dando tchau"
   }
  ],
  "duracao_alvo": [
@@ -58,9 +56,10 @@
  "status": "letra_revisada",
  "versoes": [],
  "youtube": {
-  "resumo": "BI-BI, FOM-FOM! 🚗🚌 Quanto barulho lá na rua! O carro faz bi-bi, o ônibus fom-fom, o trem piuí e o avião vuuum! Sinal vermelho: para! Amarelo: atenção! Verde: pode ir! E atravessa na faixa de mão dada com o papai. Sabia que o ônibus da escola é amarelo pra gente ver de longe?",
+  "resumo": "BI-BI, FOM-FOM! 🚗🚌 A Laurinha saiu no carrinho, mas tinha ônibus na frente e motinha atrás! Vermelho: todo mundo para. Verde: vai! O caminhão faz fom, a moto faz vrum, o trem faz piuí!",
   "resumo_short": "BI-BI, FOM-FOM! 🚗 Os sons dos carros e o sinal de trânsito com a Laurinha e o Luisinho!",
   "curiosidade": "O ônibus da escola é amarelo para todo mundo enxergar de longe"
  },
- "revisao": "auditoria 17/11/2026 (ajuste pequeno)"
+ "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz)",
+ "persona": "laurinha"
 }

@@ -9,7 +9,7 @@
   "fundo"
  ],
  "tipo": "animal",
- "tema": "o polvo de oito braços no fundo do mar",
+ "tema": "o polvo que faz oito coisas ao mesmo tempo",
  "dia_a_dia": [
   "contar até oito",
   "bichos do mar"
@@ -18,34 +18,32 @@
  "ritmo": "batucada",
  "bpm": 130,
  "estrutura": "F",
- "voz": "dueto",
+ "voz": "luisinho",
  "cantam": {
-  "verso 1": "luisinho",
-  "refrão": "coro",
-  "verso 2": "laurinha",
-  "ponte": "comandos, coro responde",
-  "final": "todo mundo"
+  "verso": "luisinho",
+  "refrão": "luisinho",
+  "ponte": "luisinho (comandos)"
  },
  "cenas": [
   {
+   "parte": "intro",
+   "ideia": "o fundo do mar; o polvo sorridente faz tudo ao mesmo tempo"
+  },
+  {
    "parte": "verso 1",
-   "ideia": "mergulho com capacete de bolha (muriçoca no fundo do mar); um polvo roxo simpático aparece acenando com um braço, depois mais"
+   "ideia": "um braço toca tambor, outro come pão, outro penteia… confusão"
   },
   {
    "parte": "refrão",
-   "ideia": "o polvo conta os braços um por um (números aparecem); abraço coletivo de oito braços"
-  },
-  {
-   "parte": "verso 2",
-   "ideia": "três coraçõezinhos pulsando no polvo; ele fica da cor da pedra e some; aparece de novo (Achou!)"
+   "ideia": "o abraço de polvo: ele abraça todo mundo de uma vez"
   },
   {
    "parte": "ponte",
-   "ideia": "dança com braços e pernas contando até oito"
+   "ideia": "contagem de um a oito com um gesto para cada par de braços"
   },
   {
    "parte": "final",
-   "ideia": "convite; o polvo dando tchau com os oito braços"
+   "ideia": "convite; o polvo dá tchau com os oito braços"
   }
  ],
  "duracao_alvo": [
@@ -58,9 +56,10 @@
  "status": "letra_revisada",
  "versoes": [],
  "youtube": {
-  "resumo": "POLVO DE OITO BRAÇOS! 🐙 O Luisinho mergulhou no fundo do mar e alguém acenou: um braço, dois braços… oito! O polvo abraça todo mundo e dança! Sabia que o polvo tem três coraçõezinhos e muda de cor pra se esconder? Conta até oito com os bracinhos!",
+  "resumo": "OITO BRAÇOS! 🐙 Lá no fundo do mar mora um polvo que nunca fica parado: com um braço toca tambor, com outro come pão, com outro penteia o cabelo… e com os outros? Confusão! E o abraço de polvo, ninguém escapa!",
   "resumo_short": "POLVO DE OITO BRAÇOS! 🐙 Conta até oito com a Laurinha e o Luisinho!",
   "curiosidade": "O polvo tem três corações e muda de cor para se esconder"
  },
- "persona": "luisinho"
+ "persona": "luisinho",
+ "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz)"
 }

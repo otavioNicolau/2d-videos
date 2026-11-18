@@ -20,30 +20,32 @@
  "ritmo": "axe",
  "bpm": 140,
  "estrutura": "C",
- "voz": "dueto",
+ "voz": "laurinha",
  "cantam": {
-  "verso 1": "laurinha",
-  "refrão": "coro",
-  "verso 2": "luisinho",
-  "ponte": "comandos, coro responde",
-  "final": "todo mundo"
+  "verso": "laurinha",
+  "refrão": "laurinha",
+  "ponte": "laurinha (comandos)"
  },
  "cenas": [
   {
+   "parte": "intro",
+   "ideia": "o parque enfeitado para o Dia das Crianças"
+  },
+  {
    "parte": "verso 1",
-   "ideia": "Dia das Crianças: a turma chega chamando todo mundo"
+   "ideia": "o vovô pula corda, a vovó roda pião, o papai se esconde (mal) atrás do portão"
   },
   {
    "parte": "refrão",
-   "ideia": "cumulativo: cada volta soma uma brincadeira (pega-pega → esconde-esconde → amarelinha → pula-corda)"
-  },
-  {
-   "parte": "verso 2",
-   "ideia": "\"mais uma?\": esconde-esconde (achei!) e amarelinha (pulei!)"
+   "ideia": "todo mundo brincando junto"
   },
   {
    "parte": "ponte",
-   "ideia": "amarelinha guiada: num pé, nos dois, gira, senta e grita viva"
+   "ideia": "pula corda, esconde-esconde, amarelinha e estátua"
+  },
+  {
+   "parte": "final",
+   "ideia": "convite; a família inteira dando tchau no parque"
   }
  ],
  "duracao_alvo": [
@@ -56,10 +58,11 @@
  "status": "letra_revisada",
  "versoes": [],
  "youtube": {
-  "resumo": "DIA DE BRINCAR! 🎈 Hoje é o nosso dia, Dia das Crianças! Pega-pega… mais uma? Esconde-esconde! Mais uma? Amarelinha! E pula corda: um, dois, três! A cada volta entra uma brincadeira nova. Num pé só, nos dois, gira, senta e grita: viva!",
+  "resumo": "DIA DE BRINCAR! 🎈 Hoje é Dia das Crianças: o vovô pulou corda, a vovó rodou pião e o papai se escondeu atrás do portão! Pula corda, esconde-esconde, amarelinha… estátua!",
   "resumo_short": "DIA DE BRINCAR! 🎈 Pega-pega, esconde-esconde, amarelinha e pula corda com a Laurinha e o Luisinho!",
   "curiosidade": "A amarelinha é brincada no mundo inteiro, cada lugar com um nome diferente"
  },
  "data_comemorativa": "Dia das Crianças (12 de outubro)",
- "revisao": "auditoria 17/11/2026 (docs/auditoria/AUDITORIA_MUSICAS_11-39.md)"
+ "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz)",
+ "persona": "laurinha"
 }

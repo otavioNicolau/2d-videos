@@ -9,7 +9,7 @@
   "dura"
  ],
  "tipo": "danca",
- "tema": "tremer como gelatina, ficar mole e ficar dura",
+ "tema": "a gelatina da vovó que sai correndo e faz todo mundo tremer",
  "dia_a_dia": [
   "sobremesa da vovó",
   "brincadeira de mole e duro",
@@ -19,34 +19,32 @@
  "ritmo": "reggae_infantil",
  "bpm": 86,
  "estrutura": "R",
- "voz": "dueto",
+ "voz": "laurinha",
  "cantam": {
-  "verso 1": "laurinha",
-  "refrão": "coro",
-  "verso 2": "luisinho",
-  "ponte": "comandos, coro responde",
-  "final": "todo mundo"
+  "verso": "laurinha",
+  "refrão": "laurinha",
+  "ponte": "laurinha (comandos)"
  },
  "cenas": [
   {
+   "parte": "intro",
+   "ideia": "a vovó tira da geladeira uma gelatina vermelha"
+  },
+  {
    "parte": "verso 1",
-   "ideia": "cozinha da vovó: uma gelatina vermelha gigante (para eles) com carinha; a Laurinha bate na mesa e ela treme"
+   "ideia": "a gelatina sai correndo pela mesa, tremendo, e todo mundo treme junto"
   },
   {
    "parte": "refrão",
-   "ideia": "todos tremem como gelatina e se derretem no chão (splash)"
-  },
-  {
-   "parte": "verso 2",
-   "ideia": "a gelatina vai à geladeira (Brrr, fica dura) e ao sol (fica molinha); os dois imitam"
+   "ideia": "todos tremem como gelatina no ritmo"
   },
   {
    "parte": "ponte",
-   "ideia": "dura (estátua reta) / mole (corpo mole) cada vez mais rápido, e treme tudo"
+   "ideia": "comandos: fica molinho, fica durinho, treme a barriga… congelou!"
   },
   {
    "parte": "final",
-   "ideia": "convite; a gelatina treme no tchau"
+   "ideia": "convite; a gelatina com carinha dá tchau tremendo"
   }
  ],
  "duracao_alvo": [
@@ -57,9 +55,11 @@
  "status": "letra_revisada",
  "versoes": [],
  "youtube": {
-  "resumo": "GELATINA! 🍮 Sobremesa da vovó: bate na mesa e a gelatina treme, treme! Treme o corpo todo… e derreteu no chão! Na geladeira ela fica durinha, no sol fica molinha. Fica dura, fica mole, dura, mole… treme tudo!",
+  "resumo": "GELATINA! 🍮 A vovó fez gelatina vermelhinha… ela saiu correndo pela mesa, tremendo pra cá e pra lá, e todo mundo começou a tremer junto! Fica molinho, fica durinho… congelou!",
   "resumo_short": "GELATINA! 🍮 Treme, treme com a Laurinha e o Luisinho!",
   "curiosidade": "A gelatina fica durinha na geladeira e amolece no calor"
  },
- "origem": "brincadeiras com o corpo (18/11/2026), inspiradas no gênero de No Ritmo Quá Quá / Morto-Vivo — nada copiado"
+ "origem": "brincadeiras com o corpo (18/11/2026), inspiradas no gênero de No Ritmo Quá Quá / Morto-Vivo — nada copiado",
+ "persona": "laurinha",
+ "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz)"
 }

@@ -9,7 +9,7 @@
   "água"
  ],
  "tipo": "historinha",
- "tema": "saudade do amigo que viajou, e a festa quando ele volta",
+ "tema": "o peixinho dourado que saiu do aquário numa bolha e passeou pela casa",
  "dia_a_dia": [
   "sentir saudade",
   "reencontrar os amigos"
@@ -18,34 +18,32 @@
  "ritmo": "reggae_infantil",
  "bpm": 86,
  "estrutura": "E",
- "voz": "dueto",
+ "voz": "luisinho",
  "cantam": {
-  "verso 1": "luisinho",
-  "refrão": "coro",
-  "verso 2": "laurinha",
-  "ponte": "comandos, coro responde",
-  "final": "todo mundo"
+  "verso": "luisinho",
+  "refrão": "luisinho",
+  "ponte": "luisinho (comandos)"
  },
  "cenas": [
   {
+   "parte": "intro",
+   "ideia": "o aquário na sala; o peixinho dourado olhando a casa"
+  },
+  {
    "parte": "verso 1",
-   "ideia": "o Luisinho sozinho olhando o aquário, igual peixinho fora da água; toc-toc: a Laurinha voltou com a mala"
+   "ideia": "ele sai numa bolha gigante e passeia: cozinha, sala, corredor, dá oi pro cachorro"
   },
   {
    "parte": "refrão",
-   "ideia": "os dois nadam no ar como peixinhos, fazendo bolhinhas; o peixinho do aquário dança junto"
-  },
-  {
-   "parte": "verso 2",
-   "ideia": "imitação do peixe: boca de peixe, bolhinha, nadadeira, rabinho"
+   "ideia": "a bolha flutua pela casa e o Luisinho corre atrás"
   },
   {
    "parte": "ponte",
-   "ideia": "nadar pra frente, de lado, mergulho e abraço de amigos"
+   "ideia": "comandos: nada pra frente, pra trás, abre a boquinha… blub!"
   },
   {
    "parte": "final",
-   "ideia": "convite; os dois e o peixinho do aquário dão tchau"
+   "ideia": "convite; de volta ao aquário, o peixinho dá tchau com a barbatana"
   }
  ],
  "duracao_alvo": [
@@ -58,10 +56,10 @@
  "status": "letra_revisada",
  "versoes": [],
  "youtube": {
-  "resumo": "BLUB, BLUB, PEIXINHO! 🐟 A Laurinha viajou e o Luisinho ficou igual peixinho fora da água… toc, toc: ela voltou! Blub, blub, nada, nada: voltou a alegria! Faz boca de peixe, bolhinha, nadadeira e rabinho! Nada pra frente, de lado e abraço de amigo!",
+  "resumo": "BLUB, BLUB, PEIXINHO! 🐠 O peixinho dourado quis conhecer a casa: fez uma bolha gigante e saiu passeando pela cozinha, pela sala e pelo corredor! Nada pra frente, nada pra trás… blub!",
   "resumo_short": "BLUB, BLUB, PEIXINHO! 🐟 Nade com a Laurinha e o Luisinho!",
   "curiosidade": "O peixinho faz bolhinhas e nada com a nadadeira e o rabinho"
  },
  "persona": "luisinho",
- "revisao": "clássica convertida em autoral 18/11/2026 (o Suno bloqueia letras tradicionais)"
+ "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz)"
 }

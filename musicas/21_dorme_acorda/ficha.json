@@ -19,38 +19,32 @@
  "ritmo": "funk_infantil",
  "bpm": 130,
  "estrutura": "D",
- "voz": "dueto",
+ "voz": "luisinho",
  "cantam": {
-  "verso 1": "luisinho",
-  "refrão": "coro",
-  "verso 2": "laurinha",
-  "ponte": "comandos, coro responde",
-  "final": "todo mundo"
+  "verso": "luisinho",
+  "refrão": "luisinho",
+  "ponte": "luisinho (comandos)"
  },
  "cenas": [
   {
    "parte": "intro",
-   "ideia": "quarto azul: o Luisinho de olho fechado, ronca e acorda num pulo"
+   "ideia": "o quarto; a turma de pijama nas caminhas"
   },
   {
    "parte": "verso 1",
-   "ideia": "fecha o olhinho, deita na cama, boceja: tá com sono"
+   "ideia": "a regra da brincadeira e a ameaça da cosquinha no pé"
   },
   {
    "parte": "refrão",
-   "ideia": "dorme (deita e ronca, Zzz na tela) / acorda (pula de braços para cima), cada volta mais rápido; no fim ele cochila de verdade e a Laurinha acorda"
-  },
-  {
-   "parte": "verso 2",
-   "ideia": "galo cantando na janela, despertador tocando, sol entrando, espreguiçada"
+   "ideia": "dorme (olhinhos fechados, zzz), acorda (pula de pé), cada vez mais rápido"
   },
   {
    "parte": "ponte",
-   "ideia": "dorme, acorda, dorme… a música para: quem dormiu de verdade? todos riem"
+   "ideia": "a pegadinha: 'acor… dorme!' quem pulou leva cosquinha"
   },
   {
    "parte": "final",
-   "ideia": "convite; o Luisinho boceja no tchau"
+   "ideia": "convite; todos rindo da cosquinha dão tchau"
   }
  ],
  "duracao_alvo": [
@@ -61,10 +55,11 @@
  "status": "letra_revisada",
  "versoes": [],
  "youtube": {
-  "resumo": "DORME, ACORDA! 😴⏰ Fecha o olhinho, deita a cabeça… dorme! Ronc, ronc! Acorda! Ê! A brincadeira vai ficando cada vez mais rápida… e o Luisinho cochilou de verdade! O galo canta, o despertador toca e o sol entra na janela: bom dia!",
+  "resumo": "DORME, ACORDA! 😴 Fecha o olho e faz zzz… acorda e pula da cama! Mas presta atenção: quem dormir na hora errada ganha cosquinha no pé! Peguei você!",
   "resumo_short": "DORME, ACORDA! 😴 Ronc, ronc… acorda! Brinque com a Laurinha e o Luisinho!",
   "curiosidade": "O galo canta de manhã cedinho e acorda todo mundo"
  },
  "origem": "brincadeiras com o corpo (18/11/2026), inspiradas no gênero de No Ritmo Quá Quá / Morto-Vivo — nada copiado",
- "persona": "luisinho"
+ "persona": "luisinho",
+ "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz)"
 }

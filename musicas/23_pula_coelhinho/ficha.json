@@ -9,7 +9,7 @@
   "orelha"
  ],
  "tipo": "festa",
- "tema": "caça ao ovinho com o coelhinho da Páscoa",
+ "tema": "a caça aos ovinhos escondidos nos lugares mais engraçados",
  "dia_a_dia": [
   "páscoa",
   "caça aos ovinhos"
@@ -18,34 +18,32 @@
  "ritmo": "funk_infantil",
  "bpm": 130,
  "estrutura": "D",
- "voz": "dueto",
+ "voz": "luisinho",
  "cantam": {
-  "verso 1": "luisinho",
-  "refrão": "coro",
-  "verso 2": "laurinha",
-  "ponte": "comandos, coro responde",
-  "final": "todo mundo"
+  "verso": "luisinho",
+  "refrão": "luisinho",
+  "ponte": "luisinho (comandos)"
  },
  "cenas": [
   {
+   "parte": "intro",
+   "ideia": "o coelhinho escondendo ovinhos coloridos pela casa"
+  },
+  {
    "parte": "verso 1",
-   "ideia": "pegadas no jardim visto de pertinho levam a um coelhinho branco enorme (para eles) que mexe o nariz"
+   "ideia": "os esconderijos absurdos: chapéu do vovô, meia, geladeira, tapete, capacete"
   },
   {
    "parte": "refrão",
-   "ideia": "dança do coelho: mãos de orelhinha, pulinhos na batida; ovinhos coloridos escondidos atrás das flores"
-  },
-  {
-   "parte": "verso 2",
-   "ideia": "close no narizinho mexendo; o coelho recusa a cenoura e come capim (piada)"
+   "ideia": "o coelhinho pula pela casa e a turma corre atrás"
   },
   {
    "parte": "ponte",
-   "ideia": "agacha, orelhinha, um pulo, dois pulos e acham o ovinho (parada)"
+   "ideia": "comandos: mexe o narizinho, balança a orelha, pula com os dois pés"
   },
   {
    "parte": "final",
-   "ideia": "convite; a turma com os ovinhos e o coelho acenando"
+   "ideia": "convite; a cesta cheia de ovinhos e o coelhinho dando tchau"
   }
  ],
  "duracao_alvo": [
@@ -58,10 +56,11 @@
  "status": "letra_revisada",
  "versoes": [],
  "youtube": {
-  "resumo": "PULA, COELHINHO! 🐰🥚 Pegadinha no chão, orelha comprida e rabinho de algodão: é o coelhinho da Páscoa! Mexe o narizinho, pula e procura o ovinho escondidinho! Sabia que o coelho gosta mais de capim e folhinha do que de cenoura?",
+  "resumo": "PULA, COELHINHO! 🐰🥚 O coelhinho da Páscoa escondeu os ovinhos nos lugares mais engraçados: no chapéu do vovô, na meia do Luisinho, na geladeira… e no capacete! Mexe o narizinho e pula!",
   "resumo_short": "PULA, COELHINHO! 🐰 Mão de orelhinha e pula com a Laurinha e o Luisinho!",
   "curiosidade": "O coelho mexe o nariz para sentir os cheiros e gosta mais de capim do que de cenoura"
  },
  "data_comemorativa": "Páscoa (março/abril)",
- "persona": "luisinho"
+ "persona": "luisinho",
+ "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz)"
 }

@@ -19,34 +19,32 @@
  "ritmo": "forro_piseiro",
  "bpm": 160,
  "estrutura": "A",
- "voz": "dueto",
+ "voz": "luisinho",
  "cantam": {
-  "verso 1": "luisinho",
-  "refrão": "coro",
-  "verso 2": "laurinha",
-  "ponte": "comandos, coro responde",
-  "final": "todo mundo"
+  "verso": "luisinho",
+  "refrão": "luisinho",
+  "ponte": "luisinho (comandos)"
  },
  "cenas": [
   {
+   "parte": "intro",
+   "ideia": "a horta vista de pertinho; a minhoca sai da terra"
+  },
+  {
    "parte": "verso 1",
-   "ideia": "jardim depois da chuva visto de pertinho: uma minhoca rosa simpática sai da terra, comprida como um trem para eles"
+   "ideia": "ela estica, encolhe, se enrola como caracol e some"
   },
   {
    "parte": "refrão",
-   "ideia": "a minhoca dança: estica, encolhe, se enrola e some num buraquinho (cadê?) e aparece de novo"
-  },
-  {
-   "parte": "verso 2",
-   "ideia": "corte da terra (quadro): a minhoca cava caminhos, a terra fica fofinha e uma plantinha cresce"
+   "ideia": "a minhoca dança e a turma imita"
   },
   {
    "parte": "ponte",
-   "ideia": "os dois deitados no chão imitando a minhoca: estica, encolhe… achou!"
+   "ideia": "comandos: estica, encolhe, enrola… sumiu! achou!"
   },
   {
    "parte": "final",
-   "ideia": "convite; a minhoca acena com a pontinha"
+   "ideia": "convite; a minhoca dá tchau saindo de um buraquinho"
   }
  ],
  "duracao_alvo": [
@@ -57,10 +55,11 @@
  "status": "letra_revisada",
  "versoes": [],
  "youtube": {
-  "resumo": "DANÇA DA MINHOCA! 🪱 Choveu no jardim e saiu da terra… comprida, comprida: é a minhoca! Estica e encolhe, se enrola e some… cadê? Ela cava a terra, deixa tudo fofinho e a plantinha cresce! Deita no chão e dança junto!",
+  "resumo": "DANÇA DA MINHOCA! 🪱 Lá na horta mora a dona minhoca, toda molenga: estica, estica, encolhe, se enrola igual caracol… e some na terra! Cadê? Achou!",
   "resumo_short": "DANÇA DA MINHOCA! 🪱 Estica e encolhe com a Laurinha e o Luisinho!",
   "curiosidade": "A minhoca cava caminhos na terra e deixa a terra fofinha para as plantas"
  },
  "origem": "brincadeiras com o corpo (18/11/2026), inspiradas no gênero de No Ritmo Quá Quá / Morto-Vivo — nada copiado",
- "persona": "luisinho"
+ "persona": "luisinho",
+ "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz)"
 }

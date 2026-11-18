@@ -19,38 +19,32 @@
  "ritmo": "baiao",
  "bpm": 125,
  "estrutura": "D",
- "voz": "dueto",
+ "voz": "luisinho",
  "cantam": {
-  "verso 1": "luisinho",
-  "refrão": "coro",
-  "verso 2": "laurinha",
-  "ponte": "suspense do espirro, coro",
-  "final": "todo mundo"
+  "verso": "luisinho",
+  "refrão": "luisinho",
+  "ponte": "luisinho (comandos)"
  },
  "cenas": [
   {
    "parte": "intro",
-   "ideia": "close no nariz do Luisinho: aaa… aaa… ATCHIM! (as antenas balançam)"
+   "ideia": "a sala; um raio de sol cheio de pozinho"
   },
   {
    "parte": "verso 1",
-   "ideia": "coceguinha no nariz, tá vindo, segura… ATCHIM! e a Laurinha responde \"Saúde!\""
+   "ideia": "o espirro gigante: o Luisinho voa pro sofá, o chapéu do vovô voa, o gato vai pro telhado"
   },
   {
    "parte": "refrão",
-   "ideia": "espirro no cotovelo (gesto) e lavar a mão no fim, com espuma"
-  },
-  {
-   "parte": "verso 2",
-   "ideia": "espirros de bichos: elefante (enorme), ratinho (pequenininho), muriçoca (atchim-zum!)"
+   "ideia": "cada 'atchim' sopra alguma coisa pela casa"
   },
   {
    "parte": "ponte",
-   "ideia": "suspense: aaa… aaa… parou! não saiu… ATCHIM!"
+   "ideia": "o espirro chegando… segura… e o atchim no cotovelo"
   },
   {
    "parte": "final",
-   "ideia": "convite; todos espirram juntos no tchau (\"Saúde!\")"
+   "ideia": "convite; o Luisinho lava as mãos e dá tchau (atchim!)"
   }
  ],
  "duracao_alvo": [
@@ -63,10 +57,10 @@
  "status": "letra_revisada",
  "versoes": [],
  "youtube": {
-  "resumo": "ATCHIM! 🤧 Coceguinha no nariz… tá vindo… ATCHIM! O Luisinho espirra, a Laurinha diz \"Saúde!\" e a turma aprende: espirro a gente faz no cotovelo, e depois lava a mão! E como espirra o elefante? E o ratinho? E a muriçoca? Atchim-zum!",
+  "resumo": "ATCHIM! 🤧 O nariz do Luisinho começou a coçar… ah, ah, ah… ATCHIM! Ele voou pro sofá, o chapéu do vovô voou e o gato foi parar no telhado! E a vovó: no cotovelo, danado! Saúde!",
   "resumo_short": "ATCHIM! 🤧 No cotovelo, sim! Espirre junto com a Laurinha e o Luisinho!",
   "curiosidade": "Espirro a gente faz no cotovelo, e depois lava a mão"
  },
  "persona": "luisinho",
- "revisao": "auditoria 17/11/2026 (docs/auditoria/AUDITORIA_MUSICAS_11-39.md)"
+ "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz)"
 }

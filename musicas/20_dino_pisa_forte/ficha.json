@@ -17,34 +17,32 @@
  "ritmo": "samba_enredo",
  "bpm": 145,
  "estrutura": "A",
- "voz": "dueto",
+ "voz": "luisinho",
  "cantam": {
-  "verso 1": "luisinho",
-  "refrão": "coro",
-  "verso 2": "laurinha",
-  "ponte": "comandos, coro responde",
-  "final": "todo mundo"
+  "verso": "luisinho",
+  "refrão": "luisinho",
+  "ponte": "luisinho (comandos)"
  },
  "cenas": [
   {
+   "parte": "intro",
+   "ideia": "o dino gigante e sorridente chegando no quintal"
+  },
+  {
    "parte": "verso 1",
-   "ideia": "o chão treme e as flores balançam; aparece um pezão; a câmera sobe por um pescoço comprido até um dino verde sorridente"
+   "ideia": "a cada passo tudo pula: o bolo, o gato, a vovó na rede"
   },
   {
    "parte": "refrão",
-   "ideia": "dino dançando com o rabo pra lá e pra cá; os dois em cima da cabeça dele; rugido que vira risada"
-  },
-  {
-   "parte": "verso 2",
-   "ideia": "um passarinho pousa ao lado do dino e os dois se olham (parentes!); um dino pequeninho do tamanho de uma galinha"
+   "ideia": "tum, tum! a tela treme e todo mundo dá um pulinho"
   },
   {
    "parte": "ponte",
-   "ideia": "pisa forte, pisa fraquinho, estica o pescoço e ruge"
+   "ideia": "comandos: pisa com o direito, com o esquerdo, forte… e de levinho"
   },
   {
    "parte": "final",
-   "ideia": "convite; o dino abaixa a cabeça para os dois darem tchau"
+   "ideia": "convite; o dino pisa de levinho e dá tchau"
   }
  ],
  "duracao_alvo": [
@@ -57,9 +55,10 @@
  "status": "letra_revisada",
  "versoes": [],
  "youtube": {
-  "resumo": "DINO PISA FORTE! 🦕 Tremeu o chão: bum, bum! Quem vem lá? Um dinossauro de pescoção comprido, mas bonzinho, que só quer dançar! Sabia que o passarinho é parente do dino? E tinha dinossauro pequeninho do tamanho de uma galinha! Pisa forte, pisa fraquinho e faz roooar!",
+  "resumo": "DINO PISA FORTE! 🦖 Lá vem o dinossauro grandão e bonzinho… mas quando ele anda, treme tudo! O bolo pula do prato, o gato pula do sofá e a vovó dá um pulo! Tum, tum!",
   "resumo_short": "DINO PISA FORTE! 🦕 Pisa forte e faz roooar com a Laurinha e o Luisinho!",
   "curiosidade": "Os passarinhos são parentes dos dinossauros, e tinha dinossauro do tamanho de uma galinha"
  },
- "persona": "luisinho"
+ "persona": "luisinho",
+ "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz)"
 }

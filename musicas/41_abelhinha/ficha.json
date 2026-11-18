@@ -18,34 +18,32 @@
  "ritmo": "forro_pe_de_serra",
  "bpm": 132,
  "estrutura": "A",
- "voz": "dueto",
+ "voz": "luisinho",
  "cantam": {
-  "verso 1": "luisinho",
-  "refrão": "coro",
-  "verso 2": "laurinha",
-  "ponte": "comandos, coro responde",
-  "final": "todo mundo"
+  "verso": "luisinho",
+  "refrão": "luisinho",
+  "ponte": "luisinho (comandos)"
  },
  "cenas": [
   {
+   "parte": "intro",
+   "ideia": "o jardim florido; a abelhinha de flor em flor"
+  },
+  {
    "parte": "verso 1",
-   "ideia": "Luisinho escuta um zum que não é dele; uma abelhinha listrada simpática numa flor gigante; os dois se cumprimentam (primos de asinha)"
+   "ideia": "ela pega o docinho e leva pra colmeia… e um dia pousa no nariz do vovô"
   },
   {
    "parte": "refrão",
-   "ideia": "voo de flor em flor seguindo a abelha; potinhos de mel; a colmeia ao longe"
-  },
-  {
-   "parte": "verso 2",
-   "ideia": "quadro: pozinho amarelo nas patinhas, passa para outra flor, a flor vira fruta"
+   "ideia": "o vovô de olhos vesgos olhando a abelhinha no nariz"
   },
   {
    "parte": "ponte",
-   "ideia": "dança do oito (a abelha desenha um 8 voando) e volta para a colmeia; Laurinha avisa: colmeia a gente olha de longe"
+   "ideia": "comandos: bate as asinhas, voa pra cima, pra baixo… pousou!"
   },
   {
    "parte": "final",
-   "ideia": "convite; a abelhinha e os dois dando tchau zumbindo juntos"
+   "ideia": "convite; a abelhinha e o vovô rindo, dando tchau"
   }
  ],
  "duracao_alvo": [
@@ -58,9 +56,10 @@
  "status": "letra_revisada",
  "versoes": [],
  "youtube": {
-  "resumo": "ABELHINHA! 🐝🌼 O Luisinho ouviu um zum-zum que não era dele: é a abelhinha! Ela voa de flor em flor, pega o docinho e faz o mel. Sabia que a abelha leva o pozinho de uma flor pra outra e assim nasce a fruta? E ela conta onde tem flor fazendo a dança do oito!",
+  "resumo": "ABELHINHA! 🐝 A abelhinha voava de florzinha em florzinha… até que um dia se enganou e pousou bem no nariz do vovô! Bate as asinhas, voa pra cima, voa pra baixo… pousou!",
   "resumo_short": "ABELHINHA! 🐝 De flor em flor com a Laurinha e o Luisinho!",
   "curiosidade": "A abelha leva o pozinho de uma flor para outra, e assim nasce a fruta"
  },
- "persona": "luisinho"
+ "persona": "luisinho",
+ "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz)"
 }

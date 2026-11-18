@@ -8,7 +8,7 @@
   "abraço"
  ],
  "tipo": "festa",
- "tema": "homenagem para o papai",
+ "tema": "o papai herói (que queima a pipoca e ronca igual um leão)",
  "dia_a_dia": [
   "dia dos pais",
   "brincar com o papai"
@@ -17,30 +17,32 @@
  "ritmo": "rock_infantil",
  "bpm": 165,
  "estrutura": "R",
- "voz": "dueto",
+ "voz": "luisinho",
  "cantam": {
-  "verso 1": "luisinho",
-  "refrão": "coro",
-  "verso 2": "laurinha",
-  "ponte": "comandos, coro responde",
-  "final": "todo mundo"
+  "verso": "luisinho",
+  "refrão": "luisinho",
+  "ponte": "luisinho (comandos)"
  },
  "cenas": [
   {
+   "parte": "intro",
+   "ideia": "o quintal; o papai jogando o Luisinho pro alto"
+  },
+  {
    "parte": "verso 1",
-   "ideia": "papai joga pro alto, faz cavalinho, conta história com voz de dragão"
+   "ideia": "o papai conserta a bicicleta, dança igual sapo, queima a pipoca, ronca igual leão"
   },
   {
    "parte": "refrão",
-   "ideia": "abraço de urso e cavalinho (upa, upa)"
-  },
-  {
-   "parte": "verso 2",
-   "ideia": "papai pinguim chocando o ovo no pé, no gelo"
+   "ideia": "abraço gigante; o Luisinho em cima dos ombros do papai"
   },
   {
    "parte": "ponte",
-   "ideia": "cavalinho, aviãozinho, cosquinha, abraço de urso"
+   "ideia": "o papai faz músculo, careta e cavalinho… abraço de urso"
+  },
+  {
+   "parte": "final",
+   "ideia": "convite; o papai e o Luisinho dando tchau juntos"
   }
  ],
  "duracao_alvo": [
@@ -53,11 +55,11 @@
  "status": "letra_revisada",
  "versoes": [],
  "youtube": {
-  "resumo": "MEU PAPAI! 💙 Quem me joga pro alto? Quem faz cavalinho? Quem tem voz de dragão? É o meu papai! Abraço de urso e upa, upa, upa! E o papai pinguim choca o ovo no pé, no frio do gelo. Cavalinho, aviãozinho, cosquinha e abraço de urso!",
+  "resumo": "MEU PAPAI! 💙 O papai é o meu herói: me joga pro alto, conserta a bicicleta e dança igual um sapo! Queima a pipoca e ronca igual um leão… mas o abraço dele é o melhor!",
   "resumo_short": "MEU PAPAI! 💙 Abraço de urso e upa, upa! Com a Laurinha e o Luisinho",
   "curiosidade": "O papai pinguim choca o ovo em pé no gelo, protegendo o filhote do frio"
  },
  "data_comemorativa": "Dia dos Pais (2º domingo de agosto)",
  "persona": "luisinho",
- "revisao": "auditoria 17/11/2026 (docs/auditoria/AUDITORIA_MUSICAS_11-39.md)"
+ "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz)"
 }

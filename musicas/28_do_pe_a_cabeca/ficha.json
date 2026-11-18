@@ -19,34 +19,32 @@
  "ritmo": "axe",
  "bpm": 140,
  "estrutura": "C",
- "voz": "dueto",
+ "voz": "laurinha",
  "cantam": {
-  "verso 1": "laurinha",
-  "refrão": "coro",
-  "verso 2": "luisinho",
-  "ponte": "comandos, coro responde",
-  "final": "todo mundo"
+  "verso": "laurinha",
+  "refrão": "laurinha",
+  "ponte": "laurinha (comandos)"
  },
  "cenas": [
   {
+   "parte": "intro",
+   "ideia": "a Laurinha no fundo colorido pronta para a dança"
+  },
+  {
    "parte": "verso 1",
-   "ideia": "a Laurinha de frente para a câmera aponta o pé e vai subindo até a cabeça"
+   "ideia": "a dança sobe pelo corpo: pé, joelho, barriga, ombro, cabeça"
   },
   {
    "parte": "refrão",
-   "ideia": "os dois tocam pé, joelho, barriga, ombro e cabeça; cada volta mais rápido até se enrolarem e rirem"
-  },
-  {
-   "parte": "verso 2",
-   "ideia": "o Luisinho mexe o dedão, gira o joelho, balança o bumbum e aperta o próprio nariz (bip!)"
+   "ideia": "mexe tudo, cada volta mais rápido"
   },
   {
    "parte": "ponte",
-   "ideia": "câmera lenta engraçada: pé… joelho… barriga… ombro… ca-be-ça!"
+   "ideia": "comandos: mão no pé, no joelho, na barriga, na cabeça… e um beijo"
   },
   {
    "parte": "final",
-   "ideia": "convite; os dois caem sentados cansados (ufa!) e dão tchau"
+   "ideia": "convite; a Laurinha cansada e rindo manda um beijo"
   }
  ],
  "duracao_alvo": [
@@ -57,9 +55,11 @@
  "status": "letra_revisada",
  "versoes": [],
  "youtube": {
-  "resumo": "DO PÉ À CABEÇA! 🦶👋🙆 Bora acordar o corpo: pé, joelho, barriga, ombro e cabeça! A cada volta fica mais rápido… até cansar! Mexe o dedão, gira o joelho, balança o bumbum e aperta o nariz: bip! Sabia que o osso mais comprido do corpo fica na coxa?",
+  "resumo": "DO PÉ À CABEÇA! 💃 A dança começa no pezinho e vai subindo: joelho, barriga, ombrinho, cabeça… e começa de novo, mais rápido! Mão no pé, mão no joelho, mão na barriga, mão na cabeça!",
   "resumo_short": "DO PÉ À CABEÇA! 🙆 Toque as partes do corpo cada vez mais rápido com a Laurinha e o Luisinho!",
   "curiosidade": "O osso mais comprido do corpo fica na coxa: é o fêmur"
  },
- "origem": "brincadeiras com o corpo (18/11/2026), inspiradas no gênero de No Ritmo Quá Quá / Morto-Vivo — nada copiado"
+ "origem": "brincadeiras com o corpo (18/11/2026), inspiradas no gênero de No Ritmo Quá Quá / Morto-Vivo — nada copiado",
+ "persona": "laurinha",
+ "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz)"
 }

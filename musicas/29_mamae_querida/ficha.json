@@ -8,7 +8,7 @@
   "abraço"
  ],
  "tipo": "festa",
- "tema": "homenagem para a mamãe",
+ "tema": "a mamãe e o superpoder de achar tudo e sarar dodói com beijinho",
  "dia_a_dia": [
   "dia das mães",
   "café da manhã surpresa",
@@ -18,30 +18,32 @@
  "ritmo": "samba_infantil",
  "bpm": 105,
  "estrutura": "R",
- "voz": "dueto",
+ "voz": "laurinha",
  "cantam": {
-  "verso 1": "laurinha",
-  "refrão": "coro",
-  "verso 2": "luisinho",
-  "ponte": "laurinha pergunta, coro responde",
-  "final": "todo mundo"
+  "verso": "laurinha",
+  "refrão": "laurinha",
+  "ponte": "laurinha (comandos)"
  },
  "cenas": [
   {
+   "parte": "intro",
+   "ideia": "a casa; a mamãe com capa de super-heroína (imaginação da Laurinha)"
+  },
+  {
    "parte": "verso 1",
-   "ideia": "a Laurinha na ponta do pé leva café na cama para a mamãe"
+   "ideia": "a mamãe acha o sapato, o boné, e sara o dodói com um beijinho"
   },
   {
    "parte": "refrão",
-   "ideia": "abraço e beijo; no \"até a lua\" os braços sobem e a câmera sobe até a lua"
-  },
-  {
-   "parte": "verso 2",
-   "ideia": "quiz das mamães bichos: canguru com bolsinha, passarinho no ninho, galinha chocando, a mamãe muriçoca abraçando"
+   "ideia": "abraço apertado e corações"
   },
   {
    "parte": "ponte",
-   "ideia": "gestos para fazer na mãe de verdade: abraço apertado, beijinho, coração com a mão"
+   "ideia": "beijo na bochecha, abraço apertado, coração com a mão"
+  },
+  {
+   "parte": "final",
+   "ideia": "convite; a Laurinha e a mamãe dando tchau abraçadas"
   }
  ],
  "duracao_alvo": [
@@ -54,10 +56,11 @@
  "status": "letra_revisada",
  "versoes": [],
  "youtube": {
-  "resumo": "MAMÃE QUERIDA! 💗 Pé ante pé, a Laurinha leva café na caminha pra mamãe. Te amo daqui até a lua! E a mamãe canguru leva o filhote na bolsinha, a mamãe passarinho faz o ninho, a mamãe galinha choca o ovo… e a minha mamãe me dá abraço! Abraço apertado, beijinho e coração com a mão!",
+  "resumo": "MAMÃE QUERIDA! 💖 A mamãe tem um superpoder: acha o sapato, acha o boné e sara o dodói com um beijinho! Um beijo na bochecha, um abraço apertado e um coração com a mão pra mamãe!",
   "resumo_short": "MAMÃE QUERIDA! 💗 Te amo daqui até a lua! Com a Laurinha e o Luisinho",
   "curiosidade": "A mamãe canguru carrega o filhote numa bolsinha na barriga"
  },
  "data_comemorativa": "Dia das Mães (2º domingo de maio)",
- "revisao": "auditoria 17/11/2026 (docs/auditoria/AUDITORIA_MUSICAS_11-39.md)"
+ "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz)",
+ "persona": "laurinha"
 }

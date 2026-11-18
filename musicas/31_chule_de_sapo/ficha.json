@@ -18,34 +18,32 @@
  "ritmo": "forro_piseiro",
  "bpm": 160,
  "estrutura": "A",
- "voz": "dueto",
+ "voz": "luisinho",
  "cantam": {
-  "verso 1": "luisinho",
-  "refrão": "coro",
-  "verso 2": "laurinha",
-  "ponte": "comandos de lavar o pé",
-  "final": "todo mundo"
+  "verso": "luisinho",
+  "refrão": "luisinho",
+  "ponte": "luisinho (comandos)"
  },
  "cenas": [
   {
+   "parte": "intro",
+   "ideia": "a festa na lagoa; o sapo dançando de botina"
+  },
+  {
    "parte": "verso 1",
-   "ideia": "lagoa: o sapo na vitória-régia; nuvenzinha verde de cheirinho sai do pé dele; o Luisinho tampa o nariz"
+   "ideia": "ele tira a botina: a roseira murcha, a mosca cai tonta, o peixe tapa o nariz"
   },
   {
    "parte": "refrão",
-   "ideia": "o sapo dança forró de pé levantado; no \"eca, que chulé!\" todos tampam o nariz"
-  },
-  {
-   "parte": "verso 2",
-   "ideia": "gotinhas brilhando entrando pela pele do sapo; depois banheiro: sabão com carinha e o pé com espuma"
+   "ideia": "nuvenzinha verde de chulé passando pela tela; todos tapam o nariz"
   },
   {
    "parte": "ponte",
-   "ideia": "lava o pé com espuma, cosquinha entre os dedinhos, toalha, e a nuvem de chulé some"
+   "ideia": "comandos: tapa o nariz, abana a mão, esfrega o pezinho com água e sabão"
   },
   {
    "parte": "final",
-   "ideia": "convite; o sapo de pé limpinho dá tchau"
+   "ideia": "convite; o sapo de pé limpinho e cheiroso dando tchau"
   }
  ],
  "duracao_alvo": [
@@ -58,10 +56,10 @@
  "status": "letra_revisada",
  "versoes": [],
  "youtube": {
-  "resumo": "CHULÉ DE SAPO! 🐸 Lá na lagoa mora o sapo… ih, que cheirinho! Eca, que chulé: é o pé do sapo! O sapo bebe água pela pele, mas o nosso pezinho precisa de sabão na hora do banho. Esfrega, cosquinha entre os dedinhos, seca bem… e o chulé sumiu!",
+  "resumo": "QUE CHULÉ! 🐸🦶 O sapo dançou a noite inteira e, quando tirou a botina… murchou a roseira, a mosca caiu tonta e o peixe tapou o nariz! Tapa o nariz, abana a mão e lava o pé com água e sabão!",
   "resumo_short": "CHULÉ DE SAPO! 🐸 Eca, que chulé! Lava o pé com a Laurinha e o Luisinho!",
   "curiosidade": "O sapo bebe água pela pele, mas o nosso pezinho precisa de sabão no banho"
  },
  "persona": "luisinho",
- "revisao": "clássica convertida em autoral 18/11/2026 (o Suno bloqueia letras tradicionais)"
+ "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz)"
 }

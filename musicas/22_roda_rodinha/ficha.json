@@ -9,7 +9,7 @@
   "rodinha"
  ],
  "tipo": "brincadeira",
- "tema": "roda de amigos de mãos dadas: ninguém fica de fora",
+ "tema": "a roda que cresce até o elefante entrar e todo mundo cair",
  "dia_a_dia": [
   "brincar de roda",
   "incluir os amigos"
@@ -18,34 +18,32 @@
  "ritmo": "forro_piseiro",
  "bpm": 160,
  "estrutura": "R",
- "voz": "dueto",
+ "voz": "laurinha",
  "cantam": {
-  "verso 1": "laurinha",
-  "refrão": "coro",
-  "verso 2": "luisinho",
-  "ponte": "comandos de roda",
-  "final": "todo mundo"
+  "verso": "laurinha",
+  "refrão": "laurinha",
+  "ponte": "laurinha (comandos)"
  },
  "cenas": [
   {
+   "parte": "intro",
+   "ideia": "o jardim; a Laurinha chama a turma de mãos dadas"
+  },
+  {
    "parte": "verso 1",
-   "ideia": "jardim: a Laurinha chama a turma e todos dão as mãos, formando uma roda"
+   "ideia": "entram o sapo, o pato, o grilo, o tatu… e o elefante: todo mundo cai"
   },
   {
    "parte": "refrão",
-   "ideia": "a roda gira vista de cima (como uma flor); quem está de fora é chamado e entra"
-  },
-  {
-   "parte": "verso 2",
-   "ideia": "cada um entra no meio da roda e faz um passinho; os outros imitam"
+   "ideia": "a roda gira; quem fica tonto cai sentado e ri"
   },
   {
    "parte": "ponte",
-   "ideia": "pra frente, pra trás, meia-volta e abraço coletivo"
+   "ideia": "comandos: roda pra direita, pra esquerda, agacha e levanta"
   },
   {
    "parte": "final",
-   "ideia": "convite; a roda dando tchau de mãos dadas"
+   "ideia": "convite; a roda com o elefante no meio dando tchau"
   }
  ],
  "duracao_alvo": [
@@ -58,9 +56,10 @@
  "status": "letra_revisada",
  "versoes": [],
  "youtube": {
-  "resumo": "RODA, RODINHA! 💃 Chama a turminha e dá a mão: a Laurinha, o Luisinho, a Joaninha e a Formiguinha fazem uma roda em que ninguém fica de fora! Quem entra no meio faz um passinho e todo mundo imita. Pra frente, pra trás, meia-volta… e abraço!",
+  "resumo": "RODA, RODINHA! 🔄 Dá a mão pro teu amigo e vem rodar! Entrou o sapo, o pato, o grilo e o tatu… e quando entrou o elefante, caiu todo mundo! Roda pra direita, roda pra esquerda!",
   "resumo_short": "RODA, RODINHA! 💃 Dá a mão e entra na roda com a Laurinha e o Luisinho!",
   "curiosidade": "Na roda todo mundo dá a mão e ninguém fica de fora"
  },
- "revisao": "clássica convertida em autoral 18/11/2026 (o Suno bloqueia letras tradicionais)"
+ "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz)",
+ "persona": "laurinha"
 }

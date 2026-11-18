@@ -16,12 +16,14 @@ E = json.loads((M / "estilos.json").read_text(encoding="utf-8"))
 TAG = {"laurinha": "Laurinha, girl child vocal", "luisinho": "Luisinho, boy child vocal"}
 
 
-def letra(intro_tag, gancho2, persona, verso, refrao, ponte, gostou, tchau, bordao=None):
+def letra(intro_tag, gancho2, persona, verso, refrao, ponte, gostou, tchau, bordao=None, extra=False):
     """Bloco que volta: intro · verso · refrão · bordão+intervalo · ponte · verso (igual) · refrão · bordão+intervalo · ponte ·
     refrão forte · intervalo · convite (3 intervalos de dança, como a referência)."""
     v = f"[Verse - {TAG[persona]}]\n" + "\n".join(verso)
     r = "[Virada]\n[Chorus]\n" + "\n".join(refrao + refrao)
     rf = "[Virada]\n[Chorus - louder]\n" + "\n".join(refrao + refrao)
+    if extra:                                    # música curta: mais uma volta do refrão no fim (referência: mediana 2:47)
+        rf += "\n\n[Chorus - faster, everybody dancing]\n" + "\n".join(refrao + refrao)
     p = f"[Bridge - {persona.capitalize()} gives commands]\n" + "\n".join(ponte)
     b = bordao or persona
     outro = "luisinho" if persona == "laurinha" else "laurinha"

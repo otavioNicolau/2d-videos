@@ -9,7 +9,7 @@
   "sombrinha"
  ],
  "tipo": "festa",
- "tema": "o bloquinho de Carnaval da turminha fantasiada",
+ "tema": "o bloquinho de Carnaval com as fantasias mais engraçadas",
  "dia_a_dia": [
   "carnaval",
   "fantasia",
@@ -19,34 +19,32 @@
  "ritmo": "frevo",
  "bpm": 160,
  "estrutura": "A",
- "voz": "dueto",
+ "voz": "luisinho",
  "cantam": {
-  "verso 1": "luisinho",
-  "refrão": "coro",
-  "verso 2": "laurinha",
-  "ponte": "comandos, coro responde",
-  "final": "todo mundo"
+  "verso": "luisinho",
+  "refrão": "luisinho",
+  "ponte": "luisinho (comandos)"
  },
  "cenas": [
   {
+   "parte": "intro",
+   "ideia": "o salão cheio de confete; o bloquinho chegando"
+  },
+  {
    "parte": "verso 1",
-   "ideia": "rua enfeitada vista de pertinho; Luisinho de capa de super-herói, Laurinha de fada com varinha e a sombrinha colorida"
+   "ideia": "as fantasias trocadas: sapo de princesa, formiga de leão, vovó bailarina, vovô tubarão"
   },
   {
    "parte": "refrão",
-   "ideia": "bloquinho da turma (Joaninha, Formiguinha) pulando e girando a sombrinha; confete e serpentina gigantes caindo"
-  },
-  {
-   "parte": "verso 2",
-   "ideia": "confete visto de pertinho é um disco de papel do tamanho deles; no fim todos recolhem o confete e jogam no lixo"
+   "ideia": "o bloquinho pula em roda com as sombrinhas de frevo"
   },
   {
    "parte": "ponte",
-   "ideia": "abaixa, sobe, sombrinha pro alto e pulo em câmera lenta"
+   "ideia": "comandos de frevo: sombrinha pra cima, pra baixo, agacha e pula"
   },
   {
    "parte": "final",
-   "ideia": "convite; a turma fantasiada dando tchau na rua"
+   "ideia": "convite; chuva de confete e todo mundo fantasiado dando tchau"
   }
  ],
  "duracao_alvo": [
@@ -59,10 +57,11 @@
  "status": "letra_revisada",
  "versoes": [],
  "youtube": {
-  "resumo": "CARNAVAL DA TURMINHA! 🎉 A Laurinha de fada, o Luisinho de super-herói e a turma toda no bloquinho: pula, pula, gira a sombrinha, serpentina e confete! Sabia que o confete é papel picadinho? Depois da festa a gente junta tudo e põe no lixo!",
+  "resumo": "CARNAVAL DA TURMINHA! 🎉 O sapo veio de princesa, a formiga de leão, a vovó de bailarina e o vovô de tubarão! Abre a roda, pega a sombrinha e pula no bloco com o Luisinho!",
   "resumo_short": "CARNAVAL DA TURMINHA! 🎉 Pula e gira a sombrinha com a Laurinha e o Luisinho!",
   "curiosidade": "O confete é papel picadinho, e depois da festa a gente junta tudo e põe no lixo"
  },
  "data_comemorativa": "Carnaval (fevereiro)",
- "persona": "luisinho"
+ "persona": "luisinho",
+ "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz)"
 }

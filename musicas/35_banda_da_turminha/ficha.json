@@ -9,7 +9,7 @@
   "violão"
  ],
  "tipo": "brincadeira",
- "tema": "a turma monta uma banda com instrumentos",
+ "tema": "a banda feita com panela, pente e colher",
  "dia_a_dia": [
   "fazer música em casa",
   "bater o ritmo com o corpo"
@@ -18,30 +18,32 @@
  "ritmo": "marchinha",
  "bpm": 128,
  "estrutura": "C",
- "voz": "dueto",
+ "voz": "luisinho",
  "cantam": {
-  "verso 1": "luisinho",
-  "refrão": "coro",
-  "verso 2": "laurinha",
-  "ponte": "comandos, coro responde",
-  "final": "todo mundo"
+  "verso": "luisinho",
+  "refrão": "luisinho",
+  "ponte": "luisinho (comandos)"
  },
  "cenas": [
   {
+   "parte": "intro",
+   "ideia": "a cozinha; o Luisinho acha panela, colher e pente"
+  },
+  {
    "parte": "verso 1",
-   "ideia": "o Luisinho acha um tambor, a Laurinha uma flauta: começa a banda"
+   "ideia": "a banda de coisas de casa: panela tum, pente zum, colher na garrafa plim"
   },
   {
    "parte": "refrão",
-   "ideia": "cumulativo: cada refrão soma um instrumento (tambor e flauta → +chocalho → +violão) e a banda marcha"
-  },
-  {
-   "parte": "verso 2",
-   "ideia": "a Joaninha chega com o chocalho e a Formiguinha com o violão: a banda cresce"
+   "ideia": "a turma marcha tocando pela casa"
   },
   {
    "parte": "ponte",
-   "ideia": "percussão com o corpo: barriga, palma e pé"
+   "ideia": "percussão com o corpo: barriga, palma, pé… todo mundo junto"
+  },
+  {
+   "parte": "final",
+   "ideia": "convite; a banda posa com os 'instrumentos' e dá tchau"
   }
  ],
  "duracao_alvo": [
@@ -54,10 +56,10 @@
  "status": "letra_revisada",
  "versoes": [],
  "youtube": {
-  "resumo": "BANDA DA TURMINHA! 🥁🎺 O Luisinho achou um tambor, a Laurinha uma flauta… bora montar uma banda? A cada refrão entra um instrumento: tum, tum, fiu, fiu, chique, chique, plém, plém! A Joaninha e a Formiguinha chegam e a banda cresce. Toca com a barriga, a palma e o pé!",
+  "resumo": "BANDA DA TURMINHA! 🥁 O Luisinho achou uma panela, uma colher e um pente… e virou banda! A panela faz tum, o pente faz zum e a colher faz plim! Bate na barriga, bate palma, bate o pé!",
   "resumo_short": "BANDA DA TURMINHA! 🥁 Tum, tum, fiu, fiu com a Laurinha e o Luisinho!",
   "curiosidade": "Dá pra fazer música com o corpo: barriga, palma e pé"
  },
  "persona": "luisinho",
- "revisao": "auditoria 17/11/2026 (ajuste pequeno)"
+ "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz)"
 }

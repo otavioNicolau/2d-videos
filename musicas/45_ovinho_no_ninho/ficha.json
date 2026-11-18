@@ -18,34 +18,32 @@
  "ritmo": "sertanejo_infantil",
  "bpm": 110,
  "estrutura": "F",
- "voz": "dueto",
+ "voz": "laurinha",
  "cantam": {
-  "verso 1": "laurinha",
-  "refrão": "coro",
-  "verso 2": "luisinho",
-  "ponte": "imitar a galinha",
-  "final": "todo mundo"
+  "verso": "laurinha",
+  "refrão": "laurinha",
+  "ponte": "laurinha (comandos)"
  },
  "cenas": [
   {
+   "parte": "intro",
+   "ideia": "o galinheiro; a galinha arrumando o ninho"
+  },
+  {
    "parte": "verso 1",
-   "ideia": "quintal visto de pertinho: a galinha gigante (para eles) no ninho de palha"
+   "ideia": "três ovinhos; crec! nasce o primeiro… e o último sai dançando"
   },
   {
    "parte": "refrão",
-   "ideia": "a cada \"agora são…\" um ovinho novo aparece no ninho e o número gigante pula na tela"
-  },
-  {
-   "parte": "verso 2",
-   "ideia": "a galinha choca, o ovo balança (toc, toc), racha e sai o pintinho (piu, piu!)"
+   "ideia": "os ovinhos tremem e racham no 'crec'"
   },
   {
    "parte": "ponte",
-   "ideia": "imitar a galinha: bate as asas, cisca o chão, agachadinho chocando e pula como pintinho"
+   "ideia": "contagem um, dois, três com os dedinhos; o pintinho dança"
   },
   {
    "parte": "final",
-   "ideia": "convite; a galinha e os pintinhos em fila dando tchau"
+   "ideia": "convite; a galinha e os três pintinhos dando tchau"
   }
  ],
  "duracao_alvo": [
@@ -58,9 +56,10 @@
  "status": "letra_revisada",
  "versoes": [],
  "youtube": {
-  "resumo": "OVINHO NO NINHO! 🐔🥚 Bom dia, quintal! Quem tá cantando? É a galinha! Có-có-có, ovinho no ninho: agora são dois, três, quatro… até dez! E o pintinho? A galinha choca, choca, toc, toc… piu, piu, nasceu! Bate as asas, cisca o chão e pula!",
+  "resumo": "OVINHO NO NINHO! 🐣 A galinha botou um, dois, três ovinhos e ficou sentadinha esquentando… crec, crec! Saiu o primeiro pintinho, e o último saiu dançando! Conta comigo: um, dois, três!",
   "resumo_short": "OVINHO NO NINHO! 🐔 Conte os ovinhos com a Laurinha e o Luisinho!",
   "curiosidade": "O pintinho nasce do ovo que a galinha choca, esquentando até ele bicar a casca"
  },
- "revisao": "clássica convertida em autoral 18/11/2026 (o Suno bloqueia letras tradicionais)"
+ "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz)",
+ "persona": "laurinha"
 }

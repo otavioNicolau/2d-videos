@@ -19,34 +19,32 @@
  "ritmo": "pagodao",
  "bpm": 135,
  "estrutura": "B",
- "voz": "dueto",
+ "voz": "laurinha",
  "cantam": {
-  "verso 1": "laurinha",
-  "refrão": "coro",
-  "verso 2": "luisinho",
-  "ponte": "comandos, coro responde",
-  "final": "todo mundo"
+  "verso": "laurinha",
+  "refrão": "laurinha",
+  "ponte": "laurinha (comandos)"
  },
  "cenas": [
   {
+   "parte": "intro",
+   "ideia": "o quintal cheio de bichos"
+  },
+  {
    "parte": "verso 1",
-   "ideia": "a Laurinha apresenta a brincadeira; a cada bicho, ele aparece grandão ao lado dela"
+   "ideia": "o gato rouco, o pato desafinado, o galo que boceja em vez de cantar"
   },
   {
    "parte": "refrão",
-   "ideia": "aparece o bicho (sapo, cobra, macaco, elefante, passarinho, jacaré) e os dois imitam: pulam, rastejam, coçam, fazem tromba, voam, abrem a boca"
-  },
-  {
-   "parte": "verso 2",
-   "ideia": "e a muriçoca? o Luisinho bate as asas e, em vez de picar, dá um abraço"
+   "ideia": "a criança imita cada bicho que aparece"
   },
   {
    "parte": "ponte",
-   "ideia": "rapidinho: os bichos passam um atrás do outro e os dois mal conseguem acompanhar"
+   "ideia": "macaco pula, sapo pula, cobra faz sss… e o leão que faz miau (não!) roar!"
   },
   {
    "parte": "final",
-   "ideia": "convite; todos os bichos acenam no tchau"
+   "ideia": "convite; a bicharada fazendo cada um o seu som e dando tchau"
   }
  ],
  "duracao_alvo": [
@@ -57,9 +55,11 @@
  "status": "letra_revisada",
  "versoes": [],
  "youtube": {
-  "resumo": "BICHO FAZ ASSIM! 🐸🐍🐒🐘 A Laurinha fala o bicho e todo mundo imita: o sapo pula, a cobra faz ssss, o macaco coça, o elefante faz fuuum com a tromba, o passarinho voa e o jacaré… nhac! E a muriçoca? Em vez de picar, dá abraço!",
+  "resumo": "BICHO FAZ ASSIM! 🐒🐸🦁 Hoje tem bicharada no quintal… mas o gato ficou rouco, o pato desafinou e o galo só bocejou! Imita aí: o macaco pula, o sapo pula, a cobra faz sss e o leão faz… miau? Não! Roar!",
   "resumo_short": "BICHO FAZ ASSIM! 🐸 Imite os bichos com a Laurinha e o Luisinho!",
   "curiosidade": "Cada bicho se mexe de um jeito: o sapo pula, a cobra rasteja e o passarinho voa"
  },
- "origem": "brincadeiras com o corpo (18/11/2026), inspiradas no gênero de No Ritmo Quá Quá / Morto-Vivo — nada copiado"
+ "origem": "brincadeiras com o corpo (18/11/2026), inspiradas no gênero de No Ritmo Quá Quá / Morto-Vivo — nada copiado",
+ "persona": "laurinha",
+ "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz)"
 }
