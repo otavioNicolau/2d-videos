@@ -28,8 +28,9 @@ def letra(intro_tag, gancho2, persona, verso, refrao, ponte, gostou, tchau, bord
     b = bordao or persona
     outro = "luisinho" if persona == "laurinha" else "laurinha"
     convite = gostou.replace("? ", "?\n")
-    partes = [f"[Intro - {intro_tag}]\n" + "\n".join(gancho2), v, r, f"[Bordão {b}]\n[Intervalo 8s]", p, v, r,
-              f"[Bordão {b}]\n[Intervalo 8s]", p, rf, "[Intervalo 6s]",
+    grito = "Laurinha e Luisinho!"              # grito do canal (referência: 10 de 13 músicas, depois da intro e nas pausas)
+    partes = [f"[Intro - {intro_tag}]\n" + "\n".join(gancho2) + f"\n{grito}", v, r, f"[Bordão {b}]\n{grito}\n[Intervalo 8s]", p, v, r,
+              f"[Bordão {b}]\n{grito}\n[Intervalo 8s]", p, rf, "[Intervalo 6s]",
               f"[Outro - {persona.capitalize()} talks to the kids]\n{convite}\nChama o papai e a mamãe\nPra se inscrever no canal! Zum, zum!",
               f"[Outro - one big final hit, hard stop]\n{tchau}\n[End]"]
     return "\n\n".join(partes) + "\n"
