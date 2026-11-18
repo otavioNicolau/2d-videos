@@ -1,0 +1,1609 @@
+{
+ "schema": "roteiro-1.0",
+ "nota": "Roteiro verso a verso de 'Foguete pra Lua' (letra revisada na auditoria e aprovada; v1 trazida pelo usuário em 17/11/2026; o Suno pulou a ponte e cantou meio refrão + intervalo longo): noite no jardim, a asinha não alcança a lua, contagem e decolagem, cometa no espaço, a lua brilha com a luz do sol, pulos leves na lua, aceno para a Terra, volta pra casa e tchau para a lua.",
+ "partes": {
+  "intro": [
+   {
+    "linhas": 1,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "escurece": [
+     0.35,
+     0.35
+    ],
+    "callout": [
+     {
+      "t": 5.0,
+      "text": "DEZ, NOVE, OITO…",
+      "color": "amarelo"
+     }
+    ],
+    "objetos": {
+     "lua": {
+      "x": 1500,
+      "y": 560,
+      "z": 3,
+      "depth": 0.5,
+      "pose": {
+       "brilho": 0.6
+      }
+     },
+     "fog": {
+      "id": "foguete",
+      "x": 900,
+      "y": 930,
+      "z": 2,
+      "depth": 0.9,
+      "pose": {
+       "fogo": 0.0
+      },
+      "keys": []
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": -250,
+      "y": 520,
+      "turn": 0.4,
+      "acoes": [
+       {
+        "t": 0.3,
+        "do": "fly",
+        "dur": 2.4,
+        "to_x": 1250,
+        "to_y": 930
+       }
+      ]
+     },
+     "luisinho": {
+      "x": -450,
+      "y": 460,
+      "turn": 0.4,
+      "acoes": [
+       {
+        "t": 0.6,
+        "do": "fly",
+        "dur": 2.3,
+        "to_x": 1600,
+        "to_y": 930
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "verso#1": [
+   {
+    "linhas": 2,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.1
+    },
+    "escurece": [
+     0.35,
+     0.35
+    ],
+    "callout": [
+     {
+      "t": 0.4,
+      "text": "OLHA!",
+      "color": "azul"
+     }
+    ],
+    "objetos": {
+     "lua": {
+      "x": 1500,
+      "y": 560,
+      "z": 3,
+      "depth": 0.5,
+      "pose": {
+       "brilho": 0.6
+      }
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 1150,
+      "turn": 0.4,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "point",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 2,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0
+    },
+    "escurece": [
+     0.35,
+     0.35
+    ],
+    "callout": [
+     {
+      "t": 0.6,
+      "text": "HEIN?",
+      "color": "rosa"
+     }
+    ],
+    "objetos": {
+     "lua": {
+      "x": 1500,
+      "y": 560,
+      "z": 3,
+      "depth": 0.5
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 1200,
+      "y": 930,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "fly",
+        "dur": 1.4,
+        "to_x": 1300,
+        "to_y": 500
+       },
+       {
+        "t": 1.7,
+        "do": "fly",
+        "dur": 0.8,
+        "to_x": 1250,
+        "to_y": 930
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "danca_bolinhas_azul",
+    "camera": "medio:luisinho",
+    "callout": [
+     {
+      "t": 0.6,
+      "text": "IH!",
+      "color": "azul"
+     }
+    ],
+    "atores": {
+     "luisinho": {
+      "x": 960,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "ofegante",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.05
+    },
+    "escurece": [
+     0.35,
+     0.35
+    ],
+    "callout": [
+     {
+      "t": 0.4,
+      "text": "FOGUETE!",
+      "color": "vermelho"
+     }
+    ],
+    "objetos": {
+     "fog": {
+      "id": "foguete",
+      "x": 1300,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "fogo": 0.0
+      },
+      "keys": []
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 900,
+      "turn": 0.4,
+      "pose": {
+       "capacete": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "apontar_camera",
+        "dur": 1.2
+       },
+       {
+        "t": 1.6,
+        "do": "walk",
+        "to_x": 1240
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1700,
+      "turn": -0.4,
+      "pose": {
+       "capacete": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "jump",
+        "dur": 0.8
+       },
+       {
+        "t": 1.4,
+        "do": "walk",
+        "to_x": 1360
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "refrao": [
+   {
+    "linhas": 3,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0
+    },
+    "flash": true,
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "TRÊS, DOIS, UM…",
+      "color": "amarelo",
+      "dur": 1.6
+     },
+     {
+      "t": 2.4,
+      "text": "FOGUETE PRA LUA!",
+      "color": "azul"
+     }
+    ],
+    "objetos": {
+     "fog": {
+      "id": "foguete",
+      "x": 1300,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "fogo": 1.0
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "chama": 0.0,
+         "treme": 1.0
+        }
+       },
+       {
+        "t": 5.0,
+        "pose": {
+         "chama": 14.0
+        },
+        "ease": "linear"
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "y": 930
+        }
+       },
+       {
+        "t": 3.6,
+        "pose": {
+         "y": -500
+        },
+        "ease": "in"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 2,
+    "cenario": "plano_espaco",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0
+    },
+    "fx": [
+     "estrelas"
+    ],
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "CINTO! CAPACETE!",
+      "color": "rosa"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 1000,
+      "turn": 0.1,
+      "pose": {
+       "capacete": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "bracos",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1600,
+      "turn": -0.1,
+      "pose": {
+       "capacete": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "bracos",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 2,
+    "cenario": "plano_espaco",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0
+    },
+    "callout": [
+     {
+      "t": 0.4,
+      "text": "PLIM!",
+      "color": "amarelo"
+     }
+    ],
+    "objetos": {
+     "cometa": {
+      "id": "cometa",
+      "x": 1300,
+      "y": 700,
+      "z": 1,
+      "depth": 1.0,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 2400
+        }
+       },
+       {
+        "t": 2.8,
+        "pose": {
+         "x": 200
+        },
+        "ease": "linear"
+       }
+      ]
+     },
+     "fog": {
+      "id": "foguete",
+      "x": 1300,
+      "y": 900,
+      "z": 2,
+      "depth": 0.75,
+      "pose": {
+       "fogo": 1.0
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 500,
+         "chama": 0.0
+        }
+       },
+       {
+        "t": 3.0,
+        "pose": {
+         "x": 1800,
+         "chama": 10.0
+        },
+        "ease": "linear"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 2,
+    "cenario": "plano_lua",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0
+    },
+    "callout": [
+     {
+      "t": 0.8,
+      "text": "TUM!",
+      "color": "laranja"
+     }
+    ],
+    "objetos": {
+     "fog": {
+      "id": "foguete",
+      "x": 1300,
+      "y": 930,
+      "z": 2,
+      "depth": 0.9,
+      "pose": {
+       "fogo": 0.6
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "y": 200,
+         "chama": 0.0
+        }
+       },
+       {
+        "t": 2.4,
+        "pose": {
+         "y": 930,
+         "chama": 6.0
+        },
+        "ease": "out"
+       }
+      ]
+     },
+     "terra": {
+      "x": 2050,
+      "y": 520,
+      "z": 1,
+      "depth": 0.6,
+      "pose": {
+       "gira": 0.2
+      }
+     }
+    }
+   }
+  ],
+  "intervalo#1": [
+   {
+    "linhas": 1,
+    "cenario": "danca_raios_rosa",
+    "camera": "close:laurinha",
+    "callout": "BORA, TURMINHA!",
+    "atores": {
+     "laurinha": {
+      "x": 960,
+      "pose": {
+       "capacete": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "apontar_camera",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_espaco",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0
+    },
+    "fx": [
+     "estrelas"
+    ],
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "LAURINHA E LUISINHO!",
+      "color": "rosa"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 1000,
+      "y": 700,
+      "fly": 1,
+      "pose": {
+       "capacete": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "asinhas",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1600,
+      "y": 740,
+      "fly": 1,
+      "turn": -0.15,
+      "pose": {
+       "capacete": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "asinhas",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "verso#2": [
+   {
+    "linhas": 2,
+    "cenario": "plano_espaco",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.1
+    },
+    "callout": [
+     {
+      "t": 1.0,
+      "text": "NÃO TEM LUZ?",
+      "color": "azul"
+     }
+    ],
+    "objetos": {
+     "lua": {
+      "x": 1300,
+      "y": 900,
+      "z": 1,
+      "depth": 0.9,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "brilho": 0.0,
+         "lid": 1.0
+        }
+       },
+       {
+        "t": 2.0,
+        "pose": {
+         "lid": 1.0
+        }
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 2,
+    "cenario": "plano_espaco",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0
+    },
+    "fx": [
+     "estrelas"
+    ],
+    "callout": [
+     {
+      "t": 0.6,
+      "text": "A LUZ DO SOL!",
+      "color": "amarelo"
+     }
+    ],
+    "objetos": {
+     "sol": {
+      "x": 350,
+      "y": 760,
+      "z": 1,
+      "depth": 0.7,
+      "pose": {
+       "giro": 0.3
+      }
+     },
+     "lua": {
+      "x": 1700,
+      "y": 880,
+      "z": 1,
+      "depth": 0.8,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "brilho": 0.0,
+         "lid": 1.0
+        }
+       },
+       {
+        "t": 0.8,
+        "pose": {
+         "brilho": 1.0,
+         "lid": 0.0
+        },
+        "ease": "out"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 2,
+    "cenario": "plano_espaco",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.15
+    },
+    "callout": [
+     {
+      "t": 1.6,
+      "text": "UAU!",
+      "color": "rosa"
+     }
+    ],
+    "objetos": {
+     "lua": {
+      "x": 1300,
+      "y": 920,
+      "z": 1,
+      "depth": 0.95,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "brilho": 1.0,
+         "boca": 0.0
+        }
+       },
+       {
+        "t": 1.6,
+        "pose": {
+         "boca": 0.6
+        }
+       },
+       {
+        "t": 2.4,
+        "pose": {
+         "boca": 0.0
+        }
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "intervalo#2": [
+   {
+    "linhas": 1,
+    "cenario": "danca_raios_roxo",
+    "camera": "close:laurinha",
+    "callout": "BORA, TURMINHA!",
+    "atores": {
+     "laurinha": {
+      "x": 960,
+      "pose": {
+       "capacete": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "apontar_camera",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_lua",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0
+    },
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "LAURINHA E LUISINHO!",
+      "color": "azul"
+     }
+    ],
+    "objetos": {
+     "terra": {
+      "x": 2050,
+      "y": 520,
+      "z": 1,
+      "depth": 0.6
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 1050,
+      "turn": 0.1,
+      "pose": {
+       "capacete": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1550,
+      "turn": -0.1,
+      "pose": {
+       "capacete": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "refrao#3": [
+   {
+    "linhas": 2,
+    "cenario": "plano_lua",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0
+    },
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "CINTO! CAPACETE!",
+      "color": "rosa"
+     }
+    ],
+    "objetos": {
+     "terra": {
+      "x": 2050,
+      "y": 520,
+      "z": 1,
+      "depth": 0.6
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 1050,
+      "turn": 0.1,
+      "pose": {
+       "capacete": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "bracos",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1550,
+      "turn": -0.1,
+      "pose": {
+       "capacete": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "bracos",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 2,
+    "cenario": "plano_lua",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0
+    },
+    "callout": [
+     {
+      "t": 0.4,
+      "text": "BOING!",
+      "color": "amarelo"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 1050,
+      "pose": {
+       "capacete": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "jump",
+        "dur": 1.4
+       },
+       {
+        "t": 1.8,
+        "do": "jump",
+        "dur": 1.4
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1550,
+      "turn": -0.1,
+      "pose": {
+       "capacete": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.3,
+        "do": "jump",
+        "dur": 1.4
+       },
+       {
+        "t": 2.0,
+        "do": "jump",
+        "dur": 1.4
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "intervalo#3": [
+   {
+    "linhas": 1,
+    "cenario": "plano_lua",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.05
+    },
+    "callout": "BORA, TURMINHA!",
+    "atores": {
+     "laurinha": {
+      "x": 1050,
+      "pose": {
+       "capacete": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "apontar_camera",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1550,
+      "turn": -0.1,
+      "pose": {
+       "capacete": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "jump",
+        "dur": 1.2
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_lua",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0
+    },
+    "callout": [
+     {
+      "t": 0.6,
+      "text": "OI, MAMÃE!",
+      "color": "rosa"
+     }
+    ],
+    "objetos": {
+     "terra": {
+      "x": 1300,
+      "y": 560,
+      "z": 1,
+      "depth": 0.85,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "gira": 0.0
+        }
+       },
+       {
+        "t": 3.0,
+        "pose": {
+         "gira": 0.4
+        }
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 1050,
+      "pose": {
+       "capacete": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "dance",
+        "style": "tchau",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1550,
+      "turn": -0.1,
+      "pose": {
+       "capacete": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "dance",
+        "style": "tchau",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "seg": 7.0,
+    "cenario": "plano_lua",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "titulo": "dança na lua, bem levinho",
+    "fx": [
+     "estrelas"
+    ],
+    "objetos": {
+     "terra": {
+      "x": 2100,
+      "y": 520,
+      "z": 1,
+      "depth": 0.6
+     },
+     "fog": {
+      "id": "foguete",
+      "x": 400,
+      "y": 930,
+      "z": 2,
+      "depth": 0.8,
+      "pose": {
+       "fogo": 0.0
+      },
+      "keys": []
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 1050,
+      "turn": 0.1,
+      "pose": {
+       "capacete": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "asinhas",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1550,
+      "turn": -0.1,
+      "pose": {
+       "capacete": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "asinhas",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "cenario": "danca_raios_azul",
+    "fx": [
+     "confete"
+    ],
+    "titulo": "dança no espaço",
+    "atores": {
+     "laurinha": {
+      "x": 640,
+      "turn": 0.0,
+      "pose": {
+       "capacete": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1280,
+      "turn": -0.15,
+      "pose": {
+       "capacete": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "refrao#4": [
+   {
+    "linhas": 3,
+    "cenario": "plano_lua",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0
+    },
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "TRÊS, DOIS, UM…",
+      "color": "amarelo",
+      "dur": 1.6
+     },
+     {
+      "t": 2.4,
+      "text": "DE VOLTA PRA CASA!",
+      "color": "azul"
+     }
+    ],
+    "objetos": {
+     "fog": {
+      "id": "foguete",
+      "x": 1300,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "fogo": 1.0
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "chama": 0.0,
+         "treme": 1.0
+        }
+       },
+       {
+        "t": 5.0,
+        "pose": {
+         "chama": 14.0
+        },
+        "ease": "linear"
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "y": 930
+        }
+       },
+       {
+        "t": 3.6,
+        "pose": {
+         "y": -500
+        },
+        "ease": "in"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 3,
+    "cenario": "plano_espaco",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0
+    },
+    "fx": [
+     "estrelas"
+    ],
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "PLIM!",
+      "color": "amarelo"
+     }
+    ],
+    "objetos": {
+     "cometa": {
+      "id": "cometa",
+      "x": 1300,
+      "y": 700,
+      "z": 1,
+      "depth": 1.0,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 200
+        }
+       },
+       {
+        "t": 3.0,
+        "pose": {
+         "x": 2400
+        },
+        "ease": "linear"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 1000,
+      "turn": 0.1,
+      "pose": {
+       "capacete": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "asinhas",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1600,
+      "turn": -0.1,
+      "pose": {
+       "capacete": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "asinhas",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 3,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0
+    },
+    "escurece": [
+     0.35,
+     0.2
+    ],
+    "callout": [
+     {
+      "t": 1.5,
+      "text": "TUM!",
+      "color": "laranja"
+     }
+    ],
+    "objetos": {
+     "fog": {
+      "id": "foguete",
+      "x": 1300,
+      "y": 930,
+      "z": 2,
+      "depth": 0.9,
+      "pose": {
+       "fogo": 0.6
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "y": 200,
+         "chama": 0.0
+        }
+       },
+       {
+        "t": 2.6,
+        "pose": {
+         "y": 930,
+         "chama": 6.0
+        },
+        "ease": "out"
+       }
+      ]
+     },
+     "lua": {
+      "x": 1900,
+      "y": 640,
+      "z": 1,
+      "depth": 0.5,
+      "pose": {
+       "brilho": 0.6
+      }
+     }
+    }
+   }
+  ],
+  "final#1": [
+   {
+    "linhas": 1,
+    "cenario": "danca_raios_azul",
+    "camera": "close:laurinha",
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "GOSTOU?",
+      "color": "rosa"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 960,
+      "pose": {
+       "capacete": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "apontar_camera",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "danca_bolinhas_amarelo",
+    "callout": [
+     {
+      "t": 0.4,
+      "text": "DÁ UM JOINHA!",
+      "color": "azul"
+     }
+    ],
+    "fx": [
+     "estrelas"
+    ],
+    "objetos": {
+     "joinha": {
+      "x": 1380,
+      "y": 900,
+      "z": 3,
+      "depth": 1.3,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "escala": 0.0
+        }
+       },
+       {
+        "t": 0.4,
+        "pose": {
+         "escala": 1.0
+        },
+        "ease": "back"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 680,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "bacana",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_casa_frente",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.1
+    },
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "CHAMA O PAPAI E A MAMÃE!",
+      "color": "verde"
+     }
+    ],
+    "atores": {
+     "mamae": {
+      "x": 1100,
+      "turn": 0.2,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "wave",
+        "dur": 1.4
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 1450,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "point",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "danca_raios_vermelho",
+    "callout": [
+     {
+      "t": 0.5,
+      "text": "INSCREVA-SE!",
+      "color": "vermelho"
+     }
+    ],
+    "fx": [
+     "coracoes"
+    ],
+    "objetos": {
+     "botao": {
+      "id": "botao_inscrever",
+      "x": 1260,
+      "y": 760,
+      "z": 3,
+      "depth": 1.2,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "escala": 0.0,
+         "aperta": 0.0
+        }
+       },
+       {
+        "t": 0.4,
+        "pose": {
+         "escala": 1.0
+        },
+        "ease": "back"
+       },
+       {
+        "t": 1.6,
+        "pose": {
+         "aperta": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 1.9,
+        "pose": {
+         "aperta": 0.0
+        },
+        "ease": "in"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 600,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "point",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "final#2": [
+   {
+    "linhas": 1,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0
+    },
+    "escurece": [
+     0.3,
+     0.3
+    ],
+    "fx": [
+     "estrelas"
+    ],
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "TCHAU!",
+      "color": "amarelo"
+     }
+    ],
+    "objetos": {
+     "lua": {
+      "x": 1900,
+      "y": 640,
+      "z": 1,
+      "depth": 0.55,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "brilho": 0.6,
+         "boca": 0.0
+        }
+       },
+       {
+        "t": 1.0,
+        "pose": {
+         "boca": 0.6
+        }
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "boca": 0.0
+        }
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 1050,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "tchau",
+        "dur": 3.2
+       },
+       {
+        "t": 3.5,
+        "do": "fly",
+        "dur": 1.4,
+        "to_x": 2400,
+        "to_y": 300
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1450,
+      "turn": -0.1,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "tchau",
+        "dur": 3.2
+       },
+       {
+        "t": 3.6,
+        "do": "fly",
+        "dur": 1.4,
+        "to_x": 2600,
+        "to_y": 350
+       }
+      ]
+     }
+    }
+   }
+  ]
+ }
+}

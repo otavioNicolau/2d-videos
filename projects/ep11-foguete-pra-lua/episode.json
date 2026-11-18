@@ -1,0 +1,3201 @@
+{
+  "schema": "1.1",
+  "id": "ep11-foguete-pra-lua",
+  "title": "Foguete pra Lua",
+  "logline": "Clipe de \"Foguete pra Lua\" — viagem de foguete até a lua. Montado do roteiro verso a verso (roteiro.json).",
+  "fps": 30,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "background": "plano_parque",
+  "soundtrack": {
+    "file": "musica/trabalho.wav",
+    "analysis": "analise/song.json",
+    "start": 0.0,
+    "end": 132.8,
+    "fade_out": 0.6,
+    "beat_grid": "full"
+  },
+  "captions": {
+    "lyrics": "analise/letra.json",
+    "style": "palavra_a_palavra"
+  },
+  "overlays": {
+    "logo": true,
+    "channel": [
+      "LAURINHA",
+      "e Luisinho"
+    ]
+  },
+  "cast": {
+    "laurinha": {
+      "character": "laurinha"
+    },
+    "luisinho": {
+      "character": "luisinho"
+    },
+    "lua": {
+      "character": "lua"
+    },
+    "fog": {
+      "character": "foguete"
+    },
+    "cometa": {
+      "character": "cometa"
+    },
+    "terra": {
+      "character": "terra"
+    },
+    "sol": {
+      "character": "sol"
+    },
+    "joinha": {
+      "character": "joinha"
+    },
+    "mamae": {
+      "character": "mamae"
+    },
+    "botao": {
+      "character": "botao_inscrever"
+    }
+  },
+  "approval": {
+    "storyboard": true,
+    "final_render": false
+  },
+  "scenes": [
+    {
+      "id": "s01_intro",
+      "title": "Dez, nove, oito... Zum!",
+      "duration": 10.8667,
+      "description": "Dez, nove, oito... Zum!",
+      "background": "plano_jardim",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 10.867,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.08,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": -250,
+            "y": 520,
+            "turn": 0.4,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.3,
+              "do": "fly",
+              "dur": 2.4,
+              "to_x": 1250,
+              "to_y": 930
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": -450,
+            "y": 460,
+            "turn": 0.4,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.6,
+              "do": "fly",
+              "dur": 2.3,
+              "to_x": 1600,
+              "to_y": 930
+            }
+          ]
+        }
+      },
+      "props": {
+        "lua": {
+          "start": {
+            "x": 1500,
+            "y": 560,
+            "z": 3,
+            "brilho": 0.6,
+            "depth": 0.5
+          },
+          "exposure": 1
+        },
+        "fog": {
+          "start": {
+            "x": 900,
+            "y": 930,
+            "z": 2,
+            "fogo": 0.0,
+            "depth": 0.9
+          },
+          "exposure": 1
+        }
+      },
+      "escurece": [
+        0.35,
+        0.35
+      ],
+      "callouts": [
+        {
+          "t": 5.0,
+          "text": "DEZ, NOVE, OITO…",
+          "dur": 1.8,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 5.85,
+          "to": 8.88
+        },
+        {
+          "who": "luisinho",
+          "from": 5.85,
+          "to": 8.88
+        }
+      ]
+    },
+    {
+      "id": "s02_verso",
+      "title": "Olha lá no céu! Olha!",
+      "duration": 2.9333,
+      "description": "Olha lá no céu! Olha! / A lua redondinha!",
+      "background": "plano_jardim",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540,
+            "zoom": 1.1
+          },
+          {
+            "t": 2.933,
+            "x": 1300,
+            "y": 540,
+            "zoom": 1.1500000000000001,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1150,
+            "y": 930,
+            "turn": 0.4,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "point",
+              "dur": 2.833
+            }
+          ]
+        }
+      },
+      "props": {
+        "lua": {
+          "start": {
+            "x": 1500,
+            "y": 560,
+            "z": 3,
+            "brilho": 0.6,
+            "depth": 0.5
+          },
+          "exposure": 1
+        }
+      },
+      "escurece": [
+        0.35,
+        0.35
+      ],
+      "callouts": [
+        {
+          "t": 0.4,
+          "text": "OLHA!",
+          "dur": 1.8,
+          "color": "azul",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.173,
+          "to": 2.873
+        }
+      ],
+      "transition_in": {
+        "type": "deslizar_dir",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s03_verso",
+      "title": "Será que a gente voa Hein?",
+      "duration": 3.0,
+      "description": "Será que a gente voa Hein? / Até lá em cima?",
+      "background": "plano_jardim",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 3.0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.05,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 1200,
+            "y": 930,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.2,
+              "do": "fly",
+              "dur": 1.4,
+              "to_x": 1300,
+              "to_y": 500
+            },
+            {
+              "t": 1.7,
+              "do": "fly",
+              "dur": 0.8,
+              "to_x": 1250,
+              "to_y": 930
+            }
+          ]
+        }
+      },
+      "props": {
+        "lua": {
+          "start": {
+            "x": 1500,
+            "y": 560,
+            "z": 3,
+            "depth": 0.5
+          },
+          "exposure": 1
+        }
+      },
+      "escurece": [
+        0.35,
+        0.35
+      ],
+      "callouts": [
+        {
+          "t": 0.6,
+          "text": "HEIN?",
+          "dur": 1.8,
+          "color": "rosa",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s04_verso",
+      "title": "Asinha não alcança... Ih!",
+      "duration": 1.4667,
+      "description": "Asinha não alcança... Ih!",
+      "background": "danca_bolinhas_azul",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 680,
+            "zoom": 1.3
+          },
+          {
+            "t": 1.467,
+            "x": 960,
+            "y": 680,
+            "zoom": 1.36,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "ofegante",
+              "dur": 1.367
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.6,
+          "text": "IH!",
+          "dur": 0.867,
+          "color": "azul",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s05_verso",
+      "title": "Bora de foguete! Foguete!",
+      "duration": 3.6666,
+      "description": "Bora de foguete! Foguete!",
+      "background": "plano_jardim",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540,
+            "zoom": 1.05
+          },
+          {
+            "t": 3.667,
+            "x": 1300,
+            "y": 540,
+            "zoom": 1.1,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 900,
+            "y": 930,
+            "turn": 0.4,
+            "expr": "happy",
+            "z": 3,
+            "capacete": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "apontar_camera",
+              "dur": 1.2
+            },
+            {
+              "t": 1.6,
+              "do": "walk",
+              "to_x": 1240
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1700,
+            "y": 930,
+            "turn": -0.4,
+            "expr": "happy",
+            "z": 3,
+            "capacete": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.2,
+              "do": "jump",
+              "dur": 0.8
+            },
+            {
+              "t": 1.4,
+              "do": "walk",
+              "to_x": 1360
+            }
+          ]
+        }
+      },
+      "props": {
+        "fog": {
+          "start": {
+            "x": 1300,
+            "y": 930,
+            "z": 2,
+            "fogo": 0.0,
+            "depth": 1.0
+          },
+          "exposure": 1
+        }
+      },
+      "escurece": [
+        0.35,
+        0.35
+      ],
+      "callouts": [
+        {
+          "t": 0.4,
+          "text": "FOGUETE!",
+          "dur": 1.8,
+          "color": "vermelho",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.273,
+          "to": 3.657
+        }
+      ]
+    },
+    {
+      "id": "s06_refrao",
+      "title": "Três, dois, um… Vruuum!",
+      "duration": 6.8,
+      "description": "Três, dois, um… Vruuum! / Foguete pra lua! Vruuum! / Foguete pra lua! Vruuum!",
+      "background": "plano_jardim",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 6.8,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.05,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {},
+      "props": {
+        "fog": {
+          "start": {
+            "x": 1300,
+            "y": 930,
+            "z": 2,
+            "fogo": 1.0,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "chama": 0.0,
+                "treme": 1.0
+              }
+            },
+            {
+              "t": 5.0,
+              "pose": {
+                "chama": 14.0
+              },
+              "ease": "linear"
+            },
+            {
+              "t": 0.0,
+              "pose": {
+                "y": 930
+              }
+            },
+            {
+              "t": 3.6,
+              "pose": {
+                "y": -500
+              },
+              "ease": "in"
+            }
+          ]
+        }
+      },
+      "flash_in": true,
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "TRÊS, DOIS, UM…",
+          "dur": 1.6,
+          "color": "amarelo",
+          "y": 170
+        },
+        {
+          "t": 2.4,
+          "text": "FOGUETE PRA LUA!",
+          "dur": 1.8,
+          "color": "azul",
+          "y": 170
+        }
+      ],
+      "transition_in": {
+        "type": "deslizar_esq",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s07_refrao",
+      "title": "Cinto apertado,",
+      "duration": 2.9,
+      "description": "Cinto apertado, / Capacete na cabeça!",
+      "background": "plano_espaco",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 2.9,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.05,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1000,
+            "y": 930,
+            "turn": 0.1,
+            "expr": "happy",
+            "z": 3,
+            "capacete": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "bracos",
+              "dur": 2.9
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1600,
+            "y": 930,
+            "turn": -0.1,
+            "expr": "happy",
+            "z": 3,
+            "capacete": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "bracos",
+              "dur": 2.9
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "CINTO! CAPACETE!",
+          "dur": 1.8,
+          "color": "rosa",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 2.547
+        },
+        {
+          "who": "luisinho",
+          "from": 0.0,
+          "to": 2.547
+        }
+      ]
+    },
+    {
+      "id": "s08_refrao",
+      "title": "Foguete pra lua! Vruuum!",
+      "duration": 2.9667,
+      "description": "Foguete pra lua! Vruuum! / Passa a estrela, Plim!",
+      "background": "plano_espaco",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 2.967,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.05,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {},
+      "props": {
+        "cometa": {
+          "start": {
+            "x": 1300,
+            "y": 700,
+            "z": 1,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "x": 2400
+              }
+            },
+            {
+              "t": 2.8,
+              "pose": {
+                "x": 200
+              },
+              "ease": "linear"
+            }
+          ]
+        },
+        "fog": {
+          "start": {
+            "x": 1300,
+            "y": 900,
+            "z": 2,
+            "fogo": 1.0,
+            "depth": 0.75
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "x": 500,
+                "chama": 0.0
+              }
+            },
+            {
+              "t": 3.0,
+              "pose": {
+                "x": 1800,
+                "chama": 10.0
+              },
+              "ease": "linear"
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.4,
+          "text": "PLIM!",
+          "dur": 1.8,
+          "color": "amarelo",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s09_refrao",
+      "title": "Passa o cometa!",
+      "duration": 3.6667,
+      "description": "Passa o cometa! / E pousa devagar! Tum!",
+      "background": "plano_lua",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 3.667,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.05,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {},
+      "props": {
+        "fog": {
+          "start": {
+            "x": 1300,
+            "y": 930,
+            "z": 2,
+            "fogo": 0.6,
+            "depth": 0.9
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "y": 200,
+                "chama": 0.0
+              }
+            },
+            {
+              "t": 2.4,
+              "pose": {
+                "y": 930,
+                "chama": 6.0
+              },
+              "ease": "out"
+            }
+          ]
+        },
+        "terra": {
+          "start": {
+            "x": 2050,
+            "y": 520,
+            "z": 1,
+            "gira": 0.2,
+            "depth": 0.6
+          },
+          "exposure": 1
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.8,
+          "text": "TUM!",
+          "dur": 1.8,
+          "color": "laranja",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s10_intervalo",
+      "title": "Bora, turminha!",
+      "duration": 5.1333,
+      "description": "Bora, turminha!",
+      "background": "danca_raios_rosa",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 630,
+            "zoom": 1.75
+          },
+          {
+            "t": 5.133,
+            "x": 960,
+            "y": 630,
+            "zoom": 1.81,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3,
+            "capacete": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "apontar_camera",
+              "dur": 5.033
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "BORA, TURMINHA!",
+          "dur": 1.8,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.113,
+          "to": 1.493
+        }
+      ],
+      "transition_in": {
+        "type": "giro",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s11_intervalo",
+      "title": "Laurinha e Luisinho!",
+      "duration": 1.8333,
+      "description": "Laurinha e Luisinho!",
+      "background": "plano_espaco",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 1.833,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.05,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1000,
+            "y": 700,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "fly": 1,
+            "capacete": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "asinhas",
+              "dur": 1.833
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1600,
+            "y": 740,
+            "turn": -0.15,
+            "expr": "happy",
+            "z": 3,
+            "fly": 1,
+            "capacete": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "asinhas",
+              "dur": 1.833
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "LAURINHA E LUISINHO!",
+          "dur": 1.633,
+          "color": "rosa",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 1.48
+        },
+        {
+          "who": "luisinho",
+          "from": 0.0,
+          "to": 1.48
+        }
+      ]
+    },
+    {
+      "id": "s12_verso",
+      "title": "Sabia que a lua Hein?",
+      "duration": 3.7,
+      "description": "Sabia que a lua Hein? / Não tem luz? Não tem?",
+      "background": "plano_espaco",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540,
+            "zoom": 1.1
+          },
+          {
+            "t": 3.7,
+            "x": 1300,
+            "y": 540,
+            "zoom": 1.1500000000000001,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {},
+      "props": {
+        "lua": {
+          "start": {
+            "x": 1300,
+            "y": 900,
+            "z": 1,
+            "depth": 0.9
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "lid": 1.0
+              }
+            },
+            {
+              "t": 2.0,
+              "pose": {
+                "lid": 1.0
+              }
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 1.0,
+          "text": "NÃO TEM LUZ?",
+          "dur": 1.8,
+          "color": "azul",
+          "y": 170
+        }
+      ],
+      "transition_in": {
+        "type": "deslizar_esq",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s13_verso",
+      "title": "Ela brilha",
+      "duration": 2.1667,
+      "description": "Ela brilha / Com a luz do sol! Do sol!",
+      "background": "plano_espaco",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 2.167,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.05,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {},
+      "props": {
+        "sol": {
+          "start": {
+            "x": 350,
+            "y": 760,
+            "z": 1,
+            "giro": 0.3,
+            "depth": 0.7
+          },
+          "exposure": 1
+        },
+        "lua": {
+          "start": {
+            "x": 1700,
+            "y": 880,
+            "z": 1,
+            "depth": 0.8
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "lid": 1.0
+              }
+            },
+            {
+              "t": 0.8,
+              "pose": {
+                "brilho": 1.0,
+                "lid": 0.0
+              },
+              "ease": "out"
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "callouts": [
+        {
+          "t": 0.6,
+          "text": "A LUZ DO SOL!",
+          "dur": 1.567,
+          "color": "amarelo",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s14_verso",
+      "title": "Igual espelhinho",
+      "duration": 5.7,
+      "description": "Igual espelhinho / Lá no céu! Uau!",
+      "background": "plano_espaco",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540,
+            "zoom": 1.15
+          },
+          {
+            "t": 5.7,
+            "x": 1300,
+            "y": 540,
+            "zoom": 1.2,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {},
+      "props": {
+        "lua": {
+          "start": {
+            "x": 1300,
+            "y": 920,
+            "z": 1,
+            "depth": 0.95
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 1.0,
+                "boca": 0.0
+              }
+            },
+            {
+              "t": 1.6,
+              "pose": {
+                "boca": 0.6
+              }
+            },
+            {
+              "t": 2.4,
+              "pose": {
+                "boca": 0.0
+              }
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 1.6,
+          "text": "UAU!",
+          "dur": 1.8,
+          "color": "rosa",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s15_refrao",
+      "title": "Três, dois, um… Vruuum!",
+      "duration": 5.5333,
+      "description": "Três, dois, um… Vruuum! / Foguete pra lua! Vruuum! / Foguete pra lua! Vruuum!",
+      "background": "plano_jardim",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 5.533,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.05,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {},
+      "props": {
+        "fog": {
+          "start": {
+            "x": 1300,
+            "y": 930,
+            "z": 2,
+            "fogo": 1.0,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "chama": 0.0,
+                "treme": 1.0
+              }
+            },
+            {
+              "t": 5.0,
+              "pose": {
+                "chama": 14.0
+              },
+              "ease": "linear"
+            },
+            {
+              "t": 0.0,
+              "pose": {
+                "y": 930
+              }
+            },
+            {
+              "t": 3.6,
+              "pose": {
+                "y": -500
+              },
+              "ease": "in"
+            }
+          ]
+        }
+      },
+      "flash_in": true,
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "TRÊS, DOIS, UM…",
+          "dur": 1.6,
+          "color": "amarelo",
+          "y": 170
+        },
+        {
+          "t": 2.4,
+          "text": "FOGUETE PRA LUA!",
+          "dur": 1.8,
+          "color": "azul",
+          "y": 170
+        }
+      ],
+      "transition_in": {
+        "type": "deslizar_dir",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s16_refrao",
+      "title": "Cinto apertado,",
+      "duration": 2.9,
+      "description": "Cinto apertado, / Capacete na cabeça!",
+      "background": "plano_espaco",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 2.9,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.05,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1000,
+            "y": 930,
+            "turn": 0.1,
+            "expr": "happy",
+            "z": 3,
+            "capacete": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "bracos",
+              "dur": 2.9
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1600,
+            "y": 930,
+            "turn": -0.1,
+            "expr": "happy",
+            "z": 3,
+            "capacete": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "bracos",
+              "dur": 2.9
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "CINTO! CAPACETE!",
+          "dur": 1.8,
+          "color": "rosa",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.083,
+          "to": 2.687
+        },
+        {
+          "who": "luisinho",
+          "from": 0.083,
+          "to": 2.687
+        }
+      ]
+    },
+    {
+      "id": "s17_refrao",
+      "title": "Foguete pra lua! Vruuum!",
+      "duration": 2.9334,
+      "description": "Foguete pra lua! Vruuum! / Passa a estrela, Plim!",
+      "background": "plano_espaco",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 2.933,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.05,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {},
+      "props": {
+        "cometa": {
+          "start": {
+            "x": 1300,
+            "y": 700,
+            "z": 1,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "x": 2400
+              }
+            },
+            {
+              "t": 2.8,
+              "pose": {
+                "x": 200
+              },
+              "ease": "linear"
+            }
+          ]
+        },
+        "fog": {
+          "start": {
+            "x": 1300,
+            "y": 900,
+            "z": 2,
+            "fogo": 1.0,
+            "depth": 0.75
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "x": 500,
+                "chama": 0.0
+              }
+            },
+            {
+              "t": 3.0,
+              "pose": {
+                "x": 1800,
+                "chama": 10.0
+              },
+              "ease": "linear"
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.4,
+          "text": "PLIM!",
+          "dur": 1.8,
+          "color": "amarelo",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s18_refrao",
+      "title": "Passa o cometa!",
+      "duration": 3.6666,
+      "description": "Passa o cometa! / E pousa devagar! Tum!",
+      "background": "plano_lua",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 3.667,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.05,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {},
+      "props": {
+        "fog": {
+          "start": {
+            "x": 1300,
+            "y": 930,
+            "z": 2,
+            "fogo": 0.6,
+            "depth": 0.9
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "y": 200,
+                "chama": 0.0
+              }
+            },
+            {
+              "t": 2.4,
+              "pose": {
+                "y": 930,
+                "chama": 6.0
+              },
+              "ease": "out"
+            }
+          ]
+        },
+        "terra": {
+          "start": {
+            "x": 2050,
+            "y": 520,
+            "z": 1,
+            "gira": 0.2,
+            "depth": 0.6
+          },
+          "exposure": 1
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.8,
+          "text": "TUM!",
+          "dur": 1.8,
+          "color": "laranja",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s19_intervalo",
+      "title": "Bora, turminha!",
+      "duration": 0.7334,
+      "description": "Bora, turminha!",
+      "background": "danca_raios_roxo",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 630,
+            "zoom": 1.75
+          },
+          {
+            "t": 0.733,
+            "x": 960,
+            "y": 630,
+            "zoom": 1.81,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3,
+            "capacete": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "apontar_camera",
+              "dur": 0.633
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "BORA, TURMINHA!",
+          "dur": 0.6,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 0.723
+        }
+      ],
+      "transition_in": {
+        "type": "deslizar_esq",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s20_intervalo",
+      "title": "Laurinha e Luisinho!",
+      "duration": 3.3,
+      "description": "Laurinha e Luisinho!",
+      "background": "plano_lua",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 3.3,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.05,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1050,
+            "y": 930,
+            "turn": 0.1,
+            "expr": "happy",
+            "z": 3,
+            "capacete": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "festa",
+              "dur": 3.3
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1550,
+            "y": 930,
+            "turn": -0.1,
+            "expr": "happy",
+            "z": 3,
+            "capacete": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "festa",
+              "dur": 3.3
+            }
+          ]
+        }
+      },
+      "props": {
+        "terra": {
+          "start": {
+            "x": 2050,
+            "y": 520,
+            "z": 1,
+            "depth": 0.6
+          },
+          "exposure": 1
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "LAURINHA E LUISINHO!",
+          "dur": 1.8,
+          "color": "azul",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.233,
+          "to": 2.333
+        }
+      ]
+    },
+    {
+      "id": "s21_refrao",
+      "title": "Cinto apertado,",
+      "duration": 2.5666,
+      "description": "Cinto apertado, / Capacete na cabeça!",
+      "background": "plano_lua",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 2.567,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.05,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1050,
+            "y": 930,
+            "turn": 0.1,
+            "expr": "happy",
+            "z": 3,
+            "capacete": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "bracos",
+              "dur": 2.567
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1550,
+            "y": 930,
+            "turn": -0.1,
+            "expr": "happy",
+            "z": 3,
+            "capacete": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "bracos",
+              "dur": 2.567
+            }
+          ]
+        }
+      },
+      "props": {
+        "terra": {
+          "start": {
+            "x": 2050,
+            "y": 520,
+            "z": 1,
+            "depth": 0.6
+          },
+          "exposure": 1
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "CINTO! CAPACETE!",
+          "dur": 1.8,
+          "color": "rosa",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.133,
+          "to": 2.533
+        },
+        {
+          "who": "luisinho",
+          "from": 0.133,
+          "to": 2.533
+        }
+      ],
+      "transition_in": {
+        "type": "deslizar_dir",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s22_refrao",
+      "title": "Passa a estrela, Plim!",
+      "duration": 4.7334,
+      "description": "Passa a estrela, Plim! / E pousa devagar! Tum!",
+      "background": "plano_lua",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 4.733,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.05,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1050,
+            "y": 930,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "capacete": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "jump",
+              "dur": 1.4
+            },
+            {
+              "t": 1.8,
+              "do": "jump",
+              "dur": 1.4
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1550,
+            "y": 930,
+            "turn": -0.1,
+            "expr": "happy",
+            "z": 3,
+            "capacete": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.3,
+              "do": "jump",
+              "dur": 1.4
+            },
+            {
+              "t": 2.0,
+              "do": "jump",
+              "dur": 1.4
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.4,
+          "text": "BOING!",
+          "dur": 1.8,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 1.367
+        },
+        {
+          "who": "laurinha",
+          "from": 1.867,
+          "to": 3.967
+        },
+        {
+          "who": "luisinho",
+          "from": 0.0,
+          "to": 1.367
+        },
+        {
+          "who": "luisinho",
+          "from": 1.867,
+          "to": 3.967
+        }
+      ]
+    },
+    {
+      "id": "s23_intervalo",
+      "title": "Bora, turminha!",
+      "duration": 1.7333,
+      "description": "Bora, turminha!",
+      "background": "plano_lua",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540,
+            "zoom": 1.05
+          },
+          {
+            "t": 1.733,
+            "x": 1300,
+            "y": 540,
+            "zoom": 1.1,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1050,
+            "y": 930,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "capacete": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "apontar_camera",
+              "dur": 1.633
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1550,
+            "y": 930,
+            "turn": -0.1,
+            "expr": "happy",
+            "z": 3,
+            "capacete": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.2,
+              "do": "jump",
+              "dur": 1.2
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "BORA, TURMINHA!",
+          "dur": 1.533,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.133,
+          "to": 1.723
+        },
+        {
+          "who": "luisinho",
+          "from": 0.133,
+          "to": 1.723
+        }
+      ],
+      "transition_in": {
+        "type": "zoom",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s24_intervalo",
+      "title": "Lá no céu! Uau!",
+      "duration": 3.0,
+      "description": "Lá no céu! Uau!",
+      "background": "plano_lua",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 3.0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.05,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1050,
+            "y": 930,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "capacete": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "dance",
+              "style": "tchau",
+              "dur": 2.9
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1550,
+            "y": 930,
+            "turn": -0.1,
+            "expr": "happy",
+            "z": 3,
+            "capacete": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "dance",
+              "style": "tchau",
+              "dur": 2.9
+            }
+          ]
+        }
+      },
+      "props": {
+        "terra": {
+          "start": {
+            "x": 1300,
+            "y": 560,
+            "z": 1,
+            "depth": 0.85
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "gira": 0.0
+              }
+            },
+            {
+              "t": 3.0,
+              "pose": {
+                "gira": 0.4
+              }
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.6,
+          "text": "OI, MAMÃE!",
+          "dur": 1.8,
+          "color": "rosa",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.2,
+          "to": 2.99
+        },
+        {
+          "who": "luisinho",
+          "from": 0.2,
+          "to": 2.99
+        }
+      ]
+    },
+    {
+      "id": "s25_intervalo",
+      "title": "dança na lua, bem levinho",
+      "duration": 7.0,
+      "description": "",
+      "background": "plano_lua",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 7.0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1050,
+            "y": 930,
+            "turn": 0.1,
+            "expr": "happy",
+            "z": 3,
+            "capacete": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "asinhas",
+              "dur": 7.0
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1550,
+            "y": 930,
+            "turn": -0.1,
+            "expr": "happy",
+            "z": 3,
+            "capacete": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "asinhas",
+              "dur": 7.0
+            }
+          ]
+        }
+      },
+      "props": {
+        "terra": {
+          "start": {
+            "x": 2100,
+            "y": 520,
+            "z": 1,
+            "depth": 0.6
+          },
+          "exposure": 1
+        },
+        "fog": {
+          "start": {
+            "x": 400,
+            "y": 930,
+            "z": 2,
+            "fogo": 0.0,
+            "depth": 0.8
+          },
+          "exposure": 1
+        }
+      },
+      "fx": [
+        "estrelas"
+      ]
+    },
+    {
+      "id": "s26_intervalo",
+      "title": "dança no espaço",
+      "duration": 5.8667,
+      "description": "",
+      "background": "danca_raios_azul",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.0
+          },
+          {
+            "t": 5.867,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 640,
+            "y": 1010,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3,
+            "capacete": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "festa",
+              "dur": 5.867
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1280,
+            "y": 1010,
+            "turn": -0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3,
+            "capacete": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "festa",
+              "dur": 5.867
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ]
+    },
+    {
+      "id": "s27_refrao",
+      "title": "Três, dois, um… Vruuum!",
+      "duration": 5.4333,
+      "description": "Três, dois, um… Vruuum! / Foguete pra lua! Vruuum! / Foguete pra lua! Vruuum!",
+      "background": "plano_lua",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 5.433,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.05,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {},
+      "props": {
+        "fog": {
+          "start": {
+            "x": 1300,
+            "y": 930,
+            "z": 2,
+            "fogo": 1.0,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "chama": 0.0,
+                "treme": 1.0
+              }
+            },
+            {
+              "t": 5.0,
+              "pose": {
+                "chama": 14.0
+              },
+              "ease": "linear"
+            },
+            {
+              "t": 0.0,
+              "pose": {
+                "y": 930
+              }
+            },
+            {
+              "t": 3.6,
+              "pose": {
+                "y": -500
+              },
+              "ease": "in"
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "TRÊS, DOIS, UM…",
+          "dur": 1.6,
+          "color": "amarelo",
+          "y": 170
+        },
+        {
+          "t": 2.4,
+          "text": "DE VOLTA PRA CASA!",
+          "dur": 1.8,
+          "color": "azul",
+          "y": 170
+        }
+      ],
+      "transition_in": {
+        "type": "deslizar_dir",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s28_refrao",
+      "title": "Cinto apertado,",
+      "duration": 4.3667,
+      "description": "Cinto apertado, / Capacete na cabeça! / Foguete pra lua! Vruuum!",
+      "background": "plano_espaco",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 4.367,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.05,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1000,
+            "y": 930,
+            "turn": 0.1,
+            "expr": "happy",
+            "z": 3,
+            "capacete": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "asinhas",
+              "dur": 4.367
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1600,
+            "y": 930,
+            "turn": -0.1,
+            "expr": "happy",
+            "z": 3,
+            "capacete": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "asinhas",
+              "dur": 4.367
+            }
+          ]
+        }
+      },
+      "props": {
+        "cometa": {
+          "start": {
+            "x": 1300,
+            "y": 700,
+            "z": 1,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "x": 200
+              }
+            },
+            {
+              "t": 3.0,
+              "pose": {
+                "x": 2400
+              },
+              "ease": "linear"
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "PLIM!",
+          "dur": 1.8,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 2.7
+        },
+        {
+          "who": "laurinha",
+          "from": 3.1,
+          "to": 4.3
+        },
+        {
+          "who": "luisinho",
+          "from": 0.0,
+          "to": 2.7
+        },
+        {
+          "who": "luisinho",
+          "from": 3.1,
+          "to": 4.3
+        }
+      ]
+    },
+    {
+      "id": "s29_refrao",
+      "title": "Passa a estrela, Plim!",
+      "duration": 4.7333,
+      "description": "Passa a estrela, Plim! / Passa o cometa! / E pousa devagar! Tum!",
+      "background": "plano_jardim",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 4.733,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.05,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {},
+      "props": {
+        "fog": {
+          "start": {
+            "x": 1300,
+            "y": 930,
+            "z": 2,
+            "fogo": 0.6,
+            "depth": 0.9
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "y": 200,
+                "chama": 0.0
+              }
+            },
+            {
+              "t": 2.6,
+              "pose": {
+                "y": 930,
+                "chama": 6.0
+              },
+              "ease": "out"
+            }
+          ]
+        },
+        "lua": {
+          "start": {
+            "x": 1900,
+            "y": 640,
+            "z": 1,
+            "brilho": 0.6,
+            "depth": 0.5
+          },
+          "exposure": 1
+        }
+      },
+      "escurece": [
+        0.35,
+        0.2
+      ],
+      "callouts": [
+        {
+          "t": 1.5,
+          "text": "TUM!",
+          "dur": 1.8,
+          "color": "laranja",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s30_final",
+      "title": "Gostou da viagem? Gostei!",
+      "duration": 2.9333,
+      "description": "Gostou da viagem? Gostei!",
+      "background": "danca_raios_azul",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 630,
+            "zoom": 1.75
+          },
+          {
+            "t": 2.933,
+            "x": 960,
+            "y": 630,
+            "zoom": 1.81,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3,
+            "capacete": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "apontar_camera",
+              "dur": 2.833
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.3,
+          "text": "GOSTOU?",
+          "dur": 1.8,
+          "color": "rosa",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.3,
+          "to": 2.56
+        }
+      ],
+      "transition_in": {
+        "type": "deslizar_dir",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s31_final",
+      "title": "Dá um joinha! Joinha!",
+      "duration": 1.1,
+      "description": "Dá um joinha! Joinha!",
+      "background": "danca_bolinhas_amarelo",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.0
+          },
+          {
+            "t": 1.1,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 680,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.2,
+              "do": "bacana",
+              "dur": 0.9
+            }
+          ]
+        }
+      },
+      "props": {
+        "joinha": {
+          "start": {
+            "x": 1380,
+            "y": 900,
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "escala": 0.0
+              }
+            },
+            {
+              "t": 0.4,
+              "pose": {
+                "escala": 1.0
+              },
+              "ease": "back"
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "callouts": [
+        {
+          "t": 0.4,
+          "text": "DÁ UM JOINHA!",
+          "dur": 0.7,
+          "color": "azul",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "luisinho",
+          "from": 0.107,
+          "to": 1.09
+        }
+      ]
+    },
+    {
+      "id": "s32_final",
+      "title": "Chama o papai e a mamãe",
+      "duration": 3.6667,
+      "description": "Chama o papai e a mamãe",
+      "background": "plano_casa_frente",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540,
+            "zoom": 1.1
+          },
+          {
+            "t": 3.667,
+            "x": 1300,
+            "y": 540,
+            "zoom": 1.1500000000000001,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "mamae": {
+          "start": {
+            "x": 1100,
+            "y": 930,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.2,
+              "do": "wave",
+              "dur": 1.4
+            }
+          ]
+        },
+        "laurinha": {
+          "start": {
+            "x": 1450,
+            "y": 930,
+            "turn": -0.3,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "point",
+              "dur": 3.567
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.3,
+          "text": "CHAMA O PAPAI E A MAMÃE!",
+          "dur": 1.8,
+          "color": "verde",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.127,
+          "to": 3.657
+        }
+      ]
+    },
+    {
+      "id": "s33_final",
+      "title": "Pra se inscrever no canal! Zum, zum!",
+      "duration": 2.1667,
+      "description": "Pra se inscrever no canal! Zum, zum!",
+      "background": "danca_raios_vermelho",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.0
+          },
+          {
+            "t": 2.167,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 600,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.2,
+              "do": "point",
+              "dur": 1.967
+            }
+          ]
+        }
+      },
+      "props": {
+        "botao": {
+          "start": {
+            "x": 1260,
+            "y": 760,
+            "z": 3,
+            "depth": 1.2
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "escala": 0.0,
+                "aperta": 0.0
+              }
+            },
+            {
+              "t": 0.4,
+              "pose": {
+                "escala": 1.0
+              },
+              "ease": "back"
+            },
+            {
+              "t": 1.6,
+              "pose": {
+                "aperta": 1.0
+              },
+              "ease": "out"
+            },
+            {
+              "t": 1.9,
+              "pose": {
+                "aperta": 0.0
+              },
+              "ease": "in"
+            }
+          ]
+        }
+      },
+      "fx": [
+        "coracoes"
+      ],
+      "callouts": [
+        {
+          "t": 0.5,
+          "text": "INSCREVA-SE!",
+          "dur": 1.667,
+          "color": "vermelho",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.04,
+          "to": 2.157
+        }
+      ]
+    },
+    {
+      "id": "s34_final",
+      "title": "Foguete pra lua! Tchau! Zum!",
+      "duration": 7.6333,
+      "description": "Foguete pra lua! Tchau! Zum!",
+      "background": "plano_jardim",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 7.633,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.05,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1050,
+            "y": 930,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "tchau",
+              "dur": 3.2
+            },
+            {
+              "t": 3.5,
+              "do": "fly",
+              "dur": 1.4,
+              "to_x": 2400,
+              "to_y": 300
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1450,
+            "y": 930,
+            "turn": -0.1,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "tchau",
+              "dur": 3.2
+            },
+            {
+              "t": 3.6,
+              "do": "fly",
+              "dur": 1.4,
+              "to_x": 2600,
+              "to_y": 350
+            }
+          ]
+        }
+      },
+      "props": {
+        "lua": {
+          "start": {
+            "x": 1900,
+            "y": 640,
+            "z": 1,
+            "depth": 0.55
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.6,
+                "boca": 0.0
+              }
+            },
+            {
+              "t": 1.0,
+              "pose": {
+                "boca": 0.6
+              }
+            },
+            {
+              "t": 1.8,
+              "pose": {
+                "boca": 0.0
+              }
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "escurece": [
+        0.3,
+        0.3
+      ],
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "TCHAU!",
+          "dur": 1.8,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.233,
+          "to": 3.973
+        },
+        {
+          "who": "luisinho",
+          "from": 0.233,
+          "to": 3.973
+        }
+      ],
+      "transition_in": {
+        "type": "circulo",
+        "dur": 0.4
+      },
+      "transition_out": "fade"
+    }
+  ]
+}

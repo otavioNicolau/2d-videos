@@ -404,9 +404,38 @@ def sala(rng) -> tuple[skia.Surface, int]:
     return s, W_INT
 
 
+def espaco(rng) -> tuple[skia.Surface, int]:
+    """Espaço: azul-escuro com estrelinhas e planetinhas coloridos (sem chão)."""
+    w = W_INT
+    s, c = _surf(w, H, 1.5)
+    F = Flat(c)
+    c.drawRect(skia.Rect(0, 0, w, H), skia.Paint(Color4f=skia.Color4f(*_rgba("#1B2A6B"))))
+    for _ in range(140):
+        x, y, r = rng.uniform(0, w), rng.uniform(0, H), rng.uniform(2, 6)
+        c.drawCircle(x, y, r, skia.Paint(AntiAlias=True, Color4f=skia.Color4f(*_rgba("#FFFFFF", 0.9))))
+    for x, y, rr, col in ((300, 220, 70, "#FF8AC6"), (2250, 300, 90, "#FFB04D"), (1500, 900, 50, "#7FD3A0")):
+        F.oval(x, y, rr, rr, col)
+        F.oval(x, y, rr * 1.6, rr * 0.35, "#FFE680", a=-0.3) if col == "#FFB04D" else None
+    return s, w
+
+
+def lua_chao(rng) -> tuple[skia.Surface, int]:
+    """Chão da lua (cinza claro com crateras) e céu escuro estrelado; a Terra fica como prop."""
+    w = W_INT
+    s, c = _surf(w, H, 1.5)
+    F = Flat(c)
+    c.drawRect(skia.Rect(0, 0, w, H), skia.Paint(Color4f=skia.Color4f(*_rgba("#1B2A6B"))))
+    for _ in range(90):
+        c.drawCircle(rng.uniform(0, w), rng.uniform(0, FLOOR_Y), rng.uniform(2, 5), skia.Paint(AntiAlias=True, Color4f=skia.Color4f(*_rgba("#FFFFFF", 0.9))))
+    F.shape([(-20, FLOOR_Y - 40), (w * 0.3, FLOOR_Y - 90), (w * 0.6, FLOOR_Y - 50), (w + 20, FLOOR_Y - 100), (w + 20, H + 20), (-20, H + 20)], "#D9D6C4")
+    for x, y, rr in ((300, 900, 90), (900, 1000, 60), (1500, 880, 110), (2200, 980, 70), (2500, 860, 50)):
+        F.oval(x, y, rr, rr * 0.3, "#BDB9A4")
+    return s, w
+
+
 SCENES = {"plano_banheiro": banheiro, "plano_quarto_rosa": lambda rng: quarto("rosa", rng), "plano_quarto_azul": lambda rng: quarto("azul", rng),
           "plano_cozinha": cozinha, "plano_casa_frente": casa_frente, "plano_escola": escola, "plano_ceu": ceu,
-          "plano_jardim": jardim, "plano_lagoa": lagoa, "plano_sala": sala}
+          "plano_jardim": jardim, "plano_lagoa": lagoa, "plano_sala": sala, "plano_espaco": espaco, "plano_lua": lua_chao}
 
 
 def build(bg_id: str, out_dir: Path, scale: float = 1.5, seed: int = 11) -> dict:

@@ -1435,3 +1435,84 @@ class Plantinha(_Prop):
 
 
 PROPS.update({"nuvem": Nuvem, "poca": Poca, "plantinha": Plantinha})
+
+
+# ───────────────────────── 11 Foguete pra Lua ─────────────────────────
+
+class Foguete(_Prop):
+    """Foguete de brinquedo (cabem os dois na janela): `fogo` 0→1 chama embaixo (fase em `chama`), `treme` 0→1."""
+
+    def __init__(self):
+        super().__init__("foguete", "Foguete", (700, 1000), (350, 900), 440, {"fogo": 0.0, "chama": 0.0, "treme": 0.0})
+
+    def paint(self, k, P):
+        dx = math.sin(P["chama"] * 40) * 6 * P["treme"]
+        k.c.save()
+        k.c.translate(dx, 0)
+        f = max(0.0, min(1.0, P["fogo"]))
+        if f > 0.05:
+            h = 160 + 60 * math.sin(P["chama"] * 2 * math.pi * 3)
+            shape(k, [(-70, -110), (70, -110), (0, -110 + h * f)], "#FF8A1F", line="#E0601A")
+            shape(k, [(-40, -110), (40, -110), (0, -110 + h * 0.6 * f)], "#FFD21F", line="#E0A800")
+        for sx in (-1, 1):                                          # aletas
+            shape(k, [(sx * 95, -330), (sx * 190, -150), (sx * 175, -100), (sx * 95, -170)], "#E9545D", line="#B03A42")
+        shape(k, [(-100, -110), (100, -110), (110, -500), (0, -820), (-110, -500)], "#F4F7FB", line="#9FB3C8")
+        shape(k, [(-74, -640), (74, -640), (0, -820)], "#E9545D", line="#B03A42")
+        shape(k, ellipse_pts(0, -450, 78, 78, 0, 30), "#FFD21F", line="#C99A1A")
+        shape(k, ellipse_pts(0, -450, 58, 58, 0, 30), "#9CD8FF", line="#4A9BE0")
+        ln(k, [(-30, -480), (-10, -500)], "#FFFFFF", w=LINE * 1.4)
+        box(k, -100, -180, 100, -150, "#2F86F0", r=6)
+        _estrela(k, 0, -290, 30, "#FFD21F")
+        k.c.restore()
+
+
+class LuaCara(_Prop):
+    """Lua cheia com crateras e carinha; `brilho` 0→1 raios de luz (a luz do sol refletida); `boca`/`lid`."""
+
+    def __init__(self):
+        super().__init__("lua", "Lua", (900, 900), (450, 850), 400, {"brilho": 0.0, "boca": 0.0, "lid": 0.0})
+
+    def paint(self, k, P):
+        cy = -420
+        b = P["brilho"]
+        if b > 0.05:
+            for j in range(12):
+                a = j * math.pi / 6
+                ln(k, [(math.cos(a) * 320, cy + math.sin(a) * 320), (math.cos(a) * (320 + 80 * b), cy + math.sin(a) * (320 + 80 * b))],
+                   "#FFF3B0", w=LINE * 2)
+        shape(k, ellipse_pts(0, cy, 300, 300, 0, 40), "#F2EED8", line="#B8B39A")
+        for x, y, r in ((-150, -120, 50), (120, -170, 36), (-60, 150, 40), (170, 90, 30), (-200, 60, 24)):
+            shape(k, ellipse_pts(x, cy + y, r, r * 0.85, 0, 18), "#DDD7B8", line="#B8B39A")
+        _carinha(k, 0, cy + 10, P, "#6E6A55", "#FFB0B8", esc=1.6)
+
+
+class Terra(_Prop):
+    """Planeta Terra simpático (azul com continentes verdes) e carinha; `gira` 0→1."""
+
+    def __init__(self):
+        super().__init__("terra", "Terra", (700, 700), (350, 650), 300, {"gira": 0.0, "boca": 0.0, "lid": 0.0})
+
+    def paint(self, k, P):
+        cy = -320
+        shape(k, ellipse_pts(0, cy, 240, 240, 0, 40), "#2F86F0", line="#1F5FB8")
+        g = P["gira"] * 300
+        for x, y, rx, ry in ((-120, -80, 90, 60), (90, 40, 80, 100), (-40, 140, 70, 40)):
+            xx = ((x + g + 240) % 480) - 240
+            if abs(xx) < 200:
+                shape(k, ellipse_pts(xx, cy + y, rx * (1 - abs(xx) / 400), ry, 0, 20), "#2DBE5A", line="#1E8A3E")
+        _carinha(k, 0, cy + 10, P, "#123A6E", "#FF9AB0", esc=1.2)
+
+
+class Cometa(_Prop):
+    """Cometa com cauda brilhante (de cima à esquerda para baixo à direita)."""
+
+    def __init__(self):
+        super().__init__("cometa", "Cometa", (1200, 600), (600, 500), 260, {"brilho": 1.0})
+
+    def paint(self, k, P):
+        for j, (w, c) in enumerate(((60, "#FFE680"), (40, "#FFF3B0"), (20, "#FFFFFF"))):
+            shape(k, [(200, -250 - w), (-450, -420), (200, -250 + w)], c, smooth=True)
+        _estrela(k, 210, -250, 70, "#FFD21F")
+
+
+PROPS.update({"foguete": Foguete, "lua": LuaCara, "terra": Terra, "cometa": Cometa})

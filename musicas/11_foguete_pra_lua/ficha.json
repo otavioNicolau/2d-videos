@@ -55,12 +55,106 @@
  "alternativas": [
   "pop_infantil"
  ],
- "status": "letra_revisada",
- "versoes": [],
+ "status": "aprovada",
+ "versoes": [
+  "v1"
+ ],
  "youtube": {
   "resumo": "FOGUETE PRA LUA! 🚀🌙 A asinha não alcança a lua… então a Laurinha e o Luisinho vão de foguete! Cinto apertado, capacete na cabeça e vruuum! Sabia que a lua não tem luz? Ela brilha com a luz do sol, igual um espelhinho. Na lua a gente pula bem levinho… boing!",
   "resumo_short": "FOGUETE PRA LUA! 🚀 Dez, nove, oito… vruuum com a Laurinha e o Luisinho!",
-  "curiosidade": "A lua não tem luz própria: ela brilha com a luz do sol, igual um espelho"
+  "curiosidade": "A lua não tem luz própria: ela brilha com a luz do sol, igual um espelho",
+  "miniatura": "FOGUETE\\nPRA LUA!",
+  "miniatura_cena": {
+   "fundo": "raios",
+   "lado": "direita",
+   "cores": [
+    [
+     27,
+     42,
+     107
+    ],
+    [
+     142,
+     68,
+     239
+    ],
+    [
+     47,
+     134,
+     240
+    ],
+    [
+     255,
+     138,
+     31
+    ],
+    [
+     24,
+     181,
+     176
+    ],
+    [
+     230,
+     60,
+     120
+    ]
+   ],
+   "heroi": {
+    "id": "luisinho",
+    "pose": {
+     "turn": 0.2,
+     "mouth": "D",
+     "capacete": 1,
+     "hand_n_x": -135,
+     "hand_n_y": -135,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3
+    }
+   },
+   "par": {
+    "id": "laurinha",
+    "pose": {
+     "turn": -0.2,
+     "mouth": "D",
+     "capacete": 1,
+     "hand_n_x": -135,
+     "hand_n_y": -135,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3
+    }
+   },
+   "objetos": [
+    {
+     "id": "foguete",
+     "pose": {
+      "fogo": 1,
+      "chama": 0.2
+     },
+     "tam": 420,
+     "x": 780,
+     "base": 700,
+     "giro": 20
+    },
+    {
+     "id": "lua",
+     "pose": {
+      "brilho": 1
+     },
+     "tam": 240,
+     "x": 160,
+     "base": 290
+    }
+   ]
+  }
  },
- "revisao": "auditoria 17/11/2026 (ajuste pequeno)"
+ "revisao": "auditoria 17/11/2026 (ajuste pequeno)",
+ "escolhida": "v1"
 }

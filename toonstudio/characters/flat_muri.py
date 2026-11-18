@@ -394,6 +394,11 @@ class FlatMuri(Character):
                 q = rot((C[0] + dx * f, C[1] + dy), ht, C)
                 pts = [(q[0], q[1] - 18 * sc), (q[0] + 10 * sc, q[1]), (q[0], q[1] + 10 * sc), (q[0] - 10 * sc, q[1])]
                 self._shape(k, pts, "#9CCBFA", line="#5A8FD6")
+        if P.get("capacete", 0) > 0.5:        # capacete de astronauta: bolha de vidro + aro (Foguete pra Lua)
+            k.shape(ellipse_pts(C[0], C[1] + 10, r * 1.28, r * 1.24, 0, 36), fill=_rgba("#CFE8FA", 0.28),
+                    brush=Brush(LINE * 1.2, 0.0, _rgba("#9FB3C8"), 0.0), line=LINE * 1.2)
+            self._line(k, [(C[0] - r * 0.7, C[1] - r * 0.75), (C[0] - r * 0.35, C[1] - r * 0.98)], "#FFFFFF", w=LINE * 1.6)
+            # aro do capacete no pescoço: só a borda de trás (não cobre a boca nem os braços)
         if P.get("bigode", 0) > 0.5:          # bigodinho de leite
             m = rot((nx_, C[1] + 40), ht, C)
             pts = [(m[0] - 34, m[1] + 4), (m[0] - 20, m[1] - 8), (m[0], m[1] - 4), (m[0] + 20, m[1] - 8), (m[0] + 34, m[1] + 4),
