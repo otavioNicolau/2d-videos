@@ -14,7 +14,7 @@
   "brincar de roda",
   "blusa de frio"
  ],
- "curiosidade": "a lã do carneirinho vira blusa de frio, e cortar a lã não dói: é igual cortar o cabelo",
+ "curiosidade": "a lã do carneirinho vira blusinha quentinha de frio",
  "ritmo": "batucada",
  "bpm": 130,
  "estrutura": "D",
@@ -23,25 +23,29 @@
   "verso 1": "laurinha",
   "refrão": "coro (cantiga tradicional, comandos)",
   "verso 2": "luisinho",
-  "ponte": "comandos rápidos e estátua",
+  "ponte": "comandos rápidos e estátua (a música para)",
   "final": "todo mundo"
  },
  "cenas": [
   {
+   "parte": "intro",
+   "ideia": "campo visto de pertinho: um carneirinho fofo como nuvem pula na tela no \"Méé!\""
+  },
+  {
    "parte": "verso 1",
-   "ideia": "campo verde: carneirinho fofo como nuvem pulando; a turma faz uma roda em volta dele"
+   "ideia": "o carneirinho chama a turma; Laurinha e Luisinho topam fazer tudo o que ele mandar"
   },
   {
    "parte": "refrão",
-   "ideia": "olha pro céu (todos olham para cima, nuvens-carneiro), olha pro chão, e cada comando é executado: ajoelha, levanta, senta, pula, dança"
+   "ideia": "olhai pro céu (todos olham para cima: nuvens em forma de carneiro), olhai pro chão, e cada comando é executado: ajoelha, levanta, senta, pula, dança"
   },
   {
    "parte": "verso 2",
-   "ideia": "a lã do carneirinho sendo aparada como corte de cabelo (ele ri, não dói) e vira uma blusinha que a Laurinha veste"
+   "ideia": "vento frio (Brrr!): a lã do carneirinho vira uma blusinha quentinha que a Laurinha veste (\"Hum!\")"
   },
   {
    "parte": "ponte",
-   "ideia": "gira, palma, 'méé' e todo mundo congela em estátua"
+   "ideia": "gira, palma, 'méé' e a música para: todo mundo congela em estátua"
   },
   {
    "parte": "final",
@@ -64,8 +68,9 @@
   "observacao": "estilo Batucada (percussão brasileira) (diferente das versões conhecidas)"
  },
  "youtube": {
-  "resumo": "CARNEIRINHO, CARNEIRÃO! 🐑 A brincadeira de roda clássica com a Laurinha, o Luisinho e a turma: olha pro céu, olha pro chão… manda o rei para todos se ajoelharem, levantarem, sentarem e pularem! E você sabia que a lã do carneirinho vira blusinha? Cortar a lã não dói nadinha!",
+  "resumo": "CARNEIRINHO, CARNEIRÃO! 🐑 A brincadeira de roda clássica com a Laurinha, o Luisinho e a turma: olha pro céu, olha pro chão… manda o rei para todos se ajoelharem, levantarem, sentarem, pularem e dançarem! Brrr, que friozinho: a lã do carneirinho vira blusinha quentinha. Gira, bate palma, faz méé… estátua!",
   "resumo_short": "CARNEIRINHO, CARNEIRÃO! 🐑 Olha pro céu, olha pro chão e brinca com a Laurinha e o Luisinho!",
-  "curiosidade": "A lã do carneirinho vira blusa de frio, e cortar a lã não dói: é igual cortar o cabelo"
- }
+  "curiosidade": "A lã do carneirinho vira blusinha quentinha de frio"
+ },
+ "revisao": "revisão de conformidade 18/11/2026 (abertura com o gancho, verso 2 sem aula, estátua com parada)"
 }
