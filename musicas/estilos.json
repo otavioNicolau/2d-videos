@@ -42,7 +42,7 @@
   "nota_batida": "18/11/2026: na referência cada batida soa idêntica (semelhança 0,95–0,98: ritmo pronto de teclado arranjador, um loop simples a música inteira); nas nossas 0,66–0,87 (bateria 'tocada', com viradas e percussão variando). Usuário: 'batidas como se fosse bateria, bumbo, algo feito no teclado, pra dar ritmo'.",
   "abertura": "Brazilian arranger keyboard kids song (teclado arranjador), one simple keyboard drum loop",
   "nota_ajustes_14": "18/11/2026 (take v2 da 14): baixo fraco (5,6 % × 11 % da referência) → 'deep bouncy keyboard bass'; voz larga (0,17 × 0,01) → 'dry centered vocal' e Exclude 'vocal reverb, echo'; tirado 'repeated chorus' do Exclude (o bloco repete de propósito); Exclude sem termos repetidos.",
-  "versao": "E5",
+  "versao": "E6",
   "historico": [
    {
     "versao": "E1",
@@ -78,8 +78,19 @@
     "motivo": "placar da 14 v2: baixo 5,6 % (alvo 11), voz larga 0,17 (alvo ≤0,05), batida 0,76 (alvo ≥0,92)",
     "usado_em": "15 em diante",
     "resultado": "15: nota 4 (14/E4 foi 3); percussão e bateria de banda zeradas; baixo, loop e teclado não mexeram"
+   },
+   {
+    "versao": "E6",
+    "data": "18/11/2026",
+    "mudanca": "Persona nova 'Laurinha v2' criada da 15 v1 (som de teclado), no lugar da 'Laurinha' (criada da 01 v2, banda)",
+    "motivo": "o Style não mexeu em baixo, loop de teclado e teclado reconhecido; a Persona antiga carrega o arranjo de banda",
+    "usado_em": "músicas da Laurinha a partir da 17 (a 16 é do Luisinho: segue E5)"
    }
-  ]
+  ],
+  "versao_por_voz": {
+   "laurinha": "E6",
+   "luisinho": "E5"
+  }
  },
  "peso": {
   "forte": {

@@ -241,7 +241,7 @@ def texto_suno(p: dict) -> str:
         f"TÍTULO: {p['titulo']}",
         f"RITMO: {p['ritmo']} · {p['bpm']} BPM",
         f"PERSONA (Suno): {pers}",
-        f"ESTILO DO CANAL: {estilos()['canal'].get('versao', '?')} (musicas/PROCESSO_MELHORIA.md)",
+        f"ESTILO DO CANAL: {estilos()['canal'].get('versao_por_voz', {}).get(p['voz'], estilos()['canal'].get('versao', '?'))} (musicas/PROCESSO_MELHORIA.md)",
         "",
         f"STYLE OF MUSIC ({len(p['style'])} caracteres):",
         p["style"],
