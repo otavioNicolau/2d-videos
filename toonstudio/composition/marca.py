@@ -78,9 +78,22 @@ def final(project: str) -> Path:
         fil += (f"[{i}:v]scale=1920:1080,fps=30,format=yuv420p,setsar=1[v{i}];"
                 f"[{i}:a]aresample=48000,aformat=channel_layouts=stereo[a{i}];")
     fil += "".join(f"[v{i}][a{i}]" for i in range(len(parts))) + f"concat=n={len(parts)}:v=1:a=1[v][a]"
+    cru = out.with_name(out.stem + "_som_cru.mp4")
     subprocess.run([tool("ffmpeg"), "-y", "-loglevel", "error", *ins, "-filter_complex", fil, "-map", "[v]", "-map", "[a]",
-                    "-c:v", "libx264", "-preset", "slow", "-crf", "17", "-c:a", "aac", "-b:a", "192k",
-                    "-movflags", "+faststart", str(out)], check=True)
+                    "-c:v", "libx264", "-preset", "slow", "-crf", "17", "-c:a", "pcm_s16le",
+                    str(cru.with_suffix(".mov"))], check=True)
+    # masterização (18/11): EQ casado com a referência + −14 LUFS / −1 dBTP — o som cru do Suno é estridente no volume alto
+    from ..audio.master import masterizar
+    bruto, mestre = out.with_name(out.stem + "_audio_cru.wav"), out.with_name(out.stem + "_audio_master.wav")
+    subprocess.run([tool("ffmpeg"), "-y", "-loglevel", "error", "-i", str(cru.with_suffix(".mov")), "-vn", "-c:a", "pcm_s16le",
+                    str(bruto)], check=True)
+    rel = masterizar(bruto, mestre)
+    subprocess.run([tool("ffmpeg"), "-y", "-loglevel", "error", "-i", str(cru.with_suffix(".mov")), "-i", str(mestre),
+                    "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-c:a", "aac", "-b:a", "256k", "-movflags", "+faststart", str(out)],
+                   check=True)
+    (out_dir / "master.json").write_text(json.dumps(rel, indent=1, default=float), encoding="utf-8")
+    for p in (cru.with_suffix(".mov"), bruto, mestre):
+        p.unlink(missing_ok=True)
     return out
 
 

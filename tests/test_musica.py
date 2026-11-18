@@ -345,3 +345,13 @@ def test_catalogue_is_not_one_formula():
     est = [c.ficha(d).get("estrutura") for d in lote]
     for i in range(len(est) - 2):
         assert not (est[i] == est[i + 1] == est[i + 2]), f"estrutura {est[i]} em 3 seguidas a partir de {lote[i].name}"
+
+
+def test_master_tames_harsh_suno_highs():
+    """Masterização (18/11): faixa com agudo estridente e pouco sub recebe corte na presença/agudo e reforço no sub."""
+    from toonstudio.audio.master import FAIXAS, cadeia_eq
+    estridente = [2.0, 24.0, 43.0, 16.0, 10.0, 2.5, 1.5]
+    _, ganhos = cadeia_eq(estridente)
+    assert len(ganhos) == len(FAIXAS)
+    assert ganhos[0] > 3 and ganhos[4] < -2 and ganhos[6] < -4
+    assert all(abs(g) <= 9.0 for g in ganhos)
