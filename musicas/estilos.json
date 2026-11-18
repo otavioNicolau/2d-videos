@@ -3,7 +3,7 @@
  "nota": "Biblioteca de ritmos do canal (BIBLIA_MUSICAL.md, seção 4). Termos do Style em inglês (o Suno entende melhor). Andamento em BPM: [mínimo, máximo, padrão].",
  "canal": {
   "sempre": "major key, happy, Brazilian Portuguese, native Brazilian accent",
-  "coro": "kids choir shouts",
+  "coro": "",
   "exclude_sempre": [
    "sad",
    "explicit",
@@ -21,11 +21,21 @@
    "drum fills",
    "drum solo",
    "busy arrangement",
-   "live drum kit"
+   "live drum kit",
+   "choir",
+   "backing vocals",
+   "vocal harmonies",
+   "layered vocals",
+   "double tracked vocals",
+   "gang vocals",
+   "ad-libs",
+   "orchestral",
+   "many instruments"
   ],
   "duracao": "short song under 2 minutes 40 seconds, ends after the last chorus",
-  "producao": "lean kids keyboard production, bright piano, electric piano or synth lead, punchy electronic drum machine beat with claps, bouncy synth bass, playful cartoon sound effects (boing, toy bells, whistles), vocals clear and level with the beat, polished professional kids music production",
-  "nota_producao": "18/11/2026: análise de 18 músicas da Animadinhos (musicas/REFERENCIA_ANIMADINHOS.md): arranjo enxuto de teclado/eletrônico, voz e batida empatadas (41 × 38 %), efeitos de desenho; as nossas saíam com banda + batucada e voz a 58 %."
+  "producao": "minimal sparse kids production with lots of space: a punchy electronic beat with claps, a deep bouncy synth bass and one bright keyboard or piano melody, a few playful cartoon sound effects (boing, toy bells), single centered lead vocal, polished professional kids music production",
+  "nota_producao": "18/11/2026: análise de 18 músicas da Animadinhos (musicas/REFERENCIA_ANIMADINHOS.md): arranjo enxuto de teclado/eletrônico, voz e batida empatadas (41 × 38 %), efeitos de desenho; as nossas saíam com banda + batucada e voz a 58 %.",
+  "nota_voz": "18/11/2026: a voz da referência é UMA só e centralizada (largura 0,00–0,02); as nossas tinham coro/vozes de fundo espalhados (0,08–0,29) e muitos instrumentos — 'muita informação' (usuário). Uma voz por vez, respostas cantadas pela mesma voz."
  },
  "peso": {
   "forte": {
@@ -103,7 +113,7 @@
    "peso": "forte",
    "genero": "marchinha de carnaval, Brazilian carnival march",
    "bateria": "marching beat on drum machine, kick on every beat, claps",
-   "instrumentos": "keyboard brass, toy glockenspiel, piano",
+   "instrumentos": "keyboard brass, toy glockenspiel",
    "clima": "festive sing-along",
    "temas": [
     "carnaval",
@@ -128,8 +138,8 @@
    "peso": "forte",
    "genero": "axé music, Bahia carnival",
    "bateria": "electronic axé beat, timbau samples, loud claps",
-   "instrumentos": "bright keyboard riffs, synth brass stabs, piano",
-   "clima": "euphoric party, call and response",
+   "instrumentos": "bright keyboard riffs, synth brass stabs",
+   "clima": "euphoric party",
    "temas": [
     "dança",
     "comandos",
@@ -154,8 +164,8 @@
    "peso": "forte",
    "genero": "pagodão baiano, Bahia party percussion",
    "bateria": "pagodão beat on drum machine, timbau samples, loud claps",
-   "instrumentos": "keyboard riffs, synth bass, cavaquinho",
-   "clima": "euphoric, call and response",
+   "instrumentos": "keyboard riffs, synth bass",
+   "clima": "euphoric",
    "temas": [
     "amizade",
     "roda",
@@ -207,7 +217,7 @@
    "peso": "media",
    "genero": "forró pé de serra, traditional northeastern Brazil",
    "bateria": "zabumba and triangle on a light electronic beat",
-   "instrumentos": "keyboard (teclado) with accordion sound, piano, bass",
+   "instrumentos": "keyboard (teclado) with accordion sound, piano",
    "clima": "joyful country dance",
    "temas": [
     "são joão",
@@ -285,7 +295,7 @@
    "peso": "media",
    "genero": "samba, Brazilian kids samba, roda de samba",
    "bateria": "samba beat with pandeiro and tamborim samples, claps, electronic kick",
-   "instrumentos": "cavaquinho, bright piano, synth bass",
+   "instrumentos": "cavaquinho, bright piano",
    "clima": "warm and joyful",
    "temas": [
     "amizade",
@@ -311,7 +321,7 @@
    "peso": "forte",
    "genero": "samba-enredo, escola de samba carnival parade",
    "bateria": "electronic samba beat, surdos marking the beat, caixa and tamborim samples, whistle",
-   "instrumentos": "keyboard, synth brass, cavaquinho",
+   "instrumentos": "keyboard, synth brass",
    "clima": "grand parade",
    "temas": [
     "desfile",
@@ -338,7 +348,7 @@
    "genero": "Brazilian batucada, drum line party",
    "bateria": "batucada samples (surdo, repique, agogô) on an electronic kick, whistle",
    "instrumentos": "keyboard stabs, kids chant",
-   "clima": "tribal fun, call and response",
+   "clima": "tribal fun",
    "temas": [
     "dança",
     "comandos",
@@ -364,7 +374,7 @@
    "peso": "marcada",
    "genero": "ciranda pernambucana, circle dance, swaying",
    "bateria": "bombo marking every beat, ganzá, light electronic beat",
-   "instrumentos": "piano, keyboard flute, acoustic guitar",
+   "instrumentos": "piano, keyboard flute",
    "clima": "gentle and joyful, everyone holding hands",
    "temas": [
     "roda",
@@ -390,7 +400,7 @@
    "peso": "media",
    "genero": "upbeat kids pop, bright and catchy",
    "bateria": "drum machine, handclaps, snappy snare",
-   "instrumentos": "bright piano, synth lead, glockenspiel, toy sounds, synth bass",
+   "instrumentos": "bright piano, synth lead",
    "clima": "sunny and bouncy",
    "temas": [
     "rotina",
@@ -417,7 +427,7 @@
    "peso": "marcada",
    "genero": "kids reggae, sunny and relaxed",
    "bateria": "one drop on drum machine, rimshot, shaker",
-   "instrumentos": "organ bubble, piano skank, synth bass",
+   "instrumentos": "organ bubble, piano skank",
    "clima": "happy and laid back",
    "temas": [
     "chuva",
@@ -507,7 +517,7 @@
    "peso": "media",
    "genero": "kids electronic dance pop, playful synthpop",
    "bateria": "four-on-the-floor kick, electronic claps, bright hi-hats",
-   "instrumentos": "sparkly synth leads, arpeggios, space sound effects, bass",
+   "instrumentos": "sparkly synth leads, arpeggios",
    "clima": "futuristic and fun",
    "temas": [
     "espaço",
@@ -537,7 +547,7 @@
    "peso": "media",
    "genero": "kids disco funk, groovy and shiny",
    "bateria": "four-on-the-floor drum machine, handclaps, open hi-hat on offbeats",
-   "instrumentos": "synth strings, electric piano, synth bass",
+   "instrumentos": "synth strings, electric piano",
    "clima": "party dress-up fun",
    "temas": [
     "fantasia",
@@ -563,7 +573,7 @@
    "peso": "media",
    "genero": "kids sertanejo country, Brazilian farm song",
    "bateria": "country stomp and clap on a light beat",
-   "instrumentos": "acoustic guitar, viola caipira, keyboard, bass",
+   "instrumentos": "acoustic guitar, viola caipira",
    "clima": "cheerful farm party",
    "temas": [
     "fazenda",
@@ -589,7 +599,7 @@
    "peso": "media",
    "genero": "kids reggaeton, Latin dance pop, Brazilian suingueira",
    "bateria": "dembow beat on drum machine, claps, shaker",
-   "instrumentos": "bright piano, synth lead, marimba, synth bass",
+   "instrumentos": "bright piano, synth lead",
    "clima": "bouncy, playful, swaying dance",
    "temas": [
     "dança",

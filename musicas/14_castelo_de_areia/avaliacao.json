@@ -1,0 +1,58 @@
+{
+ "schema": "avaliacao-1.0",
+ "versoes": {
+  "v1": {
+   "arquivo": "v1.wav",
+   "duracao": 176.4,
+   "bpm": 143.6,
+   "bpm_nota": "",
+   "tom": "Fá maior",
+   "voz_inicio": 2.5,
+   "refrao_inicio": 1.9,
+   "cantado": 73,
+   "intervalos": [
+    [
+     8.8,
+     8.8
+    ],
+    [
+     55.0,
+     3.5
+    ],
+    [
+     100.9,
+     13.1
+    ],
+    [
+     149.4,
+     3.2
+    ]
+   ],
+   "fim_depois_da_voz": 6.1,
+   "final": "esmaecendo",
+   "silencio_final": 0.0,
+   "acerto": 73,
+   "nao_reconhecidas": [
+    "constroi",
+    "ferias",
+    "luisinho",
+    "belisca",
+    "chama"
+   ],
+   "pontos_a_conferir": [
+    "só 73% da letra reconhecida — ouvir a pronúncia"
+   ]
+  }
+ },
+ "ouvido": {
+  "v1": {
+   "1 começo chama atenção": null,
+   "5 melodia combina com a letra": null,
+   "6 dá vontade de dançar": null,
+   "7 pronúncia natural": null,
+   "8 tem a cara do canal": null,
+   "9 nenhum trecho cansativo": null
+  }
+ },
+ "escolhida": "v1"
+}

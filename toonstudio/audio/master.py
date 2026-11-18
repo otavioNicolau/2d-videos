@@ -103,6 +103,12 @@ def rebalancear(entrada: Path, saida: Path) -> dict:
         partes = {k: sf.read(str(sd / f"{k}.wav"), dtype="float32") for k in PESO_ALVO}
         sr = partes["vocals"][1]
         x = {k: v[0] for k, v in partes.items()}
+    # voz no centro (18/11): na referência a voz é uma só, seca e centralizada (largura lado/meio 0,00–0,02); o Suno espalha
+    # coro e vozes de fundo para os lados (0,08–0,29) — a "segunda voz" que o usuário ouvia. Lado da voz cai 90 %.
+    v = x["vocals"]
+    if v.ndim == 2:
+        meio, lado = (v[:, 0] + v[:, 1]) / 2, (v[:, 0] - v[:, 1]) / 2 * 0.1
+        x["vocals"] = np.stack([meio + lado, meio - lado], axis=1)
     en = {k: float((v ** 2).mean()) for k, v in x.items()}
     tot = sum(en.values()) or 1.0
     antes = {k: round(100 * v / tot, 1) for k, v in en.items()}

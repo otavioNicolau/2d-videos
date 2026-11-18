@@ -118,8 +118,24 @@ def expandir(letra: str, peso: str, E: dict, V: dict) -> str:
                 raise StudioError(f"bordão desconhecido: {m.group(1)}")
             out.append(f"[Shout - {m.group(1).capitalize()}] {v['bordao']}")
             continue
-        out.append(raw.rstrip())
+        out.append(voz_unica(raw.rstrip()))
     return "\n".join(out).strip() + "\n"
+
+
+def voz_unica(linha: str) -> str:
+    """18/11/2026 — referência = UMA voz, centralizada, sem coro. No Suno, texto entre parênteses vira voz de fundo e
+    "kids choir" vira coro: a resposta passa a ser cantada pela mesma voz ("Derrubou! (Ha ha!)" → "Derrubou! Ha ha!")
+    e as marcações perdem o coro ("[Chorus - kids choir, louder]" → "[Chorus - louder]")."""
+    s = linha.strip()
+    if s.startswith("["):
+        m = re.match(r"\[([^\]]*)\](.*)$", s)
+        tag, resto = m.group(1), m.group(2)
+        tag = re.sub(r",?\s*kids choir answers", "", tag, flags=re.I)
+        tag = re.sub(r"\s*-\s*kids choir\s*,\s*", " - ", tag, flags=re.I)
+        tag = re.sub(r"\s*-\s*kids choir\s*$", "", tag, flags=re.I)
+        tag = re.sub(r"\bkids\s+(follow|answer)\w*[^,\]]*", "", tag, flags=re.I).rstrip(" -,")
+        return f"[{tag}] {voz_unica(resto.strip())}" if resto.strip() else f"[{tag}]"
+    return re.sub(r"\s*\(([^)]*)\)", lambda m: " " + m.group(1), linha).strip() if "(" in linha else linha
 
 
 # ───────────────────────── prompt do Suno ─────────────────────────
@@ -148,7 +164,7 @@ def style(f: dict, ritmo: str | None = None, bpm: int | None = None, E: dict | N
     bpm = bpm or (f["bpm"] if rid == f["ritmo"] else r["bpm"][2])
     voz = V["vozes"][f.get("voz", "dueto")]["style"]
     parts = [E["canal"].get("duracao", ""), r["genero"], f"{bpm} bpm", p["style"], E["canal"].get("producao", ""), r["bateria"], r["instrumentos"], r["clima"], f.get("style_extra", ""),
-             voz, V["coro"]["style"], E["canal"]["sempre"]]
+             voz, V["coro"].get("style", ""), E["canal"]["sempre"]]
     return ", ".join(x for x in parts if x)
 
 
