@@ -41,7 +41,44 @@
   "nota_voz": "18/11/2026: a voz da referência é UMA só e centralizada (largura 0,00–0,02); as nossas tinham coro/vozes de fundo espalhados (0,08–0,29) e muitos instrumentos — 'muita informação' (usuário). Uma voz por vez, respostas cantadas pela mesma voz.",
   "nota_batida": "18/11/2026: na referência cada batida soa idêntica (semelhança 0,95–0,98: ritmo pronto de teclado arranjador, um loop simples a música inteira); nas nossas 0,66–0,87 (bateria 'tocada', com viradas e percussão variando). Usuário: 'batidas como se fosse bateria, bumbo, algo feito no teclado, pra dar ritmo'.",
   "abertura": "Brazilian arranger keyboard kids song (teclado arranjador), one simple keyboard drum loop",
-  "nota_ajustes_14": "18/11/2026 (take v2 da 14): baixo fraco (5,6 % × 11 % da referência) → 'deep bouncy keyboard bass'; voz larga (0,17 × 0,01) → 'dry centered vocal' e Exclude 'vocal reverb, echo'; tirado 'repeated chorus' do Exclude (o bloco repete de propósito); Exclude sem termos repetidos."
+  "nota_ajustes_14": "18/11/2026 (take v2 da 14): baixo fraco (5,6 % × 11 % da referência) → 'deep bouncy keyboard bass'; voz larga (0,17 × 0,01) → 'dry centered vocal' e Exclude 'vocal reverb, echo'; tirado 'repeated chorus' do Exclude (o bloco repete de propósito); Exclude sem termos repetidos.",
+  "versao": "E5",
+  "historico": [
+   {
+    "versao": "E1",
+    "data": "16/11/2026",
+    "mudanca": "banda completa, metais, viradas de bateria, coro e respostas",
+    "usado_em": "01–13"
+   },
+   {
+    "versao": "E2",
+    "data": "18/11/2026",
+    "mudanca": "produção de teclado/eletrônico, efeitos de desenho, voz empatada com a batida",
+    "motivo": "análise de 18 músicas da referência",
+    "usado_em": "14 v1"
+   },
+   {
+    "versao": "E3",
+    "data": "18/11/2026",
+    "mudanca": "uma voz só (respostas cantadas pela mesma voz, sem coro), arranjo mínimo",
+    "motivo": "usuário: 'segunda voz e monte de instrumento = muita informação'",
+    "usado_em": "—"
+   },
+   {
+    "versao": "E4",
+    "data": "18/11/2026",
+    "mudanca": "batida de teclado arranjador (loop pronto que se repete)",
+    "motivo": "ataques idênticos 0,96 na referência × 0,76 nas nossas",
+    "usado_em": "14 v2"
+   },
+   {
+    "versao": "E5",
+    "data": "18/11/2026",
+    "mudanca": "'teclado arranjador' no começo do Style, ritmo como 'groove'; baixo de teclado forte; voz seca no centro; Exclude limpo",
+    "motivo": "placar da 14 v2: baixo 5,6 % (alvo 11), voz larga 0,17 (alvo ≤0,05), batida 0,76 (alvo ≥0,92)",
+    "usado_em": "15 em diante"
+   }
+  ]
  },
  "peso": {
   "forte": {

@@ -121,6 +121,26 @@ def etapa_b(pasta: Path) -> None:
         d["som_%"] = dict(zip(["sub", "grave", "medio_grave", "medio", "presenca", "agudo", "brilho"],
                               [round(100 * acc[(f >= lo) & (f < hi)].sum() / t_, 1) for lo, hi in bands]))
         d["duracao_s"] = round(len(full) / srf, 1)
+        # largura da voz (lado/meio): referência 0,00–0,02 = uma voz seca no centro
+        vv, _ = sf.read(str(sd / "vocals.wav"), dtype="float32")
+        if vv.ndim == 2:
+            mm, ss = (vv[:, 0] + vv[:, 1]) / 2, (vv[:, 0] - vv[:, 1]) / 2
+            em = librosa.feature.rms(y=mm, hop_length=1024)[0]
+            es = librosa.feature.rms(y=ss, hop_length=1024)[0]
+            msk = em > np.percentile(em, 50)
+            d["largura_voz"] = round(float(np.median(es[msk] / (em[msk] + 1e-9))), 3)
+        # batida de teclado: o quanto cada ataque da bateria se parece com outro (referência 0,95–0,98 = loop pronto)
+        dr = stems["drums"]
+        on = librosa.onset.onset_detect(y=dr, sr=44100, units="time")
+        Sx = np.abs(librosa.stft(dr, n_fft=1024, hop_length=256))
+        fr = librosa.time_to_frames(on, sr=44100, hop_length=256)
+        fr = fr[fr < Sx.shape[1] - 2]
+        if len(fr) > 5:
+            V = np.log1p(Sx[:, fr]).T
+            V = (V - V.mean(1, keepdims=True)) / (V.std(1, keepdims=True) + 1e-9)
+            C = np.corrcoef(V)
+            np.fill_diagonal(C, -1)
+            d["batidas_identicas"] = round(float(np.median(C.max(1))), 3)
         js.write_text(json.dumps(d, ensure_ascii=False, indent=1), encoding="utf-8")
         print("B ok:", wav.stem, d["bpm"], flush=True)
 
