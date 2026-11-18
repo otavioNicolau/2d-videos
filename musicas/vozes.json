@@ -22,9 +22,16 @@
    "style": "playful boy child vocal",
    "tag": "Luisinho, boy child vocal",
    "bordao": "Zum-zum, que massa!",
-   "suno_persona": "Luisinho",
-   "criada_de": "faixa de teste musicas/vozes/luisinho_voz.txt (2ª tentativa: menino de 10 anos, voz de peito), Create → Voice no Suno, 17/11/2026",
-   "como_criar": "musicas/vozes/luisinho_voz.txt (faixa de teste só com ele, depois Create → Voice no Suno)"
+   "suno_persona": "Luisinho v2",
+   "criada_de": "16_carnaval_da_turminha/versoes/v1 (estilo E5, teclado), 18/11/2026",
+   "como_criar": "musicas/vozes/luisinho_voz.txt (faixa de teste só com ele, depois Create → Voice no Suno)",
+   "personas_anteriores": [
+    {
+     "nome": "Luisinho",
+     "criada_de": "faixa de teste musicas/vozes/luisinho_voz.txt (2ª tentativa: menino de 10 anos, voz de peito), Create → Voice no Suno, 17/11/2026",
+     "estilo": "faixa de teste só de voz"
+    }
+   ]
   },
   "dueto": {
    "descricao": "Laurinha e Luisinho alternando versos e cantando juntos o refrão",
