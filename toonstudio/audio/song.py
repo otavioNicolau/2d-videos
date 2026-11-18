@@ -84,14 +84,41 @@ def vocal_activity(vocals: Path, hop: float = 0.05) -> list[list[float]]:
     return merged
 
 
-def lyrics_words(vocals: Path) -> list[dict]:
+def _asr_words(wav: Path, offset: float = 0.0) -> list[dict]:
     from .voice import aux
-    r = aux().call({"op": "asr", "wav": str(vocals), "words": True, "lang": "pt"})
+    r = aux().call({"op": "asr", "wav": str(wav), "words": True, "lang": "pt"})
     words = []
     for s in r.get("segments", []):
         for w in s["words"]:
             if w["w"]:
-                words.append({"w": w["w"], "s": round(w["s"], 3), "e": round(w["e"], 3), "p": round(w["p"], 3)})
+                words.append({"w": w["w"], "s": round(w["s"] + offset, 3), "e": round(w["e"] + offset, 3), "p": round(w["p"], 3)})
+    return words
+
+
+def _buracos(words: list[dict], spans: list[list[float]], dur: float, minimo: float = 6.0) -> list[tuple[float, float]]:
+    """Trechos COM voz e SEM nenhuma palavra transcrita (o Whisper às vezes pula a 1ª janela de 30 s numa música)."""
+    marcas = [0.0] + sorted(t for w in words for t in (w["s"], w["e"])) + [dur]
+    out = []
+    for a, b in zip(marcas, marcas[1:]):
+        if b - a < minimo:
+            continue
+        voz = sum(max(0.0, min(b, e) - max(a, s)) for s, e in spans)
+        if voz >= 3.0:
+            out.append((max(0.0, a - 0.3), min(dur, b + 0.3)))
+    return out
+
+
+def lyrics_words(vocals: Path, spans: list[list[float]] | None = None) -> list[dict]:
+    words = _asr_words(vocals)
+    if spans:                                    # 2ª passada só nos buracos com voz (ep13: os primeiros 30 s sumiram)
+        a, sr = sf.read(vocals, dtype="float32")
+        dur = len(a) / sr
+        for t0, t1 in _buracos(words, spans, dur):
+            with tempfile.TemporaryDirectory() as td:
+                pedaco = Path(td) / "pedaco.wav"
+                sf.write(pedaco, a[int(t0 * sr):int(t1 * sr)], sr)
+                novas = [w for w in _asr_words(pedaco, t0) if t0 <= w["s"] < t1]
+            words = sorted([w for w in words if not (t0 <= w["s"] < t1)] + novas, key=lambda w: w["s"])
     return words
 
 
@@ -141,7 +168,7 @@ def analyze(project_dir: Path, log=print, musica: Path | None = None) -> Path:
     log("trechos cantados…")
     va = vocal_activity(vocals)
     log("letra palavra a palavra (Whisper na voz isolada)…")
-    words = lyrics_words(vocals)
+    words = lyrics_words(vocals, va)
     lines = lines_from_words(words)
     sections, coverage = [], None
     if musica is not None:

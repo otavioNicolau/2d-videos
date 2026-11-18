@@ -1,0 +1,55 @@
+{
+ "schema": "avaliacao-1.0",
+ "versoes": {
+  "v1": {
+   "arquivo": "v1.wav",
+   "duracao": 151.4,
+   "bpm": 161.5,
+   "bpm_nota": "",
+   "tom": "Ré maior",
+   "voz_inicio": 2.25,
+   "refrao_inicio": null,
+   "cantado": 84,
+   "intervalos": [
+    [
+     7.8,
+     6.5
+    ]
+   ],
+   "fim_depois_da_voz": 0.5,
+   "final": "esmaecendo",
+   "silencio_final": 0.2,
+   "acerto": 32,
+   "nao_reconhecidas": [
+    "andar",
+    "grudadinho",
+    "uiii",
+    "flap",
+    "voei",
+    "uhuu",
+    "hein",
+    "laurinha",
+    "luisinho",
+    "splash",
+    "pato",
+    "bate"
+   ],
+   "pontos_a_conferir": [
+    "o gancho não foi reconhecido na transcrição",
+    "só 32% da letra reconhecida — ouvir a pronúncia",
+    "menos de 2 intervalos de dança"
+   ]
+  }
+ },
+ "ouvido": {
+  "v1": {
+   "1 começo chama atenção": null,
+   "5 melodia combina com a letra": null,
+   "6 dá vontade de dançar": null,
+   "7 pronúncia natural": null,
+   "8 tem a cara do canal": null,
+   "9 nenhum trecho cansativo": null
+  }
+ },
+ "escolhida": "v1"
+}

@@ -1,0 +1,7452 @@
+{
+ "schema": "roteiro-1.0",
+ "nota": "Roteiro verso a verso de 'Andar de Pinguim' (take v1 de 18/11/2026, cortado em 2:19 — o Suno repetiu o fim): o Luisinho voa até o gelo e encontra o pinguim de casaca e gravatinha; a fila de pinguins cresce a cada refrão; escorrega de barriga, mergulha e 'voa' na água; ponte de comandos; jogo de imitar (pequenininho, grandão, com pressa, cansado); 'mais rápido' e 'mais rápido ainda' até todo mundo rir; convite e tchau. Gerado por scripts/roteiros/ep13_andar_de_pinguim.py.",
+ "partes": {
+  "intro": [
+   {
+    "linhas": 1,
+    "cenario": "plano_gelo",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "callout": [
+     {
+      "t": 1.6,
+      "text": "ANDAR DE PINGUIM!",
+      "color": "azul"
+     }
+    ],
+    "objetos": {
+     "ping": {
+      "id": "pinguim",
+      "x": 1300,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 2250
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.0
+        }
+       },
+       {
+        "t": 0.07,
+        "pose": {
+         "anda": 0.5
+        },
+        "ease": "inout",
+        "in": 0.07
+       },
+       {
+        "t": 0.441,
+        "pose": {
+         "anda": 1.0
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 0.813,
+        "pose": {
+         "anda": 1.5
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 1.161,
+        "pose": {
+         "anda": 2.0
+        },
+        "ease": "inout",
+        "in": 0.348
+       },
+       {
+        "t": 1.486,
+        "pose": {
+         "anda": 2.5
+        },
+        "ease": "inout",
+        "in": 0.325
+       },
+       {
+        "t": 1.811,
+        "pose": {
+         "anda": 3.0
+        },
+        "ease": "inout",
+        "in": 0.325
+       },
+       {
+        "t": 2.0,
+        "pose": {
+         "x": 1300
+        },
+        "ease": "out",
+        "in": 2.0
+       },
+       {
+        "t": 2.136,
+        "pose": {
+         "anda": 3.5
+        },
+        "ease": "inout",
+        "in": 0.325
+       },
+       {
+        "t": 2.485,
+        "pose": {
+         "anda": 4.0
+        },
+        "ease": "inout",
+        "in": 0.349
+       },
+       {
+        "t": 2.833,
+        "pose": {
+         "anda": 4.5
+        },
+        "ease": "inout",
+        "in": 0.348
+       },
+       {
+        "t": 3.204,
+        "pose": {
+         "anda": 5.0
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 3.576,
+        "pose": {
+         "anda": 5.5
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 3.947,
+        "pose": {
+         "anda": 6.0
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 4.279,
+        "pose": {
+         "anda": 6.5
+        },
+        "ease": "inout",
+        "in": 0.332
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_gelo",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "callout": [
+     {
+      "t": 1.91,
+      "text": "Ê!",
+      "color": "rosa"
+     }
+    ],
+    "objetos": {
+     "p1": {
+      "id": "pinguim",
+      "x": 1100,
+      "y": 930,
+      "z": 1,
+      "depth": 0.8,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 1100
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.5
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.371,
+        "pose": {
+         "anda": 1.0
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 0.743,
+        "pose": {
+         "anda": 1.5
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 1.091,
+        "pose": {
+         "anda": 2.0
+        },
+        "ease": "inout",
+        "in": 0.348
+       },
+       {
+        "t": 1.463,
+        "pose": {
+         "anda": 2.5
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 1.834,
+        "pose": {
+         "anda": 3.0
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 2.206,
+        "pose": {
+         "anda": 3.5
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 2.421,
+        "pose": {
+         "x": 2000
+        },
+        "ease": "linear",
+        "in": 2.421
+       }
+      ]
+     },
+     "p2": {
+      "id": "pinguim",
+      "x": 890,
+      "y": 930,
+      "z": 1,
+      "depth": 0.752,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 890
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.25
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.75
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.371,
+        "pose": {
+         "anda": 1.25
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 0.743,
+        "pose": {
+         "anda": 1.75
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 1.091,
+        "pose": {
+         "anda": 2.25
+        },
+        "ease": "inout",
+        "in": 0.348
+       },
+       {
+        "t": 1.463,
+        "pose": {
+         "anda": 2.75
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 1.834,
+        "pose": {
+         "anda": 3.25
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 2.206,
+        "pose": {
+         "anda": 3.75
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 2.421,
+        "pose": {
+         "x": 1790
+        },
+        "ease": "linear",
+        "in": 2.421
+       }
+      ]
+     },
+     "p3": {
+      "id": "pinguim",
+      "x": 680,
+      "y": 930,
+      "z": 1,
+      "depth": 0.7040000000000001,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 680
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.5
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 1.0
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.371,
+        "pose": {
+         "anda": 1.5
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 0.743,
+        "pose": {
+         "anda": 2.0
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 1.091,
+        "pose": {
+         "anda": 2.5
+        },
+        "ease": "inout",
+        "in": 0.348
+       },
+       {
+        "t": 1.463,
+        "pose": {
+         "anda": 3.0
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 1.834,
+        "pose": {
+         "anda": 3.5
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 2.206,
+        "pose": {
+         "anda": 4.0
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 2.421,
+        "pose": {
+         "x": 1580
+        },
+        "ease": "linear",
+        "in": 2.421
+       }
+      ]
+     },
+     "p4": {
+      "id": "pinguim",
+      "x": 470,
+      "y": 930,
+      "z": 1,
+      "depth": 0.8,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 470
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.75
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 1.25
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.371,
+        "pose": {
+         "anda": 1.75
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 0.743,
+        "pose": {
+         "anda": 2.25
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 1.091,
+        "pose": {
+         "anda": 2.75
+        },
+        "ease": "inout",
+        "in": 0.348
+       },
+       {
+        "t": 1.463,
+        "pose": {
+         "anda": 3.25
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 1.834,
+        "pose": {
+         "anda": 3.75
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 2.206,
+        "pose": {
+         "anda": 4.25
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 2.421,
+        "pose": {
+         "x": 1370
+        },
+        "ease": "linear",
+        "in": 2.421
+       }
+      ]
+     }
+    }
+   },
+   {
+    "seg": 7.27,
+    "cenario": "danca_ondas_azul",
+    "titulo": "pinguins dançando",
+    "fx": [
+     "estrelas"
+    ],
+    "objetos": {
+     "ping": {
+      "id": "pinguim",
+      "x": 960,
+      "y": 1010,
+      "z": 2,
+      "depth": 1.1,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "asas": 0.0
+        }
+       },
+       {
+        "t": 0.096,
+        "pose": {
+         "anda": 0.5
+        },
+        "ease": "inout",
+        "in": 0.096
+       },
+       {
+        "t": 0.096,
+        "pose": {
+         "asas": 1.0
+        },
+        "ease": "out",
+        "in": 0.096
+       },
+       {
+        "t": 0.468,
+        "pose": {
+         "anda": 1.0
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 0.839,
+        "pose": {
+         "anda": 1.5
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 0.839,
+        "pose": {
+         "asas": 0.0
+        },
+        "ease": "out",
+        "in": 0.743
+       },
+       {
+        "t": 1.211,
+        "pose": {
+         "anda": 2.0
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 1.582,
+        "pose": {
+         "anda": 2.5
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 1.582,
+        "pose": {
+         "asas": 1.0
+        },
+        "ease": "out",
+        "in": 0.743
+       },
+       {
+        "t": 1.931,
+        "pose": {
+         "anda": 3.0
+        },
+        "ease": "inout",
+        "in": 0.349
+       },
+       {
+        "t": 2.302,
+        "pose": {
+         "anda": 3.5
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 2.302,
+        "pose": {
+         "asas": 0.0
+        },
+        "ease": "out",
+        "in": 0.72
+       },
+       {
+        "t": 2.697,
+        "pose": {
+         "anda": 4.0
+        },
+        "ease": "inout",
+        "in": 0.395
+       },
+       {
+        "t": 3.045,
+        "pose": {
+         "anda": 4.5
+        },
+        "ease": "inout",
+        "in": 0.348
+       },
+       {
+        "t": 3.045,
+        "pose": {
+         "asas": 1.0
+        },
+        "ease": "out",
+        "in": 0.743
+       },
+       {
+        "t": 3.417,
+        "pose": {
+         "anda": 5.0
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 3.788,
+        "pose": {
+         "anda": 5.5
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 3.788,
+        "pose": {
+         "asas": 0.0
+        },
+        "ease": "out",
+        "in": 0.743
+       },
+       {
+        "t": 4.16,
+        "pose": {
+         "anda": 6.0
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 4.531,
+        "pose": {
+         "anda": 6.5
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 4.531,
+        "pose": {
+         "asas": 1.0
+        },
+        "ease": "out",
+        "in": 0.743
+       },
+       {
+        "t": 4.903,
+        "pose": {
+         "anda": 7.0
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 5.274,
+        "pose": {
+         "anda": 7.5
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 5.274,
+        "pose": {
+         "asas": 0.0
+        },
+        "ease": "out",
+        "in": 0.743
+       },
+       {
+        "t": 5.646,
+        "pose": {
+         "anda": 8.0
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 6.017,
+        "pose": {
+         "anda": 8.5
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 6.017,
+        "pose": {
+         "asas": 1.0
+        },
+        "ease": "out",
+        "in": 0.743
+       },
+       {
+        "t": 6.389,
+        "pose": {
+         "anda": 9.0
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 6.83,
+        "pose": {
+         "anda": 9.5
+        },
+        "ease": "inout",
+        "in": 0.441
+       },
+       {
+        "t": 6.83,
+        "pose": {
+         "asas": 0.0
+        },
+        "ease": "out",
+        "in": 0.813
+       }
+      ]
+     }
+    },
+    "atores": {}
+   }
+  ],
+  "verso#1": [
+   {
+    "linhas": 1,
+    "cenario": "plano_gelo",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "callout": [
+     {
+      "t": 1.39,
+      "text": "UHUU!",
+      "color": "amarelo"
+     }
+    ],
+    "atores": {
+     "luisinho": {
+      "x": -200,
+      "y": 420,
+      "turn": 0.4,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "fly",
+        "dur": 1.3,
+        "to_x": 1100,
+        "to_y": 930
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_gelo",
+    "camera": {
+     "x": 1300,
+     "y": 600,
+     "zoom": 1.2,
+     "zoom_fim": 1.25
+    },
+    "callout": [
+     {
+      "t": 1.12,
+      "text": "HEIN?",
+      "color": "roxo"
+     }
+    ],
+    "objetos": {
+     "ping": {
+      "id": "pinguim",
+      "x": 1500,
+      "y": 860,
+      "z": 1,
+      "depth": 0.9,
+      "pose": {
+       "lado": -1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "y": 1050
+        }
+       },
+       {
+        "t": 0.7,
+        "pose": {
+         "y": 860
+        },
+        "ease": "back",
+        "in": 0.7
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 1000,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "look_around",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_gelo",
+    "camera": {
+     "x": 1350,
+     "y": 560,
+     "zoom": 1.35,
+     "zoom_fim": 1.4
+    },
+    "callout": [
+     {
+      "t": 1.71,
+      "text": "OI!",
+      "color": "rosa"
+     }
+    ],
+    "objetos": {
+     "ping": {
+      "id": "pinguim",
+      "x": 1350,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": -1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "asas": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "asas": 1.0
+        },
+        "ease": "out",
+        "in": 0.0
+       },
+       {
+        "t": 0.371,
+        "pose": {
+         "asas": 0.0
+        },
+        "ease": "out",
+        "in": 0.371
+       },
+       {
+        "t": 0.72,
+        "pose": {
+         "asas": 1.0
+        },
+        "ease": "out",
+        "in": 0.349
+       },
+       {
+        "t": 1.091,
+        "pose": {
+         "asas": 0.0
+        },
+        "ease": "out",
+        "in": 0.371
+       },
+       {
+        "t": 1.463,
+        "pose": {
+         "asas": 1.0
+        },
+        "ease": "out",
+        "in": 0.372
+       },
+       {
+        "t": 1.66,
+        "pose": {
+         "bico": 0.0
+        }
+       },
+       {
+        "t": 1.76,
+        "pose": {
+         "bico": 1.0
+        },
+        "ease": "out",
+        "in": 0.1
+       },
+       {
+        "t": 1.834,
+        "pose": {
+         "asas": 0.0
+        },
+        "ease": "out",
+        "in": 0.371
+       },
+       {
+        "t": 2.06,
+        "pose": {
+         "bico": 0.0
+        },
+        "ease": "in",
+        "in": 0.3
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_gelo",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.15,
+     "zoom_fim": 1.2
+    },
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "PINGUIM!",
+      "color": "laranja"
+     }
+    ],
+    "objetos": {
+     "ping": {
+      "id": "pinguim",
+      "x": 1500,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": -1
+      },
+      "keys": [
+       {
+        "t": 0.15,
+        "pose": {
+         "bico": 0.0
+        }
+       },
+       {
+        "t": 0.25,
+        "pose": {
+         "bico": 1.0
+        },
+        "ease": "out",
+        "in": 0.1
+       },
+       {
+        "t": 0.55,
+        "pose": {
+         "bico": 0.0
+        },
+        "ease": "in",
+        "in": 0.3
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 1000,
+      "turn": 0.3,
+      "expr": "joy",
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "point",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "refrao#1": [
+   {
+    "linhas": 2,
+    "cenario": "plano_gelo",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "flash": true,
+    "callout": [
+     {
+      "t": 0.15,
+      "text": "ANDAR DE PINGUIM!",
+      "color": "azul"
+     }
+    ],
+    "objetos": {
+     "p1": {
+      "id": "pinguim",
+      "x": 2150,
+      "y": 930,
+      "z": 1,
+      "depth": 0.8,
+      "pose": {
+       "lado": -1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 2150
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.5
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.743,
+        "pose": {
+         "anda": 1.0
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 1.463,
+        "pose": {
+         "anda": 1.5
+        },
+        "ease": "inout",
+        "in": 0.72
+       },
+       {
+        "t": 2.206,
+        "pose": {
+         "anda": 2.0
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 2.949,
+        "pose": {
+         "anda": 2.5
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 3.281,
+        "pose": {
+         "x": 1150
+        },
+        "ease": "linear",
+        "in": 3.281
+       }
+      ]
+     },
+     "p2": {
+      "id": "pinguim",
+      "x": 2350,
+      "y": 930,
+      "z": 1,
+      "depth": 0.752,
+      "pose": {
+       "lado": -1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 2350
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.25
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.75
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.743,
+        "pose": {
+         "anda": 1.25
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 1.463,
+        "pose": {
+         "anda": 1.75
+        },
+        "ease": "inout",
+        "in": 0.72
+       },
+       {
+        "t": 2.206,
+        "pose": {
+         "anda": 2.25
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 2.949,
+        "pose": {
+         "anda": 2.75
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 3.281,
+        "pose": {
+         "x": 1350
+        },
+        "ease": "linear",
+        "in": 3.281
+       }
+      ]
+     },
+     "p3": {
+      "id": "pinguim",
+      "x": 2550,
+      "y": 930,
+      "z": 1,
+      "depth": 0.7040000000000001,
+      "pose": {
+       "lado": -1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 2550
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.5
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 1.0
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.743,
+        "pose": {
+         "anda": 1.5
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 1.463,
+        "pose": {
+         "anda": 2.0
+        },
+        "ease": "inout",
+        "in": 0.72
+       },
+       {
+        "t": 2.206,
+        "pose": {
+         "anda": 2.5
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 2.949,
+        "pose": {
+         "anda": 3.0
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 3.281,
+        "pose": {
+         "x": 1550
+        },
+        "ease": "linear",
+        "in": 3.281
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 700,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "lado",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 2,
+    "cenario": "danca_bolinhas_azul",
+    "fx": [
+     "notas"
+    ],
+    "callout": [
+     {
+      "t": 1.69,
+      "text": "BALANÇA, BALANÇA!",
+      "color": "rosa"
+     }
+    ],
+    "objetos": {
+     "ping": {
+      "id": "pinguim",
+      "x": 960,
+      "y": 1010,
+      "z": 2,
+      "depth": 1.05,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.5
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "asas": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "asas": 1.0
+        },
+        "ease": "out",
+        "in": 0.0
+       },
+       {
+        "t": 0.719,
+        "pose": {
+         "anda": 1.0
+        },
+        "ease": "inout",
+        "in": 0.719
+       },
+       {
+        "t": 0.719,
+        "pose": {
+         "asas": 0.0
+        },
+        "ease": "out",
+        "in": 0.719
+       },
+       {
+        "t": 1.462,
+        "pose": {
+         "anda": 1.5
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 1.462,
+        "pose": {
+         "asas": 1.0
+        },
+        "ease": "out",
+        "in": 0.743
+       },
+       {
+        "t": 2.205,
+        "pose": {
+         "anda": 2.0
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 2.205,
+        "pose": {
+         "asas": 0.0
+        },
+        "ease": "out",
+        "in": 0.743
+       },
+       {
+        "t": 2.949,
+        "pose": {
+         "anda": 2.5
+        },
+        "ease": "inout",
+        "in": 0.744
+       },
+       {
+        "t": 2.949,
+        "pose": {
+         "asas": 1.0
+        },
+        "ease": "out",
+        "in": 0.744
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 1450,
+      "y": 1010,
+      "depth": 1.15,
+      "turn": -0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "balanco",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 2,
+    "cenario": "plano_gelo",
+    "camera": {
+     "x": 1300,
+     "y": 700,
+     "zoom": 1.45,
+     "zoom_fim": 1.5
+    },
+    "callout": [
+     {
+      "t": 2.35,
+      "text": "TIC, TIC!",
+      "color": "laranja"
+     }
+    ],
+    "objetos": {
+     "ping": {
+      "id": "pinguim",
+      "x": 1150,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.5
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.348,
+        "pose": {
+         "anda": 1.0
+        },
+        "ease": "inout",
+        "in": 0.348
+       },
+       {
+        "t": 0.743,
+        "pose": {
+         "anda": 1.5
+        },
+        "ease": "inout",
+        "in": 0.395
+       },
+       {
+        "t": 1.115,
+        "pose": {
+         "anda": 2.0
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 1.486,
+        "pose": {
+         "anda": 2.5
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 1.858,
+        "pose": {
+         "anda": 3.0
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 2.206,
+        "pose": {
+         "anda": 3.5
+        },
+        "ease": "inout",
+        "in": 0.348
+       },
+       {
+        "t": 2.577,
+        "pose": {
+         "anda": 4.0
+        },
+        "ease": "inout",
+        "in": 0.371
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 1500,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "pezinho",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 2,
+    "cenario": "danca_xadrez_azul",
+    "fx": [
+     "estrelas"
+    ],
+    "callout": [
+     {
+      "t": 1.82,
+      "text": "Ê!",
+      "color": "azul"
+     }
+    ],
+    "objetos": {
+     "p1": {
+      "id": "pinguim",
+      "x": 700,
+      "y": 1010,
+      "z": 2,
+      "depth": 0.9,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.5
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.743,
+        "pose": {
+         "anda": 1.0
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 1.486,
+        "pose": {
+         "anda": 1.5
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 2.229,
+        "pose": {
+         "anda": 2.0
+        },
+        "ease": "inout",
+        "in": 0.743
+       }
+      ]
+     },
+     "p2": {
+      "id": "pinguim",
+      "x": 1220,
+      "y": 1010,
+      "z": 2,
+      "depth": 0.9,
+      "pose": {
+       "lado": -1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.5
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 1.0
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.743,
+        "pose": {
+         "anda": 1.5
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 1.486,
+        "pose": {
+         "anda": 2.0
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 2.229,
+        "pose": {
+         "anda": 2.5
+        },
+        "ease": "inout",
+        "in": 0.743
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 960,
+      "y": 1010,
+      "depth": 1.2,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "balanco",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "refrao#2": [
+   {
+    "linhas": 2,
+    "cenario": "plano_gelo",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "flash": true,
+    "callout": [
+     {
+      "t": 0.15,
+      "text": "ANDAR DE PINGUIM!",
+      "color": "roxo"
+     }
+    ],
+    "objetos": {
+     "p1": {
+      "id": "pinguim",
+      "x": 2150,
+      "y": 930,
+      "z": 1,
+      "depth": 0.8,
+      "pose": {
+       "lado": -1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 2150
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.5
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.743,
+        "pose": {
+         "anda": 1.0
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 1.486,
+        "pose": {
+         "anda": 1.5
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 2.229,
+        "pose": {
+         "anda": 2.0
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 2.932,
+        "pose": {
+         "x": 1150
+        },
+        "ease": "linear",
+        "in": 2.932
+       }
+      ]
+     },
+     "p2": {
+      "id": "pinguim",
+      "x": 2350,
+      "y": 930,
+      "z": 1,
+      "depth": 0.752,
+      "pose": {
+       "lado": -1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 2350
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.25
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.75
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.743,
+        "pose": {
+         "anda": 1.25
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 1.486,
+        "pose": {
+         "anda": 1.75
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 2.229,
+        "pose": {
+         "anda": 2.25
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 2.932,
+        "pose": {
+         "x": 1350
+        },
+        "ease": "linear",
+        "in": 2.932
+       }
+      ]
+     },
+     "p3": {
+      "id": "pinguim",
+      "x": 2550,
+      "y": 930,
+      "z": 1,
+      "depth": 0.7040000000000001,
+      "pose": {
+       "lado": -1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 2550
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.5
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 1.0
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.743,
+        "pose": {
+         "anda": 1.5
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 1.486,
+        "pose": {
+         "anda": 2.0
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 2.229,
+        "pose": {
+         "anda": 2.5
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 2.932,
+        "pose": {
+         "x": 1550
+        },
+        "ease": "linear",
+        "in": 2.932
+       }
+      ]
+     },
+     "p4": {
+      "id": "pinguim",
+      "x": 2750,
+      "y": 930,
+      "z": 1,
+      "depth": 0.8,
+      "pose": {
+       "lado": -1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 2750
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.75
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 1.25
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.743,
+        "pose": {
+         "anda": 1.75
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 1.486,
+        "pose": {
+         "anda": 2.25
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 2.229,
+        "pose": {
+         "anda": 2.75
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 2.932,
+        "pose": {
+         "x": 1750
+        },
+        "ease": "linear",
+        "in": 2.932
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 700,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "lado",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1000,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "lado",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 2,
+    "cenario": "danca_raios_roxo",
+    "fx": [
+     "notas"
+    ],
+    "callout": [
+     {
+      "t": 1.61,
+      "text": "BALANÇA, BALANÇA!",
+      "color": "rosa"
+     }
+    ],
+    "objetos": {
+     "ping": {
+      "id": "pinguim",
+      "x": 960,
+      "y": 1010,
+      "z": 2,
+      "depth": 1.05,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.5
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "asas": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "asas": 1.0
+        },
+        "ease": "out",
+        "in": 0.0
+       },
+       {
+        "t": 0.72,
+        "pose": {
+         "anda": 1.0
+        },
+        "ease": "inout",
+        "in": 0.72
+       },
+       {
+        "t": 0.72,
+        "pose": {
+         "asas": 0.0
+        },
+        "ease": "out",
+        "in": 0.72
+       },
+       {
+        "t": 1.463,
+        "pose": {
+         "anda": 1.5
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 1.463,
+        "pose": {
+         "asas": 1.0
+        },
+        "ease": "out",
+        "in": 0.743
+       },
+       {
+        "t": 2.206,
+        "pose": {
+         "anda": 2.0
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 2.206,
+        "pose": {
+         "asas": 0.0
+        },
+        "ease": "out",
+        "in": 0.743
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 470,
+      "y": 1010,
+      "depth": 1.15,
+      "turn": 0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "balanco",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1450,
+      "y": 1010,
+      "depth": 1.15,
+      "turn": -0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "balanco",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 2,
+    "cenario": "plano_gelo",
+    "camera": {
+     "x": 1300,
+     "y": 700,
+     "zoom": 1.45,
+     "zoom_fim": 1.5
+    },
+    "callout": [
+     {
+      "t": 2.42,
+      "text": "TIC, TIC!",
+      "color": "laranja"
+     }
+    ],
+    "objetos": {
+     "ping": {
+      "id": "pinguim",
+      "x": 1150,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.5
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.371,
+        "pose": {
+         "anda": 1.0
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 0.72,
+        "pose": {
+         "anda": 1.5
+        },
+        "ease": "inout",
+        "in": 0.349
+       },
+       {
+        "t": 1.091,
+        "pose": {
+         "anda": 2.0
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 1.463,
+        "pose": {
+         "anda": 2.5
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 1.834,
+        "pose": {
+         "anda": 3.0
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 2.206,
+        "pose": {
+         "anda": 3.5
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 2.577,
+        "pose": {
+         "anda": 4.0
+        },
+        "ease": "inout",
+        "in": 0.371
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 1500,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "pezinho",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 2,
+    "cenario": "danca_ondas_azul",
+    "fx": [
+     "estrelas"
+    ],
+    "callout": [
+     {
+      "t": 1.77,
+      "text": "Ê!",
+      "color": "roxo"
+     }
+    ],
+    "objetos": {
+     "p1": {
+      "id": "pinguim",
+      "x": 700,
+      "y": 1010,
+      "z": 2,
+      "depth": 0.9,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.5
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.72,
+        "pose": {
+         "anda": 1.0
+        },
+        "ease": "inout",
+        "in": 0.72
+       },
+       {
+        "t": 1.463,
+        "pose": {
+         "anda": 1.5
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 2.206,
+        "pose": {
+         "anda": 2.0
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 2.949,
+        "pose": {
+         "anda": 2.5
+        },
+        "ease": "inout",
+        "in": 0.743
+       }
+      ]
+     },
+     "p2": {
+      "id": "pinguim",
+      "x": 1220,
+      "y": 1010,
+      "z": 2,
+      "depth": 0.9,
+      "pose": {
+       "lado": -1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.5
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 1.0
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.72,
+        "pose": {
+         "anda": 1.5
+        },
+        "ease": "inout",
+        "in": 0.72
+       },
+       {
+        "t": 1.463,
+        "pose": {
+         "anda": 2.0
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 2.206,
+        "pose": {
+         "anda": 2.5
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 2.949,
+        "pose": {
+         "anda": 3.0
+        },
+        "ease": "inout",
+        "in": 0.743
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 420,
+      "y": 1010,
+      "depth": 1.2,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "balanco",
+        "dur": "resto"
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 1500,
+      "y": 1010,
+      "depth": 1.2,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "balanco",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "refrao#3": [
+   {
+    "linhas": 2,
+    "cenario": "plano_gelo",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "flash": true,
+    "callout": [
+     {
+      "t": 0.15,
+      "text": "ANDAR DE PINGUIM!",
+      "color": "verde"
+     }
+    ],
+    "objetos": {
+     "p1": {
+      "id": "pinguim",
+      "x": 2150,
+      "y": 930,
+      "z": 1,
+      "depth": 0.8,
+      "pose": {
+       "lado": -1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 2150
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.5
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.789,
+        "pose": {
+         "anda": 1.0
+        },
+        "ease": "inout",
+        "in": 0.789
+       },
+       {
+        "t": 1.532,
+        "pose": {
+         "anda": 1.5
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 2.252,
+        "pose": {
+         "anda": 2.0
+        },
+        "ease": "inout",
+        "in": 0.72
+       },
+       {
+        "t": 2.995,
+        "pose": {
+         "anda": 2.5
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 3.326,
+        "pose": {
+         "x": 1150
+        },
+        "ease": "linear",
+        "in": 3.326
+       }
+      ]
+     },
+     "p2": {
+      "id": "pinguim",
+      "x": 2350,
+      "y": 930,
+      "z": 1,
+      "depth": 0.752,
+      "pose": {
+       "lado": -1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 2350
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.25
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.75
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.789,
+        "pose": {
+         "anda": 1.25
+        },
+        "ease": "inout",
+        "in": 0.789
+       },
+       {
+        "t": 1.532,
+        "pose": {
+         "anda": 1.75
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 2.252,
+        "pose": {
+         "anda": 2.25
+        },
+        "ease": "inout",
+        "in": 0.72
+       },
+       {
+        "t": 2.995,
+        "pose": {
+         "anda": 2.75
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 3.326,
+        "pose": {
+         "x": 1350
+        },
+        "ease": "linear",
+        "in": 3.326
+       }
+      ]
+     },
+     "p3": {
+      "id": "pinguim",
+      "x": 2550,
+      "y": 930,
+      "z": 1,
+      "depth": 0.7040000000000001,
+      "pose": {
+       "lado": -1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 2550
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.5
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 1.0
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.789,
+        "pose": {
+         "anda": 1.5
+        },
+        "ease": "inout",
+        "in": 0.789
+       },
+       {
+        "t": 1.532,
+        "pose": {
+         "anda": 2.0
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 2.252,
+        "pose": {
+         "anda": 2.5
+        },
+        "ease": "inout",
+        "in": 0.72
+       },
+       {
+        "t": 2.995,
+        "pose": {
+         "anda": 3.0
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 3.326,
+        "pose": {
+         "x": 1550
+        },
+        "ease": "linear",
+        "in": 3.326
+       }
+      ]
+     },
+     "p4": {
+      "id": "pinguim",
+      "x": 2750,
+      "y": 930,
+      "z": 1,
+      "depth": 0.8,
+      "pose": {
+       "lado": -1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 2750
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.75
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 1.25
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.789,
+        "pose": {
+         "anda": 1.75
+        },
+        "ease": "inout",
+        "in": 0.789
+       },
+       {
+        "t": 1.532,
+        "pose": {
+         "anda": 2.25
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 2.252,
+        "pose": {
+         "anda": 2.75
+        },
+        "ease": "inout",
+        "in": 0.72
+       },
+       {
+        "t": 2.995,
+        "pose": {
+         "anda": 3.25
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 3.326,
+        "pose": {
+         "x": 1750
+        },
+        "ease": "linear",
+        "in": 3.326
+       }
+      ]
+     },
+     "p5": {
+      "id": "pinguim",
+      "x": 2950,
+      "y": 930,
+      "z": 1,
+      "depth": 0.752,
+      "pose": {
+       "lado": -1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 2950
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 1.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 1.5
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.789,
+        "pose": {
+         "anda": 2.0
+        },
+        "ease": "inout",
+        "in": 0.789
+       },
+       {
+        "t": 1.532,
+        "pose": {
+         "anda": 2.5
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 2.252,
+        "pose": {
+         "anda": 3.0
+        },
+        "ease": "inout",
+        "in": 0.72
+       },
+       {
+        "t": 2.995,
+        "pose": {
+         "anda": 3.5
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 3.326,
+        "pose": {
+         "x": 1950
+        },
+        "ease": "linear",
+        "in": 3.326
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 700,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "lado",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1000,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "lado",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 2,
+    "cenario": "danca_xadrez_verde",
+    "fx": [
+     "notas"
+    ],
+    "callout": [
+     {
+      "t": 1.64,
+      "text": "BALANÇA, BALANÇA!",
+      "color": "rosa"
+     }
+    ],
+    "objetos": {
+     "ping": {
+      "id": "pinguim",
+      "x": 960,
+      "y": 1010,
+      "z": 2,
+      "depth": 1.05,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.5
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "asas": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "asas": 1.0
+        },
+        "ease": "out",
+        "in": 0.0
+       },
+       {
+        "t": 0.744,
+        "pose": {
+         "anda": 1.0
+        },
+        "ease": "inout",
+        "in": 0.744
+       },
+       {
+        "t": 0.744,
+        "pose": {
+         "asas": 0.0
+        },
+        "ease": "out",
+        "in": 0.744
+       },
+       {
+        "t": 1.463,
+        "pose": {
+         "anda": 1.5
+        },
+        "ease": "inout",
+        "in": 0.719
+       },
+       {
+        "t": 1.463,
+        "pose": {
+         "asas": 1.0
+        },
+        "ease": "out",
+        "in": 0.719
+       },
+       {
+        "t": 2.206,
+        "pose": {
+         "anda": 2.0
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 2.206,
+        "pose": {
+         "asas": 0.0
+        },
+        "ease": "out",
+        "in": 0.743
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 470,
+      "y": 1010,
+      "depth": 1.15,
+      "turn": 0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "balanco",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1450,
+      "y": 1010,
+      "depth": 1.15,
+      "turn": -0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "balanco",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 2,
+    "cenario": "plano_gelo",
+    "camera": {
+     "x": 1300,
+     "y": 700,
+     "zoom": 1.45,
+     "zoom_fim": 1.5
+    },
+    "callout": [
+     {
+      "t": 2.6,
+      "text": "TIC, TIC!",
+      "color": "laranja"
+     }
+    ],
+    "objetos": {
+     "ping": {
+      "id": "pinguim",
+      "x": 1150,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.5
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.372,
+        "pose": {
+         "anda": 1.0
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 0.743,
+        "pose": {
+         "anda": 1.5
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 1.115,
+        "pose": {
+         "anda": 2.0
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 1.486,
+        "pose": {
+         "anda": 2.5
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 1.858,
+        "pose": {
+         "anda": 3.0
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 2.206,
+        "pose": {
+         "anda": 3.5
+        },
+        "ease": "inout",
+        "in": 0.348
+       },
+       {
+        "t": 2.578,
+        "pose": {
+         "anda": 4.0
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 2.949,
+        "pose": {
+         "anda": 4.5
+        },
+        "ease": "inout",
+        "in": 0.371
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 1500,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "pezinho",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 2,
+    "cenario": "danca_bolinhas_rosa",
+    "fx": [
+     "estrelas"
+    ],
+    "callout": [
+     {
+      "t": 1.65,
+      "text": "Ê!",
+      "color": "verde"
+     }
+    ],
+    "objetos": {
+     "p1": {
+      "id": "pinguim",
+      "x": 700,
+      "y": 1010,
+      "z": 2,
+      "depth": 0.9,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.5
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.743,
+        "pose": {
+         "anda": 1.0
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 1.486,
+        "pose": {
+         "anda": 1.5
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 2.206,
+        "pose": {
+         "anda": 2.0
+        },
+        "ease": "inout",
+        "in": 0.72
+       }
+      ]
+     },
+     "p2": {
+      "id": "pinguim",
+      "x": 1220,
+      "y": 1010,
+      "z": 2,
+      "depth": 0.9,
+      "pose": {
+       "lado": -1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.5
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 1.0
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.743,
+        "pose": {
+         "anda": 1.5
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 1.486,
+        "pose": {
+         "anda": 2.0
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 2.206,
+        "pose": {
+         "anda": 2.5
+        },
+        "ease": "inout",
+        "in": 0.72
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 420,
+      "y": 1010,
+      "depth": 1.2,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "balanco",
+        "dur": "resto"
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 1500,
+      "y": 1010,
+      "depth": 1.2,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "balanco",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "refrao#4": [
+   {
+    "linhas": 2,
+    "cenario": "plano_gelo",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "flash": true,
+    "callout": [
+     {
+      "t": 0.15,
+      "text": "MAIS RÁPIDO!",
+      "color": "laranja"
+     }
+    ],
+    "objetos": {
+     "p1": {
+      "id": "pinguim",
+      "x": 2150,
+      "y": 930,
+      "z": 1,
+      "depth": 0.8,
+      "pose": {
+       "lado": -1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 2150
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.5
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.371,
+        "pose": {
+         "anda": 1.0
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 0.743,
+        "pose": {
+         "anda": 1.5
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 1.114,
+        "pose": {
+         "anda": 2.0
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 1.463,
+        "pose": {
+         "anda": 2.5
+        },
+        "ease": "inout",
+        "in": 0.349
+       },
+       {
+        "t": 1.834,
+        "pose": {
+         "anda": 3.0
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 2.206,
+        "pose": {
+         "anda": 3.5
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 2.577,
+        "pose": {
+         "anda": 4.0
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 2.909,
+        "pose": {
+         "x": 1150
+        },
+        "ease": "linear",
+        "in": 2.909
+       }
+      ]
+     },
+     "p2": {
+      "id": "pinguim",
+      "x": 2350,
+      "y": 930,
+      "z": 1,
+      "depth": 0.752,
+      "pose": {
+       "lado": -1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 2350
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.25
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.75
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.371,
+        "pose": {
+         "anda": 1.25
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 0.743,
+        "pose": {
+         "anda": 1.75
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 1.114,
+        "pose": {
+         "anda": 2.25
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 1.463,
+        "pose": {
+         "anda": 2.75
+        },
+        "ease": "inout",
+        "in": 0.349
+       },
+       {
+        "t": 1.834,
+        "pose": {
+         "anda": 3.25
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 2.206,
+        "pose": {
+         "anda": 3.75
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 2.577,
+        "pose": {
+         "anda": 4.25
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 2.909,
+        "pose": {
+         "x": 1350
+        },
+        "ease": "linear",
+        "in": 2.909
+       }
+      ]
+     },
+     "p3": {
+      "id": "pinguim",
+      "x": 2550,
+      "y": 930,
+      "z": 1,
+      "depth": 0.7040000000000001,
+      "pose": {
+       "lado": -1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 2550
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.5
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 1.0
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.371,
+        "pose": {
+         "anda": 1.5
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 0.743,
+        "pose": {
+         "anda": 2.0
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 1.114,
+        "pose": {
+         "anda": 2.5
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 1.463,
+        "pose": {
+         "anda": 3.0
+        },
+        "ease": "inout",
+        "in": 0.349
+       },
+       {
+        "t": 1.834,
+        "pose": {
+         "anda": 3.5
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 2.206,
+        "pose": {
+         "anda": 4.0
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 2.577,
+        "pose": {
+         "anda": 4.5
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 2.909,
+        "pose": {
+         "x": 1550
+        },
+        "ease": "linear",
+        "in": 2.909
+       }
+      ]
+     },
+     "p4": {
+      "id": "pinguim",
+      "x": 2750,
+      "y": 930,
+      "z": 1,
+      "depth": 0.8,
+      "pose": {
+       "lado": -1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 2750
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.75
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 1.25
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.371,
+        "pose": {
+         "anda": 1.75
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 0.743,
+        "pose": {
+         "anda": 2.25
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 1.114,
+        "pose": {
+         "anda": 2.75
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 1.463,
+        "pose": {
+         "anda": 3.25
+        },
+        "ease": "inout",
+        "in": 0.349
+       },
+       {
+        "t": 1.834,
+        "pose": {
+         "anda": 3.75
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 2.206,
+        "pose": {
+         "anda": 4.25
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 2.577,
+        "pose": {
+         "anda": 4.75
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 2.909,
+        "pose": {
+         "x": 1750
+        },
+        "ease": "linear",
+        "in": 2.909
+       }
+      ]
+     },
+     "p5": {
+      "id": "pinguim",
+      "x": 2950,
+      "y": 930,
+      "z": 1,
+      "depth": 0.752,
+      "pose": {
+       "lado": -1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 2950
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 1.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 1.5
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.371,
+        "pose": {
+         "anda": 2.0
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 0.743,
+        "pose": {
+         "anda": 2.5
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 1.114,
+        "pose": {
+         "anda": 3.0
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 1.463,
+        "pose": {
+         "anda": 3.5
+        },
+        "ease": "inout",
+        "in": 0.349
+       },
+       {
+        "t": 1.834,
+        "pose": {
+         "anda": 4.0
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 2.206,
+        "pose": {
+         "anda": 4.5
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 2.577,
+        "pose": {
+         "anda": 5.0
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 2.909,
+        "pose": {
+         "x": 1950
+        },
+        "ease": "linear",
+        "in": 2.909
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 700,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "pulinho",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1000,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "pulinho",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 2,
+    "cenario": "danca_raios_laranja",
+    "fx": [
+     "notas"
+    ],
+    "callout": [
+     {
+      "t": 1.55,
+      "text": "BALANÇA, BALANÇA!",
+      "color": "rosa"
+     }
+    ],
+    "objetos": {
+     "ping": {
+      "id": "pinguim",
+      "x": 960,
+      "y": 1010,
+      "z": 2,
+      "depth": 1.05,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.5
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "asas": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "asas": 1.0
+        },
+        "ease": "out",
+        "in": 0.0
+       },
+       {
+        "t": 0.371,
+        "pose": {
+         "anda": 1.0
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 0.72,
+        "pose": {
+         "anda": 1.5
+        },
+        "ease": "inout",
+        "in": 0.349
+       },
+       {
+        "t": 0.72,
+        "pose": {
+         "asas": 0.0
+        },
+        "ease": "out",
+        "in": 0.72
+       },
+       {
+        "t": 1.091,
+        "pose": {
+         "anda": 2.0
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 1.463,
+        "pose": {
+         "anda": 2.5
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 1.463,
+        "pose": {
+         "asas": 1.0
+        },
+        "ease": "out",
+        "in": 0.743
+       },
+       {
+        "t": 1.834,
+        "pose": {
+         "anda": 3.0
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 2.206,
+        "pose": {
+         "anda": 3.5
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 2.206,
+        "pose": {
+         "asas": 0.0
+        },
+        "ease": "out",
+        "in": 0.743
+       },
+       {
+        "t": 2.577,
+        "pose": {
+         "anda": 4.0
+        },
+        "ease": "inout",
+        "in": 0.371
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 470,
+      "y": 1010,
+      "depth": 1.15,
+      "turn": 0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "balanco",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1450,
+      "y": 1010,
+      "depth": 1.15,
+      "turn": -0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "balanco",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 2,
+    "cenario": "plano_gelo",
+    "camera": {
+     "x": 1300,
+     "y": 700,
+     "zoom": 1.45,
+     "zoom_fim": 1.5
+    },
+    "callout": [
+     {
+      "t": 2.28,
+      "text": "TIC, TIC!",
+      "color": "laranja"
+     }
+    ],
+    "objetos": {
+     "ping": {
+      "id": "pinguim",
+      "x": 1150,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.5
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.371,
+        "pose": {
+         "anda": 1.0
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 0.743,
+        "pose": {
+         "anda": 1.5
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 1.114,
+        "pose": {
+         "anda": 2.0
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 1.486,
+        "pose": {
+         "anda": 2.5
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 1.857,
+        "pose": {
+         "anda": 3.0
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 2.229,
+        "pose": {
+         "anda": 3.5
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 2.577,
+        "pose": {
+         "anda": 4.0
+        },
+        "ease": "inout",
+        "in": 0.348
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 1500,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "pezinho",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 2,
+    "cenario": "danca_ondas_rosa",
+    "fx": [
+     "confete"
+    ],
+    "callout": [
+     {
+      "t": 1.57,
+      "text": "Ê!",
+      "color": "laranja"
+     }
+    ],
+    "objetos": {
+     "p1": {
+      "id": "pinguim",
+      "x": 700,
+      "y": 1010,
+      "z": 2,
+      "depth": 0.9,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.5
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.371,
+        "pose": {
+         "anda": 1.0
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 0.743,
+        "pose": {
+         "anda": 1.5
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 1.091,
+        "pose": {
+         "anda": 2.0
+        },
+        "ease": "inout",
+        "in": 0.348
+       },
+       {
+        "t": 1.462,
+        "pose": {
+         "anda": 2.5
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 1.834,
+        "pose": {
+         "anda": 3.0
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 2.205,
+        "pose": {
+         "anda": 3.5
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 2.577,
+        "pose": {
+         "anda": 4.0
+        },
+        "ease": "inout",
+        "in": 0.372
+       }
+      ]
+     },
+     "p2": {
+      "id": "pinguim",
+      "x": 1220,
+      "y": 1010,
+      "z": 2,
+      "depth": 0.9,
+      "pose": {
+       "lado": -1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.5
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 1.0
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.371,
+        "pose": {
+         "anda": 1.5
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 0.743,
+        "pose": {
+         "anda": 2.0
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 1.091,
+        "pose": {
+         "anda": 2.5
+        },
+        "ease": "inout",
+        "in": 0.348
+       },
+       {
+        "t": 1.462,
+        "pose": {
+         "anda": 3.0
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 1.834,
+        "pose": {
+         "anda": 3.5
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 2.205,
+        "pose": {
+         "anda": 4.0
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 2.577,
+        "pose": {
+         "anda": 4.5
+        },
+        "ease": "inout",
+        "in": 0.372
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 420,
+      "y": 1010,
+      "depth": 1.2,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 1500,
+      "y": 1010,
+      "depth": 1.2,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "refrao#5": [
+   {
+    "linhas": 2,
+    "cenario": "plano_gelo",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "flash": true,
+    "callout": [
+     {
+      "t": 0.15,
+      "text": "MAIS RÁPIDO AINDA!",
+      "color": "vermelho"
+     }
+    ],
+    "objetos": {
+     "p1": {
+      "id": "pinguim",
+      "x": 2150,
+      "y": 930,
+      "z": 1,
+      "depth": 0.8,
+      "pose": {
+       "lado": -1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 2150
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.5
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.371,
+        "pose": {
+         "anda": 1.0
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 0.743,
+        "pose": {
+         "anda": 1.5
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 1.114,
+        "pose": {
+         "anda": 2.0
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 1.463,
+        "pose": {
+         "anda": 2.5
+        },
+        "ease": "inout",
+        "in": 0.349
+       },
+       {
+        "t": 1.834,
+        "pose": {
+         "anda": 3.0
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 2.206,
+        "pose": {
+         "anda": 3.5
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 2.537,
+        "pose": {
+         "x": 1150
+        },
+        "ease": "linear",
+        "in": 2.537
+       }
+      ]
+     },
+     "p2": {
+      "id": "pinguim",
+      "x": 2350,
+      "y": 930,
+      "z": 1,
+      "depth": 0.752,
+      "pose": {
+       "lado": -1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 2350
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.25
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.75
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.371,
+        "pose": {
+         "anda": 1.25
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 0.743,
+        "pose": {
+         "anda": 1.75
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 1.114,
+        "pose": {
+         "anda": 2.25
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 1.463,
+        "pose": {
+         "anda": 2.75
+        },
+        "ease": "inout",
+        "in": 0.349
+       },
+       {
+        "t": 1.834,
+        "pose": {
+         "anda": 3.25
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 2.206,
+        "pose": {
+         "anda": 3.75
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 2.537,
+        "pose": {
+         "x": 1350
+        },
+        "ease": "linear",
+        "in": 2.537
+       }
+      ]
+     },
+     "p3": {
+      "id": "pinguim",
+      "x": 2550,
+      "y": 930,
+      "z": 1,
+      "depth": 0.7040000000000001,
+      "pose": {
+       "lado": -1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 2550
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.5
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 1.0
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.371,
+        "pose": {
+         "anda": 1.5
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 0.743,
+        "pose": {
+         "anda": 2.0
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 1.114,
+        "pose": {
+         "anda": 2.5
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 1.463,
+        "pose": {
+         "anda": 3.0
+        },
+        "ease": "inout",
+        "in": 0.349
+       },
+       {
+        "t": 1.834,
+        "pose": {
+         "anda": 3.5
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 2.206,
+        "pose": {
+         "anda": 4.0
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 2.537,
+        "pose": {
+         "x": 1550
+        },
+        "ease": "linear",
+        "in": 2.537
+       }
+      ]
+     },
+     "p4": {
+      "id": "pinguim",
+      "x": 2750,
+      "y": 930,
+      "z": 1,
+      "depth": 0.8,
+      "pose": {
+       "lado": -1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 2750
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.75
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 1.25
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.371,
+        "pose": {
+         "anda": 1.75
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 0.743,
+        "pose": {
+         "anda": 2.25
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 1.114,
+        "pose": {
+         "anda": 2.75
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 1.463,
+        "pose": {
+         "anda": 3.25
+        },
+        "ease": "inout",
+        "in": 0.349
+       },
+       {
+        "t": 1.834,
+        "pose": {
+         "anda": 3.75
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 2.206,
+        "pose": {
+         "anda": 4.25
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 2.537,
+        "pose": {
+         "x": 1750
+        },
+        "ease": "linear",
+        "in": 2.537
+       }
+      ]
+     },
+     "p5": {
+      "id": "pinguim",
+      "x": 2950,
+      "y": 930,
+      "z": 1,
+      "depth": 0.752,
+      "pose": {
+       "lado": -1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 2950
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 1.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 1.5
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.371,
+        "pose": {
+         "anda": 2.0
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 0.743,
+        "pose": {
+         "anda": 2.5
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 1.114,
+        "pose": {
+         "anda": 3.0
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 1.463,
+        "pose": {
+         "anda": 3.5
+        },
+        "ease": "inout",
+        "in": 0.349
+       },
+       {
+        "t": 1.834,
+        "pose": {
+         "anda": 4.0
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 2.206,
+        "pose": {
+         "anda": 4.5
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 2.537,
+        "pose": {
+         "x": 1950
+        },
+        "ease": "linear",
+        "in": 2.537
+       }
+      ]
+     },
+     "p6": {
+      "id": "pinguim",
+      "x": 3150,
+      "y": 930,
+      "z": 1,
+      "depth": 0.7040000000000001,
+      "pose": {
+       "lado": -1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 3150
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 1.25
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 1.75
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.371,
+        "pose": {
+         "anda": 2.25
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 0.743,
+        "pose": {
+         "anda": 2.75
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 1.114,
+        "pose": {
+         "anda": 3.25
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 1.463,
+        "pose": {
+         "anda": 3.75
+        },
+        "ease": "inout",
+        "in": 0.349
+       },
+       {
+        "t": 1.834,
+        "pose": {
+         "anda": 4.25
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 2.206,
+        "pose": {
+         "anda": 4.75
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 2.537,
+        "pose": {
+         "x": 2150
+        },
+        "ease": "linear",
+        "in": 2.537
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 700,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "pulinho",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1000,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "pulinho",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 2,
+    "cenario": "danca_raios_vermelho",
+    "fx": [
+     "notas"
+    ],
+    "callout": [
+     {
+      "t": 1.31,
+      "text": "BALANÇA, BALANÇA!",
+      "color": "rosa"
+     }
+    ],
+    "objetos": {
+     "ping": {
+      "id": "pinguim",
+      "x": 960,
+      "y": 1010,
+      "z": 2,
+      "depth": 1.05,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.5
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "asas": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "asas": 1.0
+        },
+        "ease": "out",
+        "in": 0.0
+       },
+       {
+        "t": 0.372,
+        "pose": {
+         "anda": 1.0
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 0.743,
+        "pose": {
+         "anda": 1.5
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 0.743,
+        "pose": {
+         "asas": 0.0
+        },
+        "ease": "out",
+        "in": 0.743
+       },
+       {
+        "t": 1.115,
+        "pose": {
+         "anda": 2.0
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 1.463,
+        "pose": {
+         "anda": 2.5
+        },
+        "ease": "inout",
+        "in": 0.348
+       },
+       {
+        "t": 1.463,
+        "pose": {
+         "asas": 1.0
+        },
+        "ease": "out",
+        "in": 0.72
+       },
+       {
+        "t": 1.835,
+        "pose": {
+         "anda": 3.0
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 2.206,
+        "pose": {
+         "anda": 3.5
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 2.206,
+        "pose": {
+         "asas": 0.0
+        },
+        "ease": "out",
+        "in": 0.743
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 470,
+      "y": 1010,
+      "depth": 1.15,
+      "turn": 0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "balanco",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1450,
+      "y": 1010,
+      "depth": 1.15,
+      "turn": -0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "balanco",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 2,
+    "cenario": "plano_gelo",
+    "camera": {
+     "x": 1300,
+     "y": 700,
+     "zoom": 1.45,
+     "zoom_fim": 1.5
+    },
+    "callout": [
+     {
+      "t": 1.95,
+      "text": "TIC, TIC!",
+      "color": "laranja"
+     }
+    ],
+    "objetos": {
+     "ping": {
+      "id": "pinguim",
+      "x": 1150,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.5
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.348,
+        "pose": {
+         "anda": 1.0
+        },
+        "ease": "inout",
+        "in": 0.348
+       },
+       {
+        "t": 0.72,
+        "pose": {
+         "anda": 1.5
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 1.091,
+        "pose": {
+         "anda": 2.0
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 1.463,
+        "pose": {
+         "anda": 2.5
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 1.811,
+        "pose": {
+         "anda": 3.0
+        },
+        "ease": "inout",
+        "in": 0.348
+       },
+       {
+        "t": 2.182,
+        "pose": {
+         "anda": 3.5
+        },
+        "ease": "inout",
+        "in": 0.371
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 1500,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "pezinho",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 2,
+    "cenario": "danca_bolinhas_amarelo",
+    "fx": [
+     "confete"
+    ],
+    "callout": [
+     {
+      "t": 1.38,
+      "text": "HA HA HA!",
+      "color": "vermelho"
+     }
+    ],
+    "objetos": {
+     "p1": {
+      "id": "pinguim",
+      "x": 700,
+      "y": 1010,
+      "z": 2,
+      "depth": 0.9,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.5
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.371,
+        "pose": {
+         "anda": 1.0
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 0.743,
+        "pose": {
+         "anda": 1.5
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 1.091,
+        "pose": {
+         "anda": 2.0
+        },
+        "ease": "inout",
+        "in": 0.348
+       },
+       {
+        "t": 1.463,
+        "pose": {
+         "anda": 2.5
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 1.834,
+        "pose": {
+         "anda": 3.0
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 2.206,
+        "pose": {
+         "anda": 3.5
+        },
+        "ease": "inout",
+        "in": 0.372
+       }
+      ]
+     },
+     "p2": {
+      "id": "pinguim",
+      "x": 1220,
+      "y": 1010,
+      "z": 2,
+      "depth": 0.9,
+      "pose": {
+       "lado": -1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.5
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 1.0
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.371,
+        "pose": {
+         "anda": 1.5
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 0.743,
+        "pose": {
+         "anda": 2.0
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 1.091,
+        "pose": {
+         "anda": 2.5
+        },
+        "ease": "inout",
+        "in": 0.348
+       },
+       {
+        "t": 1.463,
+        "pose": {
+         "anda": 3.0
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 1.834,
+        "pose": {
+         "anda": 3.5
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 2.206,
+        "pose": {
+         "anda": 4.0
+        },
+        "ease": "inout",
+        "in": 0.372
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 420,
+      "y": 1010,
+      "depth": 1.2,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": 0.98
+       },
+       {
+        "t": 1.08,
+        "do": "laugh",
+        "dur": "resto"
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 1500,
+      "y": 1010,
+      "depth": 1.2,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": 0.98
+       },
+       {
+        "t": 1.18,
+        "do": "laugh",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "intervalo#1": [
+   {
+    "linhas": 1,
+    "cenario": "danca_raios_rosa",
+    "camera": "close:laurinha",
+    "callout": "BORA, TURMINHA!",
+    "atores": {
+     "laurinha": {
+      "x": 960,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "apontar_camera",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_gelo",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "fx": [
+     "confete"
+    ],
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "LAURINHA E LUISINHO!",
+      "color": "rosa"
+     }
+    ],
+    "objetos": {
+     "ping": {
+      "id": "pinguim",
+      "x": 1300,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.5
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "asas": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "asas": 1.0
+        },
+        "ease": "out",
+        "in": 0.0
+       },
+       {
+        "t": 0.372,
+        "pose": {
+         "anda": 1.0
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 0.743,
+        "pose": {
+         "anda": 1.5
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 0.743,
+        "pose": {
+         "asas": 0.0
+        },
+        "ease": "out",
+        "in": 0.743
+       },
+       {
+        "t": 1.115,
+        "pose": {
+         "anda": 2.0
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 1.486,
+        "pose": {
+         "anda": 2.5
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 1.486,
+        "pose": {
+         "asas": 1.0
+        },
+        "ease": "out",
+        "in": 0.743
+       },
+       {
+        "t": 1.858,
+        "pose": {
+         "anda": 3.0
+        },
+        "ease": "inout",
+        "in": 0.372
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 800,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1800,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "intervalo#2": [
+   {
+    "linhas": 1,
+    "cenario": "danca_xadrez_vermelho",
+    "camera": "medio:luisinho",
+    "fx": [
+     "confete"
+    ],
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "ZUM-ZUM, QUE MASSA!",
+      "color": "amarelo"
+     }
+    ],
+    "atores": {
+     "luisinho": {
+      "x": 960,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "bacana",
+        "dur": 1.4
+       },
+       {
+        "t": 1.6,
+        "do": "dance",
+        "style": "festa",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "intervalo#3": [
+   {
+    "linhas": 1,
+    "cenario": "danca_raios_laranja",
+    "flash": true,
+    "callout": [
+     {
+      "t": 0.05,
+      "text": "MAIS RÁPIDO!",
+      "color": "amarelo"
+     }
+    ],
+    "atores": {
+     "luisinho": {
+      "x": 960,
+      "y": 1010,
+      "depth": 1.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "cheguei",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "intervalo#4": [
+   {
+    "linhas": 1,
+    "cenario": "danca_raios_vermelho",
+    "flash": true,
+    "fx": [
+     "estrelas"
+    ],
+    "callout": [
+     {
+      "t": 0.1,
+      "text": "MAIS RÁPIDO AINDA!",
+      "color": "amarelo"
+     }
+    ],
+    "objetos": {
+     "ping": {
+      "id": "pinguim",
+      "x": 1300,
+      "y": 1010,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.5
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "asas": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "asas": 1.0
+        },
+        "ease": "out",
+        "in": 0.0
+       },
+       {
+        "t": 0.372,
+        "pose": {
+         "anda": 1.0
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 0.372,
+        "pose": {
+         "asas": 0.0
+        },
+        "ease": "out",
+        "in": 0.372
+       },
+       {
+        "t": 0.79,
+        "pose": {
+         "anda": 1.5
+        },
+        "ease": "inout",
+        "in": 0.418
+       },
+       {
+        "t": 0.79,
+        "pose": {
+         "asas": 1.0
+        },
+        "ease": "out",
+        "in": 0.418
+       },
+       {
+        "t": 1.231,
+        "pose": {
+         "anda": 2.0
+        },
+        "ease": "inout",
+        "in": 0.441
+       },
+       {
+        "t": 1.231,
+        "pose": {
+         "asas": 0.0
+        },
+        "ease": "out",
+        "in": 0.441
+       },
+       {
+        "t": 1.649,
+        "pose": {
+         "anda": 2.5
+        },
+        "ease": "inout",
+        "in": 0.418
+       },
+       {
+        "t": 1.649,
+        "pose": {
+         "asas": 1.0
+        },
+        "ease": "out",
+        "in": 0.418
+       },
+       {
+        "t": 2.021,
+        "pose": {
+         "anda": 3.0
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 2.021,
+        "pose": {
+         "asas": 0.0
+        },
+        "ease": "out",
+        "in": 0.372
+       },
+       {
+        "t": 2.392,
+        "pose": {
+         "anda": 3.5
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 2.392,
+        "pose": {
+         "asas": 1.0
+        },
+        "ease": "out",
+        "in": 0.371
+       },
+       {
+        "t": 2.764,
+        "pose": {
+         "anda": 4.0
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 2.764,
+        "pose": {
+         "asas": 0.0
+        },
+        "ease": "out",
+        "in": 0.372
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 600,
+      "y": 1010,
+      "depth": 1.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "cheguei",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "verso#2": [
+   {
+    "linhas": 1,
+    "cenario": "plano_gelo",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "callout": [
+     {
+      "t": 2.41,
+      "text": "UIII!",
+      "color": "rosa"
+     }
+    ],
+    "objetos": {
+     "ping": {
+      "id": "pinguim",
+      "x": 400,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 400,
+         "barriga": 0.0
+        }
+       },
+       {
+        "t": 0.5,
+        "pose": {
+         "barriga": 1.0
+        },
+        "ease": "out",
+        "in": 0.5
+       },
+       {
+        "t": 0.5,
+        "pose": {
+         "x": 400
+        },
+        "in": 0.5
+       },
+       {
+        "t": 2.538,
+        "pose": {
+         "x": 2300
+        },
+        "ease": "out",
+        "in": 2.038
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 1300,
+      "y": 600,
+      "fly": 1,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.6,
+        "do": "laugh",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_gelo",
+    "camera": {
+     "x": 1500,
+     "y": 500,
+     "zoom": 1.2,
+     "zoom_fim": 1.25
+    },
+    "flash": false,
+    "callout": [
+     {
+      "t": 2.76,
+      "text": "SPLASH!",
+      "color": "azul"
+     }
+    ],
+    "objetos": {
+     "ping": {
+      "id": "pinguim",
+      "x": 1300,
+      "y": 760,
+      "z": 1,
+      "depth": 0.85,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "x": 1300,
+         "y": 760
+        }
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "pulo": 1.0,
+         "x": 1600
+        },
+        "ease": "linear",
+        "in": 0.9
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "y": 760
+        },
+        "in": 0.9
+       },
+       {
+        "t": 1.3,
+        "pose": {
+         "y": 1300
+        },
+        "ease": "in",
+        "in": 0.4
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_mar_gelado",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "callout": [
+     {
+      "t": 3.22,
+      "text": "UAU!",
+      "color": "amarelo"
+     }
+    ],
+    "objetos": {
+     "ping": {
+      "id": "pinguim",
+      "x": 300,
+      "y": 620,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1,
+       "barriga": 1.0
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 200,
+         "y": 700
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "asas": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "asas": 1.0
+        },
+        "ease": "out",
+        "in": 0.0
+       },
+       {
+        "t": 0.372,
+        "pose": {
+         "asas": 0.0
+        },
+        "ease": "out",
+        "in": 0.372
+       },
+       {
+        "t": 0.743,
+        "pose": {
+         "asas": 1.0
+        },
+        "ease": "out",
+        "in": 0.371
+       },
+       {
+        "t": 1.115,
+        "pose": {
+         "asas": 0.0
+        },
+        "ease": "out",
+        "in": 0.372
+       },
+       {
+        "t": 1.486,
+        "pose": {
+         "asas": 1.0
+        },
+        "ease": "out",
+        "in": 0.371
+       },
+       {
+        "t": 1.66,
+        "pose": {
+         "x": 1300,
+         "y": 520
+        },
+        "ease": "inout",
+        "in": 1.66
+       },
+       {
+        "t": 1.834,
+        "pose": {
+         "asas": 0.0
+        },
+        "ease": "out",
+        "in": 0.348
+       },
+       {
+        "t": 2.206,
+        "pose": {
+         "asas": 1.0
+        },
+        "ease": "out",
+        "in": 0.372
+       },
+       {
+        "t": 2.577,
+        "pose": {
+         "asas": 0.0
+        },
+        "ease": "out",
+        "in": 0.371
+       },
+       {
+        "t": 2.949,
+        "pose": {
+         "asas": 1.0
+        },
+        "ease": "out",
+        "in": 0.372
+       },
+       {
+        "t": 3.28,
+        "pose": {
+         "x": 2400,
+         "y": 680
+        },
+        "ease": "inout",
+        "in": 1.62
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_gelo",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "callout": [
+     {
+      "t": 2.68,
+      "text": "HA HA!",
+      "color": "laranja"
+     }
+    ],
+    "objetos": {
+     "ping": {
+      "id": "pinguim",
+      "x": 1300,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "asas": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "asas": 1.0
+        },
+        "ease": "out",
+        "in": 0.0
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0
+        }
+       },
+       {
+        "t": 0.372,
+        "pose": {
+         "asas": 0.0
+        },
+        "ease": "out",
+        "in": 0.372
+       },
+       {
+        "t": 0.743,
+        "pose": {
+         "asas": 1.0
+        },
+        "ease": "out",
+        "in": 0.371
+       },
+       {
+        "t": 0.8,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.8
+       },
+       {
+        "t": 1.115,
+        "pose": {
+         "asas": 0.0
+        },
+        "ease": "out",
+        "in": 0.372
+       },
+       {
+        "t": 1.487,
+        "pose": {
+         "asas": 1.0
+        },
+        "ease": "out",
+        "in": 0.372
+       },
+       {
+        "t": 1.7,
+        "pose": {
+         "lid": 0.0
+        }
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "lid": 1.0
+        },
+        "in": 0.1
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 800,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 1.0,
+        "do": "laugh",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1800,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 1.1,
+        "do": "laugh",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "ponte#1": [
+   {
+    "linhas": 1,
+    "cenario": "plano_gelo",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "callout": [
+     {
+      "t": 0.1,
+      "text": "BRAÇO COLADO!",
+      "color": "azul"
+     }
+    ],
+    "objetos": {
+     "ping": {
+      "id": "pinguim",
+      "x": 1300,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.5
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.348,
+        "pose": {
+         "anda": 1.0
+        },
+        "ease": "inout",
+        "in": 0.348
+       },
+       {
+        "t": 0.72,
+        "pose": {
+         "anda": 1.5
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 1.092,
+        "pose": {
+         "anda": 2.0
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 1.463,
+        "pose": {
+         "anda": 2.5
+        },
+        "ease": "inout",
+        "in": 0.371
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 800,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "marcha",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1800,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "marcha",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_gelo",
+    "camera": {
+     "x": 1300,
+     "y": 720,
+     "zoom": 1.4,
+     "zoom_fim": 1.45
+    },
+    "callout": [
+     {
+      "t": 0.1,
+      "text": "PÉ DE PATO!",
+      "color": "laranja"
+     }
+    ],
+    "objetos": {
+     "ping": {
+      "id": "pinguim",
+      "x": 1300,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.5
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.371,
+        "pose": {
+         "anda": 1.0
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 0.743,
+        "pose": {
+         "anda": 1.5
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 1.091,
+        "pose": {
+         "anda": 2.0
+        },
+        "ease": "inout",
+        "in": 0.348
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 950,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "pezinho",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1650,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "pezinho",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_gelo",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "UIII!",
+      "color": "rosa"
+     }
+    ],
+    "objetos": {
+     "ping": {
+      "id": "pinguim",
+      "x": 500,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "barriga": 1.0,
+         "x": 500
+        }
+       },
+       {
+        "t": 1.446,
+        "pose": {
+         "x": 2000
+        },
+        "ease": "out",
+        "in": 1.446
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 900,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "slip"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1750,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.25,
+        "do": "slip"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_gelo",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "callout": [
+     {
+      "t": 1.08,
+      "text": "FLAP, FLAP!",
+      "color": "amarelo"
+     }
+    ],
+    "objetos": {
+     "ping": {
+      "id": "pinguim",
+      "x": 1300,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "asas": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "asas": 1.0
+        },
+        "ease": "out",
+        "in": 0.0
+       },
+       {
+        "t": 0.372,
+        "pose": {
+         "asas": 0.0
+        },
+        "ease": "out",
+        "in": 0.372
+       },
+       {
+        "t": 0.744,
+        "pose": {
+         "asas": 1.0
+        },
+        "ease": "out",
+        "in": 0.372
+       },
+       {
+        "t": 1.115,
+        "pose": {
+         "asas": 0.0
+        },
+        "ease": "out",
+        "in": 0.371
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 800,
+      "turn": 0.3,
+      "pose": {
+       "buzz": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "asinhas",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1800,
+      "turn": -0.3,
+      "pose": {
+       "buzz": 1.0
+      },
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "asinhas",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "verso#3": [
+   {
+    "linhas": 1,
+    "cenario": "plano_gelo",
+    "camera": {
+     "x": 1300,
+     "y": 680,
+     "zoom": 1.35,
+     "zoom_fim": 1.4
+    },
+    "callout": [
+     {
+      "t": 1.42,
+      "text": "TIC, TIC, TIC!",
+      "color": "rosa"
+     }
+    ],
+    "objetos": {
+     "ping": {
+      "id": "pinguim",
+      "x": 1500,
+      "y": 930,
+      "z": 2,
+      "depth": 0.5,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 1150
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.5
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.349,
+        "pose": {
+         "anda": 1.0
+        },
+        "ease": "inout",
+        "in": 0.349
+       },
+       {
+        "t": 0.72,
+        "pose": {
+         "anda": 1.5
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 1.092,
+        "pose": {
+         "anda": 2.0
+        },
+        "ease": "inout",
+        "in": 0.372
+       },
+       {
+        "t": 1.463,
+        "pose": {
+         "anda": 2.5
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 1.795,
+        "pose": {
+         "x": 1750
+        },
+        "ease": "linear",
+        "in": 1.795
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 820,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "pezinho",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_gelo",
+    "camera": {
+     "x": 1300,
+     "y": 480,
+     "zoom": 1.0,
+     "zoom_fim": 1.04
+    },
+    "callout": [
+     {
+      "t": 2.42,
+      "text": "TUM, TUM!",
+      "color": "roxo"
+     }
+    ],
+    "objetos": {
+     "ping": {
+      "id": "pinguim",
+      "x": 1450,
+      "y": 960,
+      "z": 2,
+      "depth": 1.75,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.0
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.5
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.743,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.743
+       },
+       {
+        "t": 0.743,
+        "pose": {
+         "anda": 1.0
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 1.463,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.72
+       },
+       {
+        "t": 1.463,
+        "pose": {
+         "anda": 1.5
+        },
+        "ease": "inout",
+        "in": 0.72
+       },
+       {
+        "t": 2.206,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.743
+       },
+       {
+        "t": 2.206,
+        "pose": {
+         "anda": 2.0
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 2.925,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.719
+       },
+       {
+        "t": 2.925,
+        "pose": {
+         "anda": 2.5
+        },
+        "ease": "inout",
+        "in": 0.719
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 700,
+      "turn": 0.3,
+      "expr": "surprised",
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "take"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_gelo",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "callout": [
+     {
+      "t": 2.49,
+      "text": "CORRE!",
+      "color": "laranja"
+     }
+    ],
+    "objetos": {
+     "ping": {
+      "id": "pinguim",
+      "x": -200,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": -200
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 1.0
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.395,
+        "pose": {
+         "anda": 2.0
+        },
+        "ease": "inout",
+        "in": 0.395
+       },
+       {
+        "t": 0.766,
+        "pose": {
+         "anda": 3.0
+        },
+        "ease": "inout",
+        "in": 0.371
+       },
+       {
+        "t": 1.114,
+        "pose": {
+         "anda": 4.0
+        },
+        "ease": "inout",
+        "in": 0.348
+       },
+       {
+        "t": 1.463,
+        "pose": {
+         "anda": 5.0
+        },
+        "ease": "inout",
+        "in": 0.349
+       },
+       {
+        "t": 1.811,
+        "pose": {
+         "anda": 6.0
+        },
+        "ease": "inout",
+        "in": 0.348
+       },
+       {
+        "t": 2.136,
+        "pose": {
+         "anda": 7.0
+        },
+        "ease": "inout",
+        "in": 0.325
+       },
+       {
+        "t": 2.461,
+        "pose": {
+         "anda": 8.0
+        },
+        "ease": "inout",
+        "in": 0.325
+       },
+       {
+        "t": 2.786,
+        "pose": {
+         "anda": 9.0
+        },
+        "ease": "inout",
+        "in": 0.325
+       },
+       {
+        "t": 3.135,
+        "pose": {
+         "anda": 10.0
+        },
+        "ease": "inout",
+        "in": 0.349
+       },
+       {
+        "t": 3.21,
+        "pose": {
+         "x": 2800
+        },
+        "ease": "linear",
+        "in": 3.21
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 300,
+      "turn": 0.4,
+      "acoes": [
+       {
+        "t": 0.4,
+        "do": "run",
+        "to_x": 2700
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_gelo",
+    "camera": {
+     "x": 1300,
+     "y": 600,
+     "zoom": 1.2,
+     "zoom_fim": 1.25
+    },
+    "callout": [
+     {
+      "t": 1.82,
+      "text": "UFA!",
+      "color": "verde"
+     }
+    ],
+    "objetos": {
+     "ping": {
+      "id": "pinguim",
+      "x": 1550,
+      "y": 930,
+      "z": 2,
+      "depth": 1.0,
+      "pose": {
+       "lado": -1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "lid": 0.0,
+         "barriga": 0.0
+        }
+       },
+       {
+        "t": 1.0,
+        "pose": {
+         "lid": 1.0
+        },
+        "in": 1.0
+       },
+       {
+        "t": 1.2,
+        "pose": {
+         "barriga": 1.0
+        },
+        "ease": "inout",
+        "in": 1.2
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 1000,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "ofegante",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "final#1": [
+   {
+    "linhas": 1,
+    "cenario": "danca_raios_azul",
+    "camera": "close:laurinha",
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "GOSTOU?",
+      "color": "rosa"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 960,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "apontar_camera",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "danca_bolinhas_amarelo",
+    "callout": [
+     {
+      "t": 0.4,
+      "text": "DÁ UM JOINHA!",
+      "color": "azul"
+     }
+    ],
+    "fx": [
+     "estrelas"
+    ],
+    "objetos": {
+     "joinha": {
+      "x": 1380,
+      "y": 900,
+      "z": 3,
+      "depth": 1.3,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "escala": 0.0
+        }
+       },
+       {
+        "t": 0.4,
+        "pose": {
+         "escala": 1.0
+        },
+        "ease": "back",
+        "in": 0.4
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 680,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "bacana",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_casa_frente",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.1
+    },
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "CHAMA O PAPAI E A MAMÃE!",
+      "color": "verde"
+     }
+    ],
+    "atores": {
+     "mamae": {
+      "x": 1100,
+      "turn": 0.2,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "wave",
+        "dur": 1.4
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 1450,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "point",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "danca_raios_vermelho",
+    "callout": [
+     {
+      "t": 0.5,
+      "text": "INSCREVA-SE!",
+      "color": "vermelho"
+     }
+    ],
+    "fx": [
+     "coracoes"
+    ],
+    "objetos": {
+     "botao": {
+      "id": "botao_inscrever",
+      "x": 1260,
+      "y": 760,
+      "z": 3,
+      "depth": 1.2,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "escala": 0.0,
+         "aperta": 0.0
+        }
+       },
+       {
+        "t": 0.4,
+        "pose": {
+         "escala": 1.0
+        },
+        "ease": "back",
+        "in": 0.4
+       },
+       {
+        "t": 1.6,
+        "pose": {
+         "aperta": 1.0
+        },
+        "ease": "out",
+        "in": 1.6
+       },
+       {
+        "t": 1.9,
+        "pose": {
+         "aperta": 0.0
+        },
+        "ease": "in",
+        "in": 0.3
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 600,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "point",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "final#2": [
+   {
+    "linhas": 1,
+    "cenario": "plano_gelo",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "fx": [
+     "coracoes"
+    ],
+    "callout": [
+     {
+      "t": 2.27,
+      "text": "TCHAU!",
+      "color": "amarelo"
+     }
+    ],
+    "objetos": {
+     "p1": {
+      "id": "pinguim",
+      "x": 1150,
+      "y": 930,
+      "z": 2,
+      "depth": 0.9,
+      "pose": {
+       "lado": 1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "asas": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "asas": 1.0
+        },
+        "ease": "out",
+        "in": 0.0
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.5
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.766,
+        "pose": {
+         "asas": 0.0
+        },
+        "ease": "out",
+        "in": 0.766
+       },
+       {
+        "t": 0.766,
+        "pose": {
+         "anda": 1.0
+        },
+        "ease": "inout",
+        "in": 0.766
+       },
+       {
+        "t": 1.486,
+        "pose": {
+         "asas": 1.0
+        },
+        "ease": "out",
+        "in": 0.72
+       },
+       {
+        "t": 1.486,
+        "pose": {
+         "anda": 1.5
+        },
+        "ease": "inout",
+        "in": 0.72
+       },
+       {
+        "t": 2.159,
+        "pose": {
+         "asas": 0.0
+        },
+        "ease": "out",
+        "in": 0.673
+       },
+       {
+        "t": 2.159,
+        "pose": {
+         "anda": 2.0
+        },
+        "ease": "inout",
+        "in": 0.673
+       },
+       {
+        "t": 2.902,
+        "pose": {
+         "asas": 1.0
+        },
+        "ease": "out",
+        "in": 0.743
+       },
+       {
+        "t": 2.902,
+        "pose": {
+         "anda": 2.5
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 3.622,
+        "pose": {
+         "asas": 0.0
+        },
+        "ease": "out",
+        "in": 0.72
+       },
+       {
+        "t": 3.622,
+        "pose": {
+         "anda": 3.0
+        },
+        "ease": "inout",
+        "in": 0.72
+       },
+       {
+        "t": 4.319,
+        "pose": {
+         "asas": 1.0
+        },
+        "ease": "out",
+        "in": 0.697
+       },
+       {
+        "t": 4.319,
+        "pose": {
+         "anda": 3.5
+        },
+        "ease": "inout",
+        "in": 0.697
+       }
+      ]
+     },
+     "p2": {
+      "id": "pinguim",
+      "x": 1500,
+      "y": 930,
+      "z": 2,
+      "depth": 0.75,
+      "pose": {
+       "lado": -1
+      },
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "asas": 0.0
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "asas": 1.0
+        },
+        "ease": "out",
+        "in": 0.0
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 0.5
+        }
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "anda": 1.0
+        },
+        "ease": "inout",
+        "in": 0.0
+       },
+       {
+        "t": 0.766,
+        "pose": {
+         "asas": 0.0
+        },
+        "ease": "out",
+        "in": 0.766
+       },
+       {
+        "t": 0.766,
+        "pose": {
+         "anda": 1.5
+        },
+        "ease": "inout",
+        "in": 0.766
+       },
+       {
+        "t": 1.486,
+        "pose": {
+         "asas": 1.0
+        },
+        "ease": "out",
+        "in": 0.72
+       },
+       {
+        "t": 1.486,
+        "pose": {
+         "anda": 2.0
+        },
+        "ease": "inout",
+        "in": 0.72
+       },
+       {
+        "t": 2.159,
+        "pose": {
+         "asas": 0.0
+        },
+        "ease": "out",
+        "in": 0.673
+       },
+       {
+        "t": 2.159,
+        "pose": {
+         "anda": 2.5
+        },
+        "ease": "inout",
+        "in": 0.673
+       },
+       {
+        "t": 2.902,
+        "pose": {
+         "asas": 1.0
+        },
+        "ease": "out",
+        "in": 0.743
+       },
+       {
+        "t": 2.902,
+        "pose": {
+         "anda": 3.0
+        },
+        "ease": "inout",
+        "in": 0.743
+       },
+       {
+        "t": 3.622,
+        "pose": {
+         "asas": 0.0
+        },
+        "ease": "out",
+        "in": 0.72
+       },
+       {
+        "t": 3.622,
+        "pose": {
+         "anda": 3.5
+        },
+        "ease": "inout",
+        "in": 0.72
+       },
+       {
+        "t": 4.319,
+        "pose": {
+         "asas": 1.0
+        },
+        "ease": "out",
+        "in": 0.697
+       },
+       {
+        "t": 4.319,
+        "pose": {
+         "anda": 4.0
+        },
+        "ease": "inout",
+        "in": 0.697
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 750,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "tchau",
+        "dur": 3.0
+       },
+       {
+        "t": 3.3,
+        "do": "fly",
+        "dur": 1.4,
+        "to_x": -300,
+        "to_y": 300
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1900,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "tchau",
+        "dur": 3.0
+       },
+       {
+        "t": 3.4,
+        "do": "fly",
+        "dur": 1.4,
+        "to_x": 2900,
+        "to_y": 350
+       }
+      ]
+     }
+    }
+   }
+  ]
+ }
+}

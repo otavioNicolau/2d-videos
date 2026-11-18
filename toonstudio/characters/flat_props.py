@@ -1622,3 +1622,79 @@ class Capim(_Prop):
 
 
 PROPS.update({"carneirinho": Carneirinho, "cerquinha": Cerquinha, "capim": Capim})
+
+
+# ───────────────────────── 13 Andar de Pinguim ─────────────────────────
+
+
+class Pinguim(_Prop):
+    """Pinguim simpático "de casaca preta" com gravatinha vermelha. Canais:
+    `anda` (fase contínua: cada +1 = um passinho de cada lado — ginga e pezinho grudado);
+    `asas` 0→1 abre as asinhas (bate a asinha / tchau); `bico` 0→1 abre o bico; `barriga` 0→1 deita de barriga
+    (escorregar no gelo / nadar); `pulo` 0→1 arco do pulo; `lado` 1 olha p/ direita, −1 p/ esquerda; `lid` fecha os olhos;
+    `gravata` 1 mostra a gravatinha."""
+
+    def __init__(self):
+        super().__init__("pinguim", "Pinguim", (900, 760), (450, 720), 380,
+                         {"anda": 0.0, "asas": 0.0, "bico": 0.0, "barriga": 0.0, "pulo": 0.0, "lado": 1.0, "lid": 0.0,
+                          "gravata": 1.0})
+
+    def paint(self, k, P):
+        sx = 1.0 if P["lado"] >= 0 else -1.0
+        fase = math.sin(2 * math.pi * P["anda"])
+        bar = max(0.0, min(1.0, P["barriga"]))
+        ginga = 0.15 * fase * (1 - bar)
+        ang = ginga + 1.42 * bar * sx                                  # de barriga: cabeça para a frente (para onde olha)
+        y0 = -170 * math.sin(math.pi * max(0.0, min(1.0, P["pulo"]))) + 70 * bar
+        piv = (0.0, -12.0 - 180 * bar)
+
+        def T(x, y):
+            x = x * sx
+            dx, dy = x - piv[0], y - piv[1]
+            c, s = math.cos(ang), math.sin(ang)
+            return (piv[0] + dx * c - dy * s, piv[1] + dx * s + dy * c + y0)
+
+        def oval(x, y, rx, ry, fill, line, a=0.0):
+            q = T(x, y)
+            shape(k, ellipse_pts(q[0], q[1], rx, ry, a * sx + ang, 24), fill, line=line)
+
+        preto, plin, branco, blin, lar, llar = "#2E3A4F", "#1C2433", "#FFFFFF", "#C9D6E6", "#FF9A1F", "#C9661A"
+        for side in (-1, 1):                                            # pezinhos de pato (pé grudadinho)
+            lev = 22 * max(0.0, side * fase) * (1 - bar)
+            q = T(side * 42 + 18, -8 - lev) if bar < 0.5 else T(side * 40, -8)
+            shape(k, ellipse_pts(q[0], q[1], 46, 16, ang, 16), lar, line=llar)
+        a = max(0.0, min(1.0, P["asas"]))
+        for side in (-1, 1):                                            # asinhas (atrás do corpo quando fechadas)
+            ombro = (side * 96, -275)
+            th = side * (0.25 + 1.15 * a)                               # 0 = caída junto ao corpo, 1 = aberta
+            ponta = (ombro[0] + math.sin(th) * 150, ombro[1] + math.cos(th) * 150)
+            m = ((ombro[0] + ponta[0]) / 2, (ombro[1] + ponta[1]) / 2)
+            oval(m[0], m[1], 30, 82, preto, plin, a=-th)
+        oval(0, -195, 124, 178, preto, plin)                             # corpo (casaca)
+        oval(0, -180, 90, 150, branco, blin)                             # barriga + rostinho branco
+        oval(0, -300, 70, 46, branco, blin)
+        q = T(0, -230)
+        k.shape(ellipse_pts(q[0], q[1], 84, 120, ang, 24), fill=_rgba(branco), line=0)
+        for side in (-1, 1):                                            # olhos e bochechas
+            e = T(side * 32 + 6, -305)
+            if P["lid"] > 0.5:
+                ln(k, [(e[0] - 14, e[1]), (e[0], e[1] - 9), (e[0] + 14, e[1])], plin, w=LINE)
+            else:
+                shape(k, ellipse_pts(e[0], e[1], 15, 19, 0, 14), branco, line=plin)
+                k.dot(e[0] + 3 * sx, e[1] + 4, 8, _rgba("#111111"))
+            b = T(side * 58 + 6, -272)
+            k.shape(ellipse_pts(b[0], b[1], 15, 9, 0, 12), fill=_rgba("#FF9AB0", 0.8), line=0)
+        o = max(0.0, min(1.0, P["bico"]))                                 # bico de frente (abre no "pinguim!")
+        if o > 0.1:
+            q = T(0, -262)
+            shape(k, ellipse_pts(q[0], q[1], 18, 8 + 10 * o, ang, 14), "#C63A3A", line=llar)
+            shape(k, [T(-22, -258 + 4 * o), T(22, -258 + 4 * o), T(0, -236 + 8 * o)], lar, line=llar)
+        shape(k, [T(-30, -284 - 6 * o), T(30, -284 - 6 * o), T(0, -252 - 8 * o)], lar, line=llar)
+        if P.get("gravata", 1.0) > 0.5:                                  # gravatinha vermelha
+            for side in (-1, 1):
+                shape(k, [T(0, -226), T(side * 34, -244), T(side * 34, -206)], "#E9545D", line="#B83A42", smooth=False)
+            q = T(0, -226)
+            shape(k, ellipse_pts(q[0], q[1], 10, 10, 0, 12), "#E9545D", line="#B83A42")
+
+
+PROPS.update({"pinguim": Pinguim})

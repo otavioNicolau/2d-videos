@@ -462,9 +462,63 @@ def campo(rng) -> tuple[skia.Surface, int]:
     return s, w
 
 
+def gelo(rng) -> tuple[skia.Surface, int]:
+    """Polo gelado (Andar de Pinguim): céu clarinho, mar azul ao fundo com icebergs, chão de gelo branco-azulado com
+    montinhos de neve (atrás deles um pinguim pode se esconder) e risquinhos de gelo liso (para escorregar)."""
+    w = W_INT
+    s, c = _surf(w, H, 1.5)
+    F = Flat(c)
+    c.drawRect(skia.Rect(0, 0, w, H), skia.Paint(Color4f=skia.Color4f(*_rgba("#CDEBFF"))))
+    F.oval(2250, 160, 80, 80, "#FFF3B0")
+    for x, y, sc in ((380, 150, 1.2), (1250, 110, 1.5), (1900, 200, 1.0)):
+        F.cloud(x, y, sc)
+    F.shape([(-20, 520), (w + 20, 520), (w + 20, 700), (-20, 700)], "#4FA8E8", smooth=False)       # mar
+    for x, base, ww, hh in ((260, 560, 300, 230), (980, 540, 220, 160), (1700, 560, 360, 280), (2400, 545, 240, 190)):
+        F.shape([(x - ww / 2, base), (x - ww * 0.3, base - hh * 0.7), (x - ww * 0.05, base - hh), (x + ww * 0.2, base - hh * 0.8),
+                 (x + ww / 2, base)], "#F4FBFF", smooth=False)
+        F.shape([(x - ww * 0.05, base - hh), (x + ww * 0.2, base - hh * 0.8), (x + ww / 2, base), (x + ww * 0.05, base)], "#D5ECFA", smooth=False)
+    for j in range(14):
+        x, y = (j * 211) % w, 600 + (j * 37) % 80
+        F.line([(x, y), (x + 60, y)], "#BFE6FF", w=LINE)
+    F.shape([(-20, 690), (w * 0.3, 670), (w * 0.62, 700), (w + 20, 680), (w + 20, H + 20), (-20, H + 20)], "#F2F9FF")
+    for x, y, ww in ((180, 760, 260), (1150, 745, 200), (2050, 755, 300)):                        # montinhos de neve
+        F.oval(x, y, ww, 70, "#FFFFFF")
+        F.oval(x + ww * 0.3, y - 30, ww * 0.5, 50, "#FFFFFF")
+    for j in range(18):                                                                           # risquinhos de gelo liso
+        x, y = (j * 157 + 40) % w, 830 + (j * 61) % 220
+        F.line([(x, y), (x + 90, y - 6)], "#BFDDF2", w=LINE)
+    return s, w
+
+
+def mar_gelado(rng) -> tuple[skia.Surface, int]:
+    """Debaixo d'água no mar gelado (o pinguim "voa" nadando): faixas de azul, raios de luz, bolhinhas,
+    a beira do gelo lá em cima e algas e pedrinhas no fundo."""
+    w = W_INT
+    s, c = _surf(w, H, 1.5)
+    F = Flat(c)
+    c.drawRect(skia.Rect(0, 0, w, H), skia.Paint(Color4f=skia.Color4f(*_rgba("#3E9BE0"))))
+    for y0, col in ((360, "#3590D6"), (620, "#2C82C9"), (860, "#2474B8")):
+        F.shape([(-20, y0), (w + 20, y0 - 30), (w + 20, H + 20), (-20, H + 20)], col, smooth=False)
+    for x in (300, 900, 1500, 2100):                                                              # raios de luz
+        c.drawPath(skia.Path.Polygon([skia.Point(x, 0), skia.Point(x + 160, 0), skia.Point(x + 420, H), skia.Point(x + 220, H)], True),
+                   skia.Paint(AntiAlias=True, Color4f=skia.Color4f(*_rgba("#FFFFFF", 0.10))))
+    F.shape([(-20, -20), (w + 20, -20), (w + 20, 60), (w * 0.7, 90), (w * 0.4, 50), (-20, 80)], "#F2F9FF")   # gelo em cima
+    for _ in range(40):
+        x, y, r = rng.uniform(0, w), rng.uniform(120, 900), rng.uniform(6, 18)
+        c.drawCircle(x, y, r, skia.Paint(AntiAlias=True, Color4f=skia.Color4f(*_rgba("#CFEFFF", 0.7)), Style=skia.Paint.kStroke_Style,
+                                         StrokeWidth=3))
+    F.shape([(-20, 990), (w + 20, 970), (w + 20, H + 20), (-20, H + 20)], "#E8D29A")
+    for x in range(80, w, 260):                                                                   # algas
+        h = 180 + (x * 7) % 120
+        F.shape([(x - 14, 1000), (x - 30, 1000 - h * 0.5), (x, 1000 - h), (x + 26, 1000 - h * 0.5), (x + 14, 1000)], "#3DAE6E")
+    for x, rr in ((400, 40), (1300, 55), (2000, 35)):
+        F.oval(x, 1010, rr, rr * 0.6, "#9AA6B8")
+    return s, w
+
+
 SCENES = {"plano_banheiro": banheiro, "plano_quarto_rosa": lambda rng: quarto("rosa", rng), "plano_quarto_azul": lambda rng: quarto("azul", rng),
           "plano_cozinha": cozinha, "plano_casa_frente": casa_frente, "plano_escola": escola, "plano_ceu": ceu,
-          "plano_jardim": jardim, "plano_lagoa": lagoa, "plano_sala": sala, "plano_espaco": espaco, "plano_lua": lua_chao, "plano_campo": campo}
+          "plano_jardim": jardim, "plano_lagoa": lagoa, "plano_sala": sala, "plano_espaco": espaco, "plano_lua": lua_chao, "plano_campo": campo, "plano_gelo": gelo, "plano_mar_gelado": mar_gelado}
 
 
 def build(bg_id: str, out_dir: Path, scale: float = 1.5, seed: int = 11) -> dict:

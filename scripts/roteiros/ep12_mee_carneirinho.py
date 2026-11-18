@@ -427,7 +427,8 @@ for chave, planos in partes.items():
         d = d if d is not None else p.get("seg")
         for o in (p.get("objetos") or {}).values():
             if d and o.get("keys"):
-                o["keys"] = sorted([k for k in o["keys"] if k["t"] <= d - 0.02], key=lambda k: k["t"])
+                ks = [dict(k, t=round(min(k["t"], d - 0.04), 3)) if d - 0.04 < k["t"] <= d + 0.06 else k for k in o["keys"]]
+                o["keys"] = sorted([k for k in ks if k["t"] <= d - 0.02], key=lambda k: k["t"])   # chave no fim exato: puxa p/ dentro
 
 faltam = [k for k in INFO if k not in partes and k.split("#")[0] not in partes]
 assert not faltam, faltam

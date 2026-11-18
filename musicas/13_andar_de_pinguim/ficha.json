@@ -58,14 +58,110 @@
   170
  ],
  "alternativas": [],
- "status": "letra_revisada",
- "versoes": [],
+ "status": "aprovada",
+ "versoes": [
+  "v1"
+ ],
  "youtube": {
-  "resumo": "ANDAR DE PINGUIM! 🐧 O Luisinho voou pro gelo e encontrou o pinguim de casaca preta! Pé grudadinho, tic, tic, balança, balança: todo mundo andando de pinguim! Ele escorrega de barriga, mergulha e na água parece que voa… mas no céu não dá!",
+  "resumo": "ANDAR DE PINGUIM! 🐧 O Luisinho voou pro gelo e encontrou o pinguim de casaca preta! Pé grudadinho, tic, tic, balança, balança: todo mundo andando de pinguim! Ele escorrega de barriga, mergulha e na água parece que voa… mas no céu não dá! Imite o pinguim pequenininho, o grandão, o com pressa e o cansado… e agora mais rápido, mais rápido ainda!",
   "resumo_short": "ANDAR DE PINGUIM! 🐧 Pé grudadinho e balança com a Laurinha e o Luisinho!",
-  "curiosidade": "O pinguim tem asa mas não voa no céu: ele \"voa\" nadando debaixo d'água"
+  "curiosidade": "O pinguim tem asa mas não voa no céu: ele \"voa\" nadando debaixo d'água",
+  "miniatura_cena": {
+   "fundo": "faixas",
+   "cores": [
+    [
+     90,
+     170,
+     240
+    ],
+    [
+     200,
+     235,
+     255
+    ],
+    [
+     255,
+     154,
+     31
+    ],
+    [
+     233,
+     84,
+     93
+    ],
+    [
+     60,
+     120,
+     210
+    ]
+   ],
+   "heroi": {
+    "id": "luisinho",
+    "pose": {
+     "turn": 0.2,
+     "mouth": "D",
+     "hand_n_x": -135,
+     "hand_n_y": -135,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3
+    }
+   },
+   "par": {
+    "id": "laurinha",
+    "pose": {
+     "turn": -0.2,
+     "mouth": "D",
+     "hand_n_x": -135,
+     "hand_n_y": -135,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3
+    }
+   },
+   "objetos": [
+    {
+     "id": "pinguim",
+     "pose": {
+      "barriga": 1,
+      "asas": 0.5
+     },
+     "tam": 200,
+     "x": 170,
+     "base": 300,
+     "giro": -8
+    }
+   ],
+   "frente": [
+    {
+     "id": "pinguim",
+     "pose": {
+      "bico": 1,
+      "asas": 1,
+      "lado": -1
+     },
+     "tam": 380,
+     "x": 690,
+     "base": 745
+    }
+   ]
+  }
  },
  "origem": "brincadeiras com o corpo (18/11/2026), inspiradas no gênero de No Ritmo Quá Quá / Morto-Vivo — nada copiado",
  "persona": "luisinho",
- "revisao": "18/11/2026: letra aumentada para a duração (estimativa era 122 s → o take sairia com ~1:45): intro 2×, verso 3 de imitar + refrão, último refrão acelerando; tirado o 'Brrr' e o abraço para esquentar (eram da 12)"
+ "revisao": "18/11/2026: letra aumentada para a duração (estimativa era 122 s → o take sairia com ~1:45): intro 2×, verso 3 de imitar + refrão, último refrão acelerando; tirado o 'Brrr' e o abraço para esquentar (eram da 12)",
+ "escolhida": "v1",
+ "capitulos": {
+  "ponte": "Braço colado, pé de pato"
+ },
+ "playlists": [
+  "Músicas de Bichos 🐸🐜🐑🐧",
+  "Dançar e Brincar com o Corpo 💃🕺"
+ ]
 }

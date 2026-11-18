@@ -50,8 +50,14 @@ def _letra_publicavel(musica: Path) -> str:
     """Letra para a descrição: sem marcações do Suno, refrão repetido só indicado, nomes com a grafia do canal."""
     from ..audio import composer
     out, refrao_visto = [], None
+    bordoes = {v["bordao"] for v in composer.vozes()["vozes"].values() if v.get("bordao")}
     for s in composer.secoes(musica):
-        if not s["linhas"] or s["tipo"] in ("intervalo", "bordao"):
+        if not s["linhas"] or s["tipo"] == "intervalo":
+            continue
+        if s["tipo"] == "bordao":                            # bordão fixo do canal fica de fora; grito da música ("Mais rápido!") entra
+            linhas = [l for l in s["linhas"] if re.sub(r"\s*\(.*?\)", "", l).strip() not in bordoes]
+            if linhas:
+                out.append("\n".join(linhas))
             continue
         if s["tipo"] == "virada":                            # verso cantado logo depois da virada ("Escova de novo!")
             if out:
@@ -129,6 +135,8 @@ def publicar(project: str, musica: Path, copiar: bool = True) -> Path:
             "- Idioma do vídeo: Português (Brasil)", f"- Legenda: enviar {slug}.srt (Português)",
             f"- Miniatura: miniatura-{slug}-1280x720.jpg", "- Conteúdo alterado/sintético: desenho animado não realista (normalmente não exige aviso; confira no Studio)",
             "- Música gerada no plano pago do Suno (uso comercial)"]
+    pls = ["Músicas Infantis da Laurinha e do Luisinho 🐝", *f.get("playlists", [])]       # musicas/PLAYLISTS.md
+    ytx += ["", "Playlists (adicionar o vídeo em):"] + [f"- {n}" for n in dict.fromkeys(pls)]
     (out / f"{slug}.youtube.txt").write_text("\n".join(ytx) + "\n", encoding="utf-8")
     letra = json.loads((pdir / "analise" / "letra.json").read_text(encoding="utf-8"))["lines"]
     itens: list[list] = []                                   # [início, fim, texto] no tempo do vídeo completo
