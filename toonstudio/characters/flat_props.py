@@ -1860,3 +1860,107 @@ class Peixinho(_Prop):
 
 
 PROPS.update({"castelo_areia": CasteloAreia, "siri": Siri, "baldinho": Baldinho, "onda": Onda, "peixinho": Peixinho})
+
+
+# ───────────────────────── 15 Bolha de Sabão ─────────────────────────
+
+
+class Bolha(_Prop):
+    """Bolha de sabão transparente com reflexo de arco-íris. `tam` 0→1 cresce (assoprando); `estoura` 0→1 vira respingos
+    (ploc!); `balanco` −1…1 ondula (achata de um lado). A origem é o FUNDO da bolha (para ela 'carregar' quem está dentro)."""
+
+    def __init__(self):
+        super().__init__("bolha", "Bolha de sabão", (1000, 980), (500, 900), 420, {"tam": 1.0, "estoura": 0.0, "balanco": 0.0})
+
+    def paint(self, k, P):
+        t = max(0.0, min(1.0, P["tam"]))
+        e = max(0.0, min(1.0, P["estoura"]))
+        r = 40 + 340 * t
+        cy = -r - 10
+        sq = 0.06 * math.sin(math.pi * P["balanco"])
+        if e < 0.15:
+            shape(k, ellipse_pts(0, cy, r * (1 + sq), r * (1 - sq), 0, 48), "#D8F2FF", line="#4FA8E8", alpha=0.34, w=LINE * 1.5)
+            ln(k, [(math.cos(a) * r * 0.93 * (1 + sq), cy + math.sin(a) * r * 0.93 * (1 - sq)) for a in [i * 0.2 for i in range(33)]],
+               "#FFFFFF", w=LINE * 1.2, alpha=0.7)                                  # borda brilhante por dentro
+            for j, (cor, d) in enumerate((("#FF9AC8", 0.86), ("#FFE066", 0.80), ("#9BE7FF", 0.74))):   # reflexos de arco-íris
+                a0 = 3.6 + 0.12 * j
+                pts = [(math.cos(a0 + i * 0.09) * r * d, cy + math.sin(a0 + i * 0.09) * r * d) for i in range(14)]
+                ln(k, pts, cor, w=LINE * 1.6, alpha=0.7)
+            shape(k, ellipse_pts(-r * 0.42, cy - r * 0.45, r * 0.16, r * 0.09, -0.6, 16), "#FFFFFF", alpha=0.9)        # brilho
+            k.dot(-r * 0.2, cy - r * 0.62, max(4, r * 0.035), _rgba("#FFFFFF", 0.9))
+        else:                                                              # ploc! respingos e tracinhos
+            for j in range(12):
+                a = j * math.pi / 6
+                d = r * (0.6 + 0.5 * e)
+                x, y = math.cos(a) * d, cy + math.sin(a) * d
+                shape(k, ellipse_pts(x, y, 10 * (1 - e) + 4, 10 * (1 - e) + 4, 0, 10), "#BFE6FF", line="#7FC4EE", alpha=1 - 0.7 * e)
+                ln(k, [(math.cos(a) * r * 0.35, cy + math.sin(a) * r * 0.35), (math.cos(a) * r * 0.55, cy + math.sin(a) * r * 0.55)],
+                   "#9BD3F5", w=LINE, alpha=max(0.0, 1 - e))
+
+
+class Gato(_Prop):
+    """Gatinho laranja listrado, sentado. `miau` 0→1 abre a boca; `assusta` 0→1 olhos arregalados e pelo arrepiado;
+    `aceno` 0→1 levanta a patinha; `rabo` fase do rabo; `lado`; `lid`."""
+
+    def __init__(self):
+        super().__init__("gato", "Gato", (760, 760), (380, 720), 330,
+                         {"miau": 0.0, "assusta": 0.0, "aceno": 0.0, "rabo": 0.0, "lado": 1.0, "lid": 0.0})
+
+    def paint(self, k, P):
+        sx = 1.0 if P["lado"] >= 0 else -1.0
+        cor, lin, cl = "#FF9F43", "#C96F1E", "#FFE3C2"
+        a = max(0.0, min(1.0, P["assusta"]))
+        w = math.sin(2 * math.pi * P["rabo"]) * 30
+        ln(k, [(-90 * sx, -40), (-170 * sx, -90 + w * 0.3), (-190 * sx, -190 + w), (-150 * sx, -230 + w)], lin, w=LINE * 5)   # rabo
+        ln(k, [(-90 * sx, -40), (-170 * sx, -90 + w * 0.3), (-190 * sx, -190 + w), (-150 * sx, -230 + w)], cor, w=LINE * 3.6)
+        shape(k, ellipse_pts(0, -95, 105, 95, 0, 28), cor, line=lin)                        # corpo
+        shape(k, ellipse_pts(0, -80, 55, 60, 0, 20), cl, line=lin)                          # barriguinha
+        for s_ in (-1, 1):                                                                  # patinhas da frente
+            up = 90 * max(0.0, min(1.0, P["aceno"])) if s_ * sx > 0 else 0
+            shape(k, ellipse_pts(s_ * 45, -14 - up, 26, 18, 0, 14), cl, line=lin)
+        hy = -230
+        if a > 0.3:                                                                         # pelo arrepiado
+            for j in range(9):
+                ang = math.pi * (1.05 + 0.9 * j / 8)
+                ln(k, [(math.cos(ang) * 95, hy + math.sin(ang) * 85), (math.cos(ang) * (95 + 26 * a), hy + math.sin(ang) * (85 + 26 * a))], lin, w=LINE)
+        for s_ in (-1, 1):                                                                  # orelhas
+            shape(k, [(s_ * 30, hy - 70), (s_ * 85, hy - 125 - 20 * a), (s_ * 92, hy - 40)], cor, line=lin, smooth=False)
+            shape(k, [(s_ * 45, hy - 72), (s_ * 80, hy - 108 - 20 * a), (s_ * 82, hy - 55)], "#FFB3C1", smooth=False)
+        shape(k, ellipse_pts(0, hy, 100, 88, 0, 28), cor, line=lin)                          # cabeça
+        for x in (-40, 0, 40):                                                              # listrinhas
+            ln(k, [(x, hy - 86), (x * 0.8, hy - 60)], lin, w=LINE * 1.2)
+        shape(k, ellipse_pts(0, hy + 30, 46, 32, 0, 18), cl, line=lin)                      # focinho
+        for s_ in (-1, 1):
+            ex = s_ * 36
+            if P["lid"] > 0.5:
+                ln(k, [(ex - 14, hy - 10), (ex, hy - 18), (ex + 14, hy - 10)], "#3A2A1A", w=LINE)
+            else:
+                rr = 14 + 8 * a
+                shape(k, ellipse_pts(ex, hy - 12, rr, rr * 1.15, 0, 14), "#FFFFFF", line=lin)
+                k.dot(ex + 3 * sx, hy - 8, 7 - 3 * a, _rgba("#2A1A0A"))
+            for dy in (-6, 6):                                                              # bigodes
+                ln(k, [(s_ * 40, hy + 30 + dy), (s_ * 110, hy + 22 + dy * 1.6)], "#7A5030", w=LINE * 0.7)
+        shape(k, [(-10, hy + 16), (10, hy + 16), (0, hy + 27)], "#FF7FA0", line="#C9506E", smooth=False)   # narizinho
+        m = max(0.0, min(1.0, P["miau"]))
+        if m > 0.1:
+            shape(k, ellipse_pts(0, hy + 44, 14, 6 + 16 * m, 0, 14), "#8A2E3E", line=lin)
+        else:
+            ln(k, [(-16, hy + 38), (0, hy + 44), (16, hy + 38)], lin, w=LINE)
+
+
+class Potinho(_Prop):
+    """Potinho de fazer bolha (rosa, tampinha amarela) com a varinha de argola ao lado."""
+
+    def __init__(self):
+        super().__init__("potinho", "Potinho de bolha", (420, 460), (210, 420), 200, {"varinha": 1.0})
+
+    def paint(self, k, P):
+        shape(k, [(-60, 0), (60, 0), (55, -150), (-55, -150)], "#FF7FB8", line="#D14F8C", smooth=False)
+        shape(k, [(-50, -10), (50, -10), (46, -100), (-46, -100)], "#CFEFFF", alpha=0.6)
+        box(k, -45, -190, 45, -150, "#FFD23F", line="#D9A520", r=8)
+        if P.get("varinha", 1.0) > 0.5:
+            ln(k, [(110, 0), (130, -230)], "#FFD23F", w=LINE * 1.6)
+            shape(k, ellipse_pts(134, -268, 34, 34, 0, 20), "#CFEFFF", line="#FFD23F", alpha=0.4)
+
+
+PROPS.update({"bolha": Bolha, "gato": Gato, "potinho": Potinho})

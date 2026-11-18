@@ -107,7 +107,7 @@ def transicoes(keys):
         if k.get("ease", "inout") != "step" and "in" not in k:
             prev = [ultimo[c] for c in k["pose"] if c in ultimo]
             if prev:
-                k["in"] = round(max(0.0, k["t"] - max(prev)), 3)
+                k["in"] = round(max(0.0, k["t"] - max(prev) - 0.03), 3)   # a "segura" do motor não pode cair no mesmo instante da chave anterior (viraria degrau)
         for c in k["pose"]:
             ultimo[c] = k["t"]
         out.append(k)
