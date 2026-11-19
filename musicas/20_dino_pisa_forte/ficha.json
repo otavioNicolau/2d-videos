@@ -57,11 +57,102 @@
   "v1"
  ],
  "youtube": {
-  "resumo": "DINO PISA FORTE! 🦖 Lá vem o dinossauro grandão e bonzinho… mas quando ele anda, treme tudo! O bolo pula do prato, o gato pula do sofá e a vovó dá um pulo! Tum, tum!",
-  "resumo_short": "DINO PISA FORTE! 🦕 Pisa forte e faz roooar com a Laurinha e o Luisinho!",
-  "curiosidade": "Os passarinhos são parentes dos dinossauros, e tinha dinossauro do tamanho de uma galinha"
+  "resumo": "DINO PISA FORTE! 🦖💥 Lá vem o dinossauro grandão e bonzinho… e quando ele anda, TREME TUDO! O bolo pulou, o gato pulou, a vovó pulou! Tum, tum, tremeu! Pise forte e de levinho com o Luisinho!",
+  "resumo_short": "DINO PISA FORTE! 🦖 Tum, tum, tremeu! Quem pulou? Fui eu!",
+  "curiosidade": "Os passarinhos são parentes dos dinossauros, e tinha dinossauro pequeno do tamanho de uma galinha",
+  "miniatura_cena": {
+   "fundo": "raios",
+   "cores": [
+    [
+     92,
+     203,
+     110
+    ],
+    [
+     255,
+     138,
+     31
+    ],
+    [
+     127,
+     240,
+     255
+    ],
+    [
+     255,
+     210,
+     63
+    ],
+    [
+     255,
+     127,
+     191
+    ]
+   ],
+   "heroi": {
+    "id": "luisinho",
+    "pose": {
+     "turn": 0.2,
+     "mouth": "D",
+     "hand_n_x": -135,
+     "hand_n_y": -135,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3
+    }
+   },
+   "par": {
+    "id": "laurinha",
+    "pose": {
+     "turn": -0.2,
+     "mouth": "D",
+     "hand_n_x": -135,
+     "hand_n_y": -135,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3
+    }
+   },
+   "objetos": [
+    {
+     "id": "gato",
+     "pose": {
+      "assusta": 1,
+      "miau": 1
+     },
+     "tam": 170,
+     "x": 160,
+     "base": 330
+    }
+   ],
+   "frente": [
+    {
+     "id": "dino",
+     "pose": {
+      "ruge": 0.0,
+      "tchau": 1
+     },
+     "tam": 520,
+     "x": 690,
+     "base": 760
+    }
+   ]
+  }
  },
  "persona": "luisinho",
  "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz)",
- "escolhida": "v1"
+ "escolhida": "v1",
+ "playlists": [
+  "Músicas de Bichos 🐸🐜🐑🐧",
+  "Dançar e Brincar com o Corpo 💃🕺"
+ ],
+ "capitulos": {
+  "ponte": "Pisa com o pé direito!"
+ }
 }

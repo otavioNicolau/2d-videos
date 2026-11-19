@@ -31,6 +31,7 @@ VÍDEOS (nesta ordem):
 17 Que Forma É Essa?
 18 Robô Dançarino
 19 Conta Vantagem!
+20 Dino Pisa Forte
 
 ────────────────────────────────────────────────────────────
 2) Músicas de Bichos 🐸🐜🐑🐧
@@ -45,6 +46,7 @@ VÍDEOS:
 12 Méé, Carneirinho!
 13 Andar de Pinguim
 19 Conta Vantagem!
+20 Dino Pisa Forte
 
 ────────────────────────────────────────────────────────────
 3) Dançar e Brincar com o Corpo 💃🕺
@@ -59,6 +61,7 @@ VÍDEOS:
 12 Méé, Carneirinho!
 13 Andar de Pinguim
 18 Robô Dançarino
+20 Dino Pisa Forte
 
 ────────────────────────────────────────────────────────────
 4) Rotina e Bons Hábitos ☀️🪥
