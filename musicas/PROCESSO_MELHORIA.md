@@ -111,4 +111,8 @@ do tempo de dança · parado ≤ 8 % · acento na batida ≥ 75 %. Histórico: `
   do lado esticado apontando longe. Usuário em seguida: "lado da cabeça fica mudando" — o giro do passo (turn+) cruzava o meio e o desenho espelhava
   (laço/rosto pulando de lado a cada batida). Corrigido no motor (`cycles.soma_giro`): o giro de dança nunca passa
   para o outro lado, em TODOS os passos. Laboratório: `Canal\Laboratório de dança\A1 - laurinha.mp4` e `- luisinho.mp4`.
-  Próximo candidato (A2): pernas e corpo (joelho na batida, peso de um pé para o outro) — aguardando o usuário.
+  **Aprovado pelo usuário (19/11).**
+- **A2** (19/11, aguardando o olho do usuário): pernas e corpo. 14 dos 22 passos não mexiam a perna (a "festa", a
+  mais usada, tinha perna E corpo parados). Ginga de base (`cycles._ginga`) nos canais que o passo não define:
+  joelhos dobram e o corpo desce NA batida, peso de um pé para o outro a cada 2 batidas, calcanhar do pé livre sobe
+  no contratempo. Simulação na 18: pernas 13 → 20, corpo 14 → 17. Laboratório: `A2 (pernas e corpo) - *.mp4`.

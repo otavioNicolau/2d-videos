@@ -414,6 +414,31 @@ def _filled(keys):
 
 _FILLED = {k: (L, *_filled(keys)) for k, (L, keys) in CHOREO.items()}
 
+# ---- ginga de base (A2, 19/11): pernas e corpo nos passos que só mexiam os braços (14 dos 22 tinham perna parada).
+# Joelhos dobram e o corpo desce NA batida, o peso passa de um pé para o outro (2 batidas) e o calcanhar do pé livre
+# levanta no contratempo. Só entra no canal que o passo NÃO define (o passo manda no que ele já mexe).
+_SEM_PERNA = {k for k, (_, names, _) in _FILLED.items() if not any(n.startswith("foot_") for n in names)}
+_SEM_CORPO = {k for k, (_, names, keys) in _FILLED.items()
+              if "body_y" not in names or max(kk["body_y"] for _, kk in keys) - min(kk["body_y"] for _, kk in keys) < 6}
+_SEM_PESO = {k for k, (_, names, _) in _FILLED.items() if not ({"body_x", "rot"} & set(names))}
+
+
+def _ginga(style: str, pos: float, out: dict, amp: float) -> None:
+    u = pos % 1.0
+    dip = (0.5 + 0.5 * math.cos(TAU * u)) ** 1.6                 # 1 na batida, 0 no contratempo
+    if style in _SEM_CORPO:
+        out["body_y"] = out.get("body_y", 0.0) * 0.3 + (14 * dip - 4) * amp
+        out["squash"] = 1 + (out.get("squash", 1.0) - 1) + (-0.03 * dip + 0.01) * amp
+    if style in _SEM_PERNA:
+        livre = int(math.floor(pos)) % 2                          # pé livre alterna a cada batida
+        lift = math.sin(math.pi * u) ** 2 * 22 * amp
+        out["foot_n_bend"] = 0.06 + 0.3 * dip * amp
+        out["foot_f_bend"] = 0.06 + 0.3 * dip * amp
+        out["foot_n_y"] = -lift if livre == 0 else 0.0
+        out["foot_f_y"] = -lift if livre == 1 else 0.0
+    if style in _SEM_PESO:
+        out["body_x"] = 12 * math.cos(math.pi * pos) * amp        # peso de um pé para o outro
+
 
 def dance(style: str, t: float, beats: list[float], amp: float = 1.0, t0: float | None = None) -> dict[str, float]:
     """Pose de dança no instante t, presa à grade real de batidas (posição = batidas desde o início do passo)."""
@@ -447,4 +472,5 @@ def dance(style: str, t: float, beats: list[float], amp: float = 1.0, t0: float 
         elif name == "squash":
             v = 1 + (v - 1) * amp
         out[name] = v
+    _ginga(style, pos, out, amp)
     return out
