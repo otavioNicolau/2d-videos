@@ -234,6 +234,17 @@ def prompt(d: Path) -> dict:
     return res
 
 
+def _bloco_avancado(p: dict) -> list[str]:
+    """Opções Advanced do Suno v6 (E10): o quanto o Suno obedece ao Style e à Voice."""
+    av = estilos()["canal"].get("suno_avancado")
+    if not av:
+        return []
+    genero = {"luisinho": "Male", "laurinha": "Female"}.get(p.get("voz", ""), "(deixe em branco)")
+    linhas = ["AJUSTES AVANÇADOS (Suno v6 → Advanced; conferir antes de gerar):", f"  Vocal Gender: {genero}"]
+    linhas += [f"  {k}: {v}" for k, v in av.items()]
+    return linhas + [""]
+
+
 def texto_suno(p: dict) -> str:
     """O arquivo de copiar e colar (suno.txt)."""
     pers = p["persona"] or f"(ainda não criada — a voz vai descrita no Style; ao criar, registre em musicas/vozes.json → {p['voz']})"
@@ -243,6 +254,7 @@ def texto_suno(p: dict) -> str:
         f"PERSONA (Suno): {pers}",
         f"ESTILO DO CANAL: {estilos()['canal'].get('versao_por_voz', {}).get(p['voz'], estilos()['canal'].get('versao', '?'))} (musicas/PROCESSO_MELHORIA.md)",
         "",
+        *_bloco_avancado(p),
         f"STYLE OF MUSIC ({len(p['style'])} caracteres):",
         p["style"],
         "",
@@ -256,7 +268,7 @@ def texto_suno(p: dict) -> str:
         "",
         p["lyrics"].rstrip(),
     ]
-    for a in p["alternativas"]:
+    for a in []:                                       # E10 (19/11): alternativas de ritmo fora do suno.txt (confundiam na hora de colar)
         blocos += ["", "=" * 68, f"ALTERNATIVA DE RITMO: {a['ritmo']} · {a['bpm']} BPM (mesma letra)", "=" * 68,
                    "STYLE OF MUSIC:", a["style"], "", "EXCLUDE:", a["exclude"]]
         if a["lyrics"] != p["lyrics"]:

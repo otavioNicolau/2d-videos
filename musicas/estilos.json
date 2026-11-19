@@ -48,7 +48,7 @@
   "nota_batida": "18/11/2026: na referência cada batida soa idêntica (semelhança 0,95–0,98: ritmo pronto de teclado arranjador, um loop simples a música inteira); nas nossas 0,66–0,87 (bateria 'tocada', com viradas e percussão variando). Usuário: 'batidas como se fosse bateria, bumbo, algo feito no teclado, pra dar ritmo'.",
   "abertura": "Brazilian arranger keyboard kids song (teclado arranjador), one simple keyboard drum loop",
   "nota_ajustes_14": "18/11/2026 (take v2 da 14): baixo fraco (5,6 % × 11 % da referência) → 'deep bouncy keyboard bass'; voz larga (0,17 × 0,01) → 'dry centered vocal' e Exclude 'vocal reverb, echo'; tirado 'repeated chorus' do Exclude (o bloco repete de propósito); Exclude sem termos repetidos.",
-  "versao": "E9",
+  "versao": "E10",
   "historico": [
    {
     "versao": "E1",
@@ -115,15 +115,32 @@
     "mudanca": "VOLTA AO E6 (abertura, produção, pesos e baterias dos ritmos da 15–18; [Keyboard Fill] de volta) + Exclude contra segunda voz (second voice, duet, call and response, double-tracked vocals, answering voice, group vocals); rock continua sem 'punk-rock drumming' (loop de teclado) e sem solo de guitarra",
     "motivo": "E7 piorou (19 = 3,8 × 18 = 4,6); usuário ouviu segunda voz e perdeu as batidas viciantes da 15–17",
     "usado_em": "20 em diante"
+   },
+   {
+    "versao": "E10",
+    "data": "19/11/2026",
+    "mudanca": "E9 (= E6 + Exclude contra segunda voz) + ajustes Advanced do Suno v6: Vocal Gender pela voz, Duration Custom 2:40, Weirdness 20 %, Style Influence 80 %, Audio Influence 60 %, Variety mínima, Personalize Off; suno.txt sem as alternativas de ritmo (confundiam)",
+    "motivo": "usuário: 'precisamos ajustar no Suno' — o texto do Style chegou no limite (segunda voz, batida que muda e teclado pouco reconhecido não mudaram da 14 à 19); as opções Advanced controlam o quanto o Suno obedece",
+    "usado_em": "20 em diante"
    }
   ],
   "versao_por_voz": {
-   "laurinha": "E9",
-   "luisinho": "E9"
+   "laurinha": "E10",
+   "luisinho": "E10"
   },
   "nota_sincope": "19/11/2026 (usuário: 'focar nas batidas do som contagiante'): raio-x da bateria (scripts/referencias/batida.py) — referência síncope 0,69 e bumbo reto 0,50; nossas 0,56 e 0,67. A nota de ouvido sobe com a síncope e o baixo fora do tempo (14: 0,39→nota 3 … 18: 0,72 e baixo 0,90→nota 4,6). A 19 v1 (rock com 'punk-rock drumming, driving kick') saiu reta: 0,41.",
   "nota_loop": "19/11/2026 (usuário ouvindo a 19 v2): 'Animadinhos são ritmos e batidas que não mudam muito durante a música; a nossa está ficando ainda estilo banda'. Medido: loop igual referência 0,96 × 19 v1 0,84 × 19 v2 0,75; outros instrumentos 9 % × 20 %. E8: um loop sincopado só, sem virada entre as partes, mesma batida no verso e no refrão, sem solo/quebra.",
-  "nota_regressao": "19/11/2026, usuário: 'estamos regredindo: segunda voz e sem as batidas viciantes que estávamos conquistando entre a 15 e 17'. Notas: 15–17 (E5/E6) = 4, 18 (E6) = 4,6, 19 (E7) = 3,8. Regra do processo: mudança que piora volta atrás → E9 = E6 de novo (+ Exclude contra segunda voz). O raio-x de síncope continua só como medida, não como alvo do Style."
+  "nota_regressao": "19/11/2026, usuário: 'estamos regredindo: segunda voz e sem as batidas viciantes que estávamos conquistando entre a 15 e 17'. Notas: 15–17 (E5/E6) = 4, 18 (E6) = 4,6, 19 (E7) = 3,8. Regra do processo: mudança que piora volta atrás → E9 = E6 de novo (+ Exclude contra segunda voz). O raio-x de síncope continua só como medida, não como alvo do Style.",
+  "suno_avancado": {
+   "Duration": "Custom → 2:40",
+   "Max Mode": "Off",
+   "Weirdness": "20%",
+   "Style Influence": "80%",
+   "Audio Influence": "60%",
+   "Variety": "a menor (arraste para a esquerda)",
+   "Personalize": "Off"
+  },
+  "nota_suno_avancado": "19/11/2026: o usuário mostrou as opções Advanced do Suno v6. Style Influence alto = obedece mais ao Style (teclado, loop, uma voz); Weirdness baixo = menos invenção (menos segunda voz, menos partes novas, batida mais constante); Audio Influence alto = puxa mais o som da Voice (Luisinho v2/Laurinha v2, criadas de takes de teclado); Variety baixa = menos variação; Duration Custom 2:40 = acaba no tempo certo (a 18 saiu com 3:45)."
  },
  "peso": {
   "forte": {

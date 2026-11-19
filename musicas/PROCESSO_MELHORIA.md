@@ -134,3 +134,9 @@ no refrão (Exclude: beat changes, breakdown, build-up, half-time, drum breaks, 
   passos novos com perna: **chute** (chutinho alternado), **joelho** (joelho alto + mão no joelho), **sapinho**
   (pernas abertas, agacha e pula), **cintura** (mãos na cintura, quadril e ponta do pé). Braços sempre por fora do corpo.
   Laboratório: `A3 (pernas e passos novos) - *.mp4`. Roteiros da 20 em diante: nenhum passo com mais de 1/3 da dança.
+
+**E9 / E10** (19/11): E7 piorou (19 = 3,8) e o usuário ouviu segunda voz e perda das batidas viciantes da 15–17 → E9 =
+volta ao E6 + Exclude contra segunda voz. Medido: da 14 à 19 o texto do Style não mexeu em segunda voz (0,06–0,18 × 0,007),
+batida igual (0,71–0,80 × 0,96) e teclado reconhecido (0,01–0,03 × 0,067). O usuário quer ajustar NO SUNO (download é
+limitado: 1 take por música) → **E10** = E9 + opções Advanced do Suno v6 no topo do suno.txt (Vocal Gender pela voz,
+Duration Custom 2:40, Weirdness 20 %, Style Influence 80 %, Audio Influence 60 %, Variety mínima, Personalize Off).
