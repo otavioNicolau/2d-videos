@@ -1968,3 +1968,65 @@ class Potinho(_Prop):
 
 
 PROPS.update({"bolha": Bolha, "gato": Gato, "potinho": Potinho})
+
+
+# ───────────────────────── 17 Que Forma É Essa? ─────────────────────────
+
+
+class ComidaForma(_Prop):
+    """Comida-personagem com uma forma geométrica: `tipo` 0 pizza (círculo), 1 torrada (quadrado), 2 queijo (triângulo),
+    3 ovo (oval), 4 presente (quadrado com laço). `brilho` 0→1 acende o contorno da forma (a resposta: "círculo!");
+    `pulo` 0→1 pulinho; `boca` abre a boquinha; `lid` fecha os olhos."""
+
+    FORMAS = ("circulo", "quadrado", "triangulo", "oval", "quadrado")
+
+    def __init__(self):
+        super().__init__("comida_forma", "Comida com forma", (700, 700), (350, 660), 300,
+                         {"tipo": 0.0, "brilho": 0.0, "pulo": 0.0, "boca": 0.0, "lid": 0.0})
+
+    def _contorno(self, k, forma, cy, esc, cor, w):
+        if forma == "circulo":
+            pts = [(math.cos(a) * 150 * esc, cy + math.sin(a) * 150 * esc) for a in [i * 0.2 for i in range(33)]]
+        elif forma == "quadrado":
+            s = 150 * esc
+            pts = [(-s, cy - s), (s, cy - s), (s, cy + s), (-s, cy + s), (-s, cy - s)]
+        elif forma == "triangulo":
+            pts = [(-170 * esc, cy + 120 * esc), (0, cy - 160 * esc), (170 * esc, cy + 120 * esc), (-170 * esc, cy + 120 * esc)]
+        else:
+            pts = [(math.cos(a) * 118 * esc, cy + math.sin(a) * 158 * esc) for a in [i * 0.2 for i in range(33)]]
+        ln(k, pts, cor, w=w)
+
+    def paint(self, k, P):
+        t = int(round(max(0.0, min(4.0, P["tipo"]))))
+        y0 = -120 * math.sin(math.pi * max(0.0, min(1.0, P["pulo"])))
+        cy = -170 + y0
+        b = max(0.0, min(1.0, P["brilho"]))
+        forma = self.FORMAS[t]
+        if b > 0.02:                                                     # brilho da forma (fica atrás)
+            self._contorno(k, forma, cy, 1.0 + 0.12 * b, "#FFF27A", LINE * (6 + 6 * b))
+        if t == 0:                                                       # pizza
+            shape(k, ellipse_pts(0, cy, 140, 140, 0, 36), "#E9A15A", line="#B9712E")
+            shape(k, ellipse_pts(0, cy, 118, 118, 0, 36), "#FFCE4A", line="#E0A020")
+            for x, y in ((-60, -50), (55, -40), (-20, 55), (70, 50), (-75, 25)):
+                shape(k, ellipse_pts(x, cy + y, 20, 20, 0, 14), "#E9545D", line="#B83A42")
+        elif t == 1:                                                     # torrada
+            box(k, -135, cy - 135, 135, cy + 135, "#B97A2E", line="#8A5520", r=26)
+            box(k, -112, cy - 112, 112, cy + 112, "#F2C27A", line="#D19A50", r=18)
+        elif t == 2:                                                     # queijo
+            shape(k, [(-150, cy + 105), (0, cy - 140), (150, cy + 105)], "#FFD23F", line="#D9A520", smooth=False)
+            for x, y, r in ((-40, 40, 18), (45, 60, 14), (0, -20, 12), (70, 20, 10)):
+                shape(k, ellipse_pts(x, cy + y, r, r, 0, 12), "#F2B21F", line="#D9A520")
+        elif t == 3:                                                     # ovo
+            shape(k, ellipse_pts(0, cy, 105, 140, 0, 36), "#FFF8EC", line="#D9CBB4")
+        else:                                                            # presente
+            box(k, -130, cy - 130, 130, cy + 130, "#3C8BF0", line="#2A64B8", r=10)
+            box(k, -22, cy - 130, 22, cy + 130, "#FFD23F", line="#D9A520", r=4)
+            box(k, -130, cy - 22, 130, cy + 22, "#FFD23F", line="#D9A520", r=4)
+            for s_ in (-1, 1):
+                shape(k, [(0, cy - 130), (s_ * 70, cy - 190), (s_ * 80, cy - 140)], "#FFD23F", line="#D9A520", smooth=False)
+        if b > 0.02:                                                     # contorno aceso por cima (bem visível)
+            self._contorno(k, forma, cy, 1.0 + 0.12 * b, "#FF7A00", LINE * 1.6)
+        _carinha(k, 0, cy + (25 if t != 2 else 45), {"lid": P["lid"], "boca": P["boca"]}, "#5A3A1A", "#FF8FA8", esc=1.2)
+
+
+PROPS.update({"comida_forma": ComidaForma})
