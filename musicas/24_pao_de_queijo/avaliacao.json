@@ -1,0 +1,58 @@
+{
+ "schema": "avaliacao-1.0",
+ "versoes": {
+  "v1": {
+   "arquivo": "v1.wav",
+   "duracao": 200.0,
+   "bpm": 99.4,
+   "bpm_nota": "",
+   "tom": "Sol maior",
+   "voz_inicio": 4.2,
+   "refrao_inicio": 3.6,
+   "cantado": 73,
+   "intervalos": [
+    [
+     12.9,
+     10.7
+    ],
+    [
+     67.2,
+     10.1
+    ],
+    [
+     130.2,
+     10.1
+    ],
+    [
+     168.9,
+     11.8
+    ]
+   ],
+   "fim_depois_da_voz": 5.3,
+   "final": "esmaecendo",
+   "silencio_final": 0.6,
+   "acerto": 83,
+   "nao_reconhecidas": [
+    "luisinho",
+    "jeitinho",
+    "parar",
+    "telhado",
+    "nhac"
+   ],
+   "pontos_a_conferir": [
+    "duração 200 s fora do alvo 140–170 s"
+   ]
+  }
+ },
+ "ouvido": {
+  "v1": {
+   "1 começo chama atenção": null,
+   "5 melodia combina com a letra": null,
+   "6 dá vontade de dançar": null,
+   "7 pronúncia natural": null,
+   "8 tem a cara do canal": null,
+   "9 nenhum trecho cansativo": null
+  }
+ },
+ "escolhida": null
+}
