@@ -2030,3 +2030,138 @@ class ComidaForma(_Prop):
 
 
 PROPS.update({"comida_forma": ComidaForma})
+
+
+# ───────────────────────── 18 Robô Dançarino ─────────────────────────
+
+class Robo(_Prop):
+    """Robozinho de caixa (Robô Dançarino): corpo prateado com painel, botão vermelho e medidor de pilha, cabeça de tela
+    com antena. Canais:
+    `danca` (fase contínua: cada +1 = um passinho robótico — corpo sobe/desce, braços alternam em ângulo reto);
+    `braco` 0→1 levanta o braço direito (dobradinho, "braço de robô"); `perna` 0→1 levanta a perna; `cabeca` gira a
+    cabeça (1 = uma volta inteira); `trava` 0→1 travou (olhos de X, faísca e tremidinha); `murcha` 0→1 a pilha acabou
+    (cabeça cai, braços pendem, olhos fechados); `pilha` 0→1 tracinhos do medidor; `botao` 0→1 botão vermelho aceso;
+    `luz` 0→1 bolinha da antena acesa; `pulo` 0→1 pulinho; `boca` abre a boca de grade."""
+
+    def __init__(self):
+        super().__init__("robo", "Robô", (900, 920), (450, 880), 470,
+                         {"danca": 0.0, "braco": 0.0, "perna": 0.0, "cabeca": 0.0, "trava": 0.0, "murcha": 0.0, "pilha": 1.0,
+                          "botao": 0.0, "luz": 1.0, "pulo": 0.0, "boca": 0.0})
+
+    def paint(self, k, P):
+        c01 = lambda v: max(0.0, min(1.0, v))
+        mur, tr = c01(P["murcha"]), c01(P["trava"])
+        mexe = (1 - mur) * (1 - tr)                                     # travado/sem pilha: para de dançar
+        fase = 2 * math.pi * P["danca"]
+        bob = 16 * abs(math.sin(fase)) * mexe
+        trem = 6 * math.sin(P["danca"] * 70) * tr                       # tremidinha do "travou" (a dança segue no canal)
+        chao = -150 * math.sin(math.pi * c01(P["pulo"]))
+        y0 = chao - bob + 22 * mur
+        x0 = trem
+        prata, plin, escuro, laranja, llar = "#D6DEE8", "#7F8EA3", "#5C6B80", "#FF8A1F", "#C9661A"
+
+        def T(x, y):
+            return (x0 + x, y0 + y)
+
+        perna = c01(P["perna"]) * (1 - mur)
+        for side in (-1, 1):                                            # pernas (sanfoninha) e pés
+            lev = 95 * perna if side > 0 else 0.0
+            px = side * 52
+            topo, pe = T(px, -150), (x0 + px + side * 20 * (lev / 95), chao - lev)
+            for j in range(3):                                          # anéis da sanfona
+                a = j / 3
+                q = (topo[0] + (pe[0] - topo[0]) * (a + 0.17), topo[1] + (pe[1] - 30 - topo[1]) * (a + 0.17))
+                shape(k, ellipse_pts(q[0], q[1], 26, 16, 0, 16), escuro, line="#3E4A5C")
+            box(k, pe[0] - 46, pe[1] - 36, pe[0] + 46, pe[1], laranja, line=llar, r=12)
+        braco = c01(P["braco"])
+        for side in (-1, 1):                                            # braços: ombro → cotovelo → garra
+            ombro = T(side * 128, -300)
+            if mur > 0:
+                ang1, ang2 = 0.10 * side * (1 - mur) + 0.02 * side, 0.0
+            else:
+                alt = math.sin(fase + (0 if side > 0 else math.pi)) * mexe
+                ang1 = side * (0.55 + 0.45 * alt)                       # 0 = pendurado; lado de fora
+                ang2 = side * (1.2 + 0.4 * alt) * mexe
+                if side > 0 and braco > 0:                              # braço de robô: levanta em ângulo reto
+                    ang1 = ang1 * (1 - braco) + 1.75 * braco
+                    ang2 = ang2 * (1 - braco) + 1.45 * braco
+            cot = (ombro[0] + math.sin(ang1) * 95, ombro[1] + math.cos(ang1) * 95)
+            mao = (cot[0] + math.sin(ang1 + ang2) * 90, cot[1] + math.cos(ang1 + ang2) * 90)
+            _capsula(k, ombro, cot, 20, prata, plin)
+            _capsula(k, cot, mao, 18, prata, plin)
+            shape(k, ellipse_pts(cot[0], cot[1], 20, 20, 0, 14), laranja, line=llar)
+            a = math.atan2(mao[1] - cot[1], mao[0] - cot[0])
+            for d in (-0.6, 0.6):                                       # garrinha
+                q = (mao[0] + math.cos(a + d) * 34, mao[1] + math.sin(a + d) * 34)
+                _capsula(k, mao, q, 10, laranja, llar)
+            shape(k, ellipse_pts(ombro[0], ombro[1], 26, 26, 0, 16), laranja, line=llar)
+        bx = T(0, 0)
+        box(k, bx[0] - 130, bx[1] - 360, bx[0] + 130, bx[1] - 140, prata, line=plin, r=26)          # corpo
+        box(k, bx[0] - 92, bx[1] - 330, bx[0] + 92, bx[1] - 215, "#2E3A4F", line="#1C2433", r=14)   # painel (pilha)
+        n = int(round(4 * c01(P["pilha"])))
+        cor_p = "#3DDC6A" if n > 1 else "#FF4D4D"
+        for j in range(4):
+            xx = bx[0] - 72 + j * 38
+            box(k, xx, bx[1] - 305, xx + 28, bx[1] - 240, cor_p if j < n else "#3E4A5C", line="#1C2433", r=5)
+        b = c01(P["botao"])
+        q = T(-50, -178)
+        if b > 0.05:
+            k.shape(ellipse_pts(q[0], q[1], 36 + 10 * b, 36 + 10 * b, 0, 20), fill=_rgba("#FFE27A", 0.7 * b), line=0)
+        shape(k, ellipse_pts(q[0], q[1], 24, 24 - 6 * b, 0, 18), "#E9545D" if b < 0.5 else "#FF6B6B", line="#B83A42")
+        for j, cc in enumerate(("#FFD23F", "#3C8BF0")):                 # botõezinhos
+            q = T(20 + j * 46, -178)
+            shape(k, ellipse_pts(q[0], q[1], 13, 13, 0, 12), cc, line=dark(cc))
+        nk = T(0, -360)                                                 # pescoço
+        box(k, nk[0] - 26, nk[1] - 22, nk[0] + 26, nk[1] + 4, escuro, line="#3E4A5C", r=6)
+        # cabeça: gira inteira no pescoço (cabeca); murcha = tomba de lado
+        ang = 2 * math.pi * P["cabeca"] + 0.55 * mur
+        pv = T(0, -452 + 30 * mur)                                      # gira no centro da cabeça
+        c_, s_ = math.cos(ang), math.sin(ang)
+
+        def H(x, y):
+            y = y + 74
+            return (pv[0] + x * c_ - y * s_, pv[1] + x * s_ + y * c_)
+
+        def caixa(x0_, y0_, x1_, y1_, fill, line, r=16):
+            pts = []
+            for cx, cy, a0 in ((x1_ - r, y0_ + r, -90), (x1_ - r, y1_ - r, 0), (x0_ + r, y1_ - r, 90), (x0_ + r, y0_ + r, 180)):
+                for i in range(5):
+                    a = math.radians(a0 + i * 22.5)
+                    pts.append(H(cx + r * math.cos(a), cy + r * math.sin(a)))
+            shape(k, pts, fill, line=line, smooth=False)
+
+        ln(k, [H(0, -150), H(0, -196)], escuro, w=LINE * 1.4)            # antena
+        q = H(0, -206)
+        luz = c01(P["luz"]) * (1 - mur)
+        if luz > 0.05:
+            k.shape(ellipse_pts(q[0], q[1], 30, 30, 0, 16), fill=_rgba("#FFF27A", 0.55 * luz), line=0)
+        shape(k, ellipse_pts(q[0], q[1], 17, 17, 0, 14), "#FFD23F" if luz > 0.3 else "#C9A24E", line="#D9A520")
+        for side in (-1, 1):                                            # orelhas-parafuso
+            q = H(side * 124, -70)
+            shape(k, ellipse_pts(q[0], q[1], 18, 30, ang, 14), laranja, line=llar)
+        caixa(-118, -152, 118, 6, prata, plin, r=30)
+        caixa(-96, -128, 96, -16, "#2E3A4F", "#1C2433", r=20)             # tela do rosto
+        for side in (-1, 1):                                            # olhos de tela
+            e = H(side * 44, -82)
+            if tr > 0.5:                                                # travou: olhos de X
+                for d in (-1, 1):
+                    ln(k, [H(side * 44 - 16, -82 - 16 * d), H(side * 44 + 16, -82 + 16 * d)], "#FF4D4D", w=LINE * 1.3)
+            elif mur > 0.5:                                             # sem pilha: olhinho apagado
+                ln(k, [H(side * 44 - 18, -78), H(side * 44 + 18, -78)], "#5C6B80", w=LINE * 1.2)
+            else:
+                shape(k, ellipse_pts(e[0], e[1], 22, 24, ang, 16), "#7FF0FF", line="#2BB6D0")
+                q = H(side * 44 + 5, -78)
+                k.dot(q[0], q[1], 9, _rgba("#1C2433"))
+        bo = c01(P["boca"])                                             # boca de grade
+        hb = 10 + 16 * bo
+        caixa(-38, -50, 38, -50 + hb, "#7FF0FF" if mur < 0.5 else "#5C6B80", "#2BB6D0", r=4)
+        for j in (-19, 0, 19):
+            ln(k, [H(j, -50), H(j, -50 + hb)], "#2BB6D0", w=LINE * 0.7)
+        if tr > 0.05:                                                   # faíscas do travou
+            for j, (x, y) in enumerate(((-150, -470), (150, -500), (0, -560))):
+                q = T(x, y)
+                zz = [(q[0] - 22, q[1]), (q[0] - 6, q[1] - 16), (q[0] + 4, q[1] + 6), (q[0] + 22, q[1] - 12)]
+                ln(k, zz, "#FFD23F", w=LINE * 1.3 * tr)
+
+
+PROPS.update({"robo": Robo})

@@ -1,0 +1,30 @@
+{
+ "musica": "18",
+ "titulo": "Robô Dançarino",
+ "estilo": "E6",
+ "medidas": {
+  "voz_%": 21.2,
+  "bateria_%": 48.5,
+  "baixo_%": 11.6,
+  "outros_%": 18.7,
+  "largura_voz": 0.177,
+  "batidas_identicas": 0.734,
+  "duracao_s": 225.2,
+  "teclado_eletronico": 0.031,
+  "bateria_banda": 0.009,
+  "percussao": 0.007,
+  "metais": 0.002
+ },
+ "acertos": "3/10",
+ "nota": null,
+ "obs": "",
+ "falhas": [
+  "voz no som (%) (baixo)",
+  "batida no som (%) (alto)",
+  "outros instrumentos (%) (alto)",
+  "largura da voz (0 = uma voz no centro) (alto)",
+  "batida de teclado (loop igual) (baixo)",
+  "teclado/synth reconhecido (baixo)",
+  "duração do take (s) (alto)"
+ ]
+}

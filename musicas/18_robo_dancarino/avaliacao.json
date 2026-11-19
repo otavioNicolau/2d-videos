@@ -1,0 +1,64 @@
+{
+ "schema": "avaliacao-1.0",
+ "versoes": {
+  "v1": {
+   "arquivo": "v1.wav",
+   "duracao": 225.2,
+   "bpm": 138.4,
+   "bpm_nota": "leitura 92 ajustada ×1.5",
+   "tom": "Dó maior",
+   "voz_inicio": 5.05,
+   "refrao_inicio": null,
+   "cantado": 65,
+   "intervalos": [
+    [
+     65.6,
+     9.6
+    ],
+    [
+     85.9,
+     5.3
+    ],
+    [
+     137.1,
+     4.5
+    ],
+    [
+     204.3,
+     4.4
+    ]
+   ],
+   "fim_depois_da_voz": 1.6,
+   "final": "esmaecendo",
+   "silencio_final": 0.1,
+   "acerto": 55,
+   "nao_reconhecidas": [
+    "dancarino",
+    "travou",
+    "voltou",
+    "pfff",
+    "luisinho",
+    "braco",
+    "ficou",
+    "gostou"
+   ],
+   "pontos_a_conferir": [
+    "andamento 138 fora da faixa do Eletrônica infantil (120–128)",
+    "o gancho não foi reconhecido na transcrição",
+    "duração 225 s fora do alvo 140–170 s",
+    "só 55% da letra reconhecida — ouvir a pronúncia"
+   ]
+  }
+ },
+ "ouvido": {
+  "v1": {
+   "1 começo chama atenção": null,
+   "5 melodia combina com a letra": null,
+   "6 dá vontade de dançar": null,
+   "7 pronúncia natural": null,
+   "8 tem a cara do canal": null,
+   "9 nenhum trecho cansativo": null
+  }
+ },
+ "escolhida": "v1"
+}

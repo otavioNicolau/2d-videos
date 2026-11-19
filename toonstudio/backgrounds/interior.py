@@ -585,9 +585,54 @@ def salao(rng) -> tuple[skia.Surface, int]:
     return s, w
 
 
+def oficina(rng) -> tuple[skia.Surface, int]:
+    """Oficina do Luisinho (Robô Dançarino): parede verde-água com quadro de ferramentas (chave, martelo, chave de fenda),
+    engrenagens coloridas, bancada de madeira com caixa de peças, chão de tábua com parafusos."""
+    w = W_INT
+    s, c = _surf(w, H, 1.5)
+    F = Flat(c)
+    c.drawRect(skia.Rect(0, 0, w, H), skia.Paint(Color4f=skia.Color4f(*_rgba("#BFEBD9"))))
+    for y in range(40, FLOOR_Y - 40, 120):                                  # azulejinhos da parede
+        F.line([(0, y), (w, y)], "#AEE0CC", w=LINE * 0.8)
+    for x0 in (260, 1560):                                                  # quadros de ferramentas (pegboard)
+        F.shape([(x0, 150), (x0 + 520, 150), (x0 + 520, 470), (x0, 470)], "#E8B27A", smooth=False)
+        for i in range(12):
+            for j in range(6):
+                F.oval(x0 + 30 + i * 42, 175 + j * 52, 5, 5, "#C98A4E", line=False)
+        F.line([(x0 + 70, 200), (x0 + 70, 420)], "#3C8BF0", w=LINE * 2.4)    # chave de fenda
+        F.oval(x0 + 70, 230, 22, 40, "#E9545D")
+        F.line([(x0 + 200, 200), (x0 + 200, 430)], "#8C6A4A", w=LINE * 2.6)  # martelo
+        F.shape([(x0 + 150, 190), (x0 + 250, 190), (x0 + 250, 235), (x0 + 150, 235)], "#7F8EA3", smooth=False)
+        F.line([(x0 + 330, 210), (x0 + 330, 420)], "#7F8EA3", w=LINE * 2.4)  # chave inglesa
+        F.oval(x0 + 330, 205, 32, 32, "#7F8EA3")
+        F.oval(x0 + 330, 192, 14, 14, "#E8B27A", line=False)
+        F.oval(x0 + 440, 300, 50, 50, "#FFD23F")                            # rolo de fita
+        F.oval(x0 + 440, 300, 22, 22, "#E8B27A")
+    cores = ("#FF8A1F", "#3C8BF0", "#FF7FBF", "#FFD23F")
+    for i, (x, y, r) in enumerate(((1050, 230, 90), (1190, 340, 60), (2350, 260, 80), (110, 300, 70))):   # engrenagens
+        pts = []
+        for a in range(48):
+            th = a * math.pi / 24
+            rr = r * (1.0 if (a // 3) % 2 == 0 else 0.8)
+            pts.append((x + rr * math.cos(th), y + rr * math.sin(th)))
+        F.shape(pts, cores[i % len(cores)], smooth=False)
+        F.oval(x, y, r * 0.3, r * 0.3, "#BFEBD9")
+    _floor(F, w, "#D9A066")
+    bx = 1880                                                               # bancada com caixa de peças
+    F.shape([(bx, 600), (bx + 640, 600), (bx + 640, 650), (bx, 650)], "#B97A2E", smooth=False)
+    for xx in (bx + 30, bx + 580):
+        F.shape([(xx, 650), (xx + 30, 650), (xx + 30, FLOOR_Y + 10), (xx, FLOOR_Y + 10)], "#B97A2E", smooth=False)
+    F.shape([(bx + 380, 520), (bx + 560, 520), (bx + 560, 600), (bx + 380, 600)], "#E9545D", smooth=False)
+    F.shape([(bx + 80, 560), (bx + 160, 560), (bx + 160, 600), (bx + 80, 600)], "#3C8BF0", smooth=False)
+    for i in range(70):                                                     # parafusos e porquinhas no chão
+        x, y = rng.uniform(0, w), rng.uniform(FLOOR_Y + 20, H)
+        F.oval(x, y, 7, 7, ("#7F8EA3", "#FFD23F")[i % 2], line=False)
+    return s, w
+
+
 SCENES = {"plano_banheiro": banheiro, "plano_quarto_rosa": lambda rng: quarto("rosa", rng), "plano_quarto_azul": lambda rng: quarto("azul", rng),
           "plano_cozinha": cozinha, "plano_casa_frente": casa_frente, "plano_escola": escola, "plano_ceu": ceu,
-          "plano_jardim": jardim, "plano_lagoa": lagoa, "plano_sala": sala, "plano_espaco": espaco, "plano_lua": lua_chao, "plano_campo": campo, "plano_gelo": gelo, "plano_mar_gelado": mar_gelado, "plano_praia": praia, "plano_salao": salao}
+          "plano_jardim": jardim, "plano_lagoa": lagoa, "plano_sala": sala, "plano_espaco": espaco, "plano_lua": lua_chao, "plano_campo": campo, "plano_gelo": gelo, "plano_mar_gelado": mar_gelado, "plano_praia": praia, "plano_salao": salao, "plano_oficina": oficina}
 
 
 def build(bg_id: str, out_dir: Path, scale: float = 1.5, seed: int = 11) -> dict:

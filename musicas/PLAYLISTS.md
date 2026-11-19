@@ -23,13 +23,13 @@ VÍDEOS (nesta ordem):
 09 Pipa no Céu
 10 Pingo de Chuva
 11 Foguete pra Lua
-17 Que Forma É Essa?
 12 Méé, Carneirinho!
 13 Andar de Pinguim
 14 Castelo de Areia
 15 Bolha de Sabão
 16 Carnaval da Turminha
 17 Que Forma É Essa?
+18 Robô Dançarino
 
 ────────────────────────────────────────────────────────────
 2) Músicas de Bichos 🐸🐜🐑🐧
@@ -56,6 +56,7 @@ VÍDEOS:
 08 Dança da Formiguinha
 12 Méé, Carneirinho!
 13 Andar de Pinguim
+18 Robô Dançarino
 
 ────────────────────────────────────────────────────────────
 4) Rotina e Bons Hábitos ☀️🪥
@@ -81,6 +82,7 @@ VÍDEOS:
 05 Conta Comigo
 10 Pingo de Chuva
 11 Foguete pra Lua
+17 Que Forma É Essa?
 
 ────────────────────────────────────────────────────────────
 6) Brincadeiras ao ar livre 🪁   (criar com a 14)

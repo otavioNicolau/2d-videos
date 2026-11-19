@@ -52,14 +52,108 @@
   170
  ],
  "alternativas": [],
- "status": "letra_revisada",
- "versoes": [],
+ "status": "aprovada",
+ "versoes": [
+  "v1"
+ ],
  "youtube": {
-  "resumo": "ROBÔ DANÇARINO! 🤖 O Luisinho montou um robozinho, apertou o botão vermelho… e ele não parou mais de dançar! Bip, bop, travou! Bip, bop, voltou! Até a pilha acabar… pfff!",
-  "resumo_short": "ROBÔ DANÇARINO! 🤖 Bip, bop! Dance de robô com a Laurinha e o Luisinho!",
-  "curiosidade": "O robô precisa de energia (pilha ou bateria) para funcionar, igual a gente precisa de comida"
+  "resumo": "ROBÔ DANÇARINO 🤖🕺 O Luisinho montou um robozinho com botão e parafuso! Aperta o botão vermelho e ele dança sem parar… bip, bop, TRAVOU! Bip, bop, VOLTOU! Dance e vire estátua junto com o robô!",
+  "resumo_short": "ROBÔ DANÇARINO 🤖 Bip, bop, travou! Dance com o Luisinho!",
+  "curiosidade": "O robô precisa de energia (pilha ou bateria) para funcionar, igual a gente precisa de comida",
+  "miniatura_cena": {
+   "fundo": "circulo",
+   "cores": [
+    [
+     54,
+     194,
+     168
+    ],
+    [
+     127,
+     240,
+     255
+    ],
+    [
+     184,
+     101,
+     230
+    ],
+    [
+     255,
+     138,
+     31
+    ],
+    [
+     255,
+     210,
+     63
+    ]
+   ],
+   "heroi": {
+    "id": "luisinho",
+    "pose": {
+     "turn": 0.2,
+     "mouth": "D",
+     "hand_n_x": -135,
+     "hand_n_y": -135,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3
+    }
+   },
+   "par": {
+    "id": "laurinha",
+    "pose": {
+     "turn": -0.2,
+     "mouth": "D",
+     "hand_n_x": -135,
+     "hand_n_y": -135,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3
+    }
+   },
+   "objetos": [
+    {
+     "id": "robo",
+     "pose": {
+      "trava": 1,
+      "danca": 0.1
+     },
+     "tam": 190,
+     "x": 150,
+     "base": 330
+    }
+   ],
+   "frente": [
+    {
+     "id": "robo",
+     "pose": {
+      "danca": 0.25,
+      "braco": 1,
+      "boca": 1
+     },
+     "tam": 360,
+     "x": 690,
+     "base": 745
+    }
+   ]
+  }
  },
  "origem": "brincadeiras com o corpo (18/11/2026), inspiradas no gênero de No Ritmo Quá Quá / Morto-Vivo — nada copiado",
  "persona": "luisinho",
- "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz)"
+ "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz)",
+ "escolhida": "v1",
+ "playlists": [
+  "Dançar e Brincar com o Corpo 💃🕺"
+ ],
+ "capitulos": {
+  "ponte": "Braço de robô, perna de robô"
+ }
 }
