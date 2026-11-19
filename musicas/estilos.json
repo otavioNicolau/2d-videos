@@ -33,16 +33,22 @@
    "percussion ensemble",
    "vocal reverb",
    "echo",
-   "weak bass"
+   "weak bass",
+   "beat changes",
+   "breakdown",
+   "build-up",
+   "half-time",
+   "drum breaks",
+   "guitar solo"
   ],
   "duracao": "short song under 2 minutes 40 seconds, ends after the last chorus",
   "producao": "built-in keyboard rhythm with programmed kick, snare and claps in a SYNCOPATED bouncy groove repeating the same loop through the whole song, offbeat claps, deep bouncy syncopated keyboard bass on the offbeats, one bright keyboard or piano melody, a few playful cartoon sound effects (boing, toy bells), single dry centered lead vocal, close and clear, lots of space in the mix, polished kids music production",
   "nota_producao": "18/11/2026: análise de 18 músicas da Animadinhos (musicas/REFERENCIA_ANIMADINHOS.md): arranjo enxuto de teclado/eletrônico, voz e batida empatadas (41 × 38 %), efeitos de desenho; as nossas saíam com banda + batucada e voz a 58 %.",
   "nota_voz": "18/11/2026: a voz da referência é UMA só e centralizada (largura 0,00–0,02); as nossas tinham coro/vozes de fundo espalhados (0,08–0,29) e muitos instrumentos — 'muita informação' (usuário). Uma voz por vez, respostas cantadas pela mesma voz.",
   "nota_batida": "18/11/2026: na referência cada batida soa idêntica (semelhança 0,95–0,98: ritmo pronto de teclado arranjador, um loop simples a música inteira); nas nossas 0,66–0,87 (bateria 'tocada', com viradas e percussão variando). Usuário: 'batidas como se fosse bateria, bumbo, algo feito no teclado, pra dar ritmo'.",
-  "abertura": "Brazilian arranger keyboard kids song (teclado arranjador), one simple keyboard drum loop",
+  "abertura": "Brazilian arranger keyboard kids song (teclado arranjador), ONE syncopated keyboard drum loop that never changes from the first to the last second",
   "nota_ajustes_14": "18/11/2026 (take v2 da 14): baixo fraco (5,6 % × 11 % da referência) → 'deep bouncy keyboard bass'; voz larga (0,17 × 0,01) → 'dry centered vocal' e Exclude 'vocal reverb, echo'; tirado 'repeated chorus' do Exclude (o bloco repete de propósito); Exclude sem termos repetidos.",
-  "versao": "E7",
+  "versao": "E8",
   "historico": [
    {
     "versao": "E1",
@@ -92,19 +98,28 @@
     "data": "19/11/2026",
     "mudanca": "batida SINCOPADA: groove saltitante com palmas e baixo no contratempo no lugar da batida reta; rock infantil sem 'punk-rock drumming/driving kick' (vira loop de teclado pop-rock com bumbo sincopado) e com um riff de guitarra só; ritmos de bumbo em todo tempo ganham baixo sincopado",
     "motivo": "usuário: 'temos que focar nas batidas do som contagiante'; síncope da referência 0,69 × nossas 0,56; nota sobe com a síncope (14→3 … 18→4,6); 19 v1 saiu reta (0,41)",
-    "usado_em": "19 v2 em diante (se o usuário aprovar)"
+    "usado_em": "19 v2 em diante (se o usuário aprovar)",
+    "resultado": "19 v2: síncope 0,81 e baixo sincopado 0,91 (contagiante, como a 18) — mas o loop variou mais (0,75) e entrou mais instrumento (20 %): 'ainda estilo banda' (usuário)"
+   },
+   {
+    "versao": "E8",
+    "data": "19/11/2026",
+    "mudanca": "mantém a síncope do E7 + UM loop de teclado que nunca muda (começo ao fim), sem [Keyboard Fill] entre as partes, 'same beat in verse and chorus', Exclude 'beat changes, breakdown, build-up, half-time, drum breaks, guitar solo'; rock com riff de teclado (guitarra só no timbre)",
+    "motivo": "usuário: batidas da referência não mudam durante a música, a nossa ainda soa banda; loop igual 0,96 (ref) × 0,75 (19 v2)",
+    "usado_em": "20 em diante"
    }
   ],
   "versao_por_voz": {
-   "laurinha": "E7",
-   "luisinho": "E7"
+   "laurinha": "E8",
+   "luisinho": "E8"
   },
-  "nota_sincope": "19/11/2026 (usuário: 'focar nas batidas do som contagiante'): raio-x da bateria (scripts/referencias/batida.py) — referência síncope 0,69 e bumbo reto 0,50; nossas 0,56 e 0,67. A nota de ouvido sobe com a síncope e o baixo fora do tempo (14: 0,39→nota 3 … 18: 0,72 e baixo 0,90→nota 4,6). A 19 v1 (rock com 'punk-rock drumming, driving kick') saiu reta: 0,41."
+  "nota_sincope": "19/11/2026 (usuário: 'focar nas batidas do som contagiante'): raio-x da bateria (scripts/referencias/batida.py) — referência síncope 0,69 e bumbo reto 0,50; nossas 0,56 e 0,67. A nota de ouvido sobe com a síncope e o baixo fora do tempo (14: 0,39→nota 3 … 18: 0,72 e baixo 0,90→nota 4,6). A 19 v1 (rock com 'punk-rock drumming, driving kick') saiu reta: 0,41.",
+  "nota_loop": "19/11/2026 (usuário ouvindo a 19 v2): 'Animadinhos são ritmos e batidas que não mudam muito durante a música; a nossa está ficando ainda estilo banda'. Medido: loop igual referência 0,96 × 19 v1 0,84 × 19 v2 0,75; outros instrumentos 9 % × 20 %. E8: um loop sincopado só, sem virada entre as partes, mesma batida no verso e no refrão, sem solo/quebra."
  },
  "peso": {
   "forte": {
    "descricao": "festa: batida eletrônica forte (bumbo e palmas), voz e batida empatadas (referência: voz 41 %, bateria 38 %)",
-   "style": "steady keyboard drum loop with strong kick and claps, short keyboard riff before every chorus",
+   "style": "steady keyboard drum loop with strong kick and claps, the same beat in verse and chorus",
    "exclude": [
     "slow",
     "ballad",
@@ -116,7 +131,7 @@
   },
   "media": {
    "descricao": "groove forte e bem marcado, percussão presente",
-   "style": "steady keyboard drum loop, clear danceable rhythm",
+   "style": "steady keyboard drum loop, clear danceable rhythm, the same beat in verse and chorus",
    "exclude": [
     "slow",
     "ballad",
@@ -517,7 +532,7 @@
    "peso": "forte",
    "genero": "energetic kids rock, shout-along",
    "bateria": "keyboard preset pop-rock beat loop, syncopated kick, claps on 2 and 4",
-   "instrumentos": "one bright electric guitar riff, happy major-key hook",
+   "instrumentos": "one bright keyboard riff with a light electric guitar tone",
    "clima": "adventurous and sunny",
    "temas": [
     "aventura",

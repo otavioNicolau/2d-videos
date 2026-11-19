@@ -55,8 +55,8 @@ def test_shortcuts_follow_the_beat_weight():
     E, V = c.estilos(), c.vozes()
     letra = "[Virada]\n[Chorus]\nBate!\n[Bordão laurinha]\n[Intervalo 8s]\n"
     forte = c.expandir(letra, "forte", E, V)
-    assert "[Keyboard Fill]" in forte and "[Instrumental Break - 8 seconds" in forte and "Bora, turminha!" in forte
-    assert "Drum Fill" not in forte                                   # 18/11: referência sem virada de bateria
+    assert "[Instrumental Break - 8 seconds" in forte and "Bora, turminha!" in forte
+    assert "Fill" not in forte                                        # E8 (19/11): nenhuma virada — a batida não muda
     marcada = c.expandir(letra, "marcada", E, V)
     assert "Drum" not in marcada and "[Instrumental Break - 8 seconds" in marcada
 

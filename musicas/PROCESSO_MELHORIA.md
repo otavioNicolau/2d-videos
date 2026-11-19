@@ -124,3 +124,7 @@ Referência: síncope 0,69 · baixo sincopado 0,52 · bumbo reto 0,50. Nossas 01
 A nota de ouvido acompanha a síncope: 14 (0,39) → 3 · 15 (0,52) → 4 · 16 (0,68) → 4 · 17 (0,74) → 4 · 18 (0,72, baixo
 0,90) → 4,6. A 19 v1 (rock com "punk-rock drumming, driving kick") saiu reta: 0,41 / 0,39.
 O placar da música ganhou os itens **síncope ≥ 0,60** e **baixo sincopado ≥ 0,50**. Estilo **E7** = batida sincopada.
+**E8** (19/11): o usuário ouviu a 19 v2 (E7) — "Animadinhos são ritmos e batidas que não mudam muito durante a música;
+a nossa está ficando ainda estilo banda". Medido: loop igual ref 0,96 × 19 v1 0,84 × 19 v2 0,75; outros instrumentos
+9 % × 20 %. E8 mantém a síncope do E7 e pede UM loop que nunca muda, sem virada entre as partes, mesma batida no verso e
+no refrão (Exclude: beat changes, breakdown, build-up, half-time, drum breaks, guitar solo). Vale da 20 em diante.
