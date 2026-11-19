@@ -53,14 +53,104 @@
  "alternativas": [
   "pop_infantil"
  ],
- "status": "letra_revisada",
- "versoes": [],
+ "status": "aprovada",
+ "versoes": [
+  "v1"
+ ],
  "youtube": {
-  "resumo": "RODA, RODINHA! 🔄 Dá a mão pro teu amigo e vem rodar! Entrou o sapo, o pato, o grilo e o tatu… e quando entrou o elefante, caiu todo mundo! Roda pra direita, roda pra esquerda!",
-  "resumo_short": "RODA, RODINHA! 💃 Dá a mão e entra na roda com a Laurinha e o Luisinho!",
-  "curiosidade": "Na roda todo mundo dá a mão e ninguém fica de fora"
+  "resumo": "RODA, RODINHA! 🐸🦆🐘 A Laurinha chamou a turma pra roda: entrou o sapo, o pato, o grilo e o tatu… mas quando entrou o ELEFANTE, caiu todo mundo, buuu! Gira, gira, vai! Quem tá tonto cai!",
+  "resumo_short": "RODA, RODINHA! 🐘 Quem tá tonto cai!",
+  "curiosidade": "O elefante é o maior animal que vive na terra e consegue pegar coisas pequenininhas com a ponta da tromba",
+  "miniatura_cena": {
+   "fundo": "circulo",
+   "cores": [
+    [
+     255,
+     127,
+     191
+    ],
+    [
+     45,
+     190,
+     90
+    ],
+    [
+     255,
+     210,
+     63
+    ],
+    [
+     185,
+     179,
+     217
+    ],
+    [
+     60,
+     139,
+     240
+    ]
+   ],
+   "heroi": {
+    "id": "laurinha",
+    "pose": {
+     "turn": 0.2,
+     "mouth": "D",
+     "hand_n_x": -135,
+     "hand_n_y": -135,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3
+    }
+   },
+   "par": {
+    "id": "luisinho",
+    "pose": {
+     "turn": -0.2,
+     "mouth": "D",
+     "hand_n_x": -135,
+     "hand_n_y": -135,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3
+    }
+   },
+   "objetos": [
+    {
+     "id": "grilo",
+     "pose": {},
+     "tam": 200,
+     "x": 160,
+     "base": 340
+    }
+   ],
+   "frente": [
+    {
+     "id": "elefante",
+     "pose": {
+      "tromba": 1
+     },
+     "tam": 470,
+     "x": 690,
+     "base": 760
+    }
+   ]
+  }
  },
  "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz)",
  "persona": "laurinha",
- "suno_congelado": "E12 com teclado 1º, bateria 2º, sax 3º (19/11/2026) — já usado no Suno; não regerar"
+ "suno_congelado": "E12 com teclado 1º, bateria 2º, sax 3º (19/11/2026) — já usado no Suno; não regerar",
+ "escolhida": "v1",
+ "playlists": [
+  "Músicas de Bichos 🐸🐜🐑🐧",
+  "Dançar e Brincar com o Corpo 💃🕺"
+ ],
+ "capitulos": {
+  "ponte": "Roda pra direita, roda pra esquerda"
+ }
 }

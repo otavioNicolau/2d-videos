@@ -33,6 +33,8 @@ VÍDEOS (nesta ordem):
 19 Conta Vantagem!
 20 Dino Pisa Forte
 21 Dorme, Acorda!
+22 Roda, Rodinha!
+23 Pula, Coelhinho!
 
 ────────────────────────────────────────────────────────────
 2) Músicas de Bichos 🐸🐜🐑🐧
@@ -48,6 +50,8 @@ VÍDEOS:
 13 Andar de Pinguim
 19 Conta Vantagem!
 20 Dino Pisa Forte
+22 Roda, Rodinha!
+23 Pula, Coelhinho!
 
 ────────────────────────────────────────────────────────────
 3) Dançar e Brincar com o Corpo 💃🕺
@@ -64,6 +68,7 @@ VÍDEOS:
 18 Robô Dançarino
 20 Dino Pisa Forte
 21 Dorme, Acorda!
+22 Roda, Rodinha!
 
 ────────────────────────────────────────────────────────────
 4) Rotina e Bons Hábitos ☀️🪥
@@ -105,6 +110,16 @@ VÍDEOS:
 15 Bolha de Sabão
 
 ────────────────────────────────────────────────────────────
+7) Festas e Datas 🎉   (criar agora: já são 3)
+────────────────────────────────────────────────────────────
+DESCRIÇÃO:
+Músicas infantis das datas especiais com a Laurinha e o Luisinho: Natal, Carnaval, Páscoa e as próximas festas do ano. Cante e dance em cada comemoração! 🎉
+
+VÍDEOS:
+07 Pisca-Pisca de Natal
+16 Carnaval da Turminha
+23 Pula, Coelhinho!
+
+────────────────────────────────────────────────────────────
 Mais tarde (quando tiver 3 vídeos ou mais):
-- Festas e Datas 🎉 — 07 Pisca-Pisca de Natal, 16 Carnaval da Turminha + as próximas (Páscoa, Dia das Mães, São João)
 - Comidinhas 🍕 — 24 Pão de Queijo, 33 Brigadeiro, 38 Olha a Pamonha!, 48 Macarrão que Não Acaba

@@ -58,12 +58,102 @@
   "v1"
  ],
  "youtube": {
-  "resumo": "PULA, COELHINHO! 🐰🥚 O coelhinho da Páscoa escondeu os ovinhos nos lugares mais engraçados: no chapéu do vovô, na meia do Luisinho, na geladeira… e no capacete! Mexe o narizinho e pula!",
-  "resumo_short": "PULA, COELHINHO! 🐰 Mão de orelhinha e pula com a Laurinha e o Luisinho!",
-  "curiosidade": "O coelho mexe o nariz para sentir os cheiros e gosta mais de capim do que de cenoura"
+  "resumo": "PULA, COELHINHO! 🐰🥚 O coelhinho da Páscoa escondeu os ovinhos nos lugares mais engraçados: no chapéu do vovô, na meia do Luisinho, na geladeira, embaixo do tapete… e no capacete! Cadê o ovinho? Ai, ai!",
+  "resumo_short": "PULA, COELHINHO! 🐰 Cadê o ovinho?",
+  "curiosidade": "O coelho mexe o narizinho o tempo todo para sentir os cheiros — umas cem vezes por minuto",
+  "miniatura_cena": {
+   "fundo": "aneis",
+   "cores": [
+    [
+     255,
+     179,
+     204
+    ],
+    [
+     255,
+     210,
+     63
+    ],
+    [
+     127,
+     240,
+     255
+    ],
+    [
+     184,
+     101,
+     230
+    ],
+    [
+     45,
+     190,
+     90
+    ]
+   ],
+   "heroi": {
+    "id": "luisinho",
+    "pose": {
+     "turn": 0.2,
+     "mouth": "D",
+     "hand_n_x": -135,
+     "hand_n_y": -135,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3
+    }
+   },
+   "par": {
+    "id": "laurinha",
+    "pose": {
+     "turn": -0.2,
+     "mouth": "D",
+     "hand_n_x": -135,
+     "hand_n_y": -135,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3
+    }
+   },
+   "objetos": [
+    {
+     "id": "cesta",
+     "pose": {
+      "cheia": 1
+     },
+     "tam": 200,
+     "x": 160,
+     "base": 330
+    }
+   ],
+   "frente": [
+    {
+     "id": "coelhinho",
+     "pose": {
+      "ovo": 1,
+      "piscar": 1
+     },
+     "tam": 470,
+     "x": 690,
+     "base": 760
+    }
+   ]
+  }
  },
  "data_comemorativa": "Páscoa (março/abril)",
  "persona": "luisinho",
  "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz)",
- "escolhida": "v1"
+ "escolhida": "v1",
+ "playlists": [
+  "Festas e Datas 🎉",
+  "Músicas de Bichos 🐸🐜🐑🐧"
+ ],
+ "capitulos": {
+  "ponte": "Mexe o narizinho!"
+ }
 }
