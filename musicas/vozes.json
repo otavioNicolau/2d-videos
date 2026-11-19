@@ -7,13 +7,19 @@
    "style": "cheerful girl child vocal",
    "tag": "Laurinha, girl child vocal",
    "bordao": "Bora, turminha!",
-   "suno_persona": "Laurinha v2",
+   "suno_persona": "Laurinha",
    "criada_de": "15_bolha_de_sabao/versoes/v1 (estilo E5, teclado; nota 4 do usuário), 18/11/2026",
    "personas_anteriores": [
     {
      "nome": "Laurinha",
      "criada_de": "01_zum_zum_cheguei/versoes/v2 (Style Persona no menu + Voice do Suno, 16/11/2026)",
      "estilo": "E1 (banda)"
+    },
+    {
+     "nome": "Laurinha v2",
+     "criada_de": "15_bolha_de_sabao/versoes/v1 (18/11/2026)",
+     "estilo": "E5/E6 (teclado)",
+     "removida": "19/11/2026 a pedido do usuário: volta para a primeira Voice 'Laurinha'"
     }
    ]
   },
