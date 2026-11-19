@@ -204,7 +204,7 @@ class Episode:
         performers = []
         from concurrent.futures import ThreadPoolExecutor
         log(f"  tcomposer: {', '.join(c['name'] for c in columns)} (em paralelo)")
-        with ThreadPoolExecutor(max_workers=min(3, len(columns))) as tp:
+        with ThreadPoolExecutor(max_workers=max(1, min(3, len(columns)))) as tp:      # cena só de cenário: 0 colunas
             rendered = dict(zip([c["name"] for c in columns],
                                 tp.map(lambda c: ot.render(render_scenes[c["name"]], sdir / "otrender" / c["name"], n), columns)))
         for c in columns:
