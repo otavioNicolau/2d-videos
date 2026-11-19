@@ -2484,31 +2484,50 @@ class Dino(_Prop):
                 mao = T(side * 230 + 20, -350 + 10 * math.sin(fase + side))
             _capsula(k, om, mao, 34, VERDE, VL)
             shape(k, ellipse_pts(mao[0], mao[1], 38, 36, 0, 16), VERDE, line=VL)
-        # cabeça grande com focinho
-        hc = T(40, -640)
-        shape(k, ellipse_pts(hc[0], hc[1], 190, 165, 0, 36), VERDE, line=VL)
-        fz = T(150, -590)
-        shape(k, ellipse_pts(fz[0], fz[1], 125, 95, 0, 30), VERDE, line=VL)
-        for dx in (-30, 30):                                           # narinas
-            q = T(200 + dx, -620)
-            k.dot(q[0], q[1], 9, _rgba(VL))
-        for side, ex in ((-1, -40), (1, 70)):                          # olhões
-            e = T(ex, -700)
-            shape(k, ellipse_pts(e[0], e[1], 44, 52, 0, 20), "#FFFFFF", line=VL)
-            k.dot(e[0] + 10 * sx, e[1] + 6, 20, _rgba("#1C2433"))
-            k.dot(e[0] + 18 * sx, e[1] - 6, 7, _rgba("#FFFFFF"))
-        for x in (-60, 210):                                           # bochechas
-            q = T(x, -610)
-            k.shape(ellipse_pts(q[0], q[1], 30, 18, 0, 12), fill=_rgba("#FF9AB0", 0.7), line=0)
-        m = T(140, -540)
-        if ru > 0.1:                                                   # rugido fofo: boca aberta com dentinhos
-            shape(k, ellipse_pts(m[0], m[1], 90, 20 + 50 * ru, 0, 24), "#8A2E3E", line=VL)
+        # cabeça grande e redonda (estilo da turma): chifrinhos, focinho claro, olhões com brilho, sorrisão
+        hc = T(40, -650)
+        for j, (x, y) in enumerate(((-60, -800), (20, -825), (100, -815))):          # chifrinhos coloridos no topo
+            q = T(x, y)
+            cor = ("#FF8A1F", "#FFD23F", "#FF7FBF")[j]
+            shape(k, [(q[0] - 22, q[1] + 26), (q[0], q[1] - 26), (q[0] + 22, q[1] + 26)], cor, line=dark(cor))
+        shape(k, ellipse_pts(hc[0], hc[1], 200, 178, 0, 40), VERDE, line=VL)
+        for x, y, r in ((-120, -700, 16), (-95, -620, 11), (170, -720, 13)):        # pintinhas
+            q = T(x, y)
+            k.shape(ellipse_pts(q[0], q[1], r, r * 0.85, 0, 12), fill=_rgba("#46B35A"), line=0)
+        fz = T(85, -585)                                                            # focinho claro na frente
+        shape(k, ellipse_pts(fz[0], fz[1], 150, 92, 0, 32), CLARO, line=CL)
+        for dx in (-26, 26):                                                        # narinas
+            q = T(85 + dx, -630)
+            shape(k, ellipse_pts(q[0], q[1], 9, 7, 0, 10), VL)
+        for ex in (-30, 120):                                                       # olhões com sobrancelha e brilho
+            e = T(ex, -715)
+            shape(k, ellipse_pts(e[0], e[1], 50, 58, 0, 22), "#FFFFFF", line=VL)
+            k.dot(e[0] + 10 * sx, e[1] + 8, 25, _rgba("#1C2433"))
+            k.dot(e[0] + 20 * sx, e[1] - 4, 9, _rgba("#FFFFFF"))
+            k.dot(e[0] + 4 * sx, e[1] + 18, 4, _rgba("#FFFFFF"))
+            br = 14 * ru                                                            # sobrancelha sobe no rugido
+            ln(k, [T(ex - 34, -786 - br), T(ex, -798 - br), T(ex + 34, -786 - br)], VL, w=LINE * 1.6)
+        for x in (-80, 230):                                                        # bochechas rosadas
+            q = T(x, -600)
+            k.shape(ellipse_pts(q[0], q[1], 34, 20, 0, 14), fill=_rgba("#FF8FA8", 0.8), line=0)
+        m = T(85, -560)
+        if ru > 0.1:                                                                # rugido fofo: bocão aberto com dentinhos
+            shape(k, ellipse_pts(m[0], m[1] + 10, 92, 24 + 52 * ru, 0, 26), "#8A2E3E", line=VL)
             for j in (-2, -1, 0, 1, 2):
-                q = (m[0] + j * 32, m[1] - 18 - 46 * ru)
-                shape(k, [(q[0] - 12, q[1]), (q[0] + 12, q[1]), (q[0], q[1] + 22)], "#FFFFFF", line="#C9D6E0", smooth=False)
-            shape(k, ellipse_pts(m[0], m[1] + 20 * ru, 40, 14 + 10 * ru, 0, 14), "#F27A8E", line=0)
-        else:                                                          # sorrisão
-            ln(k, [T(70, -555), T(140, -520), T(220, -555)], VL, w=LINE * 1.5)
+                q = (m[0] + j * 32, m[1] + 10 - 20 - 48 * ru)
+                shape(k, [(q[0] - 12, q[1]), (q[0] + 12, q[1]), (q[0], q[1] + 20)], "#FFFFFF", line="#C9D6E0", smooth=False)
+            shape(k, ellipse_pts(m[0], m[1] + 30 * ru, 42, 14 + 10 * ru, 0, 14), "#F27A8E", line=0)
+        else:                                                                       # sorrisão aberto com linguinha
+            pts = [(m[0] - 80, m[1] - 14), (m[0] - 40, m[1] - 6), (m[0], m[1] - 4), (m[0] + 40, m[1] - 6), (m[0] + 80, m[1] - 14),
+                   (m[0] + 56, m[1] + 30), (m[0], m[1] + 46), (m[0] - 56, m[1] + 30)]
+            P_ = k.shape(pts, fill=_rgba("#8A2E3E"), line=0)
+            pth = skia.Path()
+            pth.addPoly([skia.Point(*q) for q in P_], True)
+            k.c.save()
+            k.c.clipPath(pth, doAntiAlias=True)
+            k.shape(ellipse_pts(m[0], m[1] + 44, 46, 24, 0, 14), fill=_rgba("#F27A8E"), line=0)
+            k.c.restore()
+            k.shape(P_, fill=None, brush=Brush(LINE * 1.2, 0.0, _rgba(VL), 0.0), dense=True, line=LINE * 1.2)
         if impacto > 0.05:                                             # poeirinha do "tum!"
             for side in (-1, 1):
                 pe = T(perna * 117 + side * 110, -10)
