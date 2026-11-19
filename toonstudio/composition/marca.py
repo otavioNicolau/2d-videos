@@ -60,6 +60,47 @@ def vinheta_episode(dur: float = 4.2, falas: bool = False) -> dict:
             "approval": {"storyboard": False, "final_render": False}, "scenes": [scene]}
 
 
+def _duracao(p: Path) -> float:
+    r = subprocess.run([tool("ffprobe"), "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(p)],
+                       capture_output=True, text=True, check=True)
+    return float(r.stdout.strip())
+
+
+def _efeitos_sonoros(pdir: Path, wav: Path, inicio: float) -> int:
+    """Mistura os efeitos sonoros das cenas (`sfx`, vindos de "sons" no roteiro) no áudio já equilibrado, in loco.
+    Nível: pico do efeito ≈ 3× o RMS da música (soa como um instrumento de percussão) × `volume_db`. Devolve quantos."""
+    import numpy as np
+    import soundfile as sf
+    from scipy import signal as sg
+    from ..audio import sfx as SFX
+    ep = json.loads((pdir / "episode.json").read_text(encoding="utf-8"))
+    lista, t0 = [], inicio
+    for s in ep["scenes"]:
+        lista += [(t0 + x["t"], x) for x in s.get("sfx", [])]
+        t0 += float(s["duration"])
+    if not lista:
+        return 0
+    a, sr = sf.read(str(wav), dtype="float32", always_2d=True)
+    rms = float(np.sqrt(np.mean(a ** 2))) or 0.05
+    for t, x in lista:
+        e = SFX.get(x["id"])
+        if sr != SFX.SR:
+            e = sg.resample_poly(e, sr, SFX.SR).astype(np.float32)
+        e = e / (float(np.max(np.abs(e))) or 1.0) * 3.0 * rms * 10 ** (float(x.get("volume_db", 0.0)) / 20)
+        i = int(t * sr)
+        if i >= len(a):
+            continue
+        seg = e[: len(a) - i]
+        pan = float(x.get("pan", 0.0))
+        a[i:i + len(seg), 0] += seg * np.cos((pan + 1) * np.pi / 4) * 1.414
+        a[i:i + len(seg), -1] += seg * np.sin((pan + 1) * np.pi / 4) * 1.414
+    pico = float(np.max(np.abs(a)))
+    if pico > 0.99:
+        a *= 0.99 / pico
+    sf.write(str(wav), a, sr, subtype="FLOAT")
+    return len(lista)
+
+
 def final(project: str) -> Path:
     """Vídeo completo do episódio: vinheta (se houver) + clipe + chamada (se houver), 1080p 30 fps, áudio 48 kHz."""
     pdir = PROJECTS / project
@@ -89,7 +130,9 @@ def final(project: str) -> Path:
     subprocess.run([tool("ffmpeg"), "-y", "-loglevel", "error", "-i", str(cru.with_suffix(".mov")), "-vn", "-c:a", "pcm_s16le",
                     str(bruto)], check=True)
     rb = rebalancear(bruto, rebal)               # voz × batida no peso da referência (o Suno põe a voz muito na frente)
-    rel = {"rebalanceamento": rb, **masterizar(rebal, mestre)}
+    inicio = _duracao(BRAND / "vinheta.mp4") if (BRAND / "vinheta.mp4") in parts else 0.0
+    sons = _efeitos_sonoros(pdir, rebal, inicio)  # efeitos do roteiro ("sons"): antes da masterização, no mesmo nível
+    rel = {"rebalanceamento": rb, "efeitos_sonoros": sons, **masterizar(rebal, mestre)}
     subprocess.run([tool("ffmpeg"), "-y", "-loglevel", "error", "-i", str(cru.with_suffix(".mov")), "-i", str(mestre),
                     "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-c:a", "aac", "-b:a", "256k", "-movflags", "+faststart", str(out)],
                    check=True)

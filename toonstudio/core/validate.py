@@ -43,7 +43,7 @@ def load_background(bg_id: str) -> dict:
 
 def sfx_ids() -> set[str]:
     from ..audio import sfx
-    return set(sfx.CATALOG)
+    return sfx.ids()
 
 
 def validate(ep: dict) -> Report:

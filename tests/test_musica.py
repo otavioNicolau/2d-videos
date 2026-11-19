@@ -358,3 +358,25 @@ def test_master_tames_harsh_suno_highs():
     assert len(ganhos) == len(FAIXAS)
     assert ganhos[0] > 3 and ganhos[4] < -1 and ganhos[5] < -3 and ganhos[6] < -4
     assert all(abs(g) <= 9.0 for g in ganhos)
+
+
+def test_sons_do_roteiro_entram_na_mixagem_final(tmp_path):
+    """Efeito do roteiro ("sons" → cena "sfx") é somado ao áudio no tempo certo (com a vinheta antes) e no nível da música."""
+    import json
+    import numpy as np
+    import soundfile as sf
+    from toonstudio.audio import sfx
+    from toonstudio.composition.marca import _efeitos_sonoros
+    sr = 48000
+    t = np.arange(4 * sr) / sr
+    musica = (0.1 * np.sin(2 * np.pi * 220 * t)).astype(np.float32)
+    wav = tmp_path / "a.wav"
+    sf.write(wav, np.stack([musica, musica], 1), sr)
+    ep = {"scenes": [{"duration": 1.0}, {"duration": 3.0, "sfx": [{"t": 0.5, "id": "ding", "volume_db": 0.0}]}]}
+    (tmp_path / "episode.json").write_text(json.dumps(ep))
+    assert _efeitos_sonoros(tmp_path, wav, 1.0) == 1
+    a, _ = sf.read(wav)
+    dif = np.abs(a[:, 0] - musica)
+    antes, depois = dif[: int(2.45 * sr)].max(), dif[int(2.5 * sr): int(2.6 * sr)].max()
+    assert antes < 1e-3 and depois > 0.05                       # entra em 1,0 (vinheta) + 1,0 (cena 1) + 0,5 = 2,5 s
+    assert "ding" in sfx.ids() and "latido" not in sfx.ids()    # gravado sem licença anotada não vale

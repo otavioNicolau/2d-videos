@@ -208,22 +208,165 @@ def forest_ambience(dur: float, seed: int = 0) -> np.ndarray:
     return _norm(out, 0.35)
 
 
+# ───── efeitos de desenho para os clipes (18/11): sintetizados, sem licença ─────
+
+def boing():
+    """Mola de desenho: tom que oscila e cai (pulo, quique)."""
+    t = _t(0.7)
+    f = 260 * (1 + 0.35 * np.sin(2 * np.pi * 16 * t) * np.exp(-t * 4)) * (1 + 0.6 * np.exp(-t * 6))
+    x = np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-t * 4.5)
+    return _norm(x + 0.3 * np.sin(2 * np.pi * np.cumsum(2 * f) / SR) * np.exp(-t * 7), 0.8)
+
+
+def whoosh():
+    """Vento de passagem (corte, voo, giro)."""
+    t = _t(0.5)
+    n = _rng(21).normal(0, 1, len(t))
+    out = np.zeros_like(t)
+    seg = 480
+    for i in range(0, len(t), seg):
+        u = i / len(t)
+        fc = 400 + 2600 * np.sin(np.pi * u)
+        out[i:i + seg] = _bp(n[i:i + seg], fc * 0.6, fc * 1.5)
+    return _norm(out * np.sin(np.pi * t / 0.5) ** 2, 0.6)
+
+
+def ding():
+    """Sininho de acerto (resposta certa, ideia)."""
+    t = _t(1.1)
+    x = sum(a * np.sin(2 * np.pi * f * t) * np.exp(-t * d) for f, a, d in ((1568, 1.0, 3.5), (3136, 0.35, 5), (4700, 0.15, 8)))
+    return _norm(x * np.minimum(1, t / 0.003), 0.6)
+
+
+def plim():
+    """Brilho mágico: arpejo agudo subindo (algo aparece, acende)."""
+    out = np.zeros(int(0.9 * SR))
+    for k, f in enumerate((1319, 1568, 2093, 2637, 3136)):
+        i = int(k * 0.07 * SR)
+        t = _t(0.5)
+        x = np.sin(2 * np.pi * f * t) * np.exp(-t * 9)
+        out[i:i + len(x)] += x[: len(out) - i]
+    return _norm(out, 0.5)
+
+
+def bip_bop():
+    """Robô: "bip" agudo + "bop" grave, onda quadrada suave."""
+    out = np.zeros(int(0.42 * SR))
+    for st, f, d in ((0.0, 1480, 0.12), (0.2, 740, 0.16)):
+        t = _t(d)
+        x = np.tanh(3 * np.sin(2 * np.pi * f * t)) * np.minimum(1, t / 0.004) * np.minimum(1, (d - t) / 0.02)
+        i = int(st * SR)
+        out[i:i + len(x)] += x
+    return _norm(_lp(out, 6000), 0.55)
+
+
+def bips():
+    """Robô "pensando": sequência rápida de bips aleatórios."""
+    rng = _rng(22)
+    out = np.zeros(int(0.8 * SR))
+    for k in range(8):
+        f = rng.choice([880, 1175, 1480, 1760, 2093])
+        t = _t(0.07)
+        x = np.tanh(2.5 * np.sin(2 * np.pi * f * t)) * np.minimum(1, (0.07 - t) / 0.01)
+        i = int(k * 0.095 * SR)
+        out[i:i + len(x)] += x
+    return _norm(_lp(out, 6000), 0.45)
+
+
+def zap():
+    """Faísca elétrica (travou!): estalos + zumbido."""
+    t = _t(0.45)
+    rng = _rng(23)
+    crack = _hp(rng.normal(0, 1, len(t)), 2000) * (rng.random(len(t)) < 0.02) * 6
+    buzz = np.sign(np.sin(2 * np.pi * 120 * t)) * 0.25 * _bp(rng.normal(0, 1, len(t)), 800, 4000)
+    return _norm((crack + buzz) * np.exp(-t * 5), 0.6)
+
+
+def pfff():
+    """Murchar / pilha acabando: tom que despenca + ar escapando."""
+    t = _t(0.9)
+    f = 900 * np.exp(-t * 3) + 80
+    tone = np.tanh(2 * np.sin(2 * np.pi * np.cumsum(f) / SR)) * np.exp(-t * 2.5) * 0.6
+    ar = _bp(_rng(24).normal(0, 1, len(t)), 1500, 6000) * np.exp(-t * 3) * 0.5
+    return _norm(_lp(tone, 4000) + ar, 0.6)
+
+
+def splash():
+    """Água: respingo (onda, poça, mergulho)."""
+    t = _t(0.8)
+    rng = _rng(25)
+    x = _bp(rng.normal(0, 1, len(t)), 700, 7000) * np.exp(-t * 6)
+    for k in range(10):                                         # gotinhas
+        i = int(rng.uniform(0.05, 0.6) * SR)
+        tt = _t(0.04)
+        g = np.sin(2 * np.pi * np.cumsum(rng.uniform(900, 1800) * (1 + 3 * tt / 0.04)) / SR) * np.exp(-tt * 60) * 0.4
+        x[i:i + len(g)] += g[: len(x) - i]
+    return _norm(x, 0.6)
+
+
+def palminhas():
+    """Três palminhas."""
+    out = np.zeros(int(0.9 * SR))
+    rng = _rng(26)
+    for k in range(3):
+        n = int(0.06 * SR)
+        h = _bp(rng.normal(0, 1, n), 900, 5000) * np.exp(-np.linspace(0, 9, n))
+        i = int(k * 0.26 * SR)
+        out[i:i + n] += h
+    return _norm(out, 0.6)
+
+
+def tambor():
+    """Rufar curto + prato (revelação, "tcharam!")."""
+    out = np.zeros(int(1.4 * SR))
+    rng = _rng(27)
+    for k in range(18):
+        n = int(0.05 * SR)
+        h = _bp(rng.normal(0, 1, n), 150, 2500) * np.exp(-np.linspace(0, 7, n)) * (0.4 + 0.6 * k / 18)
+        i = int(k * 0.045 * SR)
+        out[i:i + n] += h
+    t = _t(0.6)
+    i = int(0.82 * SR)
+    prato = _hp(rng.normal(0, 1, len(t)), 5000) * np.exp(-t * 5) * 0.8
+    out[i:i + len(t)] += prato[: len(out) - i]
+    return _norm(out, 0.6)
+
+
+# efeitos gravados (bichos, crianças): .wav em library/audio/sfx/<pasta>/<id>.wav — origem e licença em LICENCAS.md
+LIB_SFX = Path(__file__).resolve().parents[2] / "library" / "audio" / "sfx"
+
+
+def gravados() -> dict[str, Path]:
+    """Efeitos gravados utilizáveis: só os que têm origem e licença anotadas em LICENCAS.md (primeira coluna = arquivo)."""
+    lic = LIB_SFX / "LICENCAS.md"
+    if not lic.exists():
+        return {}
+    ok = {c.split("|")[1].strip() for c in lic.read_text(encoding="utf-8").splitlines() if c.startswith("|") and c.count("|") >= 4}
+    return {f.stem: f for f in sorted(LIB_SFX.rglob("*.wav")) if f.name in ok}
+
+
+def ids() -> set[str]:
+    return set(CATALOG) | set(gravados())
+
+
 CATALOG = {"pizz_1": pizz_1, "pizz_2": pizz_2, "pizz_3": pizz_3, "whistle_up": whistle_up, "whistle_down": whistle_down,
            "pop": pop, "zip": zip, "tink": tink, "patter": patter, "bonk": bonk, "thud": thud, "rustle": rustle,
-           "tweets": tweets, "flutter": flutter, "munch": munch}
+           "tweets": tweets, "flutter": flutter, "munch": munch,
+           "boing": boing, "whoosh": whoosh, "ding": ding, "plim": plim, "bip_bop": bip_bop, "bips": bips, "zap": zap,
+           "pfff": pfff, "splash": splash, "palminhas": palminhas, "tambor": tambor}
 
 
 def get(sfx_id: str, lib_dir: Path | None = None) -> np.ndarray:
-    if lib_dir is not None:
-        f = lib_dir / f"{sfx_id}.wav"
-        if f.exists():
-            import soundfile as sf
-            a, sr = sf.read(f, dtype="float32")
-            if a.ndim > 1:
-                a = a.mean(axis=1)
-            if sr != SR:
-                a = signal.resample_poly(a, SR, sr).astype(np.float32)
-            return a
+    """Efeito por id: gravado (library/audio/sfx/**/<id>.wav) tem prioridade; senão o sintetizado do CATALOG."""
+    f = gravados().get(sfx_id) or (lib_dir / f"{sfx_id}.wav" if lib_dir is not None else None)
+    if f is not None and f.exists():
+        import soundfile as sf
+        a, sr = sf.read(f, dtype="float32")
+        if a.ndim > 1:
+            a = a.mean(axis=1)
+        if sr != SR:
+            a = signal.resample_poly(a, SR, sr).astype(np.float32)
+        return a
     if sfx_id not in CATALOG:
         raise KeyError(f"efeito desconhecido: {sfx_id}")
     return CATALOG[sfx_id]()
