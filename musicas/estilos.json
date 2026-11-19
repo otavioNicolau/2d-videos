@@ -133,7 +133,7 @@
    {
     "versao": "E12",
     "data": "19/11/2026",
-    "mudanca": "TRIO: só saxofone, bateria (kit) e teclado (baixo + piano); sax na abertura, entre as frases, antes de cada refrão e nos intervalos; ritmo da música entra só como 'groove' (sem os instrumentos/percussão próprios do ritmo); Exclude com todos os outros instrumentos (guitarra, metais, cordas, apito, percussão, efeitos…); bateria de kit liberada (sai 'live drums/acoustic drums' do Exclude) · ordem do usuário: bateria FORTE > teclado PISADINHA > sax em 3º (abertura, antes do refrão, intervalos) · ordem final do usuário: TECLADO 1º > BATERIA 2º > SAX 3º",
+    "mudanca": "TRIO: só saxofone, bateria (kit) e teclado (baixo + piano); sax na abertura, entre as frases, antes de cada refrão e nos intervalos; ritmo da música entra só como 'groove' (sem os instrumentos/percussão próprios do ritmo); Exclude com todos os outros instrumentos (guitarra, metais, cordas, apito, percussão, efeitos…); bateria de kit liberada (sai 'live drums/acoustic drums' do Exclude) · ordem do usuário: bateria FORTE > teclado PISADINHA > sax em 3º (abertura, antes do refrão, intervalos) · ordem final do usuário: TECLADO 1º > BATERIA 2º > SAX 3º · sax ainda menor (só intervalos, bem baixo) e teclado mais alto e AGUDO (melodia no registro alto)",
     "motivo": "usuário: com sax, bateria e teclado a música do Animadinhos fica animada e viciante; teste 'apenas eles'",
     "usado_em": "21 em diante (teste)"
    }
@@ -162,7 +162,7 @@
   "trio": {
    "ativo": true,
    "abertura": "kids song played by ONLY three instruments: keyboard first, drums second, saxophone third",
-   "producao": "keyboard loud and in front: arranger keyboard 'pisadinha' bass and chords marking every beat plus a bright catchy piano melody, strong punchy drums second (big kick and snare) repeating the same beat through the whole song, saxophone only as a lighter third layer with short riffs in the intro, before every chorus and in the instrumental breaks, nothing else, single dry centered lead vocal, close and clear, polished kids music production",
+   "producao": "keyboard loud and in front with a BRIGHT HIGH-PITCHED sound: arranger keyboard 'pisadinha' bass and chords marking every beat plus a bright high-register piano/keyboard melody that sticks in the head, strong punchy drums second (big kick and snare) repeating the same beat through the whole song, saxophone very soft and rare, only one short riff in the intro and in the instrumental breaks, nothing else, single dry centered lead vocal, close and clear, polished kids music production",
    "peso_style": "arranger keyboard 'pisadinha' leading the song, pumping bass and chords on every beat (tum-tcha), the same groove in verse and chorus",
    "exclude_extra": [
     "guitar",
@@ -193,9 +193,9 @@
     "live drums",
     "acoustic drums"
    ],
-   "nota": "19/11/2026, usuário: 'quero usar esses 3 instrumentos nas próximas músicas para teste — APENAS ELES' (saxofone, bateria e teclado, como o Animadinhos). · Ajuste do usuário: 'preciso que a bateria seja forte, pra marcar o ritmo, e as pisadinhas do teclado também; o saxofone fica em 3º' → ordem: bateria forte > teclado pisadinha > sax (só abertura, antes do refrão e intervalos). · Nova ordem do usuário (19/11): TECLADO em 1º, BATERIA em 2º, SAX em 3º.",
-   "intervalo": "[Instrumental Break - {s} seconds, keyboard pisadinha, strong drums and a short saxophone riff]",
-   "intro": "[Intro - keyboard pisadinha, strong drums and a short saxophone riff]"
+   "nota": "19/11/2026, usuário: 'quero usar esses 3 instrumentos nas próximas músicas para teste — APENAS ELES' (saxofone, bateria e teclado, como o Animadinhos). · Ajuste do usuário: 'preciso que a bateria seja forte, pra marcar o ritmo, e as pisadinhas do teclado também; o saxofone fica em 3º' → ordem: bateria forte > teclado pisadinha > sax (só abertura, antes do refrão e intervalos). · Nova ordem do usuário (19/11): TECLADO em 1º, BATERIA em 2º, SAX em 3º. · Usuário (19/11): 'reduzir um pouco mais o saxofone e aumentar o teclado com som mais agudo' → sax bem baixo e raro (só abertura/intervalos, fora da abertura da letra), teclado mais alto e agudo.",
+   "intervalo": "[Instrumental Break - {s} seconds, bright high keyboard melody, keyboard pisadinha and strong drums, a soft short sax riff]",
+   "intro": "[Intro - bright high keyboard melody, keyboard pisadinha and strong drums]"
   }
  },
  "peso": {
