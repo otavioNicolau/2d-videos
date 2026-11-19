@@ -2634,49 +2634,88 @@ class _Bicho(_Prop):
 
 
 class Grilo(_Bicho):
-    """Grilo verdinho de pé, antenas compridas e pernas de trás grandes."""
+    """Grilo de desenho, de pé (estilo da turma): cabeça grande com olhões, antenas com bolinhas, bracinhos, asinhas e as
+    pernas de trás dobradas em Z (bem de grilo)."""
 
     def __init__(self):
-        super().__init__("grilo", "Grilo", (700, 760), (350, 720), 300, {"pulo": 0.0, "cai": 0.0, "lado": 1.0})
+        super().__init__("grilo", "Grilo", (800, 900), (400, 860), 380, {"pulo": 0.0, "cai": 0.0, "lado": 1.0})
 
     def paint(self, k, P):
         sx, cai, y0 = self._pose(P)
-        V, VL = "#7ED957", "#3F9A2A"
+        V, VL, VC = "#6FD34B", "#2F8F2A", "#D8F7B8"
+        for s_ in (-1, 1):                                                  # asinhas atrás
+            shape(k, ellipse_pts(s_ * 55, y0 - 200, 40, 85, s_ * 0.35, 18), "#EAFBE0", line="#9CD48A")
+        for s_ in (-1, 1):                                                  # pernas de trás em Z, com pezinho
+            pts = [(s_ * 45, y0 - 110), (s_ * 125, y0 - 200), (s_ * 105, y0 - 30), (s_ * 140, y0 - 8)]
+            ln(k, pts, VL, w=LINE * 5.2)
+            ln(k, pts, V, w=LINE * 3.8)
+            shape(k, ellipse_pts(s_ * 150, y0 - 6, 30, 14, 0, 14), "#FFD23F", line="#D9A520")
+        shape(k, ellipse_pts(0, y0 - 150, 72, 92, 0, 26), V, line=VL)         # corpo
+        shape(k, ellipse_pts(0, y0 - 140, 44, 62, 0, 22), VC, line="#9CD48A")
+        for y in (-170, -140, -110):
+            ln(k, [(-30, y0 + y), (30, y0 + y)], "#9CD48A", w=LINE * 0.7)
+        for s_ in (-1, 1):                                                  # bracinhos
+            _capsula(k, (s_ * 60, y0 - 200), (s_ * 105, y0 - 150), 11, V, VL)
+            shape(k, ellipse_pts(s_ * 108, y0 - 146, 15, 15, 0, 12), V, line=VL)
+        hy = y0 - 315
+        for s_ in (-1, 1):                                                  # antenas com bolinha
+            pts = [(s_ * 30, hy - 70), (s_ * 55, hy - 150), (s_ * 95, hy - 205)]
+            ln(k, pts, VL, w=LINE * 1.3)
+            shape(k, ellipse_pts(s_ * 98, hy - 210, 15, 15, 0, 12), "#FF8A1F", line="#C9661A")
+        shape(k, ellipse_pts(0, hy, 100, 90, 0, 30), V, line=VL)               # cabeça grande
         for s_ in (-1, 1):
-            ln(k, [(s_ * 50, y0 - 120), (s_ * 120, y0 - 60), (s_ * 70, y0)], VL, w=LINE * 3.2)
-            ln(k, [(s_ * 50, y0 - 120), (s_ * 120, y0 - 60), (s_ * 70, y0)], V, w=LINE * 2)
-        shape(k, ellipse_pts(0, y0 - 140, 70, 95, 0, 26), V, line=VL)
-        shape(k, ellipse_pts(0, y0 - 130, 40, 60, 0, 20), "#C9F2A8", line=VL)
-        hy = y0 - 270
-        for s_ in (-1, 1):
-            ln(k, [(s_ * 25, hy - 50), (s_ * 70, hy - 160), (s_ * 120, hy - 200)], VL, w=LINE * 1.2)
-        shape(k, ellipse_pts(0, hy, 75, 68, 0, 26), V, line=VL)
-        for s_ in (-1, 1):
-            self._olho(k, s_ * 30, hy - 10, 20, cai, sx)
-        ln(k, [(-20, hy + 30), (0, hy + 40), (20, hy + 30)], VL, w=LINE)
+            e = (s_ * 40, hy - 12)
+            if cai > 0.5:
+                self._olho(k, e[0], e[1], 22, 1.0, sx)
+            else:
+                shape(k, ellipse_pts(e[0], e[1], 26, 31, 0, 18), "#FFFFFF", line=VL)
+                k.dot(e[0] + 5 * sx, e[1] + 5, 13, _rgba("#1C2433"))
+                k.dot(e[0] + 10 * sx, e[1] - 4, 5, _rgba("#FFFFFF"))
+            k.shape(ellipse_pts(s_ * 66, hy + 28, 15, 9, 0, 12), fill=_rgba("#FF9AB0", 0.8), line=0)
+        if cai > 0.5:
+            shape(k, ellipse_pts(0, hy + 42, 12, 15, 0, 14), "#8A2E3E", line=VL)
+        else:
+            ln(k, [(-26, hy + 34), (0, hy + 50), (26, hy + 34)], VL, w=LINE * 1.3)
 
 
 class Tatu(_Bicho):
-    """Tatu-bola de desenho: casco cinza-azulado com listras, focinho comprido, orelhinhas."""
+    """Tatu-bola de desenho (estilo da turma): casco em cúpula com faixas coloridas, cara simpática de frente/lado com
+    olhões, orelhinhas rosadas, focinho com narizinho rosa, patinhas e rabinho."""
 
     def __init__(self):
-        super().__init__("tatu", "Tatu", (800, 600), (400, 560), 230, {"pulo": 0.0, "cai": 0.0, "lado": 1.0})
+        super().__init__("tatu", "Tatu", (900, 700), (450, 660), 300, {"pulo": 0.0, "cai": 0.0, "lado": 1.0})
 
     def paint(self, k, P):
         sx, cai, y0 = self._pose(P)
-        C, CL, P_ = "#A9B8C9", "#6E7F94", "#E8C7A8"
+        C, CL, CF, PE, PL = "#9FB4D6", "#5E73A0", "#C7D6EE", "#F2D2B4", "#C9946A"
+        ln(k, [(-150 * sx, y0 - 60), (-215 * sx, y0 - 40), (-245 * sx, y0 - 55)], CL, w=LINE * 4)     # rabinho
+        ln(k, [(-150 * sx, y0 - 60), (-215 * sx, y0 - 40), (-245 * sx, y0 - 55)], C, w=LINE * 2.6)
+        for x in (-95, -35, 45, 105):                                           # patinhas
+            shape(k, ellipse_pts(x * sx, y0 - 14, 26, 18, 0, 12), PE, line=PL)
+        pts = [(math.cos(a) * 170, y0 - 40 + math.sin(a) * 150) for a in [math.pi + i * math.pi / 24 for i in range(25)]]
+        shape(k, pts + [(170, y0 - 40), (-170, y0 - 40)], C, line=CL)            # casco em cúpula
+        for j, x in enumerate((-110, -55, 0, 55, 110)):                          # faixas
+            cor = CF if j % 2 else "#B8CBEA"
+            h = math.sqrt(max(0.0, 1 - (x / 170) ** 2)) * 150
+            shape(k, [(x - 22, y0 - 42), (x - 18, y0 - 40 - h * 0.95), (x + 18, y0 - 40 - h * 0.95), (x + 22, y0 - 42)], cor, line=CL, smooth=False)
+        hx, hy = 165 * sx, y0 - 95                                               # cabeça na frente do casco
+        for s_ in (-1, 1):                                                      # orelhinhas
+            q = (hx + s_ * 40, hy - 62)
+            shape(k, ellipse_pts(q[0], q[1], 20, 34, s_ * 0.35, 14), PE, line=PL)
+            shape(k, ellipse_pts(q[0], q[1] + 4, 10, 20, s_ * 0.35, 12), "#FFB3C1")
+        shape(k, ellipse_pts(hx, hy, 78, 68, 0, 26), PE, line=PL)
+        shape(k, ellipse_pts(hx + 52 * sx, hy + 22, 42, 26, 0, 18), PE, line=PL)  # focinho
+        shape(k, ellipse_pts(hx + 88 * sx, hy + 18, 13, 11, 0, 12), "#FF7FA0", line="#D9506E")
         for s_ in (-1, 1):
-            shape(k, ellipse_pts(s_ * 70, y0 - 14, 26, 16, 0, 12), P_, line="#B88E68")
-        shape(k, ellipse_pts(0, y0 - 110, 150, 105, 0, 30), C, line=CL)
-        for x in (-80, -30, 20, 70):
-            ln(k, [(x, y0 - 200), (x + 6 * sx, y0 - 20)], CL, w=LINE)
-        hx = 150 * sx
-        shape(k, ellipse_pts(hx, y0 - 90, 60, 50, 0, 22), P_, line="#B88E68")
-        shape(k, ellipse_pts(hx + 55 * sx, y0 - 80, 40, 22, 0, 16), P_, line="#B88E68")
-        shape(k, ellipse_pts(hx + 92 * sx, y0 - 82, 10, 9, 0, 10), "#5A3A2A")
-        for s_ in (-1, 1):
-            shape(k, [(hx + s_ * 22, y0 - 130), (hx + s_ * 34, y0 - 180), (hx + s_ * 4, y0 - 140)], P_, line="#B88E68", smooth=False)
-        self._olho(k, hx + 10 * sx, y0 - 100, 13, cai, sx)
+            e = (hx + s_ * 26 + 6 * sx, hy - 12)
+            if cai > 0.5:
+                self._olho(k, e[0], e[1], 17, 1.0, sx)
+            else:
+                shape(k, ellipse_pts(e[0], e[1], 18, 22, 0, 16), "#FFFFFF", line=PL)
+                k.dot(e[0] + 4 * sx, e[1] + 4, 9, _rgba("#2A1A0A"))
+                k.dot(e[0] + 8 * sx, e[1] - 3, 4, _rgba("#FFFFFF"))
+        k.shape(ellipse_pts(hx - 30 * sx, hy + 26, 14, 8, 0, 12), fill=_rgba("#FF9AB0", 0.8), line=0)
+        ln(k, [(hx + 30 * sx, hy + 46), (hx + 50 * sx, hy + 54), (hx + 70 * sx, hy + 44)], PL, w=LINE)
 
 
 class Elefante(_Bicho):
