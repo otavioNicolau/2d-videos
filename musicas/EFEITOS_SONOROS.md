@@ -40,6 +40,13 @@ comemoram no fim do refrão. Os desenhos animados de referência usam isso o tem
 
 Para ouvir: a pasta `Canal\Efeitos sonoros (teste)` no Windows.
 
+## Combinado com o usuário (19/11/2026): pedido sob demanda
+Não existe pacote de bichos/crianças baixado de antemão. **A cada música**, ao escrever o roteiro, eu listo os efeitos
+gravados que ela precisa (ex.: 21 "Au au, cachorrinho" → latido de filhote, latido grande, ganido) e aviso o usuário
+ANTES do storyboard, com o link de busca da Pixabay para cada um (sons de **desenho**, curtos e alegres:
+`https://pixabay.com/sound-effects/search/cartoon%20<bicho>/`). Ele baixa, eu corto, renomeio e anoto em LICENCAS.md;
+o que já foi baixado fica na biblioteca e serve para as próximas. Os sintetizados (tabela acima) eu uso direto.
+
 ## Efeitos gravados (o usuário baixa; não dá para sintetizar bem)
 Fonte principal: **BigSoundBank** (bigsoundbank.com): licença CC0, uso comercial sem crédito, sons fora do Content ID;
 tem latido, miau, galo, vaca, ovelha, cabra, cavalo, pato, porco, sapo, passarinhos e risada de criança. Lista com links:
