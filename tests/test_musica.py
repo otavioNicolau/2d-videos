@@ -33,7 +33,7 @@ def test_all_channel_songs_pass_the_bible_checks():
 
 def test_suno_txt_is_generated_not_hand_edited():
     for d in c.todas():
-        if (d / "versoes").exists():          # já gravada: o suno.txt registra o Style que foi usado de verdade
+        if (d / "versoes").exists() or c.ficha(d).get("suno_congelado"):   # já gravada/usada no Suno: registra o Style usado
             continue
         assert (d / "suno.txt").read_text(encoding="utf-8") == c.texto_suno(c.prompt(d)), \
             f"{d.name}/suno.txt desatualizado: rode `toonstudio musica prompt {d.name}`"

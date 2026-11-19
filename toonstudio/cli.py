@@ -207,6 +207,9 @@ def _musica(args) -> int:
         print(json.dumps(ck.metricas, ensure_ascii=False))
         return 1 if ck.erros else 0
     if args.op == "prompt":
+        if c.ficha(d).get("suno_congelado") and "--force" not in (args.extra or []):
+            print(f"{d.name}: suno.txt congelado ({c.ficha(d)['suno_congelado']}); use `--force` para regerar")
+            return 0
         ck = c.checar(d)
         if ck.erros:
             for i in ck.erros:
