@@ -391,7 +391,7 @@ class Episode:
                     z *= 1 + pu.get("zoom", 0.2) * env
             for sh in shakes:
                 if sh["t"] <= t <= sh["t"] + sh["dur"]:
-                    amp = sh["amp"] * (1 - (t - sh["t"]) / sh["dur"])
+                    amp = max(0.0, sh["amp"] * (1 - (t - sh["t"]) / sh["dur"]))      # arredondamento no último quadro
                     x += rng.uniform(-amp, amp)
                     y += rng.uniform(-amp, amp)
             out.append([round(x, 2), round(y, 2), round(z, 4)])
