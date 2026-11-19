@@ -2173,14 +2173,15 @@ BARATA, BARATA_L, BARATA_C = "#9A5A2E", "#6B3A1A", "#E8C49A"
 
 
 class Barata(_Prop):
-    """Dona Barata de desenho, em pé, toda metida (Conta Vantagem!): casco marrom brilhante, barriguinha creme, colar de
-    pérolas, batom, anteninhas enroladas. Canais: `oculos` óculos escuros; `metida` 0→1 nariz empinado, olho meio
-    fechado, mão na cintura; `aponta` 0→1 braço gesticulando (contando vantagem); `fala` boca; `susto` 0→1 olho
-    arregalado, anteninhas em pé, boca em O; `corre` fase contínua (perninhas a mil, corpo inclinado); `vergonha` 0→1
-    bochecha vermelha e mãos no rosto; `pulo`; `lado` 1 olha p/ direita, −1 p/ esquerda."""
+    """Dona Barata de desenho (Conta Vantagem!), nas proporções da turma (BIBLIA_VISUAL: cabeça grande e redonda, corpo
+    pequeno, membros de tubo, contorno uniforme): casco marrom brilhante aberto atrás como asinhas, barriguinha creme,
+    olhões com cílios, florzinha rosa, colar de pérolas, batom e bolsinha de madame. Canais: `oculos` óculos escuros;
+    `metida` 0→1 nariz empinado, olho meio fechado, mão na cintura com a bolsinha; `aponta` 0→1 braço contando vantagem;
+    `fala` boca; `susto` 0→1 olhão, anteninhas em pé, boca em O, braços para cima; `correndo` 0→1 + `corre` (fase) perninhas
+    a mil; `vergonha` 0→1 bochecha vermelha e mãos no rosto; `pulo`; `lado` 1 olha p/ direita, −1 p/ esquerda."""
 
     def __init__(self):
-        super().__init__("barata", "Dona Barata", (900, 980), (450, 940), 420,
+        super().__init__("barata", "Dona Barata", (900, 980), (450, 940), 440,
                          {"oculos": 1.0, "metida": 0.0, "aponta": 0.0, "fala": 0.0, "susto": 0.0, "corre": 0.0,
                           "vergonha": 0.0, "pulo": 0.0, "lado": 1.0, "correndo": 0.0})
 
@@ -2190,113 +2191,127 @@ class Barata(_Prop):
         su, me, ve, ap = c01(P["susto"]), c01(P["metida"]), c01(P["vergonha"]), c01(P["aponta"])
         cr = c01(P["correndo"])
         fase = 2 * math.pi * P["corre"]
-        y0 = -160 * math.sin(math.pi * c01(P["pulo"])) - 10 * abs(math.sin(fase)) * cr
-        incl = 0.35 * cr * sx
+        y0 = -160 * math.sin(math.pi * c01(P["pulo"])) - 12 * abs(math.sin(fase)) * cr
+        incl = 0.3 * cr * sx
+        CAS, CAS_L, CAS_B = "#8A4B22", "#5E3014", "#B8743F"           # casco (mais escuro) e brilho
+        PELE, PELE_L = "#A86436", "#6B3A1A"                            # cabeça, braços e pernas
 
-        def T(x, y):                                                   # gira o corpo em torno dos pés (corrida)
+        def T(x, y):                                                   # corpo inclina a partir dos pés (corrida)
             x = x * sx
             c, s = math.cos(incl), math.sin(incl)
             return (x * c - y * s, x * s + y * c + y0)
 
         def oval(x, y, rx, ry, fill, line, a=0.0):
             q = T(x, y)
-            shape(k, ellipse_pts(q[0], q[1], rx, ry, a * sx + incl, 24), fill, line=line)
+            shape(k, ellipse_pts(q[0], q[1], rx, ry, a * sx + incl, 28), fill, line=line)
 
-        for side in (-1, 1):                                           # perninhas (correndo: giram)
-            ph = fase + (0 if side > 0 else math.pi)
-            dx = 34 * math.sin(ph) * cr
-            lev = max(0.0, 26 * math.cos(ph)) * cr
-            a, b = T(side * 34, -110), T(side * 40 + dx, -6 - lev)
-            ln(k, [a, b], BARATA_L, w=LINE * 2.4)
-            ln(k, [a, b], BARATA, w=LINE * 1.4)
-            shape(k, ellipse_pts(b[0] + 12 * sx, b[1], 26, 12, 0, 14), "#E9545D", line="#B83A42")   # sapatinho
-        for side in (-1, 1):                                           # perninhas do meio (charme de inseto)
-            a, b = T(side * 70, -190), T(side * 120, -150 + 8 * math.sin(fase * 2) * cr)
-            ln(k, [a, b], BARATA_L, w=LINE * 1.6)
-        oval(0, -215, 105, 130, BARATA, BARATA_L)                        # casco (asas fechadas)
-        q1, q2 = T(0, -330), T(0, -110)
-        ln(k, [q1, q2], BARATA_L, w=LINE * 1.2)
-        oval(-38, -245, 26, 52, "#B87444", "#B87444", a=-0.35)          # brilho do casco
-        oval(0, -190, 62, 82, BARATA_C, "#C9A27A")                       # barriguinha
-        # braços: esquerdo na cintura (metida) ou aponta/gesticula; vergonha → mãos no rosto
-        hy = -385
+        # perninhas (tubos) e sapatinhos de salto
         for side in (-1, 1):
-            om = T(side * 78, -265)
+            ph = fase + (0 if side > 0 else math.pi)
+            dx = 30 * math.sin(ph) * cr
+            lev = max(0.0, 30 * math.cos(ph)) * cr
+            a, b = T(side * 30, -78), T(side * 34 + dx, -14 - lev)
+            _capsula(k, a, b, 14, PELE, PELE_L)
+            shape(k, ellipse_pts(b[0] + 10 * sx, b[1] + 6, 30, 15, 0, 16), "#FF5C8A", line="#C9306A")
+            shape(k, ellipse_pts(b[0] + 10 * sx + 14 * sx, b[1] + 1, 6, 6, 0, 10), "#FFFFFF", line="#C9306A")
+        # casco aberto atrás do corpo (como as asinhas da turma) com brilho
+        for side in (-1, 1):
+            oval(side * 66, -160, 50, 92, CAS, CAS_L, a=side * 0.32)
+            oval(side * 58, -196, 14, 34, CAS_B, CAS_B, a=side * 0.32)
+        oval(0, -150, 74, 84, PELE, PELE_L)                              # corpinho
+        oval(0, -138, 50, 58, BARATA_C, "#C9A27A")                       # barriguinha
+        # braços (tubos com mãozinha): cintura/bolsinha (metida), aponta, susto (para cima), vergonha (no rosto)
+        hc_y = -312
+        mao_bolsa = None
+        for side in (-1, 1):
+            om = T(side * 62, -206)
             if ve > 0.5:
-                mao = T(side * 40, hy + 10)
-            elif side > 0 and ap > 0:
-                mao = T(150 + 20 * ap, -330 - 60 * ap)
-            elif side < 0 and me > 0.3:
-                mao = T(-70, -170)                                     # mão na cintura
+                mao = T(side * 60, hc_y + 34)
             elif su > 0.5:
-                mao = T(side * 150, -360)                              # braços para cima (susto)
+                mao = T(side * 150, -330)
+            elif side > 0 and ap > 0.05:
+                mao = T(118 + 48 * ap, -236 - 110 * ap)
+            elif side < 0 and me > 0.3:
+                mao = T(-104, -150)
+                mao_bolsa = mao
             else:
-                mao = T(side * 120, -150)
-            cot = ((om[0] + mao[0]) / 2 + side * sx * 30, (om[1] + mao[1]) / 2)
-            ln(k, [om, cot, mao], BARATA_L, w=LINE * 2.4)
-            ln(k, [om, cot, mao], BARATA, w=LINE * 1.4)
-            shape(k, ellipse_pts(mao[0], mao[1], 16, 16, 0, 12), BARATA, line=BARATA_L)
+                mao = T(side * 124, -132 + 8 * math.sin(fase * 2) * cr)
+            cot = ((om[0] + mao[0]) / 2 + side * sx * 26, (om[1] + mao[1]) / 2 + 4)
+            _capsula(k, om, cot, 12, PELE, PELE_L)
+            _capsula(k, cot, mao, 12, PELE, PELE_L)
+            shape(k, ellipse_pts(mao[0], mao[1], 17, 17, 0, 14), PELE, line=PELE_L)
+        if mao_bolsa is not None:                                       # bolsinha de madame pendurada no braço
+            bx, by = mao_bolsa
+            ln(k, [(bx - 14, by), (bx - 4, by + 26), (bx + 14, by + 26), (bx + 20, by)], "#C9306A", w=LINE)
+            box(k, bx - 34, by + 22, bx + 30, by + 70, "#FF5C8A", line="#C9306A", r=12)
+            shape(k, ellipse_pts(bx - 2, by + 40, 7, 7, 0, 10), "#FFD23F", line="#D9A520")
         for j in range(7):                                             # colar de pérolas
-            q = T(-48 + j * 16, -300 + 6 * math.sin(j * 0.5) + 4 * abs(j - 3))
+            q = T(-42 + j * 14, -222 + 5 * abs(j - 3))
             shape(k, ellipse_pts(q[0], q[1], 8, 8, 0, 10), "#FFFFFF", line="#C9D6E0")
-        # cabeça (empina o nariz quando metida)
-        tilt = (-0.22 * me + 0.1 * ve) * sx
-        hc = T(0, hy)
+        # cabeça grande (empina o nariz quando metida; abaixa na vergonha)
+        tilt = (-0.2 * me + 0.12 * ve) * sx
+        hc = T(0, hc_y)
         c, s = math.cos(tilt), math.sin(tilt)
 
         def H(x, y):
             x = x * sx
             return (hc[0] + x * c - y * s, hc[1] + x * s + y * c)
 
-        for side in (-1, 1):                                           # anteninhas enroladas (em pé no susto)
-            pts = []
-            for i in range(14):
-                u = i / 13
-                curl = (1 - su) * max(0.0, u - 0.55) * 4
-                ang = -math.pi / 2 + side * (0.35 + 0.25 * u) + side * curl * 1.4
-                if i == 0:
-                    pts.append(H(side * 30, -70))
-                else:
-                    px, py = pts[-1]
-                    pts.append((px + math.cos(ang) * 14, py + math.sin(ang) * 14))
-            ln(k, pts, BARATA_L, w=LINE * 1.2)
-            shape(k, ellipse_pts(pts[-1][0], pts[-1][1], 9, 9, 0, 10), BARATA_L)
+        for side in (-1, 1):                                           # anteninhas compridas enroladas (em pé no susto)
+            pts = [H(side * 34, -86)]
+            for i in range(1, 16):
+                u = i / 15
+                curl = (1 - su) * max(0.0, u - 0.5) * 5
+                ang = -math.pi / 2 + side * (0.3 + 0.2 * u) + side * curl * 1.3
+                px, py = pts[-1]
+                pts.append((px + math.cos(ang) * 15, py + math.sin(ang) * 15))
+            ln(k, pts, PELE_L, w=LINE * 1.3)
+            shape(k, ellipse_pts(pts[-1][0], pts[-1][1], 10, 10, 0, 10), "#FF5C8A", line="#C9306A")
         q = H(0, 0)
-        shape(k, ellipse_pts(q[0], q[1], 82, 74, tilt, 26), BARATA, line=BARATA_L)
-        q = H(0, 22)
-        shape(k, ellipse_pts(q[0], q[1], 56, 40, tilt, 20), BARATA_C, line="#C9A27A")   # rostinho claro
-        olho_r = 17 + 10 * su
+        shape(k, ellipse_pts(q[0], q[1], 112, 102, tilt, 36), PELE, line=PELE_L)
+        q = H(0, 30)
+        shape(k, ellipse_pts(q[0], q[1], 80, 56, tilt, 28), BARATA_C, line="#C9A27A")       # rostinho claro
+        f0 = H(62, -78)                                                # florzinha na cabeça
+        for j in range(5):
+            a = j * 2 * math.pi / 5
+            shape(k, ellipse_pts(f0[0] + 16 * math.cos(a), f0[1] + 16 * math.sin(a), 13, 13, 0, 12), "#FF8CC6", line="#E0559B")
+        shape(k, ellipse_pts(f0[0], f0[1], 10, 10, 0, 12), "#FFD23F", line="#D9A520")
+        olho_r = 24 + 10 * su
         for side in (-1, 1):
-            e = H(side * 32, -6)
-            if P["oculos"] > 0.5 and su < 0.5:                         # óculos escuros de estrela
-                shape(k, ellipse_pts(e[0], e[1], 30, 22, tilt, 18), "#2E2E3A", line="#111111")
-                k.shape(ellipse_pts(e[0] - 8, e[1] - 7, 8, 5, tilt, 10), fill=_rgba("#FFFFFF", 0.6), line=0)
-            elif ve > 0.5:
-                ln(k, [(e[0] - 14, e[1] + 4), (e[0], e[1] + 10), (e[0] + 14, e[1] + 4)], "#3A2A1A", w=LINE)
+            e = H(side * 40, -8)
+            if P["oculos"] > 0.5 and su < 0.5 and ve < 0.5:            # óculos escuros de estrela (armação rosa)
+                shape(k, ellipse_pts(e[0], e[1], 36, 28, tilt, 20), "#2E2E3A", line="#FF5C8A", w=LINE * 1.3)
+                k.shape(ellipse_pts(e[0] - 12, e[1] - 9, 10, 6, tilt, 10), fill=_rgba("#FFFFFF", 0.65), line=0)
+            elif ve > 0.5:                                             # olhinhos fechados de vergonha
+                ln(k, [(e[0] - 16, e[1] + 4), (e[0], e[1] + 12), (e[0] + 16, e[1] + 4)], "#3A2A1A", w=LINE * 1.1)
             else:
-                shape(k, ellipse_pts(e[0], e[1], olho_r, olho_r * 1.15, 0, 16), "#FFFFFF", line=BARATA_L)
-                k.dot(e[0] + 3 * sx, e[1] + 3, 8 - 2 * su, _rgba("#2A1A0A"))
-                if me > 0.5:                                           # pálpebra de metida
-                    shape(k, [(e[0] - olho_r, e[1] - 2), (e[0] + olho_r, e[1] - 2), (e[0] + olho_r, e[1] - olho_r * 1.2),
-                              (e[0] - olho_r, e[1] - olho_r * 1.2)], BARATA, line=BARATA_L, smooth=False)
-        if P["oculos"] > 0.5 and su < 0.5:
-            ln(k, [H(-4, -8), H(4, -8)], "#111111", w=LINE * 1.2)
+                shape(k, ellipse_pts(e[0], e[1], olho_r, olho_r * 1.18, 0, 18), "#FFFFFF", line=PELE_L)
+                k.dot(e[0] + 4 * sx, e[1] + 4, 11 - 3 * su, _rgba("#2A1A0A"))
+                k.dot(e[0] + 8 * sx, e[1] - 2, 4, _rgba("#FFFFFF"))
+                for j in (-1, 0, 1):                                   # cílios de madame
+                    r0 = (e[0] + side * 6 + j * 10, e[1] - olho_r * 1.1)
+                    ln(k, [r0, (r0[0] + side * 4 + j * 4, r0[1] - 14)], "#2A1A0A", w=LINE * 0.9)
+                if me > 0.5:                                           # pálpebra de metida (meio fechado, superior)
+                    shape(k, [(e[0] - olho_r - 2, e[1] - 2), (e[0] + olho_r + 2, e[1] - 2), (e[0] + olho_r + 2, e[1] - olho_r * 1.25),
+                              (e[0] - olho_r - 2, e[1] - olho_r * 1.25)], PELE, line=PELE_L, smooth=False)
+        if P["oculos"] > 0.5 and su < 0.5 and ve < 0.5:
+            ln(k, [H(-6, -10), H(6, -10)], "#FF5C8A", w=LINE * 1.3)
         for side in (-1, 1):                                           # bochechas (vermelhas de vergonha)
-            b = H(side * 50, 26)
-            k.shape(ellipse_pts(b[0], b[1], 14 + 6 * ve, 9 + 4 * ve, 0, 12),
+            b = H(side * 62, 34)
+            k.shape(ellipse_pts(b[0], b[1], 16 + 8 * ve, 10 + 5 * ve, 0, 12),
                     fill=_rgba("#FF4D6D" if ve > 0.3 else "#FF9AB0", 0.75 + 0.2 * ve), line=0)
         f = max(c01(P["fala"]), su)
-        m = H(0, 40)
+        m = H(0, 52)
         if su > 0.5:
-            shape(k, ellipse_pts(m[0], m[1] + 6, 14, 18, 0, 16), "#8A2E3E", line="#B83A42")
+            shape(k, ellipse_pts(m[0], m[1] + 6, 16, 22, 0, 16), "#8A2E3E", line="#B83A42")
         elif f > 0.1:
-            shape(k, ellipse_pts(m[0], m[1] + 4, 18, 6 + 12 * f, tilt, 16), "#8A2E3E", line="#D9304E")
+            shape(k, ellipse_pts(m[0], m[1] + 4, 22, 6 + 14 * f, tilt, 16), "#8A2E3E", line="#D9304E")
         else:                                                          # biquinho de batom
-            shape(k, ellipse_pts(m[0], m[1], 14, 7, tilt, 14), "#E9304E", line="#B81F3A")
-        if ve > 0.5:                                                   # mãos cobrindo as bochechas (já desenhadas por cima)
+            shape(k, ellipse_pts(m[0], m[1], 16, 8, tilt, 14), "#E9304E", line="#B81F3A")
+        if ve > 0.5:                                                   # mãozinhas cobrindo as bochechas (por cima)
             for side in (-1, 1):
-                q = H(side * 46, 24)
-                shape(k, ellipse_pts(q[0], q[1], 18, 18, 0, 12), BARATA, line=BARATA_L)
+                q = H(side * 60, 34)
+                shape(k, ellipse_pts(q[0], q[1], 19, 19, 0, 12), PELE, line=PELE_L)
 
 
 class Chinelo(_Prop):
