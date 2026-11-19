@@ -33,6 +33,7 @@ ITENS = [
     ("objetos_animados_pl", "objetos animados por plano", 1.2, 99, "o objeto reage: pula, acende, cai, gira"),
     ("coadjuvantes", "coadjuvantes (fora Laurinha e Luisinho)", 1, 99, "mamãe, vovó, vovô, joaninha, formiguinha, bichos"),
     ("pct_arranjo_repetido", "% de planos com a mesma arrumação do anterior", 0, 15, "trocar lado, altura, profundidade, quem está em cena"),
+    ("telas_divididas", "telas divididas (dois lugares ao mesmo tempo)", 2, 99, "dois personagens em lugares diferentes fazendo a mesma coisa; antes × depois"),
     ("sons_pl", "efeitos sonoros por plano (a partir da 19)", 0.8, 99, "cada ação com dono tem som: musicas/EFEITOS_SONOROS.md"),
 ]
 SO_DA_19 = {"sons_pl"}
@@ -48,26 +49,28 @@ def medir(roteiro: dict) -> dict:
     P = [p for v in roteiro["partes"].values() for p in v]
     n = len(P)
     cen, tipos, tobj, coad = set(), set(), set(), set()
-    danca = cam = anim = sons = rep = 0
+    danca = cam = anim = sons = rep = telas = 0
     prev = None
     for p in P:
+        telas += bool(p.get("tela_dividida"))
         c = p.get("cenario")
         c = c if isinstance(c, str) else json.dumps(c)
         if c.startswith(("danca_", "padrao_")):
             danca += 1
         else:
             cen.add(c)
-        at = p.get("atores") or {}
+        subs = [p] + list((p.get("tela_dividida") or {}).get("paineis", []))      # tela dividida: conta o que há em cada metade
+        at = {w: a for sb in subs for w, a in (sb.get("atores") or {}).items()}
         for w, a in at.items():
             if w not in PRINCIPAIS:
                 coad.add(w)
             for x in a.get("acoes", []):
                 tipos.add(x["do"] + (":" + x.get("style", "") if x["do"] == "dance" else ""))
-        ob = p.get("objetos") or {}
+        ob = {f"{i}:{k}": v for i, sb in enumerate(subs) for k, v in (sb.get("objetos") or {}).items()}
         for k, v in ob.items():
-            tobj.add(v.get("id", k))
+            tobj.add(v.get("id", k.split(":", 1)[-1]))
             anim += bool(v.get("keys"))
-        cm = p.get("camera")
+        cm = p.get("camera") or next((sb.get("camera") for sb in subs[1:] if sb.get("camera")), None)
         if (isinstance(cm, str) and cm.startswith("close")) or \
                 (isinstance(cm, dict) and (abs(cm.get("zoom_fim", cm.get("zoom", 1.0)) - cm.get("zoom", 1.0)) > 0.04 or cm.get("zoom", 1.0) >= 1.3)):
             cam += 1
@@ -78,7 +81,8 @@ def medir(roteiro: dict) -> dict:
         prev = arr
     return {"planos": n, "cenarios_reais": len(cen), "pct_fundo_danca": round(100 * danca / n), "tipos_acao": len(tipos),
             "pct_camera": round(100 * cam / n), "tipos_objeto": len(tobj | {c for c in coad}), "objetos_animados_pl": round(anim / n, 2),
-            "coadjuvantes": len(coad), "pct_arranjo_repetido": round(100 * rep / n), "sons_pl": round(sons / n, 2)}
+            "coadjuvantes": len(coad), "pct_arranjo_repetido": round(100 * rep / n), "sons_pl": round(sons / n, 2),
+            "telas_divididas": telas}
 
 
 def main():

@@ -112,6 +112,16 @@ def dorme_acorda(x, turn, t_dorme, t_acorda, d, estilo=None):
     return {"x": x, "turn": turn, "acoes": acoes, "keys": keys}
 
 
+def quartos_divididos(ta, d, linhas=2, layout="vertical"):
+    """TELA DIVIDIDA: a Laurinha no quarto rosa e o Luisinho no quarto azul, dormindo e acordando ao mesmo tempo."""
+    def painel(cen, who, turn):
+        return {"cenario": cen, "camera": {"x": 1300, "y": 600, "zoom": 1.15, "zoom_fim": 1.25},
+                "objetos": quarto(0.05, ta, camas=(1300,)),
+                "atores": {who: dorme_acorda(1300, turn, 0.05, ta, d, "pezinho" if who == LA else "joelho")}}
+    return {"linhas": linhas, "tela_dividida": {"layout": layout, "paineis": [painel(QRO, LA, 0.15), painel(QAZ, LU, -0.15)]},
+            "callout": [call(0.2, "DORME…", "roxo"), call(ta + 0.1, "ACORDA!", "amarelo")]}
+
+
 def banda(cen, d, quem_sax=LA, teclado=False, cam=None, extra=None, fx=None):
     """A BANDA: Luisinho na bateria (baquetas nas duas mãos); Laurinha no sax (ou no teclado)."""
     p = {"seg": round(d, 2), "cenario": cen, "camera": cam or {"x": 1300, "y": 600, "zoom": 1.1, "zoom_fim": 1.18}, "fx": fx or ["notas"],
@@ -199,6 +209,8 @@ def refrao(n):
             p = banda(SALAO, d, teclado=(i == 3), fx=["confete"], cam={"x": 1300, "y": 600, "zoom": 1.0 if i == 1 else 1.15, "zoom_fim": 1.1}, extra=plateia)
             p.pop("seg")
             p.update({"linhas": 2, "callout": [call(ta + 0.1, "ACORDA!", "amarelo")]})
+        elif i == 2 or (n >= 3 and i == 0):                         # TELA DIVIDIDA: cada um no seu quarto, ao mesmo tempo
+            p = quartos_divididos(ta, d, layout="vertical" if (n + i) % 2 else "diagonal")
         else:
             cen = [QAZ, QRO, SALA, SALAO][n - 1] if i % 2 == 0 else [QRO, QAZ, SALAO, SALA][n - 1]
             p = {"linhas": 2, "cenario": cen, "camera": {"x": 1300, "y": 600, "zoom": 1.1 if i % 2 == 0 else 1.25, "zoom_fim": 1.2 if i % 2 == 0 else 1.15},
@@ -333,7 +345,13 @@ for chave, planos in partes.items():
             a["acoes"] = [ac for ac in a.get("acoes", []) if ac["t"] < d - 0.3] or a.get("acoes", [])[:1]
             if a.get("keys"):
                 a["keys"] = [k for k in a["keys"] if k["t"] < d - 0.05]
-        for o in (p.get("objetos") or {}).values():
+        alvos = [p] + list((p.get("tela_dividida") or {}).get("paineis", []))
+        for sub in alvos[1:]:
+            for a in (sub.get("atores") or {}).values():
+                a["acoes"] = [ac for ac in a.get("acoes", []) if ac["t"] < d - 0.3] or a.get("acoes", [])[:1]
+                if a.get("keys"):
+                    a["keys"] = [k for k in a["keys"] if k["t"] < d - 0.05]
+        for o in [o for sub in alvos for o in (sub.get("objetos") or {}).values()]:
             if o.get("keys"):
                 ks = [dict(k, t=round(min(k["t"], d - 0.04), 3)) if d - 0.04 < k["t"] <= d + 0.06 else k for k in o["keys"]]
                 o["keys"] = transicoes(sorted([k for k in ks if k["t"] <= d - 0.02], key=lambda k: k["t"]))

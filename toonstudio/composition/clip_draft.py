@@ -455,6 +455,9 @@ def _plano_scene(p: dict, occ: int, dur: float, plines: list, t0: float, cantam_
                      "characters": {w: _performance(a, dur, g2) for w, a in atores.items()}}
             if sub.get("fx"):
                 panel["fx"] = sub["fx"]
+            props = _objetos(sub.get("objetos"), cast)            # 20/11: objetos também em cada metade da tela
+            if props:
+                panel["props"] = props
             sing = [s for w in atores for s in _sing(plines, t0, t0 + dur, p.get("cantam") or cantam_bloco, w) if w in SING_CAST]
             if sing:
                 panel["sing"] = sing

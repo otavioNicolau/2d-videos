@@ -12,9 +12,10 @@
    "objetos_animados_pl": 0.48,
    "coadjuvantes": 3,
    "pct_arranjo_repetido": 9,
-   "sons_pl": 0.0
+   "sons_pl": 0.0,
+   "telas_divididas": 0
   },
-  "acertos": "4/9",
+  "acertos": "4/10",
   "piorou": []
  },
  {
@@ -30,9 +31,10 @@
    "objetos_animados_pl": 0.47,
    "coadjuvantes": 1,
    "pct_arranjo_repetido": 7,
-   "sons_pl": 0.0
+   "sons_pl": 0.0,
+   "telas_divididas": 0
   },
-  "acertos": "5/9",
+  "acertos": "5/10",
   "piorou": [
    "planos (cortes): 30 (média das 3 anteriores: 33)",
    "tipos de ação diferentes: 12 (média das 3 anteriores: 20)",
@@ -54,9 +56,10 @@
    "objetos_animados_pl": 0.84,
    "coadjuvantes": 1,
    "pct_arranjo_repetido": 4,
-   "sons_pl": 0.0
+   "sons_pl": 0.0,
+   "telas_divididas": 0
   },
-  "acertos": "7/9",
+  "acertos": "7/10",
   "piorou": [
    "cenários de verdade (fora o fundo de dança): 3 (média das 3 anteriores: 4)",
    "tipos de objeto/bicho em cena: 8 (média das 3 anteriores: 9.5)",
@@ -76,9 +79,10 @@
    "objetos_animados_pl": 1.43,
    "coadjuvantes": 1,
    "pct_arranjo_repetido": 8,
-   "sons_pl": 0.0
+   "sons_pl": 0.0,
+   "telas_divididas": 0
   },
-  "acertos": "5/9",
+  "acertos": "5/10",
   "piorou": [
    "cenários de verdade (fora o fundo de dança): 3 (média das 3 anteriores: 3.67)",
    "% de planos em fundo de dança: 37 (média das 3 anteriores: 25)",
@@ -100,9 +104,10 @@
    "objetos_animados_pl": 1.21,
    "coadjuvantes": 1,
    "pct_arranjo_repetido": 0,
-   "sons_pl": 0.0
+   "sons_pl": 0.0,
+   "telas_divididas": 0
   },
-  "acertos": "5/9",
+  "acertos": "5/10",
   "piorou": [
    "planos (cortes): 29 (média das 3 anteriores: 45.33)",
    "cenários de verdade (fora o fundo de dança): 2 (média das 3 anteriores: 3.33)",
@@ -123,9 +128,10 @@
    "objetos_animados_pl": 2.32,
    "coadjuvantes": 1,
    "pct_arranjo_repetido": 0,
-   "sons_pl": 0.0
+   "sons_pl": 0.0,
+   "telas_divididas": 0
   },
-  "acertos": "5/9",
+  "acertos": "5/10",
   "piorou": [
    "planos (cortes): 31 (média das 3 anteriores: 45)",
    "% de planos em fundo de dança: 32 (média das 3 anteriores: 31)",
@@ -146,9 +152,10 @@
    "objetos_animados_pl": 0.53,
    "coadjuvantes": 4,
    "pct_arranjo_repetido": 3,
-   "sons_pl": 0.0
+   "sons_pl": 0.0,
+   "telas_divididas": 0
   },
-  "acertos": "4/9",
+  "acertos": "4/10",
   "piorou": [
    "planos (cortes): 32 (média das 3 anteriores: 36.33)",
    "cenários de verdade (fora o fundo de dança): 2 (média das 3 anteriores: 2.67)",
@@ -171,9 +178,10 @@
    "objetos_animados_pl": 1.91,
    "coadjuvantes": 1,
    "pct_arranjo_repetido": 6,
-   "sons_pl": 0.0
+   "sons_pl": 0.0,
+   "telas_divididas": 0
   },
-  "acertos": "4/9",
+  "acertos": "4/10",
   "piorou": [
    "cenários de verdade (fora o fundo de dança): 2 (média das 3 anteriores: 2.33)",
    "% de planos em fundo de dança: 34 (média das 3 anteriores: 31.33)",
@@ -196,9 +204,10 @@
    "objetos_animados_pl": 0.87,
    "coadjuvantes": 1,
    "pct_arranjo_repetido": 13,
-   "sons_pl": 0.0
+   "sons_pl": 0.0,
+   "telas_divididas": 0
   },
-  "acertos": "3/9",
+  "acertos": "3/10",
   "piorou": [
    "cenários de verdade (fora o fundo de dança): 2 (média das 3 anteriores: 2.33)",
    "% de planos com câmera viva (close/zoom/movimento): 66 (média das 3 anteriores: 69.33)",
@@ -221,9 +230,10 @@
    "objetos_animados_pl": 1.22,
    "coadjuvantes": 3,
    "pct_arranjo_repetido": 2,
-   "sons_pl": 1.04
+   "sons_pl": 1.04,
+   "telas_divididas": 0
   },
-  "acertos": "10/10",
+  "acertos": "9/10",
   "piorou": []
  },
  {
@@ -239,9 +249,10 @@
    "objetos_animados_pl": 1.36,
    "coadjuvantes": 2,
    "pct_arranjo_repetido": 0,
-   "sons_pl": 0.0
+   "sons_pl": 0.0,
+   "telas_divididas": 0
   },
-  "acertos": "9/9",
+  "acertos": "9/10",
   "piorou": []
  },
  {
@@ -249,17 +260,18 @@
   "titulo": "Dorme, Acorda!",
   "medidas": {
    "planos": 49,
-   "cenarios_reais": 5,
+   "cenarios_reais": 6,
    "pct_fundo_danca": 8,
    "tipos_acao": 28,
    "pct_camera": 90,
    "tipos_objeto": 10,
-   "objetos_animados_pl": 1.2,
+   "objetos_animados_pl": 1.53,
    "coadjuvantes": 3,
    "pct_arranjo_repetido": 6,
-   "sons_pl": 0.0
+   "sons_pl": 0.0,
+   "telas_divididas": 6
   },
-  "acertos": "9/9",
+  "acertos": "10/10",
   "piorou": [
    "% de planos com a mesma arrumação do anterior: 6 (média das 3 anteriores: 5)"
   ]
