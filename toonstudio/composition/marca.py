@@ -61,7 +61,9 @@ def vinheta_episode(dur: float = 4.2, falas: bool = False) -> dict:
 
 
 def _duracao(p: Path) -> float:
-    r = subprocess.run([tool("ffprobe"), "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(p)],
+    import shutil
+    probe = shutil.which("ffprobe") or str(Path(tool("ffmpeg")).with_name("ffprobe"))
+    r = subprocess.run([probe, "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(p)],
                        capture_output=True, text=True, check=True)
     return float(r.stdout.strip())
 

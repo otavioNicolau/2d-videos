@@ -380,3 +380,11 @@ def test_sons_do_roteiro_entram_na_mixagem_final(tmp_path):
     antes, depois = dif[: int(2.45 * sr)].max(), dif[int(2.5 * sr): int(2.6 * sr)].max()
     assert antes < 1e-3 and depois > 0.05                       # entra em 1,0 (vinheta) + 1,0 (cena 1) + 0,5 = 2,5 s
     assert "ding" in sfx.ids() and "latido" not in sfx.ids()    # gravado sem licença anotada não vale
+
+
+def test_duracao_da_vinheta_le_com_ffprobe():
+    """A montagem final mede a vinheta para posicionar os efeitos (quebrou a publicação da 17 quando procurou o ffprobe
+    na configuração em vez do sistema)."""
+    from toonstudio.composition.marca import BRAND, _duracao
+    if (BRAND / "vinheta.mp4").exists():
+        assert 2.0 < _duracao(BRAND / "vinheta.mp4") < 10.0
