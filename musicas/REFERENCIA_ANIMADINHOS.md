@@ -84,3 +84,17 @@ Para analisar mais músicas: pôr os vídeos em `referencias/animadinhos/videos`
 - Cada verso traz conteúdo novo (verso 1 ≠ verso 2 ≠ verso 3) e muita cena descrita (o que acontece no vídeo).
 - Respostas entre parênteses em quase todo verso (~7 por 100 palavras × ~0,7 delas) — vira coro e "muita informação".
 - Pouca rima; pouco "molde + troca"; mais curiosidade e lição explicada; dois personagens alternando.
+
+## Gênero da casa (reanálise 19/11/2026 — usuário: "os Animadinhos têm um gênero próprio que usa esses instrumentos")
+Classificador de gêneros (PANNs/AudioSet) nas 18 referências × nossas 01–20, top 3 por música:
+- **Mistura (a música inteira):** referência = **"Funny music" em 18/18**, "Jingle" 8/18, "Happy music" 7/18, "Salsa" 5/18;
+  **"Pop" e "Electronic" quase não aparecem (Electronic 3/18, Pop 2/18)**. Nossas = **Pop 18/20**, Funny 15/20, **Electronic 14/20**.
+- **Só o instrumental:** referência = **Funk 10/18** (groove sincopado), **Swing 6/18** (jazzístico: sax/metais),
+  **Video game music 5/18** (melodia de synth de videogame), Salsa/Latin 5/18, Jazz 3/18. Nossas = Electronic 9/20,
+  África/Afrobeat 15/20, Disco/Dance/House.
+- Instrumentos: teclado/piano 15/18, synth 13/18, bateria ~8/18, sax/metais 3–6/18 (nossas: sax zero).
+- Andamento: 94–199 BPM, mediana 129. Duração 2:11–3:33, mediana 2:46.
+
+**Leitura:** o "gênero Animadinhos" é **música engraçada de desenho / jingle infantil** com groove de **funk + swing**
+(sax e metais curtos, piano e teclado saltitantes, melodia de synth de videogame, toques latinos), sempre com cara de
+comédia. As nossas, desde o E2, foram para **pop/eletrônico** (house, disco, afrobeat) — é isso que soa diferente.
