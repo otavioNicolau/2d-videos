@@ -136,7 +136,7 @@ def medir(n: str) -> dict:
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("musica", nargs="?")
-    ap.add_argument("--nota", type=int, help="sua nota de olho para a animação, 1 a 5")
+    ap.add_argument("--nota", type=float, help="sua nota de olho para a animação, 1 a 5")
     ap.add_argument("--obs", default="")
     ap.add_argument("--versao", default=VERSAO_ATUAL)
     ap.add_argument("--historico", action="store_true")

@@ -98,7 +98,7 @@ def estilo_usado(d: Path) -> str:
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("musica", nargs="?")
-    ap.add_argument("--nota", type=int, help="sua nota de ouvido, 1 a 5")
+    ap.add_argument("--nota", type=float, help="sua nota de ouvido, 1 a 5 (aceita 4.6)")
     ap.add_argument("--obs", default="")
     ap.add_argument("--estilo", help="versão do Style usada no take (padrão: a do suno.txt)")
     ap.add_argument("--historico", action="store_true")
