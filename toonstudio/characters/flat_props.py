@@ -2581,30 +2581,33 @@ class Bateria(_Prop):
 
 
 class TecladoInst(_Prop):
-    """Teclado musical num suporte em X: teclas brancas e pretas, telinha e botões coloridos. `tecla` fase contínua
-    (as teclas apertadas acendem andando pelo teclado)."""
+    """Teclado musical num suporte em X, visto pelo PÚBLICO (o músico fica atrás): teclas em cima, perto do músico, com
+    as pretas na ponta de lá das brancas; painel com telinha e botões embaixo, virado para quem assiste.
+    `tecla` fase contínua (as teclas apertadas acendem andando pelo teclado)."""
 
     def __init__(self):
         super().__init__("teclado_inst", "Teclado", (1000, 600), (500, 560), 320, {"tecla": 0.0})
 
     def paint(self, k, P):
         for side in (-1, 1):                                                                # suporte em X
-            ln(k, [(-220 * side, 0), (200 * side, -230)], "#5C6B80", w=LINE * 2)
-        box(k, -380, -300, 380, -210, "#2E3A4F", line="#1C2433", r=14)                     # corpo
-        box(k, -120, -290, 120, -262, "#7FF0FF", line="#2BB6D0", r=6)                       # telinha
-        for j, c in enumerate(("#FF5C8A", "#FFD23F", "#3DDC6A", "#3C8BF0")):
-            shape(k, ellipse_pts(180 + j * 40, -276, 10, 10, 0, 10), c, line=dark(c))
+            ln(k, [(-220 * side, 0), (200 * side, -220)], "#5C6B80", w=LINE * 2)
+        box(k, -380, -300, 380, -200, "#2E3A4F", line="#1C2433", r=14)                     # corpo
         n = 14
         acesa = int(P["tecla"] * 8) % n
-        for i in range(n):                                                                  # teclas brancas
+        for i in range(n):                                                                  # teclas brancas (em cima)
             x0 = -350 + i * 50
             cor = "#FFE27A" if i in (acesa, (acesa + 5) % n) else "#FFFFFF"
-            box(k, x0, -250, x0 + 46, -212, cor, line="#9FB3C8", r=4)
-        for i in range(n - 1):                                                              # teclas pretas
+            box(k, x0, -292, x0 + 46, -254, cor, line="#9FB3C8", r=4)
+        for i in range(n - 1):                                                              # pretas: na ponta de baixo (lado do público)
             if i % 7 in (2, 6):
                 continue
             x0 = -350 + i * 50 + 34
-            box(k, x0, -250, x0 + 22, -230, "#1C2433", line="#1C2433", r=3)
+            box(k, x0, -274, x0 + 22, -254, "#1C2433", line="#1C2433", r=3)
+        box(k, -120, -240, 120, -214, "#7FF0FF", line="#2BB6D0", r=6)                       # telinha (painel da frente)
+        for j, c in enumerate(("#FF5C8A", "#FFD23F", "#3DDC6A", "#3C8BF0")):
+            shape(k, ellipse_pts(180 + j * 40, -227, 10, 10, 0, 10), c, line=dark(c))
+        for j, c in enumerate(("#FF8A1F", "#B865E6")):
+            shape(k, ellipse_pts(-300 + j * 40, -227, 10, 10, 0, 10), c, line=dark(c))
 
 
 PROPS.update({"bateria": Bateria, "teclado_inst": TecladoInst})
