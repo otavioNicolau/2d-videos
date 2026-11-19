@@ -366,6 +366,8 @@ def _performance(a: dict, dur: float, graphic: bool) -> dict:
             st[k] = a[k]
     if a.get("segura"):
         st.update({"holding": a["segura"], **HOLD_SIDE})
+    if a.get("segura_f"):                                    # 19/11: objeto também na mão de trás (2ª baqueta)
+        st["holding_f"] = a["segura_f"]
     if a.get("pose"):
         st.update(a["pose"])
     acts = []

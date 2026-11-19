@@ -425,6 +425,26 @@ CHOREO: dict[str, tuple[float, list[tuple[float, dict]]]] = {
         (1.5, {"body_x": 0, "rot": 0.0, "foot_f_y": 0, "foot_f_bend": 0.25, "foot_n_y": 0, "foot_n_bend": 0.25, "head_tilt": 0.0,
                "body_y": -3}),
     ]),
+    # ---- 19/11: a turma TOCA (E12: teclado, bateria e sax). Usar com o objeto na mão: "segura" (e "segura_f")
+    # toca_bateria: baquetas nas duas mãos, batem alternadas na caixa/tom (pancada NA batida), corpo quica
+    "toca_bateria": (1, [
+        (0.0, {"hand_n_x": 70, "hand_n_y": 40, "hand_n_bend": 0.5, "paw_n": 1, "hand_f_x": 95, "hand_f_y": -25,
+               "hand_f_bend": -0.4, "paw_f": 1, "body_y": 6, "head_tilt": 0.08, "head_dy": 4}),
+        (0.5, {"hand_n_x": 60, "hand_n_y": -25, "hand_f_x": 105, "hand_f_y": 40, "body_y": -2, "head_tilt": -0.06, "head_dy": -2}),
+    ]),
+    # toca_sax: sax na boca (mão da frente no corpo do sax), balança o corpo e a cabeça vai para trás no fim da frase
+    "toca_sax": (2, [
+        (0.0, {"hand_n_x": 34, "hand_n_y": -20, "hand_n_bend": 0.8, "paw_n": 1, "hand_f_x": 62, "hand_f_y": 20,
+               "hand_f_bend": -0.6, "paw_f": 1, "lean": -0.05, "head_tilt": 0.05, "body_y": 4, "body_x": -8}),
+        (1.0, {"hand_n_x": 38, "hand_n_y": -24, "hand_f_x": 66, "hand_f_y": 14, "lean": 0.04, "head_tilt": -0.1, "body_y": -3,
+               "body_x": 8}),
+    ]),
+    # toca_teclado: as duas mãos na frente, na altura do teclado, dedilhando (sobe/desce alternado), ombro balança
+    "toca_teclado": (1, [
+        (0.0, {"hand_n_x": 40, "hand_n_y": 30, "hand_n_bend": 0.6, "paw_n": 1, "hand_f_x": 95, "hand_f_y": 22,
+               "hand_f_bend": -0.5, "paw_f": 1, "body_y": 4, "head_tilt": 0.07, "body_x": -5}),
+        (0.5, {"hand_n_x": 48, "hand_n_y": 22, "hand_f_x": 88, "hand_f_y": 32, "body_y": -2, "head_tilt": -0.05, "body_x": 5}),
+    ]),
 }
 ALIASES = {"bob": "balanco"}
 
@@ -434,7 +454,7 @@ def soma_giro(turn: float, delta: float) -> float:
     quando o turn troca de sinal (laço, rosto e braços pulam de lado a cada batida — usuário, 19/11)."""
     lado = 1.0 if turn >= 0 else -1.0
     return lado * max(0.0, lado * (turn + delta))
-DANCE_WITH_ITEM = {"frevo", "escovar", "guitarra"}        # passos em que a mão que segura o objeto (sombrinha) também dança
+DANCE_WITH_ITEM = {"frevo", "escovar", "guitarra", "toca_bateria", "toca_sax", "toca_teclado"}        # passos em que a mão que segura o objeto (sombrinha) também dança
 DANCES = tuple(CHOREO) + tuple(ALIASES)
 _CAT = ("paw_n", "paw_f")
 _SCALE = {"body_x", "body_y", "lean", "turn+", "head_tilt", "head_dx", "head_dy", "foot_n_y", "foot_f_y", "hat_tilt", "tail_wag"}
