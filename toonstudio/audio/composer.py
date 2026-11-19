@@ -239,8 +239,7 @@ def _bloco_avancado(p: dict) -> list[str]:
     av = estilos()["canal"].get("suno_avancado")
     if not av:
         return []
-    genero = {"luisinho": "Male", "laurinha": "Female"}.get(p.get("voz", ""), "(deixe em branco)")
-    linhas = ["AJUSTES AVANÇADOS (Suno v6 → Advanced; conferir antes de gerar):", f"  Vocal Gender: {genero}"]
+    linhas = ["AJUSTES AVANÇADOS (Suno v6 → Advanced; conferir antes de gerar):"]
     linhas += [f"  {k}: {v}" for k, v in av.items()]
     return linhas + [""]
 
