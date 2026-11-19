@@ -82,3 +82,26 @@ diferentes, câmera, objetos, coadjuvantes e efeitos sonoros. Os alvos vêm das 
 abaixo da média das 3 anteriores em qualquer medida, o roteiro volta para ser refeito (o script sai com erro).
 O resultado vai junto do storyboard para o usuário. Histórico: `musicas/MELHORIA_CENAS.json`
 (`--historico` mostra a tabela).
+
+## Trilha de ANIMAÇÃO (19/11/2026: "processo de melhoria da animação — danças, braços, pernas — a cada vídeo")
+Mede como a Laurinha e o Luisinho **se mexem**: alcance e velocidade dos braços, alcance das pernas, balanço do corpo,
+quantos estilos de dança, se um estilo domina, tempo parado e se o movimento "acentua" a batida. Sem render: o script
+recompila a atuação de cada cena e lê a pose quadro a quadro.
+
+**A cada vídeo**
+| # | Passo | Quem |
+|---|---|---|
+| 1 | Depois do render: `PYTHONPATH=. .venv/bin/python scripts/referencias/placar_animacao.py <nº>` | Claude |
+| 2 | **Nota de olho** da animação (1 a 5) + comentário ("braço duro", "perna parada") → `--nota --obs` | usuário |
+| 3 | Escolher **um** ajuste (o que o usuário apontou ou o item mais longe do alvo) | Claude propõe, usuário aprova |
+| 4 | Fazer o ajuste na biblioteca de animação (`toonstudio/animation/`) como nova versão **A1, A2…** | Claude |
+| 5 | **Laboratório de dança** ANTES × DEPOIS: `scripts/referencias/laboratorio_danca.py --versao A<n>` → `Canal\Laboratório de dança\` | Claude gera, usuário olha |
+| 6 | Aprovado, a versão vale para o próximo vídeo; o placar diz se melhorou | os dois |
+
+Alvos iniciais (a nota de olho manda; ajustar os alvos quando ela discordar):
+braços ≥ 110 u de alcance e ≥ 160 u/s · pernas ≥ 40 u · corpo ≥ 30 u · ≥ 6 estilos por vídeo · nenhum estilo > 35 %
+do tempo de dança · parado ≤ 8 % · acento na batida ≥ 75 %. Histórico: `musicas/MELHORIA_ANIMACAO.json`.
+
+**Versões da animação**
+- **A0** (até a 18): 22 passos em `cycles.CHOREO`. Linha de base medida nas 12–18: pernas quase paradas (5–14 u),
+  corpo pouco balanço (14–29 u), braços médios (27–114 u), 5 estilos por vídeo nas 16–18 (11 na 12), a 16 com 76 % de frevo.
