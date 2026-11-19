@@ -150,7 +150,7 @@ def verso(key, n):
     passos_a = [(0.4 + 0.75 * i, i % 2) for i in range(int((a1 - a0 - 0.4) / 0.75))]
     return [
         {"linhas": 2, "cenario": RUA if n == 1 else JARDIM, "camera": {"x": 1300, "y": 560, "zoom": 1.0, "zoom_fim": 1.12},
-         "callout": [call(1.6, "GRANDÃO E BONZINHO!", "verde")], "tremor": [t for t, _ in passos_a],
+         "callout": [{**call(1.6, "GRANDÃO E BONZINHO!", "verde"), "y": 880}], "tremor": [t for t, _ in passos_a],
          "objetos": {"d": dino(1300, depth=0.85, pisadas=passos_a)},
          "atores": {LU: {"x": 2250, "turn": -0.4, "acoes": [{"t": 0.3, "do": "point", "dur": "resto"}]}} if n == 1 else
                    {LA: {"x": 450, "turn": 0.4, "expr": "surprised", "acoes": [{"t": 0.3, "do": "look_around", "dur": "resto"}]}}},

@@ -56,7 +56,8 @@ def ln(k: Ink, pts, col: str, w: float = LINE, alpha: float = 1.0):
 # ───────────────────────── objetos de mão ─────────────────────────
 
 ITEMS = ("copo_leite", "copo_vazio", "banana", "banana_mordida", "pente", "garrafinha", "carrinho", "sombrinha", "escova",
-         "suco", "fatia_bolo", "fatia_grande", "escova_pasta", "escova_guitarra", "apito", "sapato", "estrela_natal", "sorvete")
+         "suco", "fatia_bolo", "fatia_grande", "escova_pasta", "escova_guitarra", "apito", "sapato", "estrela_natal", "sorvete",
+         "baqueta", "saxofone")
 
 
 ITEM_SCALE = 1.6
@@ -117,6 +118,22 @@ def draw_item(k: Ink, name: str, H: tuple[float, float], f: float = 1.0) -> None
             ln(k, [g(-30 + j * 8, -3), g(140, -3 + j * 2)], "#FFFFFF", w=LINE * 0.45)
         shape(k, ellipse_pts(*g(-30, 0), 26 * S, 22 * S, -0.62, 18), "#FF8A1F")     # corpo da "guitarra" (adesivo de estrela)
         _estrela(k, *g(-30, 0), 16 * S, "#FFD23F")
+    elif name == "baqueta":                                # baqueta de bateria: madeira clara, pontinha redonda, apontando para a frente/baixo
+        a = 0.55
+        def g(px, py):
+            return q(px * math.cos(a) - py * math.sin(a), px * math.sin(a) + py * math.cos(a))
+        shape(k, [g(-14, -5), g(70, -4), g(70, 4), g(-14, 5)], "#E8C49A", line="#B8874E", smooth=False)
+        shape(k, ellipse_pts(*g(74, 0), 7 * S, 7 * S, 0, 12), "#F4D9B4", line="#B8874E")
+    elif name == "saxofone":                               # saxofone dourado: boquilha na boca, corpo descendo, campana virada para cima
+        ouro, ol = "#FFC93C", "#C9921E"
+        ln(k, Q([(14, -58), (6, -46), (0, -30)]), "#2E2E3A", w=LINE * 2.2)                    # boquilha
+        _capsula(k, q(0, -30), q(-4, 40), 9 * S, ouro, ol)                                      # corpo
+        _capsula(k, q(-4, 40), q(14, 58), 10 * S, ouro, ol)                                     # curva de baixo
+        _capsula(k, q(14, 58), q(30, 30), 11 * S, ouro, ol)                                     # sobe para a campana
+        shape(k, ellipse_pts(*q(33, 18), 16 * S, 9 * S, -0.5, 18), ouro, line=ol)               # campana
+        k.shape(ellipse_pts(*q(33, 18), 10 * S, 5 * S, -0.5, 14), fill=_rgba("#8A5A12"), line=0)
+        for j in range(4):                                                                       # chaves
+            shape(k, ellipse_pts(*q(-2 + j * 0.3, -14 + j * 13), 3.5 * S, 3.5 * S, 0, 10), "#FFF1B0", line=ol)
     elif name == "suco":                                   # copinho de suco de uva com canudinho
         shape(k, Q([(-22, -60), (22, -60), (17, 16), (-17, 16)]), PAL["vidro"], line="#7FB6DB", alpha=0.9, smooth=False)
         shape(k, Q([(-19, -40), (19, -40), (16, 12), (-16, 12)]), "#9B4FD1", line="#7A3AAE", smooth=False)
@@ -2535,3 +2552,59 @@ class Dino(_Prop):
 
 
 PROPS.update({"dino": Dino})
+
+
+# ───────────────────────── instrumentos (19/11: a turma toca — E12: teclado, bateria e sax) ─────────────────────────
+
+class Bateria(_Prop):
+    """Bateria infantil colorida: bumbo de frente com estrela, caixa, tom e prato. `bumbo` 0→1 pancada (pele amassa e
+    brilha), `caixa` 0→1 pancada na caixa, `prato` 0→1 prato balançando."""
+
+    def __init__(self):
+        super().__init__("bateria", "Bateria", (900, 760), (450, 720), 360, {"bumbo": 0.0, "caixa": 0.0, "prato": 0.0})
+
+    def paint(self, k, P):
+        bu, cx_, pr = (max(0.0, min(1.0, P[c])) for c in ("bumbo", "caixa", "prato"))
+        ln(k, [(250, 0), (250, -330)], "#7F8EA3", w=LINE * 1.6)                         # estante do prato
+        a = 0.25 * math.sin(pr * math.pi * 3) * pr
+        shape(k, ellipse_pts(250, -335, 95, 16, a, 22), "#FFD23F", line="#D9A520")         # prato
+        for x, y, r in ((-230, -190, 70), (230, -190, 66)):                                 # caixa e tom
+            ln(k, [(x, 0), (x, y + 30)], "#7F8EA3", w=LINE * 1.4)
+            box(k, x - r, y - 26, x + r, y + 34, "#3C8BF0", line="#2A64B8", r=12)
+            shape(k, ellipse_pts(x, y - 26 - 6 * (cx_ if x < 0 else 0), r, 18, 0, 20), "#FFFFFF", line="#C9D6E0")
+        r = 170 * (1 - 0.04 * bu)                                                           # bumbo de frente
+        shape(k, ellipse_pts(0, -175, r, r, 0, 40), "#E9545D", line="#B83A42")
+        shape(k, ellipse_pts(0, -175, r * 0.82, r * 0.82, 0, 40), "#FFF6E8" if bu < 0.5 else "#FFFFFF", line="#E0C9A6")
+        _estrela(k, 0, -175, 70 + 10 * bu, "#FFD23F")
+        for side in (-1, 1):
+            ln(k, [(side * 120, -40), (side * 150, 0)], "#7F8EA3", w=LINE * 1.4)
+
+
+class TecladoInst(_Prop):
+    """Teclado musical num suporte em X: teclas brancas e pretas, telinha e botões coloridos. `tecla` fase contínua
+    (as teclas apertadas acendem andando pelo teclado)."""
+
+    def __init__(self):
+        super().__init__("teclado_inst", "Teclado", (1000, 600), (500, 560), 320, {"tecla": 0.0})
+
+    def paint(self, k, P):
+        for side in (-1, 1):                                                                # suporte em X
+            ln(k, [(-220 * side, 0), (200 * side, -230)], "#5C6B80", w=LINE * 2)
+        box(k, -380, -300, 380, -210, "#2E3A4F", line="#1C2433", r=14)                     # corpo
+        box(k, -120, -290, 120, -262, "#7FF0FF", line="#2BB6D0", r=6)                       # telinha
+        for j, c in enumerate(("#FF5C8A", "#FFD23F", "#3DDC6A", "#3C8BF0")):
+            shape(k, ellipse_pts(180 + j * 40, -276, 10, 10, 0, 10), c, line=dark(c))
+        n = 14
+        acesa = int(P["tecla"] * 8) % n
+        for i in range(n):                                                                  # teclas brancas
+            x0 = -350 + i * 50
+            cor = "#FFE27A" if i in (acesa, (acesa + 5) % n) else "#FFFFFF"
+            box(k, x0, -250, x0 + 46, -212, cor, line="#9FB3C8", r=4)
+        for i in range(n - 1):                                                              # teclas pretas
+            if i % 7 in (2, 6):
+                continue
+            x0 = -350 + i * 50 + 34
+            box(k, x0, -250, x0 + 22, -230, "#1C2433", line="#1C2433", r=3)
+
+
+PROPS.update({"bateria": Bateria, "teclado_inst": TecladoInst})

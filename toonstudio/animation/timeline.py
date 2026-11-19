@@ -18,7 +18,7 @@ from ..characters.base import FACE_NEUTRAL, Character, expression
 from . import cycles, easing
 from .library import REGISTRY
 
-CATEGORICAL = {"mouth", "back", "holding", "paw_n", "paw_f"}
+CATEGORICAL = {"mouth", "back", "holding", "holding_f", "paw_n", "paw_f"}
 ROOT = ("x", "y", "z", "depth")
 
 

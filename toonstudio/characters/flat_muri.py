@@ -107,7 +107,7 @@ class FlatMuri(Character):
                 "foot_n_x": -14.0, "foot_n_y": 0.0, "foot_n_bend": 0.0, "foot_n_rot": 0.0,
                 "foot_f_x": 16.0, "foot_f_y": 0.0, "foot_f_bend": 0.0, "foot_f_rot": 0.0,
                 "mouth": "X", "smile": 0.8, "brow_y": 0.2, "blush": 1.0, "stars": 0.0, "speed": 0.0,
-                "holding": "", "wing_phase": 0.0, "bank": 0.0, "dangle": 0.0, "hair_bounce": 0.0,
+                "holding": "", "holding_f": "", "wing_phase": 0.0, "bank": 0.0, "dangle": 0.0, "hair_bounce": 0.0,
                 "fly": 0.0, "rot_pivot": 0.55, "bigode": 0.0, "mochila": 0.0, "buzz": 0.0, "suor": 0.0,
                 "despenteado": 0.0, "bafinho": 0.0, "espuma": 0.0, "brilho": 0.0, "cuspe": 0.0, "blusa": 0.0, "juba": 0.0, "tubarao": 0.0, "coroa": 0.0, "tutu": 0.0,
                 "boca_o": 0.0,
@@ -253,7 +253,7 @@ class FlatMuri(Character):
         a0 = math.atan2(d[1], d[0])
         spread = (-0.7, 0.0, 0.7) if P[f"paw_{which}"] >= 2.5 else (-0.35, 0.0, 0.35)
         ln = 15 if P[f"paw_{which}"] >= 2.5 else 10
-        item = P.get("holding", "") if which == "n" else ""
+        item = P.get("holding", "") if which == "n" else P.get("holding_f", "")      # 19/11: a mão de trás também segura (baqueta)
         if item:                              # objeto na mão (desenhado sob os dedos)
             from .flat_props import draw_item
             draw_item(k, item, (H[0] + math.cos(a0) * 8, H[1] + math.sin(a0) * 8), f)
@@ -531,8 +531,8 @@ class FlatMuri(Character):
                 k.c.restore()
                 self._line(k, [(ex - rx, top), (ex + rx, top)], line, w=LINE)
             if lid < 0.8:
-                lx = (P["look_x"] * f * 0.4 + 0.2 * f * s) * rx
-                ly = P["look_y"] * 0.35 * ry
+                lx = (P["look_x"] * f * 0.5 + 0.2 * f * s) * rx        # 20/11: pupila acompanha mais o olhar (as duas juntas)
+                ly = P["look_y"] * 0.42 * ry
                 pr = 7.5 * P["pupil"] ** 0.5 * es ** 0.3
                 k.dot(ex + lx, ey + ly + 3, pr, PUPIL)
             if L.lashes:

@@ -156,9 +156,9 @@ def por_mochila(char, st, a):
 def pensar(char, st, a):
     d = _d(a, 1.4)
     return ActionResult(keys=[(0.0, {}, "step"),
-                              (0.3, {"hand_n_x": 45, "hand_n_y": -70, "hand_n_bend": 0.8, "paw_n": 1, "head_tilt": 0.15,
-                                     "look_y": -0.8, "look_x": 0.4, "brow_y": 0.9, "mouth": "F"}, "inout"),
-                              (d, {"head_tilt": 0.2}, "inout")], dur=d, ex=1)
+                              (0.3, {"hand_n_x": 45, "hand_n_y": -70, "hand_n_bend": 0.8, "paw_n": 1, "head_tilt": 0.07,
+                                     "look_y": -0.75, "look_x": 0.85, "brow_y": 0.9, "mouth": "F"}, "inout"),
+                              (d, {"head_tilt": 0.1}, "inout")], dur=d, ex=1)   # 20/11: cabeça menos torta + olhar claro (não fica vesgo)
 
 
 @action("cheguei", "acting", "Pose de chegada 'Cheguei!': braços abertos para cima, sorrisão.", {"dur": "s"})
