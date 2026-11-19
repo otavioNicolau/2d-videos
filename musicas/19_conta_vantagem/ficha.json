@@ -55,14 +55,105 @@
  ],
  "status": "aprovada",
  "versoes": [
-  "v1"
+  "v1",
+  "v2"
  ],
  "youtube": {
-  "resumo": "CONTA VANTAGEM! 🪳 A Dona Barata diz que tem castelo, carro e que é a mais forte do jardim… mas quando viu o chinelo, correu primeiro! O castelo? Caixinha! O carro? Carretel! Ha, ha!",
-  "resumo_short": "CONTA VANTAGEM! 😄 A Dona Barata e a mentirinha de perna curta, com a Laurinha e o Luisinho!",
-  "curiosidade": "A barata existe desde antes dos dinossauros"
+  "resumo": "CONTA VANTAGEM! 🪳😎 A Dona Barata diz que tem castelo, carrão e que é a mais forte do jardim… mas quando viu o chinelo, correu primeiro! Ih, é mentirinha! Ha, ha, Baratinha! Cante e ria com o Luisinho!",
+  "resumo_short": "CONTA VANTAGEM! 🪳 Ih, é mentirinha! Ha, ha, Baratinha!",
+  "curiosidade": "A barata é um dos bichos mais rápidos para o tamanho dela: corre quase um metro e meio por segundo",
+  "miniatura_cena": {
+   "fundo": "aneis",
+   "cores": [
+    [
+     45,
+     190,
+     90
+    ],
+    [
+     255,
+     210,
+     63
+    ],
+    [
+     255,
+     140,
+     198
+    ],
+    [
+     154,
+     90,
+     46
+    ],
+    [
+     127,
+     240,
+     255
+    ]
+   ],
+   "heroi": {
+    "id": "luisinho",
+    "pose": {
+     "turn": 0.2,
+     "mouth": "D",
+     "hand_n_x": -135,
+     "hand_n_y": -135,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3
+    }
+   },
+   "par": {
+    "id": "laurinha",
+    "pose": {
+     "turn": -0.2,
+     "mouth": "D",
+     "hand_n_x": -135,
+     "hand_n_y": -135,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3
+    }
+   },
+   "objetos": [
+    {
+     "id": "chinelo",
+     "pose": {
+      "gira": 0.1
+     },
+     "tam": 150,
+     "x": 160,
+     "base": 330
+    }
+   ],
+   "frente": [
+    {
+     "id": "barata",
+     "pose": {
+      "metida": 1,
+      "aponta": 1,
+      "fala": 0.6
+     },
+     "tam": 470,
+     "x": 690,
+     "base": 760
+    }
+   ]
+  }
  },
  "persona": "luisinho",
  "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz)",
- "escolhida": "v1"
+ "escolhida": "v2",
+ "playlists": [
+  "Músicas de Bichos 🐸🐜🐑🐧"
+ ],
+ "capitulos": {
+  "ponte": "O castelo? Caixinha!"
+ }
 }

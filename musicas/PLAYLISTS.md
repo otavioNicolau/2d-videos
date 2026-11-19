@@ -30,6 +30,7 @@ VÍDEOS (nesta ordem):
 16 Carnaval da Turminha
 17 Que Forma É Essa?
 18 Robô Dançarino
+19 Conta Vantagem!
 
 ────────────────────────────────────────────────────────────
 2) Músicas de Bichos 🐸🐜🐑🐧
@@ -43,6 +44,7 @@ VÍDEOS:
 08 Dança da Formiguinha
 12 Méé, Carneirinho!
 13 Andar de Pinguim
+19 Conta Vantagem!
 
 ────────────────────────────────────────────────────────────
 3) Dançar e Brincar com o Corpo 💃🕺
