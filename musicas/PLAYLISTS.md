@@ -32,6 +32,7 @@ VÍDEOS (nesta ordem):
 18 Robô Dançarino
 19 Conta Vantagem!
 20 Dino Pisa Forte
+21 Dorme, Acorda!
 
 ────────────────────────────────────────────────────────────
 2) Músicas de Bichos 🐸🐜🐑🐧
@@ -62,6 +63,7 @@ VÍDEOS:
 13 Andar de Pinguim
 18 Robô Dançarino
 20 Dino Pisa Forte
+21 Dorme, Acorda!
 
 ────────────────────────────────────────────────────────────
 4) Rotina e Bons Hábitos ☀️🪥
@@ -74,6 +76,7 @@ VÍDEOS:
 01 Zum Zum, Cheguei!
 03 Sorriso Brilhante
 05 Conta Comigo
+21 Dorme, Acorda!
 
 ────────────────────────────────────────────────────────────
 5) Aprender Brincando 🌈🔢

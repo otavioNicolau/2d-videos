@@ -52,15 +52,108 @@
   170
  ],
  "alternativas": [],
- "status": "letra_revisada",
- "versoes": [],
+ "status": "aprovada",
+ "versoes": [
+  "v1"
+ ],
  "youtube": {
-  "resumo": "DORME, ACORDA! 😴 Fecha o olho e faz zzz… acorda e pula da cama! Mas presta atenção: quem dormir na hora errada ganha cosquinha no pé! Peguei você!",
-  "resumo_short": "DORME, ACORDA! 😴 Ronc, ronc… acorda! Brinque com a Laurinha e o Luisinho!",
-  "curiosidade": "O galo canta de manhã cedinho e acorda todo mundo"
+  "resumo": "DORME, ACORDA! 😴⏰ Vamos brincar? Fecha o olho, faz zzz… e quando o Luisinho disser ACORDA, pula da cama! Quem dormir na hora errada ganha cosquinha no pé! E a turma ainda toca na banda: bateria, sax e teclado!",
+  "resumo_short": "DORME, ACORDA! 😴 Pula da cama, de pé!",
+  "curiosidade": "Criança pequena precisa dormir de 10 a 13 horas por dia para crescer forte e com energia para brincar",
+  "miniatura_cena": {
+   "fundo": "faixas",
+   "cores": [
+    [
+     43,
+     58,
+     120
+    ],
+    [
+     184,
+     101,
+     230
+    ],
+    [
+     255,
+     226,
+     122
+    ],
+    [
+     60,
+     139,
+     240
+    ],
+    [
+     255,
+     140,
+     198
+    ]
+   ],
+   "heroi": {
+    "id": "luisinho",
+    "pose": {
+     "turn": 0.2,
+     "mouth": "D",
+     "hand_n_x": -135,
+     "hand_n_y": -135,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3
+    }
+   },
+   "par": {
+    "id": "laurinha",
+    "pose": {
+     "turn": -0.2,
+     "mouth": "D",
+     "hand_n_x": -135,
+     "hand_n_y": -135,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3
+    }
+   },
+   "objetos": [
+    {
+     "id": "lua",
+     "pose": {
+      "lid": 1
+     },
+     "tam": 200,
+     "x": 160,
+     "base": 330
+    }
+   ],
+   "frente": [
+    {
+     "id": "bateria",
+     "pose": {
+      "bumbo": 1,
+      "prato": 1
+     },
+     "tam": 330,
+     "x": 690,
+     "base": 745
+    }
+   ]
+  }
  },
  "origem": "brincadeiras com o corpo (18/11/2026), inspiradas no gênero de No Ritmo Quá Quá / Morto-Vivo — nada copiado",
  "persona": "luisinho",
  "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz)",
- "suno_congelado": "E12 com teclado 1º, bateria 2º, sax 3º (19/11/2026) — já usado no Suno; não regerar"
+ "suno_congelado": "E12 com teclado 1º, bateria 2º, sax 3º (19/11/2026) — já usado no Suno; não regerar",
+ "escolhida": "v1",
+ "playlists": [
+  "Dançar e Brincar com o Corpo 💃🕺",
+  "Rotina e Bons Hábitos ☀️🪥"
+ ],
+ "capitulos": {
+  "ponte": "Acor… dorme! Peguei você!"
+ }
 }
