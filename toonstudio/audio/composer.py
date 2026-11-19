@@ -99,6 +99,11 @@ def parse(letra: str) -> list[tuple[str, str]]:
 def expandir(letra: str, peso: str, E: dict, V: dict) -> str:
     """Traduz os atalhos ([Virada], [Intervalo Ns], [Bordão x]) para marcações do Suno."""
     intervalo = E["peso"][peso]["intervalo"]
+    trio = E["canal"].get("trio", {})
+    if trio.get("ativo"):                     # E12: intervalos e abertura só com bateria, teclado e sax
+        intervalo = trio.get("intervalo", intervalo)
+        if trio.get("intro"):
+            letra = re.sub(r"^\[\s*Intro\b[^\]]*\]", trio["intro"], letra, count=1, flags=re.M | re.I)
     fill = {"forte": "[Keyboard Fill]", "media": "[Keyboard Fill]", "marcada": ""}[peso]   # E9 = E6 (19/11): virada de teclado de volta
     out = []
     for raw in letra.splitlines():

@@ -133,7 +133,7 @@
    {
     "versao": "E12",
     "data": "19/11/2026",
-    "mudanca": "TRIO: só saxofone, bateria (kit) e teclado (baixo + piano); sax na abertura, entre as frases, antes de cada refrão e nos intervalos; ritmo da música entra só como 'groove' (sem os instrumentos/percussão próprios do ritmo); Exclude com todos os outros instrumentos (guitarra, metais, cordas, apito, percussão, efeitos…); bateria de kit liberada (sai 'live drums/acoustic drums' do Exclude)",
+    "mudanca": "TRIO: só saxofone, bateria (kit) e teclado (baixo + piano); sax na abertura, entre as frases, antes de cada refrão e nos intervalos; ritmo da música entra só como 'groove' (sem os instrumentos/percussão próprios do ritmo); Exclude com todos os outros instrumentos (guitarra, metais, cordas, apito, percussão, efeitos…); bateria de kit liberada (sai 'live drums/acoustic drums' do Exclude) · ordem do usuário: bateria FORTE > teclado PISADINHA > sax em 3º (abertura, antes do refrão, intervalos)",
     "motivo": "usuário: com sax, bateria e teclado a música do Animadinhos fica animada e viciante; teste 'apenas eles'",
     "usado_em": "21 em diante (teste)"
    }
@@ -161,9 +161,9 @@
   "nota_sax": "19/11/2026, usuário: 'o Animadinhos usa muito ritmos com saxofone, bateria e teclado'. Medido (18 referências): teclado/piano em 15/18 (nossas 3–4× menos), sintetizador 13/18, bateria em ~metade, saxofone/metais claros em 3/18 (+3 leves) e ZERO nas nossas. E11 = E9 + piano de teclado arranjador na frente + riff de saxofone (som de sax do teclado) respondendo a voz.",
   "trio": {
    "ativo": true,
-   "abertura": "kids song played by ONLY three instruments: saxophone, drums and keyboard",
-   "producao": "lively drum kit groove (kick, snare, hi-hat) repeating the same pattern through the whole song, keyboard playing bouncy bass and bright piano chords, catchy saxophone riffs in the intro, between the vocal lines, before every chorus and in the instrumental breaks, nothing else, single dry centered lead vocal, close and clear, lots of space in the mix, polished kids music production",
-   "peso_style": "steady drum groove with strong kick and snare, the same beat in verse and chorus",
+   "abertura": "kids song played by ONLY three instruments: strong drums first, keyboard second, saxophone third",
+   "producao": "drum kit loud and in front, repeating the same groove through the whole song, arranger keyboard 'pisadinha' pumping bass and chords on every beat (tum-tcha), bright keyboard piano, saxophone only as a lighter third layer with short riffs in the intro, before every chorus and in the instrumental breaks, nothing else, single dry centered lead vocal, close and clear, polished kids music production",
+   "peso_style": "STRONG punchy drums marking the rhythm (big kick and snare), the same beat in verse and chorus",
    "exclude_extra": [
     "guitar",
     "electric guitar",
@@ -193,7 +193,9 @@
     "live drums",
     "acoustic drums"
    ],
-   "nota": "19/11/2026, usuário: 'quero usar esses 3 instrumentos nas próximas músicas para teste — APENAS ELES' (saxofone, bateria e teclado, como o Animadinhos)."
+   "nota": "19/11/2026, usuário: 'quero usar esses 3 instrumentos nas próximas músicas para teste — APENAS ELES' (saxofone, bateria e teclado, como o Animadinhos). · Ajuste do usuário: 'preciso que a bateria seja forte, pra marcar o ritmo, e as pisadinhas do teclado também; o saxofone fica em 3º' → ordem: bateria forte > teclado pisadinha > sax (só abertura, antes do refrão e intervalos).",
+   "intervalo": "[Instrumental Break - {s} seconds, strong drums, keyboard pisadinha and a short saxophone riff]",
+   "intro": "[Intro - strong drums, keyboard pisadinha and a short saxophone riff]"
   }
  },
  "peso": {
