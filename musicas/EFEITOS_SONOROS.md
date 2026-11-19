@@ -1,5 +1,9 @@
 # Efeitos sonoros nos clipes (a partir da 19)
 
+> **DESATIVADO em 19/11/2026 a pedido do usuário** ("por enquanto desative esse módulo de efeito sonoro").
+> Liga/desliga em `config.yaml` → `clipe: efeitos_sonoros: true|false`. Desligado: os "sons" do roteiro são ignorados
+> na montagem, o placar de cena não cobra efeitos e não peço downloads ao usuário. A 19 já publicada fica como está.
+
 Objetivo: o clipe "conversar" com a criança também pelo som. O bicho late quando aparece, o robô faz bip, as crianças
 comemoram no fim do refrão. Os desenhos animados de referência usam isso o tempo todo.
 

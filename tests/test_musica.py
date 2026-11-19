@@ -360,13 +360,15 @@ def test_master_tames_harsh_suno_highs():
     assert all(abs(g) <= 9.0 for g in ganhos)
 
 
-def test_sons_do_roteiro_entram_na_mixagem_final(tmp_path):
+def test_sons_do_roteiro_entram_na_mixagem_final(tmp_path, monkeypatch):
     """Efeito do roteiro ("sons" → cena "sfx") é somado ao áudio no tempo certo (com a vinheta antes) e no nível da música."""
     import json
     import numpy as np
     import soundfile as sf
     from toonstudio.audio import sfx
     from toonstudio.composition.marca import _efeitos_sonoros
+    import toonstudio.core.config as cfg
+    monkeypatch.setattr(cfg, "setting", lambda sec, key, default=None: True if key == "efeitos_sonoros" else default)
     sr = 48000
     t = np.arange(4 * sr) / sr
     musica = (0.1 * np.sin(2 * np.pi * 220 * t)).astype(np.float32)
@@ -412,3 +414,19 @@ def test_importar_outro_take_troca_o_audio_e_a_analise(tmp_path):
     import_song(b, proj)
     assert sf.info(proj / "musica" / "original.wav").frames == 8820
     assert not (proj / "analise" / "stems").exists()
+
+
+def test_efeitos_sonoros_desligados_na_config_nao_entram(tmp_path, monkeypatch):
+    """config.yaml → clipe.efeitos_sonoros: false (usuário, 19/11): a montagem ignora os "sons" do roteiro."""
+    import json
+    import numpy as np
+    import soundfile as sf
+    import toonstudio.core.config as cfg
+    from toonstudio.composition.marca import _efeitos_sonoros
+    monkeypatch.setattr(cfg, "setting", lambda sec, key, default=None: False if key == "efeitos_sonoros" else default)
+    wav = tmp_path / "a.wav"
+    sf.write(wav, np.zeros((48000, 2), np.float32), 48000)
+    (tmp_path / "episode.json").write_text(json.dumps({"scenes": [{"duration": 1.0, "sfx": [{"t": 0.1, "id": "ding"}]}]}))
+    assert _efeitos_sonoros(tmp_path, wav, 0.0) == 0
+    assert np.abs(sf.read(wav)[0]).max() == 0
+

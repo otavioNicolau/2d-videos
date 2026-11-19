@@ -38,6 +38,12 @@ ITENS = [
 SO_DA_19 = {"sons_pl"}
 
 
+def _efeitos_ligados() -> bool:
+    sys.path.insert(0, str(ROOT))
+    from toonstudio.core.config import setting
+    return bool(setting("clipe", "efeitos_sonoros", True))
+
+
 def medir(roteiro: dict) -> dict:
     P = [p for v in roteiro["partes"].values() for p in v]
     n = len(P)
@@ -95,7 +101,7 @@ def main():
     linhas, falhas, piorou = [], [], []
     for k, rot, lo, hi, dica in ITENS:
         v = m[k]
-        if k in SO_DA_19 and int(n) < 19:
+        if k in SO_DA_19 and (int(n) < 19 or not _efeitos_ligados()):
             linhas.append((rot, v, "—", "não conta")); continue
         ok = lo <= v <= hi
         media = round(st.mean(h["medidas"][k] for h in ant), 2) if ant else None

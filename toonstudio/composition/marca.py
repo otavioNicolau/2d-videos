@@ -75,6 +75,9 @@ def _efeitos_sonoros(pdir: Path, wav: Path, inicio: float) -> int:
     import soundfile as sf
     from scipy import signal as sg
     from ..audio import sfx as SFX
+    from ..core.config import setting
+    if not setting("clipe", "efeitos_sonoros", True):          # desligado em config.yaml (clipe.efeitos_sonoros)
+        return 0
     ep = json.loads((pdir / "episode.json").read_text(encoding="utf-8"))
     lista, t0 = [], inicio
     for s in ep["scenes"]:

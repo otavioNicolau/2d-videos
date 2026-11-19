@@ -15,3 +15,5 @@ audio:
 render:
   level_scale: 1.5          # resolução dos desenhos e cenários (folga para zoom de câmera até 1.5x)
   krita_sources: true       # gerar KRA editáveis (model sheets e cenário)
+clipe:
+  efeitos_sonoros: false    # 19/11/2026: desativado pelo usuário ("por enquanto desative"); true = mistura os "sons" do roteiro
