@@ -40,7 +40,7 @@ def roda(t_cai=None, estilo="roda"):
         if t_cai is not None:
             ac += [{"t": round(t_cai, 2), "do": "sit"}, {"t": round(t_cai + 0.6, 2), "do": "ofegante" if turn < 0 else "laugh", "dur": "resto"}]
         return {"x": x, "turn": turn, "acoes": ac}
-    return {LA: ator(1050, 0.25), LU: ator(1550, -0.25)}
+    return {LA: ator(850, 0.25), LU: ator(1750, -0.25)}
 
 
 def bichos_roda(d, t_cai=None, xs=(450, 2150), ids=("sapo", "pato")):
@@ -86,7 +86,7 @@ def verso(key, n):
         {"linhas": 1, "cenario": LAGOA, "camera": {"x": 1300, "y": 640, "zoom": 1.2, "zoom_fim": 1.3}, "callout": [call(0.4, "O SAPO E O PATO!", "verde")],
          "objetos": {"s": bicho("sapo", 1000, entra=(0.1, 1.0, -300), pulos=0.4, d=c1 - c0),
                      "p": bicho("pato", 1600, entra=(0.3, 1.3, 2900), pulos=0.45, d=c1 - c0)},
-         "atores": {LA: {"x": 2250, "turn": -0.35, "acoes": [{"t": 0.6, "do": "look_around", "dur": "resto"}]}}},
+         "atores": {LA: {"x": 2000, "turn": -0.35, "acoes": [{"t": 0.6, "do": "look_around", "dur": "resto"}]}}},
         {"linhas": 1, "cenario": CAMPO, "camera": {"x": 1300, "y": 660, "zoom": 1.3, "zoom_fim": 1.4}, "callout": [call(0.4, "O GRILO E O TATU!", "amarelo")],
          "objetos": {"g": bicho("grilo", 1050, entra=(0.1, 1.0, -300), pulos=0.35, d=d1 - d0, depth=0.8),
                      "t": bicho("tatu", 1600, entra=(0.2, 1.2, 2900), pulos=0.5, d=d1 - d0, depth=0.8)}},
@@ -177,14 +177,14 @@ def ponte(key, n):
     return [
         {"linhas": 2, "cenario": cen, "camera": {"x": 1300, "y": 620, "zoom": 1.15, "zoom_fim": 1.25}, "callout": [call(0.1, "PRA DIREITA!", "azul"), call(1.4, "PRA ESQUERDA!", "verde")],
          "objetos": bichos_roda(a1 - a0, ids=("grilo", "tatu") if n == 1 else ("sapo", "pato")),
-         "atores": {LA: {"x": 1050, "turn": 0.25, "acoes": [{"t": 0.0, "do": "dance", "style": "lado", "dur": "resto"}]},
-                    LU: {"x": 1550, "turn": -0.25, "acoes": [{"t": 0.0, "do": "dance", "style": "lado", "dur": "resto"}]}}},
+         "atores": {LA: {"x": 850, "turn": 0.25, "acoes": [{"t": 0.0, "do": "dance", "style": "lado", "dur": "resto"}]},
+                    LU: {"x": 1750, "turn": -0.25, "acoes": [{"t": 0.0, "do": "dance", "style": "lado", "dur": "resto"}]}}},
         {"linhas": 2, "cenario": cen, "camera": {"x": 1300, "y": 640, "zoom": 1.2, "zoom_fim": 1.1}, "flash": False,
          "callout": [call(0.1, "AGACHA…", "roxo"), call(tl + 0.05, "QUE FESTA!", "amarelo")], "fx": ["confete"],
          "objetos": bichos_roda(b1 - b0, ids=("grilo", "tatu") if n == 1 else ("sapo", "pato")),
-         "atores": {LA: {"x": 1050, "turn": 0.25, "acoes": [{"t": 0.0, "do": "dance", "style": "agacha", "dur": round(max(0.4, tl - 0.1), 2)},
+         "atores": {LA: {"x": 850, "turn": 0.25, "acoes": [{"t": 0.0, "do": "dance", "style": "agacha", "dur": round(max(0.4, tl - 0.1), 2)},
                                                           {"t": round(tl, 2), "do": "jump", "dur": 0.8}]},
-                    LU: {"x": 1550, "turn": -0.25, "acoes": [{"t": 0.0, "do": "dance", "style": "agacha", "dur": round(max(0.4, tl - 0.1), 2)},
+                    LU: {"x": 1750, "turn": -0.25, "acoes": [{"t": 0.0, "do": "dance", "style": "agacha", "dur": round(max(0.4, tl - 0.1), 2)},
                                                            {"t": round(tl + 0.05, 2), "do": "jump", "dur": 0.8}]}}},
     ]
 
