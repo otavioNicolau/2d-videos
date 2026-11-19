@@ -396,3 +396,19 @@ def test_nomes_da_turma_com_a_cor_de_cada_um():
     t = _nomes_coloridos("LAURINHA E LUISINHO!", *CALLOUT_COLORS["amarelo"])
     rosa, azul = CALLOUT_COLORS["rosa"][0], CALLOUT_COLORS["azul"][0]
     assert t.index(rosa) < t.index("LAURINHA") < t.index(azul) < t.index("LUISINHO")
+
+
+def test_importar_outro_take_troca_o_audio_e_a_analise(tmp_path):
+    """A 19 v2 foi importada por cima da v1 e o projeto continuou com a v1 (original e voz separada antigos)."""
+    import numpy as np
+    import soundfile as sf
+    from toonstudio.audio.song import import_song
+    a, b = tmp_path / "a.wav", tmp_path / "b.wav"
+    sf.write(a, np.zeros(4410, np.float32), 44100)
+    sf.write(b, np.ones(8820, np.float32) * 0.1, 44100)
+    proj = tmp_path / "ep"
+    import_song(a, proj)
+    (proj / "analise" / "stems").mkdir(parents=True)
+    import_song(b, proj)
+    assert sf.info(proj / "musica" / "original.wav").frames == 8820
+    assert not (proj / "analise" / "stems").exists()

@@ -17,11 +17,24 @@ import soundfile as sf
 from ..core.config import ROOT, StudioError, setting, tool
 
 
+def _md5(p: Path) -> str:
+    import hashlib
+    h = hashlib.md5()
+    with open(p, "rb") as f:
+        for b in iter(lambda: f.read(1 << 20), b""):
+            h.update(b)
+    return h.hexdigest()
+
+
 def import_song(src: Path, project_dir: Path) -> dict:
     """Copia o original (somente leitura) e cria a cópia de trabalho WAV. O original nunca é modificado."""
     mdir = project_dir / "musica"
     mdir.mkdir(parents=True, exist_ok=True)
     orig = mdir / ("original" + src.suffix.lower())
+    if orig.exists() and _md5(orig) != _md5(src):          # outro take: troca o original e joga fora a análise velha
+        orig.chmod(0o644)
+        orig.unlink()
+        shutil.rmtree(project_dir / "analise" / "stems", ignore_errors=True)
     if not orig.exists():
         shutil.copy2(src, orig)
         orig.chmod(0o444)
