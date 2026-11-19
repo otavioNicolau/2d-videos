@@ -376,6 +376,55 @@ CHOREO: dict[str, tuple[float, list[tuple[float, dict]]]] = {
         (1.0, {"hand_n_x": 20, "hand_n_y": 40, "hand_f_y": -30, "lean": -0.07, "head_tilt": 0.14, "body_y": 4, "foot_f_y": -18}),
         (1.5, {"hand_n_x": 30, "hand_n_y": 66, "hand_f_y": -40, "lean": 0.03, "head_tilt": -0.08, "body_y": -2, "foot_f_y": 0}),
     ]),
+    # ---- A3 (19/11): passos com PERNA de verdade (as pernas eram o ponto fraco: 11–12 no placar, meta 40)
+    # chutinho: chuta de leve para a frente/lado alternando os pés, braços balançam em oposição
+    "chute": (2, [
+        (0.0, {"foot_n_x": -40, "foot_n_y": -46, "foot_n_bend": 0.15, "foot_f_x": 16, "foot_f_y": 0, "foot_f_bend": 0.35,
+               "body_y": 4, "lean": 0.05, "hand_n_x": -96, "hand_n_y": 38, "hand_f_x": 126, "hand_f_y": -44, "paw_n": 3, "paw_f": 3,
+               "head_tilt": 0.08}),
+        (0.5, {"foot_n_x": -14, "foot_n_y": 0, "foot_n_bend": 0.3, "foot_f_x": 16, "foot_f_y": 0, "foot_f_bend": 0.3, "body_y": 10,
+               "lean": 0.0, "hand_n_x": -70, "hand_n_y": 40, "hand_f_x": 70, "hand_f_y": 40, "head_tilt": 0.0}),
+        (1.0, {"foot_f_x": 42, "foot_f_y": -46, "foot_f_bend": 0.15, "foot_n_x": -14, "foot_n_y": 0, "foot_n_bend": 0.35,
+               "body_y": 4, "lean": -0.05, "hand_n_x": -126, "hand_n_y": -44, "hand_f_x": 96, "hand_f_y": 38, "head_tilt": -0.08}),
+        (1.5, {"foot_n_x": -14, "foot_n_y": 0, "foot_n_bend": 0.3, "foot_f_x": 16, "foot_f_y": 0, "foot_f_bend": 0.3, "body_y": 10,
+               "lean": 0.0, "hand_n_x": -70, "hand_n_y": 40, "hand_f_x": 70, "hand_f_y": 40, "head_tilt": 0.0}),
+    ]),
+    # joelhinho: sobe o joelho bem alto e a mão do mesmo lado bate no joelho (palminha no joelho)
+    "joelho": (2, [
+        (0.0, {"foot_n_y": -78, "foot_n_x": -4, "foot_n_bend": 1.0, "foot_f_y": 0, "foot_f_bend": 0.2, "body_y": -4,
+               "hand_n_x": -78, "hand_n_y": 62, "hand_n_bend": 0.5, "hand_f_x": 120, "hand_f_y": -60, "paw_n": 0, "paw_f": 3,
+               "head_tilt": 0.1, "squash": 1.02}),
+        (0.5, {"foot_n_y": 0, "foot_n_x": -14, "foot_n_bend": 0.3, "foot_f_y": 0, "foot_f_bend": 0.3, "body_y": 10,
+               "hand_n_x": -90, "hand_n_y": 30, "hand_f_x": 90, "hand_f_y": 30, "head_tilt": 0.0, "squash": 0.97}),
+        (1.0, {"foot_f_y": -78, "foot_f_x": 6, "foot_f_bend": 1.0, "foot_n_y": 0, "foot_n_bend": 0.2, "body_y": -4,
+               "hand_f_x": 78, "hand_f_y": 62, "hand_f_bend": -0.5, "hand_n_x": -120, "hand_n_y": -60, "paw_n": 3, "paw_f": 0,
+               "head_tilt": -0.1, "squash": 1.02}),
+        (1.5, {"foot_f_y": 0, "foot_f_x": 16, "foot_f_bend": 0.3, "foot_n_y": 0, "foot_n_bend": 0.3, "body_y": 10,
+               "hand_n_x": -90, "hand_n_y": 30, "hand_f_x": 90, "hand_f_y": 30, "head_tilt": 0.0, "squash": 0.97}),
+    ]),
+    # sapinho: pernas abertas, agacha na batida e dá um pulinho de sapo, braços abertos de lado
+    "sapinho": (2, [
+        (0.0, {"foot_n_x": -58, "foot_f_x": 60, "foot_n_y": 0, "foot_f_y": 0, "foot_n_bend": 0.8, "foot_f_bend": 0.8, "body_y": 40,
+               "squash": 0.86, "hand_n_x": -120, "hand_n_y": 40, "hand_f_x": 120, "hand_f_y": 40, "paw_n": 3, "paw_f": 3, "head_dy": 8}),
+        (0.6, {"foot_n_x": -40, "foot_f_x": 42, "foot_n_y": -40, "foot_f_y": -40, "foot_n_bend": 0.5, "foot_f_bend": 0.5,
+               "body_y": -70, "squash": 1.14, "hand_n_x": -130, "hand_n_y": -90, "hand_f_x": 130, "hand_f_y": -90, "head_dy": -6}),
+        (1.0, {"foot_n_x": -58, "foot_f_x": 60, "foot_n_y": 0, "foot_f_y": 0, "foot_n_bend": 0.8, "foot_f_bend": 0.8, "body_y": 36,
+               "squash": 0.88, "hand_n_x": -120, "hand_n_y": 40, "hand_f_x": 120, "hand_f_y": 40, "head_dy": 8}),
+        (1.5, {"foot_n_x": -50, "foot_f_x": 52, "foot_n_bend": 0.4, "foot_f_bend": 0.4, "body_y": 8, "squash": 1.0,
+               "hand_n_x": -110, "hand_n_y": 10, "hand_f_x": 110, "hand_f_y": 10, "head_dy": 0}),
+    ]),
+    # cintura: mãos na cintura, quadril balança de um lado para o outro e o pé do lado sobe na ponta
+    "cintura": (2, [
+        (0.0, {"hand_n_x": -70, "hand_n_y": 40, "hand_n_bend": 0.95, "hand_f_x": 70, "hand_f_y": 40, "hand_f_bend": -0.95,
+               "paw_n": 1, "paw_f": 1, "body_x": -26, "rot": -0.06, "foot_f_y": -28, "foot_f_bend": 0.6, "foot_n_y": 0,
+               "foot_n_bend": 0.2, "head_tilt": 0.14, "body_y": 4}),
+        (0.5, {"body_x": 0, "rot": 0.0, "foot_f_y": 0, "foot_f_bend": 0.25, "foot_n_y": 0, "foot_n_bend": 0.25, "head_tilt": 0.0,
+               "body_y": -3}),
+        (1.0, {"body_x": 26, "rot": 0.06, "foot_n_y": -28, "foot_n_bend": 0.6, "foot_f_y": 0, "foot_f_bend": 0.2,
+               "head_tilt": -0.14, "body_y": 4}),
+        (1.5, {"body_x": 0, "rot": 0.0, "foot_f_y": 0, "foot_f_bend": 0.25, "foot_n_y": 0, "foot_n_bend": 0.25, "head_tilt": 0.0,
+               "body_y": -3}),
+    ]),
 }
 ALIASES = {"bob": "balanco"}
 
@@ -417,7 +466,13 @@ _FILLED = {k: (L, *_filled(keys)) for k, (L, keys) in CHOREO.items()}
 # ---- ginga de base (A2, 19/11): pernas e corpo nos passos que só mexiam os braços (14 dos 22 tinham perna parada).
 # Joelhos dobram e o corpo desce NA batida, o peso passa de um pé para o outro (2 batidas) e o calcanhar do pé livre
 # levanta no contratempo. Só entra no canal que o passo NÃO define (o passo manda no que ele já mexe).
-_SEM_PERNA = {k for k, (_, names, _) in _FILLED.items() if not any(n.startswith("foot_") for n in names)}
+def _amp_perna(keys):
+    vals = [kk[n] for _, kk in keys for n in kk if n in ("foot_n_x", "foot_n_y", "foot_f_x", "foot_f_y")]
+    return max(vals) - min(vals) if vals else 0.0
+
+
+_SEM_PERNA = {k for k, (_, names, keys) in _FILLED.items()
+              if (not any(n.startswith("foot_") for n in names) or _amp_perna(keys) < 15) and k != "agacha"}   # A3: perna fraca também ganha passo
 _SEM_CORPO = {k for k, (_, names, keys) in _FILLED.items()
               if "body_y" not in names or max(kk["body_y"] for _, kk in keys) - min(kk["body_y"] for _, kk in keys) < 6}
 _SEM_PESO = {k for k, (_, names, _) in _FILLED.items() if not ({"body_x", "rot"} & set(names))}
@@ -431,11 +486,15 @@ def _ginga(style: str, pos: float, out: dict, amp: float) -> None:
         out["squash"] = 1 + (out.get("squash", 1.0) - 1) + (-0.03 * dip + 0.01) * amp
     if style in _SEM_PERNA:
         livre = int(math.floor(pos)) % 2                          # pé livre alterna a cada batida
-        lift = math.sin(math.pi * u) ** 2 * 22 * amp
-        out["foot_n_bend"] = 0.06 + 0.3 * dip * amp
-        out["foot_f_bend"] = 0.06 + 0.3 * dip * amp
+        arco = math.sin(math.pi * u)
+        lift = arco ** 2 * 32 * amp                               # A3: calcanhar/joelho sobe mais (22 → 32)
+        passo = 20 * arco * amp                                   # A3: o pé livre sai para o lado e volta (passo de verdade)
+        out["foot_n_bend"] = 0.06 + 0.3 * dip * amp + (0.35 * arco if livre == 0 else 0.0)
+        out["foot_f_bend"] = 0.06 + 0.3 * dip * amp + (0.35 * arco if livre == 1 else 0.0)
         out["foot_n_y"] = -lift if livre == 0 else 0.0
         out["foot_f_y"] = -lift if livre == 1 else 0.0
+        out["foot_n_x"] = -14 - (passo if livre == 0 else 0.0)
+        out["foot_f_x"] = 16 + (passo if livre == 1 else 0.0)
     if style in _SEM_PESO:
         out["body_x"] = 12 * math.cos(math.pi * pos) * amp        # peso de um pé para o outro
 

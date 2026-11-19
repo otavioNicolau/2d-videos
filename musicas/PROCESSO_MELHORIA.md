@@ -128,3 +128,9 @@ O placar da música ganhou os itens **síncope ≥ 0,60** e **baixo sincopado �
 a nossa está ficando ainda estilo banda". Medido: loop igual ref 0,96 × 19 v1 0,84 × 19 v2 0,75; outros instrumentos
 9 % × 20 %. E8 mantém a síncope do E7 e pede UM loop que nunca muda, sem virada entre as partes, mesma batida no verso e
 no refrão (Exclude: beat changes, breakdown, build-up, half-time, drum breaks, guitar solo). Vale da 20 em diante.
+- **A3** (19/11, aprovado pelo usuário para fazer; laboratório para olhar): nota de olho da 19 = 4; pernas ainda
+  paradas (12, meta 40) e "festa" com 46 % da dança. (1) Ginga de base com PASSO de verdade: o pé livre sai para o lado
+  e volta, joelho/calcanhar sobem mais (22 → 32), e entra também nos passos de perna fraca (balanço…). (2) Quatro
+  passos novos com perna: **chute** (chutinho alternado), **joelho** (joelho alto + mão no joelho), **sapinho**
+  (pernas abertas, agacha e pula), **cintura** (mãos na cintura, quadril e ponta do pé). Braços sempre por fora do corpo.
+  Laboratório: `A3 (pernas e passos novos) - *.mp4`. Roteiros da 20 em diante: nenhum passo com mais de 1/3 da dança.
