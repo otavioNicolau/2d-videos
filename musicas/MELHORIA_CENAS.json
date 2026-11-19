@@ -243,5 +243,25 @@
   },
   "acertos": "9/9",
   "piorou": []
+ },
+ {
+  "musica": "21",
+  "titulo": "Dorme, Acorda!",
+  "medidas": {
+   "planos": 49,
+   "cenarios_reais": 5,
+   "pct_fundo_danca": 8,
+   "tipos_acao": 28,
+   "pct_camera": 90,
+   "tipos_objeto": 10,
+   "objetos_animados_pl": 1.2,
+   "coadjuvantes": 3,
+   "pct_arranjo_repetido": 6,
+   "sons_pl": 0.0
+  },
+  "acertos": "9/9",
+  "piorou": [
+   "% de planos com a mesma arrumação do anterior: 6 (média das 3 anteriores: 5)"
+  ]
  }
 ]
