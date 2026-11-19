@@ -33,14 +33,14 @@ def bicho(bid, x, depth=0.7, pulos=0.0, d=4.0, cai=None, entra=None, y=930, extr
     return {"id": bid, "x": x, "y": y, "z": 2, "depth": depth, "keys": ks}
 
 
-def roda(t_cai=None, estilo="roda"):
+def roda(t_cai=None, estilo="roda", perto=False):
     """Laurinha e Luisinho de mãos dadas na roda; caem sentados no 'cai'."""
     def ator(x, turn):
         ac = [{"t": 0.0, "do": "dance", "style": estilo, "dur": round(max(0.4, (t_cai or 99) - 0.1), 2)}]
         if t_cai is not None:
             ac += [{"t": round(t_cai, 2), "do": "sit"}, {"t": round(t_cai + 0.6, 2), "do": "ofegante" if turn < 0 else "laugh", "dur": "resto"}]
         return {"x": x, "turn": turn, "acoes": ac}
-    return {LA: ator(850, 0.25), LU: ator(1750, -0.25)}
+    return {LA: ator(1120, 0.25), LU: ator(1480, -0.25)} if perto else {LA: ator(850, 0.25), LU: ator(1750, -0.25)}   # perto: metade da tela
 
 
 def bichos_roda(d, t_cai=None, xs=(450, 2150), ids=("sapo", "pato")):
@@ -57,7 +57,7 @@ R.partes["intro"] = [
      "atores": {LA: {"x": 1300, "turn": 0.0, "acoes": [{"t": 0.3, "do": "wave", "dur": "resto"}]}}},
     {"linhas": 1, "cenario": JARDIM, "camera": CAM, "flash": True, "callout": [call(0.3, "RODA, RODINHA!", "rosa")],
      "objetos": bichos_roda(b1 - b0), "atores": roda()},
-    R.dividida({"cenario": JARDIM, "camera": {"x": 1300, "y": 600, "zoom": 1.15, "zoom_fim": 1.22}, "atores": roda()},
+    R.dividida({"cenario": JARDIM, "camera": {"x": 1300, "y": 600, "zoom": 1.15, "zoom_fim": 1.22}, "atores": roda(perto=True)},
                {"cenario": CAMPO, "camera": {"x": 1300, "y": 600, "zoom": 1.0, "zoom_fim": 1.08},
                 "objetos": {"g": bicho("grilo", 1050, pulos=0.45, d=c1 - c0), "t": bicho("tatu", 1550, pulos=0.5, d=c1 - c0)}},
                linhas=1, layout="diagonal"),
@@ -125,7 +125,7 @@ def refrao(n):
             p["objetos"].update({"pl1": bicho("pato", 300, pulos=0.45, d=d, depth=0.55), "pl2": bicho("grilo", 2350, pulos=0.4, d=d, depth=0.55)})
             p.update({"linhas": 2, "callout": [call(0.3, "GIRA, GIRA!", "amarelo")]})
         elif i == 2:                                                   # tela dividida: a turma × os bichos girando
-            p = R.dividida({"cenario": JARDIM, "camera": {"x": 1300, "y": 600, "zoom": 1.15, "zoom_fim": 1.25}, "atores": roda(estilo="twist")},
+            p = R.dividida({"cenario": JARDIM, "camera": {"x": 1300, "y": 600, "zoom": 1.15, "zoom_fim": 1.25}, "atores": roda(estilo="twist", perto=True)},
                            {"cenario": [LAGOA, CAMPO, LAGOA, CAMPO][n - 1], "camera": {"x": 1300, "y": 640, "zoom": 1.1, "zoom_fim": 1.2},
                             "objetos": {"b1": bicho("sapo" if n % 2 else "grilo", 1050, pulos=0.35, d=d), "b2": bicho("pato" if n % 2 else "tatu", 1550, pulos=0.4, d=d)}},
                            linhas=2, layout="vertical" if n % 2 else "diagonal", callout=[call(0.3, "RODA, RODINHA!", CORES[n - 1])])
