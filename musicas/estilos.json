@@ -41,13 +41,13 @@
    "group vocals"
   ],
   "duracao": "sing every line of the lyrics, full song with all verses and choruses",
-  "producao": "built-in keyboard rhythm with programmed kick, snare and claps repeating the same loop through the whole song, deep bouncy keyboard bass, one bright keyboard or piano melody, a few playful cartoon sound effects (boing, toy bells), single dry centered lead vocal, close and clear, lots of space in the mix, polished kids music production",
+  "producao": "built-in keyboard rhythm with programmed kick, snare and claps repeating the same loop through the whole song, deep bouncy keyboard bass, bright arranger-keyboard piano melody up front, a playful saxophone riff answering the vocal between the lines (arranger keyboard sax sound), a few playful cartoon sound effects (boing, toy bells), single dry centered lead vocal, close and clear, lots of space in the mix, polished kids music production",
   "nota_producao": "18/11/2026: análise de 18 músicas da Animadinhos (musicas/REFERENCIA_ANIMADINHOS.md): arranjo enxuto de teclado/eletrônico, voz e batida empatadas (41 × 38 %), efeitos de desenho; as nossas saíam com banda + batucada e voz a 58 %.",
   "nota_voz": "18/11/2026: a voz da referência é UMA só e centralizada (largura 0,00–0,02); as nossas tinham coro/vozes de fundo espalhados (0,08–0,29) e muitos instrumentos — 'muita informação' (usuário). Uma voz por vez, respostas cantadas pela mesma voz.",
   "nota_batida": "18/11/2026: na referência cada batida soa idêntica (semelhança 0,95–0,98: ritmo pronto de teclado arranjador, um loop simples a música inteira); nas nossas 0,66–0,87 (bateria 'tocada', com viradas e percussão variando). Usuário: 'batidas como se fosse bateria, bumbo, algo feito no teclado, pra dar ritmo'.",
   "abertura": "Brazilian arranger keyboard kids song (teclado arranjador), one simple keyboard drum loop",
   "nota_ajustes_14": "18/11/2026 (take v2 da 14): baixo fraco (5,6 % × 11 % da referência) → 'deep bouncy keyboard bass'; voz larga (0,17 × 0,01) → 'dry centered vocal' e Exclude 'vocal reverb, echo'; tirado 'repeated chorus' do Exclude (o bloco repete de propósito); Exclude sem termos repetidos.",
-  "versao": "E9",
+  "versao": "E11",
   "historico": [
    {
     "versao": "E1",
@@ -122,11 +122,18 @@
     "motivo": "usuário: 'precisamos ajustar no Suno' — o texto do Style chegou no limite (segunda voz, batida que muda e teclado pouco reconhecido não mudaram da 14 à 19); as opções Advanced controlam o quanto o Suno obedece",
     "usado_em": "20 em diante",
     "resultado": "DESCARTADO no mesmo dia: músicas de ~1 min e voz com efeito de autotune (6+ gerações). Volta ao E9 com as opções Advanced no padrão."
+   },
+   {
+    "versao": "E11",
+    "data": "19/11/2026",
+    "mudanca": "E9 + 'bright arranger-keyboard piano melody up front' + 'a playful saxophone riff answering the vocal between the lines (arranger keyboard sax sound)' no lugar de 'one bright keyboard or piano melody'",
+    "motivo": "usuário ouviu sax, bateria e teclado no Animadinhos; medido: teclado em 15/18 (nossas bem abaixo) e sax em 3–6/18 (nossas zero)",
+    "usado_em": "21 em diante"
    }
   ],
   "versao_por_voz": {
-   "laurinha": "E9",
-   "luisinho": "E9"
+   "laurinha": "E11",
+   "luisinho": "E11"
   },
   "nota_sincope": "19/11/2026 (usuário: 'focar nas batidas do som contagiante'): raio-x da bateria (scripts/referencias/batida.py) — referência síncope 0,69 e bumbo reto 0,50; nossas 0,56 e 0,67. A nota de ouvido sobe com a síncope e o baixo fora do tempo (14: 0,39→nota 3 … 18: 0,72 e baixo 0,90→nota 4,6). A 19 v1 (rock com 'punk-rock drumming, driving kick') saiu reta: 0,41.",
   "nota_loop": "19/11/2026 (usuário ouvindo a 19 v2): 'Animadinhos são ritmos e batidas que não mudam muito durante a música; a nossa está ficando ainda estilo banda'. Medido: loop igual referência 0,96 × 19 v1 0,84 × 19 v2 0,75; outros instrumentos 9 % × 20 %. E8: um loop sincopado só, sem virada entre as partes, mesma batida no verso e no refrão, sem solo/quebra.",
@@ -143,7 +150,8 @@
   },
   "nota_suno_avancado": "19/11/2026: o usuário mostrou as opções Advanced do Suno v6. Style Influence alto = obedece mais ao Style (teclado, loop, uma voz); Weirdness baixo = menos invenção (menos segunda voz, menos partes novas, batida mais constante); Audio Influence alto = puxa mais o som da Voice (Luisinho v2/Laurinha v2, criadas de takes de teclado); Variety baixa = menos variação; Duration Custom 2:40 = acaba no tempo certo (a 18 saiu com 3:45). · RESULTADO (19/11): com Style 80 %, Weirdness 20 %, Audio 60 %, Variety Off e Vocal Gender o Suno gerou ~1 min e a voz saiu com cara de autotune, em mais de 6 gerações. Voltou tudo para o padrão do Suno (o que gerou a 15–18). Se for testar de novo: UMA opção por vez, começando pelo Weirdness (35 %).",
   "duracao_antes_E10": "short song under 2 minutes 40 seconds, ends after the last chorus",
-  "nota_duracao_E10": "19/11/2026: com Style Influence 80 % e Duration Custom 2:40 o Suno gerou menos de 50 s — obedeceu ao pé da letra 'short song under 2 minutes 40 seconds'. Tirado do Style (agora pede para cantar a letra toda) e Duration volta para Auto."
+  "nota_duracao_E10": "19/11/2026: com Style Influence 80 % e Duration Custom 2:40 o Suno gerou menos de 50 s — obedeceu ao pé da letra 'short song under 2 minutes 40 seconds'. Tirado do Style (agora pede para cantar a letra toda) e Duration volta para Auto.",
+  "nota_sax": "19/11/2026, usuário: 'o Animadinhos usa muito ritmos com saxofone, bateria e teclado'. Medido (18 referências): teclado/piano em 15/18 (nossas 3–4× menos), sintetizador 13/18, bateria em ~metade, saxofone/metais claros em 3/18 (+3 leves) e ZERO nas nossas. E11 = E9 + piano de teclado arranjador na frente + riff de saxofone (som de sax do teclado) respondendo a voz."
  },
  "peso": {
   "forte": {
