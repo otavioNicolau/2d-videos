@@ -166,6 +166,11 @@ def style(f: dict, ritmo: str | None = None, bpm: int | None = None, E: dict | N
     # 18/11 (take v2 da 14): o Suno pesa mais o começo do Style — "teclado arranjador" vem antes do ritmo, e o ritmo entra como
     # "groove" (o nome sozinho, ex. "axé music, Bahia carnival", puxava percussão ao vivo e batida variada)
     genero = r["genero"].split(",")[0].strip()
+    trio = E["canal"].get("trio", {})
+    if trio.get("ativo"):                 # E12 (19/11): só sax, bateria e teclado — o ritmo entra só como groove
+        parts = [E["canal"].get("duracao", ""), trio["abertura"], f"{genero} groove", f"{bpm} bpm", trio["peso_style"],
+                 trio["producao"], r["clima"], f.get("style_extra", ""), voz, V["coro"].get("style", ""), E["canal"]["sempre"]]
+        return ", ".join(x for x in parts if x)
     parts = [E["canal"].get("duracao", ""), E["canal"].get("abertura", ""), f"{genero} groove", f"{bpm} bpm", r["bateria"], p["style"],
              E["canal"].get("producao", ""), r["instrumentos"], r["clima"], f.get("style_extra", ""),
              voz, V["coro"].get("style", ""), E["canal"]["sempre"]]
@@ -189,6 +194,9 @@ def exclude(f: dict, ritmo: str | None = None, E: dict | None = None) -> str:
     E = E or estilos()
     r = E["ritmos"][ritmo or f["ritmo"]]
     items = E["canal"]["exclude_sempre"] + E["peso"][r["peso"]]["exclude"] + r.get("exclude", []) + f.get("exclude_extra", [])
+    trio = E["canal"].get("trio", {})
+    if trio.get("ativo"):
+        items = [x for x in items if x not in trio.get("tirar_do_exclude", [])] + trio.get("exclude_extra", [])
     return ", ".join(dict.fromkeys(items))
 
 

@@ -40,15 +40,30 @@ def test_suno_txt_is_generated_not_hand_edited():
 
 
 def test_style_is_built_per_rhythm_without_contradictions():
-    E = c.estilos()
+    import copy
+    E = copy.deepcopy(c.estilos())
+    E["canal"].setdefault("trio", {})["ativo"] = False                # modo normal: cada ritmo com a sua batida
     f = {"ritmo": "samba_enredo", "bpm": 145, "voz": "dueto"}
-    s = c.style(f)
+    s = c.style(f, E=E)
     assert "surdos" in s and "kick drum on every beat" not in s       # a batida do samba é do surdo
-    for rid in E["ritmos"]:
-        ff = {"ritmo": rid, "bpm": E["ritmos"][rid]["bpm"][2], "voz": "laurinha"}
-        assert not c.contradicoes(c.style(ff), c.exclude(ff)), rid
-    calmo = c.style({"ritmo": "xote", "bpm": 100, "voz": "dueto"})
+    for E_ in (E, c.estilos()):                                       # normal e trio (E12): nunca Style × Exclude opostos
+        for rid in E_["ritmos"]:
+            ff = {"ritmo": rid, "bpm": E_["ritmos"][rid]["bpm"][2], "voz": "laurinha"}
+            assert not c.contradicoes(c.style(ff, E=E_), c.exclude(ff, E=E_)), rid
+    calmo = c.style({"ritmo": "xote", "bpm": 100, "voz": "dueto"}, E=E)
     assert "heavy" not in calmo                                       # xote/ciranda/reggae: groove marcado, sem peso
+
+
+def test_trio_so_sax_bateria_teclado():
+    """E12 (usuário, 19/11: 'APENAS ELES'): o Style pede só sax, bateria e teclado e o Exclude barra o resto."""
+    E = c.estilos()
+    if not E["canal"].get("trio", {}).get("ativo"):
+        return
+    f = {"ritmo": "samba_enredo", "bpm": 145, "voz": "luisinho"}
+    s, x = c.style(f), c.exclude(f)
+    assert "saxophone" in s and "drums" in s and "keyboard" in s
+    assert "whistle" not in s and "surdos" not in s and "guitar" not in s
+    assert "guitar" in x and "whistle" in x and "live drums" not in x
 
 
 def test_shortcuts_follow_the_beat_weight():
