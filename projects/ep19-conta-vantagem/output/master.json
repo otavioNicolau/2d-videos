@@ -1,0 +1,73 @@
+{
+ "rebalanceamento": {
+  "peso_antes": {
+   "vocals": 36.7,
+   "drums": 33.4,
+   "bass": 10.1,
+   "other": 19.8
+  },
+  "peso_depois": {
+   "vocals": 40.9,
+   "drums": 37.1,
+   "bass": 11.0,
+   "other": 11.0
+  },
+  "ganhos_db": {
+   "vocals": 0.4,
+   "drums": 0.4,
+   "bass": 0.3,
+   "other": -2.6
+  }
+ },
+ "efeitos_sonoros": 56,
+ "perfil_antes": [
+  7.5,
+  32.3,
+  31.4,
+  14.3,
+  9.0,
+  3.4,
+  1.9
+ ],
+ "perfil_depois": [
+  12.9,
+  34.5,
+  33.6,
+  12.7,
+  5.3,
+  0.7,
+  0.3
+ ],
+ "ganhos_db": [
+  [
+   2.3,
+   -0.1,
+   0.5,
+   -0.8,
+   -1.4,
+   -5.2,
+   -6.1
+  ],
+  [
+   0.8,
+   -0.5,
+   0.3,
+   -0.3,
+   0.7,
+   0.1,
+   -0.6
+  ]
+ ],
+ "loudnorm": {
+  "input_i": "-15.39",
+  "input_tp": "-1.92",
+  "input_lra": "2.90",
+  "input_thresh": "-25.43",
+  "output_i": "-13.92",
+  "output_tp": "-1.00",
+  "output_lra": "2.70",
+  "output_thresh": "-23.94",
+  "normalization_type": "dynamic",
+  "target_offset": "-0.08"
+ }
+}

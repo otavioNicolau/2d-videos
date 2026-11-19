@@ -1,33 +1,31 @@
 {
  "musica": "19",
  "titulo": "Conta Vantagem!",
- "estilo": "E6",
+ "estilo": "E7",
  "medidas": {
-  "voz_%": 48.6,
-  "bateria_%": 25.7,
-  "baixo_%": 12.3,
-  "outros_%": 13.4,
-  "largura_voz": 0.097,
-  "batidas_identicas": 0.829,
-  "duracao_s": 154.8,
-  "teclado_eletronico": 0.015,
-  "bateria_banda": 0.119,
-  "percussao": 0.042,
-  "metais": 0.004,
-  "sincope": 0.41,
-  "baixo_sincopado": 0.39
+  "voz_%": 43.2,
+  "bateria_%": 28.8,
+  "baixo_%": 8.0,
+  "outros_%": 19.9,
+  "largura_voz": 0.104,
+  "batidas_identicas": 0.758,
+  "duracao_s": 166.2,
+  "teclado_eletronico": 0.013,
+  "bateria_banda": 0.108,
+  "percussao": 0.04,
+  "metais": 0.002,
+  "sincope": 0.81,
+  "baixo_sincopado": 0.9
  },
- "acertos": "2/10",
+ "acertos": "6/12",
  "nota": null,
  "obs": "",
  "falhas": [
-  "voz no som (%) (alto)",
   "batida no som (%) (baixo)",
   "outros instrumentos (%) (alto)",
   "largura da voz (0 = uma voz no centro) (alto)",
   "batida de teclado (loop igual) (baixo)",
   "teclado/synth reconhecido (baixo)",
-  "bateria de banda reconhecida (alto)",
-  "percussão (chocalho/batucada) (alto)"
+  "bateria de banda reconhecida (alto)"
  ]
 }
