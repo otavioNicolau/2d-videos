@@ -2611,3 +2611,198 @@ class TecladoInst(_Prop):
 
 
 PROPS.update({"bateria": Bateria, "teclado_inst": TecladoInst})
+
+
+# ───────────────────────── 22 Roda, Rodinha! — bichos da roda ─────────────────────────
+
+class _Bicho(_Prop):
+    """Base dos bichinhos da roda: `pulo` 0→1 pulinho, `cai` 0→1 cai sentado (tonto, olhinho de espiral), `lado`."""
+
+    def _pose(self, P):
+        sx = 1.0 if P.get("lado", 1.0) >= 0 else -1.0
+        cai = max(0.0, min(1.0, P.get("cai", 0.0)))
+        y0 = -120 * math.sin(math.pi * max(0.0, min(1.0, P.get("pulo", 0.0)))) + 30 * cai
+        return sx, cai, y0
+
+    def _olho(self, k, x, y, r, tonto, sx, cor="#2A1A0A"):
+        if tonto > 0.5:
+            pts = [(x + math.cos(a) * r * a / 9, y + math.sin(a) * r * a / 9) for a in [i * 0.5 for i in range(19)]]
+            ln(k, pts, cor, w=LINE * 0.8)
+        else:
+            shape(k, ellipse_pts(x, y, r, r * 1.15, 0, 14), "#FFFFFF", line=cor)
+            k.dot(x + r * 0.25 * sx, y + r * 0.2, r * 0.5, _rgba(cor))
+
+
+class Grilo(_Bicho):
+    """Grilo verdinho de pé, antenas compridas e pernas de trás grandes."""
+
+    def __init__(self):
+        super().__init__("grilo", "Grilo", (700, 760), (350, 720), 300, {"pulo": 0.0, "cai": 0.0, "lado": 1.0})
+
+    def paint(self, k, P):
+        sx, cai, y0 = self._pose(P)
+        V, VL = "#7ED957", "#3F9A2A"
+        for s_ in (-1, 1):
+            ln(k, [(s_ * 50, y0 - 120), (s_ * 120, y0 - 60), (s_ * 70, y0)], VL, w=LINE * 3.2)
+            ln(k, [(s_ * 50, y0 - 120), (s_ * 120, y0 - 60), (s_ * 70, y0)], V, w=LINE * 2)
+        shape(k, ellipse_pts(0, y0 - 140, 70, 95, 0, 26), V, line=VL)
+        shape(k, ellipse_pts(0, y0 - 130, 40, 60, 0, 20), "#C9F2A8", line=VL)
+        hy = y0 - 270
+        for s_ in (-1, 1):
+            ln(k, [(s_ * 25, hy - 50), (s_ * 70, hy - 160), (s_ * 120, hy - 200)], VL, w=LINE * 1.2)
+        shape(k, ellipse_pts(0, hy, 75, 68, 0, 26), V, line=VL)
+        for s_ in (-1, 1):
+            self._olho(k, s_ * 30, hy - 10, 20, cai, sx)
+        ln(k, [(-20, hy + 30), (0, hy + 40), (20, hy + 30)], VL, w=LINE)
+
+
+class Tatu(_Bicho):
+    """Tatu-bola de desenho: casco cinza-azulado com listras, focinho comprido, orelhinhas."""
+
+    def __init__(self):
+        super().__init__("tatu", "Tatu", (800, 600), (400, 560), 230, {"pulo": 0.0, "cai": 0.0, "lado": 1.0})
+
+    def paint(self, k, P):
+        sx, cai, y0 = self._pose(P)
+        C, CL, P_ = "#A9B8C9", "#6E7F94", "#E8C7A8"
+        for s_ in (-1, 1):
+            shape(k, ellipse_pts(s_ * 70, y0 - 14, 26, 16, 0, 12), P_, line="#B88E68")
+        shape(k, ellipse_pts(0, y0 - 110, 150, 105, 0, 30), C, line=CL)
+        for x in (-80, -30, 20, 70):
+            ln(k, [(x, y0 - 200), (x + 6 * sx, y0 - 20)], CL, w=LINE)
+        hx = 150 * sx
+        shape(k, ellipse_pts(hx, y0 - 90, 60, 50, 0, 22), P_, line="#B88E68")
+        shape(k, ellipse_pts(hx + 55 * sx, y0 - 80, 40, 22, 0, 16), P_, line="#B88E68")
+        shape(k, ellipse_pts(hx + 92 * sx, y0 - 82, 10, 9, 0, 10), "#5A3A2A")
+        for s_ in (-1, 1):
+            shape(k, [(hx + s_ * 22, y0 - 130), (hx + s_ * 34, y0 - 180), (hx + s_ * 4, y0 - 140)], P_, line="#B88E68", smooth=False)
+        self._olho(k, hx + 10 * sx, y0 - 100, 13, cai, sx)
+
+
+class Elefante(_Bicho):
+    """Elefante grandão e fofinho (o último a entrar na roda): cinza-lilás, orelhonas, tromba que levanta (`tromba`)."""
+
+    def __init__(self):
+        super().__init__("elefante", "Elefante", (1200, 1000), (600, 960), 720,
+                         {"pulo": 0.0, "cai": 0.0, "lado": 1.0, "tromba": 0.0})
+
+    def paint(self, k, P):
+        sx, cai, y0 = self._pose(P)
+        E, EL, R = "#B9B3D9", "#7C74A8", "#FFB3CC"
+        for s_ in (-1, 1):
+            box(k, s_ * 120 - 60, y0 - 220, s_ * 120 + 60, y0, E, line=EL, r=30)
+            for j in (-1, 0, 1):
+                shape(k, ellipse_pts(s_ * 120 + j * 30, y0 - 10, 13, 9, 0, 10), "#FFFFFF", line=EL)
+        shape(k, ellipse_pts(0, y0 - 300, 250, 190, 0, 36), E, line=EL)
+        hy = y0 - 560
+        for s_ in (-1, 1):
+            shape(k, ellipse_pts(s_ * 200, hy + 20, 140, 170, s_ * 0.25, 30), E, line=EL)
+            shape(k, ellipse_pts(s_ * 205, hy + 25, 95, 120, s_ * 0.25, 26), R)
+        shape(k, ellipse_pts(0, hy, 180, 165, 0, 36), E, line=EL)
+        t = max(0.0, min(1.0, P.get("tromba", 0.0)))
+        pts = [(0, hy + 60), (10 * sx, hy + 160 - 120 * t), (40 * sx, hy + 230 - 250 * t), (90 * sx * (1 + t), hy + 250 - 360 * t)]
+        ln(k, pts, EL, w=LINE * 11)
+        ln(k, pts, E, w=LINE * 9)
+        for s_ in (-1, 1):
+            self._olho(k, s_ * 60, hy - 30, 30, cai, sx, cor="#2E2840")
+            k.shape(ellipse_pts(s_ * 110, hy + 40, 26, 15, 0, 12), fill=_rgba("#FF9AB0", 0.75), line=0)
+        ln(k, [(-50, hy + 90), (0, hy + 110), (50, hy + 90)], EL, w=LINE * 1.3)
+
+
+# ───────────────────────── 23 Pula, Coelhinho! ─────────────────────────
+
+OVO_CORES = (("#FF7FBF", "#FFD23F"), ("#3C8BF0", "#FFFFFF"), ("#FFD23F", "#2DB34A"), ("#B865E6", "#FF8A1F"), ("#2DB34A", "#FF7FBF"))
+
+
+def _ovo(k, x, y, s, cor):
+    a, b = OVO_CORES[int(cor) % len(OVO_CORES)]
+    pts = ellipse_pts(x, y, 34 * s, 44 * s, 0, 24)
+    P_ = shape(k, pts, a, line=dark(a))
+    for j in (-1, 1):                                                   # listra em zigue-zague
+        zz = [(x - 30 * s + i * 10 * s, y + j * 10 * s + (6 if i % 2 else -6) * s) for i in range(7)]
+        ln(k, zz, b, w=LINE * 1.1)
+
+
+class Ovinho(_Prop):
+    """Ovinho de Páscoa colorido (`cor` 0–4), que pode pular (`pulo`) e brilhar quando é achado (`achou`)."""
+
+    def __init__(self):
+        super().__init__("ovinho", "Ovinho de Páscoa", (400, 400), (200, 380), 120, {"cor": 0.0, "pulo": 0.0, "achou": 0.0})
+
+    def paint(self, k, P):
+        y0 = -90 * math.sin(math.pi * max(0.0, min(1.0, P["pulo"])))
+        if P["achou"] > 0.05:
+            for j in range(8):
+                a = j * math.pi / 4
+                ln(k, [(math.cos(a) * 60, y0 - 50 + math.sin(a) * 60), (math.cos(a) * (80 + 30 * P["achou"]), y0 - 50 + math.sin(a) * (80 + 30 * P["achou"]))],
+                   "#FFD23F", w=LINE * 1.2)
+        _ovo(k, 0, y0 - 50, 1.0, P["cor"])
+
+
+class Cesta(_Prop):
+    """Cesta de vime com laço, cheia de ovinhos (`cheia` 0→1 vai enchendo)."""
+
+    def __init__(self):
+        super().__init__("cesta", "Cesta de ovinhos", (600, 520), (300, 480), 220, {"cheia": 1.0})
+
+    def paint(self, k, P):
+        n = int(round(5 * max(0.0, min(1.0, P["cheia"]))))
+        ln(k, [(-130, -110), (-120, -240), (0, -290), (120, -240), (130, -110)], "#B97A2E", w=LINE * 3)
+        for i in range(n):
+            _ovo(k, -90 + i * 45, -130 - 18 * (i % 2), 0.9, i)
+        shape(k, [(-160, -120), (160, -120), (120, 0), (-120, 0)], "#E8B880", line="#A8743E", smooth=False)
+        for y in (-90, -55, -20):
+            ln(k, [(-150 + (y + 120) * 0.3, y), (150 - (y + 120) * 0.3, y)], "#A8743E", w=LINE * 0.8)
+        for s_ in (-1, 1):
+            shape(k, ellipse_pts(s_ * 40, -125, 40, 22, s_ * 0.4, 16), "#FF7FBF", line="#D9559B")
+
+
+class Coelhinho(_Prop):
+    """Coelhinho da Páscoa de pé: branquinho, orelhas compridas (rosinhas dentro), narizinho que mexe (`nariz`), pula
+    (`pulo`), balança as orelhas (`orelha` fase), segura um ovinho (`ovo` 1 = mostra o ovinho na mão)."""
+
+    def __init__(self):
+        super().__init__("coelhinho", "Coelhinho", (800, 1000), (400, 960), 520,
+                         {"pulo": 0.0, "nariz": 0.0, "orelha": 0.0, "ovo": 0.0, "lado": 1.0, "piscar": 0.0})
+
+    def paint(self, k, P):
+        sx = 1.0 if P["lado"] >= 0 else -1.0
+        y0 = -160 * math.sin(math.pi * max(0.0, min(1.0, P["pulo"])))
+        B, BL, R = "#FFFFFF", "#C9B8D9", "#FFB3CC"
+        for s_ in (-1, 1):                                                  # patas
+            shape(k, ellipse_pts(s_ * 55, y0 - 18, 50, 24, 0, 16), B, line=BL)
+        shape(k, ellipse_pts(0, y0 - 170, 120, 140, 0, 30), B, line=BL)    # corpo
+        shape(k, ellipse_pts(0, y0 - 150, 70, 90, 0, 24), "#FFF0F6", line=BL)
+        shape(k, ellipse_pts(-110 * sx, y0 - 110, 34, 34, 0, 16), B, line=BL)   # rabinho pompom
+        hy = y0 - 380
+        o = math.sin(2 * math.pi * P["orelha"])
+        for s_ in (-1, 1):                                                  # orelhas compridas
+            a = s_ * 0.18 + 0.2 * o * s_
+            c, s = math.cos(a), math.sin(a)
+            pts = [(s_ * 40 + (x * c - y * s), hy - 80 + (x * s + y * c)) for x, y in ellipse_pts(0, -120, 36, 130, 0, 24)]
+            shape(k, pts, B, line=BL)
+            pts2 = [(s_ * 40 + (x * c - y * s), hy - 80 + (x * s + y * c)) for x, y in ellipse_pts(0, -120, 18, 100, 0, 20)]
+            shape(k, pts2, R)
+        shape(k, ellipse_pts(0, hy, 125, 110, 0, 32), B, line=BL)           # cabeça
+        for s_ in (-1, 1):
+            if P["piscar"] > 0.5 and s_ > 0:
+                ln(k, [(s_ * 45 - 16, hy - 15), (s_ * 45, hy - 24), (s_ * 45 + 16, hy - 15)], "#2A1A2A", w=LINE)
+            else:
+                shape(k, ellipse_pts(s_ * 45, hy - 15, 20, 26, 0, 16), "#FFFFFF", line=BL)
+                k.dot(s_ * 45 + 5 * sx, hy - 10, 11, _rgba("#2A1A2A"))
+                k.dot(s_ * 45 + 9 * sx, hy - 18, 4, _rgba("#FFFFFF"))
+            k.shape(ellipse_pts(s_ * 80, hy + 25, 22, 13, 0, 12), fill=_rgba("#FF9AB0", 0.8), line=0)
+        n = math.sin(2 * math.pi * P["nariz"]) * 4
+        shape(k, [(-14, hy + 18 + n), (14, hy + 18 + n), (0, hy + 32 + n)], "#FF7FA0", line="#D9506E", smooth=False)
+        ln(k, [(0, hy + 32), (-16, hy + 48), (-30, hy + 44)], BL, w=LINE)
+        ln(k, [(0, hy + 32), (16, hy + 48), (30, hy + 44)], BL, w=LINE)
+        shape(k, [(-10, hy + 46), (10, hy + 46), (8, hy + 64), (-8, hy + 64)], "#FFFFFF", line=BL, smooth=False)   # dentinhos
+        for s_ in (-1, 1):                                                  # bigodes
+            for dy in (-6, 6):
+                ln(k, [(s_ * 30, hy + 30 + dy), (s_ * 100, hy + 22 + dy * 1.6)], BL, w=LINE * 0.6)
+        if P["ovo"] > 0.5:                                                  # mostra um ovinho na mão
+            shape(k, ellipse_pts(110 * sx, y0 - 230, 30, 30, 0, 14), B, line=BL)
+            _ovo(k, 120 * sx, y0 - 290, 1.1, 3)
+
+
+PROPS.update({"grilo": Grilo, "tatu": Tatu, "elefante": Elefante, "ovinho": Ovinho, "cesta": Cesta, "coelhinho": Coelhinho})

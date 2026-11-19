@@ -1,0 +1,7796 @@
+{
+ "schema": "roteiro-1.0",
+ "escala_personagens": 1.45,
+ "nota": "Roteiro de 'Roda, Rodinha!' (take v1 de 19/11/2026, 2:52, Laurinha, estilo E12, nota 4,8): a roda que cresce com sapo, pato, grilo, tatu e o elefante que derruba todo mundo; refrão girando com 'quem tá tonto cai'; telas divididas (turma × bichos) e a banda da turma no salão. Gerado por scripts/roteiros/ep22_roda_rodinha.py.",
+ "partes": {
+  "intro": [
+   {
+    "seg": 2.3,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 600,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "titulo": "o jardim",
+    "objetos": {
+     "s": {
+      "id": "sapo",
+      "x": 600,
+      "y": 930,
+      "z": 2,
+      "depth": 0.7,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.45,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       }
+      ]
+     },
+     "p": {
+      "id": "pato",
+      "x": 2000,
+      "y": 930,
+      "z": 2,
+      "depth": 0.7,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.5,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.47
+       },
+       {
+        "t": 1.0,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.47
+       },
+       {
+        "t": 1.5,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.47
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 1300,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.3,
+        "do": "wave",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 600,
+     "zoom": 1.1,
+     "zoom_fim": 1.18
+    },
+    "flash": true,
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "RODA, RODINHA!",
+      "color": "rosa"
+     }
+    ],
+    "objetos": {
+     "b0": {
+      "id": "sapo",
+      "x": 450,
+      "y": 930,
+      "z": 2,
+      "depth": 0.7,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.45,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 2.25,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 2.7,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 3.15,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 3.6,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 4.05,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       }
+      ]
+     },
+     "b1": {
+      "id": "pato",
+      "x": 2150,
+      "y": 930,
+      "z": 2,
+      "depth": 0.7,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.45,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 2.25,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 2.7,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 3.15,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 3.6,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 4.05,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 1050,
+      "turn": 0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "roda",
+        "dur": 98.9
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1550,
+      "turn": -0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "roda",
+        "dur": 98.9
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "tela_dividida": {
+     "layout": "diagonal",
+     "paineis": [
+      {
+       "cenario": "plano_jardim",
+       "camera": {
+        "x": 1300,
+        "y": 600,
+        "zoom": 1.15,
+        "zoom_fim": 1.22
+       },
+       "atores": {
+        "laurinha": {
+         "x": 1050,
+         "turn": 0.25,
+         "acoes": [
+          {
+           "t": 0.0,
+           "do": "dance",
+           "style": "roda",
+           "dur": 98.9
+          }
+         ]
+        },
+        "luisinho": {
+         "x": 1550,
+         "turn": -0.25,
+         "acoes": [
+          {
+           "t": 0.0,
+           "do": "dance",
+           "style": "roda",
+           "dur": 98.9
+          }
+         ]
+        }
+       }
+      },
+      {
+       "cenario": "plano_campo",
+       "camera": {
+        "x": 1300,
+        "y": 600,
+        "zoom": 1.0,
+        "zoom_fim": 1.08
+       },
+       "objetos": {
+        "g": {
+         "id": "grilo",
+         "x": 1050,
+         "y": 930,
+         "z": 2,
+         "depth": 0.7,
+         "keys": [
+          {
+           "t": 0.0,
+           "pose": {
+            "pulo": 0.0,
+            "cai": 0.0
+           },
+           "ease": "step"
+          },
+          {
+           "t": 0.45,
+           "pose": {
+            "pulo": 1.0
+           },
+           "ease": "linear",
+           "in": 0.42
+          },
+          {
+           "t": 0.9,
+           "pose": {
+            "pulo": 0.0
+           },
+           "ease": "linear",
+           "in": 0.42
+          },
+          {
+           "t": 1.35,
+           "pose": {
+            "pulo": 1.0
+           },
+           "ease": "linear",
+           "in": 0.42
+          },
+          {
+           "t": 1.8,
+           "pose": {
+            "pulo": 0.0
+           },
+           "ease": "linear",
+           "in": 0.42
+          },
+          {
+           "t": 2.25,
+           "pose": {
+            "pulo": 1.0
+           },
+           "ease": "linear",
+           "in": 0.42
+          },
+          {
+           "t": 2.7,
+           "pose": {
+            "pulo": 0.0
+           },
+           "ease": "linear",
+           "in": 0.42
+          },
+          {
+           "t": 3.15,
+           "pose": {
+            "pulo": 1.0
+           },
+           "ease": "linear",
+           "in": 0.42
+          }
+         ]
+        },
+        "t": {
+         "id": "tatu",
+         "x": 1550,
+         "y": 930,
+         "z": 2,
+         "depth": 0.7,
+         "keys": [
+          {
+           "t": 0.0,
+           "pose": {
+            "pulo": 0.0,
+            "cai": 0.0
+           },
+           "ease": "step"
+          },
+          {
+           "t": 0.5,
+           "pose": {
+            "pulo": 1.0
+           },
+           "ease": "linear",
+           "in": 0.47
+          },
+          {
+           "t": 1.0,
+           "pose": {
+            "pulo": 0.0
+           },
+           "ease": "linear",
+           "in": 0.47
+          },
+          {
+           "t": 1.5,
+           "pose": {
+            "pulo": 1.0
+           },
+           "ease": "linear",
+           "in": 0.47
+          },
+          {
+           "t": 2.0,
+           "pose": {
+            "pulo": 0.0
+           },
+           "ease": "linear",
+           "in": 0.47
+          },
+          {
+           "t": 2.5,
+           "pose": {
+            "pulo": 1.0
+           },
+           "ease": "linear",
+           "in": 0.47
+          },
+          {
+           "t": 3.0,
+           "pose": {
+            "pulo": 0.0
+           },
+           "ease": "linear",
+           "in": 0.47
+          }
+         ]
+        }
+       }
+      }
+     ]
+    },
+    "linhas": 1,
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "cenario": "plano_salao",
+    "camera": {
+     "x": 1300,
+     "y": 600,
+     "zoom": 1.1,
+     "zoom_fim": 1.18
+    },
+    "fx": [
+     "confete"
+    ],
+    "objetos": {
+     "bat": {
+      "id": "bateria",
+      "x": 1700,
+      "y": 940,
+      "z": 4,
+      "depth": 0.6,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "bumbo": 1.0,
+         "caixa": 0.0,
+         "prato": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 0.45,
+        "pose": {
+         "bumbo": 0.0,
+         "caixa": 1.0,
+         "prato": 0.0
+        },
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "bumbo": 1.0,
+         "caixa": 0.0,
+         "prato": 0.0
+        },
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "bumbo": 0.0,
+         "caixa": 1.0,
+         "prato": 0.0
+        },
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "bumbo": 1.0,
+         "caixa": 0.0,
+         "prato": 1.0
+        },
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 2.25,
+        "pose": {
+         "bumbo": 0.0,
+         "caixa": 1.0,
+         "prato": 0.0
+        },
+        "ease": "out",
+        "in": 0.42
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 1700,
+      "y": 930,
+      "turn": -0.2,
+      "z": 3,
+      "segura": "baqueta",
+      "segura_f": "baqueta",
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_bateria",
+        "dur": "resto"
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 800,
+      "turn": 0.3,
+      "segura": "saxofone",
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_sax",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "linhas": 1,
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "LAURINHA E LUISINHO!",
+      "color": "rosa"
+     }
+    ],
+    "cantam": [
+     "laurinha"
+    ]
+   }
+  ],
+  "verso#1": [
+   {
+    "linhas": 1,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 600,
+     "zoom": 1.1,
+     "zoom_fim": 1.18
+    },
+    "callout": [
+     {
+      "t": 0.5,
+      "text": "VAMOS FAZER UMA RODA!",
+      "color": "rosa"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 1000,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "point",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1650,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.3,
+        "do": "pensar",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 620,
+     "zoom": 1.3,
+     "zoom_fim": 1.38
+    },
+    "callout": [
+     {
+      "t": 0.4,
+      "text": "DÁ A MÃO!",
+      "color": "verde"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 1100,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "dance",
+        "style": "roda",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 2300,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "walk",
+        "to_x": 1550
+       },
+       {
+        "t": 1.3,
+        "do": "dance",
+        "style": "roda",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_jardim",
+    "camera": "close:laurinha",
+    "callout": [
+     {
+      "t": 0.4,
+      "text": "QUEM QUISER…",
+      "color": "amarelo"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 1300,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "apontar_camera",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 600,
+     "zoom": 1.1,
+     "zoom_fim": 1.2
+    },
+    "callout": [
+     {
+      "t": 0.4,
+      "text": "VEM RODAR!",
+      "color": "verde"
+     }
+    ],
+    "atores": {
+     "luisinho": {
+      "x": 1300,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "bacana",
+        "dur": 1.0
+       },
+       {
+        "t": 1.2,
+        "do": "dance",
+        "style": "sapinho",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_lagoa",
+    "camera": {
+     "x": 1300,
+     "y": 640,
+     "zoom": 1.2,
+     "zoom_fim": 1.3
+    },
+    "callout": [
+     {
+      "t": 0.4,
+      "text": "O SAPO E O PATO!",
+      "color": "verde"
+     }
+    ],
+    "objetos": {
+     "s": {
+      "id": "sapo",
+      "x": 1000,
+      "y": 930,
+      "z": 2,
+      "depth": 0.7,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "x": -300
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.4,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       },
+       {
+        "t": 0.8,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       },
+       {
+        "t": 1.0,
+        "pose": {
+         "x": 1000
+        },
+        "ease": "out",
+        "in": 0.9
+       },
+       {
+        "t": 1.2,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       },
+       {
+        "t": 1.6,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       },
+       {
+        "t": 2.0,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       },
+       {
+        "t": 2.4,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       }
+      ]
+     },
+     "p": {
+      "id": "pato",
+      "x": 1600,
+      "y": 930,
+      "z": 2,
+      "depth": 0.7,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 2900
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.45,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.3,
+        "pose": {
+         "x": 1600
+        },
+        "ease": "out",
+        "in": 1.0
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 2.25,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 2250,
+      "turn": -0.35,
+      "acoes": [
+       {
+        "t": 0.6,
+        "do": "look_around",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_campo",
+    "camera": {
+     "x": 1300,
+     "y": 660,
+     "zoom": 1.3,
+     "zoom_fim": 1.4
+    },
+    "callout": [
+     {
+      "t": 0.4,
+      "text": "O GRILO E O TATU!",
+      "color": "amarelo"
+     }
+    ],
+    "objetos": {
+     "g": {
+      "id": "grilo",
+      "x": 1050,
+      "y": 930,
+      "z": 2,
+      "depth": 0.8,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "x": -300
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.35,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.32
+       },
+       {
+        "t": 0.7,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.32
+       },
+       {
+        "t": 1.0,
+        "pose": {
+         "x": 1050
+        },
+        "ease": "out",
+        "in": 0.9
+       },
+       {
+        "t": 1.05,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.32
+       },
+       {
+        "t": 1.4,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.32
+       },
+       {
+        "t": 1.75,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.32
+       },
+       {
+        "t": 2.1,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.32
+       },
+       {
+        "t": 2.45,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.32
+       }
+      ]
+     },
+     "t": {
+      "id": "tatu",
+      "x": 1600,
+      "y": 930,
+      "z": 2,
+      "depth": 0.8,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 2900
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.5,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.47
+       },
+       {
+        "t": 1.0,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.47
+       },
+       {
+        "t": 1.2,
+        "pose": {
+         "x": 1600
+        },
+        "ease": "out",
+        "in": 1.0
+       },
+       {
+        "t": 1.5,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.47
+       },
+       {
+        "t": 2.0,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.47
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "tremor": [
+     0.5,
+     1.2
+    ],
+    "callout": [
+     {
+      "t": 0.5,
+      "text": "O ELEFANTE!",
+      "color": "roxo"
+     }
+    ],
+    "objetos": {
+     "e": {
+      "id": "elefante",
+      "x": 1650,
+      "y": 930,
+      "z": 2,
+      "depth": 0.75,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 2900
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.2,
+        "pose": {
+         "tromba": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 1.3,
+        "pose": {
+         "x": 1650
+        },
+        "ease": "out",
+        "in": 1.3
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 650,
+      "turn": 0.35,
+      "expr": "surprised",
+      "acoes": [
+       {
+        "t": 0.4,
+        "do": "take",
+        "strength": "shock"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 300,
+      "turn": 0.4,
+      "acoes": [
+       {
+        "t": 0.5,
+        "do": "shock_reaction",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 640,
+     "zoom": 1.05,
+     "zoom_fim": 1.15
+    },
+    "tremor": [
+     0.07
+    ],
+    "flash": true,
+    "callout": [
+     {
+      "t": 0.27,
+      "text": "BUUU!",
+      "color": "vermelho"
+     }
+    ],
+    "objetos": {
+     "e": {
+      "id": "elefante",
+      "x": 1900,
+      "y": 930,
+      "z": 2,
+      "depth": 0.7,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.07,
+        "pose": {
+         "cai": 1.0,
+         "pulo": 0.0
+        },
+        "ease": "step"
+       }
+      ]
+     },
+     "s": {
+      "id": "sapo",
+      "x": 450,
+      "y": 930,
+      "z": 2,
+      "depth": 0.6,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.12,
+        "pose": {
+         "cai": 1.0,
+         "pulo": 0.0
+        },
+        "ease": "step"
+       }
+      ]
+     },
+     "g": {
+      "id": "grilo",
+      "x": 2400,
+      "y": 930,
+      "z": 2,
+      "depth": 0.6,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.17,
+        "pose": {
+         "cai": 1.0,
+         "pulo": 0.0
+        },
+        "ease": "step"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 900,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.05,
+        "do": "slip"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1350,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.07,
+        "do": "slip"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   }
+  ],
+  "verso#2": [
+   {
+    "linhas": 1,
+    "cenario": "plano_casa_frente",
+    "camera": {
+     "x": 1300,
+     "y": 600,
+     "zoom": 1.1,
+     "zoom_fim": 1.18
+    },
+    "callout": [
+     {
+      "t": 0.5,
+      "text": "VAMOS FAZER UMA RODA!",
+      "color": "rosa"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 1000,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "point",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1650,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.3,
+        "do": "pensar",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_casa_frente",
+    "camera": {
+     "x": 1300,
+     "y": 620,
+     "zoom": 1.3,
+     "zoom_fim": 1.38
+    },
+    "callout": [
+     {
+      "t": 0.4,
+      "text": "DÁ A MÃO!",
+      "color": "verde"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 1100,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "dance",
+        "style": "roda",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 2300,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "walk",
+        "to_x": 1550
+       },
+       {
+        "t": 1.3,
+        "do": "dance",
+        "style": "roda",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_casa_frente",
+    "camera": "close:laurinha",
+    "callout": [
+     {
+      "t": 0.4,
+      "text": "QUEM QUISER…",
+      "color": "amarelo"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 1300,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "apontar_camera",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_casa_frente",
+    "camera": {
+     "x": 1300,
+     "y": 600,
+     "zoom": 1.1,
+     "zoom_fim": 1.2
+    },
+    "callout": [
+     {
+      "t": 0.4,
+      "text": "VEM RODAR!",
+      "color": "verde"
+     }
+    ],
+    "atores": {
+     "luisinho": {
+      "x": 1300,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "bacana",
+        "dur": 1.0
+       },
+       {
+        "t": 1.2,
+        "do": "dance",
+        "style": "sapinho",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_lagoa",
+    "camera": {
+     "x": 1300,
+     "y": 640,
+     "zoom": 1.2,
+     "zoom_fim": 1.3
+    },
+    "callout": [
+     {
+      "t": 0.4,
+      "text": "O SAPO E O PATO!",
+      "color": "verde"
+     }
+    ],
+    "objetos": {
+     "s": {
+      "id": "sapo",
+      "x": 1000,
+      "y": 930,
+      "z": 2,
+      "depth": 0.7,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "x": -300
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.4,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       },
+       {
+        "t": 0.8,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       },
+       {
+        "t": 1.0,
+        "pose": {
+         "x": 1000
+        },
+        "ease": "out",
+        "in": 0.9
+       },
+       {
+        "t": 1.2,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       },
+       {
+        "t": 1.6,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       },
+       {
+        "t": 2.0,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       },
+       {
+        "t": 2.4,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       },
+       {
+        "t": 2.8,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       },
+       {
+        "t": 3.2,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       },
+       {
+        "t": 3.6,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       }
+      ]
+     },
+     "p": {
+      "id": "pato",
+      "x": 1600,
+      "y": 930,
+      "z": 2,
+      "depth": 0.7,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 2900
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.45,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.3,
+        "pose": {
+         "x": 1600
+        },
+        "ease": "out",
+        "in": 1.0
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 2.25,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 2.7,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 3.15,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 2250,
+      "turn": -0.35,
+      "acoes": [
+       {
+        "t": 0.6,
+        "do": "look_around",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_campo",
+    "camera": {
+     "x": 1300,
+     "y": 660,
+     "zoom": 1.3,
+     "zoom_fim": 1.4
+    },
+    "callout": [
+     {
+      "t": 0.4,
+      "text": "O GRILO E O TATU!",
+      "color": "amarelo"
+     }
+    ],
+    "objetos": {
+     "g": {
+      "id": "grilo",
+      "x": 1050,
+      "y": 930,
+      "z": 2,
+      "depth": 0.8,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "x": -300
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.35,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.32
+       },
+       {
+        "t": 0.7,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.32
+       },
+       {
+        "t": 1.0,
+        "pose": {
+         "x": 1050
+        },
+        "ease": "out",
+        "in": 0.9
+       },
+       {
+        "t": 1.05,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.32
+       },
+       {
+        "t": 1.4,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.32
+       },
+       {
+        "t": 1.75,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.32
+       },
+       {
+        "t": 2.1,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.32
+       },
+       {
+        "t": 2.45,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.32
+       }
+      ]
+     },
+     "t": {
+      "id": "tatu",
+      "x": 1600,
+      "y": 930,
+      "z": 2,
+      "depth": 0.8,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 2900
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.5,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.47
+       },
+       {
+        "t": 1.0,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.47
+       },
+       {
+        "t": 1.2,
+        "pose": {
+         "x": 1600
+        },
+        "ease": "out",
+        "in": 1.0
+       },
+       {
+        "t": 1.5,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.47
+       },
+       {
+        "t": 2.0,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.47
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "tremor": [
+     0.5,
+     1.2
+    ],
+    "callout": [
+     {
+      "t": 0.5,
+      "text": "O ELEFANTE!",
+      "color": "roxo"
+     }
+    ],
+    "objetos": {
+     "e": {
+      "id": "elefante",
+      "x": 1650,
+      "y": 930,
+      "z": 2,
+      "depth": 0.75,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 2900
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.2,
+        "pose": {
+         "tromba": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 1.3,
+        "pose": {
+         "x": 1650
+        },
+        "ease": "out",
+        "in": 1.3
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 650,
+      "turn": 0.35,
+      "expr": "surprised",
+      "acoes": [
+       {
+        "t": 0.4,
+        "do": "take",
+        "strength": "shock"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 300,
+      "turn": 0.4,
+      "acoes": [
+       {
+        "t": 0.5,
+        "do": "shock_reaction",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 640,
+     "zoom": 1.05,
+     "zoom_fim": 1.15
+    },
+    "tremor": [
+     0.05
+    ],
+    "flash": true,
+    "callout": [
+     {
+      "t": 0.25,
+      "text": "BUUU!",
+      "color": "vermelho"
+     }
+    ],
+    "objetos": {
+     "e": {
+      "id": "elefante",
+      "x": 1900,
+      "y": 930,
+      "z": 2,
+      "depth": 0.7,
+      "keys": [
+       {
+        "t": 0.05,
+        "pose": {
+         "cai": 1.0,
+         "pulo": 0.0
+        },
+        "ease": "step"
+       }
+      ]
+     },
+     "s": {
+      "id": "sapo",
+      "x": 450,
+      "y": 930,
+      "z": 2,
+      "depth": 0.6,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.1,
+        "pose": {
+         "cai": 1.0,
+         "pulo": 0.0
+        },
+        "ease": "step"
+       }
+      ]
+     },
+     "g": {
+      "id": "grilo",
+      "x": 2400,
+      "y": 930,
+      "z": 2,
+      "depth": 0.6,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.15,
+        "pose": {
+         "cai": 1.0,
+         "pulo": 0.0
+        },
+        "ease": "step"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 900,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.05,
+        "do": "slip"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1350,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.05,
+        "do": "slip"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   }
+  ],
+  "refrao#1": [
+   {
+    "linhas": 2,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 600,
+     "zoom": 1.05,
+     "zoom_fim": 1.15
+    },
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "RODA, RODINHA!",
+      "color": "rosa"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 1050,
+      "turn": 0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "roda",
+        "dur": 98.9
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1550,
+      "turn": -0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "roda",
+        "dur": 98.9
+       }
+      ]
+     }
+    },
+    "objetos": {
+     "b0": {
+      "id": "sapo",
+      "x": 450,
+      "y": 930,
+      "z": 2,
+      "depth": 0.7,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.45,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       }
+      ]
+     },
+     "b1": {
+      "id": "pato",
+      "x": 2150,
+      "y": 930,
+      "z": 2,
+      "depth": 0.7,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.45,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       }
+      ]
+     }
+    },
+    "flash": true,
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 2,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 600,
+     "zoom": 1.2,
+     "zoom_fim": 1.1
+    },
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "RODA, RODINHA!",
+      "color": "rosa"
+     },
+     {
+      "t": 2.77,
+      "text": "CAIU!",
+      "color": "vermelho"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 1050,
+      "turn": 0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "lado",
+        "dur": 2.57
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1550,
+      "turn": -0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "lado",
+        "dur": 2.57
+       }
+      ]
+     }
+    },
+    "objetos": {
+     "b0": {
+      "id": "grilo",
+      "x": 450,
+      "y": 930,
+      "z": 2,
+      "depth": 0.7,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.45,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 2.25,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 2.67,
+        "pose": {
+         "cai": 1.0,
+         "pulo": 0.0
+        },
+        "ease": "step"
+       }
+      ]
+     },
+     "b1": {
+      "id": "tatu",
+      "x": 2150,
+      "y": 930,
+      "z": 2,
+      "depth": 0.7,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.45,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 2.25,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 2.67,
+        "pose": {
+         "cai": 1.0,
+         "pulo": 0.0
+        },
+        "ease": "step"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "tela_dividida": {
+     "layout": "vertical",
+     "paineis": [
+      {
+       "cenario": "plano_jardim",
+       "camera": {
+        "x": 1300,
+        "y": 600,
+        "zoom": 1.15,
+        "zoom_fim": 1.25
+       },
+       "atores": {
+        "laurinha": {
+         "x": 1050,
+         "turn": 0.25,
+         "acoes": [
+          {
+           "t": 0.0,
+           "do": "dance",
+           "style": "twist",
+           "dur": 98.9
+          }
+         ]
+        },
+        "luisinho": {
+         "x": 1550,
+         "turn": -0.25,
+         "acoes": [
+          {
+           "t": 0.0,
+           "do": "dance",
+           "style": "twist",
+           "dur": 98.9
+          }
+         ]
+        }
+       }
+      },
+      {
+       "cenario": "plano_lagoa",
+       "camera": {
+        "x": 1300,
+        "y": 640,
+        "zoom": 1.1,
+        "zoom_fim": 1.2
+       },
+       "objetos": {
+        "b1": {
+         "id": "sapo",
+         "x": 1050,
+         "y": 930,
+         "z": 2,
+         "depth": 0.7,
+         "keys": [
+          {
+           "t": 0.0,
+           "pose": {
+            "pulo": 0.0,
+            "cai": 0.0
+           },
+           "ease": "step"
+          },
+          {
+           "t": 0.35,
+           "pose": {
+            "pulo": 1.0
+           },
+           "ease": "linear",
+           "in": 0.32
+          },
+          {
+           "t": 0.7,
+           "pose": {
+            "pulo": 0.0
+           },
+           "ease": "linear",
+           "in": 0.32
+          },
+          {
+           "t": 1.05,
+           "pose": {
+            "pulo": 1.0
+           },
+           "ease": "linear",
+           "in": 0.32
+          },
+          {
+           "t": 1.4,
+           "pose": {
+            "pulo": 0.0
+           },
+           "ease": "linear",
+           "in": 0.32
+          },
+          {
+           "t": 1.75,
+           "pose": {
+            "pulo": 1.0
+           },
+           "ease": "linear",
+           "in": 0.32
+          },
+          {
+           "t": 2.1,
+           "pose": {
+            "pulo": 0.0
+           },
+           "ease": "linear",
+           "in": 0.32
+          },
+          {
+           "t": 2.45,
+           "pose": {
+            "pulo": 1.0
+           },
+           "ease": "linear",
+           "in": 0.32
+          },
+          {
+           "t": 2.8,
+           "pose": {
+            "pulo": 0.0
+           },
+           "ease": "linear",
+           "in": 0.32
+          }
+         ]
+        },
+        "b2": {
+         "id": "pato",
+         "x": 1550,
+         "y": 930,
+         "z": 2,
+         "depth": 0.7,
+         "keys": [
+          {
+           "t": 0.0,
+           "pose": {
+            "pulo": 0.0,
+            "cai": 0.0
+           },
+           "ease": "step"
+          },
+          {
+           "t": 0.4,
+           "pose": {
+            "pulo": 1.0
+           },
+           "ease": "linear",
+           "in": 0.37
+          },
+          {
+           "t": 0.8,
+           "pose": {
+            "pulo": 0.0
+           },
+           "ease": "linear",
+           "in": 0.37
+          },
+          {
+           "t": 1.2,
+           "pose": {
+            "pulo": 1.0
+           },
+           "ease": "linear",
+           "in": 0.37
+          },
+          {
+           "t": 1.6,
+           "pose": {
+            "pulo": 0.0
+           },
+           "ease": "linear",
+           "in": 0.37
+          },
+          {
+           "t": 2.0,
+           "pose": {
+            "pulo": 1.0
+           },
+           "ease": "linear",
+           "in": 0.37
+          },
+          {
+           "t": 2.4,
+           "pose": {
+            "pulo": 0.0
+           },
+           "ease": "linear",
+           "in": 0.37
+          },
+          {
+           "t": 2.8,
+           "pose": {
+            "pulo": 1.0
+           },
+           "ease": "linear",
+           "in": 0.37
+          }
+         ]
+        }
+       }
+      }
+     ]
+    },
+    "linhas": 2,
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "RODA, RODINHA!",
+      "color": "rosa"
+     }
+    ],
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 2,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 600,
+     "zoom": 1.2,
+     "zoom_fim": 1.1
+    },
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "RODA, RODINHA!",
+      "color": "rosa"
+     },
+     {
+      "t": 2.42,
+      "text": "CAIU!",
+      "color": "vermelho"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 1050,
+      "turn": 0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "lado",
+        "dur": 2.22
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1550,
+      "turn": -0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "lado",
+        "dur": 2.22
+       }
+      ]
+     }
+    },
+    "objetos": {
+     "b0": {
+      "id": "grilo",
+      "x": 450,
+      "y": 930,
+      "z": 2,
+      "depth": 0.7,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.45,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 2.32,
+        "pose": {
+         "cai": 1.0,
+         "pulo": 0.0
+        },
+        "ease": "step"
+       }
+      ]
+     },
+     "b1": {
+      "id": "tatu",
+      "x": 2150,
+      "y": 930,
+      "z": 2,
+      "depth": 0.7,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.45,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 2.32,
+        "pose": {
+         "cai": 1.0,
+         "pulo": 0.0
+        },
+        "ease": "step"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   }
+  ],
+  "refrao#2": [
+   {
+    "linhas": 2,
+    "cenario": "plano_casa_frente",
+    "camera": {
+     "x": 1300,
+     "y": 600,
+     "zoom": 1.05,
+     "zoom_fim": 1.15
+    },
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "RODA, RODINHA!",
+      "color": "verde"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 1050,
+      "turn": 0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "roda",
+        "dur": 98.9
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1550,
+      "turn": -0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "roda",
+        "dur": 98.9
+       }
+      ]
+     }
+    },
+    "objetos": {
+     "b0": {
+      "id": "grilo",
+      "x": 450,
+      "y": 930,
+      "z": 2,
+      "depth": 0.7,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.45,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 2.25,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       }
+      ]
+     },
+     "b1": {
+      "id": "tatu",
+      "x": 2150,
+      "y": 930,
+      "z": 2,
+      "depth": 0.7,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.45,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 2.25,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       }
+      ]
+     }
+    },
+    "flash": true,
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 2,
+    "cenario": "plano_casa_frente",
+    "camera": {
+     "x": 1300,
+     "y": 600,
+     "zoom": 1.2,
+     "zoom_fim": 1.1
+    },
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "RODA, RODINHA!",
+      "color": "verde"
+     },
+     {
+      "t": 2.38,
+      "text": "CAIU!",
+      "color": "vermelho"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 1050,
+      "turn": 0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "lado",
+        "dur": 2.18
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1550,
+      "turn": -0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "lado",
+        "dur": 2.18
+       }
+      ]
+     }
+    },
+    "objetos": {
+     "b0": {
+      "id": "sapo",
+      "x": 450,
+      "y": 930,
+      "z": 2,
+      "depth": 0.7,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.45,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 2.28,
+        "pose": {
+         "cai": 1.0,
+         "pulo": 0.0
+        },
+        "ease": "step"
+       }
+      ]
+     },
+     "b1": {
+      "id": "pato",
+      "x": 2150,
+      "y": 930,
+      "z": 2,
+      "depth": 0.7,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.45,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 2.28,
+        "pose": {
+         "cai": 1.0,
+         "pulo": 0.0
+        },
+        "ease": "step"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "tela_dividida": {
+     "layout": "diagonal",
+     "paineis": [
+      {
+       "cenario": "plano_jardim",
+       "camera": {
+        "x": 1300,
+        "y": 600,
+        "zoom": 1.15,
+        "zoom_fim": 1.25
+       },
+       "atores": {
+        "laurinha": {
+         "x": 1050,
+         "turn": 0.25,
+         "acoes": [
+          {
+           "t": 0.0,
+           "do": "dance",
+           "style": "twist",
+           "dur": 98.9
+          }
+         ]
+        },
+        "luisinho": {
+         "x": 1550,
+         "turn": -0.25,
+         "acoes": [
+          {
+           "t": 0.0,
+           "do": "dance",
+           "style": "twist",
+           "dur": 98.9
+          }
+         ]
+        }
+       }
+      },
+      {
+       "cenario": "plano_campo",
+       "camera": {
+        "x": 1300,
+        "y": 640,
+        "zoom": 1.1,
+        "zoom_fim": 1.2
+       },
+       "objetos": {
+        "b1": {
+         "id": "grilo",
+         "x": 1050,
+         "y": 930,
+         "z": 2,
+         "depth": 0.7,
+         "keys": [
+          {
+           "t": 0.0,
+           "pose": {
+            "pulo": 0.0,
+            "cai": 0.0
+           },
+           "ease": "step"
+          },
+          {
+           "t": 0.35,
+           "pose": {
+            "pulo": 1.0
+           },
+           "ease": "linear",
+           "in": 0.32
+          },
+          {
+           "t": 0.7,
+           "pose": {
+            "pulo": 0.0
+           },
+           "ease": "linear",
+           "in": 0.32
+          },
+          {
+           "t": 1.05,
+           "pose": {
+            "pulo": 1.0
+           },
+           "ease": "linear",
+           "in": 0.32
+          },
+          {
+           "t": 1.4,
+           "pose": {
+            "pulo": 0.0
+           },
+           "ease": "linear",
+           "in": 0.32
+          },
+          {
+           "t": 1.75,
+           "pose": {
+            "pulo": 1.0
+           },
+           "ease": "linear",
+           "in": 0.32
+          },
+          {
+           "t": 2.1,
+           "pose": {
+            "pulo": 0.0
+           },
+           "ease": "linear",
+           "in": 0.32
+          },
+          {
+           "t": 2.45,
+           "pose": {
+            "pulo": 1.0
+           },
+           "ease": "linear",
+           "in": 0.32
+          },
+          {
+           "t": 2.8,
+           "pose": {
+            "pulo": 0.0
+           },
+           "ease": "linear",
+           "in": 0.32
+          }
+         ]
+        },
+        "b2": {
+         "id": "tatu",
+         "x": 1550,
+         "y": 930,
+         "z": 2,
+         "depth": 0.7,
+         "keys": [
+          {
+           "t": 0.0,
+           "pose": {
+            "pulo": 0.0,
+            "cai": 0.0
+           },
+           "ease": "step"
+          },
+          {
+           "t": 0.4,
+           "pose": {
+            "pulo": 1.0
+           },
+           "ease": "linear",
+           "in": 0.37
+          },
+          {
+           "t": 0.8,
+           "pose": {
+            "pulo": 0.0
+           },
+           "ease": "linear",
+           "in": 0.37
+          },
+          {
+           "t": 1.2,
+           "pose": {
+            "pulo": 1.0
+           },
+           "ease": "linear",
+           "in": 0.37
+          },
+          {
+           "t": 1.6,
+           "pose": {
+            "pulo": 0.0
+           },
+           "ease": "linear",
+           "in": 0.37
+          },
+          {
+           "t": 2.0,
+           "pose": {
+            "pulo": 1.0
+           },
+           "ease": "linear",
+           "in": 0.37
+          },
+          {
+           "t": 2.4,
+           "pose": {
+            "pulo": 0.0
+           },
+           "ease": "linear",
+           "in": 0.37
+          },
+          {
+           "t": 2.8,
+           "pose": {
+            "pulo": 1.0
+           },
+           "ease": "linear",
+           "in": 0.37
+          }
+         ]
+        }
+       }
+      }
+     ]
+    },
+    "linhas": 2,
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "RODA, RODINHA!",
+      "color": "verde"
+     }
+    ],
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 2,
+    "cenario": "plano_casa_frente",
+    "camera": {
+     "x": 1300,
+     "y": 600,
+     "zoom": 1.2,
+     "zoom_fim": 1.1
+    },
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "RODA, RODINHA!",
+      "color": "verde"
+     },
+     {
+      "t": 2.39,
+      "text": "CAIU!",
+      "color": "vermelho"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 1050,
+      "turn": 0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "lado",
+        "dur": 2.19
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1550,
+      "turn": -0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "lado",
+        "dur": 2.19
+       }
+      ]
+     }
+    },
+    "objetos": {
+     "b0": {
+      "id": "sapo",
+      "x": 450,
+      "y": 930,
+      "z": 2,
+      "depth": 0.7,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.45,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 2.29,
+        "pose": {
+         "cai": 1.0,
+         "pulo": 0.0
+        },
+        "ease": "step"
+       }
+      ]
+     },
+     "b1": {
+      "id": "pato",
+      "x": 2150,
+      "y": 930,
+      "z": 2,
+      "depth": 0.7,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.45,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 2.29,
+        "pose": {
+         "cai": 1.0,
+         "pulo": 0.0
+        },
+        "ease": "step"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   }
+  ],
+  "refrao#3": [
+   {
+    "linhas": 2,
+    "cenario": "plano_salao",
+    "camera": {
+     "x": 1300,
+     "y": 600,
+     "zoom": 1.05,
+     "zoom_fim": 1.15
+    },
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "RODA, RODINHA!",
+      "color": "azul"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 1050,
+      "turn": 0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "roda",
+        "dur": 98.9
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1550,
+      "turn": -0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "roda",
+        "dur": 98.9
+       }
+      ]
+     }
+    },
+    "objetos": {
+     "b0": {
+      "id": "sapo",
+      "x": 450,
+      "y": 930,
+      "z": 2,
+      "depth": 0.7,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.45,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       }
+      ]
+     },
+     "b1": {
+      "id": "pato",
+      "x": 2150,
+      "y": 930,
+      "z": 2,
+      "depth": 0.7,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.45,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       }
+      ]
+     }
+    },
+    "flash": true,
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "cenario": "plano_salao",
+    "camera": {
+     "x": 1300,
+     "y": 620,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "fx": [
+     "confete"
+    ],
+    "objetos": {
+     "bat": {
+      "id": "bateria",
+      "x": 1700,
+      "y": 940,
+      "z": 4,
+      "depth": 0.6,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "bumbo": 1.0,
+         "caixa": 0.0,
+         "prato": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 0.45,
+        "pose": {
+         "bumbo": 0.0,
+         "caixa": 1.0,
+         "prato": 0.0
+        },
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "bumbo": 1.0,
+         "caixa": 0.0,
+         "prato": 0.0
+        },
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "bumbo": 0.0,
+         "caixa": 1.0,
+         "prato": 0.0
+        },
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "bumbo": 1.0,
+         "caixa": 0.0,
+         "prato": 1.0
+        },
+        "ease": "out",
+        "in": 0.42
+       }
+      ]
+     },
+     "pl1": {
+      "id": "pato",
+      "x": 300,
+      "y": 930,
+      "z": 2,
+      "depth": 0.55,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.45,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       }
+      ]
+     },
+     "pl2": {
+      "id": "grilo",
+      "x": 2350,
+      "y": 930,
+      "z": 2,
+      "depth": 0.55,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.4,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       },
+       {
+        "t": 0.8,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       },
+       {
+        "t": 1.2,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       },
+       {
+        "t": 1.6,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       },
+       {
+        "t": 2.0,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 1700,
+      "y": 930,
+      "turn": -0.2,
+      "z": 3,
+      "segura": "baqueta",
+      "segura_f": "baqueta",
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_bateria",
+        "dur": "resto"
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 800,
+      "turn": 0.3,
+      "segura": "saxofone",
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_sax",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "linhas": 2,
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "GIRA, GIRA!",
+      "color": "amarelo"
+     }
+    ],
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "tela_dividida": {
+     "layout": "vertical",
+     "paineis": [
+      {
+       "cenario": "plano_jardim",
+       "camera": {
+        "x": 1300,
+        "y": 600,
+        "zoom": 1.15,
+        "zoom_fim": 1.25
+       },
+       "atores": {
+        "laurinha": {
+         "x": 1050,
+         "turn": 0.25,
+         "acoes": [
+          {
+           "t": 0.0,
+           "do": "dance",
+           "style": "twist",
+           "dur": 98.9
+          }
+         ]
+        },
+        "luisinho": {
+         "x": 1550,
+         "turn": -0.25,
+         "acoes": [
+          {
+           "t": 0.0,
+           "do": "dance",
+           "style": "twist",
+           "dur": 98.9
+          }
+         ]
+        }
+       }
+      },
+      {
+       "cenario": "plano_lagoa",
+       "camera": {
+        "x": 1300,
+        "y": 640,
+        "zoom": 1.1,
+        "zoom_fim": 1.2
+       },
+       "objetos": {
+        "b1": {
+         "id": "sapo",
+         "x": 1050,
+         "y": 930,
+         "z": 2,
+         "depth": 0.7,
+         "keys": [
+          {
+           "t": 0.0,
+           "pose": {
+            "pulo": 0.0,
+            "cai": 0.0
+           },
+           "ease": "step"
+          },
+          {
+           "t": 0.35,
+           "pose": {
+            "pulo": 1.0
+           },
+           "ease": "linear",
+           "in": 0.32
+          },
+          {
+           "t": 0.7,
+           "pose": {
+            "pulo": 0.0
+           },
+           "ease": "linear",
+           "in": 0.32
+          },
+          {
+           "t": 1.05,
+           "pose": {
+            "pulo": 1.0
+           },
+           "ease": "linear",
+           "in": 0.32
+          },
+          {
+           "t": 1.4,
+           "pose": {
+            "pulo": 0.0
+           },
+           "ease": "linear",
+           "in": 0.32
+          },
+          {
+           "t": 1.75,
+           "pose": {
+            "pulo": 1.0
+           },
+           "ease": "linear",
+           "in": 0.32
+          },
+          {
+           "t": 2.1,
+           "pose": {
+            "pulo": 0.0
+           },
+           "ease": "linear",
+           "in": 0.32
+          },
+          {
+           "t": 2.45,
+           "pose": {
+            "pulo": 1.0
+           },
+           "ease": "linear",
+           "in": 0.32
+          },
+          {
+           "t": 2.8,
+           "pose": {
+            "pulo": 0.0
+           },
+           "ease": "linear",
+           "in": 0.32
+          }
+         ]
+        },
+        "b2": {
+         "id": "pato",
+         "x": 1550,
+         "y": 930,
+         "z": 2,
+         "depth": 0.7,
+         "keys": [
+          {
+           "t": 0.0,
+           "pose": {
+            "pulo": 0.0,
+            "cai": 0.0
+           },
+           "ease": "step"
+          },
+          {
+           "t": 0.4,
+           "pose": {
+            "pulo": 1.0
+           },
+           "ease": "linear",
+           "in": 0.37
+          },
+          {
+           "t": 0.8,
+           "pose": {
+            "pulo": 0.0
+           },
+           "ease": "linear",
+           "in": 0.37
+          },
+          {
+           "t": 1.2,
+           "pose": {
+            "pulo": 1.0
+           },
+           "ease": "linear",
+           "in": 0.37
+          },
+          {
+           "t": 1.6,
+           "pose": {
+            "pulo": 0.0
+           },
+           "ease": "linear",
+           "in": 0.37
+          },
+          {
+           "t": 2.0,
+           "pose": {
+            "pulo": 1.0
+           },
+           "ease": "linear",
+           "in": 0.37
+          },
+          {
+           "t": 2.4,
+           "pose": {
+            "pulo": 0.0
+           },
+           "ease": "linear",
+           "in": 0.37
+          },
+          {
+           "t": 2.8,
+           "pose": {
+            "pulo": 1.0
+           },
+           "ease": "linear",
+           "in": 0.37
+          }
+         ]
+        }
+       }
+      }
+     ]
+    },
+    "linhas": 2,
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "RODA, RODINHA!",
+      "color": "azul"
+     }
+    ],
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "cenario": "plano_salao",
+    "camera": {
+     "x": 1300,
+     "y": 620,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "fx": [
+     "confete"
+    ],
+    "objetos": {
+     "bat": {
+      "id": "bateria",
+      "x": 1700,
+      "y": 940,
+      "z": 4,
+      "depth": 0.6,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "bumbo": 1.0,
+         "caixa": 0.0,
+         "prato": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 0.45,
+        "pose": {
+         "bumbo": 0.0,
+         "caixa": 1.0,
+         "prato": 0.0
+        },
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "bumbo": 1.0,
+         "caixa": 0.0,
+         "prato": 0.0
+        },
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "bumbo": 0.0,
+         "caixa": 1.0,
+         "prato": 0.0
+        },
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "bumbo": 1.0,
+         "caixa": 0.0,
+         "prato": 1.0
+        },
+        "ease": "out",
+        "in": 0.42
+       }
+      ]
+     },
+     "tec": {
+      "id": "teclado_inst",
+      "x": 800,
+      "y": 940,
+      "z": 4,
+      "depth": 0.62,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "tecla": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.527,
+        "pose": {
+         "tecla": 5.1
+        },
+        "ease": "linear",
+        "in": 2.497
+       }
+      ]
+     },
+     "pl1": {
+      "id": "pato",
+      "x": 300,
+      "y": 930,
+      "z": 2,
+      "depth": 0.55,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.45,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       }
+      ]
+     },
+     "pl2": {
+      "id": "grilo",
+      "x": 2350,
+      "y": 930,
+      "z": 2,
+      "depth": 0.55,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.4,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       },
+       {
+        "t": 0.8,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       },
+       {
+        "t": 1.2,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       },
+       {
+        "t": 1.6,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       },
+       {
+        "t": 2.0,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 1700,
+      "y": 930,
+      "turn": -0.2,
+      "z": 3,
+      "segura": "baqueta",
+      "segura_f": "baqueta",
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_bateria",
+        "dur": "resto"
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 800,
+      "y": 930,
+      "turn": 0.2,
+      "z": 3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_teclado",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "linhas": 2,
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "GIRA, GIRA!",
+      "color": "amarelo"
+     }
+    ],
+    "cantam": [
+     "laurinha"
+    ]
+   }
+  ],
+  "refrao#4": [
+   {
+    "linhas": 2,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 600,
+     "zoom": 1.05,
+     "zoom_fim": 1.15
+    },
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "RODA, RODINHA!",
+      "color": "laranja"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 1050,
+      "turn": 0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "roda",
+        "dur": 98.9
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1550,
+      "turn": -0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "roda",
+        "dur": 98.9
+       }
+      ]
+     }
+    },
+    "objetos": {
+     "b0": {
+      "id": "grilo",
+      "x": 450,
+      "y": 930,
+      "z": 2,
+      "depth": 0.7,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.45,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 2.25,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       }
+      ]
+     },
+     "b1": {
+      "id": "tatu",
+      "x": 2150,
+      "y": 930,
+      "z": 2,
+      "depth": 0.7,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.45,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 2.25,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       }
+      ]
+     }
+    },
+    "flash": true,
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "cenario": "plano_salao",
+    "camera": {
+     "x": 1300,
+     "y": 620,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "fx": [
+     "confete"
+    ],
+    "objetos": {
+     "bat": {
+      "id": "bateria",
+      "x": 1700,
+      "y": 940,
+      "z": 4,
+      "depth": 0.6,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "bumbo": 1.0,
+         "caixa": 0.0,
+         "prato": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 0.45,
+        "pose": {
+         "bumbo": 0.0,
+         "caixa": 1.0,
+         "prato": 0.0
+        },
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "bumbo": 1.0,
+         "caixa": 0.0,
+         "prato": 0.0
+        },
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "bumbo": 0.0,
+         "caixa": 1.0,
+         "prato": 0.0
+        },
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "bumbo": 1.0,
+         "caixa": 0.0,
+         "prato": 1.0
+        },
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 2.25,
+        "pose": {
+         "bumbo": 0.0,
+         "caixa": 1.0,
+         "prato": 0.0
+        },
+        "ease": "out",
+        "in": 0.42
+       }
+      ]
+     },
+     "pl1": {
+      "id": "pato",
+      "x": 300,
+      "y": 930,
+      "z": 2,
+      "depth": 0.55,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.45,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 2.25,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       }
+      ]
+     },
+     "pl2": {
+      "id": "grilo",
+      "x": 2350,
+      "y": 930,
+      "z": 2,
+      "depth": 0.55,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.4,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       },
+       {
+        "t": 0.8,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       },
+       {
+        "t": 1.2,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       },
+       {
+        "t": 1.6,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       },
+       {
+        "t": 2.0,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       },
+       {
+        "t": 2.4,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 1700,
+      "y": 930,
+      "turn": -0.2,
+      "z": 3,
+      "segura": "baqueta",
+      "segura_f": "baqueta",
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_bateria",
+        "dur": "resto"
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 800,
+      "turn": 0.3,
+      "segura": "saxofone",
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_sax",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "linhas": 2,
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "GIRA, GIRA!",
+      "color": "amarelo"
+     }
+    ],
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "tela_dividida": {
+     "layout": "diagonal",
+     "paineis": [
+      {
+       "cenario": "plano_jardim",
+       "camera": {
+        "x": 1300,
+        "y": 600,
+        "zoom": 1.15,
+        "zoom_fim": 1.25
+       },
+       "atores": {
+        "laurinha": {
+         "x": 1050,
+         "turn": 0.25,
+         "acoes": [
+          {
+           "t": 0.0,
+           "do": "dance",
+           "style": "twist",
+           "dur": 98.9
+          }
+         ]
+        },
+        "luisinho": {
+         "x": 1550,
+         "turn": -0.25,
+         "acoes": [
+          {
+           "t": 0.0,
+           "do": "dance",
+           "style": "twist",
+           "dur": 98.9
+          }
+         ]
+        }
+       }
+      },
+      {
+       "cenario": "plano_campo",
+       "camera": {
+        "x": 1300,
+        "y": 640,
+        "zoom": 1.1,
+        "zoom_fim": 1.2
+       },
+       "objetos": {
+        "b1": {
+         "id": "grilo",
+         "x": 1050,
+         "y": 930,
+         "z": 2,
+         "depth": 0.7,
+         "keys": [
+          {
+           "t": 0.0,
+           "pose": {
+            "pulo": 0.0,
+            "cai": 0.0
+           },
+           "ease": "step"
+          },
+          {
+           "t": 0.35,
+           "pose": {
+            "pulo": 1.0
+           },
+           "ease": "linear",
+           "in": 0.32
+          },
+          {
+           "t": 0.7,
+           "pose": {
+            "pulo": 0.0
+           },
+           "ease": "linear",
+           "in": 0.32
+          },
+          {
+           "t": 1.05,
+           "pose": {
+            "pulo": 1.0
+           },
+           "ease": "linear",
+           "in": 0.32
+          },
+          {
+           "t": 1.4,
+           "pose": {
+            "pulo": 0.0
+           },
+           "ease": "linear",
+           "in": 0.32
+          },
+          {
+           "t": 1.75,
+           "pose": {
+            "pulo": 1.0
+           },
+           "ease": "linear",
+           "in": 0.32
+          },
+          {
+           "t": 2.1,
+           "pose": {
+            "pulo": 0.0
+           },
+           "ease": "linear",
+           "in": 0.32
+          },
+          {
+           "t": 2.45,
+           "pose": {
+            "pulo": 1.0
+           },
+           "ease": "linear",
+           "in": 0.32
+          }
+         ]
+        },
+        "b2": {
+         "id": "tatu",
+         "x": 1550,
+         "y": 930,
+         "z": 2,
+         "depth": 0.7,
+         "keys": [
+          {
+           "t": 0.0,
+           "pose": {
+            "pulo": 0.0,
+            "cai": 0.0
+           },
+           "ease": "step"
+          },
+          {
+           "t": 0.4,
+           "pose": {
+            "pulo": 1.0
+           },
+           "ease": "linear",
+           "in": 0.37
+          },
+          {
+           "t": 0.8,
+           "pose": {
+            "pulo": 0.0
+           },
+           "ease": "linear",
+           "in": 0.37
+          },
+          {
+           "t": 1.2,
+           "pose": {
+            "pulo": 1.0
+           },
+           "ease": "linear",
+           "in": 0.37
+          },
+          {
+           "t": 1.6,
+           "pose": {
+            "pulo": 0.0
+           },
+           "ease": "linear",
+           "in": 0.37
+          },
+          {
+           "t": 2.0,
+           "pose": {
+            "pulo": 1.0
+           },
+           "ease": "linear",
+           "in": 0.37
+          },
+          {
+           "t": 2.4,
+           "pose": {
+            "pulo": 0.0
+           },
+           "ease": "linear",
+           "in": 0.37
+          }
+         ]
+        }
+       }
+      }
+     ]
+    },
+    "linhas": 2,
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "RODA, RODINHA!",
+      "color": "laranja"
+     }
+    ],
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "cenario": "plano_salao",
+    "camera": {
+     "x": 1300,
+     "y": 620,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "fx": [
+     "confete"
+    ],
+    "objetos": {
+     "bat": {
+      "id": "bateria",
+      "x": 1700,
+      "y": 940,
+      "z": 4,
+      "depth": 0.6,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "bumbo": 1.0,
+         "caixa": 0.0,
+         "prato": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 0.45,
+        "pose": {
+         "bumbo": 0.0,
+         "caixa": 1.0,
+         "prato": 0.0
+        },
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "bumbo": 1.0,
+         "caixa": 0.0,
+         "prato": 0.0
+        },
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "bumbo": 0.0,
+         "caixa": 1.0,
+         "prato": 0.0
+        },
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "bumbo": 1.0,
+         "caixa": 0.0,
+         "prato": 1.0
+        },
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 2.25,
+        "pose": {
+         "bumbo": 0.0,
+         "caixa": 1.0,
+         "prato": 0.0
+        },
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 2.7,
+        "pose": {
+         "bumbo": 1.0,
+         "caixa": 0.0,
+         "prato": 0.0
+        },
+        "ease": "out",
+        "in": 0.42
+       }
+      ]
+     },
+     "tec": {
+      "id": "teclado_inst",
+      "x": 800,
+      "y": 940,
+      "z": 4,
+      "depth": 0.62,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "tecla": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.26,
+        "pose": {
+         "tecla": 6.6
+        },
+        "ease": "linear",
+        "in": 3.23
+       }
+      ]
+     },
+     "pl1": {
+      "id": "pato",
+      "x": 300,
+      "y": 930,
+      "z": 2,
+      "depth": 0.55,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.45,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 2.25,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 2.7,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       }
+      ]
+     },
+     "pl2": {
+      "id": "grilo",
+      "x": 2350,
+      "y": 930,
+      "z": 2,
+      "depth": 0.55,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.4,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       },
+       {
+        "t": 0.8,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       },
+       {
+        "t": 1.2,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       },
+       {
+        "t": 1.6,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       },
+       {
+        "t": 2.0,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       },
+       {
+        "t": 2.4,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       },
+       {
+        "t": 2.8,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 1700,
+      "y": 930,
+      "turn": -0.2,
+      "z": 3,
+      "segura": "baqueta",
+      "segura_f": "baqueta",
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_bateria",
+        "dur": "resto"
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 800,
+      "y": 930,
+      "turn": 0.2,
+      "z": 3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_teclado",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "linhas": 2,
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "GIRA, GIRA!",
+      "color": "amarelo"
+     }
+    ],
+    "cantam": [
+     "laurinha"
+    ]
+   }
+  ],
+  "intervalo#1": [
+   {
+    "linhas": 1,
+    "seg": 2.2,
+    "cenario": "plano_jardim",
+    "camera": "close:laurinha",
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "BORA, TURMINHA!",
+      "color": "rosa"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 1300,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "apontar_camera",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 1,
+    "seg": 3.6,
+    "cenario": "danca_raios_rosa",
+    "fx": [
+     "confete"
+    ],
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "LAURINHA E LUISINHO!",
+      "color": "rosa"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 560,
+      "y": 1010,
+      "depth": 1.0,
+      "turn": 0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "cintura",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1360,
+      "y": 1010,
+      "depth": 1.0,
+      "turn": -0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "chute",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "seg": 5.58,
+    "cenario": "plano_salao",
+    "camera": {
+     "x": 1300,
+     "y": 600,
+     "zoom": 1.1,
+     "zoom_fim": 1.18
+    },
+    "fx": [
+     "notas"
+    ],
+    "objetos": {
+     "bat": {
+      "id": "bateria",
+      "x": 1700,
+      "y": 940,
+      "z": 4,
+      "depth": 0.6,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "bumbo": 1.0,
+         "caixa": 0.0,
+         "prato": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 0.45,
+        "pose": {
+         "bumbo": 0.0,
+         "caixa": 1.0,
+         "prato": 0.0
+        },
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "bumbo": 1.0,
+         "caixa": 0.0,
+         "prato": 0.0
+        },
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "bumbo": 0.0,
+         "caixa": 1.0,
+         "prato": 0.0
+        },
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "bumbo": 1.0,
+         "caixa": 0.0,
+         "prato": 1.0
+        },
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 2.25,
+        "pose": {
+         "bumbo": 0.0,
+         "caixa": 1.0,
+         "prato": 0.0
+        },
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 2.7,
+        "pose": {
+         "bumbo": 1.0,
+         "caixa": 0.0,
+         "prato": 0.0
+        },
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 3.15,
+        "pose": {
+         "bumbo": 0.0,
+         "caixa": 1.0,
+         "prato": 0.0
+        },
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 3.6,
+        "pose": {
+         "bumbo": 1.0,
+         "caixa": 0.0,
+         "prato": 1.0
+        },
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 4.05,
+        "pose": {
+         "bumbo": 0.0,
+         "caixa": 1.0,
+         "prato": 0.0
+        },
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 4.5,
+        "pose": {
+         "bumbo": 1.0,
+         "caixa": 0.0,
+         "prato": 0.0
+        },
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 4.95,
+        "pose": {
+         "bumbo": 0.0,
+         "caixa": 1.0,
+         "prato": 0.0
+        },
+        "ease": "out",
+        "in": 0.42
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 1700,
+      "y": 930,
+      "turn": -0.2,
+      "z": 3,
+      "segura": "baqueta",
+      "segura_f": "baqueta",
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_bateria",
+        "dur": "resto"
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 800,
+      "turn": 0.3,
+      "segura": "saxofone",
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_sax",
+        "dur": "resto"
+       }
+      ]
+     },
+     "vovo": {
+      "x": 280,
+      "turn": 0.35,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "balanco",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "titulo": "a banda",
+    "cantam": [
+     "laurinha"
+    ]
+   }
+  ],
+  "intervalo#2": [
+   {
+    "linhas": 1,
+    "seg": 2.15,
+    "cenario": "plano_lagoa",
+    "camera": "close:laurinha",
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "BORA, TURMINHA!",
+      "color": "rosa"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 1300,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "apontar_camera",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 1,
+    "seg": 3.6,
+    "cenario": "danca_xadrez_verde",
+    "fx": [
+     "confete"
+    ],
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "LAURINHA E LUISINHO!",
+      "color": "rosa"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 560,
+      "y": 1010,
+      "depth": 1.0,
+      "turn": 0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "cintura",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1360,
+      "y": 1010,
+      "depth": 1.0,
+      "turn": -0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "chute",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "seg": 6.3,
+    "cenario": "plano_salao",
+    "camera": {
+     "x": 1300,
+     "y": 600,
+     "zoom": 1.1,
+     "zoom_fim": 1.18
+    },
+    "fx": [
+     "notas"
+    ],
+    "objetos": {
+     "bat": {
+      "id": "bateria",
+      "x": 1700,
+      "y": 940,
+      "z": 4,
+      "depth": 0.6,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "bumbo": 1.0,
+         "caixa": 0.0,
+         "prato": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 0.45,
+        "pose": {
+         "bumbo": 0.0,
+         "caixa": 1.0,
+         "prato": 0.0
+        },
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "bumbo": 1.0,
+         "caixa": 0.0,
+         "prato": 0.0
+        },
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "bumbo": 0.0,
+         "caixa": 1.0,
+         "prato": 0.0
+        },
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "bumbo": 1.0,
+         "caixa": 0.0,
+         "prato": 1.0
+        },
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 2.25,
+        "pose": {
+         "bumbo": 0.0,
+         "caixa": 1.0,
+         "prato": 0.0
+        },
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 2.7,
+        "pose": {
+         "bumbo": 1.0,
+         "caixa": 0.0,
+         "prato": 0.0
+        },
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 3.15,
+        "pose": {
+         "bumbo": 0.0,
+         "caixa": 1.0,
+         "prato": 0.0
+        },
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 3.6,
+        "pose": {
+         "bumbo": 1.0,
+         "caixa": 0.0,
+         "prato": 1.0
+        },
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 4.05,
+        "pose": {
+         "bumbo": 0.0,
+         "caixa": 1.0,
+         "prato": 0.0
+        },
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 4.5,
+        "pose": {
+         "bumbo": 1.0,
+         "caixa": 0.0,
+         "prato": 0.0
+        },
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 4.95,
+        "pose": {
+         "bumbo": 0.0,
+         "caixa": 1.0,
+         "prato": 0.0
+        },
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 5.4,
+        "pose": {
+         "bumbo": 1.0,
+         "caixa": 0.0,
+         "prato": 1.0
+        },
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 5.85,
+        "pose": {
+         "bumbo": 0.0,
+         "caixa": 1.0,
+         "prato": 0.0
+        },
+        "ease": "out",
+        "in": 0.42
+       }
+      ]
+     },
+     "tec": {
+      "id": "teclado_inst",
+      "x": 800,
+      "y": 940,
+      "z": 4,
+      "depth": 0.62,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "tecla": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 6.227,
+        "pose": {
+         "tecla": 12.6
+        },
+        "ease": "linear",
+        "in": 6.197
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 1700,
+      "y": 930,
+      "turn": -0.2,
+      "z": 3,
+      "segura": "baqueta",
+      "segura_f": "baqueta",
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_bateria",
+        "dur": "resto"
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 800,
+      "y": 930,
+      "turn": 0.2,
+      "z": 3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_teclado",
+        "dur": "resto"
+       }
+      ]
+     },
+     "vovo": {
+      "x": 280,
+      "turn": 0.35,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "balanco",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "titulo": "a banda",
+    "cantam": [
+     "laurinha"
+    ]
+   }
+  ],
+  "intervalo#3": [
+   {
+    "seg": 3.27,
+    "cenario": "plano_salao",
+    "camera": {
+     "x": 1300,
+     "y": 600,
+     "zoom": 1.1,
+     "zoom_fim": 1.18
+    },
+    "fx": [
+     "confete"
+    ],
+    "objetos": {
+     "bat": {
+      "id": "bateria",
+      "x": 1700,
+      "y": 940,
+      "z": 4,
+      "depth": 0.6,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "bumbo": 1.0,
+         "caixa": 0.0,
+         "prato": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 0.45,
+        "pose": {
+         "bumbo": 0.0,
+         "caixa": 1.0,
+         "prato": 0.0
+        },
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "bumbo": 1.0,
+         "caixa": 0.0,
+         "prato": 0.0
+        },
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "bumbo": 0.0,
+         "caixa": 1.0,
+         "prato": 0.0
+        },
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "bumbo": 1.0,
+         "caixa": 0.0,
+         "prato": 1.0
+        },
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 2.25,
+        "pose": {
+         "bumbo": 0.0,
+         "caixa": 1.0,
+         "prato": 0.0
+        },
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 2.7,
+        "pose": {
+         "bumbo": 1.0,
+         "caixa": 0.0,
+         "prato": 0.0
+        },
+        "ease": "out",
+        "in": 0.42
+       }
+      ]
+     },
+     "tec": {
+      "id": "teclado_inst",
+      "x": 800,
+      "y": 940,
+      "z": 4,
+      "depth": 0.62,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "tecla": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.227,
+        "pose": {
+         "tecla": 6.5
+        },
+        "ease": "linear",
+        "in": 3.197
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 1700,
+      "y": 930,
+      "turn": -0.2,
+      "z": 3,
+      "segura": "baqueta",
+      "segura_f": "baqueta",
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_bateria",
+        "dur": "resto"
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 800,
+      "y": 930,
+      "turn": 0.2,
+      "z": 3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_teclado",
+        "dur": "resto"
+       }
+      ]
+     },
+     "vovozinho": {
+      "x": 300,
+      "turn": 0.35,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "palmas",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   }
+  ],
+  "ponte#1": [
+   {
+    "linhas": 2,
+    "cenario": "plano_campo",
+    "camera": {
+     "x": 1300,
+     "y": 620,
+     "zoom": 1.15,
+     "zoom_fim": 1.25
+    },
+    "callout": [
+     {
+      "t": 0.1,
+      "text": "PRA DIREITA!",
+      "color": "azul"
+     },
+     {
+      "t": 1.4,
+      "text": "PRA ESQUERDA!",
+      "color": "verde"
+     }
+    ],
+    "objetos": {
+     "b0": {
+      "id": "grilo",
+      "x": 450,
+      "y": 930,
+      "z": 2,
+      "depth": 0.7,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.45,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 2.25,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 2.7,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 3.15,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       }
+      ]
+     },
+     "b1": {
+      "id": "tatu",
+      "x": 2150,
+      "y": 930,
+      "z": 2,
+      "depth": 0.7,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.45,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 2.25,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 2.7,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 3.15,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 1050,
+      "turn": 0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "lado",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1550,
+      "turn": -0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "lado",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 2,
+    "cenario": "plano_campo",
+    "camera": {
+     "x": 1300,
+     "y": 640,
+     "zoom": 1.2,
+     "zoom_fim": 1.1
+    },
+    "flash": false,
+    "callout": [
+     {
+      "t": 0.1,
+      "text": "AGACHA…",
+      "color": "roxo"
+     },
+     {
+      "t": 1.6,
+      "text": "QUE FESTA!",
+      "color": "amarelo"
+     }
+    ],
+    "fx": [
+     "confete"
+    ],
+    "objetos": {
+     "b0": {
+      "id": "grilo",
+      "x": 450,
+      "y": 930,
+      "z": 2,
+      "depth": 0.7,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.45,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 2.25,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       }
+      ]
+     },
+     "b1": {
+      "id": "tatu",
+      "x": 2150,
+      "y": 930,
+      "z": 2,
+      "depth": 0.7,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.45,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 2.25,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 1050,
+      "turn": 0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "agacha",
+        "dur": 1.45
+       },
+       {
+        "t": 1.55,
+        "do": "jump",
+        "dur": 0.8
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1550,
+      "turn": -0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "agacha",
+        "dur": 1.45
+       },
+       {
+        "t": 1.6,
+        "do": "jump",
+        "dur": 0.8
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   }
+  ],
+  "ponte#2": [
+   {
+    "linhas": 2,
+    "cenario": "plano_lagoa",
+    "camera": {
+     "x": 1300,
+     "y": 620,
+     "zoom": 1.15,
+     "zoom_fim": 1.25
+    },
+    "callout": [
+     {
+      "t": 0.1,
+      "text": "PRA DIREITA!",
+      "color": "azul"
+     },
+     {
+      "t": 1.4,
+      "text": "PRA ESQUERDA!",
+      "color": "verde"
+     }
+    ],
+    "objetos": {
+     "b0": {
+      "id": "sapo",
+      "x": 450,
+      "y": 930,
+      "z": 2,
+      "depth": 0.7,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.45,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 2.25,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       }
+      ]
+     },
+     "b1": {
+      "id": "pato",
+      "x": 2150,
+      "y": 930,
+      "z": 2,
+      "depth": 0.7,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.45,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 2.25,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 1050,
+      "turn": 0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "lado",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1550,
+      "turn": -0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "lado",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 2,
+    "cenario": "plano_lagoa",
+    "camera": {
+     "x": 1300,
+     "y": 640,
+     "zoom": 1.2,
+     "zoom_fim": 1.1
+    },
+    "flash": false,
+    "callout": [
+     {
+      "t": 0.1,
+      "text": "AGACHA…",
+      "color": "roxo"
+     },
+     {
+      "t": 1.6,
+      "text": "QUE FESTA!",
+      "color": "amarelo"
+     }
+    ],
+    "fx": [
+     "confete"
+    ],
+    "objetos": {
+     "b0": {
+      "id": "sapo",
+      "x": 450,
+      "y": 930,
+      "z": 2,
+      "depth": 0.7,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.45,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 2.25,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 2.7,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 3.15,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 3.6,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 4.05,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       }
+      ]
+     },
+     "b1": {
+      "id": "pato",
+      "x": 2150,
+      "y": 930,
+      "z": 2,
+      "depth": 0.7,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.45,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 2.25,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 2.7,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 3.15,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 3.6,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 4.05,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 1050,
+      "turn": 0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "agacha",
+        "dur": 1.45
+       },
+       {
+        "t": 1.55,
+        "do": "jump",
+        "dur": 0.8
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1550,
+      "turn": -0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "agacha",
+        "dur": 1.45
+       },
+       {
+        "t": 1.6,
+        "do": "jump",
+        "dur": 0.8
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   }
+  ],
+  "final#1": [
+   {
+    "linhas": 1,
+    "cenario": "plano_jardim",
+    "camera": "close:laurinha",
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "GOSTOU DA RODA?",
+      "color": "azul"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 1300,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "apontar_camera",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 1,
+    "cenario": "danca_bolinhas_amarelo",
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "DÁ UM JOINHA!",
+      "color": "azul"
+     }
+    ],
+    "fx": [
+     "estrelas"
+    ],
+    "objetos": {
+     "joinha": {
+      "x": 1380,
+      "y": 900,
+      "z": 3,
+      "depth": 1.3,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "escala": 0.0
+        }
+       },
+       {
+        "t": 0.4,
+        "pose": {
+         "escala": 1.0
+        },
+        "ease": "back",
+        "in": 0.37
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 680,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "bacana",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_casa_frente",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.1
+    },
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "CHAMA O PAPAI E A MAMÃE!",
+      "color": "verde"
+     }
+    ],
+    "objetos": {
+     "e": {
+      "id": "elefante",
+      "x": 2150,
+      "y": 930,
+      "z": 2,
+      "depth": 0.55,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.3,
+        "pose": {
+         "tromba": 1.0
+        },
+        "ease": "out"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "mamae": {
+      "x": 1100,
+      "turn": 0.2,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "wave",
+        "dur": 1.4
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 1450,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "point",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 1,
+    "cenario": "danca_raios_vermelho",
+    "callout": [
+     {
+      "t": 0.5,
+      "text": "INSCREVA-SE!",
+      "color": "vermelho"
+     }
+    ],
+    "fx": [
+     "coracoes"
+    ],
+    "objetos": {
+     "botao": {
+      "id": "botao_inscrever",
+      "x": 1260,
+      "y": 760,
+      "z": 3,
+      "depth": 1.2,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "escala": 0.0,
+         "aperta": 0.0
+        }
+       },
+       {
+        "t": 0.4,
+        "pose": {
+         "escala": 1.0
+        },
+        "ease": "back",
+        "in": 0.37
+       },
+       {
+        "t": 1.6,
+        "pose": {
+         "aperta": 1.0
+        },
+        "ease": "out",
+        "in": 1.57
+       },
+       {
+        "t": 1.9,
+        "pose": {
+         "aperta": 0.0
+        },
+        "ease": "in",
+        "in": 0.27
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 600,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "point",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   }
+  ],
+  "final#2": [
+   {
+    "linhas": 1,
+    "seg": 5.0,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "fx": [
+     "coracoes"
+    ],
+    "callout": [
+     {
+      "t": 0.6,
+      "text": "TCHAU!",
+      "color": "amarelo"
+     }
+    ],
+    "objetos": {
+     "e": {
+      "id": "elefante",
+      "x": 1300,
+      "y": 930,
+      "z": 2,
+      "depth": 0.7,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.3,
+        "pose": {
+         "tromba": 0.0
+        }
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "tromba": 1.0
+        },
+        "ease": "out",
+        "in": 0.57
+       },
+       {
+        "t": 2.0,
+        "pose": {
+         "tromba": 0.3
+        },
+        "in": 1.07
+       },
+       {
+        "t": 2.8,
+        "pose": {
+         "tromba": 1.0
+        },
+        "in": 0.77
+       }
+      ]
+     },
+     "s": {
+      "id": "sapo",
+      "x": 350,
+      "y": 930,
+      "z": 2,
+      "depth": 0.55,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.45,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 2.25,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 2.7,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 3.15,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 3.6,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 4.05,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       },
+       {
+        "t": 4.5,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.42
+       }
+      ]
+     },
+     "p": {
+      "id": "pato",
+      "x": 2300,
+      "y": 930,
+      "z": 2,
+      "depth": 0.55,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.5,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.47
+       },
+       {
+        "t": 1.0,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.47
+       },
+       {
+        "t": 1.5,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.47
+       },
+       {
+        "t": 2.0,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.47
+       },
+       {
+        "t": 2.5,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.47
+       },
+       {
+        "t": 3.0,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.47
+       },
+       {
+        "t": 3.5,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.47
+       },
+       {
+        "t": 4.0,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.47
+       },
+       {
+        "t": 4.5,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.47
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 750,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "abraco",
+        "dur": 1.4
+       },
+       {
+        "t": 1.5,
+        "do": "wave",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1850,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "sorriso",
+        "dur": 1.4
+       },
+       {
+        "t": 1.5,
+        "do": "wave",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "seg": 6.0,
+    "cenario": "plano_campo",
+    "camera": {
+     "x": 1300,
+     "y": 600,
+     "zoom": 1.15,
+     "zoom_fim": 1.0
+    },
+    "fx": [
+     "confete"
+    ],
+    "titulo": "a roda dá tchau",
+    "objetos": {
+     "e": {
+      "id": "elefante",
+      "x": 1300,
+      "y": 930,
+      "z": 2,
+      "depth": 0.6,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.6,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.57
+       },
+       {
+        "t": 1.2,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.57
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.57
+       },
+       {
+        "t": 2.4,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.57
+       },
+       {
+        "t": 3.0,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.57
+       },
+       {
+        "t": 3.6,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.57
+       },
+       {
+        "t": 4.2,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.57
+       },
+       {
+        "t": 4.8,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.57
+       },
+       {
+        "t": 5.4,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.57
+       }
+      ]
+     },
+     "g": {
+      "id": "grilo",
+      "x": 400,
+      "y": 930,
+      "z": 2,
+      "depth": 0.55,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.4,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       },
+       {
+        "t": 0.8,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       },
+       {
+        "t": 1.2,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       },
+       {
+        "t": 1.6,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       },
+       {
+        "t": 2.0,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       },
+       {
+        "t": 2.4,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       },
+       {
+        "t": 2.8,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       },
+       {
+        "t": 3.2,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       },
+       {
+        "t": 3.6,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       },
+       {
+        "t": 4.0,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       },
+       {
+        "t": 4.4,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       },
+       {
+        "t": 4.8,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       },
+       {
+        "t": 5.2,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       },
+       {
+        "t": 5.6,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.37
+       }
+      ]
+     },
+     "t": {
+      "id": "tatu",
+      "x": 2200,
+      "y": 930,
+      "z": 2,
+      "depth": 0.55,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "pulo": 0.0,
+         "cai": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.5,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.47
+       },
+       {
+        "t": 1.0,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.47
+       },
+       {
+        "t": 1.5,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.47
+       },
+       {
+        "t": 2.0,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.47
+       },
+       {
+        "t": 2.5,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.47
+       },
+       {
+        "t": 3.0,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.47
+       },
+       {
+        "t": 3.5,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.47
+       },
+       {
+        "t": 4.0,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.47
+       },
+       {
+        "t": 4.5,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.47
+       },
+       {
+        "t": 5.0,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "linear",
+        "in": 0.47
+       },
+       {
+        "t": 5.5,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "linear",
+        "in": 0.47
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 800,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "tchau",
+        "dur": 3.0
+       },
+       {
+        "t": 3.2,
+        "do": "fly",
+        "dur": 1.4,
+        "to_x": -300,
+        "to_y": 300
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1800,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "tchau",
+        "dur": 3.0
+       },
+       {
+        "t": 3.3,
+        "do": "fly",
+        "dur": 1.4,
+        "to_x": 2900,
+        "to_y": 300
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   }
+  ]
+ }
+}
