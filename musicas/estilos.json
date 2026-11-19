@@ -36,13 +36,13 @@
    "weak bass"
   ],
   "duracao": "short song under 2 minutes 40 seconds, ends after the last chorus",
-  "producao": "built-in keyboard rhythm with programmed kick, snare and claps repeating the same loop through the whole song, deep bouncy keyboard bass, one bright keyboard or piano melody, a few playful cartoon sound effects (boing, toy bells), single dry centered lead vocal, close and clear, lots of space in the mix, polished kids music production",
+  "producao": "built-in keyboard rhythm with programmed kick, snare and claps in a SYNCOPATED bouncy groove repeating the same loop through the whole song, offbeat claps, deep bouncy syncopated keyboard bass on the offbeats, one bright keyboard or piano melody, a few playful cartoon sound effects (boing, toy bells), single dry centered lead vocal, close and clear, lots of space in the mix, polished kids music production",
   "nota_producao": "18/11/2026: análise de 18 músicas da Animadinhos (musicas/REFERENCIA_ANIMADINHOS.md): arranjo enxuto de teclado/eletrônico, voz e batida empatadas (41 × 38 %), efeitos de desenho; as nossas saíam com banda + batucada e voz a 58 %.",
   "nota_voz": "18/11/2026: a voz da referência é UMA só e centralizada (largura 0,00–0,02); as nossas tinham coro/vozes de fundo espalhados (0,08–0,29) e muitos instrumentos — 'muita informação' (usuário). Uma voz por vez, respostas cantadas pela mesma voz.",
   "nota_batida": "18/11/2026: na referência cada batida soa idêntica (semelhança 0,95–0,98: ritmo pronto de teclado arranjador, um loop simples a música inteira); nas nossas 0,66–0,87 (bateria 'tocada', com viradas e percussão variando). Usuário: 'batidas como se fosse bateria, bumbo, algo feito no teclado, pra dar ritmo'.",
   "abertura": "Brazilian arranger keyboard kids song (teclado arranjador), one simple keyboard drum loop",
   "nota_ajustes_14": "18/11/2026 (take v2 da 14): baixo fraco (5,6 % × 11 % da referência) → 'deep bouncy keyboard bass'; voz larga (0,17 × 0,01) → 'dry centered vocal' e Exclude 'vocal reverb, echo'; tirado 'repeated chorus' do Exclude (o bloco repete de propósito); Exclude sem termos repetidos.",
-  "versao": "E6",
+  "versao": "E7",
   "historico": [
    {
     "versao": "E1",
@@ -86,12 +86,20 @@
     "motivo": "o Style não mexeu em baixo, loop de teclado e teclado reconhecido; a Persona antiga carrega o arranjo de banda",
     "usado_em": "músicas a partir da 17 (Laurinha v2 e Luisinho v2)",
     "resultado": "17: nota 4 ('agradável de ouvir, estamos evoluindo'); 18: nota 4,6, a melhor até agora. CONCLUSÃO (19/11): a E6 funcionou (Personas v2 de teclado) — manter como base; próximo ajuste só no que o placar ainda aponta"
+   },
+   {
+    "versao": "E7",
+    "data": "19/11/2026",
+    "mudanca": "batida SINCOPADA: groove saltitante com palmas e baixo no contratempo no lugar da batida reta; rock infantil sem 'punk-rock drumming/driving kick' (vira loop de teclado pop-rock com bumbo sincopado) e com um riff de guitarra só; ritmos de bumbo em todo tempo ganham baixo sincopado",
+    "motivo": "usuário: 'temos que focar nas batidas do som contagiante'; síncope da referência 0,69 × nossas 0,56; nota sobe com a síncope (14→3 … 18→4,6); 19 v1 saiu reta (0,41)",
+    "usado_em": "19 v2 em diante (se o usuário aprovar)"
    }
   ],
   "versao_por_voz": {
-   "laurinha": "E6",
-   "luisinho": "E6"
-  }
+   "laurinha": "E7",
+   "luisinho": "E7"
+  },
+  "nota_sincope": "19/11/2026 (usuário: 'focar nas batidas do som contagiante'): raio-x da bateria (scripts/referencias/batida.py) — referência síncope 0,69 e bumbo reto 0,50; nossas 0,56 e 0,67. A nota de ouvido sobe com a síncope e o baixo fora do tempo (14: 0,39→nota 3 … 18: 0,72 e baixo 0,90→nota 4,6). A 19 v1 (rock com 'punk-rock drumming, driving kick') saiu reta: 0,41."
  },
  "peso": {
   "forte": {
@@ -168,7 +176,7 @@
    ],
    "peso": "forte",
    "genero": "marchinha de carnaval, Brazilian carnival march",
-   "bateria": "keyboard preset marching beat loop, kick on every beat",
+   "bateria": "keyboard preset marching beat loop, kick on every beat, syncopated offbeat bass",
    "instrumentos": "keyboard brass, toy glockenspiel",
    "clima": "festive sing-along",
    "temas": [
@@ -245,7 +253,7 @@
    ],
    "peso": "forte",
    "genero": "forró piseiro, northeastern Brazil party",
-   "bateria": "keyboard preset piseiro loop, kick on every beat",
+   "bateria": "keyboard preset piseiro loop, kick on every beat, syncopated offbeat bass",
    "instrumentos": "piseiro keyboard (teclado) lead with accordion sound, synth bass",
    "clima": "festa junina energy",
    "temas": [
@@ -429,7 +437,7 @@
    ],
    "peso": "marcada",
    "genero": "ciranda pernambucana, circle dance, swaying",
-   "bateria": "keyboard preset ciranda loop, bass drum on every beat",
+   "bateria": "keyboard preset ciranda loop, bass drum on every beat, syncopated offbeat bass",
    "instrumentos": "piano, keyboard flute",
    "clima": "gentle and joyful, everyone holding hands",
    "temas": [
@@ -508,8 +516,8 @@
    ],
    "peso": "forte",
    "genero": "energetic kids rock, shout-along",
-   "bateria": "punk-rock drumming, crash cymbals, driving kick",
-   "instrumentos": "bright pop-punk electric guitars, happy major-key guitar riff, bass, short guitar solo",
+   "bateria": "keyboard preset pop-rock beat loop, syncopated kick, claps on 2 and 4",
+   "instrumentos": "one bright electric guitar riff, happy major-key hook",
    "clima": "adventurous and sunny",
    "temas": [
     "aventura",
@@ -572,7 +580,7 @@
    ],
    "peso": "media",
    "genero": "kids electronic dance pop, playful synthpop",
-   "bateria": "keyboard preset four-on-the-floor loop",
+   "bateria": "keyboard preset four-on-the-floor loop, syncopated offbeat bass",
    "instrumentos": "sparkly synth leads, arpeggios",
    "clima": "futuristic and fun",
    "temas": [
@@ -602,7 +610,7 @@
    ],
    "peso": "media",
    "genero": "kids disco funk, groovy and shiny",
-   "bateria": "keyboard preset disco loop, four-on-the-floor",
+   "bateria": "keyboard preset disco loop, four-on-the-floor, syncopated offbeat bass",
    "instrumentos": "synth strings, electric piano",
    "clima": "party dress-up fun",
    "temas": [

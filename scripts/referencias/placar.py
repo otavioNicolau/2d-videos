@@ -40,6 +40,8 @@ ITENS = [
     ("teclado_eletronico", "teclado/synth reconhecido", 0.04, 1.0, "pouco teclado → 'bright piano / keyboard melody' logo depois do ritmo"),
     ("bateria_banda", "bateria de banda reconhecida", 0.0, 0.04, "bateria de banda → Exclude 'live drums, drum fills, acoustic drums'"),
     ("percussao", "percussão (chocalho/batucada)", 0.0, 0.04, "percussão demais → tirar o nome do ritmo que puxa batucada (usar 'groove')"),
+    ("sincope", "batida sincopada (contratempo) — o 'contagiante'", 0.60, 1.0, "batida reta → E7: 'syncopated bouncy groove, offbeat claps'; tirar 'driving kick / kick on every beat'"),
+    ("baixo_sincopado", "baixo fora do tempo forte ('bounce')", 0.50, 1.0, "baixo reto → 'deep bouncy syncopated keyboard bass on the offbeats'"),
     ("duracao_s", "duração do take (s)", 140, 185, "curta → aumentar a letra (mais uma volta do refrão); longa → cortar o fim"),
 ]
 
@@ -67,7 +69,9 @@ def preparar(n: str) -> tuple[Path, dict]:
     script = ROOT / "scripts" / "referencias" / "analisar_referencias.py"
     subprocess.run([str(ROOT / ".venv-audio" / "bin" / "python"), str(script), "A", str(NOS)], check=True, capture_output=True)
     subprocess.run([str(ROOT / ".venv" / "bin" / "python"), str(script), "B", str(NOS)], check=True, capture_output=True)
-    return d, json.loads((NOS / "analise" / f"{nome}.json").read_text(encoding="utf-8"))
+    an = json.loads((NOS / "analise" / f"{nome}.json").read_text(encoding="utf-8"))
+    an["groove"] = _batida(NOS / "stems" / "htdemucs" / nome)
+    return d, an
 
 
 def medidas(a: dict) -> dict:
@@ -76,12 +80,31 @@ def medidas(a: dict) -> dict:
          "duracao_s": a.get("duracao_s")}
     for f, ls in FAM.items():
         m[f] = round(max(a["instrumentos"].get(l, 0) for l in ls), 3)
+    m.update({k: (a.get("groove") or {}).get(k) for k in ("sincope", "baixo_sincopado")})
     return m
+
+
+def _batida(stems: Path) -> dict:
+    """Raio-x da batida (scripts/referencias/batida.py) na bateria/baixo separados; roda no .venv (librosa)."""
+    r = subprocess.run([str(ROOT / ".venv" / "bin" / "python"), "-c",
+                        "import sys,json; sys.path.insert(0, sys.argv[1]); import batida; from pathlib import Path; "
+                        "print(json.dumps(batida.medir(Path(sys.argv[2]))))", str(ROOT / "scripts" / "referencias"), str(stems)],
+                       capture_output=True, text=True)
+    try:
+        return json.loads(r.stdout.strip().splitlines()[-1]) or {}
+    except (IndexError, json.JSONDecodeError):
+        return {}
 
 
 def referencia() -> dict:
     out = {}
-    D = [json.loads(p.read_text(encoding="utf-8")) for p in REF.glob("*.json")]
+    bt = ROOT / "referencias" / "batida.json"                    # raio-x da batida das referências (batida.py)
+    B = json.loads(bt.read_text(encoding="utf-8"))["referencia"] if bt.exists() else {}
+    D = []
+    for p in REF.glob("*.json"):
+        x = json.loads(p.read_text(encoding="utf-8"))
+        x["groove"] = B.get(p.stem, {})
+        D.append(x)
     for k in [i[0] for i in ITENS]:
         vals = [medidas(x).get(k) for x in D]
         vals = [v for v in vals if v is not None]
@@ -105,7 +128,7 @@ def main():
     a = ap.parse_args()
     hist = json.loads(HIST.read_text(encoding="utf-8")) if HIST.exists() else []
     if a.historico or not a.musica:
-        cols = ["voz_%", "baixo_%", "outros_%", "largura_voz", "batidas_identicas", "teclado_eletronico", "percussao"]
+        cols = ["voz_%", "baixo_%", "outros_%", "largura_voz", "batidas_identicas", "sincope", "baixo_sincopado"]
         print("música  estilo  " + "  ".join(c[:10].rjust(10) for c in cols) + "  nota")
         ref = referencia()
         print("REFER.  ------  " + "  ".join(f"{ref[c]:>10}" for c in cols))

@@ -116,3 +116,11 @@ do tempo de dança · parado ≤ 8 % · acento na batida ≥ 75 %. Histórico: `
   mais usada, tinha perna E corpo parados). Ginga de base (`cycles._ginga`) nos canais que o passo não define:
   joelhos dobram e o corpo desce NA batida, peso de um pé para o outro a cada 2 batidas, calcanhar do pé livre sobe
   no contratempo. Simulação na 18: pernas 13 → 20, corpo 14 → 17. Laboratório: `A2 (pernas e corpo) - *.mp4`.
+
+## Batida contagiante (19/11/2026: "temos que focar nas batidas do som contagiante que faz a pessoa gostar")
+`scripts/referencias/batida.py` faz o raio-x da bateria e do baixo separados: síncope (golpes no contratempo), baixo
+fora do tempo forte, bumbo reto em todo tempo, palma no 2 e no 4, pegada, e o desenho da batida em 16 posições.
+Referência: síncope 0,69 · baixo sincopado 0,52 · bumbo reto 0,50. Nossas 01–18: 0,56 · 0,59 · 0,67.
+A nota de ouvido acompanha a síncope: 14 (0,39) → 3 · 15 (0,52) → 4 · 16 (0,68) → 4 · 17 (0,74) → 4 · 18 (0,72, baixo
+0,90) → 4,6. A 19 v1 (rock com "punk-rock drumming, driving kick") saiu reta: 0,41 / 0,39.
+O placar da música ganhou os itens **síncope ≥ 0,60** e **baixo sincopado ≥ 0,50**. Estilo **E7** = batida sincopada.

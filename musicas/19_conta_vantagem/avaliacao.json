@@ -1,0 +1,51 @@
+{
+ "schema": "avaliacao-1.0",
+ "versoes": {
+  "v1": {
+   "arquivo": "v1.wav",
+   "duracao": 154.8,
+   "bpm": 166.7,
+   "bpm_nota": "leitura 83 ajustada ×2",
+   "tom": "Sol maior",
+   "voz_inicio": 0.4,
+   "refrao_inicio": null,
+   "cantado": 76,
+   "intervalos": [
+    [
+     40.4,
+     11.5
+    ],
+    [
+     89.5,
+     11.5
+    ]
+   ],
+   "fim_depois_da_voz": 4.5,
+   "final": "corte seco",
+   "silencio_final": 2.5,
+   "acerto": 72,
+   "nao_reconhecidas": [
+    "mentirinha",
+    "baratinha",
+    "luisinho",
+    "contar",
+    "caixinha"
+   ],
+   "pontos_a_conferir": [
+    "o gancho não foi reconhecido na transcrição",
+    "só 72% da letra reconhecida — ouvir a pronúncia"
+   ]
+  }
+ },
+ "ouvido": {
+  "v1": {
+   "1 começo chama atenção": null,
+   "5 melodia combina com a letra": null,
+   "6 dá vontade de dançar": null,
+   "7 pronúncia natural": null,
+   "8 tem a cara do canal": null,
+   "9 nenhum trecho cansativo": null
+  }
+ },
+ "escolhida": "v1"
+}
