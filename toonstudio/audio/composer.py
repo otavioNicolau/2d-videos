@@ -104,6 +104,9 @@ def expandir(letra: str, peso: str, E: dict, V: dict) -> str:
         intervalo = trio.get("intervalo", intervalo)
         if trio.get("intro"):
             letra = re.sub(r"^\[\s*Intro\b[^\]]*\]", trio["intro"], letra, count=1, flags=re.M | re.I)
+        if trio.get("resposta_teclado"):      # 20/11: o teclado responde cada verso cantado (tram tram tram-ram)
+            letra = re.sub(r"^\[\s*(Verse|Chorus)([^\]]*)\]", lambda m: f"[{m.group(1)}{m.group(2)}, short keyboard riff after each line]",
+                           letra, flags=re.M | re.I)
     fill = {"forte": "[Keyboard Fill]", "media": "[Keyboard Fill]", "marcada": ""}[peso]   # E9 = E6 (19/11): virada de teclado de volta
     out = []
     for raw in letra.splitlines():
