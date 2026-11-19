@@ -13,7 +13,6 @@
    "Spanish accent",
    "minor key",
    "fade out",
-   "long song",
    "extended outro",
    "medley",
    "full band",
@@ -41,7 +40,7 @@
    "answering voice",
    "group vocals"
   ],
-  "duracao": "short song under 2 minutes 40 seconds, ends after the last chorus",
+  "duracao": "sing every line of the lyrics, full song with all verses and choruses",
   "producao": "built-in keyboard rhythm with programmed kick, snare and claps repeating the same loop through the whole song, deep bouncy keyboard bass, one bright keyboard or piano melody, a few playful cartoon sound effects (boing, toy bells), single dry centered lead vocal, close and clear, lots of space in the mix, polished kids music production",
   "nota_producao": "18/11/2026: análise de 18 músicas da Animadinhos (musicas/REFERENCIA_ANIMADINHOS.md): arranjo enxuto de teclado/eletrônico, voz e batida empatadas (41 × 38 %), efeitos de desenho; as nossas saíam com banda + batucada e voz a 58 %.",
   "nota_voz": "18/11/2026: a voz da referência é UMA só e centralizada (largura 0,00–0,02); as nossas tinham coro/vozes de fundo espalhados (0,08–0,29) e muitos instrumentos — 'muita informação' (usuário). Uma voz por vez, respostas cantadas pela mesma voz.",
@@ -119,7 +118,7 @@
    {
     "versao": "E10",
     "data": "19/11/2026",
-    "mudanca": "E9 (= E6 + Exclude contra segunda voz) + ajustes Advanced do Suno v6: Vocal Gender pela voz, Duration Custom 2:40, Weirdness 20 %, Style Influence 80 %, Audio Influence 60 %, Variety mínima, Personalize Off; suno.txt sem as alternativas de ritmo (confundiam)",
+    "mudanca": "E9 (= E6 + Exclude contra segunda voz) + ajustes Advanced do Suno v6: Vocal Gender pela voz, Duration Custom 2:40, Weirdness 20 %, Style Influence 80 %, Audio Influence 60 %, Variety mínima, Personalize Off; suno.txt sem as alternativas de ritmo (confundiam) · correção no mesmo dia: Duration Auto e Style sem 'short song' (gerava < 50 s)",
     "motivo": "usuário: 'precisamos ajustar no Suno' — o texto do Style chegou no limite (segunda voz, batida que muda e teclado pouco reconhecido não mudaram da 14 à 19); as opções Advanced controlam o quanto o Suno obedece",
     "usado_em": "20 em diante"
    }
@@ -132,7 +131,7 @@
   "nota_loop": "19/11/2026 (usuário ouvindo a 19 v2): 'Animadinhos são ritmos e batidas que não mudam muito durante a música; a nossa está ficando ainda estilo banda'. Medido: loop igual referência 0,96 × 19 v1 0,84 × 19 v2 0,75; outros instrumentos 9 % × 20 %. E8: um loop sincopado só, sem virada entre as partes, mesma batida no verso e no refrão, sem solo/quebra.",
   "nota_regressao": "19/11/2026, usuário: 'estamos regredindo: segunda voz e sem as batidas viciantes que estávamos conquistando entre a 15 e 17'. Notas: 15–17 (E5/E6) = 4, 18 (E6) = 4,6, 19 (E7) = 3,8. Regra do processo: mudança que piora volta atrás → E9 = E6 de novo (+ Exclude contra segunda voz). O raio-x de síncope continua só como medida, não como alvo do Style.",
   "suno_avancado": {
-   "Duration": "Custom → 2:40",
+   "Duration": "Auto (o tamanho vem da letra)",
    "Max Mode": "Off",
    "Weirdness": "20%",
    "Style Influence": "80%",
@@ -140,7 +139,9 @@
    "Variety": "Off (o mínimo)",
    "Personalize": "Off"
   },
-  "nota_suno_avancado": "19/11/2026: o usuário mostrou as opções Advanced do Suno v6. Style Influence alto = obedece mais ao Style (teclado, loop, uma voz); Weirdness baixo = menos invenção (menos segunda voz, menos partes novas, batida mais constante); Audio Influence alto = puxa mais o som da Voice (Luisinho v2/Laurinha v2, criadas de takes de teclado); Variety baixa = menos variação; Duration Custom 2:40 = acaba no tempo certo (a 18 saiu com 3:45)."
+  "nota_suno_avancado": "19/11/2026: o usuário mostrou as opções Advanced do Suno v6. Style Influence alto = obedece mais ao Style (teclado, loop, uma voz); Weirdness baixo = menos invenção (menos segunda voz, menos partes novas, batida mais constante); Audio Influence alto = puxa mais o som da Voice (Luisinho v2/Laurinha v2, criadas de takes de teclado); Variety baixa = menos variação; Duration Custom 2:40 = acaba no tempo certo (a 18 saiu com 3:45).",
+  "duracao_antes_E10": "short song under 2 minutes 40 seconds, ends after the last chorus",
+  "nota_duracao_E10": "19/11/2026: com Style Influence 80 % e Duration Custom 2:40 o Suno gerou menos de 50 s — obedeceu ao pé da letra 'short song under 2 minutes 40 seconds'. Tirado do Style (agora pede para cantar a letra toda) e Duration volta para Auto."
  },
  "peso": {
   "forte": {
