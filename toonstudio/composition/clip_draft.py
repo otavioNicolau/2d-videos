@@ -141,7 +141,10 @@ def rascunho(project_dir: Path, musica: Path, titulo: str | None = None, permiti
     bordoes = {v["bordao"] for v in composer.vozes()["vozes"].values() if v.get("bordao")}
     scenes, n_ref, n_dan, n_par, n_tr = [], 0, 0, 0, 0
     rot_p = musica / "roteiro.json"
-    roteiro = json.loads(rot_p.read_text(encoding="utf-8"))["partes"] if rot_p.exists() else {}
+    rot_full = json.loads(rot_p.read_text(encoding="utf-8")) if rot_p.exists() else {}
+    roteiro = rot_full.get("partes", {})
+    global ESCALA
+    ESCALA = float(rot_full.get("escala_personagens", 1.0))   # 19/11: personagens maiores na tela (referência ~85 % da altura)
     if not permitir_generico:                 # PADRAO_DE_QUALIDADE.md: nada de rascunho — roteiro completo, verso a verso
         cont: dict = {}
         faltam = []
@@ -306,6 +309,8 @@ def rascunho(project_dir: Path, musica: Path, titulo: str | None = None, permiti
 #          "flash": bool, "sons": [{t, id, vol}] (efeito sonoro; vol em dB, 0 = nível padrão), "escurece": [a0, a1] (luz baixando), "transicao": tipo, "cantam": [...], "tela_dividida": {"layout", "paineis": [sub-plano, sub-plano]}}
 # Atuação: "dur": "resto" vai até o fim do plano. O canto (boca) vem da letra: quem canta a parte e está no plano.
 GRAPHIC = ("danca_", "padrao_")
+ESCALA = 1.0            # multiplica o tamanho (depth) de atores e objetos do roteiro; "escala_personagens" no roteiro.json
+NAO_ESCALA = {"joinha", "botao_inscrever", "logo", "numero"}      # peças de interface: tamanho fixo
 SING_CAST = ("laurinha", "luisinho")
 
 
@@ -334,10 +339,10 @@ def _camera(spec, bg: str, atores: dict, dur: float) -> dict:
             a = atores[who]
             x = a.get("x", x)
             base_y = a.get("y", 1010 if graphic else GROUND)
-            if kind == "medio":
-                y, z0 = base_y - 330, 1.3
+            if kind == "medio":                              # personagem maior (ESCALA) → menos zoom para o mesmo enquadramento
+                y, z0 = base_y - 330 * ESCALA, max(1.0, 1.3 / ESCALA)
             elif kind == "close":
-                y, z0 = base_y - 380, 1.75
+                y, z0 = base_y - 380 * ESCALA, max(1.15, 1.75 / ESCALA)
         z1 = z0 + 0.06
     if graphic:
         x = 960 if abs(x - 960) < 1 else x
@@ -354,8 +359,8 @@ def _performance(a: dict, dur: float, graphic: bool) -> dict:
     from ..animation.acting import HOLD_SIDE
     st = {"x": a.get("x", 960), "y": a.get("y", 1010 if graphic else GROUND), "turn": a.get("turn", 0.15),
           "expr": a.get("expr", "happy"), "z": a.get("z", 3)}
-    if graphic or "depth" in a:
-        st["depth"] = a.get("depth", 1.3 if graphic else 1.0)
+    if graphic or "depth" in a or ESCALA != 1.0:
+        st["depth"] = round(a.get("depth", 1.3 if graphic else 1.0) * ESCALA, 3)
     for k in ("mochila", "bigode", "fly", "dangle"):
         if k in a:
             st[k] = a[k]
@@ -382,8 +387,8 @@ def _objetos(objs: dict, cast: dict) -> dict:
         cid = o.get("id", name)
         cast[name] = {"character": cid}
         st = {"x": o.get("x", 960), "y": o.get("y", GROUND), "z": o.get("z", 1), **o.get("pose", {})}
-        if "depth" in o:
-            st["depth"] = o["depth"]
+        if "depth" in o or (ESCALA != 1.0 and cid not in NAO_ESCALA):
+            st["depth"] = round(o.get("depth", 1.0) * (1.0 if cid in NAO_ESCALA else ESCALA), 3)
         perf = {"start": st, "exposure": 1}
         if o.get("keys"):
             perf["keys"] = o["keys"]
