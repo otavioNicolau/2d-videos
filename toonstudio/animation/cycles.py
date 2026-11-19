@@ -159,18 +159,21 @@ def beat_phase(t: float, beats: list[float]) -> tuple[int, float]:
 _ARM_V_N = {"hand_n_x": -128, "hand_n_y": -82, "hand_n_bend": 0.5, "paw_n": 3}
 _ARM_V_F = {"hand_f_x": 128, "hand_f_y": -82, "hand_f_bend": -0.5, "paw_f": 3}
 CHOREO: dict[str, tuple[float, list[tuple[float, dict]]]] = {
-    # balanço lateral: peso de um pé para o outro, tronco gira, cabeça contrabalança, braços em pêndulo
+    # balanço lateral (A1, 19/11 — "os braços estão estranhos"): peso de um pé para o outro, tronco quase de frente;
+    # braços SEMPRE por fora do corpo, abertos, balançando juntos para o lado do peso (nunca cruzam a barriga)
     "balanco": (2, [
-        (0.0, {"body_x": -34, "body_y": 7, "lean": -0.13, "turn+": -0.32, "head_tilt": 0.2, "squash": 0.982,
-               "hand_n_x": -95, "hand_n_y": 15, "hand_n_bend": 0.5, "paw_n": 3, "hand_f_x": 55, "hand_f_y": 45,
-               "hand_f_bend": 0.6, "paw_f": 0, "foot_n_bend": 0.35, "foot_f_bend": 0.1, "tail_wag": -0.5}),
-        (0.5, {"body_x": 0, "body_y": -4, "lean": 0.0, "turn+": 0.0, "head_tilt": 0.0, "squash": 1.014,
-               "hand_n_x": -40, "hand_n_y": 40, "hand_f_x": 40, "hand_f_y": 40, "foot_n_bend": 0.1, "foot_f_bend": 0.1, "tail_wag": 0}),
-        (1.0, {"body_x": 34, "body_y": 7, "lean": 0.13, "turn+": 0.32, "head_tilt": -0.2, "squash": 0.982,
-               "hand_n_x": -55, "hand_n_y": 45, "hand_n_bend": 0.6, "paw_n": 0, "hand_f_x": 95, "hand_f_y": 15,
-               "hand_f_bend": 0.5, "paw_f": 3, "foot_n_bend": 0.1, "foot_f_bend": 0.35, "tail_wag": 0.5}),
-        (1.5, {"body_x": 0, "body_y": -4, "lean": 0.0, "turn+": 0.0, "head_tilt": 0.0, "squash": 1.014,
-               "hand_n_x": -40, "hand_n_y": 40, "hand_f_x": 40, "hand_f_y": 40, "foot_n_bend": 0.1, "foot_f_bend": 0.1, "tail_wag": 0}),
+        (0.0, {"body_x": -30, "body_y": 8, "lean": -0.12, "turn+": -0.12, "head_tilt": 0.18, "squash": 0.975,
+               "hand_n_x": -132, "hand_n_y": -28, "hand_n_bend": 0.45, "paw_n": 3, "hand_f_x": 96, "hand_f_y": 48,
+               "hand_f_bend": -0.35, "paw_f": 3, "foot_n_bend": 0.4, "foot_f_bend": 0.08, "foot_f_y": -10, "tail_wag": -0.5}),
+        (0.5, {"body_x": 0, "body_y": -6, "lean": 0.0, "turn+": 0.0, "head_tilt": 0.0, "squash": 1.02,
+               "hand_n_x": -104, "hand_n_y": 22, "hand_n_bend": 0.35, "hand_f_x": 104, "hand_f_y": 22, "hand_f_bend": -0.35,
+               "foot_n_bend": 0.1, "foot_f_bend": 0.1, "foot_f_y": 0, "foot_n_y": 0, "tail_wag": 0}),
+        (1.0, {"body_x": 30, "body_y": 8, "lean": 0.12, "turn+": 0.12, "head_tilt": -0.18, "squash": 0.975,
+               "hand_n_x": -96, "hand_n_y": 48, "hand_n_bend": 0.35, "paw_n": 3, "hand_f_x": 132, "hand_f_y": -28,
+               "hand_f_bend": -0.45, "paw_f": 3, "foot_n_bend": 0.08, "foot_f_bend": 0.4, "foot_n_y": -10, "tail_wag": 0.5}),
+        (1.5, {"body_x": 0, "body_y": -6, "lean": 0.0, "turn+": 0.0, "head_tilt": 0.0, "squash": 1.02,
+               "hand_n_x": -104, "hand_n_y": 22, "hand_n_bend": 0.35, "hand_f_x": 104, "hand_f_y": 22, "hand_f_bend": -0.35,
+               "foot_n_bend": 0.1, "foot_f_bend": 0.1, "foot_f_y": 0, "foot_n_y": 0, "tail_wag": 0}),
     ]),
     # palmas no tempo: mãos se encontram NA batida (com o corpo descendo), abrem entre as batidas
     "palmas": (1, [
@@ -236,18 +239,21 @@ CHOREO: dict[str, tuple[float, list[tuple[float, dict]]]] = {
         (1.5, {"hand_n_x": -100, "hand_n_y": -50, "hand_f_x": 100, "hand_f_y": -50, "body_y": -3, "turn+": 0.0,
                "head_tilt": 0.0, "squash": 1.014, "lean": 0.0}),
     ]),
-    # "vai pro lado": passo lateral deslizado (sem pulo) com o braço DO LADO apontando
+    # "vai pro lado" (A1, 19/11): passo lateral; o braço DO LADO aponta longe (esticado, um pouco para cima) e o outro
+    # abre dobrado na altura do ombro (cotovelo para fora) — nada de mão no quadril atravessando o corpo
     "lado": (2, [
-        (0.0, {"body_x": -40, "body_y": 6, "lean": -0.12, "squash": 0.97, "foot_n_y": 0, "foot_f_y": 0,
-               "hand_n_x": -125, "hand_n_y": -15, "hand_n_bend": 0.05, "paw_n": 2, "hand_f_x": 18, "hand_f_y": 52,
-               "hand_f_bend": -0.9, "paw_f": 1, "turn+": -0.2, "head_tilt": 0.1}),
-        (0.45, {"body_x": 0, "body_y": -10, "lean": 0.0, "squash": 1.03, "foot_n_y": -10, "foot_f_y": -14, "turn+": 0.0,
-                "hand_n_x": -60, "hand_n_y": -40, "hand_f_x": 60, "hand_f_y": -40, "paw_n": 3, "paw_f": 3, "head_tilt": 0.0}),
-        (1.0, {"body_x": 40, "body_y": 6, "lean": 0.12, "squash": 0.97, "foot_n_y": 0, "foot_f_y": 0,
-               "hand_n_x": -18, "hand_n_y": 52, "hand_n_bend": -0.9, "paw_n": 1, "hand_f_x": 125, "hand_f_y": -15,
-               "hand_f_bend": 0.05, "paw_f": 2, "turn+": 0.2, "head_tilt": -0.1}),
-        (1.45, {"body_x": 0, "body_y": -10, "lean": 0.0, "squash": 1.03, "foot_n_y": -14, "foot_f_y": -10, "turn+": 0.0,
-                "hand_n_x": -60, "hand_n_y": -40, "hand_f_x": 60, "hand_f_y": -40, "paw_n": 3, "paw_f": 3, "head_tilt": 0.0}),
+        (0.0, {"body_x": -40, "body_y": 8, "lean": -0.12, "squash": 0.97, "foot_n_x": -40, "foot_n_y": 0, "foot_f_x": 10,
+               "foot_f_y": 0, "hand_n_x": -150, "hand_n_y": -52, "hand_n_bend": 0.12, "paw_n": 2, "hand_f_x": 92,
+               "hand_f_y": -10, "hand_f_bend": -0.6, "paw_f": 3, "turn+": -0.12, "head_tilt": 0.12}),
+        (0.45, {"body_x": 0, "body_y": -12, "lean": 0.0, "squash": 1.03, "foot_n_x": -14, "foot_f_x": 16, "foot_n_y": -12,
+                "foot_f_y": -16, "turn+": 0.0, "hand_n_x": -112, "hand_n_y": 18, "hand_n_bend": 0.35, "paw_n": 3,
+                "hand_f_x": 112, "hand_f_y": 18, "hand_f_bend": -0.35, "paw_f": 3, "head_tilt": 0.0}),
+        (1.0, {"body_x": 40, "body_y": 8, "lean": 0.12, "squash": 0.97, "foot_n_x": -10, "foot_n_y": 0, "foot_f_x": 40,
+               "foot_f_y": 0, "hand_n_x": -92, "hand_n_y": -10, "hand_n_bend": 0.6, "paw_n": 3, "hand_f_x": 150,
+               "hand_f_y": -52, "hand_f_bend": -0.12, "paw_f": 2, "turn+": 0.12, "head_tilt": -0.12}),
+        (1.45, {"body_x": 0, "body_y": -12, "lean": 0.0, "squash": 1.03, "foot_n_x": -14, "foot_f_x": 16, "foot_n_y": -16,
+                "foot_f_y": -12, "turn+": 0.0, "hand_n_x": -112, "hand_n_y": 18, "hand_n_bend": 0.35, "paw_n": 3,
+                "hand_f_x": 112, "hand_f_y": 18, "hand_f_bend": -0.35, "paw_f": 3, "head_tilt": 0.0}),
     ]),
     # marcha: joelho alto alternado, braços em oposição
     "marcha": (2, [

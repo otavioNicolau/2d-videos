@@ -30,7 +30,7 @@ from toonstudio.render.pipeline import Episode  # noqa: E402
 M = ROOT / "musicas"
 HIST = M / "MELHORIA_ANIMACAO.json"
 CAST = ("laurinha", "luisinho")
-VERSAO_ATUAL = "A0"           # versão da biblioteca de animação (subir a cada ajuste; registrar em PROCESSO_MELHORIA.md)
+VERSAO_ATUAL = "A1"           # versão da biblioteca de animação (subir a cada ajuste; registrar em PROCESSO_MELHORIA.md)
 
 # (medida, rótulo, mínimo, máximo, o que mexer)
 ITENS = [

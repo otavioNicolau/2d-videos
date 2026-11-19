@@ -105,3 +105,8 @@ do tempo de dança · parado ≤ 8 % · acento na batida ≥ 75 %. Histórico: `
 **Versões da animação**
 - **A0** (até a 18): 22 passos em `cycles.CHOREO`. Linha de base medida nas 12–18: pernas quase paradas (5–14 u),
   corpo pouco balanço (14–29 u), braços médios (27–114 u), 5 estilos por vídeo nas 16–18 (11 na 12), a 16 com 76 % de frevo.
+- **A1** (19/11, a partir da 19): usuário olhou o laboratório A0 — "balanço, lado: os braços estão estranhos". Os dois
+  passos refeitos: braços sempre por fora do corpo (antes um braço virava gancho em cima da barriga/quadril), abertos
+  e balançando com o peso; tronco quase de frente (giro ±0,32 → ±0,12); no "lado", passo de pé de verdade e o braço
+  do lado esticado apontando longe. Laboratório: `Canal\Laboratório de dança\A1 (balanço e lado novos) - *.mp4`.
+  Próximo candidato (A2): pernas e corpo (joelho na batida, peso de um pé para o outro) — aguardando o usuário.
