@@ -97,6 +97,11 @@ def _capitulos(song: dict, offset: float, total: float, nomes_ficha: dict | None
     return caps if len(caps) >= 3 else []
 
 
+PLAYLIST_GERAL = "Músicas Infantis da Laurinha e do Luisinho 🐝"
+# links das playlists (nome → https://www.youtube.com/playlist?list=…): o usuário cria no Studio e passa o link; sem link sai só o nome
+LINKS_PLAYLISTS = Path(__file__).resolve().parents[2] / "musicas" / "playlists_links.json"
+
+
 def publicar(project: str, musica: Path, copiar: bool = True) -> Path:
     from ..audio import composer
     from .canal import miniatura
@@ -123,9 +128,13 @@ def publicar(project: str, musica: Path, copiar: bool = True) -> Path:
     desc = [f"TÍTULO\n{titulo}", "", "DESCRIÇÃO", yt["resumo"].strip(), ""]
     if f.get("curiosidade"):
         desc += [f"💡 Você sabia? {yt.get('curiosidade') or f['curiosidade'][0].upper() + f['curiosidade'][1:]}!".replace("!!", "!"), ""]
+    pls = list(dict.fromkeys([PLAYLIST_GERAL, *f.get("playlists", [])]))      # musicas/PLAYLISTS.md
+    links = json.loads(LINKS_PLAYLISTS.read_text(encoding="utf-8")) if LINKS_PLAYLISTS.exists() else {}
     desc += ["🎵 Letra:", _letra_publicavel(musica), "",
+             "📺 Mais músicas nas playlists:"] + [f"▶️ {n}" + (f": {links[n]}" if links.get(n) else "") for n in pls] + ["",
              "👍 Peça para um adulto se inscrever no canal e deixar o joinha!", "",
              "Música e animação originais © Laurinha e Luisinho.", hashtags, "", "TAGS", tags, "",
+             "PLAYLISTS (adicionar o vídeo em)"] + [f"- {n}" for n in pls] + ["",
              "OBS.: canal para crianças — comentários ficam desativados pelo YouTube (não há comentário fixado)."]
     (out / f"{slug}.descricao.txt").write_text("\n".join(desc) + "\n", encoding="utf-8")
     song = json.loads((pdir / "analise" / "song.json").read_text(encoding="utf-8"))
@@ -135,8 +144,7 @@ def publicar(project: str, musica: Path, copiar: bool = True) -> Path:
             "- Idioma do vídeo: Português (Brasil)", f"- Legenda: enviar {slug}.srt (Português)",
             f"- Miniatura: miniatura-{slug}-1280x720.jpg", "- Conteúdo alterado/sintético: desenho animado não realista (normalmente não exige aviso; confira no Studio)",
             "- Música gerada no plano pago do Suno (uso comercial)"]
-    pls = ["Músicas Infantis da Laurinha e do Luisinho 🐝", *f.get("playlists", [])]       # musicas/PLAYLISTS.md
-    ytx += ["", "Playlists (adicionar o vídeo em):"] + [f"- {n}" for n in dict.fromkeys(pls)]
+    ytx += ["", "Playlists (adicionar o vídeo em):"] + [f"- {n}" for n in pls]
     (out / f"{slug}.youtube.txt").write_text("\n".join(ytx) + "\n", encoding="utf-8")
     letra = json.loads((pdir / "analise" / "letra.json").read_text(encoding="utf-8"))["lines"]
     itens: list[list] = []                                   # [início, fim, texto] no tempo do vídeo completo
