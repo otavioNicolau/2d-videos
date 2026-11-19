@@ -41,7 +41,10 @@ comemoram no fim do refrão. Os desenhos animados de referência usam isso o tem
 Para ouvir: a pasta `Canal\Efeitos sonoros (teste)` no Windows.
 
 ## Efeitos gravados (o usuário baixa; não dá para sintetizar bem)
-Fonte recomendada: **Biblioteca de áudio do YouTube** (YouTube Studio → Biblioteca de áudio → Efeitos sonoros), que é
+Fonte principal: **BigSoundBank** (bigsoundbank.com): licença CC0, uso comercial sem crédito, sons fora do Content ID;
+tem latido, miau, galo, vaca, ovelha, cabra, cavalo, pato, porco, sapo, passarinhos e risada de criança. Lista com links:
+`Canal\Efeitos sonoros - lista para baixar.txt` (o site bloqueia download por script: o usuário baixa).
+Para crianças comemorando: **Biblioteca de áudio do YouTube** (YouTube Studio → Biblioteca de áudio → Efeitos sonoros), que é
 liberada para vídeos do YouTube. Segunda opção: **Pixabay** (efeitos sonoros: uso comercial livre, sem crédito).
 Não usar som de outro canal nem de vídeo baixado.
 
