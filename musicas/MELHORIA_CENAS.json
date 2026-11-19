@@ -1,0 +1,211 @@
+[
+ {
+  "musica": "10",
+  "titulo": "Pingo de Chuva",
+  "medidas": {
+   "planos": 33,
+   "cenarios_reais": 4,
+   "pct_fundo_danca": 27,
+   "tipos_acao": 20,
+   "pct_camera": 15,
+   "tipos_objeto": 11,
+   "objetos_animados_pl": 0.48,
+   "coadjuvantes": 3,
+   "pct_arranjo_repetido": 9,
+   "sons_pl": 0.0
+  },
+  "acertos": "4/9",
+  "piorou": []
+ },
+ {
+  "musica": "11",
+  "titulo": "Foguete pra Lua",
+  "medidas": {
+   "planos": 30,
+   "cenarios_reais": 4,
+   "pct_fundo_danca": 23,
+   "tipos_acao": 12,
+   "pct_camera": 17,
+   "tipos_objeto": 8,
+   "objetos_animados_pl": 0.47,
+   "coadjuvantes": 1,
+   "pct_arranjo_repetido": 7,
+   "sons_pl": 0.0
+  },
+  "acertos": "5/9",
+  "piorou": [
+   "planos (cortes): 30 (média das 3 anteriores: 33)",
+   "tipos de ação diferentes: 12 (média das 3 anteriores: 20)",
+   "tipos de objeto/bicho em cena: 8 (média das 3 anteriores: 11)",
+   "objetos animados por plano: 0.47 (média das 3 anteriores: 0.48)",
+   "coadjuvantes (fora Laurinha e Luisinho): 1 (média das 3 anteriores: 3)"
+  ]
+ },
+ {
+  "musica": "12",
+  "titulo": "Méé, Carneirinho!",
+  "medidas": {
+   "planos": 57,
+   "cenarios_reais": 3,
+   "pct_fundo_danca": 25,
+   "tipos_acao": 28,
+   "pct_camera": 67,
+   "tipos_objeto": 8,
+   "objetos_animados_pl": 0.84,
+   "coadjuvantes": 1,
+   "pct_arranjo_repetido": 4,
+   "sons_pl": 0.0
+  },
+  "acertos": "7/9",
+  "piorou": [
+   "cenários de verdade (fora o fundo de dança): 3 (média das 3 anteriores: 4)",
+   "tipos de objeto/bicho em cena: 8 (média das 3 anteriores: 9.5)",
+   "coadjuvantes (fora Laurinha e Luisinho): 1 (média das 3 anteriores: 2)"
+  ]
+ },
+ {
+  "musica": "13",
+  "titulo": "Andar de Pinguim",
+  "medidas": {
+   "planos": 49,
+   "cenarios_reais": 3,
+   "pct_fundo_danca": 37,
+   "tipos_acao": 20,
+   "pct_camera": 65,
+   "tipos_objeto": 4,
+   "objetos_animados_pl": 1.43,
+   "coadjuvantes": 1,
+   "pct_arranjo_repetido": 8,
+   "sons_pl": 0.0
+  },
+  "acertos": "5/9",
+  "piorou": [
+   "cenários de verdade (fora o fundo de dança): 3 (média das 3 anteriores: 3.67)",
+   "% de planos em fundo de dança: 37 (média das 3 anteriores: 25)",
+   "tipos de objeto/bicho em cena: 4 (média das 3 anteriores: 9)",
+   "coadjuvantes (fora Laurinha e Luisinho): 1 (média das 3 anteriores: 1.67)",
+   "% de planos com a mesma arrumação do anterior: 8 (média das 3 anteriores: 6.67)"
+  ]
+ },
+ {
+  "musica": "14",
+  "titulo": "Castelo de Areia",
+  "medidas": {
+   "planos": 29,
+   "cenarios_reais": 2,
+   "pct_fundo_danca": 31,
+   "tipos_acao": 18,
+   "pct_camera": 76,
+   "tipos_objeto": 8,
+   "objetos_animados_pl": 1.21,
+   "coadjuvantes": 1,
+   "pct_arranjo_repetido": 0,
+   "sons_pl": 0.0
+  },
+  "acertos": "5/9",
+  "piorou": [
+   "planos (cortes): 29 (média das 3 anteriores: 45.33)",
+   "cenários de verdade (fora o fundo de dança): 2 (média das 3 anteriores: 3.33)",
+   "% de planos em fundo de dança: 31 (média das 3 anteriores: 28.33)",
+   "tipos de ação diferentes: 18 (média das 3 anteriores: 20)"
+  ]
+ },
+ {
+  "musica": "15",
+  "titulo": "Bolha de Sabão",
+  "medidas": {
+   "planos": 31,
+   "cenarios_reais": 3,
+   "pct_fundo_danca": 32,
+   "tipos_acao": 14,
+   "pct_camera": 74,
+   "tipos_objeto": 6,
+   "objetos_animados_pl": 2.32,
+   "coadjuvantes": 1,
+   "pct_arranjo_repetido": 0,
+   "sons_pl": 0.0
+  },
+  "acertos": "5/9",
+  "piorou": [
+   "planos (cortes): 31 (média das 3 anteriores: 45)",
+   "% de planos em fundo de dança: 32 (média das 3 anteriores: 31)",
+   "tipos de ação diferentes: 14 (média das 3 anteriores: 22)",
+   "tipos de objeto/bicho em cena: 6 (média das 3 anteriores: 6.67)"
+  ]
+ },
+ {
+  "musica": "16",
+  "titulo": "Carnaval da Turminha",
+  "medidas": {
+   "planos": 32,
+   "cenarios_reais": 2,
+   "pct_fundo_danca": 31,
+   "tipos_acao": 17,
+   "pct_camera": 62,
+   "tipos_objeto": 7,
+   "objetos_animados_pl": 0.53,
+   "coadjuvantes": 4,
+   "pct_arranjo_repetido": 3,
+   "sons_pl": 0.0
+  },
+  "acertos": "4/9",
+  "piorou": [
+   "planos (cortes): 32 (média das 3 anteriores: 36.33)",
+   "cenários de verdade (fora o fundo de dança): 2 (média das 3 anteriores: 2.67)",
+   "tipos de ação diferentes: 17 (média das 3 anteriores: 17.33)",
+   "% de planos com câmera viva (close/zoom/movimento): 62 (média das 3 anteriores: 71.67)",
+   "objetos animados por plano: 0.53 (média das 3 anteriores: 1.65)",
+   "% de planos com a mesma arrumação do anterior: 3 (média das 3 anteriores: 2.67)"
+  ]
+ },
+ {
+  "musica": "17",
+  "titulo": "Que Forma É Essa?",
+  "medidas": {
+   "planos": 32,
+   "cenarios_reais": 2,
+   "pct_fundo_danca": 34,
+   "tipos_acao": 15,
+   "pct_camera": 72,
+   "tipos_objeto": 5,
+   "objetos_animados_pl": 1.91,
+   "coadjuvantes": 1,
+   "pct_arranjo_repetido": 6,
+   "sons_pl": 0.0
+  },
+  "acertos": "4/9",
+  "piorou": [
+   "cenários de verdade (fora o fundo de dança): 2 (média das 3 anteriores: 2.33)",
+   "% de planos em fundo de dança: 34 (média das 3 anteriores: 31.33)",
+   "tipos de ação diferentes: 15 (média das 3 anteriores: 16.33)",
+   "tipos de objeto/bicho em cena: 5 (média das 3 anteriores: 7)",
+   "coadjuvantes (fora Laurinha e Luisinho): 1 (média das 3 anteriores: 2)",
+   "% de planos com a mesma arrumação do anterior: 6 (média das 3 anteriores: 1)"
+  ]
+ },
+ {
+  "musica": "18",
+  "titulo": "Robô Dançarino",
+  "medidas": {
+   "planos": 38,
+   "cenarios_reais": 2,
+   "pct_fundo_danca": 32,
+   "tipos_acao": 16,
+   "pct_camera": 66,
+   "tipos_objeto": 4,
+   "objetos_animados_pl": 0.87,
+   "coadjuvantes": 1,
+   "pct_arranjo_repetido": 13,
+   "sons_pl": 0.0
+  },
+  "acertos": "3/9",
+  "piorou": [
+   "cenários de verdade (fora o fundo de dança): 2 (média das 3 anteriores: 2.33)",
+   "% de planos com câmera viva (close/zoom/movimento): 66 (média das 3 anteriores: 69.33)",
+   "tipos de objeto/bicho em cena: 4 (média das 3 anteriores: 6)",
+   "objetos animados por plano: 0.87 (média das 3 anteriores: 1.59)",
+   "coadjuvantes (fora Laurinha e Luisinho): 1 (média das 3 anteriores: 2)",
+   "% de planos com a mesma arrumação do anterior: 13 (média das 3 anteriores: 3)"
+  ]
+ }
+]

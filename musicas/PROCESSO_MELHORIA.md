@@ -59,3 +59,26 @@ Ver `musicas/estilos.json → canal.historico`. Resumo:
 Melhorou muito em relação à linha de base (voz/batida empatadas, bateria de banda quase zero, duração certa).
 Falta: baixo (5,6 %), voz larga (0,17), batida ainda variada (0,77), pouco teclado reconhecido, percussão (0,07).
 A E5 ataca baixo, voz e batida; a 15 e a 16 dizem se funcionou.
+
+## Trilha de CENA (19/11/2026: "estamos simplificando as cenas, temos que sempre evoluir")
+O placar da música mede o som. O placar de cena mede a **imagem**: quantos cortes, quantos cenários, quantas ações
+diferentes, câmera, objetos, coadjuvantes e efeitos sonoros. Os alvos vêm das melhores (12 e 13).
+
+| Medida | Alvo |
+|---|---|
+| planos (cortes) | 45 ou mais (3,5–4,5 s por plano) |
+| cenários de verdade (fora o fundo de dança) | 4 ou mais: a história anda de lugar |
+| planos em fundo de dança | até 25 % |
+| tipos de ação diferentes | 24 ou mais |
+| câmera viva (close, zoom, movimento) | 60 % ou mais |
+| tipos de objeto/bicho | 6 ou mais |
+| objetos animados por plano | 1,2 ou mais |
+| coadjuvantes | 1 ou mais |
+| mesma arrumação do plano anterior | até 15 % |
+| efeitos sonoros por plano (da 19 em diante) | 0,8 ou mais |
+
+**Regra:** depois de escrever o roteiro e ANTES do storyboard, rodar
+`PYTHONPATH=. .venv/bin/python scripts/referencias/placar_cena.py <nº>`. Da 19 em diante, se falhar um alvo ou ficar
+abaixo da média das 3 anteriores em qualquer medida, o roteiro volta para ser refeito (o script sai com erro).
+O resultado vai junto do storyboard para o usuário. Histórico: `musicas/MELHORIA_CENAS.json`
+(`--historico` mostra a tabela).

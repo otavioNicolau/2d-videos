@@ -106,7 +106,10 @@ def verso(key):
          "objetos": {"qj": comida(QUEIJO, 1050, acende=tqj), "ov": comida(OVO, 1550, acende=tov)}},
         {"linhas": 2, "cenario": COZ, "camera": "close:luisinho", "callout": [call(tc, "UM CÍRCULO!", "laranja")],
          "atores": {LU: {"x": 1300, "turn": 0.0, "expr": "shock",
-                         "acoes": [{"t": max(0.1, tc - 0.3), "do": "take"}]}}},
+                         "acoes": [{"t": max(0.1, tc - 0.9), "do": "take"}],
+                         # a boca abre num "O" bem redondo na palavra "círculo" e fica aberta até o fim do plano
+                         "keys": [{"t": max(0.05, tc - 0.25), "pose": {"boca_o": 0.0}, "ease": "step"},
+                                  {"t": tc + 0.1, "pose": {"boca_o": 1.0}, "ease": "out", "in": 0.3}]}}},
     ]
 
 

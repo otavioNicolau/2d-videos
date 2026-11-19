@@ -110,6 +110,7 @@ class FlatMuri(Character):
                 "holding": "", "wing_phase": 0.0, "bank": 0.0, "dangle": 0.0, "hair_bounce": 0.0,
                 "fly": 0.0, "rot_pivot": 0.55, "bigode": 0.0, "mochila": 0.0, "buzz": 0.0, "suor": 0.0,
                 "despenteado": 0.0, "bafinho": 0.0, "espuma": 0.0, "brilho": 0.0, "cuspe": 0.0, "blusa": 0.0, "juba": 0.0, "tubarao": 0.0, "coroa": 0.0, "tutu": 0.0,
+                "boca_o": 0.0,
             })
 
     # ------------------------------------------------------------------ primitivas chapadas
@@ -552,6 +553,20 @@ class FlatMuri(Character):
         """Boca de traço (fechada) ou forma escura com língua (aberta). 9 visemas + sorriso."""
         shapes = {"X": (1.0, 0), "A": (0.8, 0), "B": (1.0, 8), "C": (1.05, 18), "D": (1.15, 30), "E": (0.75, 22),
                   "F": (0.5, 10), "G": (0.95, 6), "H": (1.0, 20)}
+        o = max(0.0, min(1.0, P.get("boca_o", 0.0)))
+        if o > 0.04:                                   # boca redonda em "O" (espanto, "círculo!"): oval escuro com língua
+            cx, cy = M
+            rx, ry = 12 + 16 * o, 12 + 26 * o
+            oc = (cx, cy + ry * 0.55)
+            P_ = k.shape(ellipse_pts(oc[0], oc[1], rx, ry, 0, 24), fill=_rgba("#5C1E2E"), line=0)
+            pth = skia.Path()
+            pth.addPoly([skia.Point(*q) for q in P_], True)
+            k.c.save()
+            k.c.clipPath(pth, doAntiAlias=True)
+            k.shape(ellipse_pts(oc[0], oc[1] + ry * 0.75, rx * 0.75, ry * 0.45, 0, 12), fill=_rgba("#F27A8E"), line=0)
+            k.c.restore()
+            k.shape(P_, fill=None, brush=Brush(LINE, 0.0, _rgba(line), 0.0), dense=True, line=LINE)
+            return
         wk, op = shapes.get(P["mouth"], shapes["X"])
         op += P["jaw"] * 26
         sm = P["smile"]
