@@ -2165,3 +2165,237 @@ class Robo(_Prop):
 
 
 PROPS.update({"robo": Robo})
+
+
+# ───────────────────────── 19 Conta Vantagem! ─────────────────────────
+
+BARATA, BARATA_L, BARATA_C = "#9A5A2E", "#6B3A1A", "#E8C49A"
+
+
+class Barata(_Prop):
+    """Dona Barata de desenho, em pé, toda metida (Conta Vantagem!): casco marrom brilhante, barriguinha creme, colar de
+    pérolas, batom, anteninhas enroladas. Canais: `oculos` óculos escuros; `metida` 0→1 nariz empinado, olho meio
+    fechado, mão na cintura; `aponta` 0→1 braço gesticulando (contando vantagem); `fala` boca; `susto` 0→1 olho
+    arregalado, anteninhas em pé, boca em O; `corre` fase contínua (perninhas a mil, corpo inclinado); `vergonha` 0→1
+    bochecha vermelha e mãos no rosto; `pulo`; `lado` 1 olha p/ direita, −1 p/ esquerda."""
+
+    def __init__(self):
+        super().__init__("barata", "Dona Barata", (900, 980), (450, 940), 420,
+                         {"oculos": 1.0, "metida": 0.0, "aponta": 0.0, "fala": 0.0, "susto": 0.0, "corre": 0.0,
+                          "vergonha": 0.0, "pulo": 0.0, "lado": 1.0, "correndo": 0.0})
+
+    def paint(self, k, P):
+        c01 = lambda v: max(0.0, min(1.0, v))
+        sx = 1.0 if P["lado"] >= 0 else -1.0
+        su, me, ve, ap = c01(P["susto"]), c01(P["metida"]), c01(P["vergonha"]), c01(P["aponta"])
+        cr = c01(P["correndo"])
+        fase = 2 * math.pi * P["corre"]
+        y0 = -160 * math.sin(math.pi * c01(P["pulo"])) - 10 * abs(math.sin(fase)) * cr
+        incl = 0.35 * cr * sx
+
+        def T(x, y):                                                   # gira o corpo em torno dos pés (corrida)
+            x = x * sx
+            c, s = math.cos(incl), math.sin(incl)
+            return (x * c - y * s, x * s + y * c + y0)
+
+        def oval(x, y, rx, ry, fill, line, a=0.0):
+            q = T(x, y)
+            shape(k, ellipse_pts(q[0], q[1], rx, ry, a * sx + incl, 24), fill, line=line)
+
+        for side in (-1, 1):                                           # perninhas (correndo: giram)
+            ph = fase + (0 if side > 0 else math.pi)
+            dx = 34 * math.sin(ph) * cr
+            lev = max(0.0, 26 * math.cos(ph)) * cr
+            a, b = T(side * 34, -110), T(side * 40 + dx, -6 - lev)
+            ln(k, [a, b], BARATA_L, w=LINE * 2.4)
+            ln(k, [a, b], BARATA, w=LINE * 1.4)
+            shape(k, ellipse_pts(b[0] + 12 * sx, b[1], 26, 12, 0, 14), "#E9545D", line="#B83A42")   # sapatinho
+        for side in (-1, 1):                                           # perninhas do meio (charme de inseto)
+            a, b = T(side * 70, -190), T(side * 120, -150 + 8 * math.sin(fase * 2) * cr)
+            ln(k, [a, b], BARATA_L, w=LINE * 1.6)
+        oval(0, -215, 105, 130, BARATA, BARATA_L)                        # casco (asas fechadas)
+        q1, q2 = T(0, -330), T(0, -110)
+        ln(k, [q1, q2], BARATA_L, w=LINE * 1.2)
+        oval(-38, -245, 26, 52, "#B87444", "#B87444", a=-0.35)          # brilho do casco
+        oval(0, -190, 62, 82, BARATA_C, "#C9A27A")                       # barriguinha
+        # braços: esquerdo na cintura (metida) ou aponta/gesticula; vergonha → mãos no rosto
+        hy = -385
+        for side in (-1, 1):
+            om = T(side * 78, -265)
+            if ve > 0.5:
+                mao = T(side * 40, hy + 10)
+            elif side > 0 and ap > 0:
+                mao = T(150 + 20 * ap, -330 - 60 * ap)
+            elif side < 0 and me > 0.3:
+                mao = T(-70, -170)                                     # mão na cintura
+            elif su > 0.5:
+                mao = T(side * 150, -360)                              # braços para cima (susto)
+            else:
+                mao = T(side * 120, -150)
+            cot = ((om[0] + mao[0]) / 2 + side * sx * 30, (om[1] + mao[1]) / 2)
+            ln(k, [om, cot, mao], BARATA_L, w=LINE * 2.4)
+            ln(k, [om, cot, mao], BARATA, w=LINE * 1.4)
+            shape(k, ellipse_pts(mao[0], mao[1], 16, 16, 0, 12), BARATA, line=BARATA_L)
+        for j in range(7):                                             # colar de pérolas
+            q = T(-48 + j * 16, -300 + 6 * math.sin(j * 0.5) + 4 * abs(j - 3))
+            shape(k, ellipse_pts(q[0], q[1], 8, 8, 0, 10), "#FFFFFF", line="#C9D6E0")
+        # cabeça (empina o nariz quando metida)
+        tilt = (-0.22 * me + 0.1 * ve) * sx
+        hc = T(0, hy)
+        c, s = math.cos(tilt), math.sin(tilt)
+
+        def H(x, y):
+            x = x * sx
+            return (hc[0] + x * c - y * s, hc[1] + x * s + y * c)
+
+        for side in (-1, 1):                                           # anteninhas enroladas (em pé no susto)
+            pts = []
+            for i in range(14):
+                u = i / 13
+                curl = (1 - su) * max(0.0, u - 0.55) * 4
+                ang = -math.pi / 2 + side * (0.35 + 0.25 * u) + side * curl * 1.4
+                if i == 0:
+                    pts.append(H(side * 30, -70))
+                else:
+                    px, py = pts[-1]
+                    pts.append((px + math.cos(ang) * 14, py + math.sin(ang) * 14))
+            ln(k, pts, BARATA_L, w=LINE * 1.2)
+            shape(k, ellipse_pts(pts[-1][0], pts[-1][1], 9, 9, 0, 10), BARATA_L)
+        q = H(0, 0)
+        shape(k, ellipse_pts(q[0], q[1], 82, 74, tilt, 26), BARATA, line=BARATA_L)
+        q = H(0, 22)
+        shape(k, ellipse_pts(q[0], q[1], 56, 40, tilt, 20), BARATA_C, line="#C9A27A")   # rostinho claro
+        olho_r = 17 + 10 * su
+        for side in (-1, 1):
+            e = H(side * 32, -6)
+            if P["oculos"] > 0.5 and su < 0.5:                         # óculos escuros de estrela
+                shape(k, ellipse_pts(e[0], e[1], 30, 22, tilt, 18), "#2E2E3A", line="#111111")
+                k.shape(ellipse_pts(e[0] - 8, e[1] - 7, 8, 5, tilt, 10), fill=_rgba("#FFFFFF", 0.6), line=0)
+            elif ve > 0.5:
+                ln(k, [(e[0] - 14, e[1] + 4), (e[0], e[1] + 10), (e[0] + 14, e[1] + 4)], "#3A2A1A", w=LINE)
+            else:
+                shape(k, ellipse_pts(e[0], e[1], olho_r, olho_r * 1.15, 0, 16), "#FFFFFF", line=BARATA_L)
+                k.dot(e[0] + 3 * sx, e[1] + 3, 8 - 2 * su, _rgba("#2A1A0A"))
+                if me > 0.5:                                           # pálpebra de metida
+                    shape(k, [(e[0] - olho_r, e[1] - 2), (e[0] + olho_r, e[1] - 2), (e[0] + olho_r, e[1] - olho_r * 1.2),
+                              (e[0] - olho_r, e[1] - olho_r * 1.2)], BARATA, line=BARATA_L, smooth=False)
+        if P["oculos"] > 0.5 and su < 0.5:
+            ln(k, [H(-4, -8), H(4, -8)], "#111111", w=LINE * 1.2)
+        for side in (-1, 1):                                           # bochechas (vermelhas de vergonha)
+            b = H(side * 50, 26)
+            k.shape(ellipse_pts(b[0], b[1], 14 + 6 * ve, 9 + 4 * ve, 0, 12),
+                    fill=_rgba("#FF4D6D" if ve > 0.3 else "#FF9AB0", 0.75 + 0.2 * ve), line=0)
+        f = max(c01(P["fala"]), su)
+        m = H(0, 40)
+        if su > 0.5:
+            shape(k, ellipse_pts(m[0], m[1] + 6, 14, 18, 0, 16), "#8A2E3E", line="#B83A42")
+        elif f > 0.1:
+            shape(k, ellipse_pts(m[0], m[1] + 4, 18, 6 + 12 * f, tilt, 16), "#8A2E3E", line="#D9304E")
+        else:                                                          # biquinho de batom
+            shape(k, ellipse_pts(m[0], m[1], 14, 7, tilt, 14), "#E9304E", line="#B81F3A")
+        if ve > 0.5:                                                   # mãos cobrindo as bochechas (já desenhadas por cima)
+            for side in (-1, 1):
+                q = H(side * 46, 24)
+                shape(k, ellipse_pts(q[0], q[1], 18, 18, 0, 12), BARATA, line=BARATA_L)
+
+
+class Chinelo(_Prop):
+    """Chinelo de dedo azul (a "ameaça"). `gira` rotação (1 = volta), `bate` 0→1 amassa no chão com estrelinhas;
+    `deitado` 1 = no chão visto de cima-lado, 0 = em pé de perfil (voando)."""
+
+    def __init__(self):
+        super().__init__("chinelo", "Chinelo", (700, 700), (350, 640), 220, {"gira": 0.0, "bate": 0.0, "deitado": 1.0})
+
+    def paint(self, k, P):
+        ang = 2 * math.pi * P["gira"]
+        b = max(0.0, min(1.0, P["bate"]))
+        sq = 1 - 0.35 * b
+        c, s = math.cos(ang), math.sin(ang)
+        cy = -90
+
+        def R(x, y):
+            y = y * sq
+            return (x * c - y * s, cy + x * s + y * c)
+
+        sola = [R(130 * math.cos(t), 52 * math.sin(t) * (1 if math.cos(t) > 0 else 0.85)) for t in [i * 0.2 for i in range(32)]]
+        shape(k, sola, "#3C8BF0", line="#2A64B8")
+        sola2 = [R(112 * math.cos(t), 38 * math.sin(t)) for t in [i * 0.2 for i in range(32)]]
+        shape(k, sola2, "#FFD23F", line="#D9A520")
+        ln(k, [R(-60, -32), R(40, 0), R(-60, 32)], "#2A64B8", w=LINE * 2.6)          # tira
+        ln(k, [R(-60, -32), R(40, 0), R(-60, 32)], "#E9545D", w=LINE * 1.6)
+        if b > 0.3:
+            for j, (x, y) in enumerate(((-160, -150), (0, -190), (160, -150))):
+                _estrela(k, x, y + 30 * (1 - b), 14 + 6 * b, "#FFD23F")
+
+
+class CasteloCaixa(_Prop):
+    """O "castelo" da Dona Barata. `real` 0 = castelo dourado da fantasia (com brilho), 1 = a verdade: caixinha de papelão
+    com torres desenhadas de canetinha e porta recortada. `brilho` 0→1 estrelinhas (fantasia)."""
+
+    def __init__(self):
+        super().__init__("castelo_caixa", "Castelo/caixinha", (900, 900), (450, 860), 420, {"real": 0.0, "brilho": 1.0})
+
+    def paint(self, k, P):
+        if P["real"] < 0.5:                                            # fantasia: castelo de ouro
+            ouro, ol = "#FFD23F", "#D9A520"
+            for x in (-210, 210):
+                box(k, x - 60, -470, x + 60, 0, ouro, line=ol, r=8)
+                shape(k, [(x - 78, -470), (x + 78, -470), (x, -590)], "#E9545D", line="#B83A42", smooth=False)
+                ln(k, [(x, -590), (x, -640)], ol, w=LINE)
+                shape(k, [(x, -640), (x + 40, -628), (x, -616)], "#3C8BF0", smooth=False)
+            box(k, -160, -360, 160, 0, ouro, line=ol, r=8)
+            for i in range(5):
+                box(k, -160 + i * 70, -400, -120 + i * 70, -360, ouro, line=ol, r=4)
+            shape(k, [(-50, 0), (50, 0), (50, -110), (0, -160), (-50, -110)], "#8A5A2E", line="#5A3A1A", smooth=False)
+            for x, y in ((-210, -320), (210, -320), (-90, -250), (90, -250)):
+                box(k, x - 22, y - 34, x + 22, y + 34, "#87B8F6", line="#2A64B8", r=14)
+            if P["brilho"] > 0.3:
+                for x, y, r in ((-300, -520, 22), (300, -560, 18), (0, -470, 26), (-120, -150, 14), (260, -120, 16)):
+                    _estrela(k, x, y, r, "#FFF3B0")
+        else:                                                          # verdade: caixinha de papelão
+            pap, pl = "#D9A066", "#A8743E"
+            shape(k, [(-230, 0), (230, 0), (230, -300), (-230, -300)], pap, line=pl, smooth=False)
+            shape(k, [(-230, -300), (230, -300), (190, -350), (-190, -350)], "#E8B880", line=pl, smooth=False)   # aba
+            ln(k, [(-230, -300), (-280, -380)], pl, w=LINE * 1.4)
+            for x in (-150, 150):                                      # torres de canetinha
+                ln(k, [(x - 40, -120), (x - 40, -260), (x + 40, -260), (x + 40, -120)], "#3C8BF0", w=LINE)
+                ln(k, [(x - 50, -260), (x, -295), (x + 50, -260)], "#E9545D", w=LINE)
+            shape(k, [(-45, 0), (45, 0), (45, -100), (-45, -100)], "#5A3A1A", smooth=False)   # porta recortada
+            ln(k, [(-80, -180), (-60, -200), (-40, -180)], "#3A3A3A", w=LINE * 0.8)          # rabisco
+            ln(k, [(-200, -40), (-170, -30), (-140, -45)], "#2DB34A", w=LINE)
+
+
+class CarroCarretel(_Prop):
+    """O "carro de viagem". `real` 0 = conversível vermelho brilhante da fantasia; 1 = a verdade: carretel de linha com
+    botões de rodinha. `anda` fase das rodas."""
+
+    def __init__(self):
+        super().__init__("carro_carretel", "Carro/carretel", (900, 600), (450, 560), 260, {"real": 0.0, "anda": 0.0})
+
+    def paint(self, k, P):
+        a = 2 * math.pi * P["anda"]
+        if P["real"] < 0.5:
+            shape(k, [(-300, -60), (300, -60), (290, -150), (150, -170), (80, -240), (-120, -240), (-190, -170), (-300, -150)],
+                  "#E9545D", line="#B83A42")
+            shape(k, [(-100, -230), (60, -230), (110, -170), (-160, -170)], "#87B8F6", line="#2A64B8", smooth=False)
+            box(k, 260, -130, 300, -100, "#FFF3B0", line="#D9A520", r=8)
+            for x in (-180, 180):
+                shape(k, ellipse_pts(x, -60, 60, 60, 0, 24), "#3A3A44", line="#1C1C24")
+                shape(k, ellipse_pts(x, -60, 30, 30, 0, 18), "#D6DEE8", line="#7F8EA3")
+                ln(k, [(x, -60), (x + 26 * math.cos(a), -60 + 26 * math.sin(a))], "#7F8EA3", w=LINE)
+            _estrela(k, -60, -280, 18, "#FFF3B0")
+            _estrela(k, 240, -230, 14, "#FFF3B0")
+        else:
+            box(k, -150, -230, 150, -70, "#E9C38A", line="#A8743E", r=10)        # carretel de madeira
+            for y in range(-215, -80, 14):
+                ln(k, [(-130, y), (130, y)], "#3C8BF0", w=LINE * 1.1)          # linha azul enrolada
+            for x in (-150, 150):
+                shape(k, ellipse_pts(x, -150, 22, 95, 0, 20), "#D9A066", line="#A8743E")
+            for x in (-120, 120):                                       # botões de rodinha
+                shape(k, ellipse_pts(x, -50, 50, 50, 0, 22), "#FFD23F", line="#D9A520")
+                for d in (0, math.pi / 2, math.pi, 3 * math.pi / 2):
+                    q = (x + 16 * math.cos(a + d), -50 + 16 * math.sin(a + d))
+                    shape(k, ellipse_pts(q[0], q[1], 6, 6, 0, 8), "#A8743E")
+
+
+PROPS.update({"barata": Barata, "chinelo": Chinelo, "castelo_caixa": CasteloCaixa, "carro_carretel": CarroCarretel})
