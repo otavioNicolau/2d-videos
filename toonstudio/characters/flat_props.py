@@ -57,7 +57,7 @@ def ln(k: Ink, pts, col: str, w: float = LINE, alpha: float = 1.0):
 
 ITEMS = ("copo_leite", "copo_vazio", "banana", "banana_mordida", "pente", "garrafinha", "carrinho", "sombrinha", "escova",
          "suco", "fatia_bolo", "fatia_grande", "escova_pasta", "escova_guitarra", "apito", "sapato", "estrela_natal", "sorvete",
-         "baqueta", "saxofone")
+         "baqueta", "saxofone", "pao_queijo", "pao_queijo_mordido")
 
 
 ITEM_SCALE = 1.6
@@ -82,6 +82,9 @@ def draw_item(k: Ink, name: str, H: tuple[float, float], f: float = 1.0) -> None
         ln(k, Q([(-12, -54), (-9, 6)]), "#FFFFFF", w=LINE * 0.8)
     elif name in ("banana", "banana_mordida"):
         _banana(k, Q, q, name == "banana_mordida")
+    elif name in ("pao_queijo", "pao_queijo_mordido"):                 # pãozinho de queijo na mão (24)
+        x, y = q(0, -34)
+        _paozinho(k, x, y, 0.62 * S, 1.0 if name.endswith("mordido") else 0.0)
     elif name == "pente":
         box(k, *q(-10, -70), *q(10, 10), PAL["pente"], r=6) if f > 0 else box(k, *q(10, -70), *q(-10, 10), PAL["pente"], r=6)
         for j in range(6):
@@ -2845,3 +2848,68 @@ class Coelhinho(_Prop):
 
 
 PROPS.update({"grilo": Grilo, "tatu": Tatu, "elefante": Elefante, "ovinho": Ovinho, "cesta": Cesta, "coelhinho": Coelhinho})
+
+
+# ───────────────────────── 24 Pão de Queijo ─────────────────────────
+
+def _paozinho(k, x, y, s=1.0, mordido=0.0):
+    """Pão de queijo redondinho, dourado, com rachadinhas; `mordido` tira um pedaço (aparece o miolo de queijo)."""
+    shape(k, ellipse_pts(x, y, 62 * s, 52 * s, 0, 26), "#F2B45A", line="#B9762A")
+    shape(k, ellipse_pts(x - 10 * s, y - 14 * s, 30 * s, 16 * s, -0.3, 14), "#F8D08C")
+    for a, b in ((-0.6, 0.2), (0.4, 1.1)):
+        ln(k, [(x + math.cos(a) * 40 * s, y - 10 * s + math.sin(a) * 20 * s), (x + math.cos(b) * 30 * s, y + math.sin(b) * 22 * s)], "#C9862E", w=LINE * 0.7)
+    if mordido > 0.5:
+        shape(k, ellipse_pts(x + 42 * s, y - 22 * s, 30 * s, 26 * s, 0, 18), "#FFF3C4", line="#E0C060")
+
+
+class PaoQueijo(_Prop):
+    """Pão de queijo GRANDE (o do Luisinho) com o fio de queijo que ESTICA: `estica` 0→1 tamanho do fio (até 900),
+    `dir` direção do fio em voltas (0 = para cima, 0.25 = para a direita, −0.25 = esquerda), `mordido` 0/1,
+    `vapor` fumacinha de quentinho."""
+
+    def __init__(self):
+        super().__init__("pao_queijo", "Pão de queijo", (1200, 1000), (600, 960), 300,
+                         {"estica": 0.0, "dir": 0.0, "mordido": 0.0, "vapor": 1.0, "onda": 0.0})
+
+    def paint(self, k, P):
+        cx, cy = 0, -110
+        e = max(0.0, min(1.0, P["estica"]))
+        if e > 0.02:                                                     # o fio de queijo (ondulado), saindo da mordida
+            L = 120 + 520 * e                                         # cabe no quadro do objeto
+            a = 2 * math.pi * P["dir"] - math.pi / 2
+            pts = []
+            for i in range(31):
+                u = i / 30
+                px = cx + 40 + math.cos(a) * L * u - math.sin(a) * 18 * math.sin(u * 9 + P["onda"] * 6) * u
+                py = cy - 20 + math.sin(a) * L * u + math.cos(a) * 18 * math.sin(u * 9 + P["onda"] * 6) * u
+                pts.append((px, py))
+            ln(k, pts, "#E0B030", w=LINE * 5.5)
+            ln(k, pts, "#FFE27A", w=LINE * 3.6)
+            q = pts[-1]
+            shape(k, ellipse_pts(q[0], q[1], 26, 20, 0, 16), "#FFE27A", line="#E0B030")
+        _paozinho(k, cx, cy, 1.9, P["mordido"])
+        if P["vapor"] > 0.3:
+            for j, x in enumerate((-50, 0, 50)):
+                ln(k, [(cx + x, cy - 110), (cx + x + 14, cy - 150), (cx + x - 8, cy - 190), (cx + x + 6, cy - 230)], "#FFFFFF", w=LINE * 1.4, alpha=0.75)
+        _carinha(k, cx - 15, cy + 5, {"lid": 0.0, "boca": 0.4 if P["mordido"] > 0.5 else 0.0}, "#8A5520", "#FF9A7A", esc=0.9)
+
+
+class Tabuleiro(_Prop):
+    """Tabuleiro (assadeira) com a fornada de pães de queijo fumegando. `quantos` 0→1 (vão sumindo quando comem),
+    `vapor` fumacinha."""
+
+    def __init__(self):
+        super().__init__("tabuleiro", "Tabuleiro de pão de queijo", (1000, 600), (500, 560), 200, {"quantos": 1.0, "vapor": 1.0})
+
+    def paint(self, k, P):
+        box(k, -330, -60, 330, 0, "#9AA6B4", line="#5E6B7C", r=14)
+        n = int(round(9 * max(0.0, min(1.0, P["quantos"]))))
+        pos = [(-240 + i * 120, -95) for i in range(5)] + [(-180 + i * 120, -165) for i in range(4)]
+        for i, (x, y) in enumerate(pos[:n]):
+            _paozinho(k, x, y, 0.9)
+        if P["vapor"] > 0.3:
+            for x in (-180, 0, 180):
+                ln(k, [(x, -200), (x + 16, -250), (x - 8, -300), (x + 8, -350)], "#FFFFFF", w=LINE * 1.3, alpha=0.7)
+
+
+PROPS.update({"pao_queijo": PaoQueijo, "tabuleiro": Tabuleiro})

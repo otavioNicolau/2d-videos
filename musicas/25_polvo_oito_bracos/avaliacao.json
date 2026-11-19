@@ -1,0 +1,58 @@
+{
+ "schema": "avaliacao-1.0",
+ "versoes": {
+  "v1": {
+   "arquivo": "v1.wav",
+   "duracao": 190.0,
+   "bpm": 136.0,
+   "bpm_nota": "",
+   "tom": "Fá maior",
+   "voz_inicio": 4.3,
+   "refrao_inicio": 28.6,
+   "cantado": 71,
+   "intervalos": [
+    [
+     14.1,
+     6.2
+    ],
+    [
+     67.2,
+     6.5
+    ],
+    [
+     129.0,
+     6.5
+    ],
+    [
+     158.2,
+     11.8
+    ]
+   ],
+   "fim_depois_da_voz": 1.2,
+   "final": "corte seco",
+   "silencio_final": 0.1,
+   "acerto": 86,
+   "nao_reconhecidas": [
+    "polvo",
+    "laurinha",
+    "luisinho",
+    "penteia",
+    "gostou"
+   ],
+   "pontos_a_conferir": [
+    "duração 190 s fora do alvo 140–170 s"
+   ]
+  }
+ },
+ "ouvido": {
+  "v1": {
+   "1 começo chama atenção": null,
+   "5 melodia combina com a letra": null,
+   "6 dá vontade de dançar": null,
+   "7 pronúncia natural": null,
+   "8 tem a cara do canal": null,
+   "9 nenhum trecho cansativo": null
+  }
+ },
+ "escolhida": null
+}
