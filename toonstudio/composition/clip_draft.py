@@ -306,7 +306,7 @@ def rascunho(project_dir: Path, musica: Path, titulo: str | None = None, permiti
 # plano = {"linhas": 1, "seg": s (planos sem verso), "cenario": id | [id por ocorrência], "camera": "aberto"|"medio:ator"|
 #          "close:ator"|{x,y,zoom,zoom_fim}, "atores": {nome: {x,y,turn,expr,depth,z,segura,mochila,bigode,acoes:[…],keys:[…]}},
 #          "objetos": {nome: {id?, x,y,z, pose:{…}, keys:[{t,pose}]}}, "fx": [...], "callout": "TEXTO" | [{t,text,…}],
-#          "flash": bool, "sons": [{t, id, vol}] (efeito sonoro; vol em dB, 0 = nível padrão), "escurece": [a0, a1] (luz baixando), "transicao": tipo, "cantam": [...], "tela_dividida": {"layout", "paineis": [sub-plano, sub-plano]}}
+#          "flash": bool, "tremor": [t…] (a tela treme), "sons": [{t, id, vol}] (efeito sonoro; vol em dB, 0 = nível padrão), "escurece": [a0, a1] (luz baixando), "transicao": tipo, "cantam": [...], "tela_dividida": {"layout", "paineis": [sub-plano, sub-plano]}}
 # Atuação: "dur": "resto" vai até o fim do plano. O canto (boca) vem da letra: quem canta a parte e está no plano.
 GRAPHIC = ("danca_", "padrao_")
 ESCALA = 1.0            # multiplica o tamanho (depth) de atores e objetos do roteiro; "escala_personagens" no roteiro.json
@@ -463,6 +463,8 @@ def _plano_scene(p: dict, occ: int, dur: float, plines: list, t0: float, cantam_
         cast.setdefault(w, {"character": w})
     sc["background"] = bg
     sc["camera"] = _camera(p.get("camera"), bg, atores, dur)
+    if p.get("tremor"):                                       # 19/11: a tela treme (pisada do Dino) — shake nativo do render
+        sc["camera"]["shake"] = [{"t": round(float(t), 3), "dur": 0.35, "amp": 14.0} for t in p["tremor"] if 0 <= float(t) < dur - 0.1]
     sc["characters"] = {w: _performance(a, dur, graphic) for w, a in atores.items()}
     props = _objetos(p.get("objetos"), cast)
     if props:
