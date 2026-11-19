@@ -115,15 +115,15 @@ def dorme_acorda(x, turn, t_dorme, t_acorda, d, estilo=None):
 def banda(cen, d, quem_sax=LA, teclado=False, cam=None, extra=None, fx=None):
     """A BANDA: Luisinho na bateria (baquetas nas duas mãos); Laurinha no sax (ou no teclado)."""
     p = {"seg": round(d, 2), "cenario": cen, "camera": cam or {"x": 1300, "y": 600, "zoom": 1.1, "zoom_fim": 1.18}, "fx": fx or ["notas"],
-         "objetos": {"bat": {"id": "bateria", "x": 1700, "y": 930, "z": 4, "depth": 0.9,
+         "objetos": {"bat": {"id": "bateria", "x": 1700, "y": 940, "z": 4, "depth": 0.6,
                              "keys": [{"t": round(j * 0.45, 2), "pose": {"bumbo": float(j % 2 == 0), "caixa": float(j % 2), "prato": float(j % 4 == 0)}, "ease": "out"}
                                       for j in range(int(d / 0.45))]}},
-         "atores": {LU: {"x": 1700, "y": 900, "turn": -0.2, "z": 3, "segura": "baqueta", "segura_f": "baqueta",
+         "atores": {LU: {"x": 1700, "y": 930, "turn": -0.2, "z": 3, "segura": "baqueta", "segura_f": "baqueta",
                          "acoes": [{"t": 0.0, "do": "dance", "style": "toca_bateria", "dur": "resto"}]}}}
     if teclado:
-        p["objetos"]["tec"] = {"id": "teclado_inst", "x": 800, "y": 930, "z": 4, "depth": 0.85, "keys": [{"t": 0.0, "pose": {"tecla": 0.0}, "ease": "step"},
+        p["objetos"]["tec"] = {"id": "teclado_inst", "x": 800, "y": 940, "z": 4, "depth": 0.62, "keys": [{"t": 0.0, "pose": {"tecla": 0.0}, "ease": "step"},
                                                                                                     {"t": round(d, 2), "pose": {"tecla": round(d * 2, 1)}, "ease": "linear"}]}
-        p["atores"][LA] = {"x": 800, "y": 900, "turn": 0.2, "z": 3, "acoes": [{"t": 0.0, "do": "dance", "style": "toca_teclado", "dur": "resto"}]}
+        p["atores"][LA] = {"x": 800, "y": 930, "turn": 0.2, "z": 3, "acoes": [{"t": 0.0, "do": "dance", "style": "toca_teclado", "dur": "resto"}]}
     else:
         p["atores"][quem_sax] = {"x": 800, "turn": 0.3, "segura": "saxofone", "acoes": [{"t": 0.0, "do": "dance", "style": "toca_sax", "dur": "resto"}]}
     if extra:
@@ -203,7 +203,10 @@ def refrao(n):
             cen = [QAZ, QRO, SALA, SALAO][n - 1] if i % 2 == 0 else [QRO, QAZ, SALAO, SALA][n - 1]
             p = {"linhas": 2, "cenario": cen, "camera": {"x": 1300, "y": 600, "zoom": 1.1 if i % 2 == 0 else 1.25, "zoom_fim": 1.2 if i % 2 == 0 else 1.15},
                  "callout": [call(0.2, "DORME…", "roxo"), call(ta + 0.1, "ACORDA!", "amarelo")],
-                 "objetos": quarto(0.05, ta, camas=(1300,)) if cen in (QAZ, QRO) else {"lua": lua(0.05, ta, x=1300)},
+                 "objetos": quarto(0.05, ta, camas=(1300,)) if cen in (QAZ, QRO) else ({"lua": lua(0.05, ta, x=1300)} if cen == SALA else
+                            {"palco": {"id": "bateria", "x": 1300, "y": 900, "z": 1, "depth": 0.4,      # a bateria da banda no fundo do salão
+                                       "keys": [{"t": round(j * 0.45, 2), "pose": {"bumbo": float(j % 2 == 0), "prato": float(j % 4 == 0)}, "ease": "out"}
+                                                for j in range(int(d / 0.45))]}}),
                  "atores": {LA: dorme_acorda([700, 1000, 600, 950][i], 0.3, 0.05, ta, d), LU: dorme_acorda([1900, 1650, 2000, 1700][i], -0.3, 0.05, ta + 0.05, d)}}
             if i == 3:
                 tp_ = tp(t0, v, "pula", default=d * 0.6)

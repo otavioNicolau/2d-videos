@@ -62,6 +62,9 @@
     "vovo": {
       "character": "vovo"
     },
+    "palco": {
+      "character": "bateria"
+    },
     "joinha": {
       "character": "joinha"
     },
@@ -613,7 +616,7 @@
         "luisinho": {
           "start": {
             "x": 1586.3,
-            "y": 900,
+            "y": 930,
             "turn": -0.2,
             "expr": "happy",
             "z": 3,
@@ -664,9 +667,9 @@
         "bat": {
           "start": {
             "x": 1586.3,
-            "y": 930,
+            "y": 940,
             "z": 4,
-            "depth": 1.305
+            "depth": 0.87
           },
           "exposure": 1,
           "keys": [
@@ -2500,7 +2503,7 @@
         "luisinho": {
           "start": {
             "x": 1586.3,
-            "y": 900,
+            "y": 930,
             "turn": -0.2,
             "expr": "happy",
             "z": 3,
@@ -2551,9 +2554,9 @@
         "bat": {
           "start": {
             "x": 1586.3,
-            "y": 930,
+            "y": 940,
             "z": 4,
-            "depth": 1.305
+            "depth": 0.87
           },
           "exposure": 1,
           "keys": [
@@ -4751,7 +4754,7 @@
         "luisinho": {
           "start": {
             "x": 1586.3,
-            "y": 900,
+            "y": 930,
             "turn": -0.2,
             "expr": "happy",
             "z": 3,
@@ -4776,7 +4779,7 @@
         "laurinha": {
           "start": {
             "x": 942.1,
-            "y": 900,
+            "y": 930,
             "turn": 0.2,
             "expr": "happy",
             "z": 3,
@@ -4797,9 +4800,9 @@
         "bat": {
           "start": {
             "x": 1586.3,
-            "y": 930,
+            "y": 940,
             "z": 4,
-            "depth": 1.305
+            "depth": 0.87
           },
           "exposure": 1,
           "keys": [
@@ -4897,9 +4900,9 @@
         "tec": {
           "start": {
             "x": 942.1,
-            "y": 930,
+            "y": 940,
             "z": 4,
-            "depth": 1.232
+            "depth": 0.899
           },
           "exposure": 1,
           "keys": [
@@ -5464,7 +5467,7 @@
         "luisinho": {
           "start": {
             "x": 1586.3,
-            "y": 900,
+            "y": 930,
             "turn": -0.2,
             "expr": "happy",
             "z": 3,
@@ -5534,9 +5537,9 @@
         "bat": {
           "start": {
             "x": 1586.3,
-            "y": 930,
+            "y": 940,
             "z": 4,
-            "depth": 1.305
+            "depth": 0.87
           },
           "exposure": 1,
           "keys": [
@@ -5856,7 +5859,7 @@
         "luisinho": {
           "start": {
             "x": 1586.3,
-            "y": 900,
+            "y": 930,
             "turn": -0.2,
             "expr": "happy",
             "z": 3,
@@ -5881,7 +5884,7 @@
         "laurinha": {
           "start": {
             "x": 942.1,
-            "y": 900,
+            "y": 930,
             "turn": 0.2,
             "expr": "happy",
             "z": 3,
@@ -5921,9 +5924,9 @@
         "bat": {
           "start": {
             "x": 1586.3,
-            "y": 930,
+            "y": 940,
             "z": 4,
-            "depth": 1.305
+            "depth": 0.87
           },
           "exposure": 1,
           "keys": [
@@ -5991,9 +5994,9 @@
         "tec": {
           "start": {
             "x": 942.1,
-            "y": 930,
+            "y": 940,
             "z": 4,
-            "depth": 1.232
+            "depth": 0.899
           },
           "exposure": 1,
           "keys": [
@@ -6164,45 +6167,67 @@
         }
       },
       "props": {
-        "lua": {
+        "palco": {
           "start": {
             "x": 1300.0,
-            "y": 470,
-            "z": 0,
-            "depth": 0.464
+            "y": 900,
+            "z": 1,
+            "depth": 0.58
           },
           "exposure": 1,
           "keys": [
             {
               "t": 0.0,
               "pose": {
-                "lid": 0.0,
-                "boca": 0.0,
-                "brilho": 1.0
+                "bumbo": 1.0,
+                "prato": 1.0
               },
-              "ease": "step"
+              "ease": "out"
             },
             {
-              "t": 0.05,
+              "t": 0.45,
               "pose": {
-                "lid": 1.0
+                "bumbo": 0.0,
+                "prato": 0.0
               },
-              "ease": "step"
+              "ease": "out",
+              "in": 0.42
             },
             {
-              "t": 0.82,
+              "t": 0.9,
               "pose": {
-                "lid": 0.0,
-                "boca": 1.0
+                "bumbo": 1.0,
+                "prato": 0.0
               },
-              "ease": "step"
+              "ease": "out",
+              "in": 0.42
             },
             {
-              "t": 1.42,
+              "t": 1.35,
               "pose": {
-                "boca": 0.0
+                "bumbo": 0.0,
+                "prato": 0.0
               },
-              "in": 0.57
+              "ease": "out",
+              "in": 0.42
+            },
+            {
+              "t": 1.8,
+              "pose": {
+                "bumbo": 1.0,
+                "prato": 1.0
+              },
+              "ease": "out",
+              "in": 0.42
+            },
+            {
+              "t": 2.25,
+              "pose": {
+                "bumbo": 0.0,
+                "prato": 0.0
+              },
+              "ease": "out",
+              "in": 0.42
             }
           ]
         }
@@ -6274,7 +6299,7 @@
         "luisinho": {
           "start": {
             "x": 1586.3,
-            "y": 900,
+            "y": 930,
             "turn": -0.2,
             "expr": "happy",
             "z": 3,
@@ -6325,9 +6350,9 @@
         "bat": {
           "start": {
             "x": 1586.3,
-            "y": 930,
+            "y": 940,
             "z": 4,
-            "depth": 1.305
+            "depth": 0.87
           },
           "exposure": 1,
           "keys": [
@@ -6552,45 +6577,76 @@
         }
       },
       "props": {
-        "lua": {
+        "palco": {
           "start": {
             "x": 1300.0,
-            "y": 470,
-            "z": 0,
-            "depth": 0.464
+            "y": 900,
+            "z": 1,
+            "depth": 0.58
           },
           "exposure": 1,
           "keys": [
             {
               "t": 0.0,
               "pose": {
-                "lid": 0.0,
-                "boca": 0.0,
-                "brilho": 1.0
+                "bumbo": 1.0,
+                "prato": 1.0
               },
-              "ease": "step"
+              "ease": "out"
             },
             {
-              "t": 0.05,
+              "t": 0.45,
               "pose": {
-                "lid": 1.0
+                "bumbo": 0.0,
+                "prato": 0.0
               },
-              "ease": "step"
+              "ease": "out",
+              "in": 0.42
             },
             {
-              "t": 1.23,
+              "t": 0.9,
               "pose": {
-                "lid": 0.0,
-                "boca": 1.0
+                "bumbo": 1.0,
+                "prato": 0.0
               },
-              "ease": "step"
+              "ease": "out",
+              "in": 0.42
             },
             {
-              "t": 1.83,
+              "t": 1.35,
               "pose": {
-                "boca": 0.0
+                "bumbo": 0.0,
+                "prato": 0.0
               },
-              "in": 0.57
+              "ease": "out",
+              "in": 0.42
+            },
+            {
+              "t": 1.8,
+              "pose": {
+                "bumbo": 1.0,
+                "prato": 1.0
+              },
+              "ease": "out",
+              "in": 0.42
+            },
+            {
+              "t": 2.25,
+              "pose": {
+                "bumbo": 0.0,
+                "prato": 0.0
+              },
+              "ease": "out",
+              "in": 0.42
+            },
+            {
+              "t": 2.7,
+              "pose": {
+                "bumbo": 1.0,
+                "prato": 0.0
+              },
+              "ease": "out",
+              "in": 0.42
             }
           ]
         }
@@ -6657,7 +6713,7 @@
         "luisinho": {
           "start": {
             "x": 1586.3,
-            "y": 900,
+            "y": 930,
             "turn": -0.2,
             "expr": "happy",
             "z": 3,
@@ -6682,7 +6738,7 @@
         "laurinha": {
           "start": {
             "x": 942.1,
-            "y": 900,
+            "y": 930,
             "turn": 0.2,
             "expr": "happy",
             "z": 3,
@@ -6722,9 +6778,9 @@
         "bat": {
           "start": {
             "x": 1586.3,
-            "y": 930,
+            "y": 940,
             "z": 4,
-            "depth": 1.305
+            "depth": 0.87
           },
           "exposure": 1,
           "keys": [
@@ -6812,9 +6868,9 @@
         "tec": {
           "start": {
             "x": 942.1,
-            "y": 930,
+            "y": 940,
             "z": 4,
-            "depth": 1.232
+            "depth": 0.899
           },
           "exposure": 1,
           "keys": [
@@ -6904,7 +6960,7 @@
         "luisinho": {
           "start": {
             "x": 1586.3,
-            "y": 900,
+            "y": 930,
             "turn": -0.2,
             "expr": "happy",
             "z": 3,
@@ -6929,7 +6985,7 @@
         "laurinha": {
           "start": {
             "x": 942.1,
-            "y": 900,
+            "y": 930,
             "turn": 0.2,
             "expr": "happy",
             "z": 3,
@@ -6950,9 +7006,9 @@
         "bat": {
           "start": {
             "x": 1586.3,
-            "y": 930,
+            "y": 940,
             "z": 4,
-            "depth": 1.305
+            "depth": 0.87
           },
           "exposure": 1,
           "keys": [
@@ -7050,9 +7106,9 @@
         "tec": {
           "start": {
             "x": 942.1,
-            "y": 930,
+            "y": 940,
             "z": 4,
-            "depth": 1.232
+            "depth": 0.899
           },
           "exposure": 1,
           "keys": [
@@ -7115,7 +7171,7 @@
         "luisinho": {
           "start": {
             "x": 1572.1,
-            "y": 900,
+            "y": 930,
             "turn": -0.2,
             "expr": "happy",
             "z": 3,
@@ -7185,9 +7241,9 @@
         "bat": {
           "start": {
             "x": 1572.1,
-            "y": 930,
+            "y": 940,
             "z": 4,
-            "depth": 1.305
+            "depth": 0.87
           },
           "exposure": 1,
           "keys": [

@@ -408,9 +408,9 @@
      "bat": {
       "id": "bateria",
       "x": 1700,
-      "y": 930,
+      "y": 940,
       "z": 4,
-      "depth": 0.9,
+      "depth": 0.6,
       "keys": [
        {
         "t": 0.0,
@@ -497,7 +497,7 @@
     "atores": {
      "luisinho": {
       "x": 1700,
-      "y": 900,
+      "y": 930,
       "turn": -0.2,
       "z": 3,
       "segura": "baqueta",
@@ -2939,9 +2939,9 @@
      "bat": {
       "id": "bateria",
       "x": 1700,
-      "y": 930,
+      "y": 940,
       "z": 4,
-      "depth": 0.9,
+      "depth": 0.6,
       "keys": [
        {
         "t": 0.0,
@@ -3008,7 +3008,7 @@
     "atores": {
      "luisinho": {
       "x": 1700,
-      "y": 900,
+      "y": 930,
       "turn": -0.2,
       "z": 3,
       "segura": "baqueta",
@@ -3222,9 +3222,9 @@
      "bat": {
       "id": "bateria",
       "x": 1700,
-      "y": 930,
+      "y": 940,
       "z": 4,
-      "depth": 0.9,
+      "depth": 0.6,
       "keys": [
        {
         "t": 0.0,
@@ -3290,9 +3290,9 @@
      "tec": {
       "id": "teclado_inst",
       "x": 800,
-      "y": 930,
+      "y": 940,
       "z": 4,
-      "depth": 0.85,
+      "depth": 0.62,
       "keys": [
        {
         "t": 0.0,
@@ -3315,7 +3315,7 @@
     "atores": {
      "luisinho": {
       "x": 1700,
-      "y": 900,
+      "y": 930,
       "turn": -0.2,
       "z": 3,
       "segura": "baqueta",
@@ -3331,7 +3331,7 @@
      },
      "laurinha": {
       "x": 800,
-      "y": 900,
+      "y": 930,
       "turn": 0.2,
       "z": 3,
       "acoes": [
@@ -3392,43 +3392,65 @@
      }
     ],
     "objetos": {
-     "lua": {
-      "id": "lua",
+     "palco": {
+      "id": "bateria",
       "x": 1300,
-      "y": 470,
-      "z": 0,
-      "depth": 0.32,
+      "y": 900,
+      "z": 1,
+      "depth": 0.4,
       "keys": [
        {
         "t": 0.0,
         "pose": {
-         "lid": 0.0,
-         "boca": 0.0,
-         "brilho": 1.0
+         "bumbo": 1.0,
+         "prato": 1.0
         },
-        "ease": "step"
+        "ease": "out"
        },
        {
-        "t": 0.05,
+        "t": 0.45,
         "pose": {
-         "lid": 1.0
+         "bumbo": 0.0,
+         "prato": 0.0
         },
-        "ease": "step"
+        "ease": "out",
+        "in": 0.42
        },
        {
-        "t": 0.82,
+        "t": 0.9,
         "pose": {
-         "lid": 0.0,
-         "boca": 1.0
+         "bumbo": 1.0,
+         "prato": 0.0
         },
-        "ease": "step"
+        "ease": "out",
+        "in": 0.42
        },
        {
-        "t": 1.42,
+        "t": 1.35,
         "pose": {
-         "boca": 0.0
+         "bumbo": 0.0,
+         "prato": 0.0
         },
-        "in": 0.57
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "bumbo": 1.0,
+         "prato": 1.0
+        },
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 2.25,
+        "pose": {
+         "bumbo": 0.0,
+         "prato": 0.0
+        },
+        "ease": "out",
+        "in": 0.42
        }
       ]
      }
@@ -3533,9 +3555,9 @@
      "bat": {
       "id": "bateria",
       "x": 1700,
-      "y": 930,
+      "y": 940,
       "z": 4,
-      "depth": 0.9,
+      "depth": 0.6,
       "keys": [
        {
         "t": 0.0,
@@ -3612,7 +3634,7 @@
     "atores": {
      "luisinho": {
       "x": 1700,
-      "y": 900,
+      "y": 930,
       "turn": -0.2,
       "z": 3,
       "segura": "baqueta",
@@ -3674,43 +3696,74 @@
      }
     ],
     "objetos": {
-     "lua": {
-      "id": "lua",
+     "palco": {
+      "id": "bateria",
       "x": 1300,
-      "y": 470,
-      "z": 0,
-      "depth": 0.32,
+      "y": 900,
+      "z": 1,
+      "depth": 0.4,
       "keys": [
        {
         "t": 0.0,
         "pose": {
-         "lid": 0.0,
-         "boca": 0.0,
-         "brilho": 1.0
+         "bumbo": 1.0,
+         "prato": 1.0
         },
-        "ease": "step"
+        "ease": "out"
        },
        {
-        "t": 0.05,
+        "t": 0.45,
         "pose": {
-         "lid": 1.0
+         "bumbo": 0.0,
+         "prato": 0.0
         },
-        "ease": "step"
+        "ease": "out",
+        "in": 0.42
        },
        {
-        "t": 1.23,
+        "t": 0.9,
         "pose": {
-         "lid": 0.0,
-         "boca": 1.0
+         "bumbo": 1.0,
+         "prato": 0.0
         },
-        "ease": "step"
+        "ease": "out",
+        "in": 0.42
        },
        {
-        "t": 1.83,
+        "t": 1.35,
         "pose": {
-         "boca": 0.0
+         "bumbo": 0.0,
+         "prato": 0.0
         },
-        "in": 0.57
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 1.8,
+        "pose": {
+         "bumbo": 1.0,
+         "prato": 1.0
+        },
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 2.25,
+        "pose": {
+         "bumbo": 0.0,
+         "prato": 0.0
+        },
+        "ease": "out",
+        "in": 0.42
+       },
+       {
+        "t": 2.7,
+        "pose": {
+         "bumbo": 1.0,
+         "prato": 0.0
+        },
+        "ease": "out",
+        "in": 0.42
        }
       ]
      }
@@ -3814,9 +3867,9 @@
      "bat": {
       "id": "bateria",
       "x": 1700,
-      "y": 930,
+      "y": 940,
       "z": 4,
-      "depth": 0.9,
+      "depth": 0.6,
       "keys": [
        {
         "t": 0.0,
@@ -3902,9 +3955,9 @@
      "tec": {
       "id": "teclado_inst",
       "x": 800,
-      "y": 930,
+      "y": 940,
       "z": 4,
-      "depth": 0.85,
+      "depth": 0.62,
       "keys": [
        {
         "t": 0.0,
@@ -3927,7 +3980,7 @@
     "atores": {
      "luisinho": {
       "x": 1700,
-      "y": 900,
+      "y": 930,
       "turn": -0.2,
       "z": 3,
       "segura": "baqueta",
@@ -3943,7 +3996,7 @@
      },
      "laurinha": {
       "x": 800,
-      "y": 900,
+      "y": 930,
       "turn": 0.2,
       "z": 3,
       "acoes": [
@@ -4074,9 +4127,9 @@
      "bat": {
       "id": "bateria",
       "x": 1700,
-      "y": 930,
+      "y": 940,
       "z": 4,
-      "depth": 0.9,
+      "depth": 0.6,
       "keys": [
        {
         "t": 0.0,
@@ -4203,7 +4256,7 @@
     "atores": {
      "luisinho": {
       "x": 1700,
-      "y": 900,
+      "y": 930,
       "turn": -0.2,
       "z": 3,
       "segura": "baqueta",
@@ -4330,9 +4383,9 @@
      "bat": {
       "id": "bateria",
       "x": 1700,
-      "y": 930,
+      "y": 940,
       "z": 4,
-      "depth": 0.9,
+      "depth": 0.6,
       "keys": [
        {
         "t": 0.0,
@@ -4428,9 +4481,9 @@
      "tec": {
       "id": "teclado_inst",
       "x": 800,
-      "y": 930,
+      "y": 940,
       "z": 4,
-      "depth": 0.85,
+      "depth": 0.62,
       "keys": [
        {
         "t": 0.0,
@@ -4453,7 +4506,7 @@
     "atores": {
      "luisinho": {
       "x": 1700,
-      "y": 900,
+      "y": 930,
       "turn": -0.2,
       "z": 3,
       "segura": "baqueta",
@@ -4469,7 +4522,7 @@
      },
      "laurinha": {
       "x": 800,
-      "y": 900,
+      "y": 930,
       "turn": 0.2,
       "z": 3,
       "acoes": [
@@ -4505,9 +4558,9 @@
      "bat": {
       "id": "bateria",
       "x": 1700,
-      "y": 930,
+      "y": 940,
       "z": 4,
-      "depth": 0.9,
+      "depth": 0.6,
       "keys": [
        {
         "t": 0.0,
@@ -4603,9 +4656,9 @@
      "tec": {
       "id": "teclado_inst",
       "x": 800,
-      "y": 930,
+      "y": 940,
       "z": 4,
-      "depth": 0.85,
+      "depth": 0.62,
       "keys": [
        {
         "t": 0.0,
@@ -4628,7 +4681,7 @@
     "atores": {
      "luisinho": {
       "x": 1700,
-      "y": 900,
+      "y": 930,
       "turn": -0.2,
       "z": 3,
       "segura": "baqueta",
@@ -4644,7 +4697,7 @@
      },
      "laurinha": {
       "x": 800,
-      "y": 900,
+      "y": 930,
       "turn": 0.2,
       "z": 3,
       "acoes": [
@@ -4677,9 +4730,9 @@
      "bat": {
       "id": "bateria",
       "x": 1700,
-      "y": 930,
+      "y": 940,
       "z": 4,
-      "depth": 0.9,
+      "depth": 0.6,
       "keys": [
        {
         "t": 0.0,
@@ -4776,7 +4829,7 @@
     "atores": {
      "luisinho": {
       "x": 1700,
-      "y": 900,
+      "y": 930,
       "turn": -0.2,
       "z": 3,
       "segura": "baqueta",
