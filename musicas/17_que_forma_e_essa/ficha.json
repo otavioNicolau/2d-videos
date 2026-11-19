@@ -59,10 +59,101 @@
  ],
  "youtube": {
   "resumo": "QUE FORMA É ESSA? 🍕🟦🔺 Na mesa do lanche tem pizza redondinha, torrada quadrada, queijo triângulo e ovo oval! Adivinha a forma com a Laurinha: quem acertou primeiro?",
-  "resumo_short": "QUE FORMA É ESSA? 🔺 Desenha no ar e adivinha com a Laurinha e o Luisinho!",
-  "curiosidade": "O ovo não é redondo nem quadrado: a forma dele se chama oval"
+  "resumo_short": "QUE FORMA É ESSA? 🍕🟦🔺 Adivinha com a Laurinha!",
+  "curiosidade": "O ovo não é redondo nem quadrado: a forma dele se chama oval",
+  "miniatura_cena": {
+   "fundo": "faixas",
+   "cores": [
+    [
+     255,
+     122,
+     0
+    ],
+    [
+     255,
+     242,
+     122
+    ],
+    [
+     60,
+     139,
+     240
+    ],
+    [
+     233,
+     84,
+     93
+    ],
+    [
+     255,
+     206,
+     74
+    ]
+   ],
+   "heroi": {
+    "id": "laurinha",
+    "pose": {
+     "turn": 0.2,
+     "mouth": "D",
+     "hand_n_x": -135,
+     "hand_n_y": -135,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3
+    }
+   },
+   "par": {
+    "id": "luisinho",
+    "pose": {
+     "turn": -0.2,
+     "mouth": "D",
+     "hand_n_x": -135,
+     "hand_n_y": -135,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3
+    }
+   },
+   "objetos": [
+    {
+     "id": "comida_forma",
+     "pose": {
+      "tipo": 2,
+      "brilho": 1
+     },
+     "tam": 200,
+     "x": 160,
+     "base": 320
+    }
+   ],
+   "frente": [
+    {
+     "id": "comida_forma",
+     "pose": {
+      "tipo": 0,
+      "brilho": 1,
+      "boca": 0.8
+     },
+     "tam": 330,
+     "x": 690,
+     "base": 745
+    }
+   ]
+  }
  },
  "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz)",
  "persona": "laurinha",
- "escolhida": "v1"
+ "escolhida": "v1",
+ "playlists": [
+  "Aprender Brincando 🌈🔢"
+ ],
+ "capitulos": {
+  "ponte": "A pizza? Círculo!"
+ }
 }

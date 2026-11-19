@@ -23,10 +23,13 @@ VÍDEOS (nesta ordem):
 09 Pipa no Céu
 10 Pingo de Chuva
 11 Foguete pra Lua
+17 Que Forma É Essa?
 12 Méé, Carneirinho!
 13 Andar de Pinguim
 14 Castelo de Areia
 15 Bolha de Sabão
+16 Carnaval da Turminha
+17 Que Forma É Essa?
 
 ────────────────────────────────────────────────────────────
 2) Músicas de Bichos 🐸🐜🐑🐧
@@ -93,5 +96,5 @@ VÍDEOS:
 
 ────────────────────────────────────────────────────────────
 Mais tarde (quando tiver 3 vídeos ou mais):
-- Músicas de Natal 🎄 — 07 Pisca-Pisca de Natal + as próximas de festa
+- Festas e Datas 🎉 — 07 Pisca-Pisca de Natal, 16 Carnaval da Turminha + as próximas (Páscoa, Dia das Mães, São João)
 - Comidinhas 🍕 — 24 Pão de Queijo, 33 Brigadeiro, 38 Olha a Pamonha!, 48 Macarrão que Não Acaba

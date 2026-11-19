@@ -60,11 +60,102 @@
  ],
  "youtube": {
   "resumo": "CARNAVAL DA TURMINHA! 🎉 O sapo veio de princesa, a formiga de leão, a vovó de bailarina e o vovô de tubarão! Abre a roda, pega a sombrinha e pula no bloco com o Luisinho!",
-  "resumo_short": "CARNAVAL DA TURMINHA! 🎉 Pula e gira a sombrinha com a Laurinha e o Luisinho!",
-  "curiosidade": "O confete é papel picadinho, e depois da festa a gente junta tudo e põe no lixo"
+  "resumo_short": "CARNAVAL DA TURMINHA! 🎉 O sapo de princesa e a formiga de leão!",
+  "curiosidade": "O confete é papel picadinho, e depois da festa a gente junta tudo e põe no lixo",
+  "miniatura_cena": {
+   "fundo": "aneis",
+   "cores": [
+    [
+     123,
+     92,
+     255
+    ],
+    [
+     255,
+     210,
+     63
+    ],
+    [
+     255,
+     127,
+     191
+    ],
+    [
+     45,
+     190,
+     90
+    ],
+    [
+     255,
+     138,
+     31
+    ]
+   ],
+   "heroi": {
+    "id": "luisinho",
+    "pose": {
+     "turn": 0.2,
+     "mouth": "D",
+     "hand_n_x": -135,
+     "hand_n_y": -135,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3
+    }
+   },
+   "par": {
+    "id": "laurinha",
+    "pose": {
+     "turn": -0.2,
+     "mouth": "D",
+     "hand_n_x": -135,
+     "hand_n_y": -135,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3,
+     "coroa": 1
+    }
+   },
+   "objetos": [
+    {
+     "id": "sapo",
+     "pose": {
+      "coroa": 1,
+      "croac": 1
+     },
+     "tam": 210,
+     "x": 160,
+     "base": 320
+    }
+   ],
+   "frente": [
+    {
+     "id": "formiguinha",
+     "pose": {
+      "juba": 1,
+      "expr": "joy",
+      "mouth": "D",
+      "turn": 0.3
+     },
+     "tam": 300,
+     "x": 700,
+     "base": 740
+    }
+   ]
+  }
  },
  "data_comemorativa": "Carnaval (fevereiro)",
  "persona": "luisinho",
  "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz)",
- "escolhida": "v1"
+ "escolhida": "v1",
+ "playlists": [],
+ "capitulos": {
+  "ponte": "Sombrinha pra cima, pra baixo"
+ }
 }
