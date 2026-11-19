@@ -396,11 +396,45 @@ def _objetos(objs: dict, cast: dict) -> dict:
     return out
 
 
+def _aproximar(p: dict, bg: str) -> dict:
+    """Personagens maiores (ESCALA) ocupam mais tela: quem estava na ponta sairia cortado. Aproxima atores e objetos do
+    centro da câmera na mesma proporção (posições, destinos de ação e chaves de x); fora de cena continua fora."""
+    import copy
+    p = copy.deepcopy(p)
+    cam = p.get("camera")
+    cx = cam.get("x", _bg_width(bg) / 2) if isinstance(cam, dict) else _bg_width(bg) / 2
+    f = 1.0 / ESCALA ** 0.9
+
+    def ap(x):
+        return round(cx + (float(x) - cx) * f, 1)
+
+    for a in (p.get("atores") or {}).values():
+        if "x" in a:
+            a["x"] = ap(a["x"])
+        for ac in a.get("acoes", []):
+            for k in ("to_x", "wall_x"):
+                if k in ac:
+                    ac[k] = ap(ac[k])
+    for o in (p.get("objetos") or {}).values():
+        if o.get("id", "") in NAO_ESCALA:
+            continue
+        if "x" in o:
+            o["x"] = ap(o["x"])
+        for k in o.get("keys", []):
+            if "x" in k.get("pose", {}):
+                k["pose"]["x"] = ap(k["pose"]["x"])
+    if isinstance(cam, str) and ":" in cam:                    # close/médio seguem o ator (já aproximado)
+        pass
+    return p
+
+
 def _plano_scene(p: dict, occ: int, dur: float, plines: list, t0: float, cantam_bloco: list, cast: dict, sid: str) -> dict:
     bg = p.get("cenario", PARQUE)
     if isinstance(bg, list):
         bg = bg[(occ - 1) % len(bg)]
     graphic = bg.startswith(GRAPHIC)
+    if ESCALA > 1.0 and not graphic:
+        p = _aproximar(p, bg)
     sc: dict = {"id": sid, "title": (plines[0]["text"] if plines else p.get("titulo", "instrumental"))[:60], "duration": dur,
                 "description": " / ".join(l["text"] for l in plines)[:300]}
     if p.get("tela_dividida"):
