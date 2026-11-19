@@ -2414,3 +2414,105 @@ class CarroCarretel(_Prop):
 
 
 PROPS.update({"barata": Barata, "chinelo": Chinelo, "castelo_caixa": CasteloCaixa, "carro_carretel": CarroCarretel})
+
+
+# ───────────────────────── 20 Dino Pisa Forte ─────────────────────────
+
+class Dino(_Prop):
+    """Dinossauro grandão e bonzinho (Dino Pisa Forte), de pé, nas proporções da turma: cabeça grande e redonda com
+    focinho, barrigona clara, plaquinhas coloridas nas costas, rabinho, pés grandes de 3 dedinhos. Canais:
+    `pisa` 0→1 levanta o pé (n = esquerdo, f = direito pelo `pe`) e PISA no 1 (amassa o pé, sacode o corpo);
+    `pe` 0 esquerdo / 1 direito; `levinho` 0→1 pé ante pé (ponta do pé, mãozinha na boca); `ruge` 0→1 boca aberta
+    de "rugido" fofo; `tchau` 0→1 levanta a mão; `danca` fase contínua (balança o corpo e o rabo); `lado`."""
+
+    def __init__(self):
+        super().__init__("dino", "Dino", (1200, 1000), (600, 960), 760,
+                         {"pisa": 0.0, "pe": 0.0, "levinho": 0.0, "ruge": 0.0, "tchau": 0.0, "danca": 0.0, "lado": 1.0})
+
+    def paint(self, k, P):
+        c01 = lambda v: max(0.0, min(1.0, v))
+        sx = 1.0 if P["lado"] >= 0 else -1.0
+        VERDE, VL, CLARO, CL = "#5CCB6E", "#2F8F45", "#D9F5B8", "#9CC97A"
+        pisa, lev, ru, tc = c01(P["pisa"]), c01(P["levinho"]), c01(P["ruge"]), c01(P["tchau"])
+        fase = 2 * math.pi * P["danca"]
+        perna = 1 if P["pe"] >= 0.5 else -1                          # qual pé levanta
+        sobe = math.sin(math.pi * min(1.0, pisa / 0.85)) if pisa < 0.85 else 0.0
+        impacto = max(0.0, (pisa - 0.85) / 0.15) if pisa >= 0.85 else 0.0
+        squash = 1 - 0.07 * impacto * (1 - impacto) * 4
+        bob = -10 * abs(math.sin(fase)) - 30 * lev
+        sway = 14 * math.sin(fase)
+
+        def T(x, y):
+            return (x * sx + sway * (y / -700), y * squash + bob)
+
+        def oval(x, y, rx, ry, fill, line, a=0.0):
+            q = T(x, y)
+            shape(k, ellipse_pts(q[0], q[1], rx, ry * squash, a * sx, 30), fill, line=line)
+
+        # rabo (atrás), balança com a dança
+        w = 40 * math.sin(fase + 1.0)
+        ln(k, [T(-120, -200), T(-270, -140 + w * 0.4), T(-390, -90 + w)], VL, w=LINE * 17)
+        ln(k, [T(-120, -200), T(-270, -140 + w * 0.4), T(-390, -90 + w)], VERDE, w=LINE * 15)
+        # plaquinhas nas costas (coloridas, de desenho)
+        for i, (x, y) in enumerate(((-150, -500), (-195, -410), (-215, -310), (-205, -215))):
+            q = T(x, y)
+            cor = ("#FF8A1F", "#FFD23F", "#FF7FBF", "#3C8BF0")[i]
+            shape(k, [(q[0] + 10 * sx, q[1] + 34), (q[0] - 74 * sx, q[1] - 6), (q[0] + 4 * sx, q[1] - 40)], cor, line=dark(cor), smooth=False)
+        # pernas e pés grandes (o pé da vez sobe e pisa)
+        for side in (-1, 1):
+            up = (140 * sobe if side == perna else 0.0) + (12 * lev)
+            px = side * 95 + (side * 70 * sobe if side == perna else 0.0)      # o pé da vez sai para o lado (aparece)
+            a, b = T(px - (side * 50 * sobe if side == perna else 0.0), -230), T(px + side * 10, -60 - up)
+            _capsula(k, a, b, 58, VERDE, VL)
+            pe = T(px + side * 22, -26 - up)
+            achata = 1 + (0.35 * impacto if side == perna else 0)
+            shape(k, ellipse_pts(pe[0], pe[1], 92 * achata, 42 / achata, 0, 22), VERDE, line=VL)
+            for j in (-1, 0, 1):                                       # 3 dedinhos/unhas
+                shape(k, ellipse_pts(pe[0] + j * 42 + side * 8, pe[1] + 20, 15, 11, 0, 12), CLARO, line=CL)
+        oval(0, -330, 210, 230, VERDE, VL)                             # corpo
+        oval(20, -300, 140, 170, CLARO, CL)                            # barrigona
+        for y in (-380, -320, -260, -200):                             # listras da barriga
+            ln(k, [T(-90, y), T(130, y)], CL, w=LINE)
+        # braços curtinhos (tchau / mão na boca no levinho)
+        for side in (-1, 1):
+            om = T(side * 160 + 20, -440)
+            if side > 0 and tc > 0.05:
+                mao = T(260, -560 - 90 * tc + 20 * math.sin(fase * 3))
+            elif lev > 0.5 and side < 0:
+                mao = T(70, -610)
+            else:
+                mao = T(side * 230 + 20, -350 + 10 * math.sin(fase + side))
+            _capsula(k, om, mao, 34, VERDE, VL)
+            shape(k, ellipse_pts(mao[0], mao[1], 38, 36, 0, 16), VERDE, line=VL)
+        # cabeça grande com focinho
+        hc = T(40, -640)
+        shape(k, ellipse_pts(hc[0], hc[1], 190, 165, 0, 36), VERDE, line=VL)
+        fz = T(150, -590)
+        shape(k, ellipse_pts(fz[0], fz[1], 125, 95, 0, 30), VERDE, line=VL)
+        for dx in (-30, 30):                                           # narinas
+            q = T(200 + dx, -620)
+            k.dot(q[0], q[1], 9, _rgba(VL))
+        for side, ex in ((-1, -40), (1, 70)):                          # olhões
+            e = T(ex, -700)
+            shape(k, ellipse_pts(e[0], e[1], 44, 52, 0, 20), "#FFFFFF", line=VL)
+            k.dot(e[0] + 10 * sx, e[1] + 6, 20, _rgba("#1C2433"))
+            k.dot(e[0] + 18 * sx, e[1] - 6, 7, _rgba("#FFFFFF"))
+        for x in (-60, 210):                                           # bochechas
+            q = T(x, -610)
+            k.shape(ellipse_pts(q[0], q[1], 30, 18, 0, 12), fill=_rgba("#FF9AB0", 0.7), line=0)
+        m = T(140, -540)
+        if ru > 0.1:                                                   # rugido fofo: boca aberta com dentinhos
+            shape(k, ellipse_pts(m[0], m[1], 90, 20 + 50 * ru, 0, 24), "#8A2E3E", line=VL)
+            for j in (-2, -1, 0, 1, 2):
+                q = (m[0] + j * 32, m[1] - 18 - 46 * ru)
+                shape(k, [(q[0] - 12, q[1]), (q[0] + 12, q[1]), (q[0], q[1] + 22)], "#FFFFFF", line="#C9D6E0", smooth=False)
+            shape(k, ellipse_pts(m[0], m[1] + 20 * ru, 40, 14 + 10 * ru, 0, 14), "#F27A8E", line=0)
+        else:                                                          # sorrisão
+            ln(k, [T(70, -555), T(140, -520), T(220, -555)], VL, w=LINE * 1.5)
+        if impacto > 0.05:                                             # poeirinha do "tum!"
+            for side in (-1, 1):
+                pe = T(perna * 117 + side * 110, -10)
+                k.shape(ellipse_pts(pe[0], pe[1], 50 * impacto, 22 * impacto, 0, 14), fill=_rgba("#E8DCC8", 0.85), line=0)
+
+
+PROPS.update({"dino": Dino})
