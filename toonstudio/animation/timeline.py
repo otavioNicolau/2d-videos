@@ -125,7 +125,7 @@ class CharTimeline:
                 for k, v in ov.items():
                     if k.endswith("+"):                # canal aditivo: soma ao valor da cena (ex.: turn+)
                         base = k[:-1]
-                        p[base] = p.get(base, 0.0) + v * w
+                        p[base] = cycles.soma_giro(p.get(base, 0.0), v * w) if base == "turn" else p.get(base, 0.0) + v * w
                         continue
                     if p.get("holding") and (k.startswith("hand_n") or k == "paw_n") and \
                             not (s.kind.startswith("dance:") and s.kind[6:] in cycles.DANCE_WITH_ITEM):

@@ -378,6 +378,13 @@ CHOREO: dict[str, tuple[float, list[tuple[float, dict]]]] = {
     ]),
 }
 ALIASES = {"bob": "balanco"}
+
+
+def soma_giro(turn: float, delta: float) -> float:
+    """Giro do passo de dança (canal "turn+") somado à direção da cena SEM passar do outro lado: o desenho espelha
+    quando o turn troca de sinal (laço, rosto e braços pulam de lado a cada batida — usuário, 19/11)."""
+    lado = 1.0 if turn >= 0 else -1.0
+    return lado * max(0.0, lado * (turn + delta))
 DANCE_WITH_ITEM = {"frevo", "escovar", "guitarra"}        # passos em que a mão que segura o objeto (sombrinha) também dança
 DANCES = tuple(CHOREO) + tuple(ALIASES)
 _CAT = ("paw_n", "paw_f")

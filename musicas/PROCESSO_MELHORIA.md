@@ -108,5 +108,7 @@ do tempo de dança · parado ≤ 8 % · acento na batida ≥ 75 %. Histórico: `
 - **A1** (19/11, a partir da 19): usuário olhou o laboratório A0 — "balanço, lado: os braços estão estranhos". Os dois
   passos refeitos: braços sempre por fora do corpo (antes um braço virava gancho em cima da barriga/quadril), abertos
   e balançando com o peso; tronco quase de frente (giro ±0,32 → ±0,12); no "lado", passo de pé de verdade e o braço
-  do lado esticado apontando longe. Laboratório: `Canal\Laboratório de dança\A1 (balanço e lado novos) - *.mp4`.
+  do lado esticado apontando longe. Usuário em seguida: "lado da cabeça fica mudando" — o giro do passo (turn+) cruzava o meio e o desenho espelhava
+  (laço/rosto pulando de lado a cada batida). Corrigido no motor (`cycles.soma_giro`): o giro de dança nunca passa
+  para o outro lado, em TODOS os passos. Laboratório: `Canal\Laboratório de dança\A1 - laurinha.mp4` e `- luisinho.mp4`.
   Próximo candidato (A2): pernas e corpo (joelho na batida, peso de um pé para o outro) — aguardando o usuário.

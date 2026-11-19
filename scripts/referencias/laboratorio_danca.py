@@ -54,7 +54,9 @@ def main():
             ov = cycles.dance(e, t, beats, 1.0, 0.0)
             P = dict(base)
             for k, v in ov.items():
-                if k.endswith("+"):
+                if k == "turn+":
+                    P["turn"] = cycles.soma_giro(P.get("turn", 0.0), v)
+                elif k.endswith("+"):
                     P[k[:-1]] = P.get(k[:-1], 0.0) + v
                 else:
                     P[k] = v
