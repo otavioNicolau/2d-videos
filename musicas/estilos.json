@@ -41,7 +41,7 @@
    "group vocals"
   ],
   "duracao": "sing every line of the lyrics, full song with all verses and choruses",
-  "producao": "built-in keyboard rhythm with programmed kick, snare and claps repeating the same loop through the whole song, deep bouncy keyboard bass, bright arranger-keyboard piano melody up front, a playful saxophone riff answering the vocal between the lines (arranger keyboard sax sound), a few playful cartoon sound effects (boing, toy bells), single dry centered lead vocal, close and clear, lots of space in the mix, polished kids music production",
+  "producao": "built-in keyboard rhythm with programmed kick, snare and claps repeating the same loop through the whole song, deep bouncy keyboard bass, bright arranger-keyboard piano melody up front, a playful saxophone riff in the intro and answering the vocal between the lines (arranger keyboard sax sound), a few playful cartoon sound effects (boing, toy bells), single dry centered lead vocal, close and clear, lots of space in the mix, polished kids music production",
   "nota_producao": "18/11/2026: análise de 18 músicas da Animadinhos (musicas/REFERENCIA_ANIMADINHOS.md): arranjo enxuto de teclado/eletrônico, voz e batida empatadas (41 × 38 %), efeitos de desenho; as nossas saíam com banda + batucada e voz a 58 %.",
   "nota_voz": "18/11/2026: a voz da referência é UMA só e centralizada (largura 0,00–0,02); as nossas tinham coro/vozes de fundo espalhados (0,08–0,29) e muitos instrumentos — 'muita informação' (usuário). Uma voz por vez, respostas cantadas pela mesma voz.",
   "nota_batida": "18/11/2026: na referência cada batida soa idêntica (semelhança 0,95–0,98: ritmo pronto de teclado arranjador, um loop simples a música inteira); nas nossas 0,66–0,87 (bateria 'tocada', com viradas e percussão variando). Usuário: 'batidas como se fosse bateria, bumbo, algo feito no teclado, pra dar ritmo'.",
@@ -126,7 +126,7 @@
    {
     "versao": "E11",
     "data": "19/11/2026",
-    "mudanca": "E9 + 'bright arranger-keyboard piano melody up front' + 'a playful saxophone riff answering the vocal between the lines (arranger keyboard sax sound)' no lugar de 'one bright keyboard or piano melody'",
+    "mudanca": "E9 + 'bright arranger-keyboard piano melody up front' + 'a playful saxophone riff answering the vocal between the lines (arranger keyboard sax sound)' no lugar de 'one bright keyboard or piano melody' · reforço (usuário: 'é com eles que a música fica animada e viciante'): sax + teclado também na abertura, no riff antes de cada refrão e nos intervalos",
     "motivo": "usuário ouviu sax, bateria e teclado no Animadinhos; medido: teclado em 15/18 (nossas bem abaixo) e sax em 3–6/18 (nossas zero)",
     "usado_em": "21 em diante"
    }
@@ -156,7 +156,7 @@
  "peso": {
   "forte": {
    "descricao": "festa: batida eletrônica forte (bumbo e palmas), voz e batida empatadas (referência: voz 41 %, bateria 38 %)",
-   "style": "steady keyboard drum loop with strong kick and claps, short keyboard riff before every chorus",
+   "style": "steady keyboard drum loop with strong kick and claps, catchy saxophone and keyboard riff before every chorus",
    "exclude": [
     "slow",
     "ballad",
@@ -164,7 +164,7 @@
     "weak drums",
     "quiet beat"
    ],
-   "intervalo": "[Instrumental Break - {s} seconds, beat and keyboard riff]"
+   "intervalo": "[Instrumental Break - {s} seconds, catchy saxophone and keyboard riff over the beat]"
   },
   "media": {
    "descricao": "groove forte e bem marcado, percussão presente",
@@ -175,7 +175,7 @@
     "weak drums",
     "quiet beat"
    ],
-   "intervalo": "[Instrumental Break - {s} seconds, beat and keyboard riff]"
+   "intervalo": "[Instrumental Break - {s} seconds, catchy saxophone and keyboard riff over the beat]"
   },
   "marcada": {
    "descricao": "groove marcado e dançante, sem bateria pesada",
@@ -188,7 +188,7 @@
     "lullaby",
     "sleepy"
    ],
-   "intervalo": "[Instrumental Break - {s} seconds, groove and keyboard]"
+   "intervalo": "[Instrumental Break - {s} seconds, groove, keyboard and soft saxophone riff]"
   }
  },
  "ritmos": {
