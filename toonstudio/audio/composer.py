@@ -8,7 +8,7 @@ Este módulo
   * mede as versões geradas no Suno (andamento, começo, refrão, intervalos, pronúncia pela transcrição) para o humano escolher.
 
 Atalhos aceitos em letra.txt (traduzidos pelo peso da batida do ritmo):
-  [Virada]             → some (E8, 19/11: nenhuma virada entre as partes; a batida da referência não muda)
+  [Virada]             → [Keyboard Fill] nos ritmos de peso forte e médio; some nos de peso marcado (E9 = E6)
   [Intervalo 8s]       → intervalo instrumental do peso do ritmo (estilos.json → peso → intervalo)
   [Bordão laurinha]    → [Shout - Laurinha] Bora, turminha!   (bordão de vozes.json)
 """
@@ -99,7 +99,7 @@ def parse(letra: str) -> list[tuple[str, str]]:
 def expandir(letra: str, peso: str, E: dict, V: dict) -> str:
     """Traduz os atalhos ([Virada], [Intervalo Ns], [Bordão x]) para marcações do Suno."""
     intervalo = E["peso"][peso]["intervalo"]
-    fill = ""      # E8 (19/11): nenhuma virada entre as partes — a batida da referência não muda do começo ao fim
+    fill = {"forte": "[Keyboard Fill]", "media": "[Keyboard Fill]", "marcada": ""}[peso]   # E9 = E6 (19/11): virada de teclado de volta
     out = []
     for raw in letra.splitlines():
         s = raw.strip()
