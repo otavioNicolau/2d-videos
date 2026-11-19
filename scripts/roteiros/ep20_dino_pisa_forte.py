@@ -73,6 +73,7 @@ def call(t, text, color):
 
 
 def dino(x=1500, depth=0.8, pisadas=(), danca=None, extra=None, y=930, pose=None):
+    depth = round(depth * 0.85, 3)                          # 1,45× deixava o Dino com a cabeça fora da tela
     """O Dino: pisadas = [(t, pé)] (levanta 0,35 s antes e pisa no t); danca = (t0, t1) balança; extra = chaves livres."""
     ks = [{"t": 0.0, "pose": {"pisa": 0.0, "levinho": 0.0, "ruge": 0.0, "tchau": 0.0}, "ease": "step"}]
     if danca:
@@ -223,7 +224,7 @@ def refrao(n):
             if n >= 3:
                 p["fx"] = ["confete"]
             if not (i == 1 and n in (1, 3)):
-                p["objetos"] = {"d": dino(2250, depth=0.65, danca=(0.0, d))}
+                p["objetos"] = {"d": {**dino(1450, depth=0.6, danca=(0.0, d)), "z": 1}}
         out.append(p)
     return out
 
