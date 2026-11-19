@@ -388,3 +388,11 @@ def test_duracao_da_vinheta_le_com_ffprobe():
     from toonstudio.composition.marca import BRAND, _duracao
     if (BRAND / "vinheta.mp4").exists():
         assert 2.0 < _duracao(BRAND / "vinheta.mp4") < 10.0
+
+
+def test_nomes_da_turma_com_a_cor_de_cada_um():
+    """No destaque e na letra, LAURINHA sai rosa e LUISINHO azul (antes "LAURINHA E LUISINHO!" saía todo rosa)."""
+    from toonstudio.render.brand import CALLOUT_COLORS, _nomes_coloridos
+    t = _nomes_coloridos("LAURINHA E LUISINHO!", *CALLOUT_COLORS["amarelo"])
+    rosa, azul = CALLOUT_COLORS["rosa"][0], CALLOUT_COLORS["azul"][0]
+    assert t.index(rosa) < t.index("LAURINHA") < t.index(azul) < t.index("LUISINHO")

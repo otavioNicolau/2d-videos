@@ -59,6 +59,19 @@ CALLOUT_COLORS = {"amarelo": ("&H003FD2FF", "&H001565E0"), "rosa": ("&H00B36FF7"
                   "roxo": ("&H00F55C9B", "&H008C1E4A"), "marrom": ("&H00406A9A", "&H00142E4A")}
 
 
+# nomes da turma sempre na cor do personagem (usuário, 19/11: "LAURINHA E LUISINHO!" saía todo rosa)
+NOME_COR = {"LAURINHA": "rosa", "LUISINHO": "azul", "LUIZINHO": "azul"}
+
+
+def _nomes_coloridos(txt: str, fill: str, border: str) -> str:
+    """Texto ASS (já escapado e em maiúsculas) com LAURINHA em rosa e LUISINHO em azul; o resto na cor base."""
+    import re
+    def troca(m):
+        f, b = CALLOUT_COLORS[NOME_COR[m.group(0)]]
+        return f"{{\\c{f}\\3c{b}}}{m.group(0)}{{\\c{fill}\\3c{border}}}"
+    return re.sub("|".join(NOME_COR), troca, txt)
+
+
 def ass(out: Path, W: int, H: int, lines: list[dict], card: str | None, footer: str | None, duration: float,
         card_dur: float = 5.0, callouts: list[dict] | None = None) -> Path:
     """Letra: palavra por palavra (cada palavra aparece quando é cantada), amarela, maiúscula, contorno escuro."""
@@ -91,17 +104,22 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
             if end - start < 0.04:
                 continue
             txt = " ".join(x["w"] for x in words[:k + 1]).upper()
-            ev.append(f"Dialogue: 1,{_ts(start)},{_ts(end)},Letra,,0,0,0,,{{\\fad(60,0)}}{_esc(txt)}")
+            txt = _nomes_coloridos(_esc(txt), "&H004DE1FF", "&H00102040")
+            ev.append(f"Dialogue: 1,{_ts(start)},{_ts(end)},Letra,,0,0,0,,{{\\fad(60,0)}}{txt}")
     for c in callouts or []:
         # palavra de destaque: nasce do zero, passa do tamanho (overshoot), assenta e balança; some encolhendo
         d = float(c.get("dur", 1.2))
-        fill, border = CALLOUT_COLORS.get(c.get("color", "amarelo"), CALLOUT_COLORS["amarelo"])
+        cor = c.get("color", "amarelo")
+        if sum(n in c["text"].upper() for n in ("LAURINHA", "LUISINHO", "LUIZINHO")) >= 2:
+            cor = "amarelo"                              # os dois nomes juntos: o "E" fica neutro (amarelo)
+        fill, border = CALLOUT_COLORS.get(cor, CALLOUT_COLORS["amarelo"])
         y = int(c.get("y", 210)) if W >= H else int(c.get("y", 210) * H / 1080) + 60   # vertical: abaixo do logo
         ms = int(d * 1000)
         anim = (f"\\pos({W // 2},{y})\\c{fill}\\3c{border}\\fscx0\\fscy0\\frz-8"
                 f"\\t(0,180,\\fscx125\\fscy125\\frz4)\\t(180,320,\\fscx100\\fscy100\\frz-3)"
                 f"\\t(320,{ms - 220},\\frz3)\\t({ms - 200},{ms},\\fscx0\\fscy0)")
-        ev.append(f"Dialogue: 4,{_ts(c['t'])},{_ts(c['t'] + d)},Destaque,,0,0,0,,{{{anim}}}{_esc(c['text'].upper())}")
+        txt = _nomes_coloridos(_esc(c["text"].upper()), fill, border)
+        ev.append(f"Dialogue: 4,{_ts(c['t'])},{_ts(c['t'] + d)},Destaque,,0,0,0,,{{{anim}}}{txt}")
     if card:
         ev.append(f"Dialogue: 3,{_ts(0)},{_ts(card_dur)},Aviso,,0,0,0,,{{\\fad(200,300)}}{_esc(card)}")
     if footer:
