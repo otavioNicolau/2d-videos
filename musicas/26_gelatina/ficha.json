@@ -57,10 +57,99 @@
  "youtube": {
   "resumo": "GELATINA! 🍮 A vovó fez gelatina vermelhinha… ela saiu correndo pela mesa, tremendo pra cá e pra lá, e todo mundo começou a tremer junto! Fica molinho, fica durinho… congelou!",
   "resumo_short": "GELATINA! 🍮 Treme, treme com a Laurinha e o Luisinho!",
-  "curiosidade": "A gelatina fica durinha na geladeira e amolece no calor"
+  "curiosidade": "A gelatina fica durinha na geladeira e amolece no calor",
+  "miniatura": "GELATINA!",
+  "miniatura_cena": {
+   "fundo": "circulo",
+   "cores": [
+    [
+     255,
+     92,
+     110
+    ],
+    [
+     255,
+     196,
+     210
+    ],
+    [
+     255,
+     225,
+     90
+    ],
+    [
+     240,
+     56,
+     79
+    ],
+    [
+     140,
+     210,
+     245
+    ]
+   ],
+   "heroi": {
+    "id": "laurinha",
+    "pose": {
+     "turn": 0.2,
+     "mouth": "D",
+     "hand_n_x": -135,
+     "hand_n_y": -135,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3
+    }
+   },
+   "par": {
+    "id": "luisinho",
+    "pose": {
+     "turn": -0.2,
+     "mouth": "D",
+     "hand_n_x": -135,
+     "hand_n_y": -135,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3
+    }
+   },
+   "objetos": [
+    {
+     "id": "gato",
+     "pose": {
+      "miau": 1.0
+     },
+     "tam": 170,
+     "x": 150,
+     "base": 330
+    }
+   ],
+   "frente": [
+    {
+     "id": "gelatina",
+     "pose": {
+      "treme": 1.0,
+      "fase": 0.25,
+      "boca": 0.9
+     },
+     "tam": 480,
+     "x": 760,
+     "base": 740
+    }
+   ]
+  }
  },
  "origem": "brincadeiras com o corpo (18/11/2026), inspiradas no gênero de No Ritmo Quá Quá / Morto-Vivo — nada copiado",
  "persona": "laurinha",
  "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz)",
- "suno_congelado": "E12 + resposta do teclado, reggae 96 (20/11/2026) — já usado no Suno; não regerar"
+ "suno_congelado": "E12 + resposta do teclado, reggae 96 (20/11/2026) — já usado no Suno; não regerar",
+ "playlists": [
+  "Músicas Infantis da Laurinha e do Luisinho 🐝",
+  "Dançar e Brincar com o Corpo 💃🕺"
+ ]
 }
