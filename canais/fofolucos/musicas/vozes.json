@@ -4,10 +4,12 @@
  "vozes": {
   "fofolucos": {
    "descricao": "menino de 11 a 14 anos: animado, voz clara e firme, divertido e um pouco 'malandrinho' (o narrador da Vila Monstrinha)",
-   "style": "energetic 12-year-old boy vocal, clear and playful",
-   "tag": "Fofolucos, boy vocal",
+   "style": "ONE solo singer only: kid boy voice, about 12 years old, bright high child voice, no adults",
+   "tag": "solo kid boy vocal",
    "bordao": "Fofolucos! Rawr!",
-   "suno_persona": null
+   "suno_persona": null,
+   "shout_tag": "same kid boy voice",
+   "nota": "20/11/2026: o 1º teste saiu com um adulto + uma criança cantando → Style 'um cantor só, criança', Exclude com vozes adultas, marcações 'same kid boy voice'"
   }
  },
  "coro": {

@@ -130,7 +130,7 @@ def expandir(letra: str, peso: str, E: dict, V: dict) -> str:
             v = V["vozes"].get(m.group(1).lower())
             if not v or not v.get("bordao"):
                 raise StudioError(f"bordão desconhecido: {m.group(1)}")
-            out.append(f"[Shout - {m.group(1).capitalize()}] {v['bordao']}")
+            out.append(f"[Shout - {v.get('shout_tag') or m.group(1).capitalize()}] {v['bordao']}")   # shout_tag: Fofolucos = "same kid boy voice"
             continue
         out.append(voz_unica(raw.rstrip()))
     return "\n".join(out).strip() + "\n"
