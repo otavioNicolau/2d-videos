@@ -44,6 +44,7 @@ def obj(id_, x, y, depth, d, z=1, fixo=None, lin=None, pts=None):
 def arvore(d, x=2250, y=960, depth=0.55, cai=None, quantos=1.0, z=0):
     """o pé de limão da vovó: a copa balança sempre; `cai` = instante em que um limão cai do galho."""
     pts = {"cai": [(cai, 0.0), (cai + 0.7, 1.0)]} if cai is not None else None
+    depth = round(depth / 0.8, 3)                      # o desenho é × 0,8 (cabe no quadro do nível): mesmo tamanho na tela
     return obj("limoeiro", x, y, depth, d, z=z, fixo={"quantos": quantos, "cai": 0.0}, lin={"balanco": (0.0, d * 0.5)}, pts=pts)
 
 

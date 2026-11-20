@@ -3216,23 +3216,30 @@ def _limao(k: Ink, x: float, y: float, r: float, ang: float = 0.0, folha: bool =
 
 class Limoeiro(_Prop):
     """Pé de limão da vovó (27): tronco, copa redonda verde com limõezinhos. `balanco` fase (a copa balança),
-    `cai` 0→1 um limão cai do galho até o chão (quica), `quantos` 0→1 limões na copa."""
+    `cai` 0→1 um limão cai do galho até o chão (quica), `quantos` 0→1 limões na copa. Desenho × K = 0,8 para caber no
+    quadro do nível (o roteiro compensa na profundidade: `LIMOEIRO_K`)."""
+
+    K = 0.8
 
     def __init__(self):
-        super().__init__("limoeiro", "Limoeiro", (1300, 1300), (650, 1240), 900, {"balanco": 0.0, "cai": 0.0, "quantos": 1.0})
+        super().__init__("limoeiro", "Limoeiro", (1300, 1300), (650, 1240), 720, {"balanco": 0.0, "cai": 0.0, "quantos": 1.0})
 
     def paint(self, k, P):
-        sw = math.sin(P["balanco"] * 2 * math.pi) * 14
-        shape(k, [(-50, 0), (50, 0), (38, -330), (90, -430), (60, -445), (10, -360), (-20, -460), (-50, -450), (-36, -330)],
+        K = self.K
+        sw = math.sin(P["balanco"] * 2 * math.pi) * 14 * K
+
+        def Q(pts):
+            return [(x * K, y * K) for x, y in pts]
+        shape(k, Q([(-50, 0), (50, 0), (38, -330), (90, -430), (60, -445), (10, -360), (-20, -460), (-50, -450), (-36, -330)]),
               "#9A6A3E", line="#6E4826", smooth=False)
         for (cx, cy, rx, ry) in ((-230, -560, 230, 190), (220, -560, 230, 190), (0, -700, 280, 220), (-120, -470, 220, 140),
                                  (140, -470, 220, 140)):
-            shape(k, ellipse_pts(cx + sw * (1 + (-cy - 450) / 300), cy, rx, ry, 0, 30), "#4DBB4A", line="#2E8A30")
+            shape(k, ellipse_pts((cx + sw / K * (1 + (-cy - 450) / 300)) * K, cy * K, rx * K, ry * K, 0, 30), "#4DBB4A", line="#2E8A30")
         lim = [(-280, -560), (-150, -680), (40, -780), (210, -650), (300, -520), (-40, -560), (120, -480), (-220, -440),
                (-80, -440), (260, -400)]
         n = int(round(len(lim) * max(0.0, min(1.0, P["quantos"]))))
         for i, (x, y) in enumerate(lim[:n]):
-            _limao(k, x + sw * (1 + (-y - 450) / 300), y, 34, ang=0.3 * ((i % 3) - 1), folha=i % 2 == 0)
+            _limao(k, (x + sw / K * (1 + (-y - 450) / 300)) * K, y * K, 34 * K, ang=0.3 * ((i % 3) - 1), folha=i % 2 == 0)
         c = max(0.0, min(1.0, P["cai"]))
         if c > 0.0:                                            # o limão que cai do galho e quica
             u = min(1.0, c / 0.75)
@@ -3240,7 +3247,7 @@ class Limoeiro(_Prop):
             if c > 0.75:
                 q = (c - 0.75) / 0.25
                 y = -40 - 90 * math.sin(math.pi * q)
-            _limao(k, 230, y, 40, ang=c * 3.0)
+            _limao(k, 230 * K, y * K, 40 * K, ang=c * 3.0)
 
 
 class LimaoCara(_Prop):
