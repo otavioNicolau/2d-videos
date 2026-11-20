@@ -383,7 +383,7 @@ def _performance(a: dict, dur: float, graphic: bool) -> dict:
     return perf
 
 
-def _objetos(objs: dict, cast: dict) -> dict:
+def _objetos(objs: dict, cast: dict, dur: float | None = None) -> dict:
     out = {}
     for name, o in (objs or {}).items():
         cid = o.get("id", name)
@@ -394,6 +394,9 @@ def _objetos(objs: dict, cast: dict) -> dict:
         perf = {"start": st, "exposure": 1}
         if o.get("keys"):
             perf["keys"] = o["keys"]
+        if o.get("acoes"):                                    # A4: o objeto também "dança" na grade de batidas (bateria_show)
+            perf["actions"] = [{**ac, "dur": round(max(0.1, dur - ac.get("t", 0.0)), 3) if ac.get("dur") == "resto" and dur
+                                else ac.get("dur", 1.0)} for ac in o["acoes"]]
         out[name] = perf
     return out
 
@@ -455,7 +458,7 @@ def _plano_scene(p: dict, occ: int, dur: float, plines: list, t0: float, cantam_
                      "characters": {w: _performance(a, dur, g2) for w, a in atores.items()}}
             if sub.get("fx"):
                 panel["fx"] = sub["fx"]
-            props = _objetos(sub.get("objetos"), cast)            # 20/11: objetos também em cada metade da tela
+            props = _objetos(sub.get("objetos"), cast, dur)       # 20/11: objetos também em cada metade da tela
             if props:
                 panel["props"] = props
             sing = [s for w in atores for s in _sing(plines, t0, t0 + dur, p.get("cantam") or cantam_bloco, w) if w in SING_CAST]
@@ -471,7 +474,7 @@ def _plano_scene(p: dict, occ: int, dur: float, plines: list, t0: float, cantam_
     if p.get("tremor"):                                       # 19/11: a tela treme (pisada do Dino) — shake nativo do render
         sc["camera"]["shake"] = [{"t": round(float(t), 3), "dur": 0.35, "amp": 14.0} for t in p["tremor"] if 0 <= float(t) < dur - 0.1]
     sc["characters"] = {w: _performance(a, dur, graphic) for w, a in atores.items()}
-    props = _objetos(p.get("objetos"), cast)
+    props = _objetos(p.get("objetos"), cast, dur)
     if props:
         sc["props"] = props
     if p.get("fx"):

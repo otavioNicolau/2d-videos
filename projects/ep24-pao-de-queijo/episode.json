@@ -51,7 +51,7 @@
       "character": "pao_queijo"
     },
     "bat": {
-      "character": "bateria"
+      "character": "bateria_show"
     },
     "tec": {
       "character": "teclado_inst"
@@ -459,7 +459,7 @@
       "title": "Laurinha e Luisinho!",
       "duration": 2.2333,
       "description": "Laurinha e Luisinho!",
-      "background": "plano_salao",
+      "background": "plano_campo",
       "camera": {
         "keys": [
           {
@@ -492,19 +492,19 @@
             "expr": "happy",
             "z": 3,
             "depth": 1.45,
-            "holding": "baqueta",
+            "holding": "baqueta_a4",
             "hand_n_x": -110,
             "hand_n_y": 20,
             "hand_n_bend": 0.5,
             "paw_n": 1,
-            "holding_f": "baqueta"
+            "holding_f": "baqueta_a4"
           },
           "exposure": 1,
           "actions": [
             {
               "t": 0.0,
               "do": "dance",
-              "style": "toca_bateria",
+              "style": "toca_bateria_a4",
               "dur": 2.233
             }
           ]
@@ -543,134 +543,12 @@
             "depth": 0.87
           },
           "exposure": 1,
-          "keys": [
+          "actions": [
             {
               "t": 0.0,
-              "pose": {
-                "bumbo": 1.0,
-                "caixa": 0.0,
-                "prato": 1.0
-              },
-              "ease": "out"
-            },
-            {
-              "t": 0.45,
-              "pose": {
-                "bumbo": 0.0,
-                "caixa": 1.0,
-                "prato": 0.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 0.9,
-              "pose": {
-                "bumbo": 1.0,
-                "caixa": 0.0,
-                "prato": 0.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 1.35,
-              "pose": {
-                "bumbo": 0.0,
-                "caixa": 1.0,
-                "prato": 0.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 1.8,
-              "pose": {
-                "bumbo": 1.0,
-                "caixa": 0.0,
-                "prato": 1.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 2.193,
-              "pose": {
-                "bumbo": 0.0,
-                "caixa": 1.0,
-                "prato": 0.0
-              },
-              "ease": "out",
-              "in": 0.363
-            }
-          ]
-        },
-        "p": {
-          "start": {
-            "x": 1264.2,
-            "y": 600,
-            "z": 3,
-            "depth": 0.507
-          },
-          "exposure": 1,
-          "keys": [
-            {
-              "t": 0.0,
-              "pose": {
-                "estica": 0.0,
-                "dir": 0.0,
-                "mordido": 0.0,
-                "vapor": 1.0,
-                "onda": 0.0
-              },
-              "ease": "step"
-            },
-            {
-              "t": 0.0,
-              "pose": {
-                "y": 600
-              },
-              "ease": "in"
-            },
-            {
-              "t": 0.45,
-              "pose": {
-                "y": 520
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 0.9,
-              "pose": {
-                "y": 600
-              },
-              "ease": "in",
-              "in": 0.42
-            },
-            {
-              "t": 1.35,
-              "pose": {
-                "y": 520
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 1.8,
-              "pose": {
-                "y": 600
-              },
-              "ease": "in",
-              "in": 0.42
-            },
-            {
-              "t": 2.193,
-              "pose": {
-                "y": 520
-              },
-              "ease": "out",
-              "in": 0.363
+              "do": "dance",
+              "style": "kit_a4",
+              "dur": 2.233
             }
           ]
         }
@@ -700,7 +578,7 @@
       "title": "a banda",
       "duration": 5.0,
       "description": "",
-      "background": "plano_salao",
+      "background": "plano_campo",
       "camera": {
         "keys": [
           {
@@ -733,19 +611,19 @@
             "expr": "happy",
             "z": 3,
             "depth": 1.45,
-            "holding": "baqueta",
+            "holding": "baqueta_a4",
             "hand_n_x": -110,
             "hand_n_y": 20,
             "hand_n_bend": 0.5,
             "paw_n": 1,
-            "holding_f": "baqueta"
+            "holding_f": "baqueta_a4"
           },
           "exposure": 1,
           "actions": [
             {
               "t": 0.0,
               "do": "dance",
-              "style": "toca_bateria",
+              "style": "toca_bateria_a4",
               "dur": 5.0
             }
           ]
@@ -768,25 +646,6 @@
               "dur": 5.0
             }
           ]
-        },
-        "vovo": {
-          "start": {
-            "x": 2037.3,
-            "y": 930,
-            "turn": -0.35,
-            "expr": "happy",
-            "z": 3,
-            "depth": 1.45
-          },
-          "exposure": 1,
-          "actions": [
-            {
-              "t": 0.0,
-              "do": "dance",
-              "style": "balanco",
-              "dur": 5.0
-            }
-          ]
         }
       },
       "props": {
@@ -798,115 +657,12 @@
             "depth": 0.87
           },
           "exposure": 1,
-          "keys": [
+          "actions": [
             {
               "t": 0.0,
-              "pose": {
-                "bumbo": 1.0,
-                "caixa": 0.0,
-                "prato": 1.0
-              },
-              "ease": "out"
-            },
-            {
-              "t": 0.45,
-              "pose": {
-                "bumbo": 0.0,
-                "caixa": 1.0,
-                "prato": 0.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 0.9,
-              "pose": {
-                "bumbo": 1.0,
-                "caixa": 0.0,
-                "prato": 0.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 1.35,
-              "pose": {
-                "bumbo": 0.0,
-                "caixa": 1.0,
-                "prato": 0.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 1.8,
-              "pose": {
-                "bumbo": 1.0,
-                "caixa": 0.0,
-                "prato": 1.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 2.25,
-              "pose": {
-                "bumbo": 0.0,
-                "caixa": 1.0,
-                "prato": 0.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 2.7,
-              "pose": {
-                "bumbo": 1.0,
-                "caixa": 0.0,
-                "prato": 0.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 3.15,
-              "pose": {
-                "bumbo": 0.0,
-                "caixa": 1.0,
-                "prato": 0.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 3.6,
-              "pose": {
-                "bumbo": 1.0,
-                "caixa": 0.0,
-                "prato": 1.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 4.05,
-              "pose": {
-                "bumbo": 0.0,
-                "caixa": 1.0,
-                "prato": 0.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 4.5,
-              "pose": {
-                "bumbo": 1.0,
-                "caixa": 0.0,
-                "prato": 0.0
-              },
-              "ease": "out",
-              "in": 0.42
+              "do": "dance",
+              "style": "kit_a4",
+              "dur": 5.0
             }
           ]
         },
@@ -933,123 +689,6 @@
               },
               "ease": "linear",
               "in": 4.93
-            }
-          ]
-        },
-        "p": {
-          "start": {
-            "x": 1250.0,
-            "y": 600,
-            "z": 3,
-            "depth": 0.507
-          },
-          "exposure": 1,
-          "keys": [
-            {
-              "t": 0.0,
-              "pose": {
-                "estica": 0.0,
-                "dir": 0.0,
-                "mordido": 0.0,
-                "vapor": 1.0,
-                "onda": 0.0
-              },
-              "ease": "step"
-            },
-            {
-              "t": 0.0,
-              "pose": {
-                "y": 600
-              },
-              "ease": "in"
-            },
-            {
-              "t": 0.45,
-              "pose": {
-                "y": 520
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 0.9,
-              "pose": {
-                "y": 600
-              },
-              "ease": "in",
-              "in": 0.42
-            },
-            {
-              "t": 1.35,
-              "pose": {
-                "y": 520
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 1.8,
-              "pose": {
-                "y": 600
-              },
-              "ease": "in",
-              "in": 0.42
-            },
-            {
-              "t": 2.25,
-              "pose": {
-                "y": 520
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 2.7,
-              "pose": {
-                "y": 600
-              },
-              "ease": "in",
-              "in": 0.42
-            },
-            {
-              "t": 3.15,
-              "pose": {
-                "y": 520
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 3.6,
-              "pose": {
-                "y": 600
-              },
-              "ease": "in",
-              "in": 0.42
-            },
-            {
-              "t": 4.05,
-              "pose": {
-                "y": 520
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 4.5,
-              "pose": {
-                "y": 600
-              },
-              "ease": "in",
-              "in": 0.42
-            },
-            {
-              "t": 4.95,
-              "pose": {
-                "y": 520
-              },
-              "ease": "out",
-              "in": 0.42
             }
           ]
         }
@@ -4038,7 +3677,7 @@
       "title": "a banda",
       "duration": 4.2333,
       "description": "",
-      "background": "plano_salao",
+      "background": "plano_campo",
       "camera": {
         "keys": [
           {
@@ -4071,19 +3710,19 @@
             "expr": "happy",
             "z": 3,
             "depth": 1.45,
-            "holding": "baqueta",
+            "holding": "baqueta_a4",
             "hand_n_x": -110,
             "hand_n_y": 20,
             "hand_n_bend": 0.5,
             "paw_n": 1,
-            "holding_f": "baqueta"
+            "holding_f": "baqueta_a4"
           },
           "exposure": 1,
           "actions": [
             {
               "t": 0.0,
               "do": "dance",
-              "style": "toca_bateria",
+              "style": "toca_bateria_a4",
               "dur": 4.233
             }
           ]
@@ -4122,196 +3761,12 @@
             "depth": 0.87
           },
           "exposure": 1,
-          "keys": [
+          "actions": [
             {
               "t": 0.0,
-              "pose": {
-                "bumbo": 1.0,
-                "caixa": 0.0,
-                "prato": 1.0
-              },
-              "ease": "out"
-            },
-            {
-              "t": 0.45,
-              "pose": {
-                "bumbo": 0.0,
-                "caixa": 1.0,
-                "prato": 0.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 0.9,
-              "pose": {
-                "bumbo": 1.0,
-                "caixa": 0.0,
-                "prato": 0.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 1.35,
-              "pose": {
-                "bumbo": 0.0,
-                "caixa": 1.0,
-                "prato": 0.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 1.8,
-              "pose": {
-                "bumbo": 1.0,
-                "caixa": 0.0,
-                "prato": 1.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 2.25,
-              "pose": {
-                "bumbo": 0.0,
-                "caixa": 1.0,
-                "prato": 0.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 2.7,
-              "pose": {
-                "bumbo": 1.0,
-                "caixa": 0.0,
-                "prato": 0.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 3.15,
-              "pose": {
-                "bumbo": 0.0,
-                "caixa": 1.0,
-                "prato": 0.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 3.6,
-              "pose": {
-                "bumbo": 1.0,
-                "caixa": 0.0,
-                "prato": 1.0
-              },
-              "ease": "out",
-              "in": 0.42
-            }
-          ]
-        },
-        "p": {
-          "start": {
-            "x": 1264.2,
-            "y": 600,
-            "z": 3,
-            "depth": 0.507
-          },
-          "exposure": 1,
-          "keys": [
-            {
-              "t": 0.0,
-              "pose": {
-                "estica": 0.0,
-                "dir": 0.0,
-                "mordido": 0.0,
-                "vapor": 1.0,
-                "onda": 0.0
-              },
-              "ease": "step"
-            },
-            {
-              "t": 0.0,
-              "pose": {
-                "y": 600
-              },
-              "ease": "in"
-            },
-            {
-              "t": 0.45,
-              "pose": {
-                "y": 520
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 0.9,
-              "pose": {
-                "y": 600
-              },
-              "ease": "in",
-              "in": 0.42
-            },
-            {
-              "t": 1.35,
-              "pose": {
-                "y": 520
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 1.8,
-              "pose": {
-                "y": 600
-              },
-              "ease": "in",
-              "in": 0.42
-            },
-            {
-              "t": 2.25,
-              "pose": {
-                "y": 520
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 2.7,
-              "pose": {
-                "y": 600
-              },
-              "ease": "in",
-              "in": 0.42
-            },
-            {
-              "t": 3.15,
-              "pose": {
-                "y": 520
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 3.6,
-              "pose": {
-                "y": 600
-              },
-              "ease": "in",
-              "in": 0.42
-            },
-            {
-              "t": 4.05,
-              "pose": {
-                "y": 520
-              },
-              "ease": "out",
-              "in": 0.42
+              "do": "dance",
+              "style": "kit_a4",
+              "dur": 4.233
             }
           ]
         }
@@ -4325,7 +3780,7 @@
       "title": "a vovó dança",
       "duration": 4.2667,
       "description": "",
-      "background": "plano_salao",
+      "background": "plano_campo",
       "camera": {
         "keys": [
           {
@@ -4358,19 +3813,19 @@
             "expr": "happy",
             "z": 3,
             "depth": 1.45,
-            "holding": "baqueta",
+            "holding": "baqueta_a4",
             "hand_n_x": -110,
             "hand_n_y": 20,
             "hand_n_bend": 0.5,
             "paw_n": 1,
-            "holding_f": "baqueta"
+            "holding_f": "baqueta_a4"
           },
           "exposure": 1,
           "actions": [
             {
               "t": 0.0,
               "do": "dance",
-              "style": "toca_bateria",
+              "style": "toca_bateria_a4",
               "dur": 4.267
             }
           ]
@@ -4393,25 +3848,6 @@
               "dur": 4.267
             }
           ]
-        },
-        "vovo": {
-          "start": {
-            "x": 2037.3,
-            "y": 930,
-            "turn": -0.35,
-            "expr": "happy",
-            "z": 3,
-            "depth": 1.45
-          },
-          "exposure": 1,
-          "actions": [
-            {
-              "t": 0.0,
-              "do": "dance",
-              "style": "balanco",
-              "dur": 4.267
-            }
-          ]
         }
       },
       "props": {
@@ -4423,95 +3859,12 @@
             "depth": 0.87
           },
           "exposure": 1,
-          "keys": [
+          "actions": [
             {
               "t": 0.0,
-              "pose": {
-                "bumbo": 1.0,
-                "caixa": 0.0,
-                "prato": 1.0
-              },
-              "ease": "out"
-            },
-            {
-              "t": 0.45,
-              "pose": {
-                "bumbo": 0.0,
-                "caixa": 1.0,
-                "prato": 0.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 0.9,
-              "pose": {
-                "bumbo": 1.0,
-                "caixa": 0.0,
-                "prato": 0.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 1.35,
-              "pose": {
-                "bumbo": 0.0,
-                "caixa": 1.0,
-                "prato": 0.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 1.8,
-              "pose": {
-                "bumbo": 1.0,
-                "caixa": 0.0,
-                "prato": 1.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 2.25,
-              "pose": {
-                "bumbo": 0.0,
-                "caixa": 1.0,
-                "prato": 0.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 2.7,
-              "pose": {
-                "bumbo": 1.0,
-                "caixa": 0.0,
-                "prato": 0.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 3.15,
-              "pose": {
-                "bumbo": 0.0,
-                "caixa": 1.0,
-                "prato": 0.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 3.6,
-              "pose": {
-                "bumbo": 1.0,
-                "caixa": 0.0,
-                "prato": 1.0
-              },
-              "ease": "out",
-              "in": 0.42
+              "do": "dance",
+              "style": "kit_a4",
+              "dur": 4.267
             }
           ]
         },
@@ -4538,107 +3891,6 @@
               },
               "ease": "linear",
               "in": 4.197
-            }
-          ]
-        },
-        "p": {
-          "start": {
-            "x": 1250.0,
-            "y": 600,
-            "z": 3,
-            "depth": 0.507
-          },
-          "exposure": 1,
-          "keys": [
-            {
-              "t": 0.0,
-              "pose": {
-                "estica": 0.0,
-                "dir": 0.0,
-                "mordido": 0.0,
-                "vapor": 1.0,
-                "onda": 0.0
-              },
-              "ease": "step"
-            },
-            {
-              "t": 0.0,
-              "pose": {
-                "y": 600
-              },
-              "ease": "in"
-            },
-            {
-              "t": 0.45,
-              "pose": {
-                "y": 520
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 0.9,
-              "pose": {
-                "y": 600
-              },
-              "ease": "in",
-              "in": 0.42
-            },
-            {
-              "t": 1.35,
-              "pose": {
-                "y": 520
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 1.8,
-              "pose": {
-                "y": 600
-              },
-              "ease": "in",
-              "in": 0.42
-            },
-            {
-              "t": 2.25,
-              "pose": {
-                "y": 520
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 2.7,
-              "pose": {
-                "y": 600
-              },
-              "ease": "in",
-              "in": 0.42
-            },
-            {
-              "t": 3.15,
-              "pose": {
-                "y": 520
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 3.6,
-              "pose": {
-                "y": 600
-              },
-              "ease": "in",
-              "in": 0.42
-            },
-            {
-              "t": 4.05,
-              "pose": {
-                "y": 520
-              },
-              "ease": "out",
-              "in": 0.42
             }
           ]
         }
@@ -8045,7 +7297,7 @@
       "title": "Pão de queijo, uai, uai!",
       "duration": 4.8333,
       "description": "Pão de queijo, uai, uai! / Mais um, vovó! Vai, vai!",
-      "background": "plano_salao",
+      "background": "plano_campo",
       "camera": {
         "keys": [
           {
@@ -8078,19 +7330,19 @@
             "expr": "happy",
             "z": 3,
             "depth": 1.45,
-            "holding": "baqueta",
+            "holding": "baqueta_a4",
             "hand_n_x": -110,
             "hand_n_y": 20,
             "hand_n_bend": 0.5,
             "paw_n": 1,
-            "holding_f": "baqueta"
+            "holding_f": "baqueta_a4"
           },
           "exposure": 1,
           "actions": [
             {
               "t": 0.0,
               "do": "dance",
-              "style": "toca_bateria",
+              "style": "toca_bateria_a4",
               "dur": 4.833
             }
           ]
@@ -8118,25 +7370,6 @@
               "dur": 4.833
             }
           ]
-        },
-        "vovo": {
-          "start": {
-            "x": 2051.6,
-            "y": 930,
-            "turn": -0.35,
-            "expr": "happy",
-            "z": 3,
-            "depth": 1.45
-          },
-          "exposure": 1,
-          "actions": [
-            {
-              "t": 0.0,
-              "do": "dance",
-              "style": "palmas",
-              "dur": 4.833
-            }
-          ]
         }
       },
       "props": {
@@ -8148,214 +7381,12 @@
             "depth": 0.87
           },
           "exposure": 1,
-          "keys": [
+          "actions": [
             {
               "t": 0.0,
-              "pose": {
-                "bumbo": 1.0,
-                "caixa": 0.0,
-                "prato": 1.0
-              },
-              "ease": "out"
-            },
-            {
-              "t": 0.45,
-              "pose": {
-                "bumbo": 0.0,
-                "caixa": 1.0,
-                "prato": 0.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 0.9,
-              "pose": {
-                "bumbo": 1.0,
-                "caixa": 0.0,
-                "prato": 0.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 1.35,
-              "pose": {
-                "bumbo": 0.0,
-                "caixa": 1.0,
-                "prato": 0.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 1.8,
-              "pose": {
-                "bumbo": 1.0,
-                "caixa": 0.0,
-                "prato": 1.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 2.25,
-              "pose": {
-                "bumbo": 0.0,
-                "caixa": 1.0,
-                "prato": 0.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 2.7,
-              "pose": {
-                "bumbo": 1.0,
-                "caixa": 0.0,
-                "prato": 0.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 3.15,
-              "pose": {
-                "bumbo": 0.0,
-                "caixa": 1.0,
-                "prato": 0.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 3.6,
-              "pose": {
-                "bumbo": 1.0,
-                "caixa": 0.0,
-                "prato": 1.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 4.05,
-              "pose": {
-                "bumbo": 0.0,
-                "caixa": 1.0,
-                "prato": 0.0
-              },
-              "ease": "out",
-              "in": 0.42
-            }
-          ]
-        },
-        "p": {
-          "start": {
-            "x": 1264.2,
-            "y": 600,
-            "z": 3,
-            "depth": 0.507
-          },
-          "exposure": 1,
-          "keys": [
-            {
-              "t": 0.0,
-              "pose": {
-                "estica": 0.0,
-                "dir": 0.0,
-                "mordido": 0.0,
-                "vapor": 1.0,
-                "onda": 0.0
-              },
-              "ease": "step"
-            },
-            {
-              "t": 0.0,
-              "pose": {
-                "y": 600
-              },
-              "ease": "in"
-            },
-            {
-              "t": 0.45,
-              "pose": {
-                "y": 520
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 0.9,
-              "pose": {
-                "y": 600
-              },
-              "ease": "in",
-              "in": 0.42
-            },
-            {
-              "t": 1.35,
-              "pose": {
-                "y": 520
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 1.8,
-              "pose": {
-                "y": 600
-              },
-              "ease": "in",
-              "in": 0.42
-            },
-            {
-              "t": 2.25,
-              "pose": {
-                "y": 520
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 2.7,
-              "pose": {
-                "y": 600
-              },
-              "ease": "in",
-              "in": 0.42
-            },
-            {
-              "t": 3.15,
-              "pose": {
-                "y": 520
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 3.6,
-              "pose": {
-                "y": 600
-              },
-              "ease": "in",
-              "in": 0.42
-            },
-            {
-              "t": 4.05,
-              "pose": {
-                "y": 520
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 4.5,
-              "pose": {
-                "y": 600
-              },
-              "ease": "in",
-              "in": 0.42
+              "do": "dance",
+              "style": "kit_a4",
+              "dur": 4.833
             }
           ]
         }
@@ -8619,7 +7650,7 @@
       "title": "Pão de queijo, uai, uai!",
       "duration": 4.8666,
       "description": "Pão de queijo, uai, uai! / Mais um, vovó! Vai, vai!",
-      "background": "plano_salao",
+      "background": "plano_campo",
       "camera": {
         "keys": [
           {
@@ -8652,19 +7683,19 @@
             "expr": "happy",
             "z": 3,
             "depth": 1.45,
-            "holding": "baqueta",
+            "holding": "baqueta_a4",
             "hand_n_x": -110,
             "hand_n_y": 20,
             "hand_n_bend": 0.5,
             "paw_n": 1,
-            "holding_f": "baqueta"
+            "holding_f": "baqueta_a4"
           },
           "exposure": 1,
           "actions": [
             {
               "t": 0.0,
               "do": "dance",
-              "style": "toca_bateria",
+              "style": "toca_bateria_a4",
               "dur": 4.867
             }
           ]
@@ -8687,25 +7718,6 @@
               "dur": 4.867
             }
           ]
-        },
-        "vovo": {
-          "start": {
-            "x": 2051.6,
-            "y": 930,
-            "turn": -0.35,
-            "expr": "happy",
-            "z": 3,
-            "depth": 1.45
-          },
-          "exposure": 1,
-          "actions": [
-            {
-              "t": 0.0,
-              "do": "dance",
-              "style": "palmas",
-              "dur": 4.867
-            }
-          ]
         }
       },
       "props": {
@@ -8717,105 +7729,12 @@
             "depth": 0.87
           },
           "exposure": 1,
-          "keys": [
+          "actions": [
             {
               "t": 0.0,
-              "pose": {
-                "bumbo": 1.0,
-                "caixa": 0.0,
-                "prato": 1.0
-              },
-              "ease": "out"
-            },
-            {
-              "t": 0.45,
-              "pose": {
-                "bumbo": 0.0,
-                "caixa": 1.0,
-                "prato": 0.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 0.9,
-              "pose": {
-                "bumbo": 1.0,
-                "caixa": 0.0,
-                "prato": 0.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 1.35,
-              "pose": {
-                "bumbo": 0.0,
-                "caixa": 1.0,
-                "prato": 0.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 1.8,
-              "pose": {
-                "bumbo": 1.0,
-                "caixa": 0.0,
-                "prato": 1.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 2.25,
-              "pose": {
-                "bumbo": 0.0,
-                "caixa": 1.0,
-                "prato": 0.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 2.7,
-              "pose": {
-                "bumbo": 1.0,
-                "caixa": 0.0,
-                "prato": 0.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 3.15,
-              "pose": {
-                "bumbo": 0.0,
-                "caixa": 1.0,
-                "prato": 0.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 3.6,
-              "pose": {
-                "bumbo": 1.0,
-                "caixa": 0.0,
-                "prato": 1.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 4.05,
-              "pose": {
-                "bumbo": 0.0,
-                "caixa": 1.0,
-                "prato": 0.0
-              },
-              "ease": "out",
-              "in": 0.42
+              "do": "dance",
+              "style": "kit_a4",
+              "dur": 4.867
             }
           ]
         },
@@ -8842,115 +7761,6 @@
               },
               "ease": "linear",
               "in": 4.797
-            }
-          ]
-        },
-        "p": {
-          "start": {
-            "x": 1264.2,
-            "y": 600,
-            "z": 3,
-            "depth": 0.507
-          },
-          "exposure": 1,
-          "keys": [
-            {
-              "t": 0.0,
-              "pose": {
-                "estica": 0.0,
-                "dir": 0.0,
-                "mordido": 0.0,
-                "vapor": 1.0,
-                "onda": 0.0
-              },
-              "ease": "step"
-            },
-            {
-              "t": 0.0,
-              "pose": {
-                "y": 600
-              },
-              "ease": "in"
-            },
-            {
-              "t": 0.45,
-              "pose": {
-                "y": 520
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 0.9,
-              "pose": {
-                "y": 600
-              },
-              "ease": "in",
-              "in": 0.42
-            },
-            {
-              "t": 1.35,
-              "pose": {
-                "y": 520
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 1.8,
-              "pose": {
-                "y": 600
-              },
-              "ease": "in",
-              "in": 0.42
-            },
-            {
-              "t": 2.25,
-              "pose": {
-                "y": 520
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 2.7,
-              "pose": {
-                "y": 600
-              },
-              "ease": "in",
-              "in": 0.42
-            },
-            {
-              "t": 3.15,
-              "pose": {
-                "y": 520
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 3.6,
-              "pose": {
-                "y": 600
-              },
-              "ease": "in",
-              "in": 0.42
-            },
-            {
-              "t": 4.05,
-              "pose": {
-                "y": 520
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 4.5,
-              "pose": {
-                "y": 600
-              },
-              "ease": "in",
-              "in": 0.42
             }
           ]
         }
@@ -8985,7 +7795,7 @@
       "title": "instrumental",
       "duration": 4.7334,
       "description": "",
-      "background": "plano_salao",
+      "background": "plano_campo",
       "camera": {
         "keys": [
           {
@@ -9018,19 +7828,19 @@
             "expr": "happy",
             "z": 3,
             "depth": 1.45,
-            "holding": "baqueta",
+            "holding": "baqueta_a4",
             "hand_n_x": -110,
             "hand_n_y": 20,
             "hand_n_bend": 0.5,
             "paw_n": 1,
-            "holding_f": "baqueta"
+            "holding_f": "baqueta_a4"
           },
           "exposure": 1,
           "actions": [
             {
               "t": 0.0,
               "do": "dance",
-              "style": "toca_bateria",
+              "style": "toca_bateria_a4",
               "dur": 4.733
             }
           ]
@@ -9053,25 +7863,6 @@
               "dur": 4.733
             }
           ]
-        },
-        "vovo": {
-          "start": {
-            "x": 2051.6,
-            "y": 930,
-            "turn": -0.35,
-            "expr": "happy",
-            "z": 3,
-            "depth": 1.45
-          },
-          "exposure": 1,
-          "actions": [
-            {
-              "t": 0.0,
-              "do": "dance",
-              "style": "cintura",
-              "dur": 4.733
-            }
-          ]
         }
       },
       "props": {
@@ -9083,105 +7874,12 @@
             "depth": 0.87
           },
           "exposure": 1,
-          "keys": [
+          "actions": [
             {
               "t": 0.0,
-              "pose": {
-                "bumbo": 1.0,
-                "caixa": 0.0,
-                "prato": 1.0
-              },
-              "ease": "out"
-            },
-            {
-              "t": 0.45,
-              "pose": {
-                "bumbo": 0.0,
-                "caixa": 1.0,
-                "prato": 0.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 0.9,
-              "pose": {
-                "bumbo": 1.0,
-                "caixa": 0.0,
-                "prato": 0.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 1.35,
-              "pose": {
-                "bumbo": 0.0,
-                "caixa": 1.0,
-                "prato": 0.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 1.8,
-              "pose": {
-                "bumbo": 1.0,
-                "caixa": 0.0,
-                "prato": 1.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 2.25,
-              "pose": {
-                "bumbo": 0.0,
-                "caixa": 1.0,
-                "prato": 0.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 2.7,
-              "pose": {
-                "bumbo": 1.0,
-                "caixa": 0.0,
-                "prato": 0.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 3.15,
-              "pose": {
-                "bumbo": 0.0,
-                "caixa": 1.0,
-                "prato": 0.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 3.6,
-              "pose": {
-                "bumbo": 1.0,
-                "caixa": 0.0,
-                "prato": 1.0
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 4.05,
-              "pose": {
-                "bumbo": 0.0,
-                "caixa": 1.0,
-                "prato": 0.0
-              },
-              "ease": "out",
-              "in": 0.42
+              "do": "dance",
+              "style": "kit_a4",
+              "dur": 4.733
             }
           ]
         },
@@ -9208,115 +7906,6 @@
               },
               "ease": "linear",
               "in": 4.663
-            }
-          ]
-        },
-        "p": {
-          "start": {
-            "x": 1264.2,
-            "y": 600,
-            "z": 3,
-            "depth": 0.507
-          },
-          "exposure": 1,
-          "keys": [
-            {
-              "t": 0.0,
-              "pose": {
-                "estica": 0.0,
-                "dir": 0.0,
-                "mordido": 0.0,
-                "vapor": 1.0,
-                "onda": 0.0
-              },
-              "ease": "step"
-            },
-            {
-              "t": 0.0,
-              "pose": {
-                "y": 600
-              },
-              "ease": "in"
-            },
-            {
-              "t": 0.45,
-              "pose": {
-                "y": 520
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 0.9,
-              "pose": {
-                "y": 600
-              },
-              "ease": "in",
-              "in": 0.42
-            },
-            {
-              "t": 1.35,
-              "pose": {
-                "y": 520
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 1.8,
-              "pose": {
-                "y": 600
-              },
-              "ease": "in",
-              "in": 0.42
-            },
-            {
-              "t": 2.25,
-              "pose": {
-                "y": 520
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 2.7,
-              "pose": {
-                "y": 600
-              },
-              "ease": "in",
-              "in": 0.42
-            },
-            {
-              "t": 3.15,
-              "pose": {
-                "y": 520
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 3.6,
-              "pose": {
-                "y": 600
-              },
-              "ease": "in",
-              "in": 0.42
-            },
-            {
-              "t": 4.05,
-              "pose": {
-                "y": 520
-              },
-              "ease": "out",
-              "in": 0.42
-            },
-            {
-              "t": 4.5,
-              "pose": {
-                "y": 600
-              },
-              "ease": "in",
-              "in": 0.42
             }
           ]
         }

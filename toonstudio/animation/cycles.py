@@ -432,6 +432,44 @@ CHOREO: dict[str, tuple[float, list[tuple[float, dict]]]] = {
                "hand_f_bend": -0.4, "paw_f": 1, "body_y": 6, "head_tilt": 0.08, "head_dy": 4}),
         (0.5, {"hand_n_x": 60, "hand_n_y": -25, "hand_f_x": 105, "hand_f_y": 40, "body_y": -2, "head_tilt": -0.06, "head_dy": -2}),
     ]),
+    # A4 (19/11): toca_bateria_a4 — com a bateria_show e "baqueta_a4" nas duas mãos (a baqueta segue o antebraço).
+    # Compasso de 4: 1 = PRATO (mão de trás no prato) + caixa; 2 = caixa; 3 = tom (mão de trás); 4 = as duas + virada no
+    # contratempo. Antes de cada pancada a baqueta SOBE (preparação) e depois da pancada dá um quique (rebote).
+    "toca_bateria_a4": (4, [
+        (0.0, {"hand_n_x": 90, "hand_n_y": 35, "hand_n_bend": 0.4, "hand_f_x": -125, "hand_f_y": -60, "hand_f_bend": -0.4,
+               "paw_n": 1, "paw_f": 1, "body_y": 7, "head_dy": 5, "head_tilt": 0.08, "lean": 0.04}),
+        (0.15, {"hand_n_x": 88, "hand_n_y": 18, "hand_f_x": -120, "hand_f_y": -75, "body_y": 3, "head_dy": 2}),
+        (0.5, {"hand_n_x": 128, "hand_n_y": -50, "hand_f_x": -128, "hand_f_y": -50, "body_y": -3, "head_dy": -2, "head_tilt": 0.0}),
+        (1.0, {"hand_n_x": 90, "hand_n_y": 35, "hand_f_x": -128, "hand_f_y": -50, "body_y": 6, "head_dy": 4, "head_tilt": -0.06, "lean": 0.0}),
+        (1.15, {"hand_n_x": 88, "hand_n_y": 18, "body_y": 3, "head_dy": 2}),
+        (1.5, {"hand_n_x": 128, "hand_n_y": -50, "hand_f_x": -128, "hand_f_y": -50, "body_y": -3, "head_dy": -2, "head_tilt": 0.0}),
+        (2.0, {"hand_n_x": 128, "hand_n_y": -50, "hand_f_x": -90, "hand_f_y": 35, "body_y": 7, "head_dy": 5, "head_tilt": 0.07, "lean": 0.04}),
+        (2.15, {"hand_f_x": -88, "hand_f_y": 18, "body_y": 3, "head_dy": 2}),
+        (2.5, {"hand_n_x": 128, "hand_n_y": -50, "hand_f_x": -128, "hand_f_y": -50, "body_y": -3, "head_dy": -2, "head_tilt": 0.0}),
+        (3.0, {"hand_n_x": 90, "hand_n_y": 35, "hand_f_x": -90, "hand_f_y": 35, "body_y": 7, "head_dy": 5, "head_tilt": -0.07, "lean": 0.0}),
+        (3.25, {"hand_n_x": 115, "hand_n_y": -20, "hand_f_x": -88, "hand_f_y": 12, "body_y": 2, "head_dy": 1}),
+        (3.5, {"hand_n_x": 82, "hand_n_y": 0, "hand_f_x": -90, "hand_f_y": 35, "body_y": 5, "head_dy": 3}),
+        (3.75, {"hand_n_x": 128, "hand_n_y": -50, "hand_f_x": -128, "hand_f_y": -50, "body_y": 0, "head_dy": 0, "lean": 0.02}),
+    ]),
+    # kit_a4: a própria bateria_show reage NAS MESMAS batidas do toca_bateria_a4 (usar como "dance" no objeto)
+    "kit_a4": (4, [
+        (0.0, {"prato": 1.0, "caixa": 1.0, "bumbo": 1.0, "tom": 0.0, "chimbal": 0.0}),
+        (0.25, {"prato": 0.7, "caixa": 0.0, "bumbo": 0.0}),
+        (0.5, {"chimbal": 1.0}),
+        (0.75, {"chimbal": 0.0}),
+        (1.0, {"prato": 0.3, "caixa": 1.0}),
+        (1.25, {"prato": 0.0, "caixa": 0.0}),
+        (1.5, {"chimbal": 1.0}),
+        (1.75, {"chimbal": 0.0}),
+        (2.0, {"tom": 1.0, "bumbo": 1.0}),
+        (2.25, {"tom": 0.0, "bumbo": 0.0}),
+        (2.5, {"chimbal": 1.0}),
+        (2.75, {"chimbal": 0.0}),
+        (3.0, {"caixa": 1.0, "tom": 1.0, "bumbo": 1.0}),
+        (3.25, {"caixa": 0.0, "tom": 0.0, "bumbo": 0.0}),
+        (3.5, {"tom": 1.0}),
+        (3.75, {"tom": 0.0}),
+    ]),
     # toca_sax: sax na boca (mão da frente no corpo do sax), balança o corpo e a cabeça vai para trás no fim da frase
     "toca_sax": (2, [
         (0.0, {"hand_n_x": 34, "hand_n_y": -20, "hand_n_bend": 0.8, "paw_n": 1, "hand_f_x": 62, "hand_f_y": 20,
@@ -454,7 +492,7 @@ def soma_giro(turn: float, delta: float) -> float:
     quando o turn troca de sinal (laço, rosto e braços pulam de lado a cada batida — usuário, 19/11)."""
     lado = 1.0 if turn >= 0 else -1.0
     return lado * max(0.0, lado * (turn + delta))
-DANCE_WITH_ITEM = {"frevo", "escovar", "guitarra", "toca_bateria", "toca_sax", "toca_teclado"}        # passos em que a mão que segura o objeto (sombrinha) também dança
+DANCE_WITH_ITEM = {"frevo", "escovar", "guitarra", "toca_bateria", "toca_sax", "toca_teclado", "toca_bateria_a4"}        # passos em que a mão que segura o objeto (sombrinha) também dança
 DANCES = tuple(CHOREO) + tuple(ALIASES)
 _CAT = ("paw_n", "paw_f")
 _SCALE = {"body_x", "body_y", "lean", "turn+", "head_tilt", "head_dx", "head_dy", "foot_n_y", "foot_f_y", "hat_tilt", "tail_wag"}
@@ -496,6 +534,10 @@ _SEM_PERNA = {k for k, (_, names, keys) in _FILLED.items()
 _SEM_CORPO = {k for k, (_, names, keys) in _FILLED.items()
               if "body_y" not in names or max(kk["body_y"] for _, kk in keys) - min(kk["body_y"] for _, kk in keys) < 6}
 _SEM_PESO = {k for k, (_, names, _) in _FILLED.items() if not ({"body_x", "rot"} & set(names))}
+# A4: o baterista toca SENTADO (sem passo nem troca de peso) e a bateria (kit_a4) não ganha ginga nenhuma
+_SEM_PERNA -= {"toca_bateria_a4", "kit_a4"}
+_SEM_CORPO -= {"kit_a4"}
+_SEM_PESO -= {"toca_bateria_a4", "kit_a4"}
 
 
 def _ginga(style: str, pos: float, out: dict, amp: float) -> None:

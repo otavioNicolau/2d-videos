@@ -153,16 +153,16 @@ class CharTimeline:
         ear, ear_v, tail, tail_v, hx, hx_v = 0.0, 0.0, 0.0, 0.0, 0.0, 0.0
         hy, hy_v, hb, hb_v, hat, hat_v = 0.0, 0.0, 0.0, 0.0, 0.0, 0.0
         bx0 = (poses[0]["x"] + poses[0].get("body_x", 0.0)) if poses else 0.0
-        prev_vx, prev_x, prev_by, prev_vy = 0.0, bx0, poses[0]["body_y"] if poses else 0.0, 0.0
+        prev_vx, prev_x, prev_by, prev_vy = 0.0, bx0, poses[0].get("body_y", 0.0) if poses else 0.0, 0.0
         for i, p in enumerate(poses):
             f = 1.0 if p["turn"] >= 0 else -1.0
             # corpo inteiro (deslocamento no palco + balanço da dança): a cabeça/cabelo/chapéu respondem a ele
             bx = p["x"] + p.get("body_x", 0.0) * f
             vx = (bx - prev_x) / dt
             ax = (vx - prev_vx) / dt
-            vy = (p["body_y"] + p["y"] - prev_by) / dt
+            vy = (p.get("body_y", 0.0) + p["y"] - prev_by) / dt
             ay = (vy - prev_vy) / dt
-            prev_x, prev_vx, prev_by, prev_vy = bx, vx, p["body_y"] + p["y"], vy
+            prev_x, prev_vx, prev_by, prev_vy = bx, vx, p.get("body_y", 0.0) + p["y"], vy
             ax, ay = max(-6e4, min(6e4, ax)), max(-6e4, min(6e4, ay))
             for _ in range(2):        # follow-through vertical: cabeça "pesa" ao quicar; cabelo e chapéu atrasam
                 h = dt / 2

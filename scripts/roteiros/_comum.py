@@ -69,11 +69,12 @@ class Roteiro:
     def banda(self, cen, d, teclado=False, cam=None, extra=None, fx=None, sax=LA, bateria=LU):
         p = {"seg": round(d, 2), "cenario": cen, "camera": cam or {"x": 1300, "y": 600, "zoom": 1.1, "zoom_fim": 1.18},
              "fx": fx or ["notas"],
-             "objetos": {"bat": {"id": "bateria", "x": 1700, "y": 940, "z": 4, "depth": 0.6,
-                                 "keys": [{"t": round(j * 0.45, 2), "pose": {"bumbo": float(j % 2 == 0), "caixa": float(j % 2), "prato": float(j % 4 == 0)},
-                                           "ease": "out"} for j in range(int(d / 0.45))]}},
-             "atores": {bateria: {"x": 1700, "y": 930, "turn": -0.2, "z": 3, "segura": "baqueta", "segura_f": "baqueta",
-                                  "acoes": [{"t": 0.0, "do": "dance", "style": "toca_bateria", "dur": "resto"}]}}}
+             # A4 (19/11): bateria aberta (o Luisinho aparece por cima), baqueta seguindo o antebraço, prato/caixa/tom
+             # NA grade de batidas da música — a bateria "dança" kit_a4 no mesmo compasso do toca_bateria_a4
+             "objetos": {"bat": {"id": "bateria_show", "x": 1700, "y": 940, "z": 4, "depth": 0.6,
+                                 "acoes": [{"t": 0.0, "do": "dance", "style": "kit_a4", "dur": "resto"}]}},
+             "atores": {bateria: {"x": 1700, "y": 930, "turn": -0.2, "z": 3, "segura": "baqueta_a4", "segura_f": "baqueta_a4",
+                                  "acoes": [{"t": 0.0, "do": "dance", "style": "toca_bateria_a4", "dur": "resto"}]}}}
         if teclado:
             p["objetos"]["tec"] = {"id": "teclado_inst", "x": 800, "y": 940, "z": 4, "depth": 0.62,
                                    "keys": [{"t": 0.0, "pose": {"tecla": 0.0}, "ease": "step"}, {"t": round(d, 2), "pose": {"tecla": round(d * 2, 1)}, "ease": "linear"}]}

@@ -271,7 +271,7 @@
     ]
    },
    {
-    "cenario": "plano_salao",
+    "cenario": "plano_campo",
     "camera": {
      "x": 1300,
      "y": 600,
@@ -283,137 +283,17 @@
     ],
     "objetos": {
      "bat": {
-      "id": "bateria",
+      "id": "bateria_show",
       "x": 1700,
       "y": 940,
       "z": 4,
       "depth": 0.6,
-      "keys": [
+      "acoes": [
        {
         "t": 0.0,
-        "pose": {
-         "bumbo": 1.0,
-         "caixa": 0.0,
-         "prato": 1.0
-        },
-        "ease": "out"
-       },
-       {
-        "t": 0.45,
-        "pose": {
-         "bumbo": 0.0,
-         "caixa": 1.0,
-         "prato": 0.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 0.9,
-        "pose": {
-         "bumbo": 1.0,
-         "caixa": 0.0,
-         "prato": 0.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 1.35,
-        "pose": {
-         "bumbo": 0.0,
-         "caixa": 1.0,
-         "prato": 0.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 1.8,
-        "pose": {
-         "bumbo": 1.0,
-         "caixa": 0.0,
-         "prato": 1.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 2.193,
-        "pose": {
-         "bumbo": 0.0,
-         "caixa": 1.0,
-         "prato": 0.0
-        },
-        "ease": "out",
-        "in": 0.363
-       }
-      ]
-     },
-     "p": {
-      "id": "pao_queijo",
-      "x": 1250,
-      "y": 600,
-      "z": 3,
-      "depth": 0.35,
-      "keys": [
-       {
-        "t": 0.0,
-        "pose": {
-         "estica": 0.0,
-         "dir": 0.0,
-         "mordido": 0.0,
-         "vapor": 1.0,
-         "onda": 0.0
-        },
-        "ease": "step"
-       },
-       {
-        "t": 0.0,
-        "pose": {
-         "y": 600
-        },
-        "ease": "in"
-       },
-       {
-        "t": 0.45,
-        "pose": {
-         "y": 520
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 0.9,
-        "pose": {
-         "y": 600
-        },
-        "ease": "in",
-        "in": 0.42
-       },
-       {
-        "t": 1.35,
-        "pose": {
-         "y": 520
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 1.8,
-        "pose": {
-         "y": 600
-        },
-        "ease": "in",
-        "in": 0.42
-       },
-       {
-        "t": 2.193,
-        "pose": {
-         "y": 520
-        },
-        "ease": "out",
-        "in": 0.363
+        "do": "dance",
+        "style": "kit_a4",
+        "dur": "resto"
        }
       ]
      }
@@ -424,13 +304,13 @@
       "y": 930,
       "turn": -0.2,
       "z": 3,
-      "segura": "baqueta",
-      "segura_f": "baqueta",
+      "segura": "baqueta_a4",
+      "segura_f": "baqueta_a4",
       "acoes": [
        {
         "t": 0.0,
         "do": "dance",
-        "style": "toca_bateria",
+        "style": "toca_bateria_a4",
         "dur": "resto"
        }
       ]
@@ -463,7 +343,7 @@
    },
    {
     "seg": 5.0,
-    "cenario": "plano_salao",
+    "cenario": "plano_campo",
     "camera": {
      "x": 1250,
      "y": 620,
@@ -475,120 +355,17 @@
     ],
     "objetos": {
      "bat": {
-      "id": "bateria",
+      "id": "bateria_show",
       "x": 1700,
       "y": 940,
       "z": 4,
       "depth": 0.6,
-      "keys": [
+      "acoes": [
        {
         "t": 0.0,
-        "pose": {
-         "bumbo": 1.0,
-         "caixa": 0.0,
-         "prato": 1.0
-        },
-        "ease": "out"
-       },
-       {
-        "t": 0.45,
-        "pose": {
-         "bumbo": 0.0,
-         "caixa": 1.0,
-         "prato": 0.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 0.9,
-        "pose": {
-         "bumbo": 1.0,
-         "caixa": 0.0,
-         "prato": 0.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 1.35,
-        "pose": {
-         "bumbo": 0.0,
-         "caixa": 1.0,
-         "prato": 0.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 1.8,
-        "pose": {
-         "bumbo": 1.0,
-         "caixa": 0.0,
-         "prato": 1.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 2.25,
-        "pose": {
-         "bumbo": 0.0,
-         "caixa": 1.0,
-         "prato": 0.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 2.7,
-        "pose": {
-         "bumbo": 1.0,
-         "caixa": 0.0,
-         "prato": 0.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 3.15,
-        "pose": {
-         "bumbo": 0.0,
-         "caixa": 1.0,
-         "prato": 0.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 3.6,
-        "pose": {
-         "bumbo": 1.0,
-         "caixa": 0.0,
-         "prato": 1.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 4.05,
-        "pose": {
-         "bumbo": 0.0,
-         "caixa": 1.0,
-         "prato": 0.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 4.5,
-        "pose": {
-         "bumbo": 1.0,
-         "caixa": 0.0,
-         "prato": 0.0
-        },
-        "ease": "out",
-        "in": 0.42
+        "do": "dance",
+        "style": "kit_a4",
+        "dur": "resto"
        }
       ]
      },
@@ -615,121 +392,6 @@
         "in": 4.93
        }
       ]
-     },
-     "p": {
-      "id": "pao_queijo",
-      "x": 1250,
-      "y": 600,
-      "z": 3,
-      "depth": 0.35,
-      "keys": [
-       {
-        "t": 0.0,
-        "pose": {
-         "estica": 0.0,
-         "dir": 0.0,
-         "mordido": 0.0,
-         "vapor": 1.0,
-         "onda": 0.0
-        },
-        "ease": "step"
-       },
-       {
-        "t": 0.0,
-        "pose": {
-         "y": 600
-        },
-        "ease": "in"
-       },
-       {
-        "t": 0.45,
-        "pose": {
-         "y": 520
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 0.9,
-        "pose": {
-         "y": 600
-        },
-        "ease": "in",
-        "in": 0.42
-       },
-       {
-        "t": 1.35,
-        "pose": {
-         "y": 520
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 1.8,
-        "pose": {
-         "y": 600
-        },
-        "ease": "in",
-        "in": 0.42
-       },
-       {
-        "t": 2.25,
-        "pose": {
-         "y": 520
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 2.7,
-        "pose": {
-         "y": 600
-        },
-        "ease": "in",
-        "in": 0.42
-       },
-       {
-        "t": 3.15,
-        "pose": {
-         "y": 520
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 3.6,
-        "pose": {
-         "y": 600
-        },
-        "ease": "in",
-        "in": 0.42
-       },
-       {
-        "t": 4.05,
-        "pose": {
-         "y": 520
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 4.5,
-        "pose": {
-         "y": 600
-        },
-        "ease": "in",
-        "in": 0.42
-       },
-       {
-        "t": 4.95,
-        "pose": {
-         "y": 520
-        },
-        "ease": "out",
-        "in": 0.42
-       }
-      ]
      }
     },
     "atores": {
@@ -738,13 +400,13 @@
       "y": 930,
       "turn": -0.2,
       "z": 3,
-      "segura": "baqueta",
-      "segura_f": "baqueta",
+      "segura": "baqueta_a4",
+      "segura_f": "baqueta_a4",
       "acoes": [
        {
         "t": 0.0,
         "do": "dance",
-        "style": "toca_bateria",
+        "style": "toca_bateria_a4",
         "dur": "resto"
        }
       ]
@@ -759,18 +421,6 @@
         "t": 0.0,
         "do": "dance",
         "style": "toca_teclado",
-        "dur": "resto"
-       }
-      ]
-     },
-     "vovo": {
-      "x": 2350,
-      "turn": -0.35,
-      "acoes": [
-       {
-        "t": 0.0,
-        "do": "dance",
-        "style": "balanco",
         "dur": "resto"
        }
       ]
@@ -4711,7 +4361,7 @@
     ]
    },
    {
-    "cenario": "plano_salao",
+    "cenario": "plano_campo",
     "camera": {
      "x": 1300,
      "y": 620,
@@ -4723,217 +4373,17 @@
     ],
     "objetos": {
      "bat": {
-      "id": "bateria",
+      "id": "bateria_show",
       "x": 1700,
       "y": 940,
       "z": 4,
       "depth": 0.6,
-      "keys": [
+      "acoes": [
        {
         "t": 0.0,
-        "pose": {
-         "bumbo": 1.0,
-         "caixa": 0.0,
-         "prato": 1.0
-        },
-        "ease": "out"
-       },
-       {
-        "t": 0.45,
-        "pose": {
-         "bumbo": 0.0,
-         "caixa": 1.0,
-         "prato": 0.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 0.9,
-        "pose": {
-         "bumbo": 1.0,
-         "caixa": 0.0,
-         "prato": 0.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 1.35,
-        "pose": {
-         "bumbo": 0.0,
-         "caixa": 1.0,
-         "prato": 0.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 1.8,
-        "pose": {
-         "bumbo": 1.0,
-         "caixa": 0.0,
-         "prato": 1.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 2.25,
-        "pose": {
-         "bumbo": 0.0,
-         "caixa": 1.0,
-         "prato": 0.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 2.7,
-        "pose": {
-         "bumbo": 1.0,
-         "caixa": 0.0,
-         "prato": 0.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 3.15,
-        "pose": {
-         "bumbo": 0.0,
-         "caixa": 1.0,
-         "prato": 0.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 3.6,
-        "pose": {
-         "bumbo": 1.0,
-         "caixa": 0.0,
-         "prato": 1.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 4.05,
-        "pose": {
-         "bumbo": 0.0,
-         "caixa": 1.0,
-         "prato": 0.0
-        },
-        "ease": "out",
-        "in": 0.42
-       }
-      ]
-     },
-     "p": {
-      "id": "pao_queijo",
-      "x": 1250,
-      "y": 600,
-      "z": 3,
-      "depth": 0.35,
-      "keys": [
-       {
-        "t": 0.0,
-        "pose": {
-         "estica": 0.0,
-         "dir": 0.0,
-         "mordido": 0.0,
-         "vapor": 1.0,
-         "onda": 0.0
-        },
-        "ease": "step"
-       },
-       {
-        "t": 0.0,
-        "pose": {
-         "y": 600
-        },
-        "ease": "in"
-       },
-       {
-        "t": 0.45,
-        "pose": {
-         "y": 520
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 0.9,
-        "pose": {
-         "y": 600
-        },
-        "ease": "in",
-        "in": 0.42
-       },
-       {
-        "t": 1.35,
-        "pose": {
-         "y": 520
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 1.8,
-        "pose": {
-         "y": 600
-        },
-        "ease": "in",
-        "in": 0.42
-       },
-       {
-        "t": 2.25,
-        "pose": {
-         "y": 520
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 2.7,
-        "pose": {
-         "y": 600
-        },
-        "ease": "in",
-        "in": 0.42
-       },
-       {
-        "t": 3.15,
-        "pose": {
-         "y": 520
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 3.6,
-        "pose": {
-         "y": 600
-        },
-        "ease": "in",
-        "in": 0.42
-       },
-       {
-        "t": 4.05,
-        "pose": {
-         "y": 520
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 4.5,
-        "pose": {
-         "y": 600
-        },
-        "ease": "in",
-        "in": 0.42
+        "do": "dance",
+        "style": "kit_a4",
+        "dur": "resto"
        }
       ]
      }
@@ -4944,13 +4394,13 @@
       "y": 930,
       "turn": -0.2,
       "z": 3,
-      "segura": "baqueta",
-      "segura_f": "baqueta",
+      "segura": "baqueta_a4",
+      "segura_f": "baqueta_a4",
       "acoes": [
        {
         "t": 0.0,
         "do": "dance",
-        "style": "toca_bateria",
+        "style": "toca_bateria_a4",
         "dur": "resto"
        }
       ]
@@ -4964,18 +4414,6 @@
         "t": 0.0,
         "do": "dance",
         "style": "toca_sax",
-        "dur": "resto"
-       }
-      ]
-     },
-     "vovo": {
-      "x": 2350,
-      "turn": -0.35,
-      "acoes": [
-       {
-        "t": 0.0,
-        "do": "dance",
-        "style": "palmas",
         "dur": "resto"
        }
       ]
@@ -5166,7 +4604,7 @@
     ]
    },
    {
-    "cenario": "plano_salao",
+    "cenario": "plano_campo",
     "camera": {
      "x": 1300,
      "y": 620,
@@ -5178,110 +4616,17 @@
     ],
     "objetos": {
      "bat": {
-      "id": "bateria",
+      "id": "bateria_show",
       "x": 1700,
       "y": 940,
       "z": 4,
       "depth": 0.6,
-      "keys": [
+      "acoes": [
        {
         "t": 0.0,
-        "pose": {
-         "bumbo": 1.0,
-         "caixa": 0.0,
-         "prato": 1.0
-        },
-        "ease": "out"
-       },
-       {
-        "t": 0.45,
-        "pose": {
-         "bumbo": 0.0,
-         "caixa": 1.0,
-         "prato": 0.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 0.9,
-        "pose": {
-         "bumbo": 1.0,
-         "caixa": 0.0,
-         "prato": 0.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 1.35,
-        "pose": {
-         "bumbo": 0.0,
-         "caixa": 1.0,
-         "prato": 0.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 1.8,
-        "pose": {
-         "bumbo": 1.0,
-         "caixa": 0.0,
-         "prato": 1.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 2.25,
-        "pose": {
-         "bumbo": 0.0,
-         "caixa": 1.0,
-         "prato": 0.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 2.7,
-        "pose": {
-         "bumbo": 1.0,
-         "caixa": 0.0,
-         "prato": 0.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 3.15,
-        "pose": {
-         "bumbo": 0.0,
-         "caixa": 1.0,
-         "prato": 0.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 3.6,
-        "pose": {
-         "bumbo": 1.0,
-         "caixa": 0.0,
-         "prato": 1.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 4.05,
-        "pose": {
-         "bumbo": 0.0,
-         "caixa": 1.0,
-         "prato": 0.0
-        },
-        "ease": "out",
-        "in": 0.42
+        "do": "dance",
+        "style": "kit_a4",
+        "dur": "resto"
        }
       ]
      },
@@ -5308,113 +4653,6 @@
         "in": 4.797
        }
       ]
-     },
-     "p": {
-      "id": "pao_queijo",
-      "x": 1250,
-      "y": 600,
-      "z": 3,
-      "depth": 0.35,
-      "keys": [
-       {
-        "t": 0.0,
-        "pose": {
-         "estica": 0.0,
-         "dir": 0.0,
-         "mordido": 0.0,
-         "vapor": 1.0,
-         "onda": 0.0
-        },
-        "ease": "step"
-       },
-       {
-        "t": 0.0,
-        "pose": {
-         "y": 600
-        },
-        "ease": "in"
-       },
-       {
-        "t": 0.45,
-        "pose": {
-         "y": 520
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 0.9,
-        "pose": {
-         "y": 600
-        },
-        "ease": "in",
-        "in": 0.42
-       },
-       {
-        "t": 1.35,
-        "pose": {
-         "y": 520
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 1.8,
-        "pose": {
-         "y": 600
-        },
-        "ease": "in",
-        "in": 0.42
-       },
-       {
-        "t": 2.25,
-        "pose": {
-         "y": 520
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 2.7,
-        "pose": {
-         "y": 600
-        },
-        "ease": "in",
-        "in": 0.42
-       },
-       {
-        "t": 3.15,
-        "pose": {
-         "y": 520
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 3.6,
-        "pose": {
-         "y": 600
-        },
-        "ease": "in",
-        "in": 0.42
-       },
-       {
-        "t": 4.05,
-        "pose": {
-         "y": 520
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 4.5,
-        "pose": {
-         "y": 600
-        },
-        "ease": "in",
-        "in": 0.42
-       }
-      ]
      }
     },
     "atores": {
@@ -5423,13 +4661,13 @@
       "y": 930,
       "turn": -0.2,
       "z": 3,
-      "segura": "baqueta",
-      "segura_f": "baqueta",
+      "segura": "baqueta_a4",
+      "segura_f": "baqueta_a4",
       "acoes": [
        {
         "t": 0.0,
         "do": "dance",
-        "style": "toca_bateria",
+        "style": "toca_bateria_a4",
         "dur": "resto"
        }
       ]
@@ -5444,18 +4682,6 @@
         "t": 0.0,
         "do": "dance",
         "style": "toca_teclado",
-        "dur": "resto"
-       }
-      ]
-     },
-     "vovo": {
-      "x": 2350,
-      "turn": -0.35,
-      "acoes": [
-       {
-        "t": 0.0,
-        "do": "dance",
-        "style": "palmas",
         "dur": "resto"
        }
       ]
@@ -5812,7 +5038,7 @@
    },
    {
     "seg": 4.25,
-    "cenario": "plano_salao",
+    "cenario": "plano_campo",
     "camera": {
      "x": 1300,
      "y": 600,
@@ -5824,199 +5050,17 @@
     ],
     "objetos": {
      "bat": {
-      "id": "bateria",
+      "id": "bateria_show",
       "x": 1700,
       "y": 940,
       "z": 4,
       "depth": 0.6,
-      "keys": [
+      "acoes": [
        {
         "t": 0.0,
-        "pose": {
-         "bumbo": 1.0,
-         "caixa": 0.0,
-         "prato": 1.0
-        },
-        "ease": "out"
-       },
-       {
-        "t": 0.45,
-        "pose": {
-         "bumbo": 0.0,
-         "caixa": 1.0,
-         "prato": 0.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 0.9,
-        "pose": {
-         "bumbo": 1.0,
-         "caixa": 0.0,
-         "prato": 0.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 1.35,
-        "pose": {
-         "bumbo": 0.0,
-         "caixa": 1.0,
-         "prato": 0.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 1.8,
-        "pose": {
-         "bumbo": 1.0,
-         "caixa": 0.0,
-         "prato": 1.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 2.25,
-        "pose": {
-         "bumbo": 0.0,
-         "caixa": 1.0,
-         "prato": 0.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 2.7,
-        "pose": {
-         "bumbo": 1.0,
-         "caixa": 0.0,
-         "prato": 0.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 3.15,
-        "pose": {
-         "bumbo": 0.0,
-         "caixa": 1.0,
-         "prato": 0.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 3.6,
-        "pose": {
-         "bumbo": 1.0,
-         "caixa": 0.0,
-         "prato": 1.0
-        },
-        "ease": "out",
-        "in": 0.42
-       }
-      ]
-     },
-     "p": {
-      "id": "pao_queijo",
-      "x": 1250,
-      "y": 600,
-      "z": 3,
-      "depth": 0.35,
-      "keys": [
-       {
-        "t": 0.0,
-        "pose": {
-         "estica": 0.0,
-         "dir": 0.0,
-         "mordido": 0.0,
-         "vapor": 1.0,
-         "onda": 0.0
-        },
-        "ease": "step"
-       },
-       {
-        "t": 0.0,
-        "pose": {
-         "y": 600
-        },
-        "ease": "in"
-       },
-       {
-        "t": 0.45,
-        "pose": {
-         "y": 520
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 0.9,
-        "pose": {
-         "y": 600
-        },
-        "ease": "in",
-        "in": 0.42
-       },
-       {
-        "t": 1.35,
-        "pose": {
-         "y": 520
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 1.8,
-        "pose": {
-         "y": 600
-        },
-        "ease": "in",
-        "in": 0.42
-       },
-       {
-        "t": 2.25,
-        "pose": {
-         "y": 520
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 2.7,
-        "pose": {
-         "y": 600
-        },
-        "ease": "in",
-        "in": 0.42
-       },
-       {
-        "t": 3.15,
-        "pose": {
-         "y": 520
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 3.6,
-        "pose": {
-         "y": 600
-        },
-        "ease": "in",
-        "in": 0.42
-       },
-       {
-        "t": 4.05,
-        "pose": {
-         "y": 520
-        },
-        "ease": "out",
-        "in": 0.42
+        "do": "dance",
+        "style": "kit_a4",
+        "dur": "resto"
        }
       ]
      }
@@ -6027,13 +5071,13 @@
       "y": 930,
       "turn": -0.2,
       "z": 3,
-      "segura": "baqueta",
-      "segura_f": "baqueta",
+      "segura": "baqueta_a4",
+      "segura_f": "baqueta_a4",
       "acoes": [
        {
         "t": 0.0,
         "do": "dance",
-        "style": "toca_bateria",
+        "style": "toca_bateria_a4",
         "dur": "resto"
        }
       ]
@@ -6059,7 +5103,7 @@
    },
    {
     "seg": 4.25,
-    "cenario": "plano_salao",
+    "cenario": "plano_campo",
     "camera": {
      "x": 1250,
      "y": 620,
@@ -6071,100 +5115,17 @@
     ],
     "objetos": {
      "bat": {
-      "id": "bateria",
+      "id": "bateria_show",
       "x": 1700,
       "y": 940,
       "z": 4,
       "depth": 0.6,
-      "keys": [
+      "acoes": [
        {
         "t": 0.0,
-        "pose": {
-         "bumbo": 1.0,
-         "caixa": 0.0,
-         "prato": 1.0
-        },
-        "ease": "out"
-       },
-       {
-        "t": 0.45,
-        "pose": {
-         "bumbo": 0.0,
-         "caixa": 1.0,
-         "prato": 0.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 0.9,
-        "pose": {
-         "bumbo": 1.0,
-         "caixa": 0.0,
-         "prato": 0.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 1.35,
-        "pose": {
-         "bumbo": 0.0,
-         "caixa": 1.0,
-         "prato": 0.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 1.8,
-        "pose": {
-         "bumbo": 1.0,
-         "caixa": 0.0,
-         "prato": 1.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 2.25,
-        "pose": {
-         "bumbo": 0.0,
-         "caixa": 1.0,
-         "prato": 0.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 2.7,
-        "pose": {
-         "bumbo": 1.0,
-         "caixa": 0.0,
-         "prato": 0.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 3.15,
-        "pose": {
-         "bumbo": 0.0,
-         "caixa": 1.0,
-         "prato": 0.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 3.6,
-        "pose": {
-         "bumbo": 1.0,
-         "caixa": 0.0,
-         "prato": 1.0
-        },
-        "ease": "out",
-        "in": 0.42
+        "do": "dance",
+        "style": "kit_a4",
+        "dur": "resto"
        }
       ]
      },
@@ -6191,105 +5152,6 @@
         "in": 4.197
        }
       ]
-     },
-     "p": {
-      "id": "pao_queijo",
-      "x": 1250,
-      "y": 600,
-      "z": 3,
-      "depth": 0.35,
-      "keys": [
-       {
-        "t": 0.0,
-        "pose": {
-         "estica": 0.0,
-         "dir": 0.0,
-         "mordido": 0.0,
-         "vapor": 1.0,
-         "onda": 0.0
-        },
-        "ease": "step"
-       },
-       {
-        "t": 0.0,
-        "pose": {
-         "y": 600
-        },
-        "ease": "in"
-       },
-       {
-        "t": 0.45,
-        "pose": {
-         "y": 520
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 0.9,
-        "pose": {
-         "y": 600
-        },
-        "ease": "in",
-        "in": 0.42
-       },
-       {
-        "t": 1.35,
-        "pose": {
-         "y": 520
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 1.8,
-        "pose": {
-         "y": 600
-        },
-        "ease": "in",
-        "in": 0.42
-       },
-       {
-        "t": 2.25,
-        "pose": {
-         "y": 520
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 2.7,
-        "pose": {
-         "y": 600
-        },
-        "ease": "in",
-        "in": 0.42
-       },
-       {
-        "t": 3.15,
-        "pose": {
-         "y": 520
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 3.6,
-        "pose": {
-         "y": 600
-        },
-        "ease": "in",
-        "in": 0.42
-       },
-       {
-        "t": 4.05,
-        "pose": {
-         "y": 520
-        },
-        "ease": "out",
-        "in": 0.42
-       }
-      ]
      }
     },
     "atores": {
@@ -6298,13 +5160,13 @@
       "y": 930,
       "turn": -0.2,
       "z": 3,
-      "segura": "baqueta",
-      "segura_f": "baqueta",
+      "segura": "baqueta_a4",
+      "segura_f": "baqueta_a4",
       "acoes": [
        {
         "t": 0.0,
         "do": "dance",
-        "style": "toca_bateria",
+        "style": "toca_bateria_a4",
         "dur": "resto"
        }
       ]
@@ -6319,18 +5181,6 @@
         "t": 0.0,
         "do": "dance",
         "style": "toca_teclado",
-        "dur": "resto"
-       }
-      ]
-     },
-     "vovo": {
-      "x": 2350,
-      "turn": -0.35,
-      "acoes": [
-       {
-        "t": 0.0,
-        "do": "dance",
-        "style": "balanco",
         "dur": "resto"
        }
       ]
@@ -6618,7 +5468,7 @@
   "intervalo#3": [
    {
     "seg": 4.76,
-    "cenario": "plano_salao",
+    "cenario": "plano_campo",
     "camera": {
      "x": 1300,
      "y": 600,
@@ -6630,110 +5480,17 @@
     ],
     "objetos": {
      "bat": {
-      "id": "bateria",
+      "id": "bateria_show",
       "x": 1700,
       "y": 940,
       "z": 4,
       "depth": 0.6,
-      "keys": [
+      "acoes": [
        {
         "t": 0.0,
-        "pose": {
-         "bumbo": 1.0,
-         "caixa": 0.0,
-         "prato": 1.0
-        },
-        "ease": "out"
-       },
-       {
-        "t": 0.45,
-        "pose": {
-         "bumbo": 0.0,
-         "caixa": 1.0,
-         "prato": 0.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 0.9,
-        "pose": {
-         "bumbo": 1.0,
-         "caixa": 0.0,
-         "prato": 0.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 1.35,
-        "pose": {
-         "bumbo": 0.0,
-         "caixa": 1.0,
-         "prato": 0.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 1.8,
-        "pose": {
-         "bumbo": 1.0,
-         "caixa": 0.0,
-         "prato": 1.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 2.25,
-        "pose": {
-         "bumbo": 0.0,
-         "caixa": 1.0,
-         "prato": 0.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 2.7,
-        "pose": {
-         "bumbo": 1.0,
-         "caixa": 0.0,
-         "prato": 0.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 3.15,
-        "pose": {
-         "bumbo": 0.0,
-         "caixa": 1.0,
-         "prato": 0.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 3.6,
-        "pose": {
-         "bumbo": 1.0,
-         "caixa": 0.0,
-         "prato": 1.0
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 4.05,
-        "pose": {
-         "bumbo": 0.0,
-         "caixa": 1.0,
-         "prato": 0.0
-        },
-        "ease": "out",
-        "in": 0.42
+        "do": "dance",
+        "style": "kit_a4",
+        "dur": "resto"
        }
       ]
      },
@@ -6760,113 +5517,6 @@
         "in": 4.663
        }
       ]
-     },
-     "p": {
-      "id": "pao_queijo",
-      "x": 1250,
-      "y": 600,
-      "z": 3,
-      "depth": 0.35,
-      "keys": [
-       {
-        "t": 0.0,
-        "pose": {
-         "estica": 0.0,
-         "dir": 0.0,
-         "mordido": 0.0,
-         "vapor": 1.0,
-         "onda": 0.0
-        },
-        "ease": "step"
-       },
-       {
-        "t": 0.0,
-        "pose": {
-         "y": 600
-        },
-        "ease": "in"
-       },
-       {
-        "t": 0.45,
-        "pose": {
-         "y": 520
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 0.9,
-        "pose": {
-         "y": 600
-        },
-        "ease": "in",
-        "in": 0.42
-       },
-       {
-        "t": 1.35,
-        "pose": {
-         "y": 520
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 1.8,
-        "pose": {
-         "y": 600
-        },
-        "ease": "in",
-        "in": 0.42
-       },
-       {
-        "t": 2.25,
-        "pose": {
-         "y": 520
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 2.7,
-        "pose": {
-         "y": 600
-        },
-        "ease": "in",
-        "in": 0.42
-       },
-       {
-        "t": 3.15,
-        "pose": {
-         "y": 520
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 3.6,
-        "pose": {
-         "y": 600
-        },
-        "ease": "in",
-        "in": 0.42
-       },
-       {
-        "t": 4.05,
-        "pose": {
-         "y": 520
-        },
-        "ease": "out",
-        "in": 0.42
-       },
-       {
-        "t": 4.5,
-        "pose": {
-         "y": 600
-        },
-        "ease": "in",
-        "in": 0.42
-       }
-      ]
      }
     },
     "atores": {
@@ -6875,13 +5525,13 @@
       "y": 930,
       "turn": -0.2,
       "z": 3,
-      "segura": "baqueta",
-      "segura_f": "baqueta",
+      "segura": "baqueta_a4",
+      "segura_f": "baqueta_a4",
       "acoes": [
        {
         "t": 0.0,
         "do": "dance",
-        "style": "toca_bateria",
+        "style": "toca_bateria_a4",
         "dur": "resto"
        }
       ]
@@ -6896,18 +5546,6 @@
         "t": 0.0,
         "do": "dance",
         "style": "toca_teclado",
-        "dur": "resto"
-       }
-      ]
-     },
-     "vovo": {
-      "x": 2350,
-      "turn": -0.35,
-      "acoes": [
-       {
-        "t": 0.0,
-        "do": "dance",
-        "style": "cintura",
         "dur": "resto"
        }
       ]

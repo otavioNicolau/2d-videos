@@ -57,13 +57,13 @@ def ln(k: Ink, pts, col: str, w: float = LINE, alpha: float = 1.0):
 
 ITEMS = ("copo_leite", "copo_vazio", "banana", "banana_mordida", "pente", "garrafinha", "carrinho", "sombrinha", "escova",
          "suco", "fatia_bolo", "fatia_grande", "escova_pasta", "escova_guitarra", "apito", "sapato", "estrela_natal", "sorvete",
-         "baqueta", "saxofone", "pao_queijo", "pao_queijo_mordido")
+         "baqueta", "saxofone", "pao_queijo", "pao_queijo_mordido", "baqueta_a4")
 
 
 ITEM_SCALE = 1.6
 
 
-def draw_item(k: Ink, name: str, H: tuple[float, float], f: float = 1.0) -> None:
+def draw_item(k: Ink, name: str, H: tuple[float, float], f: float = 1.0, ang: float | None = None) -> None:
     """Desenha o objeto SEGURO na mão H. Coordenadas do desenho relativas à mão, ampliadas por ITEM_SCALE
     (a espessura do contorno NÃO muda: linha uniforme da bíblia)."""
     S = ITEM_SCALE
@@ -127,6 +127,13 @@ def draw_item(k: Ink, name: str, H: tuple[float, float], f: float = 1.0) -> None
             return q(px * math.cos(a) - py * math.sin(a), px * math.sin(a) + py * math.cos(a))
         shape(k, [g(-14, -5), g(70, -4), g(70, 4), g(-14, 5)], "#E8C49A", line="#B8874E", smooth=False)
         shape(k, ellipse_pts(*g(74, 0), 7 * S, 7 * S, 0, 12), "#F4D9B4", line="#B8874E")
+    elif name == "baqueta_a4":                             # A4: baqueta na DIREÇÃO do antebraço (cada mão aponta para o seu tambor)
+        a = (ang if ang is not None else 0.55) + 0.25 * (1 if math.cos(ang or 0) >= 0 else -1)
+        ca, sa = math.cos(a), math.sin(a)
+        def g(px, py):
+            return (hx + (px * ca - py * sa) * S, hy + (px * sa + py * ca) * S)
+        shape(k, [g(-12, -5), g(78, -4), g(78, 4), g(-12, 5)], "#E8C49A", line="#B8874E", smooth=False)
+        shape(k, ellipse_pts(*g(82, 0), 7 * S, 7 * S, 0, 12), "#F4D9B4", line="#B8874E")
     elif name == "saxofone":                               # saxofone dourado: boquilha na boca, corpo descendo, campana virada para cima
         ouro, ol = "#FFC93C", "#C9921E"
         ln(k, Q([(14, -58), (6, -46), (0, -30)]), "#2E2E3A", w=LINE * 2.2)                    # boquilha
@@ -2583,6 +2590,41 @@ class Bateria(_Prop):
             ln(k, [(side * 120, -40), (side * 150, 0)], "#7F8EA3", w=LINE * 1.4)
 
 
+class BateriaShow(_Prop):
+    """A4 (19/11): bateria ABERTA, para ver o Luisinho tocando — bumbo menor e baixo (o corpo e os braços aparecem por
+    cima), caixa à esquerda e tom à direita na altura das mãos, chimbal à esquerda e prato grande à direita, mais alto.
+    Canais 0→1 de pancada: `bumbo` (pele amassa), `caixa`, `tom` (a pele desce e brilha), `chimbal` (fecha),
+    `prato` (balança)."""
+
+    def __init__(self):
+        super().__init__("bateria_show", "Bateria (A4)", (1000, 800), (500, 760), 380,
+                         {"bumbo": 0.0, "caixa": 0.0, "tom": 0.0, "prato": 0.0, "chimbal": 0.0})
+
+    def paint(self, k, P):
+        bu, ca, to, pr, ch = (max(0.0, min(1.0, P[c])) for c in ("bumbo", "caixa", "tom", "prato", "chimbal"))
+        ln(k, [(305, 0), (305, -360)], "#7F8EA3", w=LINE * 1.6)                         # estante do prato
+        a = 0.3 * math.sin(pr * math.pi * 3) * pr
+        shape(k, ellipse_pts(305, -365, 110, 20, -0.12 + a, 24), "#FFD23F", line="#D9A520")  # prato (crash)
+        shape(k, ellipse_pts(305, -368, 18, 7, 0, 10), "#D9A520")
+        ln(k, [(-330, 0), (-330, -300)], "#7F8EA3", w=LINE * 1.6)                       # chimbal (dois pratinhos)
+        shape(k, ellipse_pts(-330, -296, 78, 13, 0, 20), "#FFD23F", line="#D9A520")
+        shape(k, ellipse_pts(-330, -312 + 12 * ch, 78, 13, 0, 20), "#FFE27A", line="#D9A520")
+        for x, v in ((-215, ca), (215, to)):                                               # caixa e tom
+            ln(k, [(x - 30, 0), (x, -195)], "#7F8EA3", w=LINE * 1.4)
+            ln(k, [(x + 30, 0), (x, -195)], "#7F8EA3", w=LINE * 1.4)
+            box(k, x - 78, -258, x + 78, -196, "#3C8BF0", line="#2A64B8", r=14)
+            shape(k, ellipse_pts(x, -258 + 6 * v, 78, 17, 0, 22), "#FFFFFF" if v < 0.5 else "#FFF7C2", line="#C9D6E0")
+            if v > 0.4:                                                                    # risquinhos da pancada
+                for j in (-1, 1):
+                    ln(k, [(x + j * 62, -286), (x + j * 92, -314)], "#FFFFFF", w=LINE * 0.9)
+        r = 118 * (1 - 0.05 * bu)                                                           # bumbo de frente (menor)
+        shape(k, ellipse_pts(0, -122, r, r, 0, 40), "#E9545D", line="#B83A42")
+        shape(k, ellipse_pts(0, -122, r * 0.8, r * 0.8, 0, 40), "#FFF6E8" if bu < 0.5 else "#FFFFFF", line="#E0C9A6")
+        _estrela(k, 0, -122, 48 + 8 * bu, "#FFD23F")
+        for side in (-1, 1):
+            ln(k, [(side * 85, -30), (side * 110, 0)], "#7F8EA3", w=LINE * 1.4)
+
+
 class TecladoInst(_Prop):
     """Teclado musical num suporte em X, visto pelo PÚBLICO (o músico fica atrás): teclas em cima, perto do músico, com
     as pretas na ponta de lá das brancas; painel com telinha e botões embaixo, virado para quem assiste.
@@ -2913,3 +2955,4 @@ class Tabuleiro(_Prop):
 
 
 PROPS.update({"pao_queijo": PaoQueijo, "tabuleiro": Tabuleiro})
+PROPS.update({"bateria_show": BateriaShow})

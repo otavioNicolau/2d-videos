@@ -12,7 +12,8 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from _comum import LA, LU, SALAO, Roteiro, call  # noqa: E402
+from _comum import LA, LU, Roteiro, call  # noqa: E402
+PALCO = "plano_campo"          # 19/11: a banda toca na roça mineira (o salão lilás com bandeirinhas fica para festa junina)
 
 R = Roteiro("ep24-pao-de-queijo", "24_pao_de_queijo", "luisinho")
 COZ, RUA, CEU, SALA, JARDIM = "plano_cozinha", "plano_casa_frente", "plano_ceu", "plano_sala", "plano_jardim"
@@ -80,8 +81,8 @@ R.partes["intro"] = [
     {"linhas": 1, "cenario": COZ, "camera": CAM, "objetos": {"m": mesa(), "t": tabuleiro(1300, MESA_Y, depth=0.5)},
      "atores": {LA: {"x": 150, "turn": 0.35, "acoes": [{"t": 0.0, "do": "run", "to_x": 600, "dur": 0.9}, {"t": 1.0, "do": "jump", "dur": 0.8}, {"t": 1.9, "do": "dance", "style": "cintura", "dur": "resto"}]},
                 LU: {"x": 2450, "turn": -0.35, "acoes": [{"t": 0.0, "do": "run", "to_x": 2000, "dur": 0.9}, {"t": 1.0, "do": "take", "dur": 1.0}, {"t": 2.1, "do": "dance", "style": "joelho", "dur": "resto"}]}}},
-    {**R.banda(SALAO, 4.0, fx=["confete"]), "linhas": 1, "callout": [call(0.2, "LAURINHA E LUISINHO!", "rosa")]},
-    {**R.banda(SALAO, 5.0, teclado=True, fx=["notas"], cam={"x": 1250, "y": 620, "zoom": 1.2, "zoom_fim": 1.1},
+    {**R.banda(PALCO, 4.0, fx=["confete"]), "linhas": 1, "callout": [call(0.2, "LAURINHA E LUISINHO!", "rosa")]},
+    {**R.banda(PALCO, 5.0, teclado=True, fx=["notas"], cam={"x": 1250, "y": 620, "zoom": 1.2, "zoom_fim": 1.1},
                extra={VO: {"x": 2350, "turn": -0.35, "acoes": [{"t": 0.0, "do": "dance", "style": "balanco", "dur": "resto"}]}}), "titulo": "a banda"},
     {"seg": 0.0, "cenario": COZ, "camera": {"x": 1300, "y": 580, "zoom": 1.0, "zoom_fim": 1.1}, "fx": ["confete"], "titulo": "a cozinha dança",
      "objetos": {"m": mesa(), "t": tabuleiro(1300, MESA_Y, depth=0.5), "g": gato(1800, depth=0.45, lado=-1.0, miau=(2.0,)),
@@ -154,7 +155,7 @@ def refrao(n):
     for i, (t0, t1, v) in enumerate(T):
         d = t1 - t0
         if n == 3 and i in (1, 3):
-            p = R.banda(SALAO, d, teclado=(i == 3), fx=["confete"], cam={"x": 1300, "y": 620, "zoom": 1.0, "zoom_fim": 1.08},
+            p = R.banda(PALCO, d, teclado=(i == 3), fx=["confete"], cam={"x": 1300, "y": 620, "zoom": 1.0, "zoom_fim": 1.08},
                         extra={VO: {"x": 2350, "turn": -0.35, "acoes": [{"t": 0.0, "do": "dance", "style": "palmas", "dur": "resto"}]}})
             p.pop("seg")
             p.update({"linhas": 2, "callout": [call(0.3, "UAI, UAI!", "amarelo")]})
@@ -197,7 +198,7 @@ def intervalo(key, n):
     b, bl = R.bloco(key)
     D = b["e"] - b["s"]
     if not bl:
-        return [R.banda(SALAO, D, teclado=True, fx=["confete"], extra={VO: {"x": 2350, "turn": -0.35, "acoes": [{"t": 0.0, "do": "dance", "style": "cintura", "dur": "resto"}]}})]
+        return [R.banda(PALCO, D, teclado=True, fx=["confete"], extra={VO: {"x": 2350, "turn": -0.35, "acoes": [{"t": 0.0, "do": "dance", "style": "cintura", "dur": "resto"}]}})]
     p1 = round(bl[1]["s"] - b["s"] - 0.15, 2)
     p2 = 3.6 if D - p1 - 3.6 >= 2.0 else round(D - p1, 2)
     out = [{"linhas": 1, "seg": p1, "cenario": COZ if n == 1 else JARDIM, "camera": "close:luisinho", "callout": [call(0.2, "ZUM-ZUM, QUE MASSA!", "azul")],
@@ -211,8 +212,8 @@ def intervalo(key, n):
     resto = D - p1 - p2
     if resto >= 1.0:
         s3 = round(resto / 2, 2)
-        out += [{**R.banda(SALAO, s3, fx=["notas"]), "titulo": "a banda"},
-                {**R.banda(SALAO, round(resto - s3, 2), teclado=True, fx=["notas"], cam={"x": 1250, "y": 620, "zoom": 1.25, "zoom_fim": 1.15},
+        out += [{**R.banda(PALCO, s3, fx=["notas"]), "titulo": "a banda"},
+                {**R.banda(PALCO, round(resto - s3, 2), teclado=True, fx=["notas"], cam={"x": 1250, "y": 620, "zoom": 1.25, "zoom_fim": 1.15},
                            extra={VO: {"x": 2350, "turn": -0.35, "acoes": [{"t": 0.0, "do": "dance", "style": "balanco", "dur": "resto"}]}}), "titulo": "a vovó dança"}]
     return out
 
@@ -259,10 +260,11 @@ for p_ in R.partes["final#1"]:
     elif isinstance(p_["camera"], dict) and "zoom_fim" not in p_["camera"]:
         p_["camera"]["zoom_fim"] = p_["camera"]["zoom"] + 0.08
 R.partes["final#1"][0]["objetos"] = {"p": pulando(pao(1650, depth=0.4), 620, alto=50)}
-for planos in R.partes.values():
+
+for planos in R.partes.values():                      # banda: sem a vovó (ela cobriria o prato)
     for p_ in planos:
-        if p_.get("cenario") == SALAO and "bat" in p_.get("objetos", {}):
-            p_["objetos"]["p"] = pulando(pao(1250, depth=0.35), 600, alto=80)
+        if p_.get("cenario") == PALCO and VO in p_.get("atores", {}):
+            del p_["atores"][VO]                     # a bateria aberta ocupa o lado direito: a vovó dança na cozinha
 
 R.salvar("Roteiro de 'Pão de Queijo' (take v1 cortado para 2:53, Luisinho, estilo E12, nota 4,8): a cozinha da vovó mineira, a mordida e o "
          "queijo que estica até o telhado e passa pela lua; refrão 'estica e não sai' e 'mais um, vovó!'; ponte de comandos; telas "

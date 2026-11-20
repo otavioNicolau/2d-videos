@@ -54,12 +54,101 @@
  "youtube": {
   "resumo": "PÃO DE QUEIJO, UAI! 🧀 A vovó de Minas fez pão de queijo quentinho… o Luisinho deu uma mordida e o queijo esticou, esticou, passou pela lua e voltou! Estica pro lado, estica pro outro… nhac!",
   "resumo_short": "PÃO DE QUEIJO, UAI! 🧀 Estica, estica com o Luisinho!",
-  "curiosidade": ""
+  "curiosidade": "O pão de queijo nasceu em Minas Gerais e é feito com polvilho — por isso fica elástico e esticadinho",
+  "miniatura": "PÃO DE\\nQUEIJO!",
+  "miniatura_cena": {
+   "fundo": "raios",
+   "cores": [
+    [
+     255,
+     166,
+     48
+    ],
+    [
+     255,
+     226,
+     92
+    ],
+    [
+     255,
+     120,
+     80
+    ],
+    [
+     255,
+     205,
+     140
+    ],
+    [
+     250,
+     140,
+     40
+    ]
+   ],
+   "heroi": {
+    "id": "luisinho",
+    "pose": {
+     "turn": 0.2,
+     "mouth": "D",
+     "hand_n_x": -135,
+     "hand_n_y": -135,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3
+    }
+   },
+   "par": {
+    "id": "vovo",
+    "pose": {
+     "turn": -0.2,
+     "mouth": "D",
+     "hand_n_x": -135,
+     "hand_n_y": -135,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3
+    }
+   },
+   "objetos": [
+    {
+     "id": "tabuleiro",
+     "pose": {
+      "quantos": 1,
+      "vapor": 1
+     },
+     "tam": 260,
+     "x": 170,
+     "base": 360
+    }
+   ],
+   "frente": [
+    {
+     "id": "pao_queijo",
+     "pose": {
+      "estica": 0.55,
+      "dir": 0.06,
+      "mordido": 1,
+      "vapor": 1,
+      "onda": 0.5
+     },
+     "tam": 470,
+     "x": 700,
+     "base": 740
+    }
+   ]
+  }
  },
  "persona": "luisinho",
  "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz)",
  "playlists": [
-  "Músicas Infantis da Laurinha e do Luisinho 🐝"
+  "Músicas Infantis da Laurinha e do Luisinho 🐝",
+  "Dançar e Brincar com o Corpo 💃🕺"
  ],
  "cantam": {
   "verso": "luisinho",

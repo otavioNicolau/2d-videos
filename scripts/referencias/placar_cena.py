@@ -69,7 +69,7 @@ def medir(roteiro: dict) -> dict:
         ob = {f"{i}:{k}": v for i, sb in enumerate(subs) for k, v in (sb.get("objetos") or {}).items()}
         for k, v in ob.items():
             tobj.add(v.get("id", k.split(":", 1)[-1]))
-            anim += bool(v.get("keys"))
+            anim += bool(v.get("keys") or v.get("acoes"))          # A4: objeto que "dança" na batida (bateria) também conta
         cm = p.get("camera") or next((sb.get("camera") for sb in subs[1:] if sb.get("camera")), None)
         if (isinstance(cm, str) and cm.startswith("close")) or \
                 (isinstance(cm, dict) and (abs(cm.get("zoom_fim", cm.get("zoom", 1.0)) - cm.get("zoom", 1.0)) > 0.04 or cm.get("zoom", 1.0) >= 1.3)):

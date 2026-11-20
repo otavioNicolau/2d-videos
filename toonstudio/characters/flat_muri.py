@@ -256,7 +256,7 @@ class FlatMuri(Character):
         item = P.get("holding", "") if which == "n" else P.get("holding_f", "")      # 19/11: a mão de trás também segura (baqueta)
         if item:                              # objeto na mão (desenhado sob os dedos)
             from .flat_props import draw_item
-            draw_item(k, item, (H[0] + math.cos(a0) * 8, H[1] + math.sin(a0) * 8), f)
+            draw_item(k, item, (H[0] + math.cos(a0) * 8, H[1] + math.sin(a0) * 8), f, a0)
         for a in spread:                      # mão = 3 dedos-traço
             self._line(k, [H, (H[0] + math.cos(a0 + a) * ln, H[1] + math.sin(a0 + a) * ln)], col, w=LIMB * 0.75)
 
