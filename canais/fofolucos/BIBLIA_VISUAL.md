@@ -15,7 +15,7 @@ Aprovado pelo usuário em 20/11/2026 (turma, cenários, enquadramentos e logo).
 - **Nunca "diabinho"** (20/11/2026 — muitas famílias rejeitam): nada de rabo com ponta de flecha, nem a combinação
   vermelho + chifres + rabo pontudo + orelha/asa de morcego; nada de tridente, fogo ou cara de "capetinha".
 - **Palavras na letra**: "maluquinho" (não "louco"/"maluco"); evitar "chifrão"/"chifrudo" (duplo sentido para adulto).
-  Pose de marca: **"RAWR!"** (garras para cima, dentes, sobrancelha brava) — sempre divertida, nunca de dar medo de verdade.
+- Pose de marca: **"RAWR!"** (garras para cima, dentes, sobrancelha brava) — sempre divertida, nunca de dar medo de verdade.
 - Inspiração: o jeito geral dos clipes infantis de referência (chapado, cabeção, cores fortes). **Personagens, nome,
   logo e cenas são originais.**
 
