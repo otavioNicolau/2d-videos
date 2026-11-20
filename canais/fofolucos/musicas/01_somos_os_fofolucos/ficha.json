@@ -1,0 +1,67 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Somos os Fofolucos!",
+ "gancho": "Fofolucos! Rawr!",
+ "palavras_tema": [
+  "fofolucos",
+  "rawr",
+  "monstro",
+  "garrinha"
+ ],
+ "tipo": "danca",
+ "tema": "apresentação da turma da Vila Monstrinha: cada monstrinho e seu jeito; refrão-desafio 'faz a cara de monstro!'",
+ "dia_a_dia": [
+  "brincar de monstro",
+  "medo do escuro",
+  "amigos"
+ ],
+ "curiosidade": "existe um bicho de verdade com um 'terceiro olho': o tuatara, um réptil da Nova Zelândia, tem um olhinho no alto da cabeça que sente a luz",
+ "ritmo": "axe",
+ "bpm": 140,
+ "estrutura": "R",
+ "voz": "fofolucos",
+ "cantam": {
+  "verso": "fofolucos",
+  "refrão": "fofolucos",
+  "ponte": "fofolucos (comandos)"
+ },
+ "cenas": [
+  {
+   "parte": "intro",
+   "ideia": "logo Fofolucos + a turma pulando na Vila Monstrinha"
+  },
+  {
+   "parte": "verso 1",
+   "ideia": "cada monstrinho apresentado em close (cabeça): Bilu, Teco, Zuzu, Nhoque"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "todos fazem a cara de monstro e a pose RAWR!; fundos de raios em espiral"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "comandos: mostra o dente, a garra, balança o rabo… BU!"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "Gogo espia, Mimi pula o muro; noite: medo do escuro; lanterna → pulam de susto"
+  },
+  {
+   "parte": "final",
+   "ideia": "convite; a turma acena tchau e dá um último RAWR"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [],
+ "status": "rascunho",
+ "versoes": [],
+ "persona": "fofolucos",
+ "youtube": {
+  "resumo": "SOMOS OS FOFOLUCOS! 👾 Lá na Vila Monstrinha mora uma turma de arrepiar: o Bilu do olhão, o Teco dos três olhinhos, o Gogo, a Mimi, o Zuzu e o Nhoque! Faz a cara de monstro com a gente… RAWR!",
+  "resumo_short": "SOMOS OS FOFOLUCOS! 👾 Faz a cara de monstro… RAWR!",
+  "curiosidade": "Existe um bicho de verdade com um \"terceiro olho\", igual ao Teco: o tuatara, um réptil da Nova Zelândia, tem um olhinho no alto da cabeça que sente a luz"
+ }
+}
