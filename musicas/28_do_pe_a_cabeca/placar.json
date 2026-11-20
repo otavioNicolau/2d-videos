@@ -1,0 +1,31 @@
+{
+ "musica": "28",
+ "titulo": "Do Pé à Cabeça!",
+ "estilo": "E13",
+ "medidas": {
+  "voz_%": 25.5,
+  "bateria_%": 47.9,
+  "baixo_%": 5.0,
+  "outros_%": 21.7,
+  "largura_voz": 0.202,
+  "batidas_identicas": 0.758,
+  "duracao_s": 145.8,
+  "teclado_eletronico": 0.069,
+  "bateria_banda": 0.015,
+  "percussao": 0.012,
+  "metais": 0.086,
+  "sincope": 0.74,
+  "baixo_sincopado": 0.56
+ },
+ "acertos": "6/12",
+ "nota": null,
+ "obs": "",
+ "falhas": [
+  "voz no som (%) (baixo)",
+  "batida no som (%) (alto)",
+  "baixo no som (%) (baixo)",
+  "outros instrumentos (%) (alto)",
+  "largura da voz (0 = uma voz no centro) (alto)",
+  "batida de teclado (loop igual) (baixo)"
+ ]
+}

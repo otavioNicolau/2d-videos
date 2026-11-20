@@ -1,0 +1,72 @@
+{
+ "schema": "avaliacao-1.0",
+ "versoes": {
+  "v1": {
+   "arquivo": "v1.wav",
+   "duracao": 155.4,
+   "bpm": 161.5,
+   "bpm_nota": "",
+   "tom": "Ré maior",
+   "voz_inicio": 3.25,
+   "refrao_inicio": null,
+   "cantado": 70,
+   "intervalos": [
+    [
+     14.8,
+     11.2
+    ],
+    [
+     39.0,
+     2.6
+    ],
+    [
+     58.0,
+     5.5
+    ],
+    [
+     106.0,
+     4.1
+    ],
+    [
+     122.0,
+     6.2
+    ],
+    [
+     145.1,
+     6.7
+    ]
+   ],
+   "fim_depois_da_voz": 0.3,
+   "final": "esmaecendo",
+   "silencio_final": 0.0,
+   "acerto": 50,
+   "nao_reconhecidas": [
+    "mexe",
+    "laurinha",
+    "luisinho",
+    "parar",
+    "ombrinho",
+    "chega",
+    "bora",
+    "beijo",
+    "chama"
+   ],
+   "pontos_a_conferir": [
+    "andamento 162 fora da faixa do Axé (130–145)",
+    "o gancho não foi reconhecido na transcrição",
+    "só 50% da letra reconhecida — ouvir a pronúncia"
+   ]
+  }
+ },
+ "ouvido": {
+  "v1": {
+   "1 começo chama atenção": null,
+   "5 melodia combina com a letra": null,
+   "6 dá vontade de dançar": null,
+   "7 pronúncia natural": null,
+   "8 tem a cara do canal": null,
+   "9 nenhum trecho cansativo": null
+  }
+ },
+ "escolhida": null
+}
