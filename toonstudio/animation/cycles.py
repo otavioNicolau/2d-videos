@@ -283,6 +283,19 @@ CHOREO: dict[str, tuple[float, list[tuple[float, dict]]]] = {
                "hand_n_bend": 0.3, "hand_f_bend": -0.4, "paw_n": 0, "paw_f": 3, "tail_wag": 0.4}),
     ]),
     # pêndulo lento: 2 batidas para cada lado, braços abertos
+    # 26 (Gelatina): TREME-TREME — joelho dobrado, corpo chacoalhando de um lado para o outro a cada meia batida,
+    # braços moles abertos balançando ao contrário, cabeça atrasada (como a gelatina no prato)
+    "treme": (1, [
+        (0.0, {"body_x": -16, "body_y": 14, "rot": -0.06, "squash": 0.96, "head_tilt": 0.10, "hand_n_x": -125, "hand_n_y": 25,
+               "hand_f_x": 105, "hand_f_y": 45, "hand_n_bend": 0.6, "hand_f_bend": -0.6, "foot_n_bend": 0.35, "foot_f_bend": 0.35,
+               "paw_n": 3, "paw_f": 3}),
+        (0.25, {"body_x": 14, "body_y": 8, "rot": 0.06, "squash": 1.03, "head_tilt": -0.10, "hand_n_x": -105, "hand_n_y": 45,
+                "hand_f_x": 125, "hand_f_y": 25}),
+        (0.5, {"body_x": -14, "body_y": 14, "rot": -0.06, "squash": 0.96, "head_tilt": 0.10, "hand_n_x": -125, "hand_n_y": 25,
+               "hand_f_x": 105, "hand_f_y": 45}),
+        (0.75, {"body_x": 16, "body_y": 8, "rot": 0.06, "squash": 1.03, "head_tilt": -0.10, "hand_n_x": -105, "hand_n_y": 45,
+                "hand_f_x": 125, "hand_f_y": 25}),
+    ]),
     "pendulo": (4, [
         (0.0, {"rot": -0.14, "head_tilt": 0.1, "hand_n_x": -100, "hand_n_y": 10, "hand_f_x": 100, "hand_f_y": 10,
                "hand_n_bend": 0.3, "hand_f_bend": -0.3, "paw_n": 3, "paw_f": 3}),
@@ -535,7 +548,7 @@ _SEM_CORPO = {k for k, (_, names, keys) in _FILLED.items()
               if "body_y" not in names or max(kk["body_y"] for _, kk in keys) - min(kk["body_y"] for _, kk in keys) < 6}
 _SEM_PESO = {k for k, (_, names, _) in _FILLED.items() if not ({"body_x", "rot"} & set(names))}
 # A4: o baterista toca SENTADO (sem passo nem troca de peso) e a bateria (kit_a4) não ganha ginga nenhuma
-_SEM_PERNA -= {"toca_bateria_a4", "kit_a4"}
+_SEM_PERNA -= {"toca_bateria_a4", "kit_a4", "treme"}   # treme: pés plantados, só o corpo chacoalha
 _SEM_CORPO -= {"kit_a4"}
 _SEM_PESO -= {"toca_bateria_a4", "kit_a4"}
 

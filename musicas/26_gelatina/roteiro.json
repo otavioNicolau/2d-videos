@@ -1,0 +1,6362 @@
+{
+ "schema": "roteiro-1.0",
+ "escala_personagens": 1.45,
+ "nota": "Roteiro de 'Gelatina!' (take v1 cortado em 2:32, Laurinha, estilo E12, nota 4,7): a gelatina da vovó sai correndo pela casa e pelo jardim e quem olha treme junto (passo `treme`); 'pra cá / pra lá' em telas divididas; ponte molinho/durinho/congelou (cenário de gelo); banda na cozinha da vovó (A4). Gerado por scripts/roteiros/ep26_gelatina.py.",
+ "partes": {
+  "intro": [
+   {
+    "seg": 2.0,
+    "cenario": "plano_cozinha",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0,
+     "zoom_fim": 1.12
+    },
+    "titulo": "a gelatina da vovó",
+    "objetos": {
+     "m": {
+      "id": "mesa",
+      "x": 1300,
+      "y": 930,
+      "z": 1,
+      "depth": 1.3
+     },
+     "g": {
+      "id": "gelatina",
+      "x": 1300,
+      "y": 618.0,
+      "z": 4,
+      "depth": 0.5,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "fase": 0.0,
+         "treme": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "lid": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 1.4,
+        "pose": {
+         "lid": 0.0
+        },
+        "ease": "out",
+        "in": 1.37
+       },
+       {
+        "t": 1.88,
+        "pose": {
+         "fase": 5.02
+        },
+        "ease": "linear",
+        "in": 1.85
+       }
+      ]
+     }
+    },
+    "atores": {
+     "vovo": {
+      "x": 0,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "walk",
+        "to_x": 480,
+        "dur": 1.6
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_cozinha",
+    "camera": {
+     "x": 1300,
+     "y": 470,
+     "zoom": 1.5,
+     "zoom_fim": 1.6
+    },
+    "flash": true,
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "GELATINA!",
+      "color": "vermelho"
+     }
+    ],
+    "objetos": {
+     "m": {
+      "id": "mesa",
+      "x": 1300,
+      "y": 930,
+      "z": 1,
+      "depth": 1.3
+     },
+     "g": {
+      "id": "gelatina",
+      "x": 1300,
+      "y": 618.0,
+      "z": 4,
+      "depth": 0.5,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "fase": 0.0,
+         "treme": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "treme": 0.3
+        },
+        "ease": "out",
+        "in": 0.0
+       },
+       {
+        "t": 0.3,
+        "pose": {
+         "boca": 0.9
+        },
+        "ease": "out"
+       },
+       {
+        "t": 0.6,
+        "pose": {
+         "treme": 1.0
+        },
+        "ease": "out",
+        "in": 0.57
+       },
+       {
+        "t": 3.18,
+        "pose": {
+         "fase": 8.4
+        },
+        "ease": "linear",
+        "in": 3.15
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_cozinha",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.05,
+     "zoom_fim": 1.15
+    },
+    "objetos": {
+     "m": {
+      "id": "mesa",
+      "x": 1300,
+      "y": 930,
+      "z": 1,
+      "depth": 1.3
+     },
+     "g": {
+      "id": "gelatina",
+      "x": 1300,
+      "y": 618.0,
+      "z": 4,
+      "depth": 0.5,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "fase": 0.0,
+         "treme": 0.8,
+         "boca": 0.6
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.38,
+        "pose": {
+         "fase": 6.32
+        },
+        "ease": "linear",
+        "in": 2.35
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 450,
+      "turn": 0.3,
+      "expr": "surprised",
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "shock_reaction",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 2150,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "laugh",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 1,
+    "seg": 2.8,
+    "cenario": "plano_casa_frente",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.1,
+     "zoom_fim": 1.2
+    },
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "LAURINHA E LUISINHO!",
+      "color": "rosa"
+     }
+    ],
+    "fx": [
+     "confete"
+    ],
+    "objetos": {
+     "n": {
+      "id": "nuvem",
+      "x": 300,
+      "y": 430,
+      "z": 0,
+      "depth": 0.35,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 300.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.74,
+        "pose": {
+         "x": 560.0
+        },
+        "ease": "linear",
+        "in": 2.71
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 900,
+      "turn": 0.25,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "jump",
+        "dur": 0.8
+       },
+       {
+        "t": 1.0,
+        "do": "dance",
+        "style": "treme",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1700,
+      "turn": -0.25,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "jump",
+        "dur": 0.8
+       },
+       {
+        "t": 1.1,
+        "do": "dance",
+        "style": "treme",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "seg": 3.4,
+    "cenario": "plano_cozinha",
+    "camera": {
+     "x": 1300,
+     "y": 600,
+     "zoom": 1.1,
+     "zoom_fim": 1.18
+    },
+    "fx": [
+     "notas"
+    ],
+    "objetos": {
+     "bat": {
+      "id": "bateria_show",
+      "x": 1700,
+      "y": 940,
+      "z": 4,
+      "depth": 0.6,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "kit_a4",
+        "dur": "resto"
+       }
+      ]
+     },
+     "g": {
+      "id": "gelatina",
+      "x": 2250,
+      "y": 960,
+      "z": 4,
+      "depth": 0.45,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "fase": 0.0,
+         "treme": 0.8,
+         "boca": 0.6
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.35,
+        "pose": {
+         "fase": 8.84
+        },
+        "ease": "linear",
+        "in": 3.32
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 1700,
+      "y": 930,
+      "turn": -0.2,
+      "z": 3,
+      "segura": "baqueta_a4",
+      "segura_f": "baqueta_a4",
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_bateria_a4",
+        "dur": "resto"
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 800,
+      "turn": 0.3,
+      "segura": "saxofone",
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_sax",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "titulo": "a banda na cozinha da vovó",
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "seg": 2.47,
+    "cenario": "plano_cozinha",
+    "camera": {
+     "x": 1250,
+     "y": 620,
+     "zoom": 1.2,
+     "zoom_fim": 1.1
+    },
+    "fx": [
+     "notas"
+    ],
+    "objetos": {
+     "bat": {
+      "id": "bateria_show",
+      "x": 1700,
+      "y": 940,
+      "z": 4,
+      "depth": 0.6,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "kit_a4",
+        "dur": "resto"
+       }
+      ]
+     },
+     "tec": {
+      "id": "teclado_inst",
+      "x": 800,
+      "y": 940,
+      "z": 4,
+      "depth": 0.62,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "tecla": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.427,
+        "pose": {
+         "tecla": 4.9
+        },
+        "ease": "linear",
+        "in": 2.397
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 1700,
+      "y": 930,
+      "turn": -0.2,
+      "z": 3,
+      "segura": "baqueta_a4",
+      "segura_f": "baqueta_a4",
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_bateria_a4",
+        "dur": "resto"
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 800,
+      "y": 930,
+      "turn": 0.2,
+      "z": 3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_teclado",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "titulo": "teclado e bateria",
+    "cantam": [
+     "laurinha"
+    ]
+   }
+  ],
+  "verso#1": [
+   {
+    "linhas": 1,
+    "cenario": "plano_cozinha",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "callout": [
+     {
+      "t": 0.4,
+      "text": "A VOVÓ FEZ!",
+      "color": "laranja"
+     }
+    ],
+    "objetos": {
+     "m": {
+      "id": "mesa",
+      "x": 1300,
+      "y": 930,
+      "z": 1,
+      "depth": 1.3
+     },
+     "g": {
+      "id": "gelatina",
+      "x": 1300,
+      "y": 618.0,
+      "z": 4,
+      "depth": 0.5,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "fase": 0.0,
+         "treme": 0.2
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "lid": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "lid": 0.0
+        },
+        "ease": "out",
+        "in": 0.87
+       },
+       {
+        "t": 2.38,
+        "pose": {
+         "fase": 6.32
+        },
+        "ease": "linear",
+        "in": 2.35
+       }
+      ]
+     }
+    },
+    "atores": {
+     "vovo": {
+      "x": 470,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "point",
+        "dur": 1.0
+       },
+       {
+        "t": 1.2,
+        "do": "laugh",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_cozinha",
+    "camera": {
+     "x": 1300,
+     "y": 470,
+     "zoom": 1.55,
+     "zoom_fim": 1.65
+    },
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "VERMELHINHA!",
+      "color": "vermelho"
+     }
+    ],
+    "objetos": {
+     "m": {
+      "id": "mesa",
+      "x": 1300,
+      "y": 930,
+      "z": 1,
+      "depth": 1.3
+     },
+     "g": {
+      "id": "gelatina",
+      "x": 1300,
+      "y": 618.0,
+      "z": 4,
+      "depth": 0.5,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "fase": 0.0,
+         "treme": 0.0,
+         "boca": 0.5
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "treme": 0.2
+        },
+        "ease": "out",
+        "in": 0.0
+       },
+       {
+        "t": 0.5,
+        "pose": {
+         "treme": 1.0
+        },
+        "ease": "out",
+        "in": 0.47
+       },
+       {
+        "t": 1.18,
+        "pose": {
+         "fase": 3.2
+        },
+        "ease": "linear",
+        "in": 1.15
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_cozinha",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "callout": [
+     {
+      "t": 0.4,
+      "text": "NA MESA!",
+      "color": "verde"
+     }
+    ],
+    "objetos": {
+     "m": {
+      "id": "mesa",
+      "x": 1300,
+      "y": 930,
+      "z": 1,
+      "depth": 1.3
+     },
+     "g": {
+      "id": "gelatina",
+      "x": 1300,
+      "y": 618.0,
+      "z": 4,
+      "depth": 0.5,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "fase": 0.0,
+         "treme": 0.4
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.3,
+        "pose": {
+         "olha": -1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 1.0,
+        "pose": {
+         "olha": 1.0
+        },
+        "ease": "out",
+        "in": 0.67
+       },
+       {
+        "t": 1.58,
+        "pose": {
+         "fase": 4.24
+        },
+        "ease": "linear",
+        "in": 1.55
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 250,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "sneak",
+        "to_x": 650,
+        "dur": 1.0
+       },
+       {
+        "t": 1.1,
+        "do": "dance",
+        "style": "chute",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 2500,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "sneak",
+        "to_x": 2000,
+        "dur": 1.0
+       },
+       {
+        "t": 1.2,
+        "do": "dance",
+        "style": "joelho",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_sala",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.1
+    },
+    "tremor": [
+     0.3
+    ],
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "SAIU CORRENDO!",
+      "color": "vermelho"
+     }
+    ],
+    "objetos": {
+     "g": {
+      "id": "gelatina",
+      "x": 1100,
+      "y": 960,
+      "z": 4,
+      "depth": 0.6,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "fase": 0.0,
+         "treme": 0.9,
+         "pernas": 1.0,
+         "prato": 0.0,
+         "anda": 0.0,
+         "x": 1100.0,
+         "boca": 0.9
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.53,
+        "pose": {
+         "x": 2000.0
+        },
+        "ease": "inout",
+        "in": 1.5
+       },
+       {
+        "t": 1.58,
+        "pose": {
+         "fase": 4.24
+        },
+        "ease": "linear",
+        "in": 1.55
+       },
+       {
+        "t": 1.58,
+        "pose": {
+         "anda": 4.56
+        },
+        "ease": "linear",
+        "in": 1.55
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 2150,
+      "turn": -0.3,
+      "expr": "surprised",
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "shock_reaction",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 900,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "grab",
+        "dur": 0.7
+       },
+       {
+        "t": 0.85,
+        "do": "fall",
+        "to_y": 930,
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "tela_dividida": {
+     "layout": "vertical",
+     "paineis": [
+      {
+       "cenario": "plano_sala",
+       "camera": {
+        "x": 1300,
+        "y": 560,
+        "zoom": 1.2,
+        "zoom_fim": 1.3
+       },
+       "objetos": {
+        "g": {
+         "id": "gelatina",
+         "x": 1300,
+         "y": 960,
+         "z": 4,
+         "depth": 0.75,
+         "keys": [
+          {
+           "t": 0.0,
+           "pose": {
+            "fase": 0.0,
+            "treme": 1.0,
+            "boca": 0.7
+           },
+           "ease": "step"
+          },
+          {
+           "t": 1.95,
+           "pose": {
+            "fase": 5.2
+           },
+           "ease": "linear",
+           "in": 1.92
+          }
+         ]
+        }
+       }
+      },
+      {
+       "cenario": "danca_ondas_rosa",
+       "camera": {
+        "x": 1300,
+        "y": 560,
+        "zoom": 1.25,
+        "zoom_fim": 1.35
+       },
+       "atores": {
+        "laurinha": {
+         "x": 1300,
+         "turn": 0.15,
+         "acoes": [
+          {
+           "t": 0.1,
+           "do": "dance",
+           "style": "treme",
+           "dur": "resto"
+          }
+         ]
+        }
+       }
+      }
+     ]
+    },
+    "linhas": 1,
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "PRA CÁ!",
+      "color": "rosa"
+     }
+    ],
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "tela_dividida": {
+     "layout": "diagonal",
+     "paineis": [
+      {
+       "cenario": "danca_ondas_azul",
+       "camera": {
+        "x": 1300,
+        "y": 560,
+        "zoom": 1.25,
+        "zoom_fim": 1.35
+       },
+       "atores": {
+        "luisinho": {
+         "x": 1300,
+         "turn": -0.15,
+         "acoes": [
+          {
+           "t": 0.1,
+           "do": "dance",
+           "style": "treme",
+           "dur": "resto"
+          }
+         ]
+        }
+       }
+      },
+      {
+       "cenario": "plano_sala",
+       "camera": {
+        "x": 1300,
+        "y": 560,
+        "zoom": 1.2,
+        "zoom_fim": 1.3
+       },
+       "objetos": {
+        "g": {
+         "id": "gelatina",
+         "x": 1300,
+         "y": 960,
+         "z": 4,
+         "depth": 0.75,
+         "keys": [
+          {
+           "t": 0.0,
+           "pose": {
+            "fase": 0.0,
+            "treme": 1.0,
+            "boca": 0.7,
+            "olha": -1.0
+           },
+           "ease": "step"
+          },
+          {
+           "t": 1.18,
+           "pose": {
+            "fase": 3.2
+           },
+           "ease": "linear",
+           "in": 1.15
+          }
+         ]
+        }
+       }
+      }
+     ]
+    },
+    "linhas": 1,
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "PRA LÁ!",
+      "color": "azul"
+     }
+    ],
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_sala",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.1,
+     "zoom_fim": 1.2
+    },
+    "callout": [
+     {
+      "t": 0.4,
+      "text": "OLHOU?",
+      "color": "laranja"
+     }
+    ],
+    "objetos": {
+     "g": {
+      "id": "gelatina",
+      "x": 1300,
+      "y": 960,
+      "z": 4,
+      "depth": 0.6,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "fase": 0.0,
+         "treme": 0.7,
+         "boca": 0.5
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.58,
+        "pose": {
+         "fase": 4.24
+        },
+        "ease": "linear",
+        "in": 1.55
+       }
+      ]
+     },
+     "cx": {
+      "id": "caixa_brinquedos",
+      "x": 2550,
+      "y": 930,
+      "z": 1,
+      "depth": 0.7,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {},
+        "ease": "step"
+       },
+       {
+        "t": 0.5,
+        "pose": {
+         "carrinho": 1.0
+        },
+        "ease": "out"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "vovozinho": {
+      "x": 550,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "look_around",
+        "dur": "resto"
+       }
+      ]
+     },
+     "mamae": {
+      "x": 1900,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "pensar",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_sala",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.05
+    },
+    "tremor": [
+     0.81
+    ],
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "TREMELICAR!",
+      "color": "vermelho"
+     }
+    ],
+    "fx": [
+     "estrelas"
+    ],
+    "objetos": {
+     "g": {
+      "id": "gelatina",
+      "x": 1300,
+      "y": 1040,
+      "z": 4,
+      "depth": 0.7,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "fase": 0.0,
+         "treme": 1.0,
+         "boca": 0.9
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.98,
+        "pose": {
+         "fase": 5.28
+        },
+        "ease": "linear",
+        "in": 1.95
+       }
+      ]
+     }
+    },
+    "atores": {
+     "vovozinho": {
+      "x": 320,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "dance",
+        "style": "treme",
+        "dur": "resto"
+       }
+      ]
+     },
+     "mamae": {
+      "x": 880,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "dance",
+        "style": "treme",
+        "dur": "resto"
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 1860,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.15,
+        "do": "dance",
+        "style": "treme",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 2280,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.25,
+        "do": "dance",
+        "style": "treme",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   }
+  ],
+  "verso#2": [
+   {
+    "linhas": 1,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "callout": [
+     {
+      "t": 0.4,
+      "text": "A VOVÓ FEZ!",
+      "color": "laranja"
+     }
+    ],
+    "objetos": {
+     "m": {
+      "id": "mesa",
+      "x": 1300,
+      "y": 930,
+      "z": 1,
+      "depth": 1.3
+     },
+     "g": {
+      "id": "gelatina",
+      "x": 1300,
+      "y": 618.0,
+      "z": 4,
+      "depth": 0.5,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "fase": 0.0,
+         "treme": 0.2
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "lid": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "lid": 0.0
+        },
+        "ease": "out",
+        "in": 0.87
+       },
+       {
+        "t": 2.38,
+        "pose": {
+         "fase": 6.32
+        },
+        "ease": "linear",
+        "in": 2.35
+       }
+      ]
+     },
+     "s": {
+      "id": "sol",
+      "x": 2250,
+      "y": 200,
+      "z": 0,
+      "depth": 0.5,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "giro": 0.0,
+         "boca": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.6,
+        "pose": {
+         "boca": 1.0
+        },
+        "ease": "out",
+        "in": 0.57
+       },
+       {
+        "t": 2.37,
+        "pose": {
+         "giro": 0.5
+        },
+        "ease": "linear",
+        "in": 2.34
+       }
+      ]
+     },
+     "pl": {
+      "id": "plantinha",
+      "x": 250,
+      "y": 960,
+      "z": 1,
+      "depth": 0.45,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {},
+        "ease": "step"
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "cresce": 0.6
+        },
+        "ease": "out"
+       },
+       {
+        "t": 0.6,
+        "pose": {
+         "boca": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 1.2,
+        "pose": {
+         "cresce": 1.0
+        },
+        "ease": "out",
+        "in": 1.17
+       }
+      ]
+     }
+    },
+    "atores": {
+     "vovo": {
+      "x": 470,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "point",
+        "dur": 1.0
+       },
+       {
+        "t": 1.2,
+        "do": "laugh",
+        "dur": "resto"
+       }
+      ]
+     },
+     "vovozinho": {
+      "x": 2150,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "cheguei",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 470,
+     "zoom": 1.55,
+     "zoom_fim": 1.65
+    },
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "VERMELHINHA!",
+      "color": "vermelho"
+     }
+    ],
+    "objetos": {
+     "m": {
+      "id": "mesa",
+      "x": 1300,
+      "y": 930,
+      "z": 1,
+      "depth": 1.3
+     },
+     "g": {
+      "id": "gelatina",
+      "x": 1300,
+      "y": 618.0,
+      "z": 4,
+      "depth": 0.5,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "fase": 0.0,
+         "treme": 0.0,
+         "boca": 0.5
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "treme": 0.2
+        },
+        "ease": "out",
+        "in": 0.0
+       },
+       {
+        "t": 0.5,
+        "pose": {
+         "treme": 1.0
+        },
+        "ease": "out",
+        "in": 0.47
+       },
+       {
+        "t": 1.15,
+        "pose": {
+         "fase": 3.12
+        },
+        "ease": "linear",
+        "in": 1.12
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "callout": [
+     {
+      "t": 0.4,
+      "text": "NA MESA!",
+      "color": "verde"
+     }
+    ],
+    "objetos": {
+     "m": {
+      "id": "mesa",
+      "x": 1300,
+      "y": 930,
+      "z": 1,
+      "depth": 1.3
+     },
+     "g": {
+      "id": "gelatina",
+      "x": 1300,
+      "y": 618.0,
+      "z": 4,
+      "depth": 0.5,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "fase": 0.0,
+         "treme": 0.4
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.3,
+        "pose": {
+         "olha": -1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 1.0,
+        "pose": {
+         "olha": 1.0
+        },
+        "ease": "out",
+        "in": 0.67
+       },
+       {
+        "t": 1.55,
+        "pose": {
+         "fase": 4.16
+        },
+        "ease": "linear",
+        "in": 1.52
+       }
+      ]
+     },
+     "c": {
+      "id": "gato",
+      "x": 1000,
+      "y": 1000,
+      "z": 4,
+      "depth": 0.45,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "lado": 1.0,
+         "rabo": 0.0,
+         "miau": 0.0,
+         "assusta": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.4,
+        "pose": {
+         "rabo": 1.0
+        },
+        "ease": "inout",
+        "in": 0.37
+       },
+       {
+        "t": 0.8,
+        "pose": {
+         "rabo": 0.0
+        },
+        "ease": "inout",
+        "in": 0.37
+       },
+       {
+        "t": 0.8,
+        "pose": {
+         "miau": 1.0
+        },
+        "ease": "out",
+        "in": 0.77
+       },
+       {
+        "t": 1.2,
+        "pose": {
+         "rabo": 1.0
+        },
+        "ease": "inout",
+        "in": 0.37
+       },
+       {
+        "t": 1.25,
+        "pose": {
+         "miau": 0.0
+        },
+        "ease": "in",
+        "in": 0.42
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 250,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "run",
+        "to_x": 650,
+        "dur": 1.0
+       },
+       {
+        "t": 1.1,
+        "do": "dance",
+        "style": "sapinho",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 2600,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "run",
+        "to_x": 2000,
+        "dur": 1.0
+       },
+       {
+        "t": 1.2,
+        "do": "dance",
+        "style": "cintura",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.1
+    },
+    "tremor": [
+     0.3
+    ],
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "SAIU CORRENDO!",
+      "color": "vermelho"
+     }
+    ],
+    "objetos": {
+     "g": {
+      "id": "gelatina",
+      "x": 1100,
+      "y": 960,
+      "z": 4,
+      "depth": 0.6,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "fase": 0.0,
+         "treme": 0.9,
+         "pernas": 1.0,
+         "prato": 0.0,
+         "anda": 0.0,
+         "x": 1100.0,
+         "boca": 0.9
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.53,
+        "pose": {
+         "x": 2000.0
+        },
+        "ease": "inout",
+        "in": 1.5
+       },
+       {
+        "t": 1.58,
+        "pose": {
+         "fase": 4.24
+        },
+        "ease": "linear",
+        "in": 1.55
+       },
+       {
+        "t": 1.58,
+        "pose": {
+         "anda": 4.56
+        },
+        "ease": "linear",
+        "in": 1.55
+       }
+      ]
+     },
+     "c": {
+      "id": "gato",
+      "x": 200,
+      "y": 930,
+      "z": 2,
+      "depth": 0.5,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "lado": 1.0,
+         "rabo": 0.0,
+         "miau": 0.0,
+         "assusta": 0.0,
+         "x": 200.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.3,
+        "pose": {
+         "miau": 1.0
+        },
+        "ease": "out",
+        "in": 0.27
+       },
+       {
+        "t": 0.4,
+        "pose": {
+         "rabo": 1.0
+        },
+        "ease": "inout",
+        "in": 0.37
+       },
+       {
+        "t": 0.75,
+        "pose": {
+         "miau": 0.0
+        },
+        "ease": "in",
+        "in": 0.42
+       },
+       {
+        "t": 0.8,
+        "pose": {
+         "rabo": 0.0
+        },
+        "ease": "inout",
+        "in": 0.37
+       },
+       {
+        "t": 1.2,
+        "pose": {
+         "rabo": 1.0
+        },
+        "ease": "inout",
+        "in": 0.37
+       },
+       {
+        "t": 1.53,
+        "pose": {
+         "x": 1500.0
+        },
+        "ease": "inout",
+        "in": 1.5
+       }
+      ]
+     },
+     "n": {
+      "id": "nuvem",
+      "x": 1900,
+      "y": 430,
+      "z": 0,
+      "depth": 0.35,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 1900.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.57,
+        "pose": {
+         "x": 2160.0
+        },
+        "ease": "linear",
+        "in": 1.54
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 2150,
+      "turn": -0.3,
+      "expr": "surprised",
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "shock_reaction",
+        "dur": "resto"
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 900,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "grab",
+        "dur": 0.7
+       },
+       {
+        "t": 0.85,
+        "do": "crash",
+        "to_y": 930,
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "tela_dividida": {
+     "layout": "diagonal",
+     "paineis": [
+      {
+       "cenario": "plano_jardim",
+       "camera": {
+        "x": 1300,
+        "y": 560,
+        "zoom": 1.2,
+        "zoom_fim": 1.3
+       },
+       "objetos": {
+        "g": {
+         "id": "gelatina",
+         "x": 1300,
+         "y": 960,
+         "z": 4,
+         "depth": 0.75,
+         "keys": [
+          {
+           "t": 0.0,
+           "pose": {
+            "fase": 0.0,
+            "treme": 1.0,
+            "boca": 0.7
+           },
+           "ease": "step"
+          },
+          {
+           "t": 1.95,
+           "pose": {
+            "fase": 5.2
+           },
+           "ease": "linear",
+           "in": 1.92
+          }
+         ]
+        }
+       }
+      },
+      {
+       "cenario": "danca_xadrez_verde",
+       "camera": {
+        "x": 1300,
+        "y": 560,
+        "zoom": 1.25,
+        "zoom_fim": 1.35
+       },
+       "atores": {
+        "laurinha": {
+         "x": 1300,
+         "turn": 0.15,
+         "acoes": [
+          {
+           "t": 0.1,
+           "do": "dance",
+           "style": "treme",
+           "dur": "resto"
+          }
+         ]
+        }
+       }
+      }
+     ]
+    },
+    "linhas": 1,
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "PRA CÁ!",
+      "color": "rosa"
+     }
+    ],
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "tela_dividida": {
+     "layout": "vertical",
+     "paineis": [
+      {
+       "cenario": "danca_xadrez_amarelo",
+       "camera": {
+        "x": 1300,
+        "y": 560,
+        "zoom": 1.25,
+        "zoom_fim": 1.35
+       },
+       "atores": {
+        "luisinho": {
+         "x": 1300,
+         "turn": -0.15,
+         "acoes": [
+          {
+           "t": 0.1,
+           "do": "dance",
+           "style": "treme",
+           "dur": "resto"
+          }
+         ]
+        }
+       }
+      },
+      {
+       "cenario": "plano_jardim",
+       "camera": {
+        "x": 1300,
+        "y": 560,
+        "zoom": 1.2,
+        "zoom_fim": 1.3
+       },
+       "objetos": {
+        "g": {
+         "id": "gelatina",
+         "x": 1300,
+         "y": 960,
+         "z": 4,
+         "depth": 0.75,
+         "keys": [
+          {
+           "t": 0.0,
+           "pose": {
+            "fase": 0.0,
+            "treme": 1.0,
+            "boca": 0.7,
+            "olha": -1.0
+           },
+           "ease": "step"
+          },
+          {
+           "t": 1.18,
+           "pose": {
+            "fase": 3.2
+           },
+           "ease": "linear",
+           "in": 1.15
+          }
+         ]
+        }
+       }
+      }
+     ]
+    },
+    "linhas": 1,
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "PRA LÁ!",
+      "color": "azul"
+     }
+    ],
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.1,
+     "zoom_fim": 1.2
+    },
+    "callout": [
+     {
+      "t": 0.4,
+      "text": "OLHOU?",
+      "color": "laranja"
+     }
+    ],
+    "objetos": {
+     "g": {
+      "id": "gelatina",
+      "x": 1300,
+      "y": 960,
+      "z": 4,
+      "depth": 0.6,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "fase": 0.0,
+         "treme": 0.7,
+         "boca": 0.5
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.55,
+        "pose": {
+         "fase": 4.16
+        },
+        "ease": "linear",
+        "in": 1.52
+       }
+      ]
+     },
+     "s": {
+      "id": "sol",
+      "x": 2250,
+      "y": 200,
+      "z": 0,
+      "depth": 0.5,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "giro": 0.0,
+         "boca": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.6,
+        "pose": {
+         "boca": 1.0
+        },
+        "ease": "out",
+        "in": 0.57
+       },
+       {
+        "t": 1.54,
+        "pose": {
+         "giro": 0.5
+        },
+        "ease": "linear",
+        "in": 1.51
+       }
+      ]
+     },
+     "p": {
+      "id": "pipa",
+      "x": 1900,
+      "y": 380,
+      "z": 0,
+      "depth": 0.4,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "rabiola": 1.0,
+         "balanco": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.54,
+        "pose": {
+         "balanco": 1.92
+        },
+        "ease": "linear",
+        "in": 1.51
+       }
+      ]
+     }
+    },
+    "atores": {
+     "vovozinho": {
+      "x": 550,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "sit",
+        "dur": "resto"
+       }
+      ]
+     },
+     "mamae": {
+      "x": 1900,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "pensar",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.05
+    },
+    "tremor": [
+     0.64
+    ],
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "TREMELICAR!",
+      "color": "vermelho"
+     }
+    ],
+    "fx": [
+     "estrelas"
+    ],
+    "objetos": {
+     "g": {
+      "id": "gelatina",
+      "x": 1300,
+      "y": 1040,
+      "z": 4,
+      "depth": 0.7,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "fase": 0.0,
+         "treme": 1.0,
+         "boca": 0.9
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.55,
+        "pose": {
+         "fase": 4.16
+        },
+        "ease": "linear",
+        "in": 1.52
+       }
+      ]
+     },
+     "c": {
+      "id": "gato",
+      "x": 1680,
+      "y": 1010,
+      "z": 4,
+      "depth": 0.45,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "lado": -1.0,
+         "rabo": 0.0,
+         "miau": 0.0,
+         "assusta": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.3,
+        "pose": {
+         "assusta": 1.0
+        },
+        "ease": "back",
+        "in": 0.27
+       },
+       {
+        "t": 0.4,
+        "pose": {
+         "rabo": 1.0
+        },
+        "ease": "inout",
+        "in": 0.37
+       },
+       {
+        "t": 0.8,
+        "pose": {
+         "rabo": 0.0
+        },
+        "ease": "inout",
+        "in": 0.37
+       },
+       {
+        "t": 0.8,
+        "pose": {
+         "miau": 1.0
+        },
+        "ease": "out",
+        "in": 0.77
+       },
+       {
+        "t": 1.2,
+        "pose": {
+         "rabo": 1.0
+        },
+        "ease": "inout",
+        "in": 0.37
+       },
+       {
+        "t": 1.25,
+        "pose": {
+         "miau": 0.0
+        },
+        "ease": "in",
+        "in": 0.42
+       }
+      ]
+     },
+     "s": {
+      "id": "sol",
+      "x": 2250,
+      "y": 200,
+      "z": 0,
+      "depth": 0.5,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "giro": 0.0,
+         "boca": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.6,
+        "pose": {
+         "boca": 1.0
+        },
+        "ease": "out",
+        "in": 0.57
+       },
+       {
+        "t": 1.54,
+        "pose": {
+         "giro": 0.5
+        },
+        "ease": "linear",
+        "in": 1.51
+       }
+      ]
+     }
+    },
+    "atores": {
+     "vovo": {
+      "x": 320,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "dance",
+        "style": "treme",
+        "dur": "resto"
+       }
+      ]
+     },
+     "vovozinho": {
+      "x": 880,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "dance",
+        "style": "treme",
+        "dur": "resto"
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 1860,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.15,
+        "do": "dance",
+        "style": "treme",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 2280,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.25,
+        "do": "dance",
+        "style": "treme",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   }
+  ],
+  "refrao#1": [
+   {
+    "linhas": 2,
+    "cenario": "plano_sala",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.05,
+     "zoom_fim": 1.15
+    },
+    "fx": [
+     "estrelas"
+    ],
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "GELATINA!",
+      "color": "vermelho"
+     },
+     {
+      "t": 1.61,
+      "text": "TREME, TREME!",
+      "color": "vermelho"
+     }
+    ],
+    "objetos": {
+     "g": {
+      "id": "gelatina",
+      "x": 1300,
+      "y": 1000,
+      "z": 4,
+      "depth": 0.7,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "fase": 0.0,
+         "treme": 0.0,
+         "boca": 0.8
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "treme": 0.4
+        },
+        "ease": "out",
+        "in": 0.0
+       },
+       {
+        "t": 1.45,
+        "pose": {
+         "treme": 1.0
+        },
+        "ease": "out",
+        "in": 1.42
+       },
+       {
+        "t": 3.18,
+        "pose": {
+         "fase": 8.4
+        },
+        "ease": "linear",
+        "in": 3.15
+       }
+      ]
+     },
+     "cx": {
+      "id": "caixa_brinquedos",
+      "x": 2550,
+      "y": 930,
+      "z": 1,
+      "depth": 0.7,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {},
+        "ease": "step"
+       },
+       {
+        "t": 0.4,
+        "pose": {
+         "carrinho": 1.0
+        },
+        "ease": "out"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 500,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "dance",
+        "style": "treme",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 2050,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "dance",
+        "style": "treme",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "flash": true,
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 2,
+    "cenario": "plano_cozinha",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.05
+    },
+    "tremor": [
+     1.8
+    ],
+    "callout": [
+     {
+      "t": 1.47,
+      "text": "NINGUÉM FICA FIRME!",
+      "color": "laranja"
+     }
+    ],
+    "objetos": {
+     "g": {
+      "id": "gelatina",
+      "x": 1300,
+      "y": 1040,
+      "z": 4,
+      "depth": 0.7,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "fase": 0.0,
+         "treme": 1.0,
+         "boca": 0.9
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.22,
+        "pose": {
+         "fase": 8.5
+        },
+        "ease": "linear",
+        "in": 3.19
+       }
+      ]
+     },
+     "c": {
+      "id": "gato",
+      "x": 1680,
+      "y": 1010,
+      "z": 4,
+      "depth": 0.45,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "lado": -1.0,
+         "rabo": 0.0,
+         "miau": 0.0,
+         "assusta": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.4,
+        "pose": {
+         "rabo": 1.0
+        },
+        "ease": "inout",
+        "in": 0.37
+       },
+       {
+        "t": 0.5,
+        "pose": {
+         "assusta": 1.0
+        },
+        "ease": "back",
+        "in": 0.47
+       },
+       {
+        "t": 0.8,
+        "pose": {
+         "rabo": 0.0
+        },
+        "ease": "inout",
+        "in": 0.37
+       },
+       {
+        "t": 0.8,
+        "pose": {
+         "miau": 1.0
+        },
+        "ease": "out",
+        "in": 0.77
+       },
+       {
+        "t": 1.2,
+        "pose": {
+         "rabo": 1.0
+        },
+        "ease": "inout",
+        "in": 0.37
+       },
+       {
+        "t": 1.25,
+        "pose": {
+         "miau": 0.0
+        },
+        "ease": "in",
+        "in": 0.42
+       },
+       {
+        "t": 1.6,
+        "pose": {
+         "rabo": 0.0
+        },
+        "ease": "inout",
+        "in": 0.37
+       },
+       {
+        "t": 2.0,
+        "pose": {
+         "rabo": 1.0
+        },
+        "ease": "inout",
+        "in": 0.37
+       },
+       {
+        "t": 2.4,
+        "pose": {
+         "rabo": 0.0
+        },
+        "ease": "inout",
+        "in": 0.37
+       },
+       {
+        "t": 2.8,
+        "pose": {
+         "rabo": 1.0
+        },
+        "ease": "inout",
+        "in": 0.37
+       }
+      ]
+     }
+    },
+    "atores": {
+     "vovo": {
+      "x": 320,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "dance",
+        "style": "treme",
+        "dur": "resto"
+       }
+      ]
+     },
+     "mamae": {
+      "x": 880,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "dance",
+        "style": "treme",
+        "dur": "resto"
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 1860,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "dance",
+        "style": "treme",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 2280,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.3,
+        "do": "dance",
+        "style": "treme",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "tela_dividida": {
+     "layout": "diagonal",
+     "paineis": [
+      {
+       "cenario": "plano_sala",
+       "camera": {
+        "x": 1300,
+        "y": 540,
+        "zoom": 1.2,
+        "zoom_fim": 1.3
+       },
+       "objetos": {
+        "g": {
+         "id": "gelatina",
+         "x": 1300,
+         "y": 960,
+         "z": 4,
+         "depth": 0.75,
+         "keys": [
+          {
+           "t": 0.0,
+           "pose": {
+            "fase": 0.0,
+            "treme": 1.0,
+            "boca": 0.7
+           },
+           "ease": "step"
+          },
+          {
+           "t": 0.0,
+           "pose": {
+            "olha": -1.0
+           },
+           "ease": "out"
+          },
+          {
+           "t": 1.61,
+           "pose": {
+            "olha": 1.0
+           },
+           "ease": "out",
+           "in": 1.58
+          },
+          {
+           "t": 3.18,
+           "pose": {
+            "fase": 8.4
+           },
+           "ease": "linear",
+           "in": 3.15
+          }
+         ]
+        }
+       }
+      },
+      {
+       "cenario": "plano_cozinha",
+       "camera": {
+        "x": 1300,
+        "y": 560,
+        "zoom": 1.15,
+        "zoom_fim": 1.25
+       },
+       "atores": {
+        "laurinha": {
+         "x": 1050,
+         "turn": 0.25,
+         "acoes": [
+          {
+           "t": 0.1,
+           "do": "dance",
+           "style": "treme",
+           "dur": "resto"
+          }
+         ]
+        },
+        "luisinho": {
+         "x": 1550,
+         "turn": -0.25,
+         "acoes": [
+          {
+           "t": 0.2,
+           "do": "dance",
+           "style": "treme",
+           "dur": "resto"
+          }
+         ]
+        }
+       }
+      }
+     ]
+    },
+    "linhas": 2,
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "TREME, TREME!",
+      "color": "vermelho"
+     }
+    ],
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 2,
+    "cenario": "plano_quarto_rosa",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.1
+    },
+    "fx": [
+     "confete"
+    ],
+    "callout": [
+     {
+      "t": 1.45,
+      "text": "NINGUÉM FICA FIRME!",
+      "color": "laranja"
+     }
+    ],
+    "objetos": {
+     "g": {
+      "id": "gelatina",
+      "x": 1950,
+      "y": 1000,
+      "z": 4,
+      "depth": 0.6,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "fase": 0.0,
+         "treme": 1.0,
+         "boca": 0.9
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.61,
+        "pose": {
+         "mole": 0.6
+        },
+        "ease": "out"
+       },
+       {
+        "t": 3.18,
+        "pose": {
+         "fase": 8.4
+        },
+        "ease": "linear",
+        "in": 3.15
+       }
+      ]
+     },
+     "j": {
+      "id": "janela",
+      "x": 2250,
+      "y": 520,
+      "z": 1,
+      "depth": 0.8,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {},
+        "ease": "step"
+       },
+       {
+        "t": 0.3,
+        "pose": {
+         "abre": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 0.3,
+        "pose": {
+         "luz": 1.0
+        },
+        "ease": "out"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 450,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "dance",
+        "style": "treme",
+        "dur": 1.61
+       },
+       {
+        "t": 1.78,
+        "do": "slip",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 950,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "dance",
+        "style": "treme",
+        "dur": 1.61
+       },
+       {
+        "t": 1.94,
+        "do": "bounce",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   }
+  ],
+  "refrao#2": [
+   {
+    "linhas": 2,
+    "cenario": "plano_parque",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.05,
+     "zoom_fim": 1.15
+    },
+    "fx": [
+     "estrelas"
+    ],
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "GELATINA!",
+      "color": "laranja"
+     },
+     {
+      "t": 1.6,
+      "text": "TREME, TREME!",
+      "color": "vermelho"
+     }
+    ],
+    "objetos": {
+     "g": {
+      "id": "gelatina",
+      "x": 1300,
+      "y": 1000,
+      "z": 4,
+      "depth": 0.7,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "fase": 0.0,
+         "treme": 0.0,
+         "boca": 0.8
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "treme": 0.4
+        },
+        "ease": "out",
+        "in": 0.0
+       },
+       {
+        "t": 1.44,
+        "pose": {
+         "treme": 1.0
+        },
+        "ease": "out",
+        "in": 1.41
+       },
+       {
+        "t": 3.15,
+        "pose": {
+         "fase": 8.32
+        },
+        "ease": "linear",
+        "in": 3.12
+       }
+      ]
+     },
+     "p": {
+      "id": "pipa",
+      "x": 2300,
+      "y": 520,
+      "z": 0,
+      "depth": 0.4,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "rabiola": 1.0,
+         "balanco": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.14,
+        "pose": {
+         "balanco": 3.84
+        },
+        "ease": "linear",
+        "in": 3.11
+       }
+      ]
+     },
+     "s": {
+      "id": "sol",
+      "x": 2250,
+      "y": 200,
+      "z": 0,
+      "depth": 0.5,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "giro": 0.0,
+         "boca": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.6,
+        "pose": {
+         "boca": 1.0
+        },
+        "ease": "out",
+        "in": 0.57
+       },
+       {
+        "t": 3.14,
+        "pose": {
+         "giro": 0.5
+        },
+        "ease": "linear",
+        "in": 3.11
+       }
+      ]
+     },
+     "n": {
+      "id": "nuvem",
+      "x": 350,
+      "y": 430,
+      "z": 0,
+      "depth": 0.35,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 350.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.14,
+        "pose": {
+         "x": 610.0
+        },
+        "ease": "linear",
+        "in": 3.11
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 500,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "dance",
+        "style": "treme",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1800,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "dance",
+        "style": "treme",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 2,
+    "cenario": "plano_jardim",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.05
+    },
+    "tremor": [
+     1.8
+    ],
+    "callout": [
+     {
+      "t": 1.47,
+      "text": "NINGUÉM FICA FIRME!",
+      "color": "laranja"
+     }
+    ],
+    "objetos": {
+     "g": {
+      "id": "gelatina",
+      "x": 1300,
+      "y": 1040,
+      "z": 4,
+      "depth": 0.7,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "fase": 0.0,
+         "treme": 1.0,
+         "boca": 0.9
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.22,
+        "pose": {
+         "fase": 8.5
+        },
+        "ease": "linear",
+        "in": 3.19
+       }
+      ]
+     },
+     "c": {
+      "id": "gato",
+      "x": 1680,
+      "y": 1010,
+      "z": 4,
+      "depth": 0.45,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "lado": -1.0,
+         "rabo": 0.0,
+         "miau": 0.0,
+         "assusta": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.4,
+        "pose": {
+         "rabo": 1.0
+        },
+        "ease": "inout",
+        "in": 0.37
+       },
+       {
+        "t": 0.5,
+        "pose": {
+         "assusta": 1.0
+        },
+        "ease": "back",
+        "in": 0.47
+       },
+       {
+        "t": 0.8,
+        "pose": {
+         "rabo": 0.0
+        },
+        "ease": "inout",
+        "in": 0.37
+       },
+       {
+        "t": 0.8,
+        "pose": {
+         "miau": 1.0
+        },
+        "ease": "out",
+        "in": 0.77
+       },
+       {
+        "t": 1.2,
+        "pose": {
+         "rabo": 1.0
+        },
+        "ease": "inout",
+        "in": 0.37
+       },
+       {
+        "t": 1.25,
+        "pose": {
+         "miau": 0.0
+        },
+        "ease": "in",
+        "in": 0.42
+       },
+       {
+        "t": 1.6,
+        "pose": {
+         "rabo": 0.0
+        },
+        "ease": "inout",
+        "in": 0.37
+       },
+       {
+        "t": 2.0,
+        "pose": {
+         "rabo": 1.0
+        },
+        "ease": "inout",
+        "in": 0.37
+       },
+       {
+        "t": 2.4,
+        "pose": {
+         "rabo": 0.0
+        },
+        "ease": "inout",
+        "in": 0.37
+       },
+       {
+        "t": 2.8,
+        "pose": {
+         "rabo": 1.0
+        },
+        "ease": "inout",
+        "in": 0.37
+       }
+      ]
+     },
+     "s": {
+      "id": "sol",
+      "x": 2250,
+      "y": 200,
+      "z": 0,
+      "depth": 0.5,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "giro": 0.0,
+         "boca": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.6,
+        "pose": {
+         "boca": 1.0
+        },
+        "ease": "out",
+        "in": 0.57
+       },
+       {
+        "t": 3.21,
+        "pose": {
+         "giro": 0.5
+        },
+        "ease": "linear",
+        "in": 3.18
+       }
+      ]
+     }
+    },
+    "atores": {
+     "vovo": {
+      "x": 320,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "dance",
+        "style": "treme",
+        "dur": "resto"
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 1860,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "dance",
+        "style": "treme",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 2280,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.3,
+        "do": "dance",
+        "style": "treme",
+        "dur": "resto"
+       }
+      ]
+     },
+     "vovozinho": {
+      "x": 880,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "dance",
+        "style": "treme",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "tela_dividida": {
+     "layout": "vertical",
+     "paineis": [
+      {
+       "cenario": "plano_jardim",
+       "camera": {
+        "x": 1300,
+        "y": 540,
+        "zoom": 1.2,
+        "zoom_fim": 1.3
+       },
+       "objetos": {
+        "g": {
+         "id": "gelatina",
+         "x": 1300,
+         "y": 960,
+         "z": 4,
+         "depth": 0.75,
+         "keys": [
+          {
+           "t": 0.0,
+           "pose": {
+            "fase": 0.0,
+            "treme": 1.0,
+            "boca": 0.7
+           },
+           "ease": "step"
+          },
+          {
+           "t": 0.0,
+           "pose": {
+            "olha": -1.0
+           },
+           "ease": "out"
+          },
+          {
+           "t": 1.61,
+           "pose": {
+            "olha": 1.0
+           },
+           "ease": "out",
+           "in": 1.58
+          },
+          {
+           "t": 3.18,
+           "pose": {
+            "fase": 8.4
+           },
+           "ease": "linear",
+           "in": 3.15
+          }
+         ]
+        }
+       }
+      },
+      {
+       "cenario": "plano_sala",
+       "camera": {
+        "x": 1300,
+        "y": 560,
+        "zoom": 1.15,
+        "zoom_fim": 1.25
+       },
+       "atores": {
+        "laurinha": {
+         "x": 1050,
+         "turn": 0.25,
+         "acoes": [
+          {
+           "t": 0.1,
+           "do": "dance",
+           "style": "treme",
+           "dur": "resto"
+          }
+         ]
+        },
+        "luisinho": {
+         "x": 1550,
+         "turn": -0.25,
+         "acoes": [
+          {
+           "t": 0.2,
+           "do": "dance",
+           "style": "treme",
+           "dur": "resto"
+          }
+         ]
+        }
+       }
+      }
+     ]
+    },
+    "linhas": 2,
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "TREME, TREME!",
+      "color": "laranja"
+     }
+    ],
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 2,
+    "cenario": "plano_campo",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.1
+    },
+    "fx": [
+     "confete"
+    ],
+    "callout": [
+     {
+      "t": 1.63,
+      "text": "NINGUÉM FICA FIRME!",
+      "color": "laranja"
+     }
+    ],
+    "objetos": {
+     "g": {
+      "id": "gelatina",
+      "x": 1950,
+      "y": 1000,
+      "z": 4,
+      "depth": 0.6,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "fase": 0.0,
+         "treme": 1.0,
+         "boca": 0.9
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.81,
+        "pose": {
+         "mole": 0.6
+        },
+        "ease": "out"
+       },
+       {
+        "t": 3.58,
+        "pose": {
+         "fase": 9.44
+        },
+        "ease": "linear",
+        "in": 3.55
+       }
+      ]
+     },
+     "n": {
+      "id": "nuvem",
+      "x": 400,
+      "y": 430,
+      "z": 0,
+      "depth": 0.35,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 400.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.57,
+        "pose": {
+         "x": 660.0
+        },
+        "ease": "linear",
+        "in": 3.54
+       }
+      ]
+     },
+     "pt": {
+      "id": "pato",
+      "x": 2400,
+      "y": 960,
+      "z": 1,
+      "depth": 0.5,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {},
+        "ease": "step"
+       },
+       {
+        "t": 0.5,
+        "pose": {
+         "quem": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 0.5,
+        "pose": {
+         "asas": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 1.0,
+        "pose": {
+         "quem": 0.0
+        },
+        "ease": "out",
+        "in": 0.47
+       },
+       {
+        "t": 1.6,
+        "pose": {
+         "quem": 1.0
+        },
+        "ease": "out",
+        "in": 0.57
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 450,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "dance",
+        "style": "treme",
+        "dur": 1.81
+       },
+       {
+        "t": 2.0,
+        "do": "slip",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 950,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "dance",
+        "style": "treme",
+        "dur": 1.81
+       },
+       {
+        "t": 2.18,
+        "do": "bounce",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   }
+  ],
+  "refrao#3": [
+   {
+    "linhas": 2,
+    "cenario": "plano_quarto_azul",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.05,
+     "zoom_fim": 1.15
+    },
+    "fx": [
+     "estrelas"
+    ],
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "GELATINA!",
+      "color": "roxo"
+     },
+     {
+      "t": 1.4,
+      "text": "TREME, TREME!",
+      "color": "vermelho"
+     }
+    ],
+    "objetos": {
+     "g": {
+      "id": "gelatina",
+      "x": 1300,
+      "y": 1000,
+      "z": 4,
+      "depth": 0.7,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "fase": 0.0,
+         "treme": 0.0,
+         "boca": 0.8
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "treme": 0.4
+        },
+        "ease": "out",
+        "in": 0.0
+       },
+       {
+        "t": 1.26,
+        "pose": {
+         "treme": 1.0
+        },
+        "ease": "out",
+        "in": 1.23
+       },
+       {
+        "t": 2.75,
+        "pose": {
+         "fase": 7.28
+        },
+        "ease": "linear",
+        "in": 2.72
+       }
+      ]
+     },
+     "cx": {
+      "id": "caixa_brinquedos",
+      "x": 150,
+      "y": 930,
+      "z": 1,
+      "depth": 0.7,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {},
+        "ease": "step"
+       },
+       {
+        "t": 0.6,
+        "pose": {
+         "carrinho": 1.0
+        },
+        "ease": "out"
+       }
+      ]
+     },
+     "v": {
+      "id": "ventilador",
+      "x": 2500,
+      "y": 940,
+      "z": 1,
+      "depth": 0.55,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "vento": 1.0,
+         "giro": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.74,
+        "pose": {
+         "giro": 8.399999999999999
+        },
+        "ease": "linear",
+        "in": 2.71
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 750,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "dance",
+        "style": "treme",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1950,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "dance",
+        "style": "treme",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "cenario": "plano_cozinha",
+    "camera": {
+     "x": 1300,
+     "y": 620,
+     "zoom": 1.05,
+     "zoom_fim": 1.12
+    },
+    "fx": [
+     "confete"
+    ],
+    "objetos": {
+     "bat": {
+      "id": "bateria_show",
+      "x": 1700,
+      "y": 940,
+      "z": 4,
+      "depth": 0.6,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "kit_a4",
+        "dur": "resto"
+       }
+      ]
+     },
+     "g": {
+      "id": "gelatina",
+      "x": 2300,
+      "y": 960,
+      "z": 4,
+      "depth": 0.45,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "fase": 0.0,
+         "treme": 1.0,
+         "boca": 0.8
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.18,
+        "pose": {
+         "fase": 8.4
+        },
+        "ease": "linear",
+        "in": 3.15
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 1700,
+      "y": 930,
+      "turn": -0.2,
+      "z": 3,
+      "segura": "baqueta_a4",
+      "segura_f": "baqueta_a4",
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_bateria_a4",
+        "dur": "resto"
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 800,
+      "turn": 0.3,
+      "segura": "saxofone",
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_sax",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "linhas": 2,
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "TREME, TREME!",
+      "color": "vermelho"
+     }
+    ],
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "tela_dividida": {
+     "layout": "diagonal",
+     "paineis": [
+      {
+       "cenario": "plano_sala",
+       "camera": {
+        "x": 1300,
+        "y": 540,
+        "zoom": 1.2,
+        "zoom_fim": 1.3
+       },
+       "objetos": {
+        "g": {
+         "id": "gelatina",
+         "x": 1300,
+         "y": 960,
+         "z": 4,
+         "depth": 0.75,
+         "keys": [
+          {
+           "t": 0.0,
+           "pose": {
+            "fase": 0.0,
+            "treme": 1.0,
+            "boca": 0.7
+           },
+           "ease": "step"
+          },
+          {
+           "t": 0.0,
+           "pose": {
+            "olha": -1.0
+           },
+           "ease": "out"
+          },
+          {
+           "t": 1.6,
+           "pose": {
+            "olha": 1.0
+           },
+           "ease": "out",
+           "in": 1.57
+          },
+          {
+           "t": 3.15,
+           "pose": {
+            "fase": 8.32
+           },
+           "ease": "linear",
+           "in": 3.12
+          }
+         ]
+        }
+       }
+      },
+      {
+       "cenario": "plano_cozinha",
+       "camera": {
+        "x": 1300,
+        "y": 560,
+        "zoom": 1.15,
+        "zoom_fim": 1.25
+       },
+       "atores": {
+        "laurinha": {
+         "x": 1050,
+         "turn": 0.25,
+         "acoes": [
+          {
+           "t": 0.1,
+           "do": "dance",
+           "style": "treme",
+           "dur": "resto"
+          }
+         ]
+        },
+        "luisinho": {
+         "x": 1550,
+         "turn": -0.25,
+         "acoes": [
+          {
+           "t": 0.2,
+           "do": "dance",
+           "style": "treme",
+           "dur": "resto"
+          }
+         ]
+        }
+       }
+      }
+     ]
+    },
+    "linhas": 2,
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "TREME, TREME!",
+      "color": "roxo"
+     }
+    ],
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "cenario": "plano_cozinha",
+    "camera": {
+     "x": 1300,
+     "y": 620,
+     "zoom": 1.05,
+     "zoom_fim": 1.12
+    },
+    "fx": [
+     "confete"
+    ],
+    "objetos": {
+     "bat": {
+      "id": "bateria_show",
+      "x": 1700,
+      "y": 940,
+      "z": 4,
+      "depth": 0.6,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "kit_a4",
+        "dur": "resto"
+       }
+      ]
+     },
+     "tec": {
+      "id": "teclado_inst",
+      "x": 800,
+      "y": 940,
+      "z": 4,
+      "depth": 0.62,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "tecla": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.593,
+        "pose": {
+         "tecla": 7.3
+        },
+        "ease": "linear",
+        "in": 3.563
+       }
+      ]
+     },
+     "g": {
+      "id": "gelatina",
+      "x": 300,
+      "y": 960,
+      "z": 4,
+      "depth": 0.45,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "fase": 0.0,
+         "treme": 1.0,
+         "boca": 0.8
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.58,
+        "pose": {
+         "fase": 9.44
+        },
+        "ease": "linear",
+        "in": 3.55
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 1700,
+      "y": 930,
+      "turn": -0.2,
+      "z": 3,
+      "segura": "baqueta_a4",
+      "segura_f": "baqueta_a4",
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_bateria_a4",
+        "dur": "resto"
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 800,
+      "y": 930,
+      "turn": 0.2,
+      "z": 3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_teclado",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "linhas": 2,
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "TREME, TREME!",
+      "color": "vermelho"
+     }
+    ],
+    "cantam": [
+     "laurinha"
+    ]
+   }
+  ],
+  "intervalo#1": [
+   {
+    "linhas": 1,
+    "seg": 2.4,
+    "cenario": "plano_cozinha",
+    "camera": "close:laurinha",
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "BORA, TURMINHA!",
+      "color": "rosa"
+     }
+    ],
+    "objetos": {},
+    "atores": {
+     "laurinha": {
+      "x": 1300,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "apontar_camera",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 1,
+    "seg": 3.4,
+    "cenario": "danca_bolinhas_rosa",
+    "camera": {
+     "x": 960,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.1
+    },
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "LAURINHA E LUISINHO!",
+      "color": "rosa"
+     }
+    ],
+    "fx": [
+     "confete"
+    ],
+    "objetos": {
+     "g": {
+      "id": "gelatina",
+      "x": 1600,
+      "y": 1060,
+      "z": 4,
+      "depth": 0.45,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "fase": 0.0,
+         "treme": 1.0,
+         "boca": 0.7
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.35,
+        "pose": {
+         "fase": 8.84
+        },
+        "ease": "linear",
+        "in": 3.32
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 420,
+      "y": 1010,
+      "depth": 1.0,
+      "turn": 0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "cintura",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1000,
+      "y": 1010,
+      "depth": 1.0,
+      "turn": -0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "joelho",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "seg": 4.01,
+    "cenario": "plano_cozinha",
+    "camera": {
+     "x": 1300,
+     "y": 600,
+     "zoom": 1.1,
+     "zoom_fim": 1.18
+    },
+    "fx": [
+     "notas"
+    ],
+    "objetos": {
+     "bat": {
+      "id": "bateria_show",
+      "x": 1700,
+      "y": 940,
+      "z": 4,
+      "depth": 0.6,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "kit_a4",
+        "dur": "resto"
+       }
+      ]
+     },
+     "g": {
+      "id": "gelatina",
+      "x": 300,
+      "y": 960,
+      "z": 4,
+      "depth": 0.45,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "fase": 0.0,
+         "treme": 1.0,
+         "boca": 0.6
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.96,
+        "pose": {
+         "fase": 10.43
+        },
+        "ease": "linear",
+        "in": 3.93
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 1700,
+      "y": 930,
+      "turn": -0.2,
+      "z": 3,
+      "segura": "baqueta_a4",
+      "segura_f": "baqueta_a4",
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_bateria_a4",
+        "dur": "resto"
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 800,
+      "turn": 0.3,
+      "segura": "saxofone",
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_sax",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "titulo": "a banda",
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "seg": 4.01,
+    "cenario": "plano_cozinha",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.05,
+     "zoom_fim": 1.15
+    },
+    "titulo": "a gelatina dança",
+    "fx": [
+     "notas"
+    ],
+    "objetos": {
+     "g": {
+      "id": "gelatina",
+      "x": 1300,
+      "y": 1000,
+      "z": 4,
+      "depth": 0.55,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "fase": 0.0,
+         "treme": 1.0,
+         "boca": 0.7
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "olha": -1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 2.0,
+        "pose": {
+         "olha": 1.0
+        },
+        "ease": "out",
+        "in": 1.97
+       },
+       {
+        "t": 3.96,
+        "pose": {
+         "fase": 10.43
+        },
+        "ease": "linear",
+        "in": 3.93
+       }
+      ]
+     }
+    },
+    "atores": {
+     "vovo": {
+      "x": 450,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "dance",
+        "style": "treme",
+        "dur": "resto"
+       }
+      ]
+     },
+     "vovozinho": {
+      "x": 2150,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "dance",
+        "style": "treme",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "seg": 4.01,
+    "cenario": "plano_cozinha",
+    "camera": {
+     "x": 1250,
+     "y": 620,
+     "zoom": 1.25,
+     "zoom_fim": 1.15
+    },
+    "fx": [
+     "notas"
+    ],
+    "objetos": {
+     "bat": {
+      "id": "bateria_show",
+      "x": 1700,
+      "y": 940,
+      "z": 4,
+      "depth": 0.6,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "kit_a4",
+        "dur": "resto"
+       }
+      ]
+     },
+     "tec": {
+      "id": "teclado_inst",
+      "x": 800,
+      "y": 940,
+      "z": 4,
+      "depth": 0.62,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "tecla": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.927,
+        "pose": {
+         "tecla": 8.0
+        },
+        "ease": "linear",
+        "in": 3.897
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 1700,
+      "y": 930,
+      "turn": -0.2,
+      "z": 3,
+      "segura": "baqueta_a4",
+      "segura_f": "baqueta_a4",
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_bateria_a4",
+        "dur": "resto"
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 800,
+      "y": 930,
+      "turn": 0.2,
+      "z": 3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_teclado",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "titulo": "teclado e bateria",
+    "cantam": [
+     "laurinha"
+    ]
+   }
+  ],
+  "intervalo#2": [
+   {
+    "linhas": 1,
+    "seg": 2.22,
+    "cenario": "plano_jardim",
+    "camera": "close:laurinha",
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "BORA, TURMINHA!",
+      "color": "rosa"
+     }
+    ],
+    "objetos": {
+     "s": {
+      "id": "sol",
+      "x": 2250,
+      "y": 200,
+      "z": 0,
+      "depth": 0.5,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "giro": 0.0,
+         "boca": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.6,
+        "pose": {
+         "boca": 1.0
+        },
+        "ease": "out",
+        "in": 0.57
+       },
+       {
+        "t": 2.16,
+        "pose": {
+         "giro": 0.5
+        },
+        "ease": "linear",
+        "in": 2.13
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 1300,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "apontar_camera",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 1,
+    "seg": 3.4,
+    "cenario": "plano_banheiro",
+    "camera": {
+     "x": 960,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.1
+    },
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "LAURINHA E LUISINHO!",
+      "color": "rosa"
+     }
+    ],
+    "fx": [
+     "confete"
+    ],
+    "objetos": {
+     "g": {
+      "id": "gelatina",
+      "x": 1600,
+      "y": 1060,
+      "z": 4,
+      "depth": 0.45,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "fase": 0.0,
+         "treme": 1.0,
+         "boca": 0.7
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.35,
+        "pose": {
+         "fase": 8.84
+        },
+        "ease": "linear",
+        "in": 3.32
+       }
+      ]
+     },
+     "sb": {
+      "id": "sabonete",
+      "x": 1950,
+      "y": 1000,
+      "z": 1,
+      "depth": 0.5,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "bolhas": 1.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.3,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 0.7,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "out",
+        "in": 0.37
+       },
+       {
+        "t": 1.5,
+        "pose": {
+         "pulo": 1.0
+        },
+        "ease": "out",
+        "in": 0.77
+       },
+       {
+        "t": 1.9,
+        "pose": {
+         "pulo": 0.0
+        },
+        "ease": "out",
+        "in": 0.37
+       }
+      ]
+     },
+     "b": {
+      "id": "bolha",
+      "x": 300,
+      "y": 700,
+      "z": 1,
+      "depth": 0.3,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "balanco": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.34,
+        "pose": {
+         "balanco": 3.0
+        },
+        "ease": "linear",
+        "in": 3.31
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 420,
+      "y": 1010,
+      "depth": 1.0,
+      "turn": 0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "cintura",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1000,
+      "y": 1010,
+      "depth": 1.0,
+      "turn": -0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "joelho",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "seg": 4.05,
+    "cenario": "plano_cozinha",
+    "camera": {
+     "x": 1300,
+     "y": 600,
+     "zoom": 1.1,
+     "zoom_fim": 1.18
+    },
+    "fx": [
+     "notas"
+    ],
+    "objetos": {
+     "bat": {
+      "id": "bateria_show",
+      "x": 1700,
+      "y": 940,
+      "z": 4,
+      "depth": 0.6,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "kit_a4",
+        "dur": "resto"
+       }
+      ]
+     },
+     "g": {
+      "id": "gelatina",
+      "x": 300,
+      "y": 960,
+      "z": 4,
+      "depth": 0.45,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "fase": 0.0,
+         "treme": 1.0,
+         "boca": 0.6
+        },
+        "ease": "step"
+       },
+       {
+        "t": 4.0,
+        "pose": {
+         "fase": 10.53
+        },
+        "ease": "linear",
+        "in": 3.97
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 1700,
+      "y": 930,
+      "turn": -0.2,
+      "z": 3,
+      "segura": "baqueta_a4",
+      "segura_f": "baqueta_a4",
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_bateria_a4",
+        "dur": "resto"
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 800,
+      "turn": 0.3,
+      "segura": "saxofone",
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_sax",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "titulo": "a banda",
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "seg": 4.05,
+    "cenario": "plano_sala",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.05,
+     "zoom_fim": 1.15
+    },
+    "titulo": "a gelatina dança",
+    "fx": [
+     "notas"
+    ],
+    "objetos": {
+     "g": {
+      "id": "gelatina",
+      "x": 1300,
+      "y": 1000,
+      "z": 4,
+      "depth": 0.55,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "fase": 0.0,
+         "treme": 1.0,
+         "boca": 0.7
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "olha": -1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 2.02,
+        "pose": {
+         "olha": 1.0
+        },
+        "ease": "out",
+        "in": 1.99
+       },
+       {
+        "t": 3.993,
+        "pose": {
+         "fase": 10.53
+        },
+        "ease": "linear",
+        "in": 3.963
+       }
+      ]
+     },
+     "c": {
+      "id": "gato",
+      "x": 1700,
+      "y": 1010,
+      "z": 4,
+      "depth": 0.45,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "lado": -1.0,
+         "rabo": 0.0,
+         "miau": 0.0,
+         "assusta": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.4,
+        "pose": {
+         "rabo": 1.0
+        },
+        "ease": "inout",
+        "in": 0.37
+       },
+       {
+        "t": 0.8,
+        "pose": {
+         "rabo": 0.0
+        },
+        "ease": "inout",
+        "in": 0.37
+       },
+       {
+        "t": 1.0,
+        "pose": {
+         "miau": 1.0
+        },
+        "ease": "out",
+        "in": 0.97
+       },
+       {
+        "t": 1.2,
+        "pose": {
+         "rabo": 1.0
+        },
+        "ease": "inout",
+        "in": 0.37
+       },
+       {
+        "t": 1.45,
+        "pose": {
+         "miau": 0.0
+        },
+        "ease": "in",
+        "in": 0.42
+       },
+       {
+        "t": 1.6,
+        "pose": {
+         "rabo": 0.0
+        },
+        "ease": "inout",
+        "in": 0.37
+       },
+       {
+        "t": 2.0,
+        "pose": {
+         "rabo": 1.0
+        },
+        "ease": "inout",
+        "in": 0.37
+       },
+       {
+        "t": 2.4,
+        "pose": {
+         "rabo": 0.0
+        },
+        "ease": "inout",
+        "in": 0.37
+       },
+       {
+        "t": 2.8,
+        "pose": {
+         "rabo": 1.0
+        },
+        "ease": "inout",
+        "in": 0.37
+       },
+       {
+        "t": 3.0,
+        "pose": {
+         "miau": 1.0
+        },
+        "ease": "out",
+        "in": 1.52
+       },
+       {
+        "t": 3.2,
+        "pose": {
+         "rabo": 0.0
+        },
+        "ease": "inout",
+        "in": 0.37
+       },
+       {
+        "t": 3.45,
+        "pose": {
+         "miau": 0.0
+        },
+        "ease": "in",
+        "in": 0.42
+       },
+       {
+        "t": 3.6,
+        "pose": {
+         "rabo": 1.0
+        },
+        "ease": "inout",
+        "in": 0.37
+       }
+      ]
+     }
+    },
+    "atores": {
+     "vovo": {
+      "x": 450,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "dance",
+        "style": "twist",
+        "dur": "resto"
+       }
+      ]
+     },
+     "mamae": {
+      "x": 2150,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "dance",
+        "style": "passinho",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "seg": 4.04,
+    "cenario": "plano_cozinha",
+    "camera": {
+     "x": 1250,
+     "y": 620,
+     "zoom": 1.25,
+     "zoom_fim": 1.15
+    },
+    "fx": [
+     "notas"
+    ],
+    "objetos": {
+     "bat": {
+      "id": "bateria_show",
+      "x": 1700,
+      "y": 940,
+      "z": 4,
+      "depth": 0.6,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "kit_a4",
+        "dur": "resto"
+       }
+      ]
+     },
+     "tec": {
+      "id": "teclado_inst",
+      "x": 800,
+      "y": 940,
+      "z": 4,
+      "depth": 0.62,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "tecla": 0.0
+        },
+        "ease": "step"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 1700,
+      "y": 930,
+      "turn": -0.2,
+      "z": 3,
+      "segura": "baqueta_a4",
+      "segura_f": "baqueta_a4",
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_bateria_a4",
+        "dur": "resto"
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 800,
+      "y": 930,
+      "turn": 0.2,
+      "z": 3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_teclado",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "titulo": "teclado e bateria",
+    "cantam": [
+     "laurinha"
+    ]
+   }
+  ],
+  "intervalo#3": [
+   {
+    "seg": 3.42,
+    "cenario": "plano_cozinha",
+    "camera": {
+     "x": 1350,
+     "y": 600,
+     "zoom": 1.15,
+     "zoom_fim": 1.05
+    },
+    "fx": [
+     "confete"
+    ],
+    "objetos": {
+     "bat": {
+      "id": "bateria_show",
+      "x": 1700,
+      "y": 940,
+      "z": 4,
+      "depth": 0.6,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "kit_a4",
+        "dur": "resto"
+       }
+      ]
+     },
+     "g": {
+      "id": "gelatina",
+      "x": 2300,
+      "y": 960,
+      "z": 4,
+      "depth": 0.45,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "fase": 0.0,
+         "treme": 1.0,
+         "boca": 0.8
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.37,
+        "pose": {
+         "fase": 8.89
+        },
+        "ease": "linear",
+        "in": 3.34
+       }
+      ]
+     }
+    },
+    "atores": {
+     "luisinho": {
+      "x": 1700,
+      "y": 930,
+      "turn": -0.2,
+      "z": 3,
+      "segura": "baqueta_a4",
+      "segura_f": "baqueta_a4",
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_bateria_a4",
+        "dur": "resto"
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 800,
+      "turn": 0.3,
+      "segura": "saxofone",
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_sax",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "titulo": "a banda (sax)",
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "seg": 3.43,
+    "cenario": "plano_cozinha",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0,
+     "zoom_fim": 1.1
+    },
+    "titulo": "a gelatina dança",
+    "objetos": {
+     "m": {
+      "id": "mesa",
+      "x": 1300,
+      "y": 930,
+      "z": 1,
+      "depth": 1.3,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 1293.0
+        },
+        "ease": "inout"
+       },
+       {
+        "t": 0.19,
+        "pose": {
+         "x": 1307.0
+        },
+        "ease": "inout",
+        "in": 0.16
+       },
+       {
+        "t": 0.38,
+        "pose": {
+         "x": 1293.0
+        },
+        "ease": "inout",
+        "in": 0.16
+       },
+       {
+        "t": 0.57,
+        "pose": {
+         "x": 1307.0
+        },
+        "ease": "inout",
+        "in": 0.16
+       },
+       {
+        "t": 0.76,
+        "pose": {
+         "x": 1293.0
+        },
+        "ease": "inout",
+        "in": 0.16
+       },
+       {
+        "t": 0.95,
+        "pose": {
+         "x": 1307.0
+        },
+        "ease": "inout",
+        "in": 0.16
+       },
+       {
+        "t": 1.14,
+        "pose": {
+         "x": 1293.0
+        },
+        "ease": "inout",
+        "in": 0.16
+       },
+       {
+        "t": 1.33,
+        "pose": {
+         "x": 1307.0
+        },
+        "ease": "inout",
+        "in": 0.16
+       },
+       {
+        "t": 1.52,
+        "pose": {
+         "x": 1293.0
+        },
+        "ease": "inout",
+        "in": 0.16
+       },
+       {
+        "t": 1.71,
+        "pose": {
+         "x": 1307.0
+        },
+        "ease": "inout",
+        "in": 0.16
+       },
+       {
+        "t": 1.9,
+        "pose": {
+         "x": 1293.0
+        },
+        "ease": "inout",
+        "in": 0.16
+       },
+       {
+        "t": 2.09,
+        "pose": {
+         "x": 1307.0
+        },
+        "ease": "inout",
+        "in": 0.16
+       },
+       {
+        "t": 2.28,
+        "pose": {
+         "x": 1293.0
+        },
+        "ease": "inout",
+        "in": 0.16
+       },
+       {
+        "t": 2.47,
+        "pose": {
+         "x": 1307.0
+        },
+        "ease": "inout",
+        "in": 0.16
+       },
+       {
+        "t": 2.66,
+        "pose": {
+         "x": 1293.0
+        },
+        "ease": "inout",
+        "in": 0.16
+       },
+       {
+        "t": 2.85,
+        "pose": {
+         "x": 1307.0
+        },
+        "ease": "inout",
+        "in": 0.16
+       },
+       {
+        "t": 3.04,
+        "pose": {
+         "x": 1293.0
+        },
+        "ease": "inout",
+        "in": 0.16
+       },
+       {
+        "t": 3.23,
+        "pose": {
+         "x": 1307.0
+        },
+        "ease": "inout",
+        "in": 0.16
+       }
+      ]
+     },
+     "g": {
+      "id": "gelatina",
+      "x": 1300,
+      "y": 618.0,
+      "z": 4,
+      "depth": 0.5,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "fase": 0.0,
+         "treme": 1.0,
+         "boca": 0.7
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.36,
+        "pose": {
+         "fase": 8.92
+        },
+        "ease": "linear",
+        "in": 3.33
+       }
+      ]
+     },
+     "c": {
+      "id": "gato",
+      "x": 1000,
+      "y": 1010,
+      "z": 4,
+      "depth": 0.45,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "lado": 1.0,
+         "rabo": 0.0,
+         "miau": 0.0,
+         "assusta": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.4,
+        "pose": {
+         "rabo": 1.0
+        },
+        "ease": "inout",
+        "in": 0.37
+       },
+       {
+        "t": 0.5,
+        "pose": {
+         "miau": 1.0
+        },
+        "ease": "out",
+        "in": 0.47
+       },
+       {
+        "t": 0.8,
+        "pose": {
+         "rabo": 0.0
+        },
+        "ease": "inout",
+        "in": 0.37
+       },
+       {
+        "t": 0.95,
+        "pose": {
+         "miau": 0.0
+        },
+        "ease": "in",
+        "in": 0.42
+       },
+       {
+        "t": 1.2,
+        "pose": {
+         "rabo": 1.0
+        },
+        "ease": "inout",
+        "in": 0.37
+       },
+       {
+        "t": 1.6,
+        "pose": {
+         "rabo": 0.0
+        },
+        "ease": "inout",
+        "in": 0.37
+       },
+       {
+        "t": 2.0,
+        "pose": {
+         "rabo": 1.0
+        },
+        "ease": "inout",
+        "in": 0.37
+       },
+       {
+        "t": 2.0,
+        "pose": {
+         "miau": 1.0
+        },
+        "ease": "out",
+        "in": 1.02
+       },
+       {
+        "t": 2.4,
+        "pose": {
+         "rabo": 0.0
+        },
+        "ease": "inout",
+        "in": 0.37
+       },
+       {
+        "t": 2.45,
+        "pose": {
+         "miau": 0.0
+        },
+        "ease": "in",
+        "in": 0.42
+       },
+       {
+        "t": 2.8,
+        "pose": {
+         "rabo": 1.0
+        },
+        "ease": "inout",
+        "in": 0.37
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 450,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "dance",
+        "style": "pulinho",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 2150,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "dance",
+        "style": "roda",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   }
+  ],
+  "ponte#1": [
+   {
+    "linhas": 1,
+    "cenario": "plano_quarto_rosa",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.05,
+     "zoom_fim": 1.12
+    },
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "MOLINHO…",
+      "color": "rosa"
+     }
+    ],
+    "objetos": {
+     "cm": {
+      "id": "cama",
+      "x": 2250,
+      "y": 900,
+      "z": 0,
+      "depth": 0.7
+     },
+     "g": {
+      "id": "gelatina",
+      "x": 1300,
+      "y": 1000,
+      "z": 4,
+      "depth": 0.65,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "fase": 0.0,
+         "treme": 0.6,
+         "lid": 1.0,
+         "boca": 0.3
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "mole": 0.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 1.0,
+        "pose": {
+         "mole": 1.0
+        },
+        "ease": "out",
+        "in": 0.97
+       },
+       {
+        "t": 2.38,
+        "pose": {
+         "fase": 6.32
+        },
+        "ease": "linear",
+        "in": 2.35
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 500,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "dance",
+        "style": "agacha",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 2100,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "dance",
+        "style": "agacha",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 1,
+    "cenario": "danca_raios_azul",
+    "camera": {
+     "x": 960,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "flash": true,
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "DURINHO!",
+      "color": "azul"
+     }
+    ],
+    "objetos": {
+     "g": {
+      "id": "gelatina",
+      "x": 960,
+      "y": 1060,
+      "z": 4,
+      "depth": 0.5,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "fase": 0.0,
+         "treme": 0.0,
+         "boca": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "mole": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 0.3,
+        "pose": {
+         "mole": 0.0
+        },
+        "ease": "out",
+        "in": 0.27
+       },
+       {
+        "t": 3.62,
+        "pose": {
+         "fase": 9.54
+        },
+        "ease": "linear",
+        "in": 3.59
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 380,
+      "y": 1010,
+      "depth": 1.0,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "estatua",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1540,
+      "y": 1010,
+      "depth": 1.0,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "estatua",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_sala",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0,
+     "zoom_fim": 1.1
+    },
+    "tremor": [
+     0.5
+    ],
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "TREME A BARRIGA!",
+      "color": "laranja"
+     }
+    ],
+    "objetos": {
+     "g": {
+      "id": "gelatina",
+      "x": 1300,
+      "y": 1000,
+      "z": 4,
+      "depth": 0.6,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "fase": 0.0,
+         "treme": 1.0,
+         "boca": 0.9
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.35,
+        "pose": {
+         "fase": 6.24
+        },
+        "ease": "linear",
+        "in": 2.32
+       }
+      ]
+     },
+     "cx": {
+      "id": "caixa_brinquedos",
+      "x": 1750,
+      "y": 930,
+      "z": 1,
+      "depth": 0.6,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {},
+        "ease": "step"
+       },
+       {
+        "t": 0.5,
+        "pose": {
+         "carrinho": 1.0
+        },
+        "ease": "out"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 330,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "dance",
+        "style": "treme",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 2200,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "dance",
+        "style": "treme",
+        "dur": "resto"
+       }
+      ]
+     },
+     "mamae": {
+      "x": 880,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "dance",
+        "style": "treme",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_gelo",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.05,
+     "zoom_fim": 1.15
+    },
+    "flash": true,
+    "fx": [
+     "estrelas"
+    ],
+    "callout": [
+     {
+      "t": 0.1,
+      "text": "CONGELOU!",
+      "color": "azul"
+     },
+     {
+      "t": 2.02,
+      "text": "GELADINHO!",
+      "color": "azul"
+     }
+    ],
+    "objetos": {
+     "g": {
+      "id": "gelatina",
+      "x": 1300,
+      "y": 1000,
+      "z": 4,
+      "depth": 0.65,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "fase": 0.0,
+         "treme": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "treme": 1.0
+        },
+        "ease": "out",
+        "in": 0.0
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "congela": 0.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 0.2,
+        "pose": {
+         "treme": 0.0
+        },
+        "ease": "out",
+        "in": 0.17
+       },
+       {
+        "t": 0.35,
+        "pose": {
+         "congela": 1.0
+        },
+        "ease": "out",
+        "in": 0.32
+       },
+       {
+        "t": 3.62,
+        "pose": {
+         "fase": 9.54
+        },
+        "ease": "linear",
+        "in": 3.59
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 500,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.15,
+        "do": "estatua",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 2100,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.15,
+        "do": "estatua",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   }
+  ],
+  "final#1": [
+   {
+    "linhas": 1,
+    "cenario": "plano_cozinha",
+    "camera": "close:laurinha",
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "GOSTOU DA GELATINA?",
+      "color": "azul"
+     }
+    ],
+    "atores": {
+     "laurinha": {
+      "x": 1300,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "apontar_camera",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "objetos": {
+     "g": {
+      "id": "gelatina",
+      "x": 1700,
+      "y": 900,
+      "z": 4,
+      "depth": 0.5,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "fase": 0.0,
+         "treme": 0.8,
+         "boca": 0.6
+        },
+        "ease": "step"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 1,
+    "cenario": "danca_bolinhas_amarelo",
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "DÁ UM JOINHA!",
+      "color": "azul"
+     }
+    ],
+    "fx": [
+     "estrelas"
+    ],
+    "objetos": {
+     "joinha": {
+      "x": 1380,
+      "y": 900,
+      "z": 3,
+      "depth": 1.3,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "escala": 0.0
+        }
+       },
+       {
+        "t": 0.4,
+        "pose": {
+         "escala": 1.0
+        },
+        "ease": "back",
+        "in": 0.37
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 680,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "bacana",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "camera": {
+     "x": 960,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 1,
+    "cenario": "plano_casa_frente",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.1,
+     "zoom_fim": 1.1800000000000002
+    },
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "CHAMA O PAPAI E A MAMÃE!",
+      "color": "verde"
+     }
+    ],
+    "objetos": {},
+    "atores": {
+     "mamae": {
+      "x": 800,
+      "turn": 0.2,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "wave",
+        "dur": 1.4
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 1800,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "point",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "linhas": 1,
+    "cenario": "danca_raios_vermelho",
+    "callout": [
+     {
+      "t": 0.5,
+      "text": "INSCREVA-SE!",
+      "color": "vermelho"
+     }
+    ],
+    "fx": [
+     "coracoes"
+    ],
+    "objetos": {
+     "botao": {
+      "id": "botao_inscrever",
+      "x": 1260,
+      "y": 760,
+      "z": 3,
+      "depth": 1.2,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "escala": 0.0,
+         "aperta": 0.0
+        }
+       },
+       {
+        "t": 0.4,
+        "pose": {
+         "escala": 1.0
+        },
+        "ease": "back",
+        "in": 0.37
+       },
+       {
+        "t": 1.6,
+        "pose": {
+         "aperta": 1.0
+        },
+        "ease": "out",
+        "in": 1.57
+       },
+       {
+        "t": 1.9,
+        "pose": {
+         "aperta": 0.0
+        },
+        "ease": "in",
+        "in": 0.27
+       }
+      ]
+     }
+    },
+    "atores": {
+     "laurinha": {
+      "x": 600,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "point",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "camera": {
+     "x": 960,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   }
+  ],
+  "final#2": [
+   {
+    "linhas": 1,
+    "seg": 2.4,
+    "cenario": "plano_cozinha",
+    "camera": {
+     "x": 1300,
+     "y": 540,
+     "zoom": 1.0,
+     "zoom_fim": 1.1
+    },
+    "fx": [
+     "coracoes"
+    ],
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "GELATINA!",
+      "color": "vermelho"
+     },
+     {
+      "t": 1.2,
+      "text": "TCHAU!",
+      "color": "amarelo"
+     }
+    ],
+    "objetos": {
+     "g": {
+      "id": "gelatina",
+      "x": 1300,
+      "y": 1040,
+      "z": 4,
+      "depth": 0.7,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "fase": 0.0,
+         "treme": 0.8,
+         "boca": 0.8
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.35,
+        "pose": {
+         "fase": 6.24
+        },
+        "ease": "linear",
+        "in": 2.32
+       }
+      ]
+     },
+     "c": {
+      "id": "gato",
+      "x": 2250,
+      "y": 1010,
+      "z": 4,
+      "depth": 0.45,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "lado": -1.0,
+         "rabo": 0.0,
+         "miau": 0.0,
+         "assusta": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.4,
+        "pose": {
+         "rabo": 1.0
+        },
+        "ease": "inout",
+        "in": 0.37
+       },
+       {
+        "t": 0.8,
+        "pose": {
+         "rabo": 0.0
+        },
+        "ease": "inout",
+        "in": 0.37
+       },
+       {
+        "t": 1.0,
+        "pose": {
+         "miau": 1.0
+        },
+        "ease": "out",
+        "in": 0.97
+       },
+       {
+        "t": 1.2,
+        "pose": {
+         "rabo": 1.0
+        },
+        "ease": "inout",
+        "in": 0.37
+       },
+       {
+        "t": 1.45,
+        "pose": {
+         "miau": 0.0
+        },
+        "ease": "in",
+        "in": 0.42
+       },
+       {
+        "t": 1.6,
+        "pose": {
+         "rabo": 0.0
+        },
+        "ease": "inout",
+        "in": 0.37
+       }
+      ]
+     }
+    },
+    "atores": {
+     "vovo": {
+      "x": 320,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "wave",
+        "dur": "resto"
+       }
+      ]
+     },
+     "laurinha": {
+      "x": 880,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "wave",
+        "dur": "resto"
+       }
+      ]
+     },
+     "luisinho": {
+      "x": 1860,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "wave",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   },
+   {
+    "seg": 2.27,
+    "cenario": "plano_cozinha",
+    "camera": {
+     "x": 1300,
+     "y": 760,
+     "zoom": 1.5,
+     "zoom_fim": 1.7
+    },
+    "tremor": [
+     0.2
+    ],
+    "callout": [
+     {
+      "t": 0.1,
+      "text": "TREMEU!",
+      "color": "vermelho"
+     }
+    ],
+    "titulo": "a gelatina treme e pisca",
+    "objetos": {
+     "g": {
+      "id": "gelatina",
+      "x": 1300,
+      "y": 1040,
+      "z": 4,
+      "depth": 0.7,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "fase": 0.0,
+         "treme": 1.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "boca": 0.9
+        },
+        "ease": "out"
+       },
+       {
+        "t": 1.2,
+        "pose": {
+         "boca": 0.3
+        },
+        "ease": "out",
+        "in": 1.17
+       },
+       {
+        "t": 1.3,
+        "pose": {
+         "lid": 1.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 2.22,
+        "pose": {
+         "fase": 5.9
+        },
+        "ease": "linear",
+        "in": 2.19
+       }
+      ]
+     },
+     "c": {
+      "id": "gato",
+      "x": 1750,
+      "y": 1010,
+      "z": 4,
+      "depth": 0.45,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "lado": -1.0,
+         "rabo": 0.0,
+         "miau": 0.0,
+         "assusta": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.4,
+        "pose": {
+         "rabo": 1.0
+        },
+        "ease": "inout",
+        "in": 0.37
+       },
+       {
+        "t": 0.4,
+        "pose": {
+         "miau": 1.0
+        },
+        "ease": "out",
+        "in": 0.37
+       },
+       {
+        "t": 0.8,
+        "pose": {
+         "rabo": 0.0
+        },
+        "ease": "inout",
+        "in": 0.37
+       },
+       {
+        "t": 0.85,
+        "pose": {
+         "miau": 0.0
+        },
+        "ease": "in",
+        "in": 0.42
+       },
+       {
+        "t": 1.2,
+        "pose": {
+         "rabo": 1.0
+        },
+        "ease": "inout",
+        "in": 0.37
+       },
+       {
+        "t": 1.6,
+        "pose": {
+         "rabo": 0.0
+        },
+        "ease": "inout",
+        "in": 0.37
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "laurinha"
+    ]
+   }
+  ]
+ }
+}

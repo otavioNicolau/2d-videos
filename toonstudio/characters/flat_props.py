@@ -3095,3 +3095,83 @@ class Polvo(_Prop):
 
 
 PROPS.update({"polvo": Polvo})
+
+
+class Gelatina(_Prop):
+    """Gelatina da vovó (26): pudim de forma canelada, vermelho translúcido com brilho, carinha. Canais: `fase` contínua
+    (linear) que move o balanço, `treme` 0→1 amplitude do treme-treme, `mole` 0→1 amolece (abaixa e esparrama — "fica
+    molinho"), `congela` 0→1 fica azul de gelo, durinha, com cristais ("congelou!"), `pernas` 0/1 perninhas para correr
+    (fase `anda`), `prato` 0/1 o pratinho embaixo, `boca` 0→1, `lid` 0/1, `olha` −1..1 para onde olha."""
+
+    def __init__(self):
+        super().__init__("gelatina", "Gelatina", (1000, 900), (500, 840), 380,
+                         {"fase": 0.0, "treme": 0.0, "mole": 0.0, "congela": 0.0, "pernas": 0.0, "anda": 0.0, "prato": 1.0,
+                          "boca": 0.3, "lid": 0.0, "olha": 0.0})
+
+    @staticmethod
+    def _mix(a: str, b: str, t: float) -> str:
+        ca, cb = [int(a[i:i + 2], 16) for i in (1, 3, 5)], [int(b[i:i + 2], 16) for i in (1, 3, 5)]
+        return "#" + "".join(f"{round(x + (y - x) * t):02X}" for x, y in zip(ca, cb))
+
+    def paint(self, k, P):
+        c = max(0.0, min(1.0, P["congela"]))
+        m = max(0.0, min(1.0, P["mole"]))
+        amp = max(0.0, min(1.0, P["treme"])) * (1.0 - c)
+        ph = P["fase"] * 2 * math.pi
+        cor = self._mix("#F0384F", "#8FD3F4", c)
+        cor2 = self._mix("#FF7085", "#C9ECFB", c)
+        linha = self._mix("#A81E33", "#3F86BC", c)
+        base = 0.0
+        pe = P["pernas"] > 0.5
+        if pe:                                                     # perninhas correndo (tênis brancos)
+            base = -110.0
+            for s_, d_ in ((-1, 0.0), (1, 0.5)):
+                a = math.sin((P["anda"] + d_) * 2 * math.pi)
+                x0, y0 = s_ * 60, base + 5
+                x1, y1 = x0 + 50 * a, -14 - 26 * max(0.0, -a)
+                ln(k, [(x0, y0), (x1, y1)], linha, w=LINE * 5.6)
+                ln(k, [(x0, y0), (x1, y1)], cor, w=LINE * 3.8)
+                shape(k, ellipse_pts(x1 + 12, y1 + 4, 30, 15, 0, 14), "#FFFFFF", line="#9FB3C8")
+        elif P["prato"] > 0.5:
+            shape(k, ellipse_pts(0, -12, 260 + 40 * m, 34, 0, 28), "#FFFFFF", line="#9FB3C8")
+            shape(k, ellipse_pts(0, -18, 190 + 40 * m, 18, 0, 24), "#EEF4FA", line="#C3D2E0", w=LINE * 0.6)
+        H = 300 * (1.0 - 0.38 * m)
+        Wf = 1.0 + 0.32 * m
+        sq = 1.0 + 0.06 * amp * math.cos(2 * ph)
+
+        def tf(x, h):                                              # h 0 (base) → 1 (topo): o topo balança mais
+            sx = (1.0 + 0.05 * amp * math.sin(2 * ph) * h) * Wf / sq ** 0.5
+            return (x * sx + 46 * amp * math.sin(ph) * h * h, base - 28 - h * H * sq)
+
+        # perfil: 3 andares canelados (largura em função da altura)
+        prof = [(0.0, 190), (0.42, 168), (0.48, 150), (0.80, 128), (0.86, 108), (1.0, 70)]
+
+        def w_at(h):
+            for (h0, w0), (h1, w1) in zip(prof, prof[1:]):
+                if h <= h1:
+                    return w0 + (w1 - w0) * (h - h0) / (h1 - h0)
+            return prof[-1][1]
+        dir_ = [tf(w_at(i / 40), i / 40) for i in range(41)]
+        topo = [tf(70 * math.cos(math.pi * i / 12), 1.0 + 0.10 * math.sin(math.pi * i / 12)) for i in range(1, 12)]
+        esq = [tf(-w_at(i / 40), i / 40) for i in range(40, -1, -1)]
+        shape(k, dir_ + topo + esq, cor, line=linha)
+        for h in (0.45, 0.83):                                     # degraus dos andares
+            ln(k, [tf(x, h) for x in np.linspace(-w_at(h) + 6, w_at(h) - 6, 16)], linha, w=LINE * 0.8)
+        for x in (-0.55, 0.0, 0.55):                               # caneluras
+            ln(k, [tf(x * w_at(h), h) for h in np.linspace(0.04, 0.42, 6)], linha, w=LINE * 0.6, alpha=0.6)
+            ln(k, [tf(x * w_at(h), h) for h in np.linspace(0.50, 0.80, 5)], linha, w=LINE * 0.6, alpha=0.6)
+        bx, by = tf(-95, 0.62)                                     # brilho
+        k.shape(ellipse_pts(bx, by, 22, 52, 0.25, 16), fill=_rgba("#FFFFFF", 0.75), line=0)
+        tx, ty = tf(-30, 1.03)
+        k.shape(ellipse_pts(tx, ty, 26, 10, 0.0, 12), fill=_rgba(cor2, 0.95), line=0)
+        if c > 0.4:                                                # cristais de gelo
+            for (x, h, r) in ((-150, 0.2, 22), (140, 0.35, 18), (60, 0.95, 16), (-90, 0.88, 14), (175, 0.05, 14)):
+                px, py = tf(x * w_at(h) / 190 if abs(x) > 100 else x, h)
+                for a in (0, math.pi / 3, 2 * math.pi / 3):
+                    ln(k, [(px - r * math.cos(a), py - r * math.sin(a)), (px + r * math.cos(a), py + r * math.sin(a))], "#FFFFFF", w=LINE * 0.9)
+        fx, fy = tf(0, 0.27)
+        _carinha(k, fx + 14 * P["olha"], fy, {"lid": P["lid"], "boca": P["boca"] if c < 0.5 else 0.45}, linha,
+                 "#FFC2CC" if c < 0.5 else "#FFFFFF", esc=1.55)
+
+
+PROPS.update({"gelatina": Gelatina})
