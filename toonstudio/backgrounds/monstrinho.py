@@ -1,5 +1,5 @@
-"""Cenários do canal "Bulu e Tetê" (2º canal, 20/11/2026) — DIFERENTES dos da Laurinha e no jeito do gênero de clipe
-infantil da referência (canais/bulu_tete/BIBLIA_VISUAL.md): chapado SEM CONTORNO, cores saturadas, céu com degradê
+"""Cenários do canal "Fofolucos" (2º canal, 20/11/2026) — DIFERENTES dos da Laurinha e no jeito do gênero de clipe
+infantil da referência (canais/fofolucos/BIBLIA_VISUAL.md): chapado SEM CONTORNO, cores saturadas, céu com degradê
 suave, nuvens fofas, árvores de copa redonda em dois verdes, fundos gráficos de raios em espiral / xadrez / brilho com
 confete. Toque próprio do canal: a Vila Monstrinha (casas com chifrinhos e janelas-olho).
 
@@ -348,12 +348,12 @@ def build(bg_id: str, out_dir: Path, scale: float = 1.5, seed: int = 7) -> dict:
     if bg_id in SCENES:
         s, w = SCENES[bg_id](rng)
         s.makeImageSnapshot().save(str(out_dir / "MG_cena.png"), skia.kPNG)
-        meta = {"id": bg_id, "name": bg_id.replace("mon_", "Bulu e Tetê — "), "width": w, "height": H, "scale": scale,
-                "landmarks": {"ground_y": 930, "floor_y": CHAO_Y}, "estilo": "canais/bulu_tete/BIBLIA_VISUAL.md",
+        meta = {"id": bg_id, "name": bg_id.replace("mon_", "Fofolucos — "), "width": w, "height": H, "scale": scale,
+                "landmarks": {"ground_y": 930, "floor_y": CHAO_Y}, "estilo": "canais/fofolucos/BIBLIA_VISUAL.md",
                 "layers": [{"name": "MG_cena", "file": "MG_cena.png", "parallax": 1.0, "z": -20, "width": w, "height": H}]}
     else:
         _, kind, cor = bg_id.split("_", 2)
-        meta = {"id": bg_id, "name": f"Bulu e Tetê — {kind} {cor}", "width": GW, "height": GH, "scale": 1.0, "landmarks": {},
+        meta = {"id": bg_id, "name": f"Fofolucos — {kind} {cor}", "width": GW, "height": GH, "scale": 1.0, "landmarks": {},
                 "graphic": True, "layers": []}
         if kind == "raios":
             s0, s1 = _raios(cor, 1.0)

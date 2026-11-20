@@ -1,7 +1,7 @@
-"""Monstrinhos do canal "Bulu e Tetê" (2º canal, 20/11/2026) — estilo próprio do canal (canais/bulu_tete/BIBLIA_VISUAL.md):
+"""Monstrinhos do canal "Fofolucos" (2º canal, 20/11/2026) — estilo próprio do canal (canais/fofolucos/BIBLIA_VISUAL.md):
 - chapado SEM CONTORNO (formas de cor pura; separação por tons do mesmo corpo);
 - CABEÇÃO (≈ 55 % da altura) e corpinho curto; braços e pernas grossinhos com mão de luva redonda e pé redondo;
-- olho de bolinha preta com brilho branco (o Bulu tem UM olhão; a Tetê, dois olhinhos); boca simples escura com língua;
+- olho de bolinha preta com brilho branco (o Bilu tem UM olhão; o Teco, três olhinhos); boca simples escura com língua;
 - cores saturadas; bochecha rosada suave.
 Mesmo ESQUELETO DE POSES da turma (FlatMuri): todas as danças, ações, expressões e visemas funcionam igual.
 """
@@ -27,12 +27,12 @@ class MonstroLook:
     belly: str                 # barriguinha (mancha clara)
     feet: str                  # pés
     cheek: str = "#FF8FB8"
-    olhos: int = 2             # 1 = olhão (Bulu); 2 = olhinhos (Tetê)
-    chifres: str = ""          # cor dos chifrinhos (Bulu)
-    antenas: str = ""          # cor das bolinhas das antenas (Tetê)
-    pelo: bool = False         # tufinhos de pelo no alto da cabeça (Bulu)
-    presas: bool = False       # dois dentinhos de baixo (Bulu)
-    dente: bool = False        # um dentinho de cima (Tetê)
+    olhos: int = 2             # 1 = olhão (Bilu); 2 = olhinhos (Teco)
+    chifres: str = ""          # cor dos chifrinhos (Bilu)
+    antenas: str = ""          # cor das bolinhas das antenas (Teco)
+    pelo: bool = False         # tufinhos de pelo no alto da cabeça (Bilu)
+    presas: bool = False       # dois dentinhos de baixo (Bilu)
+    dente: bool = False        # um dentinho de cima (Teco)
     extra: dict = field(default_factory=dict)
 
 
@@ -202,7 +202,7 @@ class FlatMonstro(FlatMuri):
                 k.shape(ellipse_pts(q[0], q[1], 22 * c, 15, 0, 16), fill=_rgba(L.cheek, 0.8 + 0.2 * P.get("blush", 1.0)), line=0)
         if L.olhos == 0:                                     # olhos só nas hastes (Gogo)
             pass
-        elif L.olhos == 1:                                     # Bulu: UM olhão no meio
+        elif L.olhos == 1:                                     # Bilu: UM olhão no meio
             sh = _rosto(v)[1]
             x = C[0] + r * 0.74 * math.sin(max(-0.9, min(0.9, sh)))
             self._eye(k, P, rot((x, C[1] - 4), ht, C), 0.8 + 0.2 * math.cos(sh), 0, f, s, ESCURO)
@@ -255,7 +255,7 @@ class FlatMonstro(FlatMuri):
             arco = 6 + max(0.0, P["brow_y"]) * 5                # arquinho (alegre); o "b" inclina (bravo/triste)
             def arco_pts(xa, ya, xb, yb, h):                   # arco suave (curva de 2º grau amostrada)
                 return [(xa + (xb - xa) * u, ya + (yb - ya) * u - h * 4 * u * (1 - u)) for u in (i / 8 for i in range(9))]
-            if big:                                            # Bulu: uma sobrancelha só, grossa
+            if big:                                            # Bilu: uma sobrancelha só, grossa
                 self._line(k, arco_pts(ex - wb, by + 3 - b * 4, ex + wb, by + 3 - b * 4, arco - b * 18), ESCURO, w=10)   # bravo: "V"
             else:
                 inner = 1 if side < 0 else -1                  # ponta de dentro (perto do nariz)
@@ -309,43 +309,34 @@ class FlatMonstro(FlatMuri):
             for j in range(n):
                 x = cx - w * 0.7 + j * w * 1.4 / (n - 1)
                 self._shape(k, [(x - 7, cy - 3), (x + 7, cy - 3), (x, cy + 12)], BRILHO, smooth=False)
-        elif L.dente:                                            # Tetê: um dentinho em cima
+        elif L.dente:                                            # Teco: um dentinho em cima
             self._shape(k, [(cx - 8, cy - 2), (cx + 8, cy - 2), (cx + 7, cy + 11), (cx - 7, cy + 11)], BRILHO, smooth=False)
-        if L.presas:                                           # Bulu: presinhas em baixo
+        if L.presas:                                           # Bilu: presinhas em baixo
             for side in (-1, 1):
                 x = cx + side * w * 0.42
                 yb = cy + op * 0.86
                 self._shape(k, [(x - 6, yb), (x + 6, yb), (x, yb - 12)], BRILHO, smooth=False)
 
 
-BULU = MonstroLook(body="#3DA5F4", belly="#9AD8FF", feet="#1C6CB8", olhos=1, chifres="#FFC93C", pelo=True, presas=True,
-                   cheek="#FF9CC2")
-TETE = MonstroLook(body="#B27BFF", belly="#E6CCFF", feet="#7A43D6", olhos=2, antenas="#FF6FB5", dente=True, cheek="#FF8FC8")
-# versão "5 a 8 anos" (20/11): sobrancelha sempre, tênis com sola e faixa, pelo espetado, bochecha mais discreta
-BULU_58 = MonstroLook(body="#2F9BF0", belly="#9AD8FF", feet="#E9433F", olhos=1, chifres="#FFC93C", pelo=True, presas=True,
-                      cheek="#FF8FB3", extra={"sobrancelha": True, "tenis": "#FFD23F", "espetado": True})
-# versão 3 "fofinho e ASSUSTADOR" (20/11): chifres curvos, olhão com anel amarelo, presas, garrinhas, rabinho com espinho,
-# manchas; Tetê com terceiro olhinho e dentes em serrinha
-BULU_FA = MonstroLook(body="#2F9BF0", belly="#9AD8FF", feet="#E9433F", olhos=1, chifres="#FFC93C", pelo=True, presas=True,
+# canal FOFOLUCOS (20/11) — a turma da Vila Monstrinha, "fofinhos e assustadores" (versão aprovada para o canal: 5 a 8 anos).
+# Bilu (azul, olhão com anel amarelo, chifres curvos, presas) e Teco (roxo, três olhinhos, anteninhas, dentes em serrinha)
+BILU = MonstroLook(body="#2F9BF0", belly="#9AD8FF", feet="#E9433F", olhos=1, chifres="#FFC93C", pelo=True, presas=True,
                       cheek="#FF8FB3", extra={"sobrancelha": True, "tenis": "#FFD23F", "espetado": True, "chifre_grande": True,
                                               "iris": "#FFD23F", "presas_grandes": True, "garras": True, "cauda": "#FFC93C",
                                               "manchas": "#1F7FD6"})
-TETE_FA = MonstroLook(body="#A66BFF", belly="#E6CCFF", feet="#19B7A6", olhos=2, antenas="#FF4FA3", dente=True, cheek="#FF9AD0",
+TECO = MonstroLook(body="#A66BFF", belly="#E6CCFF", feet="#19B7A6", olhos=2, antenas="#FF4FA3", dente=True, cheek="#FF9AD0",
                       extra={"sobrancelha": True, "tenis": "#FFFFFF", "olho3": True, "serrinha": True, "garras": True,
                              "cauda": "#FF4FA3", "manchas": "#8A4BEA"})
-TETE_58 = MonstroLook(body="#A66BFF", belly="#E6CCFF", feet="#19B7A6", olhos=2, antenas="#FF4FA3", dente=True, cheek="#FF9AD0",
-                      extra={"sobrancelha": True, "tenis": "#FFFFFF"})
-
 # a turma da Vila Monstrinha (20/11): mais 4 amigos, cada um com um "jeito de monstro" próprio
 GOGO = MonstroLook(body="#38C44F", belly="#BDF2A6", feet="#7B45D1", olhos=0, antenas="#FFFFFF", cheek="#FF9CB8",       # verde: olhos em hastes
                    extra={"olhos_haste": True, "bocao": True, "serrinha": True, "garras": True, "cauda": "#7B45D1",
                           "manchas": "#2AA33F", "tenis": "#FFD23F"})
-FIFI = MonstroLook(body="#FF6FB1", belly="#FFD3E7", feet="#2E9BFF", olhos=2, chifres="#FFFFFF", cheek="#FF3D8E",          # rosa: peluda
+MIMI = MonstroLook(body="#FF6FB1", belly="#FFD3E7", feet="#2E9BFF", olhos=2, chifres="#FFFFFF", cheek="#FF3D8E",          # rosa: peluda
                    extra={"pelagem": "#E8488F", "sobrancelha": True, "presas_grandes": True, "garras": True, "cauda": "#FFFFFF",
                           "tenis": "#FFFFFF"})
 ZUZU = MonstroLook(body="#FF8A2B", belly="#FFD7AE", feet="#2E9BFF", olhos=2, cheek="#FF5A7A",                              # laranja: chifre único
                    extra={"chifre_unico": "#FFE14D", "iris": "#9BFF5A", "sobrancelha": True, "serrinha": True, "garras": True,
                           "cauda": "#FFE14D", "manchas": "#E8661A", "tenis": "#FFFFFF"})
-NHOC = MonstroLook(body="#F2384E", belly="#FFB8C2", feet="#2A1630", olhos=2, cheek="#FF8FA0",                              # vermelho: bocão e orelhas de morcego
+NHOQUE = MonstroLook(body="#F2384E", belly="#FFB8C2", feet="#2A1630", olhos=2, cheek="#FF8FA0",                              # vermelho: bocão e orelhas de morcego
                    extra={"orelhas": "#FF8FA0", "bocao": True, "presas_grandes": True, "sobrancelha": True, "garras": True,
                           "cauda": "#2A1630", "manchas": "#C81F38", "tenis": "#FFD23F"})

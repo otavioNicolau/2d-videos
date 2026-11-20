@@ -25,20 +25,10 @@ from ..characters.flat_muri import FORMIGA_MAE as _FMA
 CHARACTERS["formiga_mae"] = lambda: FlatMuri("formiga_mae", "Mamãe Formiga", _FMA)
 from ..characters.flat_muri import VOVOZINHO as _FVZ
 CHARACTERS["vovozinho"] = lambda: FlatMuri("vovozinho", "Vovô", _FVZ)
-from ..characters.flat_monstro import BULU as _MB, TETE as _MT, FlatMonstro        # 2º canal: Bulu e Tetê (monstrinhos)
-CHARACTERS["bulu"] = lambda: FlatMonstro("bulu", "Bulu", _MB)
-CHARACTERS["tete"] = lambda: FlatMonstro("tete", "Tetê", _MT)
-from ..characters.flat_monstro import BULU_58 as _MB58, TETE_58 as _MT58
-CHARACTERS["bulu_58"] = lambda: FlatMonstro("bulu_58", "Bulu", _MB58)
-CHARACTERS["tete_58"] = lambda: FlatMonstro("tete_58", "Tetê", _MT58)
-from ..characters.flat_monstro import BULU_FA as _MBF, TETE_FA as _MTF
-CHARACTERS["bulu_fa"] = lambda: FlatMonstro("bulu_fa", "Bulu", _MBF)
-CHARACTERS["tete_fa"] = lambda: FlatMonstro("tete_fa", "Tetê", _MTF)
-from ..characters.flat_monstro import GOGO as _MG, FIFI as _MF, ZUZU as _MZ, NHOC as _MN
-CHARACTERS["gogo"] = lambda: FlatMonstro("gogo", "Gogo", _MG)
-CHARACTERS["fifi"] = lambda: FlatMonstro("fifi", "Fifi", _MF)
-CHARACTERS["zuzu"] = lambda: FlatMonstro("zuzu", "Zuzu", _MZ)
-CHARACTERS["nhoc"] = lambda: FlatMonstro("nhoc", "Nhoc", _MN)
+from ..characters.flat_monstro import BILU as _MBI, TECO as _MTE, GOGO as _MG, MIMI as _MMI, ZUZU as _MZ, NHOQUE as _MNH, FlatMonstro
+for _cid, _nome, _lk in (("bilu", "Bilu", _MBI), ("teco", "Teco", _MTE), ("gogo", "Gogo", _MG), ("mimi", "Mimi", _MMI),
+                         ("zuzu", "Zuzu", _MZ), ("nhoque", "Nhoque", _MNH)):        # 2º canal: Fofolucos (monstrinhos)
+    CHARACTERS[_cid] = (lambda c=_cid, n=_nome, l=_lk: FlatMonstro(c, n, l))
 from ..characters.flat_props import PROPS as _PROPS
 for _pid, _cls in _PROPS.items():
     CHARACTERS[_pid] = _cls
