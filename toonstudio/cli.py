@@ -56,6 +56,7 @@ def main(argv=None) -> int:
     cl = sub.add_parser("clipe"); cl.add_argument("op", choices=["montar"]); cl.add_argument("episode")
     cl.add_argument("--musica", required=True); cl.add_argument("--force", action="store_true")
     fi = sub.add_parser("final"); fi.add_argument("episode")
+    lp = sub.add_parser("limpar"); lp.add_argument("--manter", type=int, default=3); lp.add_argument("--simular", action="store_true")
     pu = sub.add_parser("publicar"); pu.add_argument("episode"); pu.add_argument("--musica", required=True)
     pu.add_argument("--short", action="store_true")
     sh = sub.add_parser("short"); sh.add_argument("episode"); sh.add_argument("--partes", default="refrao#1|verso#1,refrao#1")
@@ -142,6 +143,10 @@ def main(argv=None) -> int:
                 raise StudioError(str(e))
             out.write_text(json.dumps(ep, ensure_ascii=False, indent=2), encoding="utf-8")
             print(f"{out}: {len(ep['scenes'])} planos, {ep['soundtrack']['end']:.1f}s — conferir o storyboard antes do render")
+            return 0
+        if args.cmd == "limpar":
+            from .composition.limpeza import limpar_builds, resumo
+            print(resumo(limpar_builds(manter=args.manter, simular=args.simular)))
             return 0
         if args.cmd == "publicar":
             from .audio import composer

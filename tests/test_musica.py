@@ -460,3 +460,27 @@ def test_suno_txt_has_nothing_after_the_lyrics_end():
     assert "andamento" not in depois and "AVISOS" not in depois
     assert t.index("AVISOS") < t.index("LYRICS")
     assert depois.strip().startswith("=") and "não copie" in depois
+
+
+def test_limpeza_mantem_build_so_das_3_musicas_mais_recentes(tmp_path):
+    """Regra do canal (20/11/2026): só as 3 últimas músicas guardam o `build`; nunca apaga sem MP4 final; o resto fica."""
+    from toonstudio.composition.limpeza import limpar_builds
+
+    def proj(nome, mp4=True):
+        d = tmp_path / nome
+        (d / "build" / "scenes").mkdir(parents=True)
+        (d / "build" / "scenes" / "q.png").write_bytes(b"x" * 10)
+        (d / "output").mkdir()
+        if mp4:
+            (d / "output" / "video.mp4").write_bytes(b"v")
+        return d
+
+    velhos = [proj("ep01-a"), proj("ep02-b"), proj("ep02-b-short")]
+    sem_mp4 = proj("ep03-c", mp4=False)
+    novos = [proj("ep04-d"), proj("ep05-e"), proj("ep06-f", mp4=False)]
+    teste = proj("teste-x")
+    limpar_builds(manter=3, root=tmp_path)
+    assert all(not (d / "build").exists() for d in velhos + [teste])
+    assert all((d / "output" / "video.mp4").exists() for d in velhos)
+    assert (sem_mp4 / "build").exists()
+    assert all((d / "build").exists() for d in novos)

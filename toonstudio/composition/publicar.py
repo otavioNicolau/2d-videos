@@ -180,8 +180,18 @@ def publicar(project: str, musica: Path, copiar: bool = True) -> Path:
         md = src / "CANAL_YOUTUBE.md"
         if md.exists():
             (canal / "TEXTOS DO CANAL.txt").write_text(md.read_text(encoding="utf-8").replace("\n", "\r\n"), encoding="utf-8")
+        _limpar()
         return dest
+    _limpar()
     return out
+
+
+def _limpar() -> None:
+    """Regra do canal (20/11/2026): depois de publicar, fica o `build` só das 3 músicas mais recentes."""
+    from .limpeza import limpar_builds, resumo
+    feito = limpar_builds(manter=3)
+    if feito:
+        print("limpeza dos rascunhos de render:\n" + resumo(feito))
 
 
 def publicar_short(project: str, musica: Path, copiar: bool = True) -> Path:
