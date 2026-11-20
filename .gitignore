@@ -31,3 +31,11 @@ godot/override.cfg
 
 # referências de terceiros (Animadinhos etc.) — só para consulta, nunca versionar
 /referencias/
+# multicanal (20/11/2026): as mesmas regras para os canais novos (canais/<id>/musicas, projects/<canal>/<projeto>)
+canais/**/*.wav
+canais/**/*.mp3
+canais/**/*.m4a
+projects/*/*/musica/
+projects/*/*/analise/
+projects/*/*/output/*.mp4
+projects/*/*/output/*.png
