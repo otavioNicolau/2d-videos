@@ -28,6 +28,9 @@ CHARACTERS["vovozinho"] = lambda: FlatMuri("vovozinho", "Vovô", _FVZ)
 from ..characters.flat_monstro import BULU as _MB, TETE as _MT, FlatMonstro        # 2º canal: Bulu e Tetê (monstrinhos)
 CHARACTERS["bulu"] = lambda: FlatMonstro("bulu", "Bulu", _MB)
 CHARACTERS["tete"] = lambda: FlatMonstro("tete", "Tetê", _MT)
+from ..characters.flat_monstro import BULU_58 as _MB58, TETE_58 as _MT58
+CHARACTERS["bulu_58"] = lambda: FlatMonstro("bulu_58", "Bulu", _MB58)
+CHARACTERS["tete_58"] = lambda: FlatMonstro("tete_58", "Tetê", _MT58)
 from ..characters.flat_props import PROPS as _PROPS
 for _pid, _cls in _PROPS.items():
     CHARACTERS[_pid] = _cls

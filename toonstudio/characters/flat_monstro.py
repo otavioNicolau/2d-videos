@@ -109,6 +109,11 @@ class FlatMonstro(FlatMuri):
         pts = [rot((cx + x * f, cy + y), rotf, (cx, cy)) for x, y in
                ((-24, 8), (-26, -4), (-12, -14), (14, -14), (32, -4), (34, 8), (20, 12), (-16, 12))]
         self._shape(k, pts, pe)
+        if L.extra.get("tenis"):                               # 5–8 anos: tênis com sola branca e faixa
+            sola = [rot((cx + x * f, cy + y), rotf, (cx, cy)) for x, y in ((-26, 5), (34, 5), (34, 12), (-26, 12))]
+            self._shape(k, sola, "#FFFFFF", smooth=False)
+            fx_ = [rot((cx + x * f, cy + y), rotf, (cx, cy)) for x, y in ((-4, -12), (6, -12), (14, 3), (4, 3))]
+            self._shape(k, fx_, L.extra["tenis"], smooth=False)
 
     # ------------------------------------------------------------------ cabeça
     def _head(self, k: Ink, P, C, v: View, ht):
@@ -129,9 +134,10 @@ class FlatMonstro(FlatMuri):
                 self._blob(k, tip[0], tip[1], 20, 20, L.antenas)
         self._shape(k, ellipse_pts(C[0], C[1], r, r * 0.95, ht, 40), L.body)
         if L.pelo:                                           # tufinhos de pelo no alto (mesma cor: silhueta)
+            esp = 1.35 if L.extra.get("espetado") else 1.0      # 5–8 anos: pelo mais espetado
             for j, dx in enumerate((-0.42, -0.14, 0.14, 0.42)):
                 b = rot((C[0] + dx * r + f * s * 10, C[1] - r * 0.86 + abs(dx) * 22), ht, C)
-                h = 46 if j in (1, 2) else 36
+                h = (46 if j in (1, 2) else 36) * esp
                 self._shape(k, [(b[0] - 24, b[1] + 14), (b[0] - 4 + (8 if dx > 0 else -8), b[1] - h), (b[0] + 24, b[1] + 14)], L.body, smooth=False)
         if v.back:
             return
@@ -178,7 +184,19 @@ class FlatMonstro(FlatMuri):
                 self._blob(k, ex + lx - rx * 0.32, ey + ly - R * 0.32, R * 0.32, R * 0.32, BRILHO)
                 self._blob(k, ex + lx + rx * 0.3, ey + ly + R * 0.28, R * 0.13, R * 0.13, BRILHO)
         b = P["brow_l"] if side <= 0 else P["brow_r"]
-        if abs(b) > 0.3:                                       # sobrancelha só quando expressiva (bravo / triste)
+        if self.look.extra.get("sobrancelha") and not P.get("careta", 0) > 0.5:   # 5–8 anos: sobrancelha SEMPRE (atitude)
+            by = ey - R - (26 if big else 22) - P["brow_y"] * 8
+            wb = 28 if big else 15
+            arco = 6 + max(0.0, P["brow_y"]) * 5                # arquinho (alegre); o "b" inclina (bravo/triste)
+            def arco_pts(xa, ya, xb, yb, h):                   # arco suave (curva de 2º grau amostrada)
+                return [(xa + (xb - xa) * u, ya + (yb - ya) * u - h * 4 * u * (1 - u)) for u in (i / 8 for i in range(9))]
+            if big:                                            # Bulu: uma sobrancelha só, grossa
+                self._line(k, arco_pts(ex - wb, by + 3 - b * 4, ex + wb, by + 3 - b * 4, arco - b * 18), ESCURO, w=10)   # bravo: "V"
+            else:
+                inner = 1 if side < 0 else -1                  # ponta de dentro (perto do nariz)
+                xi, xo = ex + inner * wb, ex - inner * wb
+                self._line(k, arco_pts(xo, by + 2 - b * 3, xi, by + 2 + b * 9, (arco - abs(b) * 5) * 0.6), ESCURO, w=7)
+        elif abs(b) > 0.3:                                       # sobrancelha só quando expressiva (bravo / triste)
             by = ey - R - 16 - P["brow_y"] * 6
             inner = 1 if side <= 0 else -1
             self._line(k, [(ex - 16, by + (b * 9 if inner < 0 else -b * 4)), (ex + 16, by + (b * 9 if inner > 0 else -b * 4))], ESCURO, w=7)
@@ -223,3 +241,8 @@ class FlatMonstro(FlatMuri):
 BULU = MonstroLook(body="#3DA5F4", belly="#9AD8FF", feet="#1C6CB8", olhos=1, chifres="#FFC93C", pelo=True, presas=True,
                    cheek="#FF9CC2")
 TETE = MonstroLook(body="#B27BFF", belly="#E6CCFF", feet="#7A43D6", olhos=2, antenas="#FF6FB5", dente=True, cheek="#FF8FC8")
+# versão "5 a 8 anos" (20/11): sobrancelha sempre, tênis com sola e faixa, pelo espetado, bochecha mais discreta
+BULU_58 = MonstroLook(body="#2F9BF0", belly="#9AD8FF", feet="#E9433F", olhos=1, chifres="#FFC93C", pelo=True, presas=True,
+                      cheek="#FF9CC2", extra={"sobrancelha": True, "tenis": "#FFD23F", "espetado": True})
+TETE_58 = MonstroLook(body="#A66BFF", belly="#E6CCFF", feet="#19B7A6", olhos=2, antenas="#FF4FA3", dente=True, cheek="#FF8FC8",
+                      extra={"sobrancelha": True, "tenis": "#FFFFFF"})
