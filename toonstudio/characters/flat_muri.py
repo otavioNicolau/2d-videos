@@ -298,6 +298,12 @@ class FlatMuri(Character):
                 mid = (b[0] + side * 8, b[1] - 54)
                 tip = (b[0] + side * 44 + sway * 20, b[1] - 66)
                 self._line(k, [b, mid, tip], line, w=LINE * 1.2)
+            elif P.get("careta", 0) > 0.5:     # 27: antenas ARREPIADAS de azedo — retas para cima, em ziguezague
+                tip = (b[0] + side * 22, b[1] - 112)
+                zz = [b, (b[0] + side * 22, b[1] - 22), (b[0] - side * 6, b[1] - 44), (b[0] + side * 26, b[1] - 66),
+                      (b[0] - side * 2, b[1] - 88), tip]
+                for q0, q1 in zip(zz, zz[1:]):                 # segmentos retos: ziguezague de verdade (sem suavizar)
+                    self._line(k, [q0, q1], line, w=LINE * 1.2)
             elif P.get("despenteado", 0) > 0.5:   # acordou despenteado: antena em zigue-zague, ponta caída
                 tip = (b[0] + side * (44 if side > 0 else 12) + sway * 26, b[1] - (58 if side > 0 else 86))
                 self._line(k, [b, (b[0] + side * 22, b[1] - 26), (b[0] - side * 6, b[1] - 50), tip], line, w=LINE * 1.2)
@@ -508,7 +514,10 @@ class FlatMuri(Character):
         ex, ey = E
         es = P["eye_scale"]
         rx, ry = 22 * c * es, 27 * es
-        if P.get("eyes_happy", 0) > 0.5:
+        if P.get("careta", 0) > 0.5:          # 27: espremido de azedo "> <" (a ponta aponta para o nariz)
+            pt = -side
+            self._line(k, [(ex - pt * rx, ey - ry * 0.55), (ex + pt * rx * 0.7, ey + 2), (ex - pt * rx, ey + ry * 0.55)], PUPIL, w=LINE * 1.2)
+        elif P.get("eyes_happy", 0) > 0.5:
             self._line(k, [(ex - rx, ey + 6), (ex, ey - ry * 0.5), (ex + rx, ey + 6)], PUPIL, w=LINE * 1.15)
         elif P["lid"] >= 0.85:                 # olho FECHADO (piscada, dormindo): curvinha para baixo, sem fresta branca
             self._line(k, [(ex - rx, ey + 4), (ex, ey + ry * 0.42), (ex + rx, ey + 4)], PUPIL, w=LINE * 1.15)
@@ -566,6 +575,12 @@ class FlatMuri(Character):
             k.shape(ellipse_pts(oc[0], oc[1] + ry * 0.75, rx * 0.75, ry * 0.45, 0, 12), fill=_rgba("#F27A8E"), line=0)
             k.c.restore()
             k.shape(P_, fill=None, brush=Brush(LINE, 0.0, _rgba(line), 0.0), dense=True, line=LINE)
+            return
+        if P.get("careta", 0) > 0.5:                     # 27: boca torta de azedo (zigue-zague inclinado)
+            cx, cy = M
+            w = 30 * (1 - 0.3 * s)
+            pts = [(cx - w + 2 * w * i / 6, cy + (7 if i % 2 else -7) + (i - 3) * 2.5) for i in range(7)]
+            self._line(k, pts, line, w=LINE * 1.2)
             return
         wk, op = shapes.get(P["mouth"], shapes["X"])
         op += P["jaw"] * 26

@@ -57,7 +57,7 @@ def ln(k: Ink, pts, col: str, w: float = LINE, alpha: float = 1.0):
 
 ITEMS = ("copo_leite", "copo_vazio", "banana", "banana_mordida", "pente", "garrafinha", "carrinho", "sombrinha", "escova",
          "suco", "fatia_bolo", "fatia_grande", "escova_pasta", "escova_guitarra", "apito", "sapato", "estrela_natal", "sorvete",
-         "baqueta", "saxofone", "pao_queijo", "pao_queijo_mordido", "baqueta_a4")
+         "baqueta", "saxofone", "pao_queijo", "pao_queijo_mordido", "baqueta_a4", "limao", "limao_mordido", "limonada")
 
 
 ITEM_SCALE = 1.6
@@ -144,6 +144,29 @@ def draw_item(k: Ink, name: str, H: tuple[float, float], f: float = 1.0, ang: fl
         k.shape(ellipse_pts(*q(33, 18), 10 * S, 5 * S, -0.5, 14), fill=_rgba("#8A5A12"), line=0)
         for j in range(4):                                                                       # chaves
             shape(k, ellipse_pts(*q(-2 + j * 0.3, -14 + j * 13), 3.5 * S, 3.5 * S, 0, 10), "#FFF1B0", line=ol)
+    elif name in ("limao", "limao_mordido"):              # 27: limãozinho (oval verde-limão com biquinhos e folhinha)
+        x, y = q(0, -40)
+        r = 30 * S
+        shape(k, [(x - r * 1.25, y), (x - r * 1.05, y - r * 0.45), (x - r * 0.4, y - r * 0.92), (x + r * 0.4, y - r * 0.92),
+                  (x + r * 1.05, y - r * 0.45), (x + r * 1.25, y), (x + r * 1.05, y + r * 0.45), (x + r * 0.4, y + r * 0.92),
+                  (x - r * 0.4, y + r * 0.92), (x - r * 1.05, y + r * 0.45)], "#B8E04A", line="#6E9A1E")
+        shape(k, ellipse_pts(x + r * 0.35 * f, y - r * 1.05, r * 0.5, r * 0.22, -0.5 * f, 12), "#3FAE3A", line="#2A7A28")
+        k.shape(ellipse_pts(x - r * 0.45, y - r * 0.35, r * 0.28, r * 0.14, -0.4, 10), fill=_rgba("#FFFFFF", 0.7), line=0)
+        if name == "limao_mordido":                         # mordida: meia-lua clara com gominhos
+            bx = x + r * 0.95 * f
+            shape(k, ellipse_pts(bx, y, r * 0.55, r * 0.62, 0, 16), "#F4F7C0", line="#C9D46A")
+            for a_ in (-0.9, 0.0, 0.9):
+                ln(k, [(bx, y), (bx + math.cos(a_ + (0 if f > 0 else math.pi)) * r * 0.45, y + math.sin(a_) * r * 0.5)], "#D7DF8A", w=LINE * 0.6)
+    elif name == "limonada":                               # 27: copo de limonada com canudinho e rodela de limão
+        shape(k, Q([(-24, -64), (24, -64), (18, 16), (-18, 16)]), PAL["vidro"], line="#7FB6DB", alpha=0.9, smooth=False)
+        shape(k, Q([(-21, -44), (21, -44), (17, 12), (-17, 12)]), "#F2F58A", line="#C9CC4A", smooth=False)
+        for dx, dy in ((-8, -20), (7, -6), (-3, 4)):
+            k.dot(*q(dx, dy), 3.5, _rgba("#FFFFFF", 0.8))
+        ln(k, Q([(6, -44), (14, -92), (28, -100)]), "#3FAE3A", w=LINE * 1.3)
+        cx_, cy_ = q(-22, -62)
+        shape(k, ellipse_pts(cx_, cy_, 17 * S, 17 * S, 0, 18), "#D5F07A", line="#6E9A1E")
+        for a_ in range(0, 360, 60):
+            ln(k, [(cx_, cy_), (cx_ + math.cos(math.radians(a_)) * 13 * S, cy_ + math.sin(math.radians(a_)) * 13 * S)], "#9CC43A", w=LINE * 0.5)
     elif name == "suco":                                   # copinho de suco de uva com canudinho
         shape(k, Q([(-22, -60), (22, -60), (17, 16), (-17, 16)]), PAL["vidro"], line="#7FB6DB", alpha=0.9, smooth=False)
         shape(k, Q([(-19, -40), (19, -40), (16, 12), (-16, 12)]), "#9B4FD1", line="#7A3AAE", smooth=False)
@@ -3175,3 +3198,74 @@ class Gelatina(_Prop):
 
 
 PROPS.update({"gelatina": Gelatina})
+
+
+def _limao(k: Ink, x: float, y: float, r: float, ang: float = 0.0, folha: bool = True) -> None:
+    """limão desenhado em pé (oval com biquinhos), `r` = meia-largura."""
+    pts = []
+    for i in range(24):
+        a = 2 * math.pi * i / 24
+        bico = 1.0 + 0.22 * max(0.0, math.cos(a)) ** 8 + 0.22 * max(0.0, -math.cos(a)) ** 8
+        px, py = math.cos(a) * r * 1.18 * bico, math.sin(a) * r * 0.9
+        pts.append((x + px * math.cos(ang) - py * math.sin(ang), y + px * math.sin(ang) + py * math.cos(ang)))
+    shape(k, pts, "#C8E64C", line="#6E9A1E")
+    k.shape(ellipse_pts(x - r * 0.4, y - r * 0.38, r * 0.3, r * 0.13, -0.4, 10), fill=_rgba("#FFFFFF", 0.65), line=0)
+    if folha:
+        shape(k, ellipse_pts(x + r * 0.3, y - r * 1.0, r * 0.5, r * 0.2, -0.6, 12), "#3FAE3A", line="#2A7A28")
+
+
+class Limoeiro(_Prop):
+    """Pé de limão da vovó (27): tronco, copa redonda verde com limõezinhos. `balanco` fase (a copa balança),
+    `cai` 0→1 um limão cai do galho até o chão (quica), `quantos` 0→1 limões na copa."""
+
+    def __init__(self):
+        super().__init__("limoeiro", "Limoeiro", (1300, 1300), (650, 1240), 900, {"balanco": 0.0, "cai": 0.0, "quantos": 1.0})
+
+    def paint(self, k, P):
+        sw = math.sin(P["balanco"] * 2 * math.pi) * 14
+        shape(k, [(-50, 0), (50, 0), (38, -330), (90, -430), (60, -445), (10, -360), (-20, -460), (-50, -450), (-36, -330)],
+              "#9A6A3E", line="#6E4826", smooth=False)
+        for (cx, cy, rx, ry) in ((-230, -560, 230, 190), (220, -560, 230, 190), (0, -700, 280, 220), (-120, -470, 220, 140),
+                                 (140, -470, 220, 140)):
+            shape(k, ellipse_pts(cx + sw * (1 + (-cy - 450) / 300), cy, rx, ry, 0, 30), "#4DBB4A", line="#2E8A30")
+        lim = [(-280, -560), (-150, -680), (40, -780), (210, -650), (300, -520), (-40, -560), (120, -480), (-220, -440),
+               (-80, -440), (260, -400)]
+        n = int(round(len(lim) * max(0.0, min(1.0, P["quantos"]))))
+        for i, (x, y) in enumerate(lim[:n]):
+            _limao(k, x + sw * (1 + (-y - 450) / 300), y, 34, ang=0.3 * ((i % 3) - 1), folha=i % 2 == 0)
+        c = max(0.0, min(1.0, P["cai"]))
+        if c > 0.0:                                            # o limão que cai do galho e quica
+            u = min(1.0, c / 0.75)
+            y = -470 + (470 - 40) * u * u
+            if c > 0.75:
+                q = (c - 0.75) / 0.25
+                y = -40 - 90 * math.sin(math.pi * q)
+            _limao(k, 230, y, 40, ang=c * 3.0)
+
+
+class LimaoCara(_Prop):
+    """Limão grande com carinha (objeto-personagem da 27): `careta` 0→1 também fica azedo (olhos "> <", boca torta,
+    treme), `pulo` 0→1 dá um pulinho, `boca` 0→1, `lid`, `fase` (linear) para tremer."""
+
+    def __init__(self):
+        super().__init__("limao_cara", "Limão com carinha", (800, 760), (400, 700), 300,
+                         {"careta": 0.0, "pulo": 0.0, "boca": 0.3, "lid": 0.0, "fase": 0.0})
+
+    def paint(self, k, P):
+        c = P["careta"] > 0.5
+        dx = math.sin(P["fase"] * 2 * math.pi * 6) * 6 if c else 0.0
+        y = -150 - 90 * math.sin(math.pi * max(0.0, min(1.0, P["pulo"])))
+        _limao(k, dx, y, 140)
+        if c:
+            for sd in (-1, 1):
+                ex, ey = dx + sd * 48, y - 20
+                ln(k, [(ex + sd * 22, ey - 16), (ex - sd * 12, ey), (ex + sd * 22, ey + 16)], "#2A4A10", w=LINE * 1.2)
+            ln(k, [(dx - 34 + 68 * i / 6, y + 40 + (6 if i % 2 else -6) + (i - 3) * 2) for i in range(7)], "#2A4A10", w=LINE * 1.2)
+            for sd in (-1, 1):                                  # risquinhos de tremedeira
+                ln(k, [(dx + sd * 190, y - 40), (dx + sd * 215, y - 60)], "#6E9A1E", w=LINE)
+                ln(k, [(dx + sd * 195, y + 10), (dx + sd * 225, y + 4)], "#6E9A1E", w=LINE)
+        else:
+            _carinha(k, dx, y + 10, {"lid": P["lid"], "boca": P["boca"]}, "#2A4A10", "#FF9A7A", esc=1.4)
+
+
+PROPS.update({"limoeiro": Limoeiro, "limao_cara": LimaoCara})

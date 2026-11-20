@@ -29,9 +29,17 @@ def segurar(char, st, a):
                               (0.25, pose, "back")], dur=0.3, ex=1)
 
 
-@action("beber", "acting", "Leva o copo à boca, bebe e fica com bigodinho de leite.", {"dur": "s"})
+@action("beber", "acting", "Leva o copo à boca, bebe e fica com bigodinho de leite (com `item` = limonada/suco: bebe pelo "
+        "canudinho, sem bigode).", {"dur": "s", "item": "copo_leite|limonada|suco"})
 def beber(char, st, a):
     d = _d(a, 1.6)
+    item = a.get("item", "copo_leite")
+    if item != "copo_leite":                                   # 27: limonada de canudinho → sorriso de volta
+        return ActionResult(keys=[
+            (0.0, {"holding": item, **HOLD_SIDE}, "step"),
+            (0.3, {**AT_MOUTH, "lid": 0.6, "mouth": "B"}, "inout"),
+            (d * 0.75, {"lid": 0.8}, "inout"),
+            (d, {**HOLD_SIDE, "lid": 0.0, "mouth": "X", **expression("joy")}, "back")], dur=d, ex=1)
     return ActionResult(keys=[
         (0.0, {"holding": "copo_leite", **HOLD_SIDE}, "step"),
         (0.3, {**AT_MOUTH, "head_tilt": -0.12, "lid": 0.55, "mouth": "B"}, "inout"),
@@ -293,6 +301,31 @@ def estatua(char, st, a):
         t += 0.4
         k += 1
         keys.append((t, {"look_x": 1.0 if k % 2 else -1.0}, "out"))
+    return ActionResult(keys=keys, dur=d, ex=1)
+
+
+@action("careta", "acting", "CARETA DE AZEDO (27): morde o limão (se tiver `item`), espreme os olhos, entorta a boca, arrepia as "
+        "antenas e o corpo treme; com `volta` 1 sorri no fim.", {"dur": "s", "item": "limao|''", "volta": "0/1"})
+def careta(char, st, a):
+    d = _d(a, 1.8)
+    item = a.get("item", "")
+    keys, t0 = [], 0.0
+    if item:
+        keys += [(0.0, {"holding": item, **HOLD_SIDE}, "step"),
+                 (0.25, {**AT_MOUTH, "mouth": "D"}, "inout"),
+                 (0.4, {"mouth": "X", "holding": {"limao": "limao_mordido"}.get(item, item)}, "step"),
+                 (0.55, {**HOLD_SIDE}, "inout")]
+        t0 = 0.55
+    fim = d - 0.45 if a.get("volta") else d
+    keys.append((t0 + 0.08, {**expression("azedo"), "squash": 0.93, "head_tilt": 0.12, "hand_f_x": 95, "hand_f_y": -40,
+                             "hand_f_bend": -0.6, "paw_f": 3}, "back"))
+    t, k = t0 + 0.08, 0
+    while t < fim - 0.1:                                      # treme de azedo
+        t += 0.09
+        k += 1
+        keys.append((t, {"body_x": 6 if k % 2 else -6, "head_tilt": 0.14 if k % 2 else 0.06}, "step"))
+    if a.get("volta"):
+        keys.append((d, {"body_x": 0, "head_tilt": 0.0, "squash": 1.0, **expression("joy")}, "inout"))
     return ActionResult(keys=keys, dur=d, ex=1)
 
 
