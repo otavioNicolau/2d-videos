@@ -31,6 +31,14 @@ CHARACTERS["tete"] = lambda: FlatMonstro("tete", "Tetê", _MT)
 from ..characters.flat_monstro import BULU_58 as _MB58, TETE_58 as _MT58
 CHARACTERS["bulu_58"] = lambda: FlatMonstro("bulu_58", "Bulu", _MB58)
 CHARACTERS["tete_58"] = lambda: FlatMonstro("tete_58", "Tetê", _MT58)
+from ..characters.flat_monstro import BULU_FA as _MBF, TETE_FA as _MTF
+CHARACTERS["bulu_fa"] = lambda: FlatMonstro("bulu_fa", "Bulu", _MBF)
+CHARACTERS["tete_fa"] = lambda: FlatMonstro("tete_fa", "Tetê", _MTF)
+from ..characters.flat_monstro import GOGO as _MG, FIFI as _MF, ZUZU as _MZ, NHOC as _MN
+CHARACTERS["gogo"] = lambda: FlatMonstro("gogo", "Gogo", _MG)
+CHARACTERS["fifi"] = lambda: FlatMonstro("fifi", "Fifi", _MF)
+CHARACTERS["zuzu"] = lambda: FlatMonstro("zuzu", "Zuzu", _MZ)
+CHARACTERS["nhoc"] = lambda: FlatMonstro("nhoc", "Nhoc", _MN)
 from ..characters.flat_props import PROPS as _PROPS
 for _pid, _cls in _PROPS.items():
     CHARACTERS[_pid] = _cls

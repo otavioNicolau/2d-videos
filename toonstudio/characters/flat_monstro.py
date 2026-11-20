@@ -67,6 +67,13 @@ class FlatMonstro(FlatMuri):
         hv = View(max(-1, min(1, P["turn"] + P["head_turn"])), P["back"])
         ht = ang * 0.5 + P["head_tilt"] * f
 
+        if L.extra.get("cauda"):                                # rabinho com espinho na ponta (atrás do corpo)
+            fase = P.get("hair_bounce", 0.0) * 0.6 + P["body_x"] * 0.01
+            b0 = T((-f * 30, -6))
+            pts = [b0, T((-f * 80, 4)), T((-f * 112, -26 + 10 * fase)), T((-f * 120, -58 + 10 * fase))]
+            self._line(ink, pts, dark(L.body, 0.85), w=16)
+            tip = pts[-1]
+            self._shape(ink, [(tip[0] - 16, tip[1] + 6), (tip[0], tip[1] - 30), (tip[0] + 16, tip[1] + 6)], L.extra["cauda"], smooth=False)
         self._arm(ink, P, "f", T((lerp(42 * f, 10 * f, s), -64)), f, behind=True)
         self._leg(ink, P, "f", T((lerp(22 * f, 8 * f, s), -4)), f, s, 0.0, behind=True)
         self._leg(ink, P, "n", T((lerp(-22 * f, -6 * f, s), -2)), f, s, 0.0, behind=False)
@@ -76,6 +83,10 @@ class FlatMonstro(FlatMuri):
         if not v.back:
             bx = T((f * s * 14, -30))
             self._blob(ink, bx[0], bx[1], 34 * (1 - 0.35 * s), 36, L.belly, ang)
+        if L.extra.get("manchas"):                              # manchas de monstro no corpinho
+            for dx, dy, r in ((-40, -60, 9), (44, -40, 11), (-46, -10, 7)):
+                q = T((dx * (1 - 0.4 * s), dy))
+                self._blob(ink, q[0], q[1], r, r, L.extra["manchas"])
         self._head(ink, P, C, hv, ht)
         self._arm(ink, P, "n", T((lerp(-42 * f, -8 * f, s), -64)), f, behind=False)
 
@@ -91,6 +102,14 @@ class FlatMonstro(FlatMuri):
             a0 = math.atan2(H[1] - E[1], H[0] - E[0])
             draw_item(k, item, (H[0] + math.cos(a0) * 8, H[1] + math.sin(a0) * 8), f, a0)
         aberta = P[f"paw_{which}"] >= 2.5
+        if self.look.extra.get("garras"):                       # garrinhas brancas pontudas
+            a0 = math.atan2(H[1] - E[1], H[0] - E[0])
+            for da in ((-0.55, 0.0, 0.55) if aberta else (-0.35, 0.35)):
+                a = a0 + da
+                b = (H[0] + math.cos(a) * 14, H[1] + math.sin(a) * 14)
+                pn = (H[0] + math.cos(a) * 30, H[1] + math.sin(a) * 30)
+                nrm = (-math.sin(a) * 5, math.cos(a) * 5)
+                self._shape(k, [(b[0] + nrm[0], b[1] + nrm[1]), pn, (b[0] - nrm[0], b[1] - nrm[1])], "#FFF7E8", smooth=False)
         self._blob(k, H[0], H[1], 19 if aberta else 16, 19 if aberta else 16, col)          # mão de luva redonda
         if aberta:                                                                            # polegarzinho
             a0 = math.atan2(H[1] - E[1], H[0] - E[0])
@@ -123,7 +142,9 @@ class FlatMonstro(FlatMuri):
         if L.chifres:                                        # chifrinhos atrás do alto da cabeça
             for side in (-1, 1):
                 b = rot((C[0] + side * r * 0.5 + f * s * 12, C[1] - r * 0.78), ht, C)
-                pts = [(b[0] + side * x, b[1] + y) for x, y in ((-22, 10), (8, -62), (28, -74), (24, 8))]      # espelhado
+                forma = ((-24, 12), (-6, -40), (18, -86), (44, -104), (34, -70), (26, 10)) if L.extra.get("chifre_grande") \
+                    else ((-22, 10), (8, -62), (28, -74), (24, 8))
+                pts = [(b[0] + side * x, b[1] + y) for x, y in forma]      # espelhado
                 self._shape(k, pts, L.chifres)
         if L.antenas:                                        # anteninhas com bolinha
             for side in (-1, 1):
@@ -131,7 +152,36 @@ class FlatMonstro(FlatMuri):
                 sway = P.get("hair_bounce", 0.0) * 0.5 + P["head_tilt"] * 0.7
                 tip = (b[0] + side * 26 + sway * 24, b[1] - 86)
                 self._line(k, [b, (b[0] + side * 4, b[1] - 46), tip], dark(L.body, 0.8), w=11)
-                self._blob(k, tip[0], tip[1], 20, 20, L.antenas)
+                if L.extra.get("olhos_haste") and not v.back:     # olhinho na ponta da haste
+                    self._blob(k, tip[0], tip[1], 26, 26, "#FFFFFF")
+                    if P["lid"] >= 0.85 or P.get("eyes_happy", 0) > 0.5:
+                        self._line(k, [(tip[0] - 16, tip[1] + 2), (tip[0], tip[1] - 8), (tip[0] + 16, tip[1] + 2)], ESCURO, w=7)
+                    else:
+                        self._blob(k, tip[0] + P["look_x"] * f * 6 + 3 * f * s, tip[1] + 3, 14, 14, ESCURO)
+                        self._blob(k, tip[0] - 2, tip[1] - 4, 5, 5, BRILHO)
+                else:
+                    self._blob(k, tip[0], tip[1], 20, 20, L.antenas)
+        if L.extra.get("orelhas"):                          # orelhas pontudas de morcego (atrás da cabeça)
+            for side in (-1, 1):
+                b = rot((C[0] + side * r * 0.78 + f * s * 10, C[1] - r * 0.45), ht, C)
+                pts = [(b[0] - side * 30, b[1] + 30), (b[0] + side * 70, b[1] - 70), (b[0] + side * 40, b[1] + 40)]
+                self._shape(k, pts, L.body, smooth=False)
+                self._shape(k, [(b[0] - side * 8, b[1] + 22), (b[0] + side * 52, b[1] - 46), (b[0] + side * 32, b[1] + 30)], L.extra["orelhas"], smooth=False)
+        if L.extra.get("chifre_unico"):                     # um chifre no meio (espiral de duas cores)
+            b = rot((C[0] + f * s * 12, C[1] - r * 0.92), ht, C)
+            self._shape(k, [(b[0] - 36, b[1] + 22), (b[0] + 6, b[1] - 128), (b[0] + 36, b[1] + 22)], L.extra["chifre_unico"], smooth=False)
+            for j in (0.25, 0.5, 0.72):
+                y = b[1] + 22 - 150 * j
+                wj = 36 * (1 - j)
+                self._line(k, [(b[0] - wj + 3, y + 7), (b[0] + wj - 1, y - 7)], dark(L.extra["chifre_unico"], 0.8), w=7)
+        if L.extra.get("pelagem"):                          # pelagem fofa em volta da cabeça (bico a bico)
+            n = 22
+            pts = []
+            for j in range(n * 2):
+                a = math.pi * 2 * j / (n * 2)
+                rr = r * (1.13 if j % 2 == 0 else 0.97)
+                pts.append(rot((C[0] + math.cos(a) * rr, C[1] + math.sin(a) * rr * 0.95), ht, C))
+            self._shape(k, pts, L.extra["pelagem"], smooth=False)
         self._shape(k, ellipse_pts(C[0], C[1], r, r * 0.95, ht, 40), L.body)
         if L.pelo:                                           # tufinhos de pelo no alto (mesma cor: silhueta)
             esp = 1.35 if L.extra.get("espetado") else 1.0      # 5–8 anos: pelo mais espetado
@@ -139,6 +189,10 @@ class FlatMonstro(FlatMuri):
                 b = rot((C[0] + dx * r + f * s * 10, C[1] - r * 0.86 + abs(dx) * 22), ht, C)
                 h = (46 if j in (1, 2) else 36) * esp
                 self._shape(k, [(b[0] - 24, b[1] + 14), (b[0] - 4 + (8 if dx > 0 else -8), b[1] - h), (b[0] + 24, b[1] + 14)], L.body, smooth=False)
+        if L.extra.get("manchas"):                           # manchas de monstro na cabeça (só no alto/lateral)
+            for ang_, rr, rm in ((-2.4, 0.8, 16), (-0.75, 0.82, 12), (-1.9, 0.55, 9)):
+                q = rot((C[0] + math.cos(ang_) * r * rr + f * s * 10, C[1] + math.sin(ang_) * r * rr), ht, C)
+                self._blob(k, q[0], q[1], rm, rm, L.extra["manchas"])
         if v.back:
             return
         for side in (-1, 1):                                 # bochechas suaves
@@ -146,7 +200,9 @@ class FlatMonstro(FlatMuri):
             if c > 0.25:
                 q = rot((x, C[1] + 50), ht, C)
                 k.shape(ellipse_pts(q[0], q[1], 22 * c, 15, 0, 16), fill=_rgba(L.cheek, 0.8 + 0.2 * P.get("blush", 1.0)), line=0)
-        if L.olhos == 1:                                     # Bulu: UM olhão no meio
+        if L.olhos == 0:                                     # olhos só nas hastes (Gogo)
+            pass
+        elif L.olhos == 1:                                     # Bulu: UM olhão no meio
             sh = _rosto(v)[1]
             x = C[0] + r * 0.74 * math.sin(max(-0.9, min(0.9, sh)))
             self._eye(k, P, rot((x, C[1] - 4), ht, C), 0.8 + 0.2 * math.cos(sh), 0, f, s, ESCURO)
@@ -155,6 +211,11 @@ class FlatMonstro(FlatMuri):
                 e = _olho(v, C[0], r, side)
                 if e:
                     self._eye(k, P, rot((e[0], C[1] + 8), ht, C), e[1], side, f, s, ESCURO)       # olhos abaixo do meio (referência)
+        if L.extra.get("olho3") and L.olhos == 2:          # terceiro olhinho na testa (assustador-fofo)
+            sh = _rosto(v)[1]
+            x3 = C[0] + r * 0.6 * math.sin(max(-0.9, min(0.9, sh)))
+            self._eye(k, {**P, "eye_scale": P["eye_scale"] * 0.72, "_sem_sobrancelha": True}, rot((x3, C[1] - 50), ht, C),
+                      0.8 + 0.2 * math.cos(sh), 0, f, s, ESCURO)
         a_m = max(-1.0, min(1.0, _rosto(v)[1]))
         nx_ = C[0] + r * 0.7 * math.sin(a_m)
         self._mouth(k, P, rot((nx_, C[1] + 66), ht, C), f, s, ESCURO)
@@ -179,12 +240,16 @@ class FlatMonstro(FlatMuri):
             lx = (P["look_x"] * f * 0.35 + 0.15 * f * s) * rx
             ly = P["look_y"] * 0.3 * R
             ry = R * (1.0 - 0.75 * max(0.0, P["lid"]))
+            if self.look.extra.get("iris"):                    # anel colorido em volta (olho que "brilha")
+                self._blob(k, ex + lx, ey + ly + (R - ry) * 0.5, rx + 7, ry + 7, self.look.extra["iris"])
             self._blob(k, ex + lx, ey + ly + (R - ry) * 0.5, rx, ry, ESCURO)
             if ry > R * 0.4:                                   # brilho branco (duas bolinhas)
                 self._blob(k, ex + lx - rx * 0.32, ey + ly - R * 0.32, R * 0.32, R * 0.32, BRILHO)
                 self._blob(k, ex + lx + rx * 0.3, ey + ly + R * 0.28, R * 0.13, R * 0.13, BRILHO)
         b = P["brow_l"] if side <= 0 else P["brow_r"]
-        if self.look.extra.get("sobrancelha") and not P.get("careta", 0) > 0.5:   # 5–8 anos: sobrancelha SEMPRE (atitude)
+        if P.get("_sem_sobrancelha"):
+            pass
+        elif self.look.extra.get("sobrancelha") and not P.get("careta", 0) > 0.5:   # 5–8 anos: sobrancelha SEMPRE (atitude)
             by = ey - R - (26 if big else 22) - P["brow_y"] * 8
             wb = 28 if big else 15
             arco = 6 + max(0.0, P["brow_y"]) * 5                # arquinho (alegre); o "b" inclina (bravo/triste)
@@ -216,11 +281,21 @@ class FlatMonstro(FlatMuri):
         if o > 0.04:
             wk, op = 0.6, 20 + 30 * o
         sm = P["smile"]
-        w = 30 * wk * (1 - 0.3 * s)
+        w = 30 * wk * (1 - 0.3 * s) * (1.6 if L.extra.get("bocao") else 1.0)
         if op < 3:                                             # fechada: sorriso grossinho
             pts = [(cx - w, cy - sm * 9), (cx, cy + sm * 9), (cx + w, cy - sm * 9)]
             self._line(k, pts, ESCURO, w=9)
-            if L.presas and sm > 0.2:
+            if L.extra.get("presas_grandes"):                   # presas pontudas pra BAIXO, sempre aparecendo
+                for side in (-1, 1):
+                    x = cx + side * w * 0.5
+                    y0 = cy - sm * 9 + abs(side * w * 0.5) / w * sm * 9 * 0.0 + sm * 4
+                    self._shape(k, [(x - 8, y0 - 2), (x + 8, y0 - 2), (x, y0 + 17)], BRILHO, smooth=False)
+            elif L.extra.get("serrinha"):                       # dentinhos em serrinha (sorriso de monstro)
+                for j in range(4):
+                    x = cx - w * 0.6 + j * w * 0.4
+                    y0 = cy + sm * 9 * (1 - abs(x - cx) / w) - 2
+                    self._shape(k, [(x - 6, y0), (x + 6, y0), (x, y0 + 10)], BRILHO, smooth=False)
+            elif L.presas and sm > 0.2:
                 for side in (-1, 1):
                     x = cx + side * w * 0.45
                     self._shape(k, [(x - 6, cy - sm * 2), (x + 6, cy - sm * 2), (x, cy - sm * 2 - 13)], BRILHO, smooth=False)
@@ -229,7 +304,12 @@ class FlatMonstro(FlatMuri):
                (cx + w * 0.6, cy + op * 0.8), (cx, cy + op), (cx - w * 0.6, cy + op * 0.8)]
         self._shape(k, pts, "#7A1E3A")
         self._blob(k, cx, cy + op * 0.78, w * 0.55, op * 0.3 + 3, "#FF7A9A")              # língua
-        if L.dente:                                            # Tetê: um dentinho em cima
+        if L.extra.get("serrinha") or L.extra.get("presas_grandes"):   # boca aberta: fileira de dentes pontudos em cima
+            n = 5
+            for j in range(n):
+                x = cx - w * 0.7 + j * w * 1.4 / (n - 1)
+                self._shape(k, [(x - 7, cy - 3), (x + 7, cy - 3), (x, cy + 12)], BRILHO, smooth=False)
+        elif L.dente:                                            # Tetê: um dentinho em cima
             self._shape(k, [(cx - 8, cy - 2), (cx + 8, cy - 2), (cx + 7, cy + 11), (cx - 7, cy + 11)], BRILHO, smooth=False)
         if L.presas:                                           # Bulu: presinhas em baixo
             for side in (-1, 1):
@@ -244,5 +324,28 @@ TETE = MonstroLook(body="#B27BFF", belly="#E6CCFF", feet="#7A43D6", olhos=2, ant
 # versão "5 a 8 anos" (20/11): sobrancelha sempre, tênis com sola e faixa, pelo espetado, bochecha mais discreta
 BULU_58 = MonstroLook(body="#2F9BF0", belly="#9AD8FF", feet="#E9433F", olhos=1, chifres="#FFC93C", pelo=True, presas=True,
                       cheek="#FF8FB3", extra={"sobrancelha": True, "tenis": "#FFD23F", "espetado": True})
+# versão 3 "fofinho e ASSUSTADOR" (20/11): chifres curvos, olhão com anel amarelo, presas, garrinhas, rabinho com espinho,
+# manchas; Tetê com terceiro olhinho e dentes em serrinha
+BULU_FA = MonstroLook(body="#2F9BF0", belly="#9AD8FF", feet="#E9433F", olhos=1, chifres="#FFC93C", pelo=True, presas=True,
+                      cheek="#FF8FB3", extra={"sobrancelha": True, "tenis": "#FFD23F", "espetado": True, "chifre_grande": True,
+                                              "iris": "#FFD23F", "presas_grandes": True, "garras": True, "cauda": "#FFC93C",
+                                              "manchas": "#1F7FD6"})
+TETE_FA = MonstroLook(body="#A66BFF", belly="#E6CCFF", feet="#19B7A6", olhos=2, antenas="#FF4FA3", dente=True, cheek="#FF9AD0",
+                      extra={"sobrancelha": True, "tenis": "#FFFFFF", "olho3": True, "serrinha": True, "garras": True,
+                             "cauda": "#FF4FA3", "manchas": "#8A4BEA"})
 TETE_58 = MonstroLook(body="#A66BFF", belly="#E6CCFF", feet="#19B7A6", olhos=2, antenas="#FF4FA3", dente=True, cheek="#FF9AD0",
                       extra={"sobrancelha": True, "tenis": "#FFFFFF"})
+
+# a turma da Vila Monstrinha (20/11): mais 4 amigos, cada um com um "jeito de monstro" próprio
+GOGO = MonstroLook(body="#38C44F", belly="#BDF2A6", feet="#7B45D1", olhos=0, antenas="#FFFFFF", cheek="#FF9CB8",       # verde: olhos em hastes
+                   extra={"olhos_haste": True, "bocao": True, "serrinha": True, "garras": True, "cauda": "#7B45D1",
+                          "manchas": "#2AA33F", "tenis": "#FFD23F"})
+FIFI = MonstroLook(body="#FF6FB1", belly="#FFD3E7", feet="#2E9BFF", olhos=2, chifres="#FFFFFF", cheek="#FF3D8E",          # rosa: peluda
+                   extra={"pelagem": "#E8488F", "sobrancelha": True, "presas_grandes": True, "garras": True, "cauda": "#FFFFFF",
+                          "tenis": "#FFFFFF"})
+ZUZU = MonstroLook(body="#FF8A2B", belly="#FFD7AE", feet="#2E9BFF", olhos=2, cheek="#FF5A7A",                              # laranja: chifre único
+                   extra={"chifre_unico": "#FFE14D", "iris": "#9BFF5A", "sobrancelha": True, "serrinha": True, "garras": True,
+                          "cauda": "#FFE14D", "manchas": "#E8661A", "tenis": "#FFFFFF"})
+NHOC = MonstroLook(body="#F2384E", belly="#FFB8C2", feet="#2A1630", olhos=2, cheek="#FF8FA0",                              # vermelho: bocão e orelhas de morcego
+                   extra={"orelhas": "#FF8FA0", "bocao": True, "presas_grandes": True, "sobrancelha": True, "garras": True,
+                          "cauda": "#2A1630", "manchas": "#C81F38", "tenis": "#FFD23F"})
