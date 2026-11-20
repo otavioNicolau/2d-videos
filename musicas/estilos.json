@@ -47,7 +47,7 @@
   "nota_batida": "18/11/2026: na referência cada batida soa idêntica (semelhança 0,95–0,98: ritmo pronto de teclado arranjador, um loop simples a música inteira); nas nossas 0,66–0,87 (bateria 'tocada', com viradas e percussão variando). Usuário: 'batidas como se fosse bateria, bumbo, algo feito no teclado, pra dar ritmo'.",
   "abertura": "Brazilian arranger keyboard kids song (teclado arranjador), one simple keyboard drum loop",
   "nota_ajustes_14": "18/11/2026 (take v2 da 14): baixo fraco (5,6 % × 11 % da referência) → 'deep bouncy keyboard bass'; voz larga (0,17 × 0,01) → 'dry centered vocal' e Exclude 'vocal reverb, echo'; tirado 'repeated chorus' do Exclude (o bloco repete de propósito); Exclude sem termos repetidos.",
-  "versao": "E12",
+  "versao": "E13",
   "historico": [
    {
     "versao": "E1",
@@ -136,11 +136,18 @@
     "mudanca": "TRIO: só saxofone, bateria (kit) e teclado (baixo + piano); sax na abertura, entre as frases, antes de cada refrão e nos intervalos; ritmo da música entra só como 'groove' (sem os instrumentos/percussão próprios do ritmo); Exclude com todos os outros instrumentos (guitarra, metais, cordas, apito, percussão, efeitos…); bateria de kit liberada (sai 'live drums/acoustic drums' do Exclude) · ordem do usuário: bateria FORTE > teclado PISADINHA > sax em 3º (abertura, antes do refrão, intervalos) · ordem final do usuário: TECLADO 1º > BATERIA 2º > SAX 3º · sax ainda menor (só intervalos, bem baixo) e teclado mais alto e AGUDO (melodia no registro alto) · da 25 em diante: riff curto de teclado respondendo cada verso cantado (tram tram tram-ram)",
     "motivo": "usuário: com sax, bateria e teclado a música do Animadinhos fica animada e viciante; teste 'apenas eles'",
     "usado_em": "21 em diante (teste)"
+   },
+   {
+    "versao": "E13",
+    "data": "20/11/2026",
+    "mudanca": "E12 com a bateria do trio = loop ELETRÔNICO do teclado (drum machine, a mesma batida a música toda, sem baterista ao vivo); 'live drums' e 'acoustic drums' de volta ao Exclude",
+    "motivo": "26 Gelatina (reggae 96) nota 4,7, usuário: 'está sem batida viciante'; medido bateria de banda 0,046 (21–25: ~0,015) e loop 0,738 (o menor)",
+    "usado_em": "27 em diante"
    }
   ],
   "versao_por_voz": {
-   "laurinha": "E12",
-   "luisinho": "E12"
+   "laurinha": "E13",
+   "luisinho": "E13"
   },
   "nota_sincope": "19/11/2026 (usuário: 'focar nas batidas do som contagiante'): raio-x da bateria (scripts/referencias/batida.py) — referência síncope 0,69 e bumbo reto 0,50; nossas 0,56 e 0,67. A nota de ouvido sobe com a síncope e o baixo fora do tempo (14: 0,39→nota 3 … 18: 0,72 e baixo 0,90→nota 4,6). A 19 v1 (rock com 'punk-rock drumming, driving kick') saiu reta: 0,41.",
   "nota_loop": "19/11/2026 (usuário ouvindo a 19 v2): 'Animadinhos são ritmos e batidas que não mudam muito durante a música; a nossa está ficando ainda estilo banda'. Medido: loop igual referência 0,96 × 19 v1 0,84 × 19 v2 0,75; outros instrumentos 9 % × 20 %. E8: um loop sincopado só, sem virada entre as partes, mesma batida no verso e no refrão, sem solo/quebra.",
@@ -162,7 +169,7 @@
   "trio": {
    "ativo": true,
    "abertura": "kids song played by ONLY three instruments: keyboard first, drums second, saxophone third",
-   "producao": "keyboard loud and in front, BRIGHT HIGH-PITCHED: arranger keyboard 'pisadinha' bass and chords on every beat plus a catchy high piano melody, after EVERY sung line a short catchy high keyboard riff answers (tram-tram-tram-ram), strong punchy drums second repeating the same beat, saxophone very soft and rare (only a short riff in the intro and breaks), nothing else, single dry centered lead vocal",
+   "producao": "keyboard loud and in front, BRIGHT HIGH-PITCHED: arranger keyboard 'pisadinha' bass and chords on every beat plus a catchy high piano melody, after EVERY sung line a short catchy high keyboard riff answers (tram-tram-tram-ram), strong punchy ELECTRONIC drums second: the keyboard's own drum-machine loop repeating the exact same beat all song (no live drummer), saxophone very soft and rare (only a short riff in the intro and breaks), nothing else, single dry centered lead vocal",
    "peso_style": "arranger keyboard 'pisadinha' leading the song, pumping bass and chords on every beat (tum-tcha), the same groove in verse and chorus",
    "exclude_extra": [
     "guitar",
@@ -189,11 +196,8 @@
     "harmonica",
     "organ"
    ],
-   "tirar_do_exclude": [
-    "live drums",
-    "acoustic drums"
-   ],
-   "nota": "19/11/2026, usuário: 'quero usar esses 3 instrumentos nas próximas músicas para teste — APENAS ELES' (saxofone, bateria e teclado, como o Animadinhos). · Ajuste do usuário: 'preciso que a bateria seja forte, pra marcar o ritmo, e as pisadinhas do teclado também; o saxofone fica em 3º' → ordem: bateria forte > teclado pisadinha > sax (só abertura, antes do refrão e intervalos). · Nova ordem do usuário (19/11): TECLADO em 1º, BATERIA em 2º, SAX em 3º. · Usuário (19/11): 'reduzir um pouco mais o saxofone e aumentar o teclado com som mais agudo' → sax bem baixo e raro (só abertura/intervalos, fora da abertura da letra), teclado mais alto e agudo. · Usuário (20/11): no Animadinhos cada frase cantada é respondida por um som de teclado bem marcante — 'O Luisinho comprou uma casa! tram tram tramram' — isso deixa a música animada. A partir da 25: Style pede o riff de teclado depois de cada verso e as marcações [Verse]/[Chorus] ganham 'short keyboard riff after each line' (o 'tram tram' não vai na letra para o Suno não cantar).",
+   "tirar_do_exclude": [],
+   "nota": "19/11/2026, usuário: 'quero usar esses 3 instrumentos nas próximas músicas para teste — APENAS ELES' (saxofone, bateria e teclado, como o Animadinhos). · Ajuste do usuário: 'preciso que a bateria seja forte, pra marcar o ritmo, e as pisadinhas do teclado também; o saxofone fica em 3º' → ordem: bateria forte > teclado pisadinha > sax (só abertura, antes do refrão e intervalos). · Nova ordem do usuário (19/11): TECLADO em 1º, BATERIA em 2º, SAX em 3º. · Usuário (19/11): 'reduzir um pouco mais o saxofone e aumentar o teclado com som mais agudo' → sax bem baixo e raro (só abertura/intervalos, fora da abertura da letra), teclado mais alto e agudo. · Usuário (20/11): no Animadinhos cada frase cantada é respondida por um som de teclado bem marcante — 'O Luisinho comprou uma casa! tram tram tramram' — isso deixa a música animada. A partir da 25: Style pede o riff de teclado depois de cada verso e as marcações [Verse]/[Chorus] ganham 'short keyboard riff after each line' (o 'tram tram' não vai na letra para o Suno não cantar). · 20/11 (E13): 26 (reggae) tirou 4,7 — usuário: 'está sem batida viciante'. Medido: 'bateria de banda' 0,046 (o triplo das 21–25, ~0,015) e o loop menos repetido (0,738): o ritmo puxou bateria acústica de banda. A bateria do trio passa a ser o loop ELETRÔNICO do teclado (drum machine, sempre a mesma batida) e 'live drums/acoustic drums' voltam para o Exclude.",
    "intervalo": "[Instrumental Break - {s} seconds, bright high keyboard melody, keyboard pisadinha and strong drums, a soft short sax riff]",
    "intro": "[Intro - bright high keyboard melody, keyboard pisadinha and strong drums]",
    "resposta_teclado": true

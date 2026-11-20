@@ -140,3 +140,11 @@ volta ao E6 + Exclude contra segunda voz. Medido: da 14 à 19 o texto do Style n
 batida igual (0,71–0,80 × 0,96) e teclado reconhecido (0,01–0,03 × 0,067). O usuário quer ajustar NO SUNO (download é
 limitado: 1 take por música) → **E10** = E9 + opções Advanced do Suno v6 no topo do suno.txt (Vocal Gender pela voz,
 Duration Custom 2:40, Weirdness 20 %, Style Influence 80 %, Audio Influence 60 %, Variety mínima, Personalize Off).
+
+**E13** (20/11): 21–25 no trio E12 tiraram 4,8; a **26 Gelatina (reggae 96) tirou 4,7 — "está sem batida viciante"**. O placar
+mostrou a diferença: **bateria de banda 0,046** (21–25: 0,011–0,017, o triplo) e o loop menos repetido (0,738): o reggae
+puxou bateria acústica de banda. E13 = E12 com a bateria do trio sendo **o loop ELETRÔNICO do teclado** (drum machine, a
+mesma batida a música toda, sem baterista ao vivo) e "live drums / acoustic drums" de volta no Exclude. Um ajuste por vez:
+vale da 27 em diante; conferir no placar da 27 se a "bateria de banda" volta para ~0,015 e o loop sobe.
+Também 20/11: o bloco AVISOS do suno.txt ficava DEPOIS do [End] — foi copiado junto e o Suno cantou o aviso no fim da 26
+(cortado do take). Agora os avisos ficam antes da letra e há a marca "FIM DA LETRA — não copie daqui para baixo".

@@ -55,7 +55,7 @@ def test_style_is_built_per_rhythm_without_contradictions():
 
 
 def test_trio_so_sax_bateria_teclado():
-    """E12 (usuário, 19/11: 'APENAS ELES'): o Style pede só sax, bateria e teclado e o Exclude barra o resto."""
+    """E12/E13 (usuário, 19/11: 'APENAS ELES'): o Style pede só sax, bateria e teclado e o Exclude barra o resto."""
     E = c.estilos()
     if not E["canal"].get("trio", {}).get("ativo"):
         return
@@ -63,7 +63,9 @@ def test_trio_so_sax_bateria_teclado():
     s, x = c.style(f), c.exclude(f)
     assert "saxophone" in s and "drums" in s and "keyboard" in s
     assert "whistle" not in s and "surdos" not in s and "guitar" not in s
-    assert "guitar" in x and "whistle" in x and "live drums" not in x
+    assert "guitar" in x and "whistle" in x
+    # E13 (20/11): a bateria é o loop ELETRÔNICO do teclado — bateria de banda (ao vivo/acústica) fica no Exclude
+    assert "drum-machine loop" in s and "live drums" in x and "acoustic drums" in x
 
 
 def test_shortcuts_follow_the_beat_weight():

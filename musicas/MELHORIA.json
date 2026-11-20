@@ -680,5 +680,37 @@
    "teclado/synth reconhecido (baixo)",
    "batida sincopada (contratempo) — o 'contagiante' (baixo)"
   ]
+ },
+ {
+  "musica": "26",
+  "titulo": "Gelatina!",
+  "estilo": "E12",
+  "medidas": {
+   "voz_%": 43.1,
+   "bateria_%": 33.4,
+   "baixo_%": 4.2,
+   "outros_%": 19.3,
+   "largura_voz": 0.1,
+   "batidas_identicas": 0.738,
+   "duracao_s": 151.9,
+   "teclado_eletronico": 0.031,
+   "bateria_banda": 0.046,
+   "percussao": 0.024,
+   "metais": 0.023,
+   "sincope": 0.52,
+   "baixo_sincopado": 0.52
+  },
+  "acertos": "5/12",
+  "nota": 4.7,
+  "obs": "reggae 96 (take cortado 2:32, sem o aviso cantado); usuário: 'está sem batida viciante'",
+  "falhas": [
+   "baixo no som (%) (baixo)",
+   "outros instrumentos (%) (alto)",
+   "largura da voz (0 = uma voz no centro) (alto)",
+   "batida de teclado (loop igual) (baixo)",
+   "teclado/synth reconhecido (baixo)",
+   "bateria de banda reconhecida (alto)",
+   "batida sincopada (contratempo) — o 'contagiante' (baixo)"
+  ]
  }
 ]
