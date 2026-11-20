@@ -243,6 +243,10 @@ gerar 2 a 4, medir, ouvir e decidir.
 | 7 | **Ouvir e escolher** (decisão humana; nunca a primeira automaticamente) | `toonstudio musica escolher <música> <versão>` |
 | 8 | **Clipe:** importar, analisar, cenas a partir da ficha, com a [BIBLIA_VISUAL.md](../BIBLIA_VISUAL.md) | `toonstudio song import` / `song analyze` |
 
+**Proibido cortar música (usuário, 20/11/2026: "quebra o ritmo").** O clipe usa o take do Suno inteiro, no tamanho
+original — sem aparar o fim, sem tirar trecho, sem emendar. Take longo, com aviso cantado ou sobra: corrigir a letra /
+`suno.txt` e gerar de novo no Suno. `song import` recusa arquivos editados/cortados.
+
 `<música>` aceita o nome da pasta, o número (`03`) ou parte do nome (`lagoa`). A estimativa de duração da checagem é
 grosseira; a duração real vem da medição.
 

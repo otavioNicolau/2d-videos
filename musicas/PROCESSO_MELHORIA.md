@@ -156,3 +156,8 @@ com 3:26; foi cortada no compasso para 2:50. As letras 28–49 foram corrigidas 
 **20/11 — E13 confirmado:** 27 = 4,8 e 28 = 4,9 (maior nota do canal). A bateria de banda caiu para ~0,015–0,019 (era 0,046
 na 26 = 4,7). A 28 tem o contratempo mais alto desde a 21 (0,74) e o baixo no contratempo 0,56; a voz baixa/larga do placar
 (25,5% / 0,20) NÃO pesou no ouvido. Manter o E13 sem mexer até cair a nota (um ajuste por vez).
+
+**REGRA 20/11 — PROIBIDO CORTAR MÚSICA** (pedido do usuário: "quebra o ritmo; temos que montar o vídeo no tamanho original").
+O vídeo usa SEMPRE o take do Suno inteiro, sem aparar nem emendar (nem a sobra do fim). Take longo, com aviso cantado ou
+sobra → a correção é na letra / suno.txt e gerar de novo no Suno. `song import` recusa arquivos editados/cortados.
+(Algumas já publicadas — 25 a 28, entre outras — usaram take cortado; ficam como estão.)

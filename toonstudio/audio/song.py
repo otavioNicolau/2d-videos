@@ -6,6 +6,7 @@ Não presume perfeição: seções e tempos da letra são sugestões; o arquivo 
 from __future__ import annotations
 
 import json
+import re
 import shutil
 import subprocess
 import tempfile
@@ -27,7 +28,12 @@ def _md5(p: Path) -> str:
 
 
 def import_song(src: Path, project_dir: Path) -> dict:
-    """Copia o original (somente leitura) e cria a cópia de trabalho WAV. O original nunca é modificado."""
+    """Copia o original (somente leitura) e cria a cópia de trabalho WAV. O original nunca é modificado.
+    Regra do canal (usuário, 20/11/2026): É PROIBIDO CORTAR MÚSICA — "quebra o ritmo"; o vídeo é montado com o take
+    inteiro, no tamanho original. Versões editadas/cortadas são recusadas aqui."""
+    if re.search(r"editad|cortad|aparad|trim|_cut", src.name, re.I):
+        raise StudioError(f"{src.name}: música cortada/editada não entra no vídeo (regra do canal, 20/11/2026: proibido "
+                          "cortar música — monte com o take original, no tamanho original)")
     mdir = project_dir / "musica"
     mdir.mkdir(parents=True, exist_ok=True)
     orig = mdir / ("original" + src.suffix.lower())

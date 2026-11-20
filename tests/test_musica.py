@@ -484,3 +484,15 @@ def test_limpeza_mantem_build_so_das_3_musicas_mais_recentes(tmp_path):
     assert all((d / "output" / "video.mp4").exists() for d in velhos)
     assert (sem_mp4 / "build").exists()
     assert all((d / "build").exists() for d in novos)
+
+
+def test_proibido_importar_musica_cortada(tmp_path):
+    """Regra do canal (20/11/2026): proibido cortar música — o vídeo usa o take inteiro."""
+    import pytest
+    from toonstudio.audio.song import import_song
+    from toonstudio.core.config import StudioError
+    for nome in ("v1_editada.wav", "Música (v1 cortada 2m50).wav"):
+        f = tmp_path / nome
+        f.write_bytes(b"RIFF")
+        with pytest.raises(StudioError):
+            import_song(f, tmp_path / "proj")
