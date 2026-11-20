@@ -445,3 +445,16 @@ def test_efeitos_sonoros_desligados_na_config_nao_entram(tmp_path, monkeypatch):
     assert _efeitos_sonoros(tmp_path, wav, 0.0) == 0
     assert np.abs(sf.read(wav)[0]).max() == 0
 
+
+
+def test_suno_txt_has_nothing_after_the_lyrics_end():
+    """26 (20/11): o bloco AVISOS vinha depois do [End]; o usuário copiou 'até o fim da letra' e o Suno CANTOU o aviso."""
+    from toonstudio.audio import composer
+    p = {"titulo": "T", "ritmo": "R", "bpm": 96, "persona": "P", "voz": "laurinha", "style": "s", "style_curto": "c",
+         "exclude": "e", "lyrics": "[Verse]\nLá lá\n[End]\n", "avisos": ["andamento 96 fora da faixa"], "alternativas": []}
+    t = composer.texto_suno(p)
+    fim = t.rindex("[End]")
+    depois = t[fim + len("[End]"):]
+    assert "andamento" not in depois and "AVISOS" not in depois
+    assert t.index("AVISOS") < t.index("LYRICS")
+    assert depois.strip().startswith("=") and "não copie" in depois

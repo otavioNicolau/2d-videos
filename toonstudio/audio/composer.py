@@ -279,9 +279,11 @@ def texto_suno(p: dict) -> str:
         "EXCLUDE:",
         p["exclude"],
         "",
-        f"LYRICS ({len(p['lyrics'].rstrip())} de {LIMITE_LETRA} caracteres no Suno; apague o campo e cole só daqui até o fim da letra):",
+        f"LYRICS ({len(p['lyrics'].rstrip())} de {LIMITE_LETRA} caracteres no Suno; apague o campo e cole só daqui até o [End]):",
         "",
         p["lyrics"].rstrip(),
+        "",
+        "=" * 30 + " FIM DA LETRA — não copie daqui para baixo " + "=" * 30,
     ]
     for a in []:                                       # E10 (19/11): alternativas de ritmo fora do suno.txt (confundiam na hora de colar)
         blocos += ["", "=" * 68, f"ALTERNATIVA DE RITMO: {a['ritmo']} · {a['bpm']} BPM (mesma letra)", "=" * 68,
@@ -289,8 +291,9 @@ def texto_suno(p: dict) -> str:
         if a["lyrics"] != p["lyrics"]:
             blocos += ["", f"LYRICS (marcações ajustadas para este ritmo; {len(a['lyrics'].rstrip())} de {LIMITE_LETRA} caracteres):", "",
                        a["lyrics"].rstrip()]
-    if p["avisos"]:
-        blocos += ["", "AVISOS:"] + [f"- {x}" for x in p["avisos"]]
+    if p["avisos"]:                                    # 20/11: os avisos ficam ANTES da letra — depois do [End] o usuário copiou
+        i = blocos.index(next(b for b in blocos if b.startswith("STYLE OF MUSIC")))   # junto e o Suno CANTOU o aviso (26)
+        blocos[i:i] = ["AVISOS (para conferir — NÃO vão para o Suno):"] + [f"- {x}" for x in p["avisos"]] + [""]
     head = "GERADO por `toonstudio musica prompt` a partir de ficha.json + letra.txt — não edite aqui; edite a ficha/letra."
     return head + "\n\n" + "\n".join(blocos) + "\n"
 

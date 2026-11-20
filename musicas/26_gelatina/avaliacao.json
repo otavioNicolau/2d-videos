@@ -1,0 +1,68 @@
+{
+ "schema": "avaliacao-1.0",
+ "versoes": {
+  "v1": {
+   "arquivo": "v1.wav",
+   "duracao": 169.6,
+   "bpm": 101.3,
+   "bpm_nota": "leitura 152 ajustada ×0.666667",
+   "tom": "Sol menor",
+   "voz_inicio": 2.1,
+   "refrao_inicio": 86.5,
+   "cantado": 67,
+   "intervalos": [
+    [
+     10.7,
+     5.7
+    ],
+    [
+     48.2,
+     13.0
+    ],
+    [
+     105.8,
+     11.8
+    ],
+    [
+     130.6,
+     6.7
+    ],
+    [
+     153.0,
+     2.8
+    ],
+    [
+     160.9,
+     2.9
+    ]
+   ],
+   "fim_depois_da_voz": 5.4,
+   "final": "esmaecendo",
+   "silencio_final": 0.0,
+   "acerto": 55,
+   "nao_reconhecidas": [
+    "luisinho",
+    "tremelicar",
+    "turminha",
+    "joinha"
+   ],
+   "pontos_a_conferir": [
+    "andamento 101 fora da faixa do Reggae infantil (78–95)",
+    "gancho só aparece em 86.5 s (referência ~35 s)",
+    "só 55% da letra reconhecida — ouvir a pronúncia",
+    "tom menor (o canal é sempre em tom maior)"
+   ]
+  }
+ },
+ "ouvido": {
+  "v1": {
+   "1 começo chama atenção": null,
+   "5 melodia combina com a letra": null,
+   "6 dá vontade de dançar": null,
+   "7 pronúncia natural": null,
+   "8 tem a cara do canal": null,
+   "9 nenhum trecho cansativo": null
+  }
+ },
+ "escolhida": null
+}
