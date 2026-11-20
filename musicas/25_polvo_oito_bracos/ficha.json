@@ -58,10 +58,100 @@
  "youtube": {
   "resumo": "OITO BRAÇOS! 🐙 Lá no fundo do mar mora um polvo que nunca fica parado: com um braço toca tambor, com outro come pão, com outro penteia o cabelo… e com os outros? Confusão! E o abraço de polvo, ninguém escapa!",
   "resumo_short": "POLVO DE OITO BRAÇOS! 🐙 Conta até oito com a Laurinha e o Luisinho!",
-  "curiosidade": "O polvo tem três corações e muda de cor para se esconder"
+  "curiosidade": "O polvo tem três corações e muda de cor para se esconder",
+  "miniatura": "OITO\\nBRAÇOS!",
+  "miniatura_cena": {
+   "fundo": "faixas",
+   "cores": [
+    [
+     95,
+     211,
+     224
+    ],
+    [
+     255,
+     127,
+     168
+    ],
+    [
+     255,
+     210,
+     63
+    ],
+    [
+     72,
+     190,
+     220
+    ],
+    [
+     185,
+     140,
+     255
+    ]
+   ],
+   "heroi": {
+    "id": "luisinho",
+    "pose": {
+     "turn": 0.2,
+     "mouth": "D",
+     "hand_n_x": -135,
+     "hand_n_y": -135,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3
+    }
+   },
+   "par": {
+    "id": "laurinha",
+    "pose": {
+     "turn": -0.2,
+     "mouth": "D",
+     "hand_n_x": -135,
+     "hand_n_y": -135,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3
+    }
+   },
+   "objetos": [
+    {
+     "id": "peixinho",
+     "pose": {
+      "lado": 1
+     },
+     "tam": 170,
+     "x": 150,
+     "base": 330
+    }
+   ],
+   "frente": [
+    {
+     "id": "polvo",
+     "pose": {
+      "tchau": 1,
+      "boca": 0.8,
+      "onda": 0.2
+     },
+     "tam": 520,
+     "x": 760,
+     "base": 740
+    }
+   ]
+  }
  },
  "persona": "luisinho",
  "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz)",
  "ritmo_antes": "batucada",
- "nota_ritmo": "20/11/2026: batucada → funk infantil (no E12 a batucada puxaria percussão; as notas 4,8 vieram de funk, piseiro e xote)"
+ "nota_ritmo": "20/11/2026: batucada → funk infantil (no E12 a batucada puxaria percussão; as notas 4,8 vieram de funk, piseiro e xote)",
+ "playlists": [
+  "Músicas Infantis da Laurinha e do Luisinho 🐝",
+  "Músicas de Bichos 🐸🐜🐑🐧",
+  "Aprender Brincando 🌈🔢"
+ ]
 }

@@ -516,6 +516,53 @@ def mar_gelado(rng) -> tuple[skia.Surface, int]:
     return s, w
 
 
+def fundo_mar(rng) -> tuple[skia.Surface, int]:
+    """Fundo do mar tropical (25, Polvo de Oito Braços): água turquesa em faixas, raios de sol vindos de cima, bolhinhas,
+    corais coloridos (rosa, laranja, roxo), algas balançando, areia clarinha com conchas e estrelas-do-mar, e a TOCA do
+    polvo (pedra redonda com entrada escura) à esquerda."""
+    w = W_INT
+    s, c = _surf(w, H, 1.5)
+    F = Flat(c)
+    c.drawRect(skia.Rect(0, 0, w, H), skia.Paint(Color4f=skia.Color4f(*_rgba("#5FD3E0"))))
+    for y0, col in ((300, "#4CC6D8"), (560, "#3BB5CF"), (790, "#30A6C4")):
+        F.shape([(-20, y0), (w * 0.5, y0 + 30), (w + 20, y0 - 20), (w + 20, H + 20), (-20, H + 20)], col)
+    for x in (250, 850, 1450, 2050):                                                              # raios de sol
+        c.drawPath(skia.Path.Polygon([skia.Point(x, 0), skia.Point(x + 140, 0), skia.Point(x + 380, H), skia.Point(x + 200, H)], True),
+                   skia.Paint(AntiAlias=True, Color4f=skia.Color4f(*_rgba("#FFFFFF", 0.12))))
+    for _ in range(45):                                                                           # bolhinhas
+        x, y, r = rng.uniform(0, w), rng.uniform(60, 820), rng.uniform(6, 16)
+        c.drawCircle(x, y, r, skia.Paint(AntiAlias=True, Color4f=skia.Color4f(*_rgba("#E6FBFF", 0.8)), Style=skia.Paint.kStroke_Style,
+                                         StrokeWidth=3))
+    F.shape([(-20, 820), (w * 0.3, 800), (w * 0.7, 830), (w + 20, 805), (w + 20, H + 20), (-20, H + 20)], "#F6E2A8")   # areia
+    F.shape([(-20, 760), (120, 520), (330, 470), (520, 560), (600, 830), (-20, 840)], "#8E9BB5")                     # toca (pedra)
+    F.oval(330, 720, 120, 110, "#3E4A66")
+    F.oval(250, 560, 60, 30, "#A7B3CB")
+    for x, h, col in ((820, 260, "#FF7FA8"), (1980, 300, "#FF9F45"), (2400, 220, "#B98CFF"), (1180, 180, "#FF7FA8")):    # corais
+        F.line([(x, 830), (x, 830 - h)], col, w=LINE * 5)
+        for d, hh in ((-1, 0.55), (1, 0.4), (-1, 0.25)):
+            yb = 830 - h * hh
+            F.line([(x, yb), (x + d * 70, yb - 60), (x + d * 80, yb - 120)], col, w=LINE * 4)
+        for d in (-1, 1):
+            F.oval(x + d * 80, 830 - h * 0.55 - 125, 20, 20, col)
+        F.oval(x, 830 - h - 10, 22, 22, col)
+    for x in range(120, w, 300):                                                                  # algas
+        h = 200 + (x * 7) % 160
+        F.shape([(x - 16, 840), (x - 40, 840 - h * 0.4), (x - 5, 840 - h * 0.7), (x - 30, 840 - h), (x + 20, 840 - h * 0.65),
+                 (x + 30, 840 - h * 0.3), (x + 16, 840)], "#3DBE7A")
+    for j in range(16):                                                                           # conchas e estrelas na areia
+        x, y = (j * 211 + 90) % w, 880 + (j * 53) % 170
+        if j % 2 == 0:
+            pts = []
+            for i in range(10):
+                r = 24 if i % 2 == 0 else 10
+                a = -math.pi / 2 + i * math.pi / 5
+                pts.append((x + math.cos(a) * r, y + math.sin(a) * r))
+            F.shape(pts, "#FF8A5C" if j % 4 == 0 else "#FFC94A", smooth=False)
+        else:
+            F.oval(x, y, 16, 12, "#FFC1D6")
+    return s, w
+
+
 def praia(rng) -> tuple[skia.Surface, int]:
     """Praia de férias vista de pertinho: céu de verão, mar com ondinhas, areia dourada com conchinhas e estrelas-do-mar,
     guarda-sol listrado ao fundo (castelo, siri e onda são props)."""
@@ -632,7 +679,7 @@ def oficina(rng) -> tuple[skia.Surface, int]:
 
 SCENES = {"plano_banheiro": banheiro, "plano_quarto_rosa": lambda rng: quarto("rosa", rng), "plano_quarto_azul": lambda rng: quarto("azul", rng),
           "plano_cozinha": cozinha, "plano_casa_frente": casa_frente, "plano_escola": escola, "plano_ceu": ceu,
-          "plano_jardim": jardim, "plano_lagoa": lagoa, "plano_sala": sala, "plano_espaco": espaco, "plano_lua": lua_chao, "plano_campo": campo, "plano_gelo": gelo, "plano_mar_gelado": mar_gelado, "plano_praia": praia, "plano_salao": salao, "plano_oficina": oficina}
+          "plano_jardim": jardim, "plano_lagoa": lagoa, "plano_sala": sala, "plano_espaco": espaco, "plano_lua": lua_chao, "plano_campo": campo, "plano_gelo": gelo, "plano_mar_gelado": mar_gelado, "plano_praia": praia, "plano_fundo_mar": fundo_mar, "plano_salao": salao, "plano_oficina": oficina}
 
 
 def build(bg_id: str, out_dir: Path, scale: float = 1.5, seed: int = 11) -> dict:

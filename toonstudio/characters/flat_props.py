@@ -2956,3 +2956,134 @@ class Tabuleiro(_Prop):
 
 PROPS.update({"pao_queijo": PaoQueijo, "tabuleiro": Tabuleiro})
 PROPS.update({"bateria_show": BateriaShow})
+
+
+class Polvo(_Prop):
+    """Polvo de Oito Braços (25): cabeção redondo rosa com topetinho, olhões e bochechas, 8 braços grossos com ventosas.
+    Canais: `onda` fase contínua (os braços ondulam), `agita` 0→1 CONFUSÃO (os braços mexem para todo lado), `conta`
+    0→8 braços levantados um a um (ponte: um, dois…), `abraco` 0→1 os braços se cruzam na frente (abraço de polvo),
+    `tambor`/`pao`/`pente` 0/1 cada um num braço (toca tambor, come pão, penteia o topete), `tchau` 0→1 todos os braços
+    acenando, `cor` 0→1 muda de cor (o polvo muda de cor para se esconder), `boca` 0→1, `lid` piscar."""
+
+    def __init__(self):
+        super().__init__("polvo", "Polvo", (1400, 1200), (700, 1150), 460,
+                         {"onda": 0.0, "agita": 0.0, "conta": 0.0, "abraco": 0.0, "tambor": 0.0, "pao": 0.0, "pente": 0.0,
+                          "tchau": 0.0, "cor": 0.0, "boca": 0.0, "lid": 0.0})
+
+    @staticmethod
+    def _braco(k, x0, y0, head, curl, L, cor, linha, ventosa, onda, ag, i):
+        pts, N = [(x0, y0)], 16
+        h = head
+        for j in range(1, N + 1):
+            s = j / N
+            h = head + curl * s * s + (0.28 + 0.9 * ag) * s * math.sin(2 * math.pi * onda + s * 3.2 + i * 1.7)
+            x, y = pts[-1]
+            pts.append((x + math.cos(h) * L / N, y + math.sin(h) * L / N))
+        lado_a, lado_b = [], []
+        for j, (x, y) in enumerate(pts):
+            s = j / N
+            r = 34 * (1 - s) + 8 * s
+            if j < N:
+                dx, dy = pts[j + 1][0] - x, pts[j + 1][1] - y
+            else:
+                dx, dy = x - pts[j - 1][0], y - pts[j - 1][1]
+            n_ = math.hypot(dx, dy) or 1
+            nx, ny = -dy / n_, dx / n_
+            lado_a.append((x + nx * r, y + ny * r))
+            lado_b.append((x - nx * r, y - ny * r))
+        shape(k, lado_a + lado_b[::-1], cor, line=linha)
+        for j in range(2, N - 1, 2):                                       # ventosas (bolinhas claras de um lado)
+            s = j / N
+            r = 34 * (1 - s) + 8 * s
+            x, y = pts[j]
+            dx, dy = pts[j + 1][0] - x, pts[j + 1][1] - y
+            n_ = math.hypot(dx, dy) or 1
+            k.shape(ellipse_pts(x - dy / n_ * r * 0.45, y + dx / n_ * r * 0.45, r * 0.32, r * 0.32, 0, 10), fill=_rgba(ventosa), line=0)
+        return pts[-1], h
+
+    def paint(self, k, P):
+        cor = _mix("#F27BAE", "#6FCF7A", P["cor"])
+        linha = dark(cor, 0.62)
+        ventosa = _mix("#FFD1E3", "#C9F2CC", P["cor"])
+        on, ag = P["onda"], max(0.0, min(1.0, P["agita"]))
+        conta, ab, tc = max(0.0, min(8.0, P["conta"])), max(0.0, min(1.0, P["abraco"])), max(0.0, min(1.0, P["tchau"]))
+        cx, cy = 0.0, -640.0                                               # centro da cabeça
+        pontas, na_frente = {}, []
+        ordem = (0, 7, 1, 6, 2, 5, 3, 4)                                   # desenha de fora para dentro
+        for i in ordem:
+            u = (i - 3.5) / 3.5                                            # −1 (esquerda) … +1 (direita)
+            x0, y0 = cx + u * 150, cy + 200
+            head = math.pi / 2 - u * 1.15                                  # em leque, para baixo e para os lados
+            curl = 1.3 * (1 if u < 0 else -1) * (0.4 + 0.6 * abs(u))       # pontinha enrola para fora
+            L = 380
+            sobe = max(0.0, min(1.0, conta - [3, 4, 2, 5, 1, 6, 0, 7].index(i)))   # contagem: de dentro para fora? não: 1º = braço 3
+            sobe = max(sobe, tc)
+            lado = 1 if u > 0 else -1
+            if sobe > 0:                                                   # braço levantado (contagem / tchau): sai do lado da cabeça
+                alvo = -math.pi / 2 + lado * (0.2 + 1.05 * abs(u))         # em leque: os de dentro mais para cima
+                head = head + (alvo - head) * sobe
+                curl = curl * (1 - sobe) + (0.5 * lado) * sobe
+                bx, by = cx + lado * (205 - 25 * abs(u)), cy + 110 + 60 * abs(u)   # nasce na borda da cabeça
+                x0, y0 = x0 + (bx - x0) * sobe, y0 + (by - y0) * sobe
+                L = L * (1 - 0.15 * sobe)
+            if ab > 0:                                                     # abraço: os braços cruzam a frente do corpo
+                alvo = (-0.25 if u < 0 else math.pi + 0.25)
+                head = head + (alvo - head) * ab
+                curl = curl * (1 - ab) + (0.9 if u < 0 else -0.9) * ab
+                L = L * (1 - 0.15 * ab)
+            if P["tambor"] > 0.5 and i == 0:
+                head, curl = math.pi * 0.95, -0.4
+            if P["pao"] > 0.5 and i == 7:
+                head, curl = -0.35, -1.6
+            if P["pente"] > 0.5 and i == 6:
+                head, curl = -math.pi / 2 + 0.1, -2.6
+            if ab > 0.5 and i in (2, 3, 4, 5):
+                continue                                                   # os do meio ficam atrás (desenhados depois da cabeça)
+            if sobe > 0.3:
+                na_frente.append((i, x0, y0, head, curl, L))               # levantado: desenhado POR CIMA da cabeça
+                continue
+            pontas[i] = self._braco(k, x0, y0, head, curl, L, cor, linha, ventosa, on, ag, i)
+        shape(k, ellipse_pts(cx, cy, 240, 255, 0, 40), cor, line=linha)                       # cabeça
+        shape(k, ellipse_pts(cx - 80, cy - 120, 70, 40, -0.5, 20), _mix(cor, "#FFFFFF", 0.35))  # brilho
+        for dx, h_ in ((-22, 70), (0, 90), (24, 66)):                                        # topetinho
+            ln(k, [(cx + dx, cy - 245), (cx + dx * 1.6, cy - 245 - h_ * 0.6), (cx + dx * 0.4, cy - 245 - h_)], linha, w=LINE * 1.3)
+        for s_ in (-1, 1):                                                                    # olhões
+            ex, ey = cx + s_ * 82, cy - 10
+            if P["lid"] > 0.5:
+                ln(k, [(ex - 36, ey), (ex, ey - 22), (ex + 36, ey)], "#2B2B3A", w=LINE * 1.3)
+            else:
+                shape(k, ellipse_pts(ex, ey, 44, 54, 0, 22), "#FFFFFF", line=linha)
+                k.dot(ex + 6 + 8 * math.sin(2 * math.pi * on * 0.5) * ag, ey + 10, 22, _rgba("#2B2B3A"))
+                k.dot(ex + 14, ey - 2, 7, _rgba("#FFFFFF"))
+            k.shape(ellipse_pts(cx + s_ * 150, cy + 70, 34, 22, 0, 14), fill=_rgba("#FF6F91", 0.55), line=0)
+        b = max(0.0, min(1.0, P["boca"]))
+        if b < 0.15:
+            ln(k, [(cx - 50, cy + 82), (cx, cy + 118), (cx + 50, cy + 82)], "#8A2E2E", w=LINE * 1.3)
+        else:
+            shape(k, [(cx - 58, cy + 78), (cx + 58, cy + 78), (cx + 30, cy + 90 + 70 * b), (cx - 30, cy + 90 + 70 * b)], "#8A2E2E",
+                  line=linha)
+            shape(k, ellipse_pts(cx, cy + 92 + 52 * b, 24, 12 * b + 4, 0, 12), "#FF8FA8")
+        for i, x0, y0, head, curl, L in na_frente:
+            pontas[i] = self._braco(k, x0, y0, head, curl, L, cor, linha, ventosa, on, 0.15 + ag, i)
+        if ab > 0.5:                                                       # abraço: braços do meio por cima da barriga
+            for i in (2, 5, 3, 4):
+                u = (i - 3.5) / 3.5
+                pontas[i] = self._braco(k, cx + u * 150, cy + 200, (-0.25 if u < 0 else math.pi + 0.25), (0.9 if u < 0 else -0.9),
+                                        330, cor, linha, ventosa, on, ag, i)
+        if P["tambor"] > 0.5 and 0 in pontas:                              # tamborzinho na ponta do braço 0
+            (tx, ty), _ = pontas[0]
+            box(k, tx - 70, ty - 40, tx + 70, ty + 40, "#E9545D", line="#B83A42", r=12)
+            shape(k, ellipse_pts(tx, ty - 40, 70, 16, 0, 20), "#FFF6E8", line="#E0C9A6")
+            for dx in (-40, 0, 40):
+                ln(k, [(tx + dx, ty - 30), (tx + dx + 20, ty + 34)], "#FFD23F", w=LINE)
+        if P["pao"] > 0.5 and 7 in pontas:
+            (tx, ty), _ = pontas[7]
+            _paozinho(k, tx, ty, 0.9, 1.0)
+        if P["pente"] > 0.5 and 6 in pontas:
+            (tx, ty), _ = pontas[6]
+            box(k, tx - 60, ty - 12, tx + 60, ty + 12, "#3C8BF0", line="#2A64B8", r=6)
+            for j in range(9):
+                ln(k, [(tx - 52 + j * 13, ty + 10), (tx - 52 + j * 13, ty + 34)], "#3C8BF0", w=LINE * 0.9)
+
+
+PROPS.update({"polvo": Polvo})

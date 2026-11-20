@@ -1,0 +1,22 @@
+{
+  "id": "plano_fundo_mar",
+  "name": "Plano — fundo mar",
+  "width": 2600,
+  "height": 1080,
+  "scale": 1.5,
+  "landmarks": {
+    "ground_y": 930,
+    "floor_y": 760
+  },
+  "estilo": "BIBLIA_VISUAL.md",
+  "layers": [
+    {
+      "name": "MG_cena",
+      "file": "MG_cena.png",
+      "parallax": 1.0,
+      "z": -20,
+      "width": 2600,
+      "height": 1080
+    }
+  ]
+}
