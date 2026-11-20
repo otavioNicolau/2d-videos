@@ -148,3 +148,7 @@ mesma batida a música toda, sem baterista ao vivo) e "live drums / acoustic dru
 vale da 27 em diante; conferir no placar da 27 se a "bateria de banda" volta para ~0,015 e o loop sobe.
 Também 20/11: o bloco AVISOS do suno.txt ficava DEPOIS do [End] — foi copiado junto e o Suno cantou o aviso no fim da 26
 (cortado do take). Agora os avisos ficam antes da letra e há a marca "FIM DA LETRA — não copie daqui para baixo".
+
+**Lição 20/11 (27):** antes de passar um `suno.txt` ao usuário, conferir se a LETRA está no formato do trio: 1 ponte só,
+nenhum refrão "faster", intro só com teclado/sax/bateria. A 27 foi gerada com a letra antiga (2 pontes + "faster") e saiu
+com 3:26; foi cortada no compasso para 2:50. As letras 28–49 foram corrigidas em lote (`scripts/lotes/formato_trio.py`).
