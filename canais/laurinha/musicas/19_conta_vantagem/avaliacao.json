@@ -1,0 +1,98 @@
+{
+ "schema": "avaliacao-1.0",
+ "versoes": {
+  "v1": {
+   "arquivo": "v1.wav",
+   "duracao": 154.8,
+   "bpm": 166.7,
+   "bpm_nota": "leitura 83 ajustada ×2",
+   "tom": "Sol maior",
+   "voz_inicio": 0.4,
+   "refrao_inicio": null,
+   "cantado": 76,
+   "intervalos": [
+    [
+     40.4,
+     11.5
+    ],
+    [
+     89.5,
+     11.5
+    ]
+   ],
+   "fim_depois_da_voz": 4.5,
+   "final": "corte seco",
+   "silencio_final": 2.5,
+   "acerto": 72,
+   "nao_reconhecidas": [
+    "mentirinha",
+    "baratinha",
+    "luisinho",
+    "contar",
+    "caixinha"
+   ],
+   "pontos_a_conferir": [
+    "o gancho não foi reconhecido na transcrição",
+    "só 72% da letra reconhecida — ouvir a pronúncia"
+   ]
+  },
+  "v2": {
+   "arquivo": "v2.wav",
+   "duracao": 166.2,
+   "bpm": 172.3,
+   "bpm_nota": "",
+   "tom": "Sol maior",
+   "voz_inicio": 2.3,
+   "refrao_inicio": 78.7,
+   "cantado": 71,
+   "intervalos": [
+    [
+     42.6,
+     11.0
+    ],
+    [
+     96.2,
+     7.4
+    ],
+    [
+     135.3,
+     12.4
+    ],
+    [
+     158.4,
+     2.6
+    ]
+   ],
+   "fim_depois_da_voz": 1.9,
+   "final": "esmaecendo",
+   "silencio_final": 0.7,
+   "acerto": 44,
+   "nao_reconhecidas": [
+    "luisinho"
+   ],
+   "pontos_a_conferir": [
+    "gancho só aparece em 78.7 s (referência ~35 s)",
+    "só 44% da letra reconhecida — ouvir a pronúncia"
+   ]
+  }
+ },
+ "ouvido": {
+  "v1": {
+   "1 começo chama atenção": null,
+   "5 melodia combina com a letra": null,
+   "6 dá vontade de dançar": null,
+   "7 pronúncia natural": null,
+   "8 tem a cara do canal": null,
+   "9 nenhum trecho cansativo": null
+  },
+  "v2": {
+   "1 começo chama atenção": null,
+   "5 melodia combina com a letra": null,
+   "6 dá vontade de dançar": null,
+   "7 pronúncia natural": null,
+   "8 tem a cara do canal": null,
+   "9 nenhum trecho cansativo": null
+  }
+ },
+ "escolhida": "v2"
+}

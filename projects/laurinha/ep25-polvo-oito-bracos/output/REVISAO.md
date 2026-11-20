@@ -1,0 +1,139 @@
+# Revisão — Polvo de Oito Braços
+
+- Vídeo: `ep25-polvo-oito-bracos.mp4`
+- Prancha: `prancha.png`
+- Aprovação humana do render final: **SIM**
+
+## Falas (QA por transcrição cega)
+
+| cena | texto | ouvido | sim. | dur. |
+|---|---|---|---|---|
+
+## Cenas
+
+- **s01_intro** — 109 quadros; p: 109 desenhos, f: 109 desenhos, b: 109 desenhos
+- **s02_intro** — 124 quadros; p: 124 desenhos, b: 124 desenhos
+- **s03_intro** — 82 quadros; laurinha: 82 desenhos, luisinho: 82 desenhos, p: 82 desenhos, b: 82 desenhos
+- **s04_intro** — 108 quadros; laurinha: 108 desenhos, luisinho: 108 desenhos
+- **s05_intro** — 90 quadros; luisinho: 90 desenhos, laurinha: 90 desenhos, bat: 90 desenhos
+- **s06_intro** — 98 quadros; luisinho: 98 desenhos, laurinha: 98 desenhos, bat: 97 desenhos, tec: 98 desenhos
+- **s07_verso** — 104 quadros; vovo: 104 desenhos, vovozinho: 59 desenhos, laurinha: 104 desenhos, luisinho: 104 desenhos, o: 104 desenhos, s: 104 desenhos
+- **s08_verso** — 110 quadros; luisinho: 80 desenhos, p: 110 desenhos, b: 110 desenhos
+- **s09_verso** — 95 quadros; p: 95 desenhos, n: 95 desenhos, b: 95 desenhos
+  - ⚠ n: 1 quadros vazios (ex.: [1])
+- **s10_verso** — 108 quadros; laurinha: 108 desenhos, p: 108 desenhos, b: 108 desenhos
+- **s11_verso__p0** — 109 quadros; p: 109 desenhos, b: 109 desenhos
+- **s11_verso__p1** — 109 quadros; luisinho: 109 desenhos, laurinha: 109 desenhos, bat: 108 desenhos
+- **s11_verso** — 109 quadros; 
+- **s12_verso__p0** — 109 quadros; p: 109 desenhos, b: 109 desenhos
+- **s12_verso__p1** — 109 quadros; laurinha: 109 desenhos
+- **s12_verso** — 109 quadros; 
+- **s13_verso__p0** — 81 quadros; p: 81 desenhos, b: 81 desenhos
+- **s13_verso__p1** — 81 quadros; luisinho: 81 desenhos
+- **s13_verso** — 81 quadros; 
+- **s14_verso** — 109 quadros; laurinha: 109 desenhos, luisinho: 109 desenhos, p: 109 desenhos, f: 109 desenhos, b: 109 desenhos
+- **s15_refrao** — 134 quadros; laurinha: 134 desenhos, luisinho: 134 desenhos, p: 134 desenhos, b: 134 desenhos
+- **s16_refrao** — 109 quadros; laurinha: 82 desenhos, luisinho: 109 desenhos, p: 109 desenhos, b: 109 desenhos
+- **s17_refrao__p0** — 108 quadros; p: 108 desenhos, b: 108 desenhos
+- **s17_refrao__p1** — 108 quadros; laurinha: 108 desenhos, luisinho: 108 desenhos
+- **s17_refrao** — 108 quadros; 
+- **s18_refrao** — 108 quadros; laurinha: 81 desenhos, luisinho: 108 desenhos, p: 108 desenhos, b: 108 desenhos
+- **s19_intervalo** — 66 quadros; luisinho: 66 desenhos, f: 66 desenhos, b: 66 desenhos
+- **s20_intervalo** — 102 quadros; laurinha: 102 desenhos, luisinho: 102 desenhos, p: 102 desenhos
+- **s21_intervalo** — 71 quadros; luisinho: 71 desenhos, laurinha: 71 desenhos, bat: 71 desenhos
+- **s22_intervalo** — 64 quadros; luisinho: 64 desenhos, laurinha: 64 desenhos, bat: 64 desenhos, tec: 64 desenhos
+- **s23_ponte** — 54 quadros; p: 54 desenhos, n: 54 desenhos, b: 54 desenhos
+  - ⚠ n: 1 quadros vazios (ex.: [1])
+- **s24_ponte** — 67 quadros; laurinha: 67 desenhos, p: 67 desenhos, n: 67 desenhos
+  - ⚠ n: 1 quadros vazios (ex.: [1])
+- **s25_ponte** — 54 quadros; luisinho: 54 desenhos, p: 54 desenhos, n: 54 desenhos, b: 54 desenhos
+  - ⚠ n: 1 quadros vazios (ex.: [1])
+- **s26_ponte** — 94 quadros; laurinha: 94 desenhos, p: 94 desenhos, n: 94 desenhos
+  - ⚠ n: 1 quadros vazios (ex.: [1])
+- **s27_verso** — 121 quadros; laurinha: 121 desenhos, luisinho: 121 desenhos, f: 121 desenhos, f2: 121 desenhos, b: 121 desenhos
+- **s28_verso** — 94 quadros; luisinho: 68 desenhos, p: 94 desenhos, b: 94 desenhos
+- **s29_verso** — 95 quadros; laurinha: 95 desenhos, luisinho: 95 desenhos, p: 95 desenhos
+- **s30_verso** — 107 quadros; luisinho: 107 desenhos, p: 107 desenhos, s: 107 desenhos
+- **s31_verso** — 107 quadros; luisinho: 107 desenhos, bat: 107 desenhos, p: 107 desenhos
+- **s32_verso** — 108 quadros; vovo: 77 desenhos, m: 106 desenhos, t: 108 desenhos, p: 108 desenhos
+- **s33_verso** — 94 quadros; laurinha: 94 desenhos, e: 94 desenhos, p: 94 desenhos
+- **s34_verso** — 114 quadros; mamae: 114 desenhos, luisinho: 114 desenhos, p: 114 desenhos, c: 114 desenhos
+- **s35_refrao** — 120 quadros; laurinha: 120 desenhos, luisinho: 120 desenhos, p: 120 desenhos, b: 120 desenhos
+- **s36_refrao** — 94 quadros; laurinha: 71 desenhos, luisinho: 94 desenhos, p: 94 desenhos, s: 94 desenhos
+- **s37_refrao__p0** — 121 quadros; p: 121 desenhos, b: 121 desenhos
+- **s37_refrao__p1** — 121 quadros; laurinha: 121 desenhos, luisinho: 121 desenhos
+- **s37_refrao** — 121 quadros; 
+- **s38_refrao** — 95 quadros; laurinha: 76 desenhos, luisinho: 95 desenhos, p: 95 desenhos, s: 95 desenhos
+- **s39_intervalo** — 66 quadros; luisinho: 66 desenhos
+- **s40_intervalo** — 72 quadros; laurinha: 72 desenhos, luisinho: 72 desenhos, p: 72 desenhos
+- **s41_refrao** — 107 quadros; laurinha: 107 desenhos, luisinho: 107 desenhos, p: 107 desenhos, b: 107 desenhos
+- **s42_refrao** — 107 quadros; luisinho: 107 desenhos, laurinha: 107 desenhos, bat: 106 desenhos
+- **s43_refrao__p0** — 107 quadros; p: 107 desenhos, b: 107 desenhos
+- **s43_refrao__p1** — 107 quadros; laurinha: 107 desenhos, luisinho: 107 desenhos
+- **s43_refrao** — 107 quadros; 
+- **s44_refrao** — 107 quadros; luisinho: 107 desenhos, laurinha: 107 desenhos, bat: 107 desenhos, tec: 107 desenhos
+- **s45_intervalo** — 113 quadros; luisinho: 113 desenhos, laurinha: 113 desenhos, bat: 113 desenhos, tec: 113 desenhos
+- **s46_intervalo** — 113 quadros; laurinha: 113 desenhos, luisinho: 113 desenhos, p: 113 desenhos, b: 113 desenhos
+- **s47_final** — 66 quadros; luisinho: 66 desenhos, p: 66 desenhos, b: 66 desenhos
+- **s48_final** — 40 quadros; luisinho: 40 desenhos, joinha: 40 desenhos
+  - ⚠ joinha: 1 quadros vazios (ex.: [1])
+- **s49_final** — 67 quadros; mamae: 67 desenhos, luisinho: 67 desenhos
+- **s50_final** — 160 quadros; luisinho: 160 desenhos, botao: 138 desenhos
+  - ⚠ botao: 1 quadros vazios (ex.: [1])
+- **s51_final** — 102 quadros; laurinha: 102 desenhos, luisinho: 102 desenhos, p: 102 desenhos, b: 102 desenhos
+- **s52_final** — 89 quadros; laurinha: 89 desenhos, luisinho: 89 desenhos, p: 89 desenhos, b: 89 desenhos
+
+## Avisos
+
+- storyboard s01_intro: pendente
+- storyboard s02_intro: pendente
+- storyboard s03_intro: pendente
+- storyboard s04_intro: pendente
+- storyboard s05_intro: pendente
+- storyboard s06_intro: pendente
+- storyboard s07_verso: pendente
+- storyboard s08_verso: pendente
+- storyboard s09_verso: pendente
+- storyboard s10_verso: pendente
+- storyboard s11_verso: pendente
+- storyboard s12_verso: pendente
+- storyboard s13_verso: pendente
+- storyboard s14_verso: pendente
+- storyboard s15_refrao: pendente
+- storyboard s16_refrao: pendente
+- storyboard s17_refrao: pendente
+- storyboard s18_refrao: pendente
+- storyboard s19_intervalo: pendente
+- storyboard s20_intervalo: pendente
+- storyboard s21_intervalo: pendente
+- storyboard s22_intervalo: pendente
+- storyboard s23_ponte: pendente
+- storyboard s24_ponte: pendente
+- storyboard s25_ponte: pendente
+- storyboard s26_ponte: pendente
+- storyboard s27_verso: pendente
+- storyboard s28_verso: pendente
+- storyboard s29_verso: pendente
+- storyboard s30_verso: pendente
+- storyboard s31_verso: pendente
+- storyboard s32_verso: pendente
+- storyboard s33_verso: pendente
+- storyboard s34_verso: pendente
+- storyboard s35_refrao: pendente
+- storyboard s36_refrao: pendente
+- storyboard s37_refrao: pendente
+- storyboard s38_refrao: pendente
+- storyboard s39_intervalo: pendente
+- storyboard s40_intervalo: pendente
+- storyboard s41_refrao: pendente
+- storyboard s42_refrao: pendente
+- storyboard s43_refrao: pendente
+- storyboard s44_refrao: pendente
+- storyboard s45_intervalo: pendente
+- storyboard s46_intervalo: pendente
+- storyboard s47_final: pendente
+- storyboard s48_final: pendente
+- storyboard s49_final: pendente
+- storyboard s50_final: pendente
+- storyboard s51_final: pendente
+- storyboard s52_final: pendente

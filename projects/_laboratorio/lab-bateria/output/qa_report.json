@@ -1,0 +1,51 @@
+{
+  "episode": "lab-bateria",
+  "scenes": {
+    "s01_banda": {
+      "frames": 240,
+      "performers": {
+        "luisinho": {
+          "drawings": 240,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 239
+          },
+          "empty_frames": 0
+        },
+        "laurinha": {
+          "drawings": 240,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 239
+          },
+          "empty_frames": 0
+        },
+        "bat": {
+          "drawings": 240,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 239
+          },
+          "empty_frames": 0
+        },
+        "tec": {
+          "drawings": 227,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 239
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    }
+  },
+  "warnings": [
+    "storyboard s01_banda: sem storyboard"
+  ],
+  "lines": {},
+  "video": "/home/otavio/2d/projects/lab-bateria/output/lab-bateria.mp4",
+  "contact_sheet": "/home/otavio/2d/projects/lab-bateria/output/prancha.png",
+  "approved": true
+}

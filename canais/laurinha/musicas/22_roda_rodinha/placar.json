@@ -1,0 +1,30 @@
+{
+ "musica": "22",
+ "titulo": "Roda, Rodinha!",
+ "estilo": "E12",
+ "medidas": {
+  "voz_%": 42.5,
+  "bateria_%": 38.4,
+  "baixo_%": 2.4,
+  "outros_%": 16.7,
+  "largura_voz": 0.087,
+  "batidas_identicas": 0.747,
+  "duracao_s": 171.6,
+  "teclado_eletronico": 0.051,
+  "bateria_banda": 0.016,
+  "percussao": 0.026,
+  "metais": 0.003,
+  "sincope": 0.61,
+  "baixo_sincopado": 0.49
+ },
+ "acertos": "7/12",
+ "nota": 4.8,
+ "obs": "take v1 (E12: teclado 1º, bateria 2º, sax 3º) — usuário: nota 4,8 (a melhor até agora)",
+ "falhas": [
+  "baixo no som (%) (baixo)",
+  "outros instrumentos (%) (alto)",
+  "largura da voz (0 = uma voz no centro) (alto)",
+  "batida de teclado (loop igual) (baixo)",
+  "baixo fora do tempo forte ('bounce') (baixo)"
+ ]
+}

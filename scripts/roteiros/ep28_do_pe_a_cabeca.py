@@ -17,7 +17,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from _comum import LA, LU, Roteiro, call  # noqa: E402
 
-R = Roteiro("ep28-do-pe-a-cabeca", "28_do_pe_a_cabeca", "laurinha")
+R = Roteiro("laurinha/ep28-do-pe-a-cabeca", "28_do_pe_a_cabeca", "laurinha")
 ESCOLA, SALA, PARQUE, JARDIM, PRAIA, CASA = "plano_escola", "plano_sala", "plano_parque", "plano_jardim", "plano_praia", "plano_casa_frente"
 QROSA, QAZUL, CAMPO, LAGOA, COZ, BANHO = "plano_quarto_rosa", "plano_quarto_azul", "plano_campo", "plano_lagoa", "plano_cozinha", "plano_banheiro"
 PALCO = ESCOLA                    # 19/11: a banda toca na festa da escola (a aula de dança), nada de salão lilás

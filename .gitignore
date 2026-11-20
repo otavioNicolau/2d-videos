@@ -39,3 +39,9 @@ projects/*/*/musica/
 projects/*/*/analise/
 projects/*/*/output/*.mp4
 projects/*/*/output/*.png
+# vídeos/áudios gerados em qualquer nível de output (os publicados ficam na pasta do Windows)
+projects/**/output/**/*.mp4
+projects/**/output/**/*.mov
+projects/**/output/**/*.wav
+projects/**/output/*.mov
+projects/**/output/*.wav

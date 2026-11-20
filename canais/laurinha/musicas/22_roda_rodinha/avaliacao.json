@@ -1,0 +1,52 @@
+{
+ "schema": "avaliacao-1.0",
+ "versoes": {
+  "v1": {
+   "arquivo": "v1.wav",
+   "duracao": 171.6,
+   "bpm": 161.5,
+   "bpm_nota": "",
+   "tom": "Ré maior",
+   "voz_inicio": 3.15,
+   "refrao_inicio": 2.3,
+   "cantado": 76,
+   "intervalos": [
+    [
+     113.5,
+     3.2
+    ],
+    [
+     147.8,
+     3.4
+    ]
+   ],
+   "fim_depois_da_voz": 2.6,
+   "final": "esmaecendo",
+   "silencio_final": 0.6,
+   "acerto": 83,
+   "nao_reconhecidas": [
+    "tonto",
+    "luisinho",
+    "quiser",
+    "entrar",
+    "grilo",
+    "tatu",
+    "buuu",
+    "agacha",
+    "baixinho"
+   ],
+   "pontos_a_conferir": []
+  }
+ },
+ "ouvido": {
+  "v1": {
+   "1 começo chama atenção": null,
+   "5 melodia combina com a letra": null,
+   "6 dá vontade de dançar": null,
+   "7 pronúncia natural": null,
+   "8 tem a cara do canal": null,
+   "9 nenhum trecho cansativo": null
+  }
+ },
+ "escolhida": "v1"
+}

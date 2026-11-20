@@ -1,0 +1,1778 @@
+{
+  "schema": "1.1",
+  "id": "ep02-bate-palminha-short",
+  "title": "Bate Palminha — Short",
+  "logline": "Clipe de \"Bate Palminha\" — brincar com os amigos depois da escola. Montado do roteiro verso a verso (roteiro.json).",
+  "fps": 30,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "background": "plano_parque",
+  "soundtrack": {
+    "file": "musica/trabalho.wav",
+    "analysis": "analise/song.json",
+    "start": 0.0,
+    "end": 54.2333,
+    "fade_out": 0.3,
+    "beat_grid": "full"
+  },
+  "captions": {
+    "lyrics": "analise/letra.json",
+    "style": "palavra_a_palavra"
+  },
+  "overlays": {
+    "logo": true,
+    "channel": [
+      "LAURINHA",
+      "e Luisinho"
+    ]
+  },
+  "cast": {
+    "laurinha": {
+      "character": "laurinha"
+    },
+    "luisinho": {
+      "character": "luisinho"
+    },
+    "joaninha": {
+      "character": "joaninha"
+    },
+    "formiguinha": {
+      "character": "formiguinha"
+    },
+    "mochila": {
+      "character": "mochila"
+    },
+    "sabonete": {
+      "character": "sabonete"
+    },
+    "bolo": {
+      "character": "bolo"
+    },
+    "mesa": {
+      "character": "mesa"
+    }
+  },
+  "approval": {
+    "storyboard": true,
+    "final_render": false
+  },
+  "scenes": [
+    {
+      "id": "s01_refrao",
+      "title": "Bate palminha! Plá, plá, plá!",
+      "duration": 1.7667,
+      "description": "Bate palminha! Plá, plá, plá!",
+      "background": "danca_raios_amarelo",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 1.7667,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "dance",
+              "style": "palmas",
+              "dur": 1.767,
+              "t": 0.0
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "flash_in": true,
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "BATE PALMINHA!",
+          "dur": 1.8,
+          "color": "laranja",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.36,
+          "to": 1.723
+        }
+      ]
+    },
+    {
+      "id": "s02_refrao",
+      "title": "Bate o pezinho! Tum, tum, tum!",
+      "duration": 1.2666,
+      "description": "Bate o pezinho! Tum, tum, tum!",
+      "background": "danca_bolinhas_rosa",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 1.2666,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "dance",
+              "style": "pezinho",
+              "dur": 1.267,
+              "t": 0.0
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "TUM, TUM, TUM!",
+          "dur": 1.8,
+          "color": "azul",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "luisinho",
+          "from": 0.0,
+          "to": 1.257
+        }
+      ]
+    },
+    {
+      "id": "s03_refrao",
+      "title": "Quem tem amigo",
+      "duration": 3.5,
+      "description": "Quem tem amigo / Nunca fica sozinho!",
+      "background": "plano_parque",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1150.0,
+            "y": 540,
+            "zoom": 1.808
+          },
+          {
+            "t": 3.5,
+            "x": 1150.0,
+            "y": 540,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1000.0,
+            "y": 970,
+            "turn": 0.25,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "dance",
+              "style": "roda",
+              "dur": 3.5,
+              "t": 0.0
+            }
+          ]
+        },
+        "joaninha": {
+          "start": {
+            "x": 1000.0,
+            "y": 730,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 2,
+            "depth": 0.75
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "dance",
+              "style": "roda",
+              "dur": 3.5,
+              "t": 0.0
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1300.0,
+            "y": 970,
+            "turn": -0.15,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "dance",
+              "style": "roda",
+              "dur": 3.5,
+              "t": 0.0
+            }
+          ]
+        },
+        "formiguinha": {
+          "start": {
+            "x": 1300.0,
+            "y": 730,
+            "turn": -0.25,
+            "expr": "happy",
+            "z": 2,
+            "depth": 0.75
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "dance",
+              "style": "roda",
+              "dur": 3.5,
+              "t": 0.0
+            }
+          ]
+        }
+      },
+      "fx": [
+        "coracoes"
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.327,
+          "to": 3.427
+        },
+        {
+          "who": "luisinho",
+          "from": 0.327,
+          "to": 3.427
+        }
+      ]
+    },
+    {
+      "id": "s04_refrao",
+      "title": "Bate palminha! Plá, plá, plá!",
+      "duration": 3.9,
+      "description": "Bate palminha! Plá, plá, plá! / Bate o pezinho! Tum, tum, tum!",
+      "background": "danca_xadrez_rosa",
+      "fx": [
+        "estrelas",
+        "notas"
+      ],
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 3.9,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 810.0,
+            "y": 1190,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "dance",
+              "style": "palmas",
+              "dur": 3.9,
+              "t": 0.0
+            }
+          ]
+        },
+        "joaninha": {
+          "start": {
+            "x": 760.0,
+            "y": 800,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 2,
+            "depth": 0.85
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "dance",
+              "style": "palmas",
+              "dur": 3.9,
+              "t": 0.0
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1110.0,
+            "y": 1190,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "dance",
+              "style": "pezinho",
+              "dur": 3.9,
+              "t": 0.0
+            }
+          ]
+        },
+        "formiguinha": {
+          "start": {
+            "x": 1160.0,
+            "y": 800,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 2,
+            "depth": 0.85
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "dance",
+              "style": "pezinho",
+              "dur": 3.9,
+              "t": 0.0
+            }
+          ]
+        }
+      },
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 3.79
+        },
+        {
+          "who": "luisinho",
+          "from": 0.0,
+          "to": 3.79
+        }
+      ]
+    },
+    {
+      "id": "s05_refrao",
+      "title": "Vem pra roda",
+      "duration": 3.0,
+      "description": "Vem pra roda / Que cabe mais um!",
+      "background": "danca_ondas_azul",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 3.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 810.0,
+            "y": 1190,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "dance",
+              "style": "roda",
+              "dur": 1.0,
+              "t": 0.0
+            },
+            {
+              "t": 1.0,
+              "do": "abraco",
+              "dur": 2.0
+            }
+          ]
+        },
+        "joaninha": {
+          "start": {
+            "x": 760.0,
+            "y": 800,
+            "turn": 0.1,
+            "expr": "happy",
+            "z": 2,
+            "depth": 0.85
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "dance",
+              "style": "roda",
+              "dur": 1.0,
+              "t": 0.0
+            },
+            {
+              "t": 1.0,
+              "do": "abraco",
+              "dur": 2.0
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1110.0,
+            "y": 1190,
+            "turn": -0.1,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "dance",
+              "style": "roda",
+              "dur": 1.0,
+              "t": 0.0
+            },
+            {
+              "t": 1.0,
+              "do": "abraco",
+              "dur": 2.0
+            }
+          ]
+        },
+        "formiguinha": {
+          "start": {
+            "x": 1160.0,
+            "y": 800,
+            "turn": -0.15,
+            "expr": "happy",
+            "z": 2,
+            "depth": 0.85
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "dance",
+              "style": "roda",
+              "dur": 1.0,
+              "t": 0.0
+            },
+            {
+              "t": 1.0,
+              "do": "abraco",
+              "dur": 2.0
+            }
+          ]
+        }
+      },
+      "fx": [
+        "coracoes"
+      ],
+      "callouts": [
+        {
+          "t": 1.0,
+          "text": "CABE MAIS UM!",
+          "dur": 1.8,
+          "color": "verde",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 2.99
+        },
+        {
+          "who": "luisinho",
+          "from": 0.0,
+          "to": 2.99
+        }
+      ]
+    },
+    {
+      "id": "s06_verso",
+      "title": "Voltei da escola! Escola!",
+      "duration": 3.0667,
+      "description": "Voltei da escola! Escola!",
+      "background": "plano_escola",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.808
+          },
+          {
+            "t": 1.0,
+            "x": 1720,
+            "y": 540.0,
+            "zoom": 1.808,
+            "ease": "inout"
+          },
+          {
+            "t": 3.0667,
+            "x": 1720,
+            "y": 540.0,
+            "zoom": 1.808,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1300,
+            "y": 820,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "mochila": 1
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "fly",
+              "to_x": 1720,
+              "to_y": 950,
+              "dur": 1.0,
+              "t": 0.0
+            },
+            {
+              "t": 1.1,
+              "do": "wave",
+              "dur": 1.967
+            }
+          ]
+        }
+      },
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.147,
+          "to": 3.057
+        }
+      ],
+      "transition_in": {
+        "type": "zoom",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s07_verso",
+      "title": "Larguei a mochila! Mochila!",
+      "duration": 4.8,
+      "description": "Larguei a mochila! Mochila!",
+      "background": "plano_quarto_rosa",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1240.0,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          },
+          {
+            "t": 4.8,
+            "x": 1240.0,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1300,
+            "y": 930,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "mochila": 1
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.8,
+              "do": "bacana",
+              "dur": 4.0
+            }
+          ],
+          "keys": [
+            {
+              "t": 0.42,
+              "pose": {
+                "mochila": 0
+              },
+              "ease": "step"
+            }
+          ]
+        }
+      },
+      "props": {
+        "mochila": {
+          "start": {
+            "x": 1180,
+            "y": 935,
+            "z": 4,
+            "hidden": 1,
+            "cai": 0.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.45,
+              "pose": {
+                "hidden": 0,
+                "cai": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.75,
+              "pose": {
+                "cai": 1.0
+              },
+              "ease": "in"
+            }
+          ]
+        }
+      },
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.18,
+          "to": 4.36
+        }
+      ]
+    },
+    {
+      "id": "s08_verso",
+      "title": "Lavei as mãozinhas",
+      "duration": 3.9,
+      "description": "Lavei as mãozinhas",
+      "background": "plano_banheiro",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1365.0,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          },
+          {
+            "t": 3.9,
+            "x": 1365.0,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1260,
+            "y": 960,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "lavar_maos",
+              "dur": 3.8
+            }
+          ]
+        }
+      },
+      "props": {
+        "sabonete": {
+          "start": {
+            "x": 1470,
+            "y": 575,
+            "z": 4,
+            "depth": 0.6
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.2,
+              "pose": {
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 0.5,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "out"
+            },
+            {
+              "t": 0.8,
+              "pose": {
+                "pulo": 0.0,
+                "bolhas": 1.0
+              },
+              "ease": "in"
+            }
+          ]
+        }
+      },
+      "fx": [
+        "bolhas"
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.12,
+          "to": 2.84
+        }
+      ]
+    },
+    {
+      "id": "s09_verso",
+      "title": "Com muita espuminha!",
+      "duration": 1.7333,
+      "description": "Com muita espuminha!",
+      "background": "padrao_bolhas_azul",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 1.7333,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 870,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "lavar_maos",
+              "dur": 1.733,
+              "t": 0.0
+            }
+          ]
+        }
+      },
+      "props": {
+        "sabonete": {
+          "start": {
+            "x": 1212.1213979153893,
+            "y": 1030,
+            "z": 4,
+            "bolhas": 1.0,
+            "depth": 0.9
+          },
+          "exposure": 1
+        }
+      },
+      "fx": [
+        "bolhas"
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.16,
+          "to": 1.723
+        }
+      ]
+    },
+    {
+      "id": "s10_verso",
+      "title": "Chamei a joaninha",
+      "duration": 3.4667,
+      "description": "Chamei a joaninha",
+      "background": "plano_parque",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1125.0,
+            "y": 540,
+            "zoom": 1.808
+          },
+          {
+            "t": 3.4667,
+            "x": 1125.0,
+            "y": 540,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1285.0,
+            "y": 930,
+            "turn": -0.4,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "wave",
+              "dur": 3.367
+            }
+          ]
+        },
+        "joaninha": {
+          "start": {
+            "x": 315.0,
+            "y": 600,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.2,
+              "do": "fly",
+              "to_x": 965.0,
+              "to_y": 930.0,
+              "dur": 1.0
+            }
+          ]
+        }
+      },
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.147,
+          "to": 3.457
+        }
+      ]
+    },
+    {
+      "id": "s11_verso",
+      "title": "E a formiguinha",
+      "duration": 3.9,
+      "description": "E a formiguinha",
+      "background": "plano_parque",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1250.0,
+            "y": 540,
+            "zoom": 1.808
+          },
+          {
+            "t": 3.9,
+            "x": 1250.0,
+            "y": 540,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1090.0,
+            "y": 930,
+            "turn": 0.4,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "wave",
+              "dur": 3.8
+            }
+          ]
+        },
+        "formiguinha": {
+          "start": {
+            "x": 1910.0,
+            "y": 930,
+            "turn": -0.8,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "walk",
+              "to_x": 1410.0,
+              "dur": 1.2
+            }
+          ]
+        }
+      },
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.08,
+          "to": 3.62
+        }
+      ]
+    },
+    {
+      "id": "s12_verso",
+      "title": "Tem bolo de fubá",
+      "duration": 2.6,
+      "description": "Tem bolo de fubá",
+      "background": "padrao_bolo_rosa",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 2.6,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {},
+      "props": {
+        "bolo": {
+          "start": {
+            "x": 960,
+            "y": 900,
+            "z": 3,
+            "vapor": 1.0,
+            "depth": 1.6
+          },
+          "exposure": 1
+        }
+      },
+      "fx": [
+        "estrelas"
+      ]
+    },
+    {
+      "id": "s13_verso",
+      "title": "Pra todo mundo, vem cá!",
+      "duration": 3.9,
+      "description": "Pra todo mundo, vem cá!",
+      "background": "plano_parque",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 908.7092808850646,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          },
+          {
+            "t": 3.9,
+            "x": 1391.2907191149354,
+            "y": 543.9612784265519,
+            "zoom": 1.808,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 760,
+            "y": 900,
+            "turn": 0.25,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "wave",
+              "dur": 3.8
+            }
+          ]
+        },
+        "joaninha": {
+          "start": {
+            "x": 1010,
+            "y": 900,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "wave",
+              "dur": 3.8
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1290,
+            "y": 900,
+            "turn": -0.15,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "wave",
+              "dur": 3.8
+            }
+          ]
+        },
+        "formiguinha": {
+          "start": {
+            "x": 1540,
+            "y": 900,
+            "turn": -0.25,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "wave",
+              "dur": 3.8
+            }
+          ]
+        }
+      },
+      "props": {
+        "mesa": {
+          "start": {
+            "x": 1150,
+            "y": 990,
+            "z": 5
+          },
+          "exposure": 1
+        },
+        "bolo": {
+          "start": {
+            "x": 1150,
+            "y": 760,
+            "z": 6,
+            "depth": 0.7
+          },
+          "exposure": 1
+        }
+      },
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.02,
+          "to": 3.6
+        }
+      ]
+    },
+    {
+      "id": "s14_refrao",
+      "title": "Bate palminha! Plá, plá, plá!",
+      "duration": 1.7667,
+      "description": "Bate palminha! Plá, plá, plá!",
+      "background": "danca_raios_amarelo",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 1.7667,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "dance",
+              "style": "palmas",
+              "dur": 1.767,
+              "t": 0.0
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "flash_in": true,
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "BATE PALMINHA!",
+          "dur": 1.8,
+          "color": "laranja",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.36,
+          "to": 1.723
+        }
+      ],
+      "transition_in": {
+        "type": "zoom",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s15_refrao",
+      "title": "Bate o pezinho! Tum, tum, tum!",
+      "duration": 1.2666,
+      "description": "Bate o pezinho! Tum, tum, tum!",
+      "background": "danca_bolinhas_rosa",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 1.2666,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "dance",
+              "style": "pezinho",
+              "dur": 1.267,
+              "t": 0.0
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "TUM, TUM, TUM!",
+          "dur": 1.8,
+          "color": "azul",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "luisinho",
+          "from": 0.0,
+          "to": 1.257
+        }
+      ]
+    },
+    {
+      "id": "s16_refrao",
+      "title": "Quem tem amigo",
+      "duration": 3.5,
+      "description": "Quem tem amigo / Nunca fica sozinho!",
+      "background": "plano_parque",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1150.0,
+            "y": 540,
+            "zoom": 1.808
+          },
+          {
+            "t": 3.5,
+            "x": 1150.0,
+            "y": 540,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1000.0,
+            "y": 970,
+            "turn": 0.25,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "dance",
+              "style": "roda",
+              "dur": 3.5,
+              "t": 0.0
+            }
+          ]
+        },
+        "joaninha": {
+          "start": {
+            "x": 1000.0,
+            "y": 730,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 2,
+            "depth": 0.75
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "dance",
+              "style": "roda",
+              "dur": 3.5,
+              "t": 0.0
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1300.0,
+            "y": 970,
+            "turn": -0.15,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "dance",
+              "style": "roda",
+              "dur": 3.5,
+              "t": 0.0
+            }
+          ]
+        },
+        "formiguinha": {
+          "start": {
+            "x": 1300.0,
+            "y": 730,
+            "turn": -0.25,
+            "expr": "happy",
+            "z": 2,
+            "depth": 0.75
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "dance",
+              "style": "roda",
+              "dur": 3.5,
+              "t": 0.0
+            }
+          ]
+        }
+      },
+      "fx": [
+        "coracoes"
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.327,
+          "to": 3.427
+        },
+        {
+          "who": "luisinho",
+          "from": 0.327,
+          "to": 3.427
+        }
+      ]
+    },
+    {
+      "id": "s17_refrao",
+      "title": "Bate palminha! Plá, plá, plá!",
+      "duration": 3.9,
+      "description": "Bate palminha! Plá, plá, plá! / Bate o pezinho! Tum, tum, tum!",
+      "background": "danca_xadrez_rosa",
+      "fx": [
+        "estrelas",
+        "notas"
+      ],
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 3.9,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 810.0,
+            "y": 1190,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "dance",
+              "style": "palmas",
+              "dur": 3.9,
+              "t": 0.0
+            }
+          ]
+        },
+        "joaninha": {
+          "start": {
+            "x": 760.0,
+            "y": 800,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 2,
+            "depth": 0.85
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "dance",
+              "style": "palmas",
+              "dur": 3.9,
+              "t": 0.0
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1110.0,
+            "y": 1190,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "dance",
+              "style": "pezinho",
+              "dur": 3.9,
+              "t": 0.0
+            }
+          ]
+        },
+        "formiguinha": {
+          "start": {
+            "x": 1160.0,
+            "y": 800,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 2,
+            "depth": 0.85
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "dance",
+              "style": "pezinho",
+              "dur": 3.9,
+              "t": 0.0
+            }
+          ]
+        }
+      },
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 3.79
+        },
+        {
+          "who": "luisinho",
+          "from": 0.0,
+          "to": 3.79
+        }
+      ]
+    },
+    {
+      "id": "s18_refrao",
+      "title": "Vem pra roda",
+      "duration": 3.0,
+      "description": "Vem pra roda / Que cabe mais um!",
+      "background": "danca_ondas_azul",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 3.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 810.0,
+            "y": 1190,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "dance",
+              "style": "roda",
+              "dur": 1.0,
+              "t": 0.0
+            },
+            {
+              "t": 1.0,
+              "do": "abraco",
+              "dur": 2.0
+            }
+          ]
+        },
+        "joaninha": {
+          "start": {
+            "x": 760.0,
+            "y": 800,
+            "turn": 0.1,
+            "expr": "happy",
+            "z": 2,
+            "depth": 0.85
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "dance",
+              "style": "roda",
+              "dur": 1.0,
+              "t": 0.0
+            },
+            {
+              "t": 1.0,
+              "do": "abraco",
+              "dur": 2.0
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1110.0,
+            "y": 1190,
+            "turn": -0.1,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "dance",
+              "style": "roda",
+              "dur": 1.0,
+              "t": 0.0
+            },
+            {
+              "t": 1.0,
+              "do": "abraco",
+              "dur": 2.0
+            }
+          ]
+        },
+        "formiguinha": {
+          "start": {
+            "x": 1160.0,
+            "y": 800,
+            "turn": -0.15,
+            "expr": "happy",
+            "z": 2,
+            "depth": 0.85
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "dance",
+              "style": "roda",
+              "dur": 1.0,
+              "t": 0.0
+            },
+            {
+              "t": 1.0,
+              "do": "abraco",
+              "dur": 2.0
+            }
+          ]
+        }
+      },
+      "fx": [
+        "coracoes"
+      ],
+      "callouts": [
+        {
+          "t": 1.0,
+          "text": "CABE MAIS UM!",
+          "dur": 1.8,
+          "color": "verde",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 2.99
+        },
+        {
+          "who": "luisinho",
+          "from": 0.0,
+          "to": 2.99
+        }
+      ]
+    }
+  ],
+  "projeto": "laurinha/ep02-bate-palminha-short"
+}

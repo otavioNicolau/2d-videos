@@ -99,7 +99,7 @@ def _capitulos(song: dict, offset: float, total: float, nomes_ficha: dict | None
 
 PLAYLIST_GERAL = "Músicas Infantis da Laurinha e do Luisinho 🐝"
 # links das playlists (nome → https://www.youtube.com/playlist?list=…): o usuário cria no Studio e passa o link; sem link sai só o nome
-LINKS_PLAYLISTS = Path(__file__).resolve().parents[2] / "musicas" / "playlists_links.json"
+LINKS_PLAYLISTS = Path(__file__).resolve().parents[2] / "canais" / "laurinha" / "musicas" / "playlists_links.json"   # padrão; o do canal vem de cn.musicas
 
 
 def publicar(project: str, musica: Path, copiar: bool = True) -> Path:

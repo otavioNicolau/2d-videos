@@ -1,0 +1,4596 @@
+{
+  "schema": "1.1",
+  "id": "ep04-cade-a-cor",
+  "title": "Cadê a Cor?",
+  "logline": "Clipe de \"Cadê a Cor?\" — cores, misturas de cores e o arco-íris. Montado do roteiro verso a verso (roteiro.json).",
+  "fps": 30,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "background": "plano_parque",
+  "soundtrack": {
+    "file": "musica/trabalho.wav",
+    "analysis": "analise/song.json",
+    "start": 0.0,
+    "end": 146.7333,
+    "fade_out": 0.6,
+    "beat_grid": "full"
+  },
+  "captions": {
+    "lyrics": "analise/letra.json",
+    "style": "palavra_a_palavra"
+  },
+  "overlays": {
+    "logo": true,
+    "channel": [
+      "LAURINHA",
+      "e Luisinho"
+    ]
+  },
+  "cast": {
+    "laurinha": {
+      "character": "laurinha"
+    },
+    "luisinho": {
+      "character": "luisinho"
+    },
+    "morango": {
+      "character": "morango"
+    },
+    "banana": {
+      "character": "banana_grande"
+    },
+    "mochila": {
+      "character": "mochila"
+    },
+    "folha": {
+      "character": "folha"
+    },
+    "arco": {
+      "character": "arco_iris"
+    },
+    "joaninha": {
+      "character": "joaninha"
+    },
+    "potes": {
+      "character": "potes_tinta"
+    },
+    "sol": {
+      "character": "sol"
+    },
+    "formiguinha": {
+      "character": "formiguinha"
+    }
+  },
+  "approval": {
+    "storyboard": true,
+    "final_render": false
+  },
+  "scenes": [
+    {
+      "id": "s01_intro",
+      "title": "instrumental",
+      "duration": 4.6,
+      "description": "",
+      "background": "plano_jardim",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 4.6,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.08,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": -250,
+            "y": 500,
+            "turn": 0.4,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.3,
+              "do": "fly",
+              "dur": 2.2,
+              "to_x": 1150,
+              "to_y": 930
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": -450,
+            "y": 420,
+            "turn": 0.4,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.6,
+              "do": "fly",
+              "dur": 2.4,
+              "to_x": 1480,
+              "to_y": 930
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "s02_intro",
+      "title": "Ô-ô-ô! Zum, zum!",
+      "duration": 3.6333,
+      "description": "Ô-ô-ô! Zum, zum!",
+      "background": "danca_raios_vermelho",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.0
+          },
+          {
+            "t": 3.633,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 700,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "asinhas",
+              "dur": 3.633
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1220,
+            "y": 1010,
+            "turn": -0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "asinhas",
+              "dur": 3.633
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "flash_in": true,
+      "callouts": [
+        {
+          "t": 0.3,
+          "text": "ZUM, ZUM!",
+          "dur": 1.8,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.147,
+          "to": 3.623
+        },
+        {
+          "who": "luisinho",
+          "from": 0.147,
+          "to": 3.623
+        }
+      ]
+    },
+    {
+      "id": "s03_verso",
+      "title": "Vermelho, cadê? Morango!",
+      "duration": 4.0667,
+      "description": "Vermelho, cadê? Morango!",
+      "background": "plano_jardim",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1350,
+            "y": 560,
+            "zoom": 1.25
+          },
+          {
+            "t": 4.067,
+            "x": 1350,
+            "y": 560,
+            "zoom": 1.3,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1120,
+            "y": 930,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "look_around",
+              "dur": 1.2
+            },
+            {
+              "t": 1.4,
+              "do": "point",
+              "dur": 2.667
+            }
+          ]
+        }
+      },
+      "props": {
+        "morango": {
+          "start": {
+            "x": 1620,
+            "y": 940,
+            "z": 2
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cor": 0.0
+              }
+            },
+            {
+              "t": 1.3,
+              "pose": {
+                "cor": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.8,
+              "pose": {
+                "cor": 1.0
+              },
+              "ease": "out"
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 1.4,
+          "text": "VERMELHO!",
+          "dur": 1.8,
+          "color": "vermelho",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.247,
+          "to": 3.427
+        }
+      ],
+      "transition_in": {
+        "type": "giro",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s04_verso",
+      "title": "Amarelo, cadê? Banana!",
+      "duration": 3.6667,
+      "description": "Amarelo, cadê? Banana!",
+      "background": "plano_jardim",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 560,
+            "zoom": 1.2
+          },
+          {
+            "t": 3.667,
+            "x": 1300,
+            "y": 560,
+            "zoom": 1.25,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 1000,
+            "y": 620,
+            "turn": 0.4,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 1.2,
+              "do": "fly",
+              "dur": 0.6,
+              "to_x": 1080,
+              "to_y": 800
+            },
+            {
+              "t": 1.9,
+              "do": "fly",
+              "dur": 0.5,
+              "to_x": 1500,
+              "to_y": 930
+            }
+          ]
+        }
+      },
+      "props": {
+        "banana": {
+          "start": {
+            "x": 1450,
+            "y": 960,
+            "z": 2
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cor": 0.0
+              }
+            },
+            {
+              "t": 1.0,
+              "pose": {
+                "cor": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.5,
+              "pose": {
+                "cor": 1.0
+              },
+              "ease": "out"
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 1.1,
+          "text": "AMARELO!",
+          "dur": 1.8,
+          "color": "amarelo",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s05_verso",
+      "title": "Azul, cadê? Mochila!",
+      "duration": 2.7333,
+      "description": "Azul, cadê? Mochila!",
+      "background": "plano_jardim",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 560,
+            "zoom": 1.2
+          },
+          {
+            "t": 2.733,
+            "x": 1300,
+            "y": 560,
+            "zoom": 1.25,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1050,
+            "y": 930,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "look_around",
+              "dur": 1.0
+            },
+            {
+              "t": 1.3,
+              "do": "point",
+              "dur": 1.433
+            }
+          ]
+        }
+      },
+      "props": {
+        "mochila": {
+          "start": {
+            "x": 1640,
+            "y": 960,
+            "z": 2,
+            "azul": 1.0,
+            "depth": 4.2
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cor": 0.0
+              }
+            },
+            {
+              "t": 1.1,
+              "pose": {
+                "cor": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.6,
+              "pose": {
+                "cor": 1.0
+              },
+              "ease": "out"
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 1.2,
+          "text": "AZUL!",
+          "dur": 1.533,
+          "color": "azul",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.313,
+          "to": 2.723
+        }
+      ]
+    },
+    {
+      "id": "s06_verso",
+      "title": "Verde, cadê? Folhinha!",
+      "duration": 4.0667,
+      "description": "Verde, cadê? Folhinha!",
+      "background": "plano_jardim",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 560,
+            "zoom": 1.2
+          },
+          {
+            "t": 4.067,
+            "x": 1300,
+            "y": 560,
+            "zoom": 1.25,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1080,
+            "y": 620,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 1.8,
+              "do": "fly",
+              "dur": 0.5,
+              "to_x": 1120,
+              "to_y": 880
+            },
+            {
+              "t": 2.4,
+              "do": "jump",
+              "dur": 0.8
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1560,
+            "y": 600,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 1.9,
+              "do": "fly",
+              "dur": 0.5,
+              "to_x": 1500,
+              "to_y": 880
+            },
+            {
+              "t": 2.5,
+              "do": "jump",
+              "dur": 0.8
+            }
+          ]
+        }
+      },
+      "props": {
+        "folha": {
+          "start": {
+            "x": 1300,
+            "y": 990,
+            "z": 2,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cor": 0.0
+              }
+            },
+            {
+              "t": 1.2,
+              "pose": {
+                "cor": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.7,
+              "pose": {
+                "cor": 1.0
+              },
+              "ease": "out"
+            },
+            {
+              "t": 2.0,
+              "pose": {
+                "balanco": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.4,
+              "pose": {
+                "balanco": 1.0
+              },
+              "ease": "inout"
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 1.3,
+          "text": "VERDE!",
+          "dur": 1.8,
+          "color": "verde",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.12,
+          "to": 3.64
+        }
+      ]
+    },
+    {
+      "id": "s07_refrao",
+      "title": "Cadê a cor? Cadê?",
+      "duration": 4.0666,
+      "description": "Cadê a cor? Cadê? / Cadê a cor? Cadê?",
+      "background": "danca_raios_vermelho",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.0
+          },
+          {
+            "t": 4.067,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 700,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "look_around",
+              "dur": 1.6
+            },
+            {
+              "t": 1.7,
+              "do": "dance",
+              "style": "pulinho",
+              "dur": 2.367
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1220,
+            "y": 1010,
+            "turn": -0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "look_around",
+              "dur": 1.6
+            },
+            {
+              "t": 1.8,
+              "do": "dance",
+              "style": "pulinho",
+              "dur": 2.267
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "flash_in": true,
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "CADÊ A COR?",
+          "dur": 1.8,
+          "color": "rosa",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.133,
+          "to": 3.873
+        },
+        {
+          "who": "luisinho",
+          "from": 0.133,
+          "to": 3.873
+        }
+      ],
+      "transition_in": {
+        "type": "circulo",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s08_refrao",
+      "title": "Pula, pula, pula",
+      "duration": 3.2,
+      "description": "Pula, pula, pula / Mostra a sua cor!",
+      "background": "plano_jardim",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 560,
+            "zoom": 1.15
+          },
+          {
+            "t": 3.2,
+            "x": 1300,
+            "y": 560,
+            "zoom": 1.2,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1130,
+            "y": 930,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "pulinho",
+              "dur": 1.6
+            },
+            {
+              "t": 1.7,
+              "do": "bacana",
+              "dur": 1.5
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1470,
+            "y": 930,
+            "turn": -0.1,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "pulinho",
+              "dur": 1.6
+            },
+            {
+              "t": 1.7,
+              "do": "bacana",
+              "dur": 1.5
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "callouts": [
+        {
+          "t": 1.6,
+          "text": "MOSTRA A SUA COR!",
+          "dur": 1.6,
+          "color": "laranja",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.227,
+          "to": 3.19
+        },
+        {
+          "who": "luisinho",
+          "from": 0.227,
+          "to": 3.19
+        }
+      ]
+    },
+    {
+      "id": "s09_refrao",
+      "title": "Cadê a cor? Cadê?",
+      "duration": 4.0667,
+      "description": "Cadê a cor? Cadê? / Cadê a cor? Cadê?",
+      "background": "danca_bolinhas_amarelo",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.0
+          },
+          {
+            "t": 4.067,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 760,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "lado",
+              "dur": 4.067
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1160,
+            "y": 1010,
+            "turn": -0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "lado",
+              "dur": 4.067
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "CADÊ A COR?",
+          "dur": 1.8,
+          "color": "rosa",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.187,
+          "to": 3.747
+        },
+        {
+          "who": "luisinho",
+          "from": 0.187,
+          "to": 3.747
+        }
+      ]
+    },
+    {
+      "id": "s10_refrao",
+      "title": "Mão pra cima, ô-ô!",
+      "duration": 4.5,
+      "description": "Mão pra cima, ô-ô! / Arco-íris de amor!",
+      "background": "plano_jardim",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 560,
+            "zoom": 1.05
+          },
+          {
+            "t": 4.5,
+            "x": 1300,
+            "y": 560,
+            "zoom": 1.1,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1120,
+            "y": 930,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "bracos",
+              "dur": 4.5
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1480,
+            "y": 930,
+            "turn": -0.1,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "bracos",
+              "dur": 4.5
+            }
+          ]
+        }
+      },
+      "props": {
+        "arco": {
+          "start": {
+            "x": 1300,
+            "y": 900,
+            "z": 1,
+            "depth": 1.5
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "faixas": 0.0
+              }
+            },
+            {
+              "t": 0.4,
+              "pose": {
+                "faixas": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.4,
+              "pose": {
+                "faixas": 6.0
+              },
+              "ease": "out"
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "callouts": [
+        {
+          "t": 1.6,
+          "text": "ARCO-ÍRIS!",
+          "dur": 1.8,
+          "color": "roxo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 0.98
+        },
+        {
+          "who": "laurinha",
+          "from": 1.88,
+          "to": 4.2
+        },
+        {
+          "who": "luisinho",
+          "from": 0.0,
+          "to": 0.98
+        },
+        {
+          "who": "luisinho",
+          "from": 1.88,
+          "to": 4.2
+        }
+      ]
+    },
+    {
+      "id": "s11_intervalo",
+      "title": "Bora, turminha!",
+      "duration": 1.8333,
+      "description": "Bora, turminha!",
+      "background": "danca_raios_rosa",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 630,
+            "zoom": 1.75
+          },
+          {
+            "t": 1.833,
+            "x": 960,
+            "y": 630,
+            "zoom": 1.81,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "apontar_camera",
+              "dur": 1.733
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "BORA, TURMINHA!",
+          "dur": 1.633,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.36,
+          "to": 1.5
+        }
+      ],
+      "transition_in": {
+        "type": "zoom",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s12_intervalo",
+      "title": "Laurinha e Luisinho!",
+      "duration": 4.5,
+      "description": "Laurinha e Luisinho!",
+      "background": "danca_xadrez_verde",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.0
+          },
+          {
+            "t": 4.5,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 620,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "festa",
+              "dur": 4.5
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "festa",
+              "dur": 4.5
+            }
+          ]
+        },
+        "joaninha": {
+          "start": {
+            "x": 1300,
+            "y": 1010,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "festa",
+              "dur": 4.5
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "LAURINHA E LUISINHO!",
+          "dur": 1.8,
+          "color": "rosa",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 2.087
+        },
+        {
+          "who": "luisinho",
+          "from": 0.0,
+          "to": 2.087
+        }
+      ]
+    },
+    {
+      "id": "s13_verso",
+      "title": "Azul com amarelo... Verde!",
+      "duration": 2.7,
+      "description": "Azul com amarelo... Verde!",
+      "background": "padrao_respingos_amarelo",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.0
+          },
+          {
+            "t": 2.7,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 1700,
+            "y": 1010,
+            "turn": -0.35,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.2
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "point",
+              "dur": 0.8
+            },
+            {
+              "t": 1.1,
+              "do": "bacana",
+              "dur": 1.6
+            }
+          ]
+        }
+      },
+      "props": {
+        "potes": {
+          "start": {
+            "x": 820,
+            "y": 1000,
+            "z": 2,
+            "depth": 1.25
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "esq": 1,
+                "dir": 2,
+                "meio": 4,
+                "derrama": 0.0,
+                "nivel": 0.0,
+                "explode": 0.0
+              }
+            },
+            {
+              "t": 0.2,
+              "pose": {
+                "derrama": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.0,
+              "pose": {
+                "derrama": 1.0,
+                "nivel": 0.9
+              },
+              "ease": "inout"
+            },
+            {
+              "t": 1.1,
+              "pose": {
+                "explode": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.8,
+              "pose": {
+                "explode": 1.0
+              },
+              "ease": "out"
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 1.2,
+          "text": "VERDE!",
+          "dur": 1.5,
+          "color": "verde",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "luisinho",
+          "from": 0.0,
+          "to": 2.627
+        }
+      ],
+      "transition_in": {
+        "type": "circulo",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s14_verso",
+      "title": "Vermelho com amarelo... Laranja!",
+      "duration": 4.5334,
+      "description": "Vermelho com amarelo... Laranja!",
+      "background": "padrao_respingos_azul",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.0
+          },
+          {
+            "t": 4.533,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 1700,
+            "y": 1010,
+            "turn": -0.35,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.2
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "point",
+              "dur": 0.8
+            },
+            {
+              "t": 1.1,
+              "do": "bacana",
+              "dur": 3.433
+            }
+          ]
+        }
+      },
+      "props": {
+        "potes": {
+          "start": {
+            "x": 820,
+            "y": 1000,
+            "z": 2,
+            "depth": 1.25
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "esq": 3,
+                "dir": 2,
+                "meio": 5,
+                "derrama": 0.0,
+                "nivel": 0.0,
+                "explode": 0.0
+              }
+            },
+            {
+              "t": 0.2,
+              "pose": {
+                "derrama": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.0,
+              "pose": {
+                "derrama": 1.0,
+                "nivel": 0.9
+              },
+              "ease": "inout"
+            },
+            {
+              "t": 1.1,
+              "pose": {
+                "explode": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.8,
+              "pose": {
+                "explode": 1.0
+              },
+              "ease": "out"
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 1.2,
+          "text": "LARANJA!",
+          "dur": 1.8,
+          "color": "laranja",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "luisinho",
+          "from": 0.0,
+          "to": 3.387
+        }
+      ]
+    },
+    {
+      "id": "s15_verso",
+      "title": "Azul com vermelho... Roxo!",
+      "duration": 2.2333,
+      "description": "Azul com vermelho... Roxo!",
+      "background": "padrao_respingos_amarelo",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.0
+          },
+          {
+            "t": 2.233,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 1700,
+            "y": 1010,
+            "turn": -0.35,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.2
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "point",
+              "dur": 0.8
+            },
+            {
+              "t": 1.1,
+              "do": "bacana",
+              "dur": 1.133
+            }
+          ]
+        }
+      },
+      "props": {
+        "potes": {
+          "start": {
+            "x": 820,
+            "y": 1000,
+            "z": 2,
+            "depth": 1.25
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "esq": 1,
+                "dir": 3,
+                "meio": 6,
+                "derrama": 0.0,
+                "nivel": 0.0,
+                "explode": 0.0
+              }
+            },
+            {
+              "t": 0.2,
+              "pose": {
+                "derrama": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.0,
+              "pose": {
+                "derrama": 1.0,
+                "nivel": 0.9
+              },
+              "ease": "inout"
+            },
+            {
+              "t": 1.1,
+              "pose": {
+                "explode": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.8,
+              "pose": {
+                "explode": 1.0
+              },
+              "ease": "out"
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 1.2,
+          "text": "ROXO!",
+          "dur": 1.033,
+          "color": "roxo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "luisinho",
+          "from": 0.0,
+          "to": 2.223
+        }
+      ]
+    },
+    {
+      "id": "s16_verso",
+      "title": "Que mágica! Zum, zum!",
+      "duration": 2.2667,
+      "description": "Que mágica! Zum, zum!",
+      "background": "danca_bolinhas_roxo",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.0
+          },
+          {
+            "t": 2.267,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 740,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "palmas",
+              "dur": 2.267
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1180,
+            "y": 1010,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "point",
+              "dur": 0.8
+            },
+            {
+              "t": 1.1,
+              "do": "bacana",
+              "dur": 1.167
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "QUE MÁGICA!",
+          "dur": 1.8,
+          "color": "rosa",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "luisinho",
+          "from": 0.26,
+          "to": 2.257
+        }
+      ]
+    },
+    {
+      "id": "s17_verso",
+      "title": "E se misturar tudo? Ih! Marrom!",
+      "duration": 4.0666,
+      "description": "E se misturar tudo? Ih! Marrom!",
+      "background": "padrao_respingos_azul",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.0
+          },
+          {
+            "t": 4.067,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 1700,
+            "y": 1010,
+            "turn": -0.35,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.2
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.2,
+              "do": "point",
+              "dur": 0.8
+            },
+            {
+              "t": 1.1,
+              "do": "shock_reaction",
+              "dur": 0.8
+            },
+            {
+              "t": 2.0,
+              "do": "laugh",
+              "dur": 2.067
+            }
+          ],
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tinta": 0.0
+              }
+            },
+            {
+              "t": 1.1,
+              "pose": {
+                "tinta": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.6,
+              "pose": {
+                "tinta": 1.0
+              },
+              "ease": "out"
+            }
+          ]
+        }
+      },
+      "props": {
+        "potes": {
+          "start": {
+            "x": 820,
+            "y": 1000,
+            "z": 2,
+            "depth": 1.25
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "esq": 0,
+                "dir": 0,
+                "meio": 7,
+                "derrama": 0.0,
+                "nivel": 0.0,
+                "explode": 0.0
+              }
+            },
+            {
+              "t": 0.2,
+              "pose": {
+                "derrama": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.0,
+              "pose": {
+                "derrama": 1.0,
+                "nivel": 0.9
+              },
+              "ease": "inout"
+            },
+            {
+              "t": 1.1,
+              "pose": {
+                "explode": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.8,
+              "pose": {
+                "explode": 1.0
+              },
+              "ease": "out"
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 1.2,
+          "text": "MARROM!",
+          "dur": 1.8,
+          "color": "marrom",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "luisinho",
+          "from": 0.013,
+          "to": 4.057
+        }
+      ]
+    },
+    {
+      "id": "s18_refrao",
+      "title": "Cadê a cor? Cadê?",
+      "duration": 4.0334,
+      "description": "Cadê a cor? Cadê? / Cadê a cor? Cadê?",
+      "background": "danca_raios_laranja",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.0
+          },
+          {
+            "t": 4.033,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 700,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "look_around",
+              "dur": 1.6
+            },
+            {
+              "t": 1.7,
+              "do": "dance",
+              "style": "pulinho",
+              "dur": 2.333
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1220,
+            "y": 1010,
+            "turn": -0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "look_around",
+              "dur": 1.6
+            },
+            {
+              "t": 1.8,
+              "do": "dance",
+              "style": "pulinho",
+              "dur": 2.233
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "flash_in": true,
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "CADÊ A COR?",
+          "dur": 1.8,
+          "color": "rosa",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.047,
+          "to": 4.023
+        },
+        {
+          "who": "luisinho",
+          "from": 0.047,
+          "to": 4.023
+        }
+      ],
+      "transition_in": {
+        "type": "deslizar_cima",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s19_refrao",
+      "title": "Pula, pula, pula",
+      "duration": 3.1666,
+      "description": "Pula, pula, pula / Mostra a sua cor!",
+      "background": "plano_jardim",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 560,
+            "zoom": 1.15
+          },
+          {
+            "t": 3.167,
+            "x": 1300,
+            "y": 560,
+            "zoom": 1.2,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1130,
+            "y": 930,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "pulinho",
+              "dur": 1.6
+            },
+            {
+              "t": 1.7,
+              "do": "bacana",
+              "dur": 1.467
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1470,
+            "y": 930,
+            "turn": -0.1,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "pulinho",
+              "dur": 1.6
+            },
+            {
+              "t": 1.7,
+              "do": "bacana",
+              "dur": 1.467
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "callouts": [
+        {
+          "t": 1.6,
+          "text": "MOSTRA A SUA COR!",
+          "dur": 1.567,
+          "color": "laranja",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.173,
+          "to": 3.157
+        },
+        {
+          "who": "luisinho",
+          "from": 0.173,
+          "to": 3.157
+        }
+      ]
+    },
+    {
+      "id": "s20_refrao",
+      "title": "Cadê a cor? Cadê?",
+      "duration": 3.6,
+      "description": "Cadê a cor? Cadê? / Cadê a cor? Cadê?",
+      "background": "danca_bolinhas_verde",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.0
+          },
+          {
+            "t": 3.6,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 760,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "lado",
+              "dur": 3.6
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1160,
+            "y": 1010,
+            "turn": -0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "lado",
+              "dur": 3.6
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "CADÊ A COR?",
+          "dur": 1.8,
+          "color": "rosa",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.047,
+          "to": 3.59
+        },
+        {
+          "who": "luisinho",
+          "from": 0.047,
+          "to": 3.59
+        }
+      ]
+    },
+    {
+      "id": "s21_refrao",
+      "title": "Mão pra cima, ô-ô!",
+      "duration": 4.4667,
+      "description": "Mão pra cima, ô-ô! / Arco-íris de amor!",
+      "background": "plano_jardim",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 560,
+            "zoom": 1.05
+          },
+          {
+            "t": 4.467,
+            "x": 1300,
+            "y": 560,
+            "zoom": 1.1,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1120,
+            "y": 930,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "bracos",
+              "dur": 4.467
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1480,
+            "y": 930,
+            "turn": -0.1,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "bracos",
+              "dur": 4.467
+            }
+          ]
+        }
+      },
+      "props": {
+        "arco": {
+          "start": {
+            "x": 1300,
+            "y": 900,
+            "z": 1,
+            "depth": 1.5
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "faixas": 0.0
+              }
+            },
+            {
+              "t": 0.4,
+              "pose": {
+                "faixas": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.4,
+              "pose": {
+                "faixas": 6.0
+              },
+              "ease": "out"
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "callouts": [
+        {
+          "t": 1.6,
+          "text": "ARCO-ÍRIS!",
+          "dur": 1.8,
+          "color": "roxo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.127,
+          "to": 1.307
+        },
+        {
+          "who": "laurinha",
+          "from": 2.127,
+          "to": 4.457
+        },
+        {
+          "who": "luisinho",
+          "from": 0.127,
+          "to": 1.307
+        },
+        {
+          "who": "luisinho",
+          "from": 2.127,
+          "to": 4.457
+        }
+      ]
+    },
+    {
+      "id": "s22_intervalo",
+      "title": "Zum-zum, que massa!",
+      "duration": 2.7,
+      "description": "Zum-zum, que massa!",
+      "background": "danca_raios_amarelo",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 630,
+            "zoom": 1.75
+          },
+          {
+            "t": 2.7,
+            "x": 960,
+            "y": 630,
+            "zoom": 1.81,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3,
+            "tinta": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "bacana",
+              "dur": 2.6
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "ZUM-ZUM, QUE MASSA!",
+          "dur": 1.8,
+          "color": "laranja",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "luisinho",
+          "from": 0.08,
+          "to": 2.18
+        }
+      ],
+      "transition_in": {
+        "type": "deslizar_dir",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s23_ponte",
+      "title": "E o céu? Azul!",
+      "duration": 1.8,
+      "description": "E o céu? Azul!",
+      "background": "plano_ceu",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1250,
+            "y": 600,
+            "zoom": 1.3
+          },
+          {
+            "t": 1.8,
+            "x": 1250,
+            "y": 600,
+            "zoom": 1.35,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1150,
+            "y": 900,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "fly": 1
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "point",
+              "dur": 1.8
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.9,
+          "text": "AZUL!",
+          "dur": 0.9,
+          "color": "azul",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.06,
+          "to": 1.79
+        }
+      ],
+      "transition_in": {
+        "type": "deslizar_dir",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s24_ponte",
+      "title": "E o sol? Amarelo!",
+      "duration": 1.8,
+      "description": "E o sol? Amarelo!",
+      "background": "plano_ceu",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 600,
+            "zoom": 1.2
+          },
+          {
+            "t": 1.8,
+            "x": 1300,
+            "y": 600,
+            "zoom": 1.25,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1000,
+            "y": 900,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "fly": 1
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "point",
+              "dur": 1.8
+            }
+          ]
+        }
+      },
+      "props": {
+        "sol": {
+          "start": {
+            "x": 1560,
+            "y": 1000,
+            "z": 1,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "giro": 0.0
+              }
+            },
+            {
+              "t": 1.8,
+              "pose": {
+                "giro": 0.5
+              }
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.8,
+          "text": "AMARELO!",
+          "dur": 1.0,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.28,
+          "to": 1.79
+        }
+      ]
+    },
+    {
+      "id": "s25_ponte",
+      "title": "E a Laurinha? Rosinha!",
+      "duration": 1.8,
+      "description": "E a Laurinha? Rosinha!",
+      "background": "padrao_lacos_roxo",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 630,
+            "zoom": 1.75
+          },
+          {
+            "t": 1.8,
+            "x": 960,
+            "y": 630,
+            "zoom": 1.81,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "ajeitar_laco",
+              "dur": 1.7
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.8,
+          "text": "ROSINHA!",
+          "dur": 1.0,
+          "color": "rosa",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.28,
+          "to": 1.79
+        }
+      ]
+    },
+    {
+      "id": "s26_ponte",
+      "title": "E o Luisinho? Azulzinho!",
+      "duration": 1.8,
+      "description": "E o Luisinho? Azulzinho!",
+      "background": "danca_bolinhas_amarelo",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 630,
+            "zoom": 1.75
+          },
+          {
+            "t": 1.8,
+            "x": 960,
+            "y": 630,
+            "zoom": 1.81,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "bacana",
+              "dur": 1.7
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.9,
+          "text": "AZULZINHO!",
+          "dur": 0.9,
+          "color": "azul",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s27_ponte",
+      "title": "Pro lado... pro outro...",
+      "duration": 1.7667,
+      "description": "Pro lado... pro outro...",
+      "background": "plano_jardim",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 560,
+            "zoom": 1.15
+          },
+          {
+            "t": 1.767,
+            "x": 1300,
+            "y": 560,
+            "zoom": 1.2,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1130,
+            "y": 930,
+            "turn": 0.05,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "lado",
+              "dur": 1.767
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1470,
+            "y": 930,
+            "turn": -0.05,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "lado",
+              "dur": 1.767
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "PRO LADO… PRO OUTRO!",
+          "dur": 1.567,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.32,
+          "to": 1.757
+        }
+      ]
+    },
+    {
+      "id": "s28_ponte",
+      "title": "Agora roda... e pula!",
+      "duration": 2.2333,
+      "description": "Agora roda... e pula!",
+      "background": "plano_jardim",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 560,
+            "zoom": 1.15
+          },
+          {
+            "t": 2.233,
+            "x": 1300,
+            "y": 560,
+            "zoom": 1.2,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1130,
+            "y": 930,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "roda",
+              "dur": 1.1
+            },
+            {
+              "t": 1.2,
+              "do": "jump",
+              "dur": 0.7
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1470,
+            "y": 930,
+            "turn": -0.1,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "roda",
+              "dur": 1.1
+            },
+            {
+              "t": 1.2,
+              "do": "jump",
+              "dur": 0.7
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.9,
+          "text": "RODA… E PULA!",
+          "dur": 1.333,
+          "color": "verde",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.293,
+          "to": 2.213
+        }
+      ]
+    },
+    {
+      "id": "s29_subida",
+      "title": "Vermelho! Laranja!",
+      "duration": 5.3333,
+      "description": "Vermelho! Laranja! / Amarelo! Verde! / Azul e roxo!",
+      "background": "plano_jardim",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.08
+          },
+          {
+            "t": 5.333,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.0,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1050,
+            "y": 930,
+            "turn": 0.1,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "palmas",
+              "dur": 5.333
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1550,
+            "y": 930,
+            "turn": -0.1,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "palmas",
+              "dur": 5.333
+            }
+          ]
+        }
+      },
+      "props": {
+        "arco": {
+          "start": {
+            "x": 1300,
+            "y": 900,
+            "z": 1,
+            "depth": 1.6
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "faixas": 0.0
+              }
+            },
+            {
+              "t": 0.6,
+              "pose": {
+                "faixas": 1.0
+              }
+            },
+            {
+              "t": 1.3,
+              "pose": {
+                "faixas": 2.0
+              }
+            },
+            {
+              "t": 2.2,
+              "pose": {
+                "faixas": 3.0
+              }
+            },
+            {
+              "t": 2.9,
+              "pose": {
+                "faixas": 4.0
+              }
+            },
+            {
+              "t": 4.1,
+              "pose": {
+                "faixas": 5.0
+              }
+            },
+            {
+              "t": 4.7,
+              "pose": {
+                "faixas": 6.0
+              }
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "VERMELHO! LARANJA!",
+          "dur": 1.6,
+          "color": "vermelho",
+          "y": 170
+        },
+        {
+          "t": 1.8,
+          "text": "AMARELO! VERDE!",
+          "dur": 1.8,
+          "color": "verde",
+          "y": 170
+        },
+        {
+          "t": 3.8,
+          "text": "AZUL E ROXO!",
+          "dur": 1.5,
+          "color": "roxo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 5.323
+        },
+        {
+          "who": "luisinho",
+          "from": 0.0,
+          "to": 5.323
+        }
+      ],
+      "transition_in": {
+        "type": "cortina",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s30_subida",
+      "title": "Olha o arco-íris! Uau!",
+      "duration": 3.5667,
+      "description": "Olha o arco-íris! Uau!",
+      "background": "plano_jardim",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 3.567,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.04,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 820,
+            "y": 930,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.3,
+              "do": "fly",
+              "dur": 2.4,
+              "to_x": 1980,
+              "to_y": 740
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 460,
+            "y": 930,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.5,
+              "do": "fly",
+              "dur": 2.4,
+              "to_x": 1600,
+              "to_y": 800
+            }
+          ]
+        }
+      },
+      "props": {
+        "arco": {
+          "start": {
+            "x": 1300,
+            "y": 900,
+            "z": 1,
+            "faixas": 6.0,
+            "depth": 1.6
+          },
+          "exposure": 1
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "callouts": [
+        {
+          "t": 0.3,
+          "text": "UAU!",
+          "dur": 1.8,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.067,
+          "to": 3.557
+        },
+        {
+          "who": "luisinho",
+          "from": 0.067,
+          "to": 3.557
+        }
+      ]
+    },
+    {
+      "id": "s31_intervalo",
+      "title": "Bora, turminha!",
+      "duration": 2.6333,
+      "description": "Bora, turminha!",
+      "background": "plano_jardim",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 2.633,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.05,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1000,
+            "y": 930,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "festa",
+              "dur": 2.633
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1300,
+            "y": 930,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "festa",
+              "dur": 2.633
+            }
+          ]
+        },
+        "joaninha": {
+          "start": {
+            "x": 1600,
+            "y": 930,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "festa",
+              "dur": 2.633
+            }
+          ]
+        },
+        "formiguinha": {
+          "start": {
+            "x": 700,
+            "y": 930,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "festa",
+              "dur": 2.633
+            }
+          ]
+        }
+      },
+      "props": {
+        "arco": {
+          "start": {
+            "x": 1300,
+            "y": 900,
+            "z": 1,
+            "faixas": 6.0,
+            "depth": 1.6
+          },
+          "exposure": 1
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "BORA, TURMINHA!",
+          "dur": 1.8,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.2,
+          "to": 1.56
+        }
+      ],
+      "transition_in": {
+        "type": "deslizar_cima",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s32_refrao",
+      "title": "Cadê a cor? Cadê?",
+      "duration": 4.4334,
+      "description": "Cadê a cor? Cadê? / Cadê a cor? Cadê?",
+      "background": "danca_raios_verde",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.0
+          },
+          {
+            "t": 4.433,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 700,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "look_around",
+              "dur": 1.6
+            },
+            {
+              "t": 1.7,
+              "do": "dance",
+              "style": "pulinho",
+              "dur": 2.733
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1220,
+            "y": 1010,
+            "turn": -0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "look_around",
+              "dur": 1.6
+            },
+            {
+              "t": 1.8,
+              "do": "dance",
+              "style": "pulinho",
+              "dur": 2.633
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "flash_in": true,
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "CADÊ A COR?",
+          "dur": 1.8,
+          "color": "rosa",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.307,
+          "to": 4.207
+        },
+        {
+          "who": "luisinho",
+          "from": 0.307,
+          "to": 4.207
+        }
+      ],
+      "transition_in": {
+        "type": "deslizar_esq",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s33_refrao",
+      "title": "Pula, pula, pula",
+      "duration": 3.1333,
+      "description": "Pula, pula, pula / Mostra a sua cor!",
+      "background": "plano_jardim",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 560,
+            "zoom": 1.15
+          },
+          {
+            "t": 3.133,
+            "x": 1300,
+            "y": 560,
+            "zoom": 1.2,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1130,
+            "y": 930,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "pulinho",
+              "dur": 1.6
+            },
+            {
+              "t": 1.7,
+              "do": "bacana",
+              "dur": 1.433
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1470,
+            "y": 930,
+            "turn": -0.1,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "pulinho",
+              "dur": 1.6
+            },
+            {
+              "t": 1.7,
+              "do": "bacana",
+              "dur": 1.433
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "callouts": [
+        {
+          "t": 1.6,
+          "text": "MOSTRA A SUA COR!",
+          "dur": 1.533,
+          "color": "laranja",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.193,
+          "to": 3.123
+        },
+        {
+          "who": "luisinho",
+          "from": 0.193,
+          "to": 3.123
+        }
+      ]
+    },
+    {
+      "id": "s34_refrao",
+      "title": "Cadê a cor? Cadê?",
+      "duration": 4.4333,
+      "description": "Cadê a cor? Cadê? / Cadê a cor? Cadê?",
+      "background": "danca_xadrez_vermelho",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.0
+          },
+          {
+            "t": 4.433,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 760,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "lado",
+              "dur": 4.433
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1160,
+            "y": 1010,
+            "turn": -0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "lado",
+              "dur": 4.433
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "CADÊ A COR?",
+          "dur": 1.8,
+          "color": "rosa",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.1,
+          "to": 1.92
+        },
+        {
+          "who": "laurinha",
+          "from": 2.9,
+          "to": 4.423
+        },
+        {
+          "who": "luisinho",
+          "from": 0.1,
+          "to": 1.92
+        },
+        {
+          "who": "luisinho",
+          "from": 2.9,
+          "to": 4.423
+        }
+      ]
+    },
+    {
+      "id": "s35_refrao",
+      "title": "Mão pra cima, ô-ô!",
+      "duration": 2.6334,
+      "description": "Mão pra cima, ô-ô! / Arco-íris de amor!",
+      "background": "plano_jardim",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 560,
+            "zoom": 1.05
+          },
+          {
+            "t": 2.633,
+            "x": 1300,
+            "y": 560,
+            "zoom": 1.1,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1120,
+            "y": 930,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "bracos",
+              "dur": 2.633
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1480,
+            "y": 930,
+            "turn": -0.1,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "bracos",
+              "dur": 2.633
+            }
+          ]
+        }
+      },
+      "props": {
+        "arco": {
+          "start": {
+            "x": 1300,
+            "y": 900,
+            "z": 1,
+            "depth": 1.5
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "faixas": 0.0
+              }
+            },
+            {
+              "t": 0.4,
+              "pose": {
+                "faixas": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.4,
+              "pose": {
+                "faixas": 6.0
+              },
+              "ease": "out"
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "callouts": [
+        {
+          "t": 1.6,
+          "text": "ARCO-ÍRIS!",
+          "dur": 1.033,
+          "color": "roxo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.127,
+          "to": 0.507
+        },
+        {
+          "who": "laurinha",
+          "from": 1.227,
+          "to": 2.623
+        },
+        {
+          "who": "luisinho",
+          "from": 0.127,
+          "to": 0.507
+        },
+        {
+          "who": "luisinho",
+          "from": 1.227,
+          "to": 2.623
+        }
+      ]
+    },
+    {
+      "id": "s36_refrao",
+      "title": "Cadê a cor? Cadê?",
+      "duration": 2.6666,
+      "description": "Cadê a cor? Cadê? / Cadê a cor? Cadê?",
+      "background": "danca_raios_roxo",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.0
+          },
+          {
+            "t": 2.667,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 620,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "pulinho",
+              "dur": 2.667
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "pulinho",
+              "dur": 2.667
+            }
+          ]
+        },
+        "joaninha": {
+          "start": {
+            "x": 1300,
+            "y": 1010,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "pulinho",
+              "dur": 2.667
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "flash_in": true,
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "CADÊ A COR?",
+          "dur": 1.8,
+          "color": "rosa",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.133,
+          "to": 2.657
+        },
+        {
+          "who": "luisinho",
+          "from": 0.133,
+          "to": 2.657
+        }
+      ],
+      "transition_in": {
+        "type": "zoom",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s37_refrao",
+      "title": "Mão pra cima, ô-ô!",
+      "duration": 5.3334,
+      "description": "Mão pra cima, ô-ô! / Arco-íris de amor!",
+      "background": "plano_jardim",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 5.333,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.05,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "formiguinha": {
+          "start": {
+            "x": 700,
+            "y": 930,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "bracos",
+              "dur": 5.333
+            }
+          ]
+        },
+        "laurinha": {
+          "start": {
+            "x": 1050,
+            "y": 930,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "bracos",
+              "dur": 5.333
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1350,
+            "y": 930,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "bracos",
+              "dur": 5.333
+            }
+          ]
+        },
+        "joaninha": {
+          "start": {
+            "x": 1650,
+            "y": 930,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "bracos",
+              "dur": 5.333
+            }
+          ]
+        }
+      },
+      "props": {
+        "arco": {
+          "start": {
+            "x": 1300,
+            "y": 900,
+            "z": 1,
+            "faixas": 6.0,
+            "depth": 1.6
+          },
+          "exposure": 1
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "callouts": [
+        {
+          "t": 1.8,
+          "text": "ARCO-ÍRIS!",
+          "dur": 1.8,
+          "color": "roxo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.242,
+          "to": 2.177
+        },
+        {
+          "who": "laurinha",
+          "from": 3.047,
+          "to": 5.323
+        },
+        {
+          "who": "luisinho",
+          "from": 0.242,
+          "to": 2.177
+        },
+        {
+          "who": "luisinho",
+          "from": 3.047,
+          "to": 5.323
+        }
+      ]
+    },
+    {
+      "id": "s38_final",
+      "title": "Tchau, turminha! Zum!",
+      "duration": 3.1,
+      "description": "Tchau, turminha! Zum!",
+      "background": "plano_jardim",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 560,
+            "zoom": 1.2
+          },
+          {
+            "t": 3.1,
+            "x": 1300,
+            "y": 560,
+            "zoom": 1.25,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1130,
+            "y": 930,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "tchau",
+              "dur": 3.1
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1470,
+            "y": 930,
+            "turn": -0.1,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "tchau",
+              "dur": 3.1
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "TCHAU, TURMINHA!",
+          "dur": 1.8,
+          "color": "rosa",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.093,
+          "to": 2.833
+        },
+        {
+          "who": "luisinho",
+          "from": 0.093,
+          "to": 2.833
+        }
+      ],
+      "transition_in": {
+        "type": "giro",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s39_final",
+      "title": "Tchau, turminha! Zum!",
+      "duration": 3.7666,
+      "description": "Tchau, turminha! Zum!",
+      "background": "danca_bolinhas_rosa",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 680,
+            "zoom": 1.3
+          },
+          {
+            "t": 3.767,
+            "x": 960,
+            "y": 680,
+            "zoom": 1.36,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "joaninha": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "tchau",
+              "dur": 3.767
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.3,
+          "text": "TCHAU!",
+          "dur": 1.8,
+          "color": "vermelho",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s40_final",
+      "title": "amigos da música dançando",
+      "duration": 4.6,
+      "description": "",
+      "background": "plano_jardim",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 560,
+            "zoom": 1.1
+          },
+          {
+            "t": 4.6,
+            "x": 1300,
+            "y": 560,
+            "zoom": 1.1500000000000001,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "formiguinha": {
+          "start": {
+            "x": 1050,
+            "y": 930,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "festa",
+              "dur": 4.6
+            }
+          ]
+        },
+        "joaninha": {
+          "start": {
+            "x": 1350,
+            "y": 930,
+            "turn": 0.1,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "festa",
+              "dur": 4.6
+            }
+          ]
+        }
+      },
+      "props": {
+        "morango": {
+          "start": {
+            "x": 1700,
+            "y": 950,
+            "z": 2,
+            "cara": 1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.4,
+              "pose": {
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 0.8,
+              "pose": {
+                "pulo": 1.0
+              }
+            },
+            {
+              "t": 1.2,
+              "pose": {
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 2.4,
+              "pose": {
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 2.8,
+              "pose": {
+                "pulo": 1.0
+              }
+            },
+            {
+              "t": 3.2,
+              "pose": {
+                "pulo": 0.0
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "s41_final",
+      "title": "Tchau, turminha!",
+      "duration": 1.7667,
+      "description": "Tchau, turminha!",
+      "background": "danca_bolinhas_verde",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 680,
+            "zoom": 1.3
+          },
+          {
+            "t": 1.767,
+            "x": 960,
+            "y": 680,
+            "zoom": 1.36,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "formiguinha": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "tchau",
+              "dur": 1.767
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.3,
+          "text": "TCHAU!",
+          "dur": 1.467,
+          "color": "amarelo",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s42_final",
+      "title": "Tchau, turminha!",
+      "duration": 3.5333,
+      "description": "Tchau, turminha!",
+      "background": "plano_ceu",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 600,
+            "zoom": 1.15
+          },
+          {
+            "t": 3.533,
+            "x": 1300,
+            "y": 600,
+            "zoom": 1.2,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": -200,
+            "y": 700,
+            "turn": 0.4,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "fly",
+              "dur": 3.2,
+              "to_x": 1000,
+              "to_y": 640
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 2800,
+            "y": 720,
+            "turn": -0.4,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "fly",
+              "dur": 3.2,
+              "to_x": 1640,
+              "to_y": 660
+            }
+          ]
+        }
+      },
+      "props": {
+        "sol": {
+          "start": {
+            "x": 1300,
+            "y": 1040,
+            "z": 1,
+            "depth": 1.4
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "giro": 0.0
+              }
+            },
+            {
+              "t": 3.0,
+              "pose": {
+                "giro": 0.6
+              }
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.3,
+          "text": "TCHAU!",
+          "dur": 1.8,
+          "color": "laranja",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.2,
+          "to": 2.1
+        },
+        {
+          "who": "luisinho",
+          "from": 0.2,
+          "to": 2.1
+        }
+      ]
+    },
+    {
+      "id": "s43_final",
+      "title": "Zum! Tchau, turminha! Zum!",
+      "duration": 5.9,
+      "description": "Zum! Tchau, turminha! Zum!",
+      "background": "plano_jardim",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540,
+            "zoom": 1.05
+          },
+          {
+            "t": 5.9,
+            "x": 1300,
+            "y": 540,
+            "zoom": 1.1,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1130,
+            "y": 930,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "wave",
+              "dur": 2.6
+            },
+            {
+              "t": 3.0,
+              "do": "fly",
+              "dur": 1.2,
+              "to_x": 2400,
+              "to_y": 250
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1470,
+            "y": 930,
+            "turn": -0.1,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "wave",
+              "dur": 2.6
+            },
+            {
+              "t": 3.1,
+              "do": "fly",
+              "dur": 1.2,
+              "to_x": 2500,
+              "to_y": 300
+            }
+          ]
+        }
+      },
+      "props": {
+        "arco": {
+          "start": {
+            "x": 1300,
+            "y": 900,
+            "z": 1,
+            "faixas": 6.0,
+            "depth": 1.6
+          },
+          "exposure": 1
+        }
+      },
+      "fx": [
+        "coracoes"
+      ],
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "TCHAU, TURMINHA!",
+          "dur": 1.8,
+          "color": "rosa",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.267,
+          "to": 4.687
+        },
+        {
+          "who": "luisinho",
+          "from": 0.267,
+          "to": 4.687
+        }
+      ],
+      "transition_out": "fade"
+    }
+  ],
+  "projeto": "laurinha/ep04-cade-a-cor"
+}

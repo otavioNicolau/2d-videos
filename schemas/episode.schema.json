@@ -178,6 +178,10 @@
           "maxItems": 2
         }
       }
+    },
+    "projeto": {
+      "type": "string",
+      "description": "caminho do projeto em projects/ (multicanal): 'laurinha/ep28-…', 'fofolucos/ep01-…'"
     }
   },
   "$defs": {
@@ -445,7 +449,11 @@
         },
         "escurece": {
           "type": "array",
-          "items": {"type": "number", "minimum": 0, "maximum": 0.9},
+          "items": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 0.9
+          },
           "minItems": 2,
           "maxItems": 2
         },

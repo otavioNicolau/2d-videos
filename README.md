@@ -3,7 +3,7 @@
 Estúdio de animação 2D de comédia física (estilo desenho clássico de TV, personagens e universo **originais**) que
 transforma um episódio descrito em JSON — escrito por IA ou à mão — em vídeo MP4, usando Krita, OpenToonz, Godot e FFmpeg.
 
-Primeiro episódio (MVP): **“A Torta do Caramelo”** — `projects/torta-do-caramelo/` (≈31 s, 7 planos).
+Primeiro episódio (MVP): **“A Torta do Caramelo”** — `projects/_laboratorio/torta-do-caramelo/` (≈31 s, 7 planos).
 
 ## O que tem de verdade
 - Personagens desenhados por código vetorial, **redesenhados quadro a quadro** a partir da pose (ADR-0002):
@@ -32,3 +32,12 @@ Arquitetura: [`docs/arquitetura.md`](docs/arquitetura.md) · Decisões: [`docs/a
 Código, desenhos, cenários, efeitos e trilha gerados por este repositório. Vozes: Higgs TTS 3 (Boson AI, Creator Use Grant —
 vídeos publicados exigem na descrição: “This audio was created with Boson AI's Higgs Audio — https://www.boson.ai/higgs-audio”);
 referências de voz geradas com Kokoro-82M (Apache-2.0). Rhubarb Lip Sync: MIT.
+
+## Canais (multicanal, 20/11/2026)
+| Canal | Pasta | Episódios | Entregas |
+|---|---|---|---|
+| Laurinha e Luisinho (padrão) | `canais/laurinha/` | `projects/laurinha/` | `Videos\Laurinha e Luisinho\` |
+| Fofolucos | `canais/fofolucos/` | `projects/fofolucos/` | `Videos\Fofolucos\` |
+
+Exemplos: `toonstudio musica lista` (Laurinha) · `toonstudio --canal fofolucos musica prompt 01` ·
+`toonstudio build laurinha/ep28-do-pe-a-cabeca` · `toonstudio limpar --simular` (rascunhos de render: 3 últimas músicas por canal).

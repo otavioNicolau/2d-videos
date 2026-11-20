@@ -1,0 +1,5588 @@
+{
+  "schema": "1.1",
+  "id": "ep17-que-forma-e-essa",
+  "title": "Que Forma É Essa?",
+  "logline": "Clipe de \"Que Forma É Essa?\" — as formas escondidas na mesa do lanche. Montado do roteiro verso a verso (roteiro.json).",
+  "fps": 30,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "background": "plano_parque",
+  "soundtrack": {
+    "file": "musica/trabalho.wav",
+    "analysis": "analise/song.json",
+    "start": 0.0,
+    "end": 178.7667,
+    "fade_out": 0.6,
+    "beat_grid": "full"
+  },
+  "captions": {
+    "lyrics": "analise/letra.json",
+    "style": "palavra_a_palavra"
+  },
+  "overlays": {
+    "logo": true,
+    "channel": [
+      "LAURINHA",
+      "e Luisinho"
+    ]
+  },
+  "cast": {
+    "laurinha": {
+      "character": "laurinha"
+    },
+    "luisinho": {
+      "character": "luisinho"
+    },
+    "mesa": {
+      "character": "mesa"
+    },
+    "c0": {
+      "character": "comida_forma"
+    },
+    "c1": {
+      "character": "comida_forma"
+    },
+    "c2": {
+      "character": "comida_forma"
+    },
+    "c3": {
+      "character": "comida_forma"
+    },
+    "c4": {
+      "character": "comida_forma"
+    },
+    "pz": {
+      "character": "comida_forma"
+    },
+    "tr": {
+      "character": "comida_forma"
+    },
+    "qj": {
+      "character": "comida_forma"
+    },
+    "ov": {
+      "character": "comida_forma"
+    },
+    "pr": {
+      "character": "comida_forma"
+    },
+    "joinha": {
+      "character": "joinha"
+    },
+    "mamae": {
+      "character": "mamae"
+    },
+    "botao": {
+      "character": "botao_inscrever"
+    }
+  },
+  "approval": {
+    "storyboard": true,
+    "final_render": false
+  },
+  "scenes": [
+    {
+      "id": "s01_intro",
+      "title": "Que forma é essa? Zum, zum!",
+      "duration": 9.7,
+      "description": "Que forma é essa? Zum, zum! / Que forma é essa?",
+      "background": "plano_cozinha",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 9.7,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.1,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": -250,
+            "y": 520,
+            "turn": 0.4,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.3,
+              "do": "fly",
+              "dur": 2.2,
+              "to_x": 700,
+              "to_y": 930
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 2900,
+            "y": 480,
+            "turn": -0.4,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.6,
+              "do": "fly",
+              "dur": 2.2,
+              "to_x": 1900,
+              "to_y": 930
+            }
+          ]
+        }
+      },
+      "props": {
+        "mesa": {
+          "start": {
+            "x": 1300,
+            "y": 930,
+            "z": 1,
+            "depth": 1.3
+          },
+          "exposure": 1
+        },
+        "c0": {
+          "start": {
+            "x": 980,
+            "y": 618.0,
+            "z": 2,
+            "tipo": 0,
+            "depth": 0.42
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 2.95,
+              "pose": {
+                "pulo": 0.0
+              },
+              "in": 2.92
+            },
+            {
+              "t": 3.5,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.52
+            }
+          ]
+        },
+        "c1": {
+          "start": {
+            "x": 1150,
+            "y": 618.0,
+            "z": 2,
+            "tipo": 1,
+            "depth": 0.42
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 3.2,
+              "pose": {
+                "pulo": 0.0
+              },
+              "in": 3.17
+            },
+            {
+              "t": 3.75,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.52
+            }
+          ]
+        },
+        "c2": {
+          "start": {
+            "x": 1310,
+            "y": 618.0,
+            "z": 2,
+            "tipo": 2,
+            "depth": 0.42
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 3.45,
+              "pose": {
+                "pulo": 0.0
+              },
+              "in": 3.42
+            },
+            {
+              "t": 4.0,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.52
+            }
+          ]
+        },
+        "c3": {
+          "start": {
+            "x": 1470,
+            "y": 618.0,
+            "z": 2,
+            "tipo": 3,
+            "depth": 0.42
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 3.7,
+              "pose": {
+                "pulo": 0.0
+              },
+              "in": 3.67
+            },
+            {
+              "t": 4.25,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.52
+            }
+          ]
+        },
+        "c4": {
+          "start": {
+            "x": 1630,
+            "y": 618.0,
+            "z": 2,
+            "tipo": 4,
+            "depth": 0.42
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 3.95,
+              "pose": {
+                "pulo": 0.0
+              },
+              "in": 3.92
+            },
+            {
+              "t": 4.5,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.52
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 2.8,
+          "text": "QUE FORMA É ESSA?",
+          "dur": 1.8,
+          "color": "laranja",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 2.92,
+          "to": 8.06
+        }
+      ]
+    },
+    {
+      "id": "s02_intro",
+      "title": "Laurinha e Luisinho!",
+      "duration": 5.0,
+      "description": "Laurinha e Luisinho!",
+      "background": "danca_raios_amarelo",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.0
+          },
+          {
+            "t": 5.0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 560,
+            "y": 1010,
+            "turn": 0.25,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.15
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "festa",
+              "dur": 5.0
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1360,
+            "y": 1010,
+            "turn": -0.25,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.15
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "festa",
+              "dur": 5.0
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "callouts": [
+        {
+          "t": 0.15,
+          "text": "LAURINHA E LUISINHO!",
+          "dur": 1.8,
+          "color": "rosa",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.06,
+          "to": 2.68
+        }
+      ]
+    },
+    {
+      "id": "s03_verso",
+      "title": "Olha a mesa do lanche,",
+      "duration": 3.7667,
+      "description": "Olha a mesa do lanche, / Que coisa engraçada:",
+      "background": "plano_cozinha",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 600,
+            "zoom": 1.15
+          },
+          {
+            "t": 3.767,
+            "x": 1300,
+            "y": 600,
+            "zoom": 1.2,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 750,
+            "y": 930,
+            "turn": 0.4,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.2,
+              "do": "point",
+              "dur": 3.567
+            }
+          ]
+        }
+      },
+      "props": {
+        "mesa": {
+          "start": {
+            "x": 1300,
+            "y": 930,
+            "z": 1,
+            "depth": 1.3
+          },
+          "exposure": 1
+        },
+        "c0": {
+          "start": {
+            "x": 980,
+            "y": 618.0,
+            "z": 2,
+            "tipo": 0,
+            "depth": 0.42
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 0.5499999999999999,
+              "pose": {
+                "pulo": 0.0
+              },
+              "in": 0.52
+            },
+            {
+              "t": 1.1,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.52
+            }
+          ]
+        },
+        "c1": {
+          "start": {
+            "x": 1150,
+            "y": 618.0,
+            "z": 2,
+            "tipo": 1,
+            "depth": 0.42
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 0.7999999999999999,
+              "pose": {
+                "pulo": 0.0
+              },
+              "in": 0.77
+            },
+            {
+              "t": 1.35,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.52
+            }
+          ]
+        },
+        "c2": {
+          "start": {
+            "x": 1310,
+            "y": 618.0,
+            "z": 2,
+            "tipo": 2,
+            "depth": 0.42
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 1.05,
+              "pose": {
+                "pulo": 0.0
+              },
+              "in": 1.02
+            },
+            {
+              "t": 1.6,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.52
+            }
+          ]
+        },
+        "c3": {
+          "start": {
+            "x": 1470,
+            "y": 618.0,
+            "z": 2,
+            "tipo": 3,
+            "depth": 0.42
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 1.3,
+              "pose": {
+                "pulo": 0.0
+              },
+              "in": 1.27
+            },
+            {
+              "t": 1.85,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.52
+            }
+          ]
+        },
+        "c4": {
+          "start": {
+            "x": 1630,
+            "y": 618.0,
+            "z": 2,
+            "tipo": 4,
+            "depth": 0.42
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 1.55,
+              "pose": {
+                "pulo": 0.0
+              },
+              "in": 1.52
+            },
+            {
+              "t": 2.1,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.52
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 1.6,
+          "text": "QUE ENGRAÇADO!",
+          "dur": 1.8,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.26,
+          "to": 3.757
+        }
+      ],
+      "transition_in": {
+        "type": "giro",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s04_verso",
+      "title": "A pizza é redondinha,",
+      "duration": 3.3666,
+      "description": "A pizza é redondinha, / A torrada é quadrada!",
+      "background": "plano_cozinha",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 600,
+            "zoom": 1.15
+          },
+          {
+            "t": 3.367,
+            "x": 1300,
+            "y": 600,
+            "zoom": 1.2,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {},
+      "props": {
+        "pz": {
+          "start": {
+            "x": 1050,
+            "y": 930,
+            "z": 3,
+            "tipo": 0,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 0.6499999999999999,
+              "pose": {
+                "brilho": 0.0
+              },
+              "in": 0.62
+            },
+            {
+              "t": 0.7999999999999999,
+              "pose": {
+                "boca": 0.8
+              }
+            },
+            {
+              "t": 1.0,
+              "pose": {
+                "brilho": 1.0
+              },
+              "ease": "out",
+              "in": 0.32
+            },
+            {
+              "t": 1.2999999999999998,
+              "pose": {
+                "boca": 0.0
+              },
+              "in": 0.47
+            }
+          ]
+        },
+        "tr": {
+          "start": {
+            "x": 1550,
+            "y": 930,
+            "z": 3,
+            "tipo": 1,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 1.91,
+              "pose": {
+                "brilho": 0.0
+              },
+              "in": 1.88
+            },
+            {
+              "t": 2.06,
+              "pose": {
+                "boca": 0.8
+              }
+            },
+            {
+              "t": 2.26,
+              "pose": {
+                "brilho": 1.0
+              },
+              "ease": "out",
+              "in": 0.32
+            },
+            {
+              "t": 2.56,
+              "pose": {
+                "boca": 0.0
+              },
+              "in": 0.47
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 1.0,
+          "text": "CÍRCULO!",
+          "dur": 1.8,
+          "color": "vermelho",
+          "y": 170
+        },
+        {
+          "t": 2.26,
+          "text": "QUADRADO!",
+          "dur": 1.107,
+          "color": "azul",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s05_verso",
+      "title": "O queijo é um triângulo,",
+      "duration": 3.3667,
+      "description": "O queijo é um triângulo, / O ovo é oval,",
+      "background": "plano_cozinha",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 600,
+            "zoom": 1.15
+          },
+          {
+            "t": 3.367,
+            "x": 1300,
+            "y": 600,
+            "zoom": 1.2,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {},
+      "props": {
+        "qj": {
+          "start": {
+            "x": 1050,
+            "y": 930,
+            "z": 3,
+            "tipo": 2,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 0.6399999999999999,
+              "pose": {
+                "brilho": 0.0
+              },
+              "in": 0.61
+            },
+            {
+              "t": 0.7899999999999999,
+              "pose": {
+                "boca": 0.8
+              }
+            },
+            {
+              "t": 0.99,
+              "pose": {
+                "brilho": 1.0
+              },
+              "ease": "out",
+              "in": 0.32
+            },
+            {
+              "t": 1.29,
+              "pose": {
+                "boca": 0.0
+              },
+              "in": 0.47
+            }
+          ]
+        },
+        "ov": {
+          "start": {
+            "x": 1550,
+            "y": 930,
+            "z": 3,
+            "tipo": 3,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 2.4000000000000004,
+              "pose": {
+                "brilho": 0.0
+              },
+              "in": 2.37
+            },
+            {
+              "t": 2.5500000000000003,
+              "pose": {
+                "boca": 0.8
+              }
+            },
+            {
+              "t": 2.75,
+              "pose": {
+                "brilho": 1.0
+              },
+              "ease": "out",
+              "in": 0.32
+            },
+            {
+              "t": 3.0500000000000003,
+              "pose": {
+                "boca": 0.0
+              },
+              "in": 0.47
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.99,
+          "text": "TRIÂNGULO!",
+          "dur": 1.8,
+          "color": "amarelo",
+          "y": 170
+        },
+        {
+          "t": 2.75,
+          "text": "OVAL!",
+          "dur": 0.617,
+          "color": "rosa",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s06_verso",
+      "title": "E a boca do Luisinho",
+      "duration": 3.3333,
+      "description": "E a boca do Luisinho / Abriu num círculo total!",
+      "background": "plano_cozinha",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 550,
+            "zoom": 1.75
+          },
+          {
+            "t": 3.333,
+            "x": 1300,
+            "y": 550,
+            "zoom": 1.81,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 1300,
+            "y": 930,
+            "turn": 0.0,
+            "expr": "shock",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 1.4500000000000002,
+              "do": "take"
+            }
+          ],
+          "keys": [
+            {
+              "t": 2.1,
+              "pose": {
+                "boca_o": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.45,
+              "pose": {
+                "boca_o": 1.0
+              },
+              "ease": "out",
+              "in": 0.3
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 2.35,
+          "text": "UM CÍRCULO!",
+          "dur": 0.983,
+          "color": "laranja",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s07_refrao",
+      "title": "Que forma é essa?",
+      "duration": 7.5667,
+      "description": "Que forma é essa? / Responde ligeiro! / Que forma é essa? / Quem acertou primeiro?",
+      "background": "plano_cozinha",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 600,
+            "zoom": 1.15
+          },
+          {
+            "t": 7.567,
+            "x": 1300,
+            "y": 600,
+            "zoom": 1.2,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 800,
+            "y": 930,
+            "turn": 0.35,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "pensar",
+              "dur": 5.28
+            },
+            {
+              "t": 5.78,
+              "do": "cheguei",
+              "dur": 1.787
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1800,
+            "y": 930,
+            "turn": -0.35,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "pensar",
+              "dur": 5.48
+            },
+            {
+              "t": 5.98,
+              "do": "jump",
+              "dur": 1.0
+            }
+          ]
+        }
+      },
+      "props": {
+        "c1": {
+          "start": {
+            "x": 1300,
+            "y": 930,
+            "z": 3,
+            "tipo": 0,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 5.33,
+              "pose": {
+                "brilho": 0.0
+              },
+              "in": 5.3
+            },
+            {
+              "t": 5.4799999999999995,
+              "pose": {
+                "boca": 0.8
+              }
+            },
+            {
+              "t": 5.68,
+              "pose": {
+                "brilho": 1.0
+              },
+              "ease": "out",
+              "in": 0.32
+            },
+            {
+              "t": 5.9799999999999995,
+              "pose": {
+                "boca": 0.0
+              },
+              "in": 0.47
+            }
+          ]
+        }
+      },
+      "flash_in": true,
+      "callouts": [
+        {
+          "t": 0.15,
+          "text": "QUE FORMA É ESSA?",
+          "dur": 1.8,
+          "color": "laranja",
+          "y": 170
+        },
+        {
+          "t": 5.78,
+          "text": "ACERTOU!",
+          "dur": 1.787,
+          "color": "verde",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.067,
+          "to": 2.087
+        },
+        {
+          "who": "laurinha",
+          "from": 2.467,
+          "to": 6.747
+        },
+        {
+          "who": "luisinho",
+          "from": 0.067,
+          "to": 2.087
+        },
+        {
+          "who": "luisinho",
+          "from": 2.467,
+          "to": 6.747
+        }
+      ],
+      "transition_in": {
+        "type": "circulo",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s08_refrao",
+      "title": "Que forma é essa?",
+      "duration": 6.3,
+      "description": "Que forma é essa? / Responde ligeiro! / Que forma é essa? / Quem acertou primeiro?",
+      "background": "danca_bolinhas_azul",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.0
+          },
+          {
+            "t": 6.3,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 470,
+            "y": 1010,
+            "turn": 0.25,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.15
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "pulinho",
+              "dur": 6.3
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1450,
+            "y": 1010,
+            "turn": -0.25,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.15
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "gingado",
+              "dur": 6.3
+            }
+          ]
+        }
+      },
+      "props": {
+        "c2": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "z": 3,
+            "tipo": 1,
+            "depth": 0.8
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear"
+            },
+            {
+              "t": 0.9,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.87
+            },
+            {
+              "t": 1.0,
+              "pose": {
+                "brilho": 1.0
+              }
+            },
+            {
+              "t": 1.8,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.87
+            },
+            {
+              "t": 2.7,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.87
+            },
+            {
+              "t": 3.6,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.87
+            },
+            {
+              "t": 4.5,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.87
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 6.06
+        },
+        {
+          "who": "luisinho",
+          "from": 0.0,
+          "to": 6.06
+        }
+      ]
+    },
+    {
+      "id": "s09_intervalo",
+      "title": "Bora, turminha!",
+      "duration": 2.5,
+      "description": "Bora, turminha!",
+      "background": "danca_raios_rosa",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 630,
+            "zoom": 1.75
+          },
+          {
+            "t": 2.5,
+            "x": 960,
+            "y": 630,
+            "zoom": 1.81,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "apontar_camera",
+              "dur": 2.4
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "BORA, TURMINHA!",
+          "dur": 1.8,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.22,
+          "to": 1.58
+        }
+      ],
+      "transition_in": {
+        "type": "deslizar_dir",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s10_intervalo",
+      "title": "Laurinha e Luisinho!",
+      "duration": 9.2333,
+      "description": "Laurinha e Luisinho!",
+      "background": "plano_cozinha",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 600,
+            "zoom": 1.15
+          },
+          {
+            "t": 9.233,
+            "x": 1300,
+            "y": 600,
+            "zoom": 1.2,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 700,
+            "y": 930,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "festa",
+              "dur": 9.233
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1900,
+            "y": 930,
+            "turn": -0.3,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "lado",
+              "dur": 9.233
+            }
+          ]
+        }
+      },
+      "props": {
+        "mesa": {
+          "start": {
+            "x": 1300,
+            "y": 930,
+            "z": 1,
+            "depth": 1.3
+          },
+          "exposure": 1
+        },
+        "c0": {
+          "start": {
+            "x": 980,
+            "y": 618.0,
+            "z": 2,
+            "tipo": 0,
+            "depth": 0.42
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 0.35000000000000003,
+              "pose": {
+                "pulo": 0.0
+              },
+              "in": 0.32
+            },
+            {
+              "t": 0.9,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.52
+            }
+          ]
+        },
+        "c1": {
+          "start": {
+            "x": 1150,
+            "y": 618.0,
+            "z": 2,
+            "tipo": 1,
+            "depth": 0.42
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 0.6,
+              "pose": {
+                "pulo": 0.0
+              },
+              "in": 0.57
+            },
+            {
+              "t": 1.15,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.52
+            }
+          ]
+        },
+        "c2": {
+          "start": {
+            "x": 1310,
+            "y": 618.0,
+            "z": 2,
+            "tipo": 2,
+            "depth": 0.42
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 0.85,
+              "pose": {
+                "pulo": 0.0
+              },
+              "in": 0.82
+            },
+            {
+              "t": 1.4,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.52
+            }
+          ]
+        },
+        "c3": {
+          "start": {
+            "x": 1470,
+            "y": 618.0,
+            "z": 2,
+            "tipo": 3,
+            "depth": 0.42
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 1.0999999999999999,
+              "pose": {
+                "pulo": 0.0
+              },
+              "in": 1.07
+            },
+            {
+              "t": 1.65,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.52
+            }
+          ]
+        },
+        "c4": {
+          "start": {
+            "x": 1630,
+            "y": 618.0,
+            "z": 2,
+            "tipo": 4,
+            "depth": 0.42
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 1.3499999999999999,
+              "pose": {
+                "pulo": 0.0
+              },
+              "in": 1.32
+            },
+            {
+              "t": 1.9,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.52
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "LAURINHA E LUISINHO!",
+          "dur": 1.8,
+          "color": "rosa",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.08,
+          "to": 2.74
+        }
+      ]
+    },
+    {
+      "id": "s11_ponte",
+      "title": "A pizza? Círculo!",
+      "duration": 5.9,
+      "description": "A pizza? Círculo! / O presente? Quadrado!",
+      "background": "plano_cozinha",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 600,
+            "zoom": 1.15
+          },
+          {
+            "t": 5.9,
+            "x": 1300,
+            "y": 600,
+            "zoom": 1.2,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 650,
+            "y": 930,
+            "turn": 0.4,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 1.19,
+              "do": "point",
+              "dur": 4.71
+            }
+          ]
+        }
+      },
+      "props": {
+        "pz": {
+          "start": {
+            "x": 1050,
+            "y": 930,
+            "z": 3,
+            "tipo": 0,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 1.74,
+              "pose": {
+                "brilho": 0.0
+              },
+              "in": 1.71
+            },
+            {
+              "t": 1.74,
+              "pose": {
+                "pulo": 0.0
+              },
+              "in": 1.71
+            },
+            {
+              "t": 1.8900000000000001,
+              "pose": {
+                "boca": 0.8
+              }
+            },
+            {
+              "t": 2.09,
+              "pose": {
+                "brilho": 1.0
+              },
+              "ease": "out",
+              "in": 0.32
+            },
+            {
+              "t": 2.29,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.52
+            },
+            {
+              "t": 2.39,
+              "pose": {
+                "boca": 0.0
+              },
+              "in": 0.47
+            }
+          ]
+        },
+        "pr": {
+          "start": {
+            "x": 1550,
+            "y": 930,
+            "z": 3,
+            "tipo": 4,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 4.7,
+              "pose": {
+                "brilho": 0.0
+              },
+              "in": 4.67
+            },
+            {
+              "t": 4.7,
+              "pose": {
+                "pulo": 0.0
+              },
+              "in": 4.67
+            },
+            {
+              "t": 4.85,
+              "pose": {
+                "boca": 0.8
+              }
+            },
+            {
+              "t": 5.05,
+              "pose": {
+                "brilho": 1.0
+              },
+              "ease": "out",
+              "in": 0.32
+            },
+            {
+              "t": 5.25,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.52
+            },
+            {
+              "t": 5.35,
+              "pose": {
+                "boca": 0.0
+              },
+              "in": 0.47
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 1.79,
+          "text": "CÍRCULO!",
+          "dur": 1.8,
+          "color": "vermelho",
+          "y": 170
+        },
+        {
+          "t": 4.75,
+          "text": "QUADRADO!",
+          "dur": 1.15,
+          "color": "azul",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.287,
+          "to": 2.587
+        },
+        {
+          "who": "laurinha",
+          "from": 3.427,
+          "to": 5.89
+        }
+      ],
+      "transition_in": {
+        "type": "zoom",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s12_ponte",
+      "title": "A fatia? Triângulo!",
+      "duration": 8.4,
+      "description": "A fatia? Triângulo! / E o ovo? Oval! Bem bolado!",
+      "background": "plano_cozinha",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 600,
+            "zoom": 1.15
+          },
+          {
+            "t": 8.4,
+            "x": 1300,
+            "y": 600,
+            "zoom": 1.2,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 1950,
+            "y": 930,
+            "turn": -0.4,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 6.2,
+              "do": "bacana",
+              "dur": 2.2
+            }
+          ]
+        }
+      },
+      "props": {
+        "qj": {
+          "start": {
+            "x": 1050,
+            "y": 930,
+            "z": 3,
+            "tipo": 2,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 2.37,
+              "pose": {
+                "brilho": 0.0
+              },
+              "in": 2.34
+            },
+            {
+              "t": 2.37,
+              "pose": {
+                "pulo": 0.0
+              },
+              "in": 2.34
+            },
+            {
+              "t": 2.52,
+              "pose": {
+                "boca": 0.8
+              }
+            },
+            {
+              "t": 2.7199999999999998,
+              "pose": {
+                "brilho": 1.0
+              },
+              "ease": "out",
+              "in": 0.32
+            },
+            {
+              "t": 2.92,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.52
+            },
+            {
+              "t": 3.02,
+              "pose": {
+                "boca": 0.0
+              },
+              "in": 0.47
+            }
+          ]
+        },
+        "ov": {
+          "start": {
+            "x": 1550,
+            "y": 930,
+            "z": 3,
+            "tipo": 3,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 5.75,
+              "pose": {
+                "brilho": 0.0
+              },
+              "in": 5.72
+            },
+            {
+              "t": 5.75,
+              "pose": {
+                "pulo": 0.0
+              },
+              "in": 5.72
+            },
+            {
+              "t": 5.8999999999999995,
+              "pose": {
+                "boca": 0.8
+              }
+            },
+            {
+              "t": 6.1,
+              "pose": {
+                "brilho": 1.0
+              },
+              "ease": "out",
+              "in": 0.32
+            },
+            {
+              "t": 6.3,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.52
+            },
+            {
+              "t": 6.3999999999999995,
+              "pose": {
+                "boca": 0.0
+              },
+              "in": 0.47
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 2.42,
+          "text": "TRIÂNGULO!",
+          "dur": 1.8,
+          "color": "amarelo",
+          "y": 170
+        },
+        {
+          "t": 5.8,
+          "text": "OVAL!",
+          "dur": 1.8,
+          "color": "rosa",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s13_verso",
+      "title": "Olha a mesa do lanche,",
+      "duration": 3.7667,
+      "description": "Olha a mesa do lanche, / Que coisa engraçada:",
+      "background": "plano_cozinha",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 600,
+            "zoom": 1.15
+          },
+          {
+            "t": 3.767,
+            "x": 1300,
+            "y": 600,
+            "zoom": 1.2,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 750,
+            "y": 930,
+            "turn": 0.4,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.2,
+              "do": "point",
+              "dur": 3.567
+            }
+          ]
+        }
+      },
+      "props": {
+        "mesa": {
+          "start": {
+            "x": 1300,
+            "y": 930,
+            "z": 1,
+            "depth": 1.3
+          },
+          "exposure": 1
+        },
+        "c0": {
+          "start": {
+            "x": 980,
+            "y": 618.0,
+            "z": 2,
+            "tipo": 0,
+            "depth": 0.42
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 0.5499999999999999,
+              "pose": {
+                "pulo": 0.0
+              },
+              "in": 0.52
+            },
+            {
+              "t": 1.1,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.52
+            }
+          ]
+        },
+        "c1": {
+          "start": {
+            "x": 1150,
+            "y": 618.0,
+            "z": 2,
+            "tipo": 1,
+            "depth": 0.42
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 0.7999999999999999,
+              "pose": {
+                "pulo": 0.0
+              },
+              "in": 0.77
+            },
+            {
+              "t": 1.35,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.52
+            }
+          ]
+        },
+        "c2": {
+          "start": {
+            "x": 1310,
+            "y": 618.0,
+            "z": 2,
+            "tipo": 2,
+            "depth": 0.42
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 1.05,
+              "pose": {
+                "pulo": 0.0
+              },
+              "in": 1.02
+            },
+            {
+              "t": 1.6,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.52
+            }
+          ]
+        },
+        "c3": {
+          "start": {
+            "x": 1470,
+            "y": 618.0,
+            "z": 2,
+            "tipo": 3,
+            "depth": 0.42
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 1.3,
+              "pose": {
+                "pulo": 0.0
+              },
+              "in": 1.27
+            },
+            {
+              "t": 1.85,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.52
+            }
+          ]
+        },
+        "c4": {
+          "start": {
+            "x": 1630,
+            "y": 618.0,
+            "z": 2,
+            "tipo": 4,
+            "depth": 0.42
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 1.55,
+              "pose": {
+                "pulo": 0.0
+              },
+              "in": 1.52
+            },
+            {
+              "t": 2.1,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.52
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 1.6,
+          "text": "QUE ENGRAÇADO!",
+          "dur": 1.8,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.207,
+          "to": 3.667
+        }
+      ],
+      "transition_in": {
+        "type": "circulo",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s14_verso",
+      "title": "A pizza é redondinha,",
+      "duration": 3.3667,
+      "description": "A pizza é redondinha, / A torrada é quadrada!",
+      "background": "plano_cozinha",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 600,
+            "zoom": 1.15
+          },
+          {
+            "t": 3.367,
+            "x": 1300,
+            "y": 600,
+            "zoom": 1.2,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {},
+      "props": {
+        "pz": {
+          "start": {
+            "x": 1050,
+            "y": 930,
+            "z": 3,
+            "tipo": 0,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 0.6399999999999999,
+              "pose": {
+                "brilho": 0.0
+              },
+              "in": 0.61
+            },
+            {
+              "t": 0.7899999999999999,
+              "pose": {
+                "boca": 0.8
+              }
+            },
+            {
+              "t": 0.99,
+              "pose": {
+                "brilho": 1.0
+              },
+              "ease": "out",
+              "in": 0.32
+            },
+            {
+              "t": 1.29,
+              "pose": {
+                "boca": 0.0
+              },
+              "in": 0.47
+            }
+          ]
+        },
+        "tr": {
+          "start": {
+            "x": 1550,
+            "y": 930,
+            "z": 3,
+            "tipo": 1,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 1.8599999999999999,
+              "pose": {
+                "brilho": 0.0
+              },
+              "in": 1.83
+            },
+            {
+              "t": 2.01,
+              "pose": {
+                "boca": 0.8
+              }
+            },
+            {
+              "t": 2.21,
+              "pose": {
+                "brilho": 1.0
+              },
+              "ease": "out",
+              "in": 0.32
+            },
+            {
+              "t": 2.51,
+              "pose": {
+                "boca": 0.0
+              },
+              "in": 0.47
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.99,
+          "text": "CÍRCULO!",
+          "dur": 1.8,
+          "color": "vermelho",
+          "y": 170
+        },
+        {
+          "t": 2.21,
+          "text": "QUADRADO!",
+          "dur": 1.157,
+          "color": "azul",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s15_verso",
+      "title": "O queijo é um triângulo,",
+      "duration": 3.3666,
+      "description": "O queijo é um triângulo, / O ovo é oval,",
+      "background": "plano_cozinha",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 600,
+            "zoom": 1.15
+          },
+          {
+            "t": 3.367,
+            "x": 1300,
+            "y": 600,
+            "zoom": 1.2,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {},
+      "props": {
+        "qj": {
+          "start": {
+            "x": 1050,
+            "y": 930,
+            "z": 3,
+            "tipo": 2,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 0.6499999999999999,
+              "pose": {
+                "brilho": 0.0
+              },
+              "in": 0.62
+            },
+            {
+              "t": 0.7999999999999999,
+              "pose": {
+                "boca": 0.8
+              }
+            },
+            {
+              "t": 1.0,
+              "pose": {
+                "brilho": 1.0
+              },
+              "ease": "out",
+              "in": 0.32
+            },
+            {
+              "t": 1.2999999999999998,
+              "pose": {
+                "boca": 0.0
+              },
+              "in": 0.47
+            }
+          ]
+        },
+        "ov": {
+          "start": {
+            "x": 1550,
+            "y": 930,
+            "z": 3,
+            "tipo": 3,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 2.39,
+              "pose": {
+                "brilho": 0.0
+              },
+              "in": 2.36
+            },
+            {
+              "t": 2.54,
+              "pose": {
+                "boca": 0.8
+              }
+            },
+            {
+              "t": 2.7399999999999998,
+              "pose": {
+                "brilho": 1.0
+              },
+              "ease": "out",
+              "in": 0.32
+            },
+            {
+              "t": 3.04,
+              "pose": {
+                "boca": 0.0
+              },
+              "in": 0.47
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 1.0,
+          "text": "TRIÂNGULO!",
+          "dur": 1.8,
+          "color": "amarelo",
+          "y": 170
+        },
+        {
+          "t": 2.74,
+          "text": "OVAL!",
+          "dur": 0.627,
+          "color": "rosa",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s16_verso",
+      "title": "E a boca do Luisinho",
+      "duration": 3.3,
+      "description": "E a boca do Luisinho / Abriu num círculo total!",
+      "background": "plano_cozinha",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 550,
+            "zoom": 1.75
+          },
+          {
+            "t": 3.3,
+            "x": 1300,
+            "y": 550,
+            "zoom": 1.81,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 1300,
+            "y": 930,
+            "turn": 0.0,
+            "expr": "shock",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 1.44,
+              "do": "take"
+            }
+          ],
+          "keys": [
+            {
+              "t": 2.09,
+              "pose": {
+                "boca_o": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.44,
+              "pose": {
+                "boca_o": 1.0
+              },
+              "ease": "out",
+              "in": 0.3
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 2.34,
+          "text": "UM CÍRCULO!",
+          "dur": 0.96,
+          "color": "laranja",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s17_refrao",
+      "title": "Que forma é essa?",
+      "duration": 7.1667,
+      "description": "Que forma é essa? / Responde ligeiro! / Que forma é essa? / Quem acertou primeiro?",
+      "background": "plano_cozinha",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 600,
+            "zoom": 1.15
+          },
+          {
+            "t": 7.167,
+            "x": 1300,
+            "y": 600,
+            "zoom": 1.2,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 800,
+            "y": 930,
+            "turn": 0.35,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "pensar",
+              "dur": 5.31
+            },
+            {
+              "t": 5.81,
+              "do": "cheguei",
+              "dur": 1.357
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1800,
+            "y": 930,
+            "turn": -0.35,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "pensar",
+              "dur": 5.51
+            },
+            {
+              "t": 6.01,
+              "do": "jump",
+              "dur": 1.0
+            }
+          ]
+        }
+      },
+      "props": {
+        "c1": {
+          "start": {
+            "x": 1300,
+            "y": 930,
+            "z": 3,
+            "tipo": 2,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 5.36,
+              "pose": {
+                "brilho": 0.0
+              },
+              "in": 5.33
+            },
+            {
+              "t": 5.51,
+              "pose": {
+                "boca": 0.8
+              }
+            },
+            {
+              "t": 5.71,
+              "pose": {
+                "brilho": 1.0
+              },
+              "ease": "out",
+              "in": 0.32
+            },
+            {
+              "t": 6.01,
+              "pose": {
+                "boca": 0.0
+              },
+              "in": 0.47
+            }
+          ]
+        }
+      },
+      "flash_in": true,
+      "callouts": [
+        {
+          "t": 0.15,
+          "text": "QUE FORMA É ESSA?",
+          "dur": 1.8,
+          "color": "azul",
+          "y": 170
+        },
+        {
+          "t": 5.81,
+          "text": "ACERTOU!",
+          "dur": 1.357,
+          "color": "verde",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.067,
+          "to": 6.827
+        },
+        {
+          "who": "luisinho",
+          "from": 0.067,
+          "to": 6.827
+        }
+      ],
+      "transition_in": {
+        "type": "zoom",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s18_refrao",
+      "title": "Que forma é essa?",
+      "duration": 6.7,
+      "description": "Que forma é essa? / Responde ligeiro! / Que forma é essa? / Quem acertou primeiro?",
+      "background": "danca_xadrez_verde",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.0
+          },
+          {
+            "t": 6.7,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 470,
+            "y": 1010,
+            "turn": 0.25,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.15
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "pulinho",
+              "dur": 6.7
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1450,
+            "y": 1010,
+            "turn": -0.25,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.15
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "gingado",
+              "dur": 6.7
+            }
+          ]
+        }
+      },
+      "props": {
+        "c2": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "z": 3,
+            "tipo": 3,
+            "depth": 0.8
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear"
+            },
+            {
+              "t": 0.9,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.87
+            },
+            {
+              "t": 1.0,
+              "pose": {
+                "brilho": 1.0
+              }
+            },
+            {
+              "t": 1.8,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.87
+            },
+            {
+              "t": 2.7,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.87
+            },
+            {
+              "t": 3.6,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.87
+            },
+            {
+              "t": 4.5,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.87
+            },
+            {
+              "t": 5.4,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.87
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.26,
+          "to": 1.64
+        },
+        {
+          "who": "laurinha",
+          "from": 2.0,
+          "to": 6.64
+        },
+        {
+          "who": "luisinho",
+          "from": 0.26,
+          "to": 1.64
+        },
+        {
+          "who": "luisinho",
+          "from": 2.0,
+          "to": 6.64
+        }
+      ]
+    },
+    {
+      "id": "s19_intervalo",
+      "title": "Bora, turminha!",
+      "duration": 2.4667,
+      "description": "Bora, turminha!",
+      "background": "danca_bolinhas_rosa",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 630,
+            "zoom": 1.75
+          },
+          {
+            "t": 2.467,
+            "x": 960,
+            "y": 630,
+            "zoom": 1.81,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "apontar_camera",
+              "dur": 2.367
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "BORA, TURMINHA!",
+          "dur": 1.8,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.22,
+          "to": 1.56
+        }
+      ],
+      "transition_in": {
+        "type": "deslizar_esq",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s20_intervalo",
+      "title": "Laurinha e Luisinho!",
+      "duration": 9.2333,
+      "description": "Laurinha e Luisinho!",
+      "background": "plano_cozinha",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 600,
+            "zoom": 1.15
+          },
+          {
+            "t": 9.233,
+            "x": 1300,
+            "y": 600,
+            "zoom": 1.2,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 700,
+            "y": 930,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "festa",
+              "dur": 9.233
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1900,
+            "y": 930,
+            "turn": -0.3,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "lado",
+              "dur": 9.233
+            }
+          ]
+        }
+      },
+      "props": {
+        "mesa": {
+          "start": {
+            "x": 1300,
+            "y": 930,
+            "z": 1,
+            "depth": 1.3
+          },
+          "exposure": 1
+        },
+        "c0": {
+          "start": {
+            "x": 980,
+            "y": 618.0,
+            "z": 2,
+            "tipo": 0,
+            "depth": 0.42
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 0.35000000000000003,
+              "pose": {
+                "pulo": 0.0
+              },
+              "in": 0.32
+            },
+            {
+              "t": 0.9,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.52
+            }
+          ]
+        },
+        "c1": {
+          "start": {
+            "x": 1150,
+            "y": 618.0,
+            "z": 2,
+            "tipo": 1,
+            "depth": 0.42
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 0.6,
+              "pose": {
+                "pulo": 0.0
+              },
+              "in": 0.57
+            },
+            {
+              "t": 1.15,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.52
+            }
+          ]
+        },
+        "c2": {
+          "start": {
+            "x": 1310,
+            "y": 618.0,
+            "z": 2,
+            "tipo": 2,
+            "depth": 0.42
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 0.85,
+              "pose": {
+                "pulo": 0.0
+              },
+              "in": 0.82
+            },
+            {
+              "t": 1.4,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.52
+            }
+          ]
+        },
+        "c3": {
+          "start": {
+            "x": 1470,
+            "y": 618.0,
+            "z": 2,
+            "tipo": 3,
+            "depth": 0.42
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 1.0999999999999999,
+              "pose": {
+                "pulo": 0.0
+              },
+              "in": 1.07
+            },
+            {
+              "t": 1.65,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.52
+            }
+          ]
+        },
+        "c4": {
+          "start": {
+            "x": 1630,
+            "y": 618.0,
+            "z": 2,
+            "tipo": 4,
+            "depth": 0.42
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 1.3499999999999999,
+              "pose": {
+                "pulo": 0.0
+              },
+              "in": 1.32
+            },
+            {
+              "t": 1.9,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.52
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "LAURINHA E LUISINHO!",
+          "dur": 1.8,
+          "color": "rosa",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.093,
+          "to": 2.733
+        }
+      ]
+    },
+    {
+      "id": "s21_ponte",
+      "title": "A pizza? Círculo!",
+      "duration": 6.7333,
+      "description": "A pizza? Círculo! / O presente? Quadrado!",
+      "background": "plano_cozinha",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 600,
+            "zoom": 1.15
+          },
+          {
+            "t": 6.733,
+            "x": 1300,
+            "y": 600,
+            "zoom": 1.2,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 650,
+            "y": 930,
+            "turn": 0.4,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 1.0299999999999998,
+              "do": "point",
+              "dur": 5.703
+            }
+          ]
+        }
+      },
+      "props": {
+        "pz": {
+          "start": {
+            "x": 1050,
+            "y": 930,
+            "z": 3,
+            "tipo": 0,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 1.5799999999999998,
+              "pose": {
+                "brilho": 0.0
+              },
+              "in": 1.55
+            },
+            {
+              "t": 1.5799999999999998,
+              "pose": {
+                "pulo": 0.0
+              },
+              "in": 1.55
+            },
+            {
+              "t": 1.73,
+              "pose": {
+                "boca": 0.8
+              }
+            },
+            {
+              "t": 1.93,
+              "pose": {
+                "brilho": 1.0
+              },
+              "ease": "out",
+              "in": 0.32
+            },
+            {
+              "t": 2.13,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.52
+            },
+            {
+              "t": 2.23,
+              "pose": {
+                "boca": 0.0
+              },
+              "in": 0.47
+            }
+          ]
+        },
+        "pr": {
+          "start": {
+            "x": 1550,
+            "y": 930,
+            "z": 3,
+            "tipo": 4,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 4.72,
+              "pose": {
+                "brilho": 0.0
+              },
+              "in": 4.69
+            },
+            {
+              "t": 4.72,
+              "pose": {
+                "pulo": 0.0
+              },
+              "in": 4.69
+            },
+            {
+              "t": 4.869999999999999,
+              "pose": {
+                "boca": 0.8
+              }
+            },
+            {
+              "t": 5.069999999999999,
+              "pose": {
+                "brilho": 1.0
+              },
+              "ease": "out",
+              "in": 0.32
+            },
+            {
+              "t": 5.27,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.52
+            },
+            {
+              "t": 5.369999999999999,
+              "pose": {
+                "boca": 0.0
+              },
+              "in": 0.47
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 1.63,
+          "text": "CÍRCULO!",
+          "dur": 1.8,
+          "color": "vermelho",
+          "y": 170
+        },
+        {
+          "t": 4.77,
+          "text": "QUADRADO!",
+          "dur": 1.8,
+          "color": "azul",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.16,
+          "to": 6.0
+        }
+      ],
+      "transition_in": {
+        "type": "cortina",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s22_ponte",
+      "title": "A fatia? Triângulo!",
+      "duration": 6.7,
+      "description": "A fatia? Triângulo! / E o ovo? Oval! Bem bolado!",
+      "background": "plano_cozinha",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 600,
+            "zoom": 1.15
+          },
+          {
+            "t": 6.7,
+            "x": 1300,
+            "y": 600,
+            "zoom": 1.2,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 1950,
+            "y": 930,
+            "turn": -0.4,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 5.36,
+              "do": "bacana",
+              "dur": 1.34
+            }
+          ]
+        }
+      },
+      "props": {
+        "qj": {
+          "start": {
+            "x": 1050,
+            "y": 930,
+            "z": 3,
+            "tipo": 2,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 1.49,
+              "pose": {
+                "brilho": 0.0
+              },
+              "in": 1.46
+            },
+            {
+              "t": 1.49,
+              "pose": {
+                "pulo": 0.0
+              },
+              "in": 1.46
+            },
+            {
+              "t": 1.6400000000000001,
+              "pose": {
+                "boca": 0.8
+              }
+            },
+            {
+              "t": 1.84,
+              "pose": {
+                "brilho": 1.0
+              },
+              "ease": "out",
+              "in": 0.32
+            },
+            {
+              "t": 2.04,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.52
+            },
+            {
+              "t": 2.14,
+              "pose": {
+                "boca": 0.0
+              },
+              "in": 0.47
+            }
+          ]
+        },
+        "ov": {
+          "start": {
+            "x": 1550,
+            "y": 930,
+            "z": 3,
+            "tipo": 3,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 4.91,
+              "pose": {
+                "brilho": 0.0
+              },
+              "in": 4.88
+            },
+            {
+              "t": 4.91,
+              "pose": {
+                "pulo": 0.0
+              },
+              "in": 4.88
+            },
+            {
+              "t": 5.06,
+              "pose": {
+                "boca": 0.8
+              }
+            },
+            {
+              "t": 5.26,
+              "pose": {
+                "brilho": 1.0
+              },
+              "ease": "out",
+              "in": 0.32
+            },
+            {
+              "t": 5.46,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.52
+            },
+            {
+              "t": 5.56,
+              "pose": {
+                "boca": 0.0
+              },
+              "in": 0.47
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 1.54,
+          "text": "TRIÂNGULO!",
+          "dur": 1.8,
+          "color": "amarelo",
+          "y": 170
+        },
+        {
+          "t": 4.96,
+          "text": "OVAL!",
+          "dur": 1.74,
+          "color": "rosa",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s23_refrao",
+      "title": "Que forma é essa?",
+      "duration": 6.6334,
+      "description": "Que forma é essa? / Responde ligeiro! / Que forma é essa? / Quem acertou primeiro?",
+      "background": "plano_cozinha",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 600,
+            "zoom": 1.15
+          },
+          {
+            "t": 6.633,
+            "x": 1300,
+            "y": 600,
+            "zoom": 1.2,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 800,
+            "y": 930,
+            "turn": 0.35,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "pensar",
+              "dur": 4.85
+            },
+            {
+              "t": 5.35,
+              "do": "cheguei",
+              "dur": 1.283
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1800,
+            "y": 930,
+            "turn": -0.35,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "pensar",
+              "dur": 5.05
+            },
+            {
+              "t": 5.55,
+              "do": "jump",
+              "dur": 1.0
+            }
+          ]
+        }
+      },
+      "props": {
+        "c1": {
+          "start": {
+            "x": 1300,
+            "y": 930,
+            "z": 3,
+            "tipo": 4,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 4.9,
+              "pose": {
+                "brilho": 0.0
+              },
+              "in": 4.87
+            },
+            {
+              "t": 5.05,
+              "pose": {
+                "boca": 0.8
+              }
+            },
+            {
+              "t": 5.25,
+              "pose": {
+                "brilho": 1.0
+              },
+              "ease": "out",
+              "in": 0.32
+            },
+            {
+              "t": 5.55,
+              "pose": {
+                "boca": 0.0
+              },
+              "in": 0.47
+            }
+          ]
+        }
+      },
+      "flash_in": true,
+      "callouts": [
+        {
+          "t": 0.15,
+          "text": "QUE FORMA É ESSA?",
+          "dur": 1.8,
+          "color": "rosa",
+          "y": 170
+        },
+        {
+          "t": 5.35,
+          "text": "ACERTOU!",
+          "dur": 1.283,
+          "color": "verde",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.287,
+          "to": 1.667
+        },
+        {
+          "who": "laurinha",
+          "from": 2.027,
+          "to": 6.347
+        },
+        {
+          "who": "luisinho",
+          "from": 0.287,
+          "to": 1.667
+        },
+        {
+          "who": "luisinho",
+          "from": 2.027,
+          "to": 6.347
+        }
+      ],
+      "transition_in": {
+        "type": "zoom",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s24_refrao",
+      "title": "Que forma é essa?",
+      "duration": 6.6333,
+      "description": "Que forma é essa? / Responde ligeiro! / Que forma é essa? / Quem acertou primeiro?",
+      "background": "danca_ondas_rosa",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.0
+          },
+          {
+            "t": 6.633,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 470,
+            "y": 1010,
+            "turn": 0.25,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.15
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "festa",
+              "dur": 6.633
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1450,
+            "y": 1010,
+            "turn": -0.25,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.15
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "festa",
+              "dur": 6.633
+            }
+          ]
+        }
+      },
+      "props": {
+        "c2": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "z": 3,
+            "tipo": 0,
+            "depth": 0.8
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear"
+            },
+            {
+              "t": 0.9,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.87
+            },
+            {
+              "t": 1.0,
+              "pose": {
+                "brilho": 1.0
+              }
+            },
+            {
+              "t": 1.8,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.87
+            },
+            {
+              "t": 2.7,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.87
+            },
+            {
+              "t": 3.6,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.87
+            },
+            {
+              "t": 4.5,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.87
+            },
+            {
+              "t": 5.4,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.87
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.253,
+          "to": 1.653
+        },
+        {
+          "who": "laurinha",
+          "from": 2.033,
+          "to": 6.333
+        },
+        {
+          "who": "luisinho",
+          "from": 0.253,
+          "to": 1.653
+        },
+        {
+          "who": "luisinho",
+          "from": 2.033,
+          "to": 6.333
+        }
+      ]
+    },
+    {
+      "id": "s25_refrao",
+      "title": "Que forma é essa?",
+      "duration": 6.2,
+      "description": "Que forma é essa? / Responde ligeiro! / Que forma é essa? / Quem acertou primeiro?",
+      "background": "plano_cozinha",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 600,
+            "zoom": 1.15
+          },
+          {
+            "t": 6.2,
+            "x": 1300,
+            "y": 600,
+            "zoom": 1.2,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 800,
+            "y": 930,
+            "turn": 0.35,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "pensar",
+              "dur": 4.83
+            },
+            {
+              "t": 5.33,
+              "do": "cheguei",
+              "dur": 0.87
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1800,
+            "y": 930,
+            "turn": -0.35,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "pensar",
+              "dur": 5.03
+            },
+            {
+              "t": 5.53,
+              "do": "jump",
+              "dur": 1.0
+            }
+          ]
+        }
+      },
+      "props": {
+        "c1": {
+          "start": {
+            "x": 1300,
+            "y": 930,
+            "z": 3,
+            "tipo": 1,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 4.88,
+              "pose": {
+                "brilho": 0.0
+              },
+              "in": 4.85
+            },
+            {
+              "t": 5.029999999999999,
+              "pose": {
+                "boca": 0.8
+              }
+            },
+            {
+              "t": 5.2299999999999995,
+              "pose": {
+                "brilho": 1.0
+              },
+              "ease": "out",
+              "in": 0.32
+            },
+            {
+              "t": 5.529999999999999,
+              "pose": {
+                "boca": 0.0
+              },
+              "in": 0.47
+            }
+          ]
+        }
+      },
+      "flash_in": true,
+      "callouts": [
+        {
+          "t": 0.15,
+          "text": "QUE FORMA É ESSA?",
+          "dur": 1.8,
+          "color": "verde",
+          "y": 170
+        },
+        {
+          "t": 5.33,
+          "text": "ACERTOU!",
+          "dur": 0.87,
+          "color": "verde",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.28,
+          "to": 6.19
+        },
+        {
+          "who": "luisinho",
+          "from": 0.28,
+          "to": 6.19
+        }
+      ],
+      "transition_in": {
+        "type": "circulo",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s26_refrao",
+      "title": "Que forma é essa?",
+      "duration": 6.6,
+      "description": "Que forma é essa? / Responde ligeiro! / Que forma é essa? / Quem acertou primeiro?",
+      "background": "danca_raios_laranja",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.0
+          },
+          {
+            "t": 6.6,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 470,
+            "y": 1010,
+            "turn": 0.25,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.15
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "festa",
+              "dur": 4.99
+            },
+            {
+              "t": 5.09,
+              "do": "laugh",
+              "dur": 1.51
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1450,
+            "y": 1010,
+            "turn": -0.25,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.15
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "festa",
+              "dur": 4.99
+            },
+            {
+              "t": 5.09,
+              "do": "laugh",
+              "dur": 1.51
+            }
+          ]
+        }
+      },
+      "props": {
+        "c2": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "z": 3,
+            "tipo": 2,
+            "depth": 0.8
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear"
+            },
+            {
+              "t": 0.9,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.87
+            },
+            {
+              "t": 1.0,
+              "pose": {
+                "brilho": 1.0
+              }
+            },
+            {
+              "t": 1.8,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.87
+            },
+            {
+              "t": 2.7,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.87
+            },
+            {
+              "t": 3.6,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.87
+            },
+            {
+              "t": 4.5,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.87
+            },
+            {
+              "t": 5.4,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.87
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.2,
+          "to": 6.59
+        },
+        {
+          "who": "luisinho",
+          "from": 0.2,
+          "to": 6.59
+        }
+      ]
+    },
+    {
+      "id": "s27_intervalo",
+      "title": "as comidas dançam",
+      "duration": 4.5333,
+      "description": "",
+      "background": "danca_raios_roxo",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.0
+          },
+          {
+            "t": 4.533,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {},
+      "props": {
+        "c0": {
+          "start": {
+            "x": 450,
+            "y": 1010,
+            "z": 3,
+            "tipo": 0,
+            "depth": 0.55
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear"
+            },
+            {
+              "t": 0.45,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 0.9,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 1.35,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 1.8,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 2.25,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 2.7,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 3.15,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 3.6,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 4.05,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            }
+          ]
+        },
+        "c1": {
+          "start": {
+            "x": 705,
+            "y": 1010,
+            "z": 3,
+            "tipo": 1,
+            "depth": 0.55
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear"
+            },
+            {
+              "t": 0.45,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 0.9,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 1.35,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 1.8,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 2.25,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 2.7,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 3.15,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 3.6,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 4.05,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            }
+          ]
+        },
+        "c2": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "z": 3,
+            "tipo": 2,
+            "depth": 0.55
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear"
+            },
+            {
+              "t": 0.45,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 0.9,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 1.35,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 1.8,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 2.25,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 2.7,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 3.15,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 3.6,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 4.05,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            }
+          ]
+        },
+        "c3": {
+          "start": {
+            "x": 1215,
+            "y": 1010,
+            "z": 3,
+            "tipo": 3,
+            "depth": 0.55
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear"
+            },
+            {
+              "t": 0.45,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 0.9,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 1.35,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 1.8,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 2.25,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 2.7,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 3.15,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 3.6,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 4.05,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            }
+          ]
+        },
+        "c4": {
+          "start": {
+            "x": 1470,
+            "y": 1010,
+            "z": 3,
+            "tipo": 4,
+            "depth": 0.55
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear"
+            },
+            {
+              "t": 0.45,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 0.9,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 1.35,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 1.8,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 2.25,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 2.7,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 3.15,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 3.6,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 4.05,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "transition_in": {
+        "type": "cortina",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s28_final",
+      "title": "Gostou das formas?",
+      "duration": 1.6667,
+      "description": "Gostou das formas?",
+      "background": "danca_raios_azul",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 630,
+            "zoom": 1.75
+          },
+          {
+            "t": 1.667,
+            "x": 960,
+            "y": 630,
+            "zoom": 1.81,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "apontar_camera",
+              "dur": 1.567
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.3,
+          "text": "GOSTOU?",
+          "dur": 1.367,
+          "color": "rosa",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 1.657
+        }
+      ],
+      "transition_in": {
+        "type": "circulo",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s29_final",
+      "title": "Dá um joinha!",
+      "duration": 3.3333,
+      "description": "Dá um joinha!",
+      "background": "danca_bolinhas_amarelo",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.0
+          },
+          {
+            "t": 3.333,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 680,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.2,
+              "do": "bacana",
+              "dur": 3.133
+            }
+          ]
+        }
+      },
+      "props": {
+        "joinha": {
+          "start": {
+            "x": 1380,
+            "y": 900,
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "escala": 0.0
+              }
+            },
+            {
+              "t": 0.4,
+              "pose": {
+                "escala": 1.0
+              },
+              "ease": "back",
+              "in": 0.37
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "callouts": [
+        {
+          "t": 0.4,
+          "text": "DÁ UM JOINHA!",
+          "dur": 1.8,
+          "color": "azul",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.26,
+          "to": 2.48
+        }
+      ]
+    },
+    {
+      "id": "s30_final",
+      "title": "Chama o papai e a mamãe",
+      "duration": 2.5,
+      "description": "Chama o papai e a mamãe",
+      "background": "plano_casa_frente",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540,
+            "zoom": 1.1
+          },
+          {
+            "t": 2.5,
+            "x": 1300,
+            "y": 540,
+            "zoom": 1.1500000000000001,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "mamae": {
+          "start": {
+            "x": 1100,
+            "y": 930,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.2,
+              "do": "wave",
+              "dur": 1.4
+            }
+          ]
+        },
+        "laurinha": {
+          "start": {
+            "x": 1450,
+            "y": 930,
+            "turn": -0.3,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "point",
+              "dur": 2.4
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.3,
+          "text": "CHAMA O PAPAI E A MAMÃE!",
+          "dur": 1.8,
+          "color": "verde",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 2.49
+        }
+      ]
+    },
+    {
+      "id": "s31_final",
+      "title": "Pra se inscrever no canal! Zum, zum!",
+      "duration": 7.0667,
+      "description": "Pra se inscrever no canal! Zum, zum!",
+      "background": "danca_raios_vermelho",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.0
+          },
+          {
+            "t": 7.067,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 600,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.2,
+              "do": "point",
+              "dur": 6.867
+            }
+          ]
+        }
+      },
+      "props": {
+        "botao": {
+          "start": {
+            "x": 1260,
+            "y": 760,
+            "z": 3,
+            "depth": 1.2
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "escala": 0.0,
+                "aperta": 0.0
+              }
+            },
+            {
+              "t": 0.4,
+              "pose": {
+                "escala": 1.0
+              },
+              "ease": "back",
+              "in": 0.37
+            },
+            {
+              "t": 1.6,
+              "pose": {
+                "aperta": 1.0
+              },
+              "ease": "out",
+              "in": 1.57
+            },
+            {
+              "t": 1.9,
+              "pose": {
+                "aperta": 0.0
+              },
+              "ease": "in",
+              "in": 0.27
+            }
+          ]
+        }
+      },
+      "fx": [
+        "coracoes"
+      ],
+      "callouts": [
+        {
+          "t": 0.5,
+          "text": "INSCREVA-SE!",
+          "dur": 1.8,
+          "color": "vermelho",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.187,
+          "to": 4.847
+        }
+      ]
+    },
+    {
+      "id": "s32_final",
+      "title": "Que forma é essa? Tchau! Círculo!",
+      "duration": 12.3667,
+      "description": "Que forma é essa? Tchau! Círculo!",
+      "background": "plano_cozinha",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 12.367,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.08,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 700,
+            "y": 930,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "tchau",
+              "dur": 4.0
+            },
+            {
+              "t": 4.3,
+              "do": "fly",
+              "dur": 1.4,
+              "to_x": -300,
+              "to_y": 300
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1900,
+            "y": 930,
+            "turn": -0.3,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "tchau",
+              "dur": 4.0
+            },
+            {
+              "t": 4.4,
+              "do": "fly",
+              "dur": 1.4,
+              "to_x": 2900,
+              "to_y": 350
+            }
+          ]
+        }
+      },
+      "props": {
+        "mesa": {
+          "start": {
+            "x": 1300,
+            "y": 930,
+            "z": 1,
+            "depth": 1.3
+          },
+          "exposure": 1
+        },
+        "c0": {
+          "start": {
+            "x": 980,
+            "y": 618.0,
+            "z": 2,
+            "tipo": 0,
+            "depth": 0.42
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 1.15,
+              "pose": {
+                "pulo": 0.0
+              },
+              "in": 1.12
+            },
+            {
+              "t": 1.7,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.52
+            }
+          ]
+        },
+        "c1": {
+          "start": {
+            "x": 1150,
+            "y": 618.0,
+            "z": 2,
+            "tipo": 1,
+            "depth": 0.42
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 1.4,
+              "pose": {
+                "pulo": 0.0
+              },
+              "in": 1.37
+            },
+            {
+              "t": 1.95,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.52
+            }
+          ]
+        },
+        "c2": {
+          "start": {
+            "x": 1310,
+            "y": 618.0,
+            "z": 2,
+            "tipo": 2,
+            "depth": 0.42
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 1.65,
+              "pose": {
+                "pulo": 0.0
+              },
+              "in": 1.62
+            },
+            {
+              "t": 2.2,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.52
+            }
+          ]
+        },
+        "c3": {
+          "start": {
+            "x": 1470,
+            "y": 618.0,
+            "z": 2,
+            "tipo": 3,
+            "depth": 0.42
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 1.9,
+              "pose": {
+                "pulo": 0.0
+              },
+              "in": 1.87
+            },
+            {
+              "t": 2.45,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.52
+            }
+          ]
+        },
+        "c4": {
+          "start": {
+            "x": 1630,
+            "y": 618.0,
+            "z": 2,
+            "tipo": 4,
+            "depth": 0.42
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 2.1500000000000004,
+              "pose": {
+                "pulo": 0.0
+              },
+              "in": 2.12
+            },
+            {
+              "t": 2.7,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.52
+            }
+          ]
+        }
+      },
+      "fx": [
+        "coracoes"
+      ],
+      "callouts": [
+        {
+          "t": 1.0,
+          "text": "TCHAU!",
+          "dur": 1.8,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.08,
+          "to": 2.28
+        }
+      ],
+      "transition_in": {
+        "type": "deslizar_cima",
+        "dur": 0.4
+      },
+      "transition_out": "fade"
+    }
+  ],
+  "projeto": "laurinha/ep17-que-forma-e-essa"
+}

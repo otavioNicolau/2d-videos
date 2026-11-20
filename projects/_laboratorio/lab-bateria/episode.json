@@ -1,0 +1,222 @@
+{
+  "schema": "1.1",
+  "id": "lab-bateria",
+  "title": "Laboratório da bateria",
+  "logline": "Clipe de \"Pão de Queijo\" — o pão de queijo da vovó mineira que estica até a lua. Montado do roteiro verso a verso (roteiro.json).",
+  "fps": 30,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "background": "plano_parque",
+  "soundtrack": {
+    "file": "musica/trabalho.wav",
+    "analysis": "analise/song.json",
+    "start": 0.0,
+    "end": 8.0,
+    "fade_out": 0.6,
+    "beat_grid": "full"
+  },
+  "overlays": {
+    "logo": true,
+    "channel": [
+      "LAURINHA",
+      "e Luisinho"
+    ]
+  },
+  "cast": {
+    "laurinha": {
+      "character": "laurinha"
+    },
+    "luisinho": {
+      "character": "luisinho"
+    },
+    "vovo": {
+      "character": "vovo"
+    },
+    "m": {
+      "character": "mesa"
+    },
+    "t": {
+      "character": "tabuleiro"
+    },
+    "g": {
+      "character": "gato"
+    },
+    "p": {
+      "character": "pao_queijo"
+    },
+    "bat": {
+      "character": "bateria_show"
+    },
+    "tec": {
+      "character": "teclado_inst"
+    },
+    "vovozinho": {
+      "character": "vovozinho"
+    },
+    "n": {
+      "character": "nuvem"
+    },
+    "po": {
+      "character": "poste"
+    },
+    "c": {
+      "character": "cometa"
+    },
+    "lua": {
+      "character": "lua"
+    },
+    "p1": {
+      "character": "pao_queijo"
+    },
+    "p2": {
+      "character": "pao_queijo"
+    },
+    "s": {
+      "character": "sol"
+    },
+    "joinha": {
+      "character": "joinha"
+    },
+    "mamae": {
+      "character": "mamae"
+    },
+    "botao": {
+      "character": "botao_inscrever"
+    }
+  },
+  "approval": {
+    "storyboard": true,
+    "final_render": true,
+    "approved_by": "lab"
+  },
+  "scenes": [
+    {
+      "id": "s01_banda",
+      "title": "a banda",
+      "duration": 8.0,
+      "description": "",
+      "background": "plano_salao",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1450,
+            "y": 560,
+            "zoom": 1.35
+          },
+          {
+            "t": 8.0,
+            "x": 1450,
+            "y": 560,
+            "zoom": 1.4,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 1572.1,
+            "y": 930,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45,
+            "holding": "baqueta_a4",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1,
+            "holding_f": "baqueta_a4"
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "toca_bateria_a4",
+              "dur": 8.0
+            }
+          ]
+        },
+        "laurinha": {
+          "start": {
+            "x": 927.9,
+            "y": 930,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "toca_teclado",
+              "dur": 8.0
+            }
+          ]
+        }
+      },
+      "props": {
+        "bat": {
+          "start": {
+            "x": 1572.1,
+            "y": 940,
+            "z": 4,
+            "depth": 0.87
+          },
+          "exposure": 1,
+          "keys": [],
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "kit_a4",
+              "dur": 8.0
+            }
+          ]
+        },
+        "tec": {
+          "start": {
+            "x": 927.9,
+            "y": 940,
+            "z": 4,
+            "depth": 0.899
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tecla": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 4.96,
+              "pose": {
+                "tecla": 10.0
+              },
+              "ease": "linear",
+              "in": 4.93
+            }
+          ]
+        }
+      },
+      "fx": [
+        "notas"
+      ]
+    }
+  ],
+  "projeto": "_laboratorio/lab-bateria"
+}

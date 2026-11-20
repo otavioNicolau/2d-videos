@@ -14,7 +14,7 @@ from toonstudio.core.config import PROJECTS, ROOT
 from toonstudio.core.registry import character
 from toonstudio.integrations import opentoonz as ot
 
-EP = PROJECTS / "torta-do-caramelo" / "episode.json"
+EP = PROJECTS / "_laboratorio" / "torta-do-caramelo" / "episode.json"
 
 
 def test_easing_endpoints():

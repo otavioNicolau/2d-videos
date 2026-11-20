@@ -1,0 +1,48 @@
+{
+ "schema": "avaliacao-1.0",
+ "versoes": {
+  "v1": {
+   "arquivo": "v1.wav",
+   "duracao": 176.4,
+   "bpm": 136.0,
+   "bpm_nota": "",
+   "tom": "Dó maior",
+   "voz_inicio": 3.8,
+   "refrao_inicio": null,
+   "cantado": 79,
+   "intervalos": [
+    [
+     101.0,
+     6.8
+    ],
+    [
+     146.7,
+     7.0
+    ]
+   ],
+   "fim_depois_da_voz": 5.5,
+   "final": "esmaecendo",
+   "silencio_final": 0.6,
+   "acerto": 71,
+   "nao_reconhecidas": [
+    "luisinho",
+    "acor"
+   ],
+   "pontos_a_conferir": [
+    "o gancho não foi reconhecido na transcrição",
+    "só 71% da letra reconhecida — ouvir a pronúncia"
+   ]
+  }
+ },
+ "ouvido": {
+  "v1": {
+   "1 começo chama atenção": null,
+   "5 melodia combina com a letra": null,
+   "6 dá vontade de dançar": null,
+   "7 pronúncia natural": null,
+   "8 tem a cara do canal": null,
+   "9 nenhum trecho cansativo": null
+  }
+ },
+ "escolhida": "v1"
+}

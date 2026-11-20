@@ -16,7 +16,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from _comum import LA, LU, Roteiro, call  # noqa: E402
 
-R = Roteiro("ep26-gelatina", "26_gelatina", "laurinha")
+R = Roteiro("laurinha/ep26-gelatina", "26_gelatina", "laurinha")
 COZ, SALA, JARDIM, GELO, CASA = "plano_cozinha", "plano_sala", "plano_jardim", "plano_gelo", "plano_casa_frente"
 PALCO = COZ                       # 19/11: a banda toca na cozinha da vovó (o tema), não no salão lilás de festa
 VO, VZ, MA = "vovo", "vovozinho", "mamae"

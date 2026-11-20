@@ -13,8 +13,8 @@ from pathlib import Path
 from toonstudio.composition.clip_draft import _snap, blocos
 
 ROOT = Path(__file__).resolve().parents[2]
-PROJ = ROOT / "projects" / "ep13-andar-de-pinguim"
-MUS = ROOT / "musicas" / "13_andar_de_pinguim"
+PROJ = ROOT / "projects" / "laurinha" / "ep13-andar-de-pinguim"
+MUS = ROOT / "canais" / "laurinha" / "musicas" / "13_andar_de_pinguim"
 song = json.loads((PROJ / "analise" / "song.json").read_text(encoding="utf-8"))
 letra = json.loads((PROJ / "analise" / "letra.json").read_text(encoding="utf-8"))
 BEATS = song["beats"]

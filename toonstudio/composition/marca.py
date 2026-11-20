@@ -13,7 +13,7 @@ from pathlib import Path
 
 from ..core.config import LIBRARY, PROJECTS, StudioError, tool
 
-BRAND = LIBRARY / "brand"
+BRAND = LIBRARY / "brand" / "laurinha"          # peças fixas do canal 1 (vinheta, chamada)
 
 
 def _boca(t0: float, silabas: int, passo: float = 0.17) -> list[dict]:
@@ -152,7 +152,7 @@ def final(project: str) -> Path:
 
 
 def preparar_vinheta() -> Path:
-    pdir = PROJECTS / "marca-vinheta"
+    pdir = PROJECTS / "laurinha" / "marca-vinheta"
     pdir.mkdir(parents=True, exist_ok=True)
     ep = vinheta_episode()
     (pdir / "episode.json").write_text(json.dumps(ep, ensure_ascii=False, indent=2), encoding="utf-8")

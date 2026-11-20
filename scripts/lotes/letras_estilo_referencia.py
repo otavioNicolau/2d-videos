@@ -11,7 +11,7 @@ import shutil
 import subprocess
 from pathlib import Path
 
-M = Path(__file__).resolve().parents[2] / "musicas"
+M = Path(__file__).resolve().parents[2] / "canais" / "laurinha" / "musicas"
 E = json.loads((M / "estilos.json").read_text(encoding="utf-8"))
 TAG = {"laurinha": "Laurinha, girl child vocal", "luisinho": "Luisinho, boy child vocal"}
 

@@ -24,7 +24,7 @@ from pathlib import Path
 
 from ..core.config import ROOT, StudioError
 
-MUSICAS = ROOT / "musicas"                 # canal padrão (Laurinha); o canal atual vem de _mus()
+MUSICAS = ROOT / "canais" / "laurinha" / "musicas"   # canal padrão (Laurinha); o canal atual vem de _mus()
 
 
 def _mus() -> Path:
@@ -268,12 +268,12 @@ def _bloco_avancado(p: dict) -> list[str]:
 
 def texto_suno(p: dict) -> str:
     """O arquivo de copiar e colar (suno.txt)."""
-    pers = p["persona"] or f"(ainda não criada — a voz vai descrita no Style; ao criar, registre em musicas/vozes.json → {p['voz']})"
+    pers = p["persona"] or f"(ainda não criada — a voz vai descrita no Style; ao criar, registre em {_mus().relative_to(ROOT)}/vozes.json → {p['voz']})"
     blocos = [
         f"TÍTULO: {p['titulo']}",
         f"RITMO: {p['ritmo']} · {p['bpm']} BPM",
         f"PERSONA (Suno): {pers}",
-        f"ESTILO DO CANAL: {estilos()['canal'].get('versao_por_voz', {}).get(p['voz'], estilos()['canal'].get('versao', '?'))} (musicas/PROCESSO_MELHORIA.md)",
+        f"ESTILO DO CANAL: {estilos()['canal'].get('versao_por_voz', {}).get(p['voz'], estilos()['canal'].get('versao', '?'))} ({_mus().relative_to(ROOT)}/PROCESSO_MELHORIA.md)",
         "",
         *_bloco_avancado(p),
         f"STYLE OF MUSIC ({len(p['style'])} caracteres):",
@@ -432,13 +432,16 @@ def checar(d: Path) -> Checagem:
         ck.add("erro", "ritmo citado", "a letra cita o ritmo: " + ", ".join(sorted(set(gen))))
 
     # 8 — identidade
+    from ..core.canal import atual as _canal_atual            # multicanal: a assinatura é do canal (zum / rawr…)
+    ass = _canal_atual().raw.get("assinatura") or {"palavra": "zum", "descricao": "o \"zum\" das asinhas",
+                                                   "bordoes": "Bora, turminha! / Zum-zum, que massa!"}
     bordoes = len([t for t in tags if t.lower().startswith(("bordão", "bordao", "shout"))])
     if not bordoes:
-        ck.add("aviso", "identidade", "nenhum bordão (Bora, turminha! / Zum-zum, que massa!)")
-    if "zum" not in full:
-        ck.add("aviso", "identidade", "sem o \"zum\" das asinhas")
-    if bordoes and "zum" in full:
-        ck.add("ok", "identidade", f"{bordoes} bordão(ões) e o \"zum\"")
+        ck.add("aviso", "identidade", f"nenhum bordão ({ass['bordoes']})")
+    if ass["palavra"] not in full:
+        ck.add("aviso", "identidade", f"sem {ass['descricao']}")
+    if bordoes and ass["palavra"] in full:
+        ck.add("ok", "identidade", f"{bordoes} bordão(ões) e {ass['descricao']}")
     for campo, regra in (("dia_a_dia", "dia a dia"), ("curiosidade", "curiosidade")):
         if not f.get(campo):
             ck.add("aviso", regra, f"ficha sem '{campo}'")
@@ -527,7 +530,9 @@ def nova(nome: str, titulo: str, ritmo: str, tipo: str, estrutura: str = "A", vo
          "curiosidade": "", "ritmo": ritmo, "bpm": r["bpm"][2], "estrutura": estrutura, "voz": voz, "cantam": {}, "cenas": [],
          "duracao_alvo": [140, 170], "alternativas": [], "status": "rascunho", "versoes": []}
     (d / "ficha.json").write_text(json.dumps(f, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
-    modelo = MODELOS.get(estrutura, MODELOS["A"]).format(intro=r["instrumentos"].split(",")[0])
+    from ..core.canal import atual as _canal_atual
+    mod_canal = _canal_atual().raw.get("modelo_letra")          # multicanal: cada canal tem o seu modelo de letra
+    modelo = (mod_canal or MODELOS.get(estrutura, MODELOS["A"])).format(intro=r["instrumentos"].split(",")[0])
     (d / "letra.txt").write_text(modelo, encoding="utf-8")
     return d
 

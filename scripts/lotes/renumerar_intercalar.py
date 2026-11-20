@@ -2,7 +2,7 @@
 42 Pais, 49 Crianças. Sem ritmo repetido em sequência e sem a mesma estrutura 3 vezes seguidas."""
 import json, re, subprocess
 from pathlib import Path
-ROOT = Path(__file__).resolve().parents[2]; M = ROOT / "musicas"
+ROOT = Path(__file__).resolve().parents[2]; M = ROOT / "canais" / "laurinha" / "musicas"
 ORDEM = ["mee_carneirinho", "andar_de_pinguim", "castelo_de_areia", "bolha_de_sabao", "carnaval_da_turminha", "que_forma_e_essa",
  "robo_dancarino", "conta_vantagem", "dino_pisa_forte", "dorme_acorda", "roda_rodinha", "pula_coelhinho", "cara_de_que",
  "polvo_oito_bracos", "gelatina", "careta_de_limao", "do_pe_a_cabeca", "mamae_querida", "bibi_fomfom", "chule_de_sapo",

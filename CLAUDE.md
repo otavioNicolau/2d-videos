@@ -4,7 +4,14 @@ Estúdio de animação 2D cartoon (comédia física, estilo TV clássica) que tr
 Personagens e universos **sempre originais** — referências clássicas só como inspiração técnica.
 
 ## Estado
-- F0–F6 executadas: MVP "A Torta do Caramelo" em `projects/torta-do-caramelo/` (saída em `output/`, revisão em `output/REVISAO.md`).
+- F0–F6 executadas: MVP "A Torta do Caramelo" em `projects/_laboratorio/torta-do-caramelo/` (saída em `output/`, revisão em `output/REVISAO.md`).
+- **Multicanal (20/11/2026)** — dois canais na mesma esteira, cada um com perfil em `canais/<id>/canal.json`:
+  | Canal | Bíblias e músicas | Marca | Episódios | Entregas (Windows) |
+  |---|---|---|---|---|
+  | **Laurinha e Luisinho** (`laurinha`, padrão) | `canais/laurinha/` | `library/brand/laurinha/` | `projects/laurinha/epNN-…` | `Videos\Laurinha e Luisinho\` |
+  | **Fofolucos** (`fofolucos`) | `canais/fofolucos/` | `library/brand/fofolucos/` | `projects/fofolucos/epNN-…` | `Videos\Fofolucos\` |
+  Testes e protótipos ficam em `projects/_laboratorio/`. Canal da execução: `--canal <id>` na CLI, senão o do projeto
+  (`laurinha/ep28-…`), senão `laurinha`. Scripts de placar: `TOONSTUDIO_CANAL=fofolucos …`. Código: `toonstudio/core/canal.py`.
 - Arquitetura: [docs/arquitetura.md](docs/arquitetura.md). Pendente: F7 (IA ideia→episode.json), F8 (interface Godot).
 - Decisões em [docs/adr/](docs/adr/). Decisão estrutural nova → novo ADR.
 
@@ -23,10 +30,10 @@ Personagens e universos **sempre originais** — referências clássicas só com
 - Caminhos para o Windows: `wslpath -w` (dados ficam no WSL, ADR-0007).
 
 ## Regras
-- **Identidade visual: [BIBLIA_VISUAL.md](BIBLIA_VISUAL.md) é a base obrigatória** de todo personagem, animal, objeto e cenário. Mudanças só com autorização do usuário.
-- **Entregas SEMPRE em `C:\Users\DELL\Videos\Laurinha e Luisinho\`** (nunca no Downloads): `NN Título\{Pré-produção, Vídeo longo}\` — **sem Shorts** (decisão do usuário 16/11/2026: só o vídeo normal; `toonstudio short` fica parado) e `Canal\` (capa, perfil, textos, `Vinheta\`). Mesmo formato do projeto ~/videos.
+- **Identidade visual: a bíblia visual DO CANAL é a base obrigatória** de todo personagem, animal, objeto e cenário — [Laurinha](canais/laurinha/BIBLIA_VISUAL.md) (chapado com contorno) · [Fofolucos](canais/fofolucos/BIBLIA_VISUAL.md) (chapado SEM contorno, monstrinhos). Nunca misturar estilos/cenários entre canais. Mudanças só com autorização do usuário.
+- **Entregas SEMPRE na pasta do canal em `C:\Users\DELL\Videos\<Canal>\`** (nunca no Downloads): `NN Título\{Pré-produção, Vídeo longo}\` — **sem Shorts** (decisão do usuário 16/11/2026: só o vídeo normal; `toonstudio short` fica parado) e `Canal\` (capa, perfil, textos, `Vinheta\`). Mesmo formato do projeto ~/videos.
 - **Nunca rascunho: padrão profissional sempre e melhoria contínua — [docs/PADRAO_DE_QUALIDADE.md](docs/PADRAO_DE_QUALIDADE.md)** (regra do dono do canal). Todo clipe tem roteiro verso a verso completo, passa pela conferência antes de ser mostrado e cada erro percebido entra no registro de lições.
-- **Identidade musical: [musicas/BIBLIA_MUSICAL.md](musicas/BIBLIA_MUSICAL.md) é a base obrigatória** de toda música (ritmo por tema, bordões, letra, estruturas, avaliação). Ritmos em `musicas/estilos.json`, vozes em `musicas/vozes.json`.
+- **Identidade musical: a bíblia musical DO CANAL é a base obrigatória** de toda música — [Laurinha](canais/laurinha/musicas/BIBLIA_MUSICAL.md) · [Fofolucos](canais/fofolucos/musicas/BIBLIA_MUSICAL.md). Ritmos em `canais/<id>/musicas/estilos.json`, vozes em `canais/<id>/musicas/vozes.json`. **Proibido cortar a música do Suno** (o vídeo usa o take inteiro).
 - Código funcional não prova qualidade artística: renderizar, **olhar os quadros** (pranchas) e corrigir.
 - Nada de imagem estática deslizando no lugar de animação.
 - Não esconder limitações; aprovação humana antes do render final.

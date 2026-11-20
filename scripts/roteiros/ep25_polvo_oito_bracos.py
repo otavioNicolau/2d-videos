@@ -15,7 +15,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from _comum import LA, LU, Roteiro, call  # noqa: E402
 
-R = Roteiro("ep25-polvo-oito-bracos", "25_polvo_oito_bracos", "luisinho")
+R = Roteiro("laurinha/ep25-polvo-oito-bracos", "25_polvo_oito_bracos", "luisinho")
 MAR, PRAIA, COZ, BANHO, CASA, SALA = "plano_fundo_mar", "plano_praia", "plano_cozinha", "plano_banheiro", "plano_casa_frente", "plano_sala"
 PALCO = PRAIA                     # 19/11: a banda toca na praia (nada de salão lilás fora de festa)
 VO, VZ, MA = "vovo", "vovozinho", "mamae"

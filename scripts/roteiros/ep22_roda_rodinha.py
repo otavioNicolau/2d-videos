@@ -14,7 +14,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from _comum import LA, LU, SALAO, Roteiro, call  # noqa: E402
 
-R = Roteiro("ep22-roda-rodinha", "22_roda_rodinha", "laurinha")
+R = Roteiro("laurinha/ep22-roda-rodinha", "22_roda_rodinha", "laurinha")
 JARDIM, LAGOA, CAMPO, CASA = "plano_jardim", "plano_lagoa", "plano_campo", "plano_casa_frente"
 CAM = {"x": 1300, "y": 600, "zoom": 1.1, "zoom_fim": 1.18}
 

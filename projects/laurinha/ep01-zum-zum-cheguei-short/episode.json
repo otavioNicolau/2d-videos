@@ -1,0 +1,1756 @@
+{
+  "schema": "1.1",
+  "id": "ep01-zum-zum-cheguei-short",
+  "title": "Zum Zum, Cheguei! — Short",
+  "logline": "Clipe de \"Zum Zum, Cheguei!\" — acordar e se arrumar para a escola. Montado do roteiro verso a verso (roteiro.json).",
+  "fps": 30,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "background": "plano_parque",
+  "soundtrack": {
+    "file": "musica/trabalho.wav",
+    "analysis": "analise/song.json",
+    "start": 0.0,
+    "end": 46.6,
+    "fade_out": 0.3,
+    "beat_grid": "full"
+  },
+  "captions": {
+    "lyrics": "analise/letra.json",
+    "style": "palavra_a_palavra"
+  },
+  "overlays": {
+    "logo": true,
+    "channel": [
+      "LAURINHA",
+      "e Luisinho"
+    ]
+  },
+  "cast": {
+    "laurinha": {
+      "character": "laurinha"
+    },
+    "luisinho": {
+      "character": "luisinho"
+    },
+    "sol": {
+      "character": "sol"
+    },
+    "cama": {
+      "character": "cama"
+    },
+    "lencol": {
+      "character": "lencol"
+    },
+    "janela": {
+      "character": "janela"
+    },
+    "mesa": {
+      "character": "mesa"
+    },
+    "espelho": {
+      "character": "espelho"
+    },
+    "caixa_brinquedos": {
+      "character": "caixa_brinquedos"
+    },
+    "mamae": {
+      "character": "mamae"
+    },
+    "vovo": {
+      "character": "vovo"
+    }
+  },
+  "approval": {
+    "storyboard": true,
+    "final_render": false
+  },
+  "scenes": [
+    {
+      "id": "s01_refrao",
+      "title": "Zum, zum, cheguei! Cheguei!",
+      "duration": 4.0334,
+      "description": "Zum, zum, cheguei! Cheguei! / Zum, zum, cheguei! Cheguei!",
+      "background": "danca_raios_amarelo",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 4.033,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 800.0,
+            "y": 640,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "fly",
+              "to_x": 800.0,
+              "to_y": 1010,
+              "dur": 0.9,
+              "t": 0.0
+            },
+            {
+              "t": 1.25,
+              "do": "cheguei",
+              "dur": 1.0
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1120.0,
+            "y": 640,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "fly",
+              "to_x": 1120.0,
+              "to_y": 1010,
+              "dur": 0.9,
+              "t": 0.0
+            },
+            {
+              "t": 1.25,
+              "do": "cheguei",
+              "dur": 1.0
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "flash_in": true,
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "ZUM, ZUM, CHEGUEI!",
+          "dur": 1.8,
+          "color": "verde",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.327,
+          "to": 3.987
+        },
+        {
+          "who": "luisinho",
+          "from": 0.327,
+          "to": 3.987
+        }
+      ]
+    },
+    {
+      "id": "s02_refrao",
+      "title": "Bati as asinhas",
+      "duration": 0.7333,
+      "description": "Bati as asinhas",
+      "background": "danca_bolinhas_rosa",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 0.733,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 800.0,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "dance",
+              "style": "asinhas",
+              "dur": 0.733,
+              "t": 0.0
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1120.0,
+            "y": 1010,
+            "turn": -0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "dance",
+              "style": "asinhas",
+              "dur": 0.733,
+              "t": 0.0
+            }
+          ]
+        }
+      },
+      "fx": [
+        "notas"
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 0.723
+        },
+        {
+          "who": "luisinho",
+          "from": 0.0,
+          "to": 0.723
+        }
+      ]
+    },
+    {
+      "id": "s03_refrao",
+      "title": "E voei, voei!",
+      "duration": 1.4667,
+      "description": "E voei, voei!",
+      "background": "plano_ceu",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300.0,
+            "y": 540.0,
+            "zoom": 1.808
+          },
+          {
+            "t": 1.467,
+            "x": 1300.0,
+            "y": 540.0,
+            "zoom": 1.808,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1140.0,
+            "y": 1000,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "fly",
+              "to_x": 1140.0,
+              "to_y": 760.0,
+              "dur": 1.467,
+              "turn": 0.2,
+              "land": false,
+              "t": 0.0
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1460.0,
+            "y": 1040,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "fly",
+              "to_x": 1460.0,
+              "to_y": 760.0,
+              "dur": 1.467,
+              "turn": -0.2,
+              "land": false,
+              "t": 0.0
+            }
+          ]
+        }
+      },
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.18,
+          "to": 1.457
+        },
+        {
+          "who": "luisinho",
+          "from": 0.18,
+          "to": 1.457
+        }
+      ]
+    },
+    {
+      "id": "s04_refrao",
+      "title": "Zum, zum, cheguei! Cheguei!",
+      "duration": 3.3,
+      "description": "Zum, zum, cheguei! Cheguei! / Zum, zum, cheguei! Cheguei!",
+      "background": "danca_xadrez_rosa",
+      "fx": [
+        "estrelas",
+        "notas"
+      ],
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 3.3,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 800.0,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "cheguei",
+              "dur": 0.9,
+              "t": 0.0
+            },
+            {
+              "t": 1.0,
+              "do": "dance",
+              "style": "asinhas",
+              "dur": 2.3
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1120.0,
+            "y": 1010,
+            "turn": -0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "cheguei",
+              "dur": 0.9,
+              "t": 0.0
+            },
+            {
+              "t": 1.0,
+              "do": "dance",
+              "style": "asinhas",
+              "dur": 2.3
+            }
+          ]
+        }
+      },
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.213,
+          "to": 3.133
+        },
+        {
+          "who": "luisinho",
+          "from": 0.213,
+          "to": 3.133
+        }
+      ]
+    },
+    {
+      "id": "s05_refrao",
+      "title": "Com Laurinha e Luisinho",
+      "duration": 1.1,
+      "description": "Com Laurinha e Luisinho",
+      "background": "danca_ondas_azul",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 1.1,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 800.0,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "dance",
+              "style": "lado_frente",
+              "dur": 1.1,
+              "t": 0.0
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1120.0,
+            "y": 1010,
+            "turn": -0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "dance",
+              "style": "lado_frente",
+              "dur": 1.1,
+              "t": 0.0
+            }
+          ]
+        }
+      },
+      "fx": [
+        "coracoes"
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 1.09
+        },
+        {
+          "who": "luisinho",
+          "from": 0.0,
+          "to": 1.09
+        }
+      ]
+    },
+    {
+      "id": "s06_refrao",
+      "title": "Todo dia é festa, ei!",
+      "duration": 1.4333,
+      "description": "Todo dia é festa, ei!",
+      "background": "danca_xadrez_vermelho",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 1.433,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 800.0,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "dance",
+              "style": "festa",
+              "dur": 1.433,
+              "t": 0.0
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1120.0,
+            "y": 1010,
+            "turn": -0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "dance",
+              "style": "festa",
+              "dur": 1.433,
+              "t": 0.0
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.253,
+          "to": 1.423
+        },
+        {
+          "who": "luisinho",
+          "from": 0.253,
+          "to": 1.423
+        }
+      ]
+    },
+    {
+      "id": "s07_verso",
+      "title": "Acordei cedinho! Cedinho!",
+      "duration": 1.5333,
+      "description": "Acordei cedinho! Cedinho!",
+      "background": "plano_quarto_rosa",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1025.0,
+            "y": 536.0387215734481,
+            "zoom": 1.808
+          },
+          {
+            "t": 1.533,
+            "x": 1025.0,
+            "y": 536.0387215734481,
+            "zoom": 1.808,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1000,
+            "y": 860,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 2
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "acordar",
+              "dur": 0.7,
+              "t": 0.0
+            },
+            {
+              "t": 0.7,
+              "do": "espreguicar",
+              "dur": 1.1
+            }
+          ]
+        }
+      },
+      "props": {
+        "cama": {
+          "start": {
+            "x": 1050,
+            "y": 930,
+            "z": 1
+          },
+          "exposure": 1
+        },
+        "lencol": {
+          "start": {
+            "x": 1050,
+            "y": 935,
+            "z": 3
+          },
+          "exposure": 1
+        }
+      },
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.162,
+          "to": 1.523
+        }
+      ],
+      "transition_in": {
+        "type": "zoom",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s08_verso",
+      "title": "Abri a janela! Janela!",
+      "duration": 1.8333,
+      "description": "Abri a janela! Janela!",
+      "background": "plano_quarto_rosa",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1405.0,
+            "y": 540,
+            "zoom": 1.808
+          },
+          {
+            "t": 1.833,
+            "x": 1405.0,
+            "y": 540,
+            "zoom": 1.808,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1250,
+            "y": 930,
+            "turn": 0.6,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.25,
+              "do": "empurrar",
+              "dur": 1.0
+            }
+          ]
+        }
+      },
+      "props": {
+        "janela": {
+          "start": {
+            "x": 1560,
+            "y": 640,
+            "z": 1
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.5,
+              "pose": {
+                "abre": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.1,
+              "pose": {
+                "abre": 1.0,
+                "luz": 1.0
+              },
+              "ease": "out"
+            }
+          ]
+        }
+      },
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.108,
+          "to": 1.823
+        }
+      ]
+    },
+    {
+      "id": "s09_verso",
+      "title": "O sol deu bom dia",
+      "duration": 4.4,
+      "description": "O sol deu bom dia",
+      "background": "plano_ceu",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540,
+            "zoom": 1.808
+          },
+          {
+            "t": 4.4,
+            "x": 1300,
+            "y": 540,
+            "zoom": 1.808,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {},
+      "props": {
+        "sol": {
+          "start": {
+            "x": 1300,
+            "y": 940,
+            "z": 1,
+            "giro": 0.3
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.2,
+              "pose": {
+                "aceno": 0.0,
+                "boca": 0.6
+              }
+            },
+            {
+              "t": 0.6,
+              "pose": {
+                "boca": 0.0
+              }
+            },
+            {
+              "t": 1.0,
+              "pose": {
+                "boca": 0.6
+              }
+            },
+            {
+              "t": 1.5,
+              "pose": {
+                "boca": 0.0
+              }
+            },
+            {
+              "t": 3.6,
+              "pose": {
+                "aceno": 1.0,
+                "giro": 0.6
+              },
+              "ease": "linear"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "s10_verso",
+      "title": "Que manhã mais bela!",
+      "duration": 2.9334,
+      "description": "Que manhã mais bela!",
+      "background": "plano_quarto_rosa",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1560.0,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          },
+          {
+            "t": 2.933,
+            "x": 1560.0,
+            "y": 543.9612784265519,
+            "zoom": 1.808,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1560,
+            "y": 930,
+            "turn": 0.15,
+            "expr": "joy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [],
+          "keys": [
+            {
+              "t": 0.3,
+              "pose": {
+                "hand_n_x": 25,
+                "hand_n_y": 0,
+                "hand_f_x": 25,
+                "hand_f_y": 0,
+                "hand_n_bend": 0.9,
+                "hand_f_bend": -0.9,
+                "eyes_happy": 1.0,
+                "head_tilt": 0.15
+              }
+            }
+          ]
+        }
+      },
+      "props": {
+        "janela": {
+          "start": {
+            "x": 1560,
+            "y": 640,
+            "z": 1,
+            "abre": 1.0,
+            "luz": 1.0
+          },
+          "exposure": 1
+        }
+      },
+      "fx": [
+        "coracoes"
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.307,
+          "to": 2.527
+        }
+      ]
+    },
+    {
+      "id": "s11_verso",
+      "title": "Bebi o meu leite",
+      "duration": 2.2333,
+      "description": "Bebi o meu leite",
+      "background": "plano_cozinha",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300.0,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          },
+          {
+            "t": 2.233,
+            "x": 1300.0,
+            "y": 543.9612784265519,
+            "zoom": 1.808,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1300,
+            "y": 900,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 2,
+            "holding": "copo_leite",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.15,
+              "do": "beber",
+              "dur": 1.9
+            }
+          ]
+        }
+      },
+      "props": {
+        "mesa": {
+          "start": {
+            "x": 1300,
+            "y": 965,
+            "z": 3
+          },
+          "exposure": 1
+        }
+      },
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.153,
+          "to": 2.223
+        }
+      ]
+    },
+    {
+      "id": "s12_verso",
+      "title": "Comi a banana",
+      "duration": 3.6667,
+      "description": "Comi a banana",
+      "background": "padrao_bananas_azul",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 3.667,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3,
+            "holding": "banana",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.15,
+              "do": "comer",
+              "dur": 2.3
+            }
+          ]
+        }
+      },
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.28,
+          "to": 2.98
+        }
+      ]
+    },
+    {
+      "id": "s13_verso",
+      "title": "Ajeitei meu laço",
+      "duration": 2.9333,
+      "description": "Ajeitei meu laço",
+      "background": "plano_quarto_rosa",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1605.0,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          },
+          {
+            "t": 2.933,
+            "x": 1605.0,
+            "y": 543.9612784265519,
+            "zoom": 1.808,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1450,
+            "y": 930,
+            "turn": 0.45,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.15,
+              "do": "ajeitar_laco",
+              "dur": 1.8
+            }
+          ]
+        }
+      },
+      "props": {
+        "espelho": {
+          "start": {
+            "x": 1760,
+            "y": 900,
+            "z": 1
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 1.4,
+              "pose": {
+                "brilho": 1.0
+              },
+              "ease": "out"
+            }
+          ]
+        }
+      },
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 2.293
+        }
+      ]
+    },
+    {
+      "id": "s14_verso",
+      "title": "Amarelo, bacana!",
+      "duration": 2.9333,
+      "description": "Amarelo, bacana!",
+      "background": "padrao_lacos_rosa",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.75
+          },
+          {
+            "t": 2.933,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.81,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "bacana",
+              "dur": 2.833
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 2.68
+        }
+      ]
+    },
+    {
+      "id": "s15_refrao",
+      "title": "Zum, zum, cheguei! Cheguei!",
+      "duration": 4.0334,
+      "description": "Zum, zum, cheguei! Cheguei! / Zum, zum, cheguei! Cheguei!",
+      "background": "danca_raios_amarelo",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 4.033,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 800.0,
+            "y": 640,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "fly",
+              "to_x": 800.0,
+              "to_y": 1010,
+              "dur": 0.9,
+              "t": 0.0
+            },
+            {
+              "t": 1.25,
+              "do": "cheguei",
+              "dur": 1.0
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1120.0,
+            "y": 640,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "fly",
+              "to_x": 1120.0,
+              "to_y": 1010,
+              "dur": 0.9,
+              "t": 0.0
+            },
+            {
+              "t": 1.25,
+              "do": "cheguei",
+              "dur": 1.0
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "flash_in": true,
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "ZUM, ZUM, CHEGUEI!",
+          "dur": 1.8,
+          "color": "verde",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.327,
+          "to": 3.987
+        },
+        {
+          "who": "luisinho",
+          "from": 0.327,
+          "to": 3.987
+        }
+      ],
+      "transition_in": {
+        "type": "deslizar_cima",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s16_refrao",
+      "title": "Bati as asinhas",
+      "duration": 0.7333,
+      "description": "Bati as asinhas",
+      "background": "danca_bolinhas_rosa",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 0.733,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 800.0,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "dance",
+              "style": "asinhas",
+              "dur": 0.733,
+              "t": 0.0
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1120.0,
+            "y": 1010,
+            "turn": -0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "dance",
+              "style": "asinhas",
+              "dur": 0.733,
+              "t": 0.0
+            }
+          ]
+        }
+      },
+      "fx": [
+        "notas"
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 0.723
+        },
+        {
+          "who": "luisinho",
+          "from": 0.0,
+          "to": 0.723
+        }
+      ]
+    },
+    {
+      "id": "s17_refrao",
+      "title": "E voei, voei!",
+      "duration": 1.4667,
+      "description": "E voei, voei!",
+      "background": "plano_ceu",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300.0,
+            "y": 540.0,
+            "zoom": 1.808
+          },
+          {
+            "t": 1.467,
+            "x": 1300.0,
+            "y": 540.0,
+            "zoom": 1.808,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1140.0,
+            "y": 1000,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "fly",
+              "to_x": 1140.0,
+              "to_y": 760.0,
+              "dur": 1.467,
+              "turn": 0.2,
+              "land": false,
+              "t": 0.0
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1460.0,
+            "y": 1040,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "fly",
+              "to_x": 1460.0,
+              "to_y": 760.0,
+              "dur": 1.467,
+              "turn": -0.2,
+              "land": false,
+              "t": 0.0
+            }
+          ]
+        }
+      },
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.18,
+          "to": 1.457
+        },
+        {
+          "who": "luisinho",
+          "from": 0.18,
+          "to": 1.457
+        }
+      ]
+    },
+    {
+      "id": "s18_refrao",
+      "title": "Zum, zum, cheguei! Cheguei!",
+      "duration": 3.3,
+      "description": "Zum, zum, cheguei! Cheguei! / Zum, zum, cheguei! Cheguei!",
+      "background": "danca_xadrez_rosa",
+      "fx": [
+        "estrelas",
+        "notas"
+      ],
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 3.3,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 800.0,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "cheguei",
+              "dur": 0.9,
+              "t": 0.0
+            },
+            {
+              "t": 1.0,
+              "do": "dance",
+              "style": "asinhas",
+              "dur": 2.3
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1120.0,
+            "y": 1010,
+            "turn": -0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "cheguei",
+              "dur": 0.9,
+              "t": 0.0
+            },
+            {
+              "t": 1.0,
+              "do": "dance",
+              "style": "asinhas",
+              "dur": 2.3
+            }
+          ]
+        }
+      },
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.213,
+          "to": 3.133
+        },
+        {
+          "who": "luisinho",
+          "from": 0.213,
+          "to": 3.133
+        }
+      ]
+    },
+    {
+      "id": "s19_refrao",
+      "title": "Com Laurinha e Luisinho",
+      "duration": 1.1,
+      "description": "Com Laurinha e Luisinho",
+      "background": "danca_ondas_azul",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 1.1,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 800.0,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "dance",
+              "style": "lado_frente",
+              "dur": 1.1,
+              "t": 0.0
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1120.0,
+            "y": 1010,
+            "turn": -0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "dance",
+              "style": "lado_frente",
+              "dur": 1.1,
+              "t": 0.0
+            }
+          ]
+        }
+      },
+      "fx": [
+        "coracoes"
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 1.09
+        },
+        {
+          "who": "luisinho",
+          "from": 0.0,
+          "to": 1.09
+        }
+      ]
+    },
+    {
+      "id": "s20_refrao",
+      "title": "Todo dia é festa, ei!",
+      "duration": 1.4333,
+      "description": "Todo dia é festa, ei!",
+      "background": "danca_xadrez_vermelho",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 1.433,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 800.0,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "dance",
+              "style": "festa",
+              "dur": 1.433,
+              "t": 0.0
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1120.0,
+            "y": 1010,
+            "turn": -0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "dance",
+              "style": "festa",
+              "dur": 1.433,
+              "t": 0.0
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.253,
+          "to": 1.423
+        },
+        {
+          "who": "luisinho",
+          "from": 0.253,
+          "to": 1.423
+        }
+      ]
+    }
+  ],
+  "projeto": "laurinha/ep01-zum-zum-cheguei-short"
+}

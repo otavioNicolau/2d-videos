@@ -66,7 +66,7 @@ def test_ass_reveals_words_progressively(tmp_path):
 
 def test_test_clip_validates_and_matches_audio_length():
     from toonstudio.core.validate import validate
-    p = PROJECTS / "teste-danca-do-calango" / "episode.json"
+    p = PROJECTS / "_laboratorio" / "teste-danca-do-calango" / "episode.json"
     if not p.exists():
         return
     ep = json.loads(p.read_text(encoding="utf-8"))

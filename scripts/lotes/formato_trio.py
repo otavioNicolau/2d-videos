@@ -36,7 +36,7 @@ def revisar(t: str) -> str:
 
 
 def main(a: int, b: int) -> None:
-    for d in sorted((ROOT / "musicas").glob("[0-9][0-9]_*")):
+    for d in sorted((ROOT / "canais" / "laurinha" / "musicas").glob("[0-9][0-9]_*")):
         n = int(d.name[:2])
         if not (a <= n <= b) or not (d / "letra.txt").exists():
             continue

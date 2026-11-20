@@ -7,7 +7,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from lotes.revisao_auditoria import montar  # noqa: E402
 
-M = Path(__file__).resolve().parents[2] / "musicas"
+M = Path(__file__).resolve().parents[2] / "canais" / "laurinha" / "musicas"
 
 
 def pasta(n):

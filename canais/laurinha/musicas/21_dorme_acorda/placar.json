@@ -1,0 +1,32 @@
+{
+ "musica": "21",
+ "titulo": "Dorme, Acorda!",
+ "estilo": "E12",
+ "medidas": {
+  "voz_%": 51.2,
+  "bateria_%": 31.6,
+  "baixo_%": 6.6,
+  "outros_%": 10.7,
+  "largura_voz": 0.1,
+  "batidas_identicas": 0.75,
+  "duracao_s": 176.4,
+  "teclado_eletronico": 0.039,
+  "bateria_banda": 0.017,
+  "percussao": 0.009,
+  "metais": 0.007,
+  "sincope": 0.66,
+  "baixo_sincopado": 0.45
+ },
+ "acertos": "5/12",
+ "nota": 4.8,
+ "obs": "take v1 (E12: teclado 1º, bateria 2º, sax 3º) — usuário: nota 4,8 (a melhor até agora)",
+ "falhas": [
+  "voz no som (%) (alto)",
+  "batida no som (%) (baixo)",
+  "baixo no som (%) (baixo)",
+  "largura da voz (0 = uma voz no centro) (alto)",
+  "batida de teclado (loop igual) (baixo)",
+  "teclado/synth reconhecido (baixo)",
+  "baixo fora do tempo forte ('bounce') (baixo)"
+ ]
+}

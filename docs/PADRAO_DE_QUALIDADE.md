@@ -2,7 +2,7 @@
 
 **Regra do dono do canal (16/11/2026): nada de rascunho. Toda entrega tem qualidade profissional, e cada clipe tem que sair
 melhor que o anterior.** Este documento é obrigatório, como a [BIBLIA_VISUAL.md](../BIBLIA_VISUAL.md) e a
-[BIBLIA_MUSICAL.md](../musicas/BIBLIA_MUSICAL.md).
+[BIBLIA_MUSICAL.md](../canais/laurinha/musicas/BIBLIA_MUSICAL.md).
 
 ## 1. O que nunca se entrega
 - Cena genérica que não ilustra o verso (dança "de enchimento" no lugar da ação da letra).

@@ -1,18 +1,35 @@
 {
  "nome": "Laurinha e Luisinho",
- "nota": "canal 1 (padrão). Caminhos de sempre: musicas/ e library/brand/. Bíblias: BIBLIA_VISUAL.md e musicas/BIBLIA_MUSICAL.md.",
- "musicas": "musicas",
- "brand": "library/brand",
+ "nota": "canal 1. Músicas e bíblias em canais/laurinha/, marca em library/brand/laurinha/, episódios em projects/laurinha/.",
+ "musicas": "canais/laurinha/musicas",
+ "brand": "library/brand/laurinha",
  "windows": "/mnt/c/Users/DELL/Videos/Laurinha e Luisinho",
- "logo_texto": ["LAURINHA", "e Luisinho"],
- "vinheta": "library/brand/vinheta.mp4",
- "chamada": "library/brand/chamada.mp4",
+ "logo_texto": [
+  "LAURINHA",
+  "e Luisinho"
+ ],
+ "vinheta": "library/brand/laurinha/vinheta.mp4",
+ "chamada": "library/brand/laurinha/chamada.mp4",
  "titulo_sufixo": "🐝 Laurinha e Luisinho (Música Infantil)",
  "hashtags": "#musicainfantil #laurinhaeluisinho #desenhoinfantil",
- "tags": ["Laurinha e Luisinho", "música infantil", "clipe infantil", "desenho infantil", "músicas para crianças"],
+ "tags": [
+  "Laurinha e Luisinho",
+  "música infantil",
+  "clipe infantil",
+  "desenho infantil",
+  "músicas para crianças"
+ ],
  "copyright": "Música e animação originais © Laurinha e Luisinho.",
  "playlist_geral": "Músicas Infantis da Laurinha e do Luisinho 🐝",
- "protagonistas": ["laurinha", "luisinho"],
- "biblia_visual": "BIBLIA_VISUAL.md",
- "biblia_musical": "musicas/BIBLIA_MUSICAL.md"
+ "protagonistas": [
+  "laurinha",
+  "luisinho"
+ ],
+ "biblia_visual": "canais/laurinha/BIBLIA_VISUAL.md",
+ "biblia_musical": "canais/laurinha/musicas/BIBLIA_MUSICAL.md",
+ "assinatura": {
+  "palavra": "zum",
+  "descricao": "o \"zum\" das asinhas",
+  "bordoes": "Bora, turminha! / Zum-zum, que massa!"
+ }
 }

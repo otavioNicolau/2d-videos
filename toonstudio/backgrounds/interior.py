@@ -697,7 +697,7 @@ def build(bg_id: str, out_dir: Path, scale: float = 1.5, seed: int = 11) -> dict
         s, w = SCENES[bg_id](rng)
         s.makeImageSnapshot().save(str(out_dir / "MG_cena.png"), skia.kPNG)
         meta = {"id": bg_id, "name": bg_id.replace("plano_", "Plano — ").replace("_", " "), "width": w, "height": H, "scale": scale,
-                "landmarks": {"ground_y": 930, "floor_y": FLOOR_Y}, "estilo": "BIBLIA_VISUAL.md",
+                "landmarks": {"ground_y": 930, "floor_y": FLOOR_Y}, "estilo": "canais/laurinha/BIBLIA_VISUAL.md",
                 "layers": [{"name": "MG_cena", "file": "MG_cena.png", "parallax": 1.0, "z": -20, "width": w, "height": H}]}
     (out_dir / "background.json").write_text(json.dumps(meta, indent=2, ensure_ascii=False), encoding="utf-8")
     return meta

@@ -254,7 +254,7 @@ def test_published_songs_have_a_colorful_thumbnail_scene():
     e todos os ids existem."""
     from pathlib import Path
     from toonstudio.core.registry import CHARACTERS
-    for p in sorted(Path("musicas").glob("*/ficha.json")):
+    for p in sorted(Path("canais/laurinha/musicas").glob("*/ficha.json")):
         yt = json.loads(p.read_text(encoding="utf-8")).get("youtube", {})
         if not yt.get("miniatura"):
             continue
@@ -272,7 +272,7 @@ def test_thumbnails_do_not_repeat_background():
     from pathlib import Path
     from toonstudio.composition.canal import FUNDOS
     vistos = {}
-    for p in sorted(Path("musicas").glob("*/ficha.json")):
+    for p in sorted(Path("canais/laurinha/musicas").glob("*/ficha.json")):
         cena = json.loads(p.read_text(encoding="utf-8")).get("youtube", {}).get("miniatura_cena")
         if not cena:
             continue
@@ -347,7 +347,7 @@ def test_every_prop_fits_the_level_canvas():
 def test_lyrics_fit_suno_limit():
     """Campo Lyrics do Suno aceita até 5000 caracteres (quebras de linha contam)."""
     from pathlib import Path
-    for d in sorted(Path("musicas").glob("[0-9][0-9]_*")):
+    for d in sorted(Path("canais/laurinha/musicas").glob("[0-9][0-9]_*")):
         p = c.prompt(d)
         assert len(p["lyrics"].rstrip()) <= c.LIMITE_LETRA, d.name
         for a in p["alternativas"]:
@@ -359,7 +359,7 @@ def test_catalogue_is_not_one_formula():
     repete em 3 músicas seguidas (o mercado alterna bloco-que-volta, paradas, cumulativa, pergunta e resposta…)."""
     import re
     from pathlib import Path
-    lote = [d for d in sorted(Path("musicas").glob("[0-9][0-9]_*")) if int(d.name[:2]) >= 11]
+    lote = [d for d in sorted(Path("canais/laurinha/musicas").glob("[0-9][0-9]_*")) if int(d.name[:2]) >= 11]
     sabia = [d.name for d in lote if re.search(r"^Sabia que", (d / "letra.txt").read_text(encoding="utf-8"), re.M)]
     assert len(sabia) <= round(len(lote) / 3) + 1, f"'Sabia que' em {len(sabia)} de {len(lote)}: {sabia}"
     est = [c.ficha(d).get("estrutura") for d in lote]
@@ -505,11 +505,11 @@ def test_multicanal_perfis_e_projeto(monkeypatch):
     from toonstudio.core.config import ROOT
     monkeypatch.delenv(canal.ENV, raising=False)
     la, fo = canal.carregar("laurinha"), canal.carregar("fofolucos")
-    assert la.musicas == ROOT / "musicas" and la.windows.name == "Laurinha e Luisinho"
+    assert la.musicas == ROOT / "canais" / "laurinha" / "musicas" and la.windows.name == "Laurinha e Luisinho"
     assert fo.musicas == ROOT / "canais" / "fofolucos" / "musicas" and fo.windows.name == "Fofolucos"
     assert fo.logo_png and fo.logo_png.exists()
     assert canal.atual().id == "laurinha"
-    assert canal.id_do_projeto("ep28-do-pe-a-cabeca") == "laurinha"
+    assert canal.id_do_projeto("laurinha/ep28-do-pe-a-cabeca") == "laurinha"
     assert canal.id_do_projeto("fofolucos/ep01-teste") == "fofolucos"
     monkeypatch.setenv(canal.ENV, "fofolucos")
     from toonstudio.audio import composer

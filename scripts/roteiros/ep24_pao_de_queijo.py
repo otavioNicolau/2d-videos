@@ -15,7 +15,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from _comum import LA, LU, Roteiro, call  # noqa: E402
 PALCO = "plano_campo"          # 19/11: a banda toca na roça mineira (o salão lilás com bandeirinhas fica para festa junina)
 
-R = Roteiro("ep24-pao-de-queijo", "24_pao_de_queijo", "luisinho")
+R = Roteiro("laurinha/ep24-pao-de-queijo", "24_pao_de_queijo", "luisinho")
 COZ, RUA, CEU, SALA, JARDIM = "plano_cozinha", "plano_casa_frente", "plano_ceu", "plano_sala", "plano_jardim"
 VO = "vovo"
 CAM = {"x": 1300, "y": 600, "zoom": 1.1, "zoom_fim": 1.18}

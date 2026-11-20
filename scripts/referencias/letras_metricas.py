@@ -27,7 +27,7 @@ if __name__ == "__main__":
             linhas = [x for s in segs for x in re.split(r"[,!?.…]+", s["t"]) if x.strip()]
             res[p.stem] = medir(linhas)
     else:
-        for d in sorted(Path("musicas").glob("[0-9][0-9]_*")):
+        for d in sorted(Path("canais/laurinha/musicas").glob("[0-9][0-9]_*")):
             t = (d / "letra.txt").read_text(encoding="utf-8")
             t = re.sub(r"\[[^\]]*\]", "", t)
             linhas = [x for l in t.splitlines() for x in re.split(r"[,!?.…()]+", l) if x.strip()]

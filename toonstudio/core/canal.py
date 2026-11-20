@@ -4,8 +4,9 @@ nome, pasta de músicas, marca (logo, vinheta, chamada), pasta de entrega no Win
 Qual canal vale agora:
   1. `--canal <id>` na linha de comando (vira a variável TOONSTUDIO_CANAL);
   2. o canal do PROJETO (`projects/<canal>/<projeto>` ou o arquivo `canal.txt` dentro do projeto);
-  3. o padrão: `laurinha` (Laurinha e Luisinho — os caminhos de sempre: musicas/, library/brand/).
-Os projetos de outros canais ficam em `projects/<canal>/epNN-…` (o nome do projeto é "fofolucos/ep01-…").
+  3. o padrão: `laurinha` (Laurinha e Luisinho: canais/laurinha/, library/brand/laurinha/).
+Os projetos de cada canal ficam em `projects/<canal>/epNN-…` (o nome do projeto é "laurinha/ep28-…", "fofolucos/ep01-…");
+os testes e protótipos ficam em `projects/_laboratorio/`.
 """
 from __future__ import annotations
 
@@ -38,7 +39,7 @@ class Canal:
     copyright: str = ""
     playlist_geral: str = ""
     protagonistas: tuple = ()           # quem o auto-rascunho e os placares tratam como principais
-    projetos: Path = PROJECTS           # onde ficam os projetos do canal
+    projetos: Path = PROJECTS           # onde ficam os projetos do canal (projects/<canal>/)
     raw: dict = field(default_factory=dict)
 
 
@@ -59,7 +60,7 @@ def carregar(cid: str) -> Canal:
                  chamada=_p(d.get("chamada")), titulo_sufixo=d.get("titulo_sufixo", ""), hashtags=d.get("hashtags", ""),
                  tags=d.get("tags", []), copyright=d.get("copyright", ""), playlist_geral=d.get("playlist_geral", ""),
                  protagonistas=tuple(d.get("protagonistas", ())),
-                 projetos=PROJECTS if cid == PADRAO else PROJECTS / cid, raw=d)
+                 projetos=PROJECTS / cid, raw=d)
 
 
 def lista() -> list[str]:

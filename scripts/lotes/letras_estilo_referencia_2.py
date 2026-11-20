@@ -11,7 +11,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from lotes.letras_estilo_referencia import letra  # noqa: E402
 
-M = Path(__file__).resolve().parents[2] / "musicas"
+M = Path(__file__).resolve().parents[2] / "canais" / "laurinha" / "musicas"
 INTRO = {"pop_infantil": "bright piano riff", "frevo": "keyboard brass fanfare", "pagodao": "keyboard riff and claps",
          "eletronica_infantil": "robot synth riff and beeps", "rock_infantil": "happy electric guitar riff", "samba_enredo": "whistle and samba beat",
          "funk_infantil": "funk synth stab and claps", "forro_piseiro": "piseiro keyboard accordion riff", "batucada": "batucada beat and keyboard stab",

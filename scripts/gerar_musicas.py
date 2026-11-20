@@ -41,7 +41,7 @@ def letra(s):
 
 
 def criar(s, numero=None):
-    d = next((p for p in (ROOT / "musicas").glob(f"*_{s['nome']}")), None)
+    d = next((p for p in (ROOT / "canais" / "laurinha" / "musicas").glob(f"*_{s['nome']}")), None)
     if d is None:
         r = subprocess.run([str(ROOT / ".venv/bin/python"), "-m", "toonstudio.cli", "musica", "nova", s["nome"], "--titulo", s["titulo"],
                             "--ritmo", s["ritmo"], "--tipo", s["tipo"], "--estrutura", s["estrutura"]],

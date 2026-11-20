@@ -16,7 +16,7 @@ from ..characters.base import expression
 from ..core.config import LIBRARY
 from ..core.registry import character
 
-OUT = LIBRARY / "brand" / "canal"          # canal padrão; o atual vem de _out()
+OUT = LIBRARY / "brand" / "laurinha" / "canal"   # canal padrão; o atual vem de _out()
 
 
 def _out() -> Path:

@@ -177,7 +177,7 @@ LAYERS = [("BG_ceu", layer_ceu, -50), ("BG_morros", layer_morros, -40), ("MG_cha
 def build(bg_id: str, out_dir: Path, scale: float = 1.5, seed: int = 9) -> dict:
     out_dir.mkdir(parents=True, exist_ok=True)
     meta = {"id": bg_id, "name": "Plano — parque", "width": W_SCENE, "height": H, "scale": scale,
-            "landmarks": {"ground_y": GROUND_Y}, "layers": [], "estilo": "BIBLIA_VISUAL.md"}
+            "landmarks": {"ground_y": GROUND_Y}, "layers": [], "estilo": "canais/laurinha/BIBLIA_VISUAL.md"}
     for name, fn, z in LAYERS:
         rng = np.random.default_rng(seed + abs(z))
         surf, w, par = fn(scale, rng)
