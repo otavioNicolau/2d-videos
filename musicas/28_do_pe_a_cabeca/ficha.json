@@ -57,9 +57,106 @@
  "youtube": {
   "resumo": "DO PÉ À CABEÇA! 💃 A dança começa no pezinho e vai subindo: joelho, barriga, ombrinho, cabeça… e começa de novo, mais rápido! Mão no pé, mão no joelho, mão na barriga, mão na cabeça!",
   "resumo_short": "DO PÉ À CABEÇA! 🙆 Toque as partes do corpo cada vez mais rápido com a Laurinha e o Luisinho!",
-  "curiosidade": "O osso mais comprido do corpo fica na coxa: é o fêmur"
+  "curiosidade": "O osso mais comprido do corpo fica na coxa: é o fêmur",
+  "miniatura": "DO PÉ À\nCABEÇA!",
+  "miniatura_cena": {
+   "fundo": "raios",
+   "cores": [
+    [
+     255,
+     111,
+     168
+    ],
+    [
+     184,
+     101,
+     230
+    ],
+    [
+     255,
+     210,
+     63
+    ],
+    [
+     60,
+     139,
+     240
+    ],
+    [
+     255,
+     160,
+     200
+    ]
+   ],
+   "heroi": {
+    "id": "laurinha",
+    "pose": {
+     "turn": 0.2,
+     "mouth": "D",
+     "hand_n_x": -135,
+     "hand_n_y": -135,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3,
+     "eyes_happy": 1.0,
+     "smile": 1.0
+    }
+   },
+   "par": {
+    "id": "luisinho",
+    "pose": {
+     "turn": -0.2,
+     "mouth": "D",
+     "hand_n_x": -75,
+     "hand_n_y": 125,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "hand_f_x": 75,
+     "hand_f_y": 125,
+     "hand_f_bend": -0.5,
+     "paw_f": 3,
+     "body_y": 45,
+     "lean": 0.15,
+     "foot_n_bend": 0.55,
+     "foot_f_bend": 0.55
+    }
+   },
+   "objetos": [
+    {
+     "id": "destaque",
+     "pose": {
+      "cor": 0,
+      "pulso": 1.0,
+      "giro": 0.1
+     },
+     "tam": 240,
+     "x": 150,
+     "base": 300
+    }
+   ],
+   "frente": [
+    {
+     "id": "destaque",
+     "pose": {
+      "cor": 4,
+      "pulso": 0.5,
+      "giro": 0.3
+     },
+     "tam": 300,
+     "x": 760,
+     "base": 560
+    }
+   ]
+  }
  },
  "origem": "brincadeiras com o corpo (18/11/2026), inspiradas no gênero de No Ritmo Quá Quá / Morto-Vivo — nada copiado",
  "persona": "laurinha",
- "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz)"
+ "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz)",
+ "playlists": [
+  "Músicas Infantis da Laurinha e do Luisinho 🐝",
+  "Dançar e Brincar com o Corpo 💃🕺"
+ ]
 }
