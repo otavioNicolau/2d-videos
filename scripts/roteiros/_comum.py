@@ -114,7 +114,7 @@ class Roteiro:
         for chave, planos in self.partes.items():
             k_info = chave if chave in self.info else f"{chave}#1"
             for p, (t0, t1, _) in zip(planos, self.tempos(k_info, planos)):
-                p["cantam"] = [self.canta]
+                p["cantam"] = p.get("cantam") or [self.canta]          # Fofolucos: cada plano escolhe quem "canta"
                 d = t1 - t0
                 assert d >= 0.6, (chave, t0, t1)
                 if p.get("tremor"):

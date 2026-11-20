@@ -374,6 +374,25 @@ def beijo(char, st, a):
         (d, {"head_tilt": 0.12}, "inout")], dur=d, ex=1)
 
 
+@action("rawr", "acting", "\"RAWR!\" de monstrinho (Fofolucos): agacha um tiquinho, sobe com as GARRAS para cima, dentes à "
+        "mostra e sobrancelha brava, treme de leve e volta sorrindo (assustador-divertido).", {"dur": "s"})
+def rawr(char, st, a):
+    d = _d(a, 1.4)
+    garras = {"hand_n_x": -125, "hand_n_y": -115, "hand_n_bend": 0.6, "paw_n": 3, "hand_f_x": 125, "hand_f_y": -115,
+              "hand_f_bend": -0.6, "paw_f": 3}
+    keys = [(0.0, {}, "step"),
+            (0.18, {"body_y": 14, "squash": 0.94, "hand_n_x": -70, "hand_n_y": 40, "hand_f_x": 70, "hand_f_y": 40}, "inout"),
+            (0.36, {**garras, "body_y": -10, "squash": 1.06, "lean": 0.08, "brow_l": 0.85, "brow_r": 0.85, "brow_y": -0.2,
+                    "mouth": "D", "jaw": 0.4, "smile": 0.6, "eyes_happy": 0.0, "lid": 0.0}, "back")]
+    t, k = 0.36, 0
+    while t < d - 0.45:                                   # tremidinha de monstro
+        t += 0.08
+        k += 1
+        keys.append((round(t, 3), {"body_x": 5 if k % 2 else -5}, "step"))
+    keys.append((d, {"body_x": 0, "body_y": 0, "squash": 1.0, "lean": 0.0, "jaw": 0.0, "mouth": "X", **expression("joy")}, "inout"))
+    return ActionResult(keys=keys, dur=d, ex=1)
+
+
 @action("tampar_nariz", "acting", "Tampa o nariz com a mão da frente (bafinho!), olhinhos apertados, cabeça para trás.",
         {"dur": "s"})
 def tampar_nariz(char, st, a):

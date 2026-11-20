@@ -1,0 +1,5463 @@
+{
+ "schema": "roteiro-1.0",
+ "escala_personagens": 1.45,
+ "nota": "Roteiro do canal Fofolucos — 01 'Somos os Fofolucos!' (take v1 inteiro, 2:47, nota 4,9): hino da turma da Vila Monstrinha; closes de CABEÇA para cada monstrinho, BUSTO para cantar, CORPO TODO para dançar; refrão com a cara de monstro (rawr); ponte mostra o dente/garra/rabo/BU!; medinho do escuro e a lanterna; banda da turma no palco. Gerado por scripts/roteiros/fo01_somos_os_fofolucos.py.",
+ "partes": {
+  "intro": [
+   {
+    "seg": 3.4,
+    "cenario": "mon_vila",
+    "camera": {
+     "x": 700,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.08,
+     "x_fim": 1900
+    },
+    "titulo": "a Vila Monstrinha",
+    "cantam": [
+     "gogo"
+    ],
+    "atores": {
+     "gogo": {
+      "x": 2200,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "look_around",
+        "dur": "resto"
+       }
+      ]
+     },
+     "mimi": {
+      "x": 600,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.4,
+        "do": "wave",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "objetos": {
+     "nv": {
+      "id": "nuvem",
+      "x": 300,
+      "y": 300,
+      "z": 0,
+      "depth": 0.32,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "cara": 1.0,
+         "x": 300.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.34,
+        "pose": {
+         "x": 580.0
+        },
+        "ease": "linear",
+        "in": 3.31
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "mon_vila",
+    "camera": {
+     "x": 1300,
+     "y": 515,
+     "zoom": 2.2,
+     "zoom_fim": 2.32
+    },
+    "flash": true,
+    "callout": [
+     {
+      "t": 0.1,
+      "text": "FOFOLUCOS!",
+      "color": "roxo"
+     }
+    ],
+    "cantam": [
+     "bilu"
+    ],
+    "atores": {
+     "bilu": {
+      "x": 1300,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "rawr",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "objetos": {
+     "nv": {
+      "id": "nuvem",
+      "x": 1700,
+      "y": 300,
+      "z": 0,
+      "depth": 0.32,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "cara": 1.0,
+         "x": 1700.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.24,
+        "pose": {
+         "x": 1980.0
+        },
+        "ease": "linear",
+        "in": 1.21
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "mon_parque",
+    "camera": {
+     "x": 1300,
+     "y": 650,
+     "zoom": 1.75,
+     "zoom_fim": 1.85
+    },
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "RAWR!",
+      "color": "laranja"
+     }
+    ],
+    "cantam": [
+     "mimi"
+    ],
+    "atores": {
+     "mimi": {
+      "x": 1050,
+      "turn": 0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "rawr",
+        "dur": "resto"
+       }
+      ]
+     },
+     "zuzu": {
+      "x": 1550,
+      "turn": -0.25,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "rawr",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "objetos": {
+     "nv": {
+      "id": "nuvem",
+      "x": 900,
+      "y": 300,
+      "z": 0,
+      "depth": 0.32,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "cara": 1.0,
+         "x": 900.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.47,
+        "pose": {
+         "x": 1180.0
+        },
+        "ease": "linear",
+        "in": 2.44
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "seg": 2.6,
+    "cenario": "mon_raios_laranja",
+    "camera": {
+     "x": 960,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "fx": [
+     "confete"
+    ],
+    "cantam": [
+     "teco"
+    ],
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "FOFINHO E MALUQUINHO!",
+      "color": "rosa"
+     }
+    ],
+    "atores": {
+     "teco": {
+      "x": 210,
+      "turn": 0.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "festa"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     },
+     "gogo": {
+      "x": 710,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "dance",
+        "dur": "resto",
+        "style": "pulinho"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     },
+     "mimi": {
+      "x": 1210,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "bracos"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     },
+     "nhoque": {
+      "x": 1710,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.15,
+        "do": "dance",
+        "dur": "resto",
+        "style": "festa"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     }
+    },
+    "objetos": {
+     "bo": {
+      "id": "bolha",
+      "x": 1300,
+      "y": 1000,
+      "z": 0,
+      "depth": 0.3,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "tam": 1.0,
+         "y": 1000.0,
+         "balanco": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.54,
+        "pose": {
+         "y": 250.0
+        },
+        "ease": "linear",
+        "in": 2.51
+       },
+       {
+        "t": 2.54,
+        "pose": {
+         "balanco": 2.6
+        },
+        "ease": "linear",
+        "in": 2.51
+       }
+      ]
+     }
+    }
+   },
+   {
+    "seg": 3.0,
+    "cenario": "mon_palco",
+    "camera": {
+     "x": 1250,
+     "y": 620,
+     "zoom": 1.15,
+     "zoom_fim": 1.05
+    },
+    "fx": [
+     "notas"
+    ],
+    "objetos": {
+     "bat": {
+      "id": "bateria_show",
+      "x": 1700,
+      "y": 940,
+      "z": 4,
+      "depth": 0.6,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "kit_a4",
+        "dur": "resto"
+       }
+      ]
+     },
+     "tec": {
+      "id": "teclado_inst",
+      "x": 800,
+      "y": 940,
+      "z": 4,
+      "depth": 0.62,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "tecla": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.96,
+        "pose": {
+         "tecla": 6.0
+        },
+        "ease": "linear",
+        "in": 2.93
+       }
+      ]
+     }
+    },
+    "atores": {
+     "bilu": {
+      "x": 1700,
+      "y": 930,
+      "turn": -0.2,
+      "z": 3,
+      "segura": "baqueta_a4",
+      "segura_f": "baqueta_a4",
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_bateria_a4",
+        "dur": "resto"
+       }
+      ]
+     },
+     "zuzu": {
+      "x": 800,
+      "y": 930,
+      "turn": 0.2,
+      "z": 3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_teclado",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "zuzu"
+    ],
+    "titulo": "a banda da turma"
+   },
+   {
+    "seg": 3.27,
+    "cenario": "mon_palco",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.1
+    },
+    "fx": [
+     "notas"
+    ],
+    "objetos": {
+     "bat": {
+      "id": "bateria_show",
+      "x": 1700,
+      "y": 940,
+      "z": 4,
+      "depth": 0.6,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "kit_a4",
+        "dur": "resto"
+       }
+      ]
+     },
+     "tec": {
+      "id": "teclado_inst",
+      "x": 800,
+      "y": 940,
+      "z": 4,
+      "depth": 0.62,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "tecla": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.227,
+        "pose": {
+         "tecla": 6.5
+        },
+        "ease": "linear",
+        "in": 3.197
+       }
+      ]
+     }
+    },
+    "atores": {
+     "bilu": {
+      "x": 1700,
+      "y": 930,
+      "turn": -0.2,
+      "z": 3,
+      "segura": "baqueta_a4",
+      "segura_f": "baqueta_a4",
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_bateria_a4",
+        "dur": "resto"
+       }
+      ]
+     },
+     "zuzu": {
+      "x": 800,
+      "y": 930,
+      "turn": 0.2,
+      "z": 3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_teclado",
+        "dur": "resto"
+       }
+      ]
+     },
+     "teco": {
+      "x": 2250,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "festa"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "zuzu"
+    ],
+    "titulo": "teclado e bateria"
+   }
+  ],
+  "verso#1": [
+   {
+    "linhas": 1,
+    "cenario": "mon_vila",
+    "camera": {
+     "x": 800,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.08,
+     "x_fim": 1800
+    },
+    "callout": [
+     {
+      "t": 0.4,
+      "text": "VILA MONSTRINHA!",
+      "color": "roxo"
+     }
+    ],
+    "cantam": [
+     "bilu"
+    ],
+    "atores": {
+     "bilu": {
+      "x": 300,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "walk",
+        "to_x": 1100,
+        "dur": 2.4
+       },
+       {
+        "t": 2.5,
+        "do": "wave",
+        "dur": "resto"
+       }
+      ]
+     },
+     "teco": {
+      "x": 2300,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.3,
+        "do": "wave",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "objetos": {
+     "nv": {
+      "id": "nuvem",
+      "x": 300,
+      "y": 300,
+      "z": 0,
+      "depth": 0.32,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "cara": 1.0,
+         "x": 300.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.91,
+        "pose": {
+         "x": 580.0
+        },
+        "ease": "linear",
+        "in": 2.88
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "mon_vila",
+    "camera": {
+     "x": 1300,
+     "y": 600,
+     "zoom": 1.4,
+     "zoom_fim": 1.48
+    },
+    "tremor": [
+     1.4
+    ],
+    "callout": [
+     {
+      "t": 0.6,
+      "text": "DE ARREPIAR!",
+      "color": "laranja"
+     }
+    ],
+    "cantam": [
+     "gogo"
+    ],
+    "atores": {
+     "gogo": {
+      "x": 850,
+      "turn": 0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "treme"
+       }
+      ]
+     },
+     "mimi": {
+      "x": 1300,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "dance",
+        "dur": "resto",
+        "style": "treme"
+       }
+      ]
+     },
+     "nhoque": {
+      "x": 1750,
+      "turn": -0.25,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "dance",
+        "dur": "resto",
+        "style": "treme"
+       }
+      ]
+     }
+    },
+    "objetos": {
+     "nv": {
+      "id": "nuvem",
+      "x": 1700,
+      "y": 300,
+      "z": 0,
+      "depth": 0.32,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "cara": 1.0,
+         "x": 1700.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.71,
+        "pose": {
+         "x": 1980.0
+        },
+        "ease": "linear",
+        "in": 3.68
+       }
+      ]
+     }
+    }
+   },
+   {
+    "tela_dividida": {
+     "layout": "vertical",
+     "paineis": [
+      {
+       "cenario": "mon_parque",
+       "camera": {
+        "x": 1300,
+        "y": 500,
+        "zoom": 2.0,
+        "zoom_fim": 2.1
+       },
+       "cantam": [
+        "zuzu"
+       ],
+       "objetos": {
+        "m": {
+         "id": "destaque",
+         "x": 1300,
+         "y": 300,
+         "z": 6,
+         "depth": 0.7,
+         "keys": [
+          {
+           "t": 0.0,
+           "pose": {
+            "cor": 0,
+            "pulso": 0.0,
+            "giro": 0.0
+           },
+           "ease": "step"
+          },
+          {
+           "t": 0.4,
+           "pose": {
+            "pulso": 1.0
+           },
+           "ease": "out",
+           "in": 0.37
+          },
+          {
+           "t": 0.8,
+           "pose": {
+            "pulso": 0.0
+           },
+           "ease": "out",
+           "in": 0.37
+          },
+          {
+           "t": 1.2,
+           "pose": {
+            "pulso": 1.0
+           },
+           "ease": "out",
+           "in": 0.37
+          },
+          {
+           "t": 1.6,
+           "pose": {
+            "pulso": 0.0
+           },
+           "ease": "out",
+           "in": 0.37
+          },
+          {
+           "t": 2.0,
+           "pose": {
+            "pulso": 1.0
+           },
+           "ease": "out",
+           "in": 0.37
+          },
+          {
+           "t": 2.4,
+           "pose": {
+            "pulso": 0.0
+           },
+           "ease": "out",
+           "in": 0.37
+          },
+          {
+           "t": 2.8,
+           "pose": {
+            "pulso": 1.0
+           },
+           "ease": "out",
+           "in": 0.37
+          },
+          {
+           "t": 3.34,
+           "pose": {
+            "giro": 2.72
+           },
+           "ease": "linear",
+           "in": 3.31
+          }
+         ]
+        },
+        "nv": {
+         "id": "nuvem",
+         "x": 900,
+         "y": 300,
+         "z": 0,
+         "depth": 0.32,
+         "keys": [
+          {
+           "t": 0.0,
+           "pose": {
+            "cara": 1.0,
+            "x": 900.0
+           },
+           "ease": "step"
+          },
+          {
+           "t": 3.34,
+           "pose": {
+            "x": 1180.0
+           },
+           "ease": "linear",
+           "in": 3.31
+          }
+         ]
+        }
+       },
+       "atores": {
+        "zuzu": {
+         "x": 1300,
+         "turn": 0.0,
+         "acoes": [
+          {
+           "t": 0.0,
+           "do": "dance",
+           "dur": "resto",
+           "style": "cabeca"
+          }
+         ]
+        }
+       }
+      },
+      {
+       "cenario": "mon_escola",
+       "camera": {
+        "x": 1300,
+        "y": 500,
+        "zoom": 2.0,
+        "zoom_fim": 2.1
+       },
+       "objetos": {
+        "m": {
+         "id": "destaque",
+         "x": 1300,
+         "y": 300,
+         "z": 6,
+         "depth": 0.7,
+         "keys": [
+          {
+           "t": 0.0,
+           "pose": {
+            "cor": 2,
+            "pulso": 0.0,
+            "giro": 0.0
+           },
+           "ease": "step"
+          },
+          {
+           "t": 0.4,
+           "pose": {
+            "pulso": 1.0
+           },
+           "ease": "out",
+           "in": 0.37
+          },
+          {
+           "t": 0.8,
+           "pose": {
+            "pulso": 0.0
+           },
+           "ease": "out",
+           "in": 0.37
+          },
+          {
+           "t": 1.2,
+           "pose": {
+            "pulso": 1.0
+           },
+           "ease": "out",
+           "in": 0.37
+          },
+          {
+           "t": 1.6,
+           "pose": {
+            "pulso": 0.0
+           },
+           "ease": "out",
+           "in": 0.37
+          },
+          {
+           "t": 2.0,
+           "pose": {
+            "pulso": 1.0
+           },
+           "ease": "out",
+           "in": 0.37
+          },
+          {
+           "t": 2.4,
+           "pose": {
+            "pulso": 0.0
+           },
+           "ease": "out",
+           "in": 0.37
+          },
+          {
+           "t": 2.8,
+           "pose": {
+            "pulso": 1.0
+           },
+           "ease": "out",
+           "in": 0.37
+          },
+          {
+           "t": 3.34,
+           "pose": {
+            "giro": 2.72
+           },
+           "ease": "linear",
+           "in": 3.31
+          }
+         ]
+        },
+        "bo": {
+         "id": "bolha",
+         "x": 800,
+         "y": 1000,
+         "z": 0,
+         "depth": 0.3,
+         "keys": [
+          {
+           "t": 0.0,
+           "pose": {
+            "tam": 1.0,
+            "y": 1000.0,
+            "balanco": 0.0
+           },
+           "ease": "step"
+          },
+          {
+           "t": 3.34,
+           "pose": {
+            "y": 250.0
+           },
+           "ease": "linear",
+           "in": 3.31
+          },
+          {
+           "t": 3.34,
+           "pose": {
+            "balanco": 3.4
+           },
+           "ease": "linear",
+           "in": 3.31
+          }
+         ]
+        }
+       },
+       "atores": {
+        "teco": {
+         "x": 1300,
+         "turn": 0.0,
+         "acoes": [
+          {
+           "t": 0.0,
+           "do": "dance",
+           "dur": "resto",
+           "style": "cabeca"
+          }
+         ]
+        }
+       }
+      }
+     ]
+    },
+    "linhas": 1,
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "CHIFRE!",
+      "color": "amarelo"
+     },
+     {
+      "t": 1.4,
+      "text": "ANTENA!",
+      "color": "azul"
+     }
+    ],
+    "cantam": [
+     "bilu"
+    ]
+   },
+   {
+    "linhas": 1,
+    "cenario": "mon_cozinha",
+    "camera": {
+     "x": 1300,
+     "y": 515,
+     "zoom": 2.2,
+     "zoom_fim": 2.32
+    },
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "DENTINHO!",
+      "color": "vermelho"
+     }
+    ],
+    "cantam": [
+     "nhoque"
+    ],
+    "atores": {
+     "nhoque": {
+      "x": 1300,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "rawr",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "objetos": {
+     "bo": {
+      "id": "bolha",
+      "x": 1300,
+      "y": 1000,
+      "z": 0,
+      "depth": 0.3,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "tam": 1.0,
+         "y": 1000.0,
+         "balanco": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 4.17,
+        "pose": {
+         "y": 250.0
+        },
+        "ease": "linear",
+        "in": 4.14
+       },
+       {
+        "t": 4.17,
+        "pose": {
+         "balanco": 4.2
+        },
+        "ease": "linear",
+        "in": 4.14
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "mon_parque",
+    "camera": {
+     "x": 1300,
+     "y": 515,
+     "zoom": 2.2,
+     "zoom_fim": 2.32
+    },
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "BILU!",
+      "color": "azul"
+     }
+    ],
+    "cantam": [
+     "bilu"
+    ],
+    "objetos": {
+     "m": {
+      "id": "destaque",
+      "x": 1300,
+      "y": 520,
+      "z": 6,
+      "depth": 0.9,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "cor": 0,
+         "pulso": 0.0,
+         "giro": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.4,
+        "pose": {
+         "pulso": 1.0
+        },
+        "ease": "out",
+        "in": 0.37
+       },
+       {
+        "t": 0.8,
+        "pose": {
+         "pulso": 0.0
+        },
+        "ease": "out",
+        "in": 0.37
+       },
+       {
+        "t": 1.2,
+        "pose": {
+         "pulso": 1.0
+        },
+        "ease": "out",
+        "in": 0.37
+       },
+       {
+        "t": 1.6,
+        "pose": {
+         "pulso": 0.0
+        },
+        "ease": "out",
+        "in": 0.37
+       },
+       {
+        "t": 2.0,
+        "pose": {
+         "pulso": 1.0
+        },
+        "ease": "out",
+        "in": 0.37
+       },
+       {
+        "t": 2.47,
+        "pose": {
+         "giro": 2.024
+        },
+        "ease": "linear",
+        "in": 2.44
+       }
+      ]
+     },
+     "nv": {
+      "id": "nuvem",
+      "x": 300,
+      "y": 300,
+      "z": 0,
+      "depth": 0.32,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "cara": 1.0,
+         "x": 300.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.47,
+        "pose": {
+         "x": 580.0
+        },
+        "ease": "linear",
+        "in": 2.44
+       }
+      ]
+     }
+    },
+    "atores": {
+     "bilu": {
+      "x": 1300,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "look_around",
+        "dur": "resto"
+       }
+      ],
+      "expr": "surprised"
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "mon_escola",
+    "camera": {
+     "x": 1300,
+     "y": 515,
+     "zoom": 2.2,
+     "zoom_fim": 2.32
+    },
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "TECO!",
+      "color": "roxo"
+     }
+    ],
+    "cantam": [
+     "teco"
+    ],
+    "objetos": {
+     "n": {
+      "id": "numero",
+      "x": 1700,
+      "y": 420,
+      "z": 6,
+      "depth": 0.9,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "n": 3,
+         "pop": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.25,
+        "pose": {
+         "pop": 1.0
+        },
+        "ease": "out",
+        "in": 0.22
+       }
+      ]
+     },
+     "bo": {
+      "id": "bolha",
+      "x": 1650,
+      "y": 1000,
+      "z": 0,
+      "depth": 0.3,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "tam": 1.0,
+         "y": 1000.0,
+         "balanco": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 4.17,
+        "pose": {
+         "y": 250.0
+        },
+        "ease": "linear",
+        "in": 4.14
+       },
+       {
+        "t": 4.17,
+        "pose": {
+         "balanco": 4.2
+        },
+        "ease": "linear",
+        "in": 4.14
+       }
+      ]
+     }
+    },
+    "atores": {
+     "teco": {
+      "x": 1300,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "cabeca",
+        "dur": "resto"
+       }
+      ],
+      "keys": [
+       {
+        "t": 0.6,
+        "pose": {
+         "lid": 1.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.1,
+        "pose": {
+         "lid": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.6,
+        "pose": {
+         "lid": 1.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.1,
+        "pose": {
+         "lid": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.6,
+        "pose": {
+         "lid": 1.0
+        },
+        "ease": "step"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "mon_vila",
+    "camera": {
+     "x": 1300,
+     "y": 650,
+     "zoom": 1.75,
+     "zoom_fim": 1.85
+    },
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "ZUZU!",
+      "color": "laranja"
+     }
+    ],
+    "cantam": [
+     "zuzu"
+    ],
+    "objetos": {
+     "m": {
+      "id": "destaque",
+      "x": 1300,
+      "y": 250,
+      "z": 6,
+      "depth": 0.6,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "cor": 1,
+         "pulso": 0.0,
+         "giro": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.4,
+        "pose": {
+         "pulso": 1.0
+        },
+        "ease": "out",
+        "in": 0.37
+       },
+       {
+        "t": 0.8,
+        "pose": {
+         "pulso": 0.0
+        },
+        "ease": "out",
+        "in": 0.37
+       },
+       {
+        "t": 1.2,
+        "pose": {
+         "pulso": 1.0
+        },
+        "ease": "out",
+        "in": 0.37
+       },
+       {
+        "t": 1.6,
+        "pose": {
+         "pulso": 0.0
+        },
+        "ease": "out",
+        "in": 0.37
+       },
+       {
+        "t": 2.0,
+        "pose": {
+         "pulso": 1.0
+        },
+        "ease": "out",
+        "in": 0.37
+       },
+       {
+        "t": 2.4,
+        "pose": {
+         "pulso": 0.0
+        },
+        "ease": "out",
+        "in": 0.37
+       },
+       {
+        "t": 2.87,
+        "pose": {
+         "giro": 2.3440000000000003
+        },
+        "ease": "linear",
+        "in": 2.84
+       }
+      ]
+     },
+     "nv": {
+      "id": "nuvem",
+      "x": 900,
+      "y": 300,
+      "z": 0,
+      "depth": 0.32,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "cara": 1.0,
+         "x": 900.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.87,
+        "pose": {
+         "x": 1180.0
+        },
+        "ease": "linear",
+        "in": 2.84
+       }
+      ]
+     }
+    },
+    "atores": {
+     "zuzu": {
+      "x": 1300,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "gingado"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "mon_noite",
+    "camera": {
+     "x": 1300,
+     "y": 515,
+     "zoom": 2.2,
+     "zoom_fim": 2.32
+    },
+    "tremor": [
+     2.23
+    ],
+    "flash": true,
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "NHOQUE!",
+      "color": "vermelho"
+     }
+    ],
+    "cantam": [
+     "nhoque"
+    ],
+    "atores": {
+     "nhoque": {
+      "x": 1300,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 1.56,
+        "do": "rawr",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "objetos": {
+     "lua": {
+      "id": "lua",
+      "x": 2150,
+      "y": 420,
+      "z": 0,
+      "depth": 0.42,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {},
+        "ease": "step"
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "brilho": 0.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 0.5,
+        "pose": {
+         "boca": 0.6
+        },
+        "ease": "out"
+       },
+       {
+        "t": 1.0,
+        "pose": {
+         "brilho": 1.0
+        },
+        "ease": "out",
+        "in": 0.97
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "refrao#1": [
+   {
+    "linhas": 2,
+    "cenario": "mon_raios_laranja",
+    "camera": {
+     "x": 960,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "fx": [
+     "estrelas"
+    ],
+    "cantam": [
+     "bilu"
+    ],
+    "callout": [
+     {
+      "t": 0.1,
+      "text": "FOFOLUCOS!",
+      "color": "roxo"
+     },
+     {
+      "t": 1.7,
+      "text": "FAZ A CARA DE MONSTRO!",
+      "color": "amarelo"
+     }
+    ],
+    "atores": {
+     "teco": {
+      "x": 210,
+      "turn": 0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "festa"
+       },
+       {
+        "t": 1.7,
+        "do": "rawr",
+        "dur": "resto"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     },
+     "gogo": {
+      "x": 710,
+      "turn": 0.1,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "festa"
+       },
+       {
+        "t": 1.78,
+        "do": "rawr",
+        "dur": "resto"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     },
+     "bilu": {
+      "x": 1210,
+      "turn": -0.1,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "festa"
+       },
+       {
+        "t": 1.8599999999999999,
+        "do": "rawr",
+        "dur": "resto"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     },
+     "nhoque": {
+      "x": 1710,
+      "turn": -0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "festa"
+       },
+       {
+        "t": 1.94,
+        "do": "rawr",
+        "dur": "resto"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     }
+    },
+    "flash": true,
+    "objetos": {
+     "bo": {
+      "id": "bolha",
+      "x": 300,
+      "y": 1000,
+      "z": 0,
+      "depth": 0.3,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "tam": 1.0,
+         "y": 1000.0,
+         "balanco": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.71,
+        "pose": {
+         "y": 250.0
+        },
+        "ease": "linear",
+        "in": 3.68
+       },
+       {
+        "t": 3.71,
+        "pose": {
+         "balanco": 3.8
+        },
+        "ease": "linear",
+        "in": 3.68
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 2,
+    "cenario": "mon_parque",
+    "camera": {
+     "x": 1300,
+     "y": 630,
+     "zoom": 1.75,
+     "zoom_fim": 1.85
+    },
+    "cantam": [
+     "mimi"
+    ],
+    "callout": [
+     {
+      "t": 1.52,
+      "text": "MOSTRA A GARRINHA!",
+      "color": "rosa"
+     }
+    ],
+    "atores": {
+     "mimi": {
+      "x": 1000,
+      "turn": 0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "bracos"
+       },
+       {
+        "t": 1.52,
+        "do": "rawr",
+        "dur": "resto"
+       }
+      ]
+     },
+     "gogo": {
+      "x": 1600,
+      "turn": -0.25,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "dance",
+        "dur": "resto",
+        "style": "bracos"
+       },
+       {
+        "t": 1.62,
+        "do": "rawr",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "objetos": {
+     "nv": {
+      "id": "nuvem",
+      "x": 1700,
+      "y": 300,
+      "z": 0,
+      "depth": 0.32,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "cara": 1.0,
+         "x": 1700.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.31,
+        "pose": {
+         "x": 1980.0
+        },
+        "ease": "linear",
+        "in": 3.28
+       }
+      ]
+     }
+    }
+   },
+   {
+    "tela_dividida": {
+     "layout": "diagonal",
+     "paineis": [
+      {
+       "cenario": "mon_noite",
+       "camera": {
+        "x": 1300,
+        "y": 560,
+        "zoom": 2.0,
+        "zoom_fim": 2.15
+       },
+       "cantam": [
+        "bilu"
+       ],
+       "atores": {
+        "bilu": {
+         "x": 1300,
+         "turn": 0.0,
+         "acoes": [
+          {
+           "t": 0.2,
+           "do": "rawr",
+           "dur": "resto"
+          }
+         ]
+        }
+       },
+       "objetos": {
+        "lua": {
+         "id": "lua",
+         "x": 2150,
+         "y": 420,
+         "z": 0,
+         "depth": 0.42,
+         "keys": [
+          {
+           "t": 0.0,
+           "pose": {},
+           "ease": "step"
+          },
+          {
+           "t": 0.0,
+           "pose": {
+            "brilho": 0.0
+           },
+           "ease": "out"
+          },
+          {
+           "t": 0.5,
+           "pose": {
+            "boca": 0.6
+           },
+           "ease": "out"
+          },
+          {
+           "t": 1.0,
+           "pose": {
+            "brilho": 1.0
+           },
+           "ease": "out",
+           "in": 0.97
+          }
+         ]
+        }
+       }
+      },
+      {
+       "cenario": "mon_cozinha",
+       "camera": {
+        "x": 1300,
+        "y": 560,
+        "zoom": 2.0,
+        "zoom_fim": 2.15
+       },
+       "atores": {
+        "nhoque": {
+         "x": 1300,
+         "turn": 0.0,
+         "acoes": [
+          {
+           "t": 1.53,
+           "do": "rawr",
+           "dur": "resto"
+          }
+         ]
+        }
+       },
+       "objetos": {
+        "bo": {
+         "id": "bolha",
+         "x": 800,
+         "y": 1000,
+         "z": 0,
+         "depth": 0.3,
+         "keys": [
+          {
+           "t": 0.0,
+           "pose": {
+            "tam": 1.0,
+            "y": 1000.0,
+            "balanco": 0.0
+           },
+           "ease": "step"
+          },
+          {
+           "t": 3.34,
+           "pose": {
+            "y": 250.0
+           },
+           "ease": "linear",
+           "in": 3.31
+          },
+          {
+           "t": 3.34,
+           "pose": {
+            "balanco": 3.4
+           },
+           "ease": "linear",
+           "in": 3.31
+          }
+         ]
+        }
+       }
+      }
+     ]
+    },
+    "linhas": 2,
+    "callout": [
+     {
+      "t": 1.53,
+      "text": "RAWR!",
+      "color": "vermelho"
+     }
+    ],
+    "cantam": [
+     "bilu"
+    ]
+   },
+   {
+    "linhas": 2,
+    "cenario": "mon_parque",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "fx": [
+     "confete"
+    ],
+    "cantam": [
+     "teco"
+    ],
+    "callout": [
+     {
+      "t": 2.08,
+      "text": "FOFINHO E MALUQUINHO!",
+      "color": "rosa"
+     }
+    ],
+    "atores": {
+     "teco": {
+      "x": 350,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "festa"
+       },
+       {
+        "t": 2.08,
+        "do": "laugh",
+        "dur": "resto"
+       }
+      ]
+     },
+     "zuzu": {
+      "x": 850,
+      "turn": 0.2,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "dance",
+        "dur": "resto",
+        "style": "pulinho"
+       }
+      ]
+     },
+     "mimi": {
+      "x": 1750,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "cintura"
+       },
+       {
+        "t": 2.2800000000000002,
+        "do": "laugh",
+        "dur": "resto"
+       }
+      ]
+     },
+     "gogo": {
+      "x": 2250,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.15,
+        "do": "dance",
+        "dur": "resto",
+        "style": "roda"
+       }
+      ]
+     }
+    },
+    "objetos": {
+     "nv": {
+      "id": "nuvem",
+      "x": 2100,
+      "y": 300,
+      "z": 0,
+      "depth": 0.32,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "cara": 1.0,
+         "x": 2100.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 4.57,
+        "pose": {
+         "x": 2380.0
+        },
+        "ease": "linear",
+        "in": 4.54
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "refrao#2": [
+   {
+    "linhas": 2,
+    "cenario": "mon_raios_verde",
+    "camera": {
+     "x": 960,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "fx": [
+     "estrelas"
+    ],
+    "cantam": [
+     "bilu"
+    ],
+    "callout": [
+     {
+      "t": 0.1,
+      "text": "FOFOLUCOS!",
+      "color": "roxo"
+     },
+     {
+      "t": 1.5,
+      "text": "FAZ A CARA DE MONSTRO!",
+      "color": "amarelo"
+     }
+    ],
+    "atores": {
+     "mimi": {
+      "x": 210,
+      "turn": 0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "festa"
+       },
+       {
+        "t": 1.5,
+        "do": "rawr",
+        "dur": "resto"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     },
+     "zuzu": {
+      "x": 710,
+      "turn": 0.1,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "festa"
+       },
+       {
+        "t": 1.58,
+        "do": "rawr",
+        "dur": "resto"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     },
+     "bilu": {
+      "x": 1210,
+      "turn": -0.1,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "festa"
+       },
+       {
+        "t": 1.66,
+        "do": "rawr",
+        "dur": "resto"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     },
+     "teco": {
+      "x": 1710,
+      "turn": -0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "festa"
+       },
+       {
+        "t": 1.74,
+        "do": "rawr",
+        "dur": "resto"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     }
+    },
+    "objetos": {
+     "bo": {
+      "id": "bolha",
+      "x": 300,
+      "y": 1000,
+      "z": 0,
+      "depth": 0.3,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "tam": 1.0,
+         "y": 1000.0,
+         "balanco": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.27,
+        "pose": {
+         "y": 250.0
+        },
+        "ease": "linear",
+        "in": 3.24
+       },
+       {
+        "t": 3.27,
+        "pose": {
+         "balanco": 3.3
+        },
+        "ease": "linear",
+        "in": 3.24
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 2,
+    "cenario": "mon_escola",
+    "camera": {
+     "x": 1300,
+     "y": 630,
+     "zoom": 1.75,
+     "zoom_fim": 1.85
+    },
+    "cantam": [
+     "mimi"
+    ],
+    "callout": [
+     {
+      "t": 1.5,
+      "text": "MOSTRA A GARRINHA!",
+      "color": "rosa"
+     }
+    ],
+    "atores": {
+     "mimi": {
+      "x": 1000,
+      "turn": 0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "bracos"
+       },
+       {
+        "t": 1.5,
+        "do": "rawr",
+        "dur": "resto"
+       }
+      ]
+     },
+     "gogo": {
+      "x": 1600,
+      "turn": -0.25,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "dance",
+        "dur": "resto",
+        "style": "bracos"
+       },
+       {
+        "t": 1.6,
+        "do": "rawr",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "objetos": {
+     "bo": {
+      "id": "bolha",
+      "x": 1650,
+      "y": 1000,
+      "z": 0,
+      "depth": 0.3,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "tam": 1.0,
+         "y": 1000.0,
+         "balanco": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.27,
+        "pose": {
+         "y": 250.0
+        },
+        "ease": "linear",
+        "in": 3.24
+       },
+       {
+        "t": 3.27,
+        "pose": {
+         "balanco": 3.3
+        },
+        "ease": "linear",
+        "in": 3.24
+       }
+      ]
+     }
+    }
+   },
+   {
+    "tela_dividida": {
+     "layout": "vertical",
+     "paineis": [
+      {
+       "cenario": "mon_vila",
+       "camera": {
+        "x": 1300,
+        "y": 560,
+        "zoom": 2.0,
+        "zoom_fim": 2.15
+       },
+       "cantam": [
+        "zuzu"
+       ],
+       "atores": {
+        "zuzu": {
+         "x": 1300,
+         "turn": 0.0,
+         "acoes": [
+          {
+           "t": 0.2,
+           "do": "rawr",
+           "dur": "resto"
+          }
+         ]
+        }
+       },
+       "objetos": {
+        "nv": {
+         "id": "nuvem",
+         "x": 900,
+         "y": 300,
+         "z": 0,
+         "depth": 0.32,
+         "keys": [
+          {
+           "t": 0.0,
+           "pose": {
+            "cara": 1.0,
+            "x": 900.0
+           },
+           "ease": "step"
+          },
+          {
+           "t": 3.31,
+           "pose": {
+            "x": 1180.0
+           },
+           "ease": "linear",
+           "in": 3.28
+          }
+         ]
+        }
+       }
+      },
+      {
+       "cenario": "mon_quarto",
+       "camera": {
+        "x": 1300,
+        "y": 560,
+        "zoom": 2.0,
+        "zoom_fim": 2.15
+       },
+       "atores": {
+        "teco": {
+         "x": 1300,
+         "turn": 0.0,
+         "acoes": [
+          {
+           "t": 1.52,
+           "do": "rawr",
+           "dur": "resto"
+          }
+         ]
+        }
+       },
+       "objetos": {
+        "bo": {
+         "id": "bolha",
+         "x": 800,
+         "y": 1000,
+         "z": 0,
+         "depth": 0.3,
+         "keys": [
+          {
+           "t": 0.0,
+           "pose": {
+            "tam": 1.0,
+            "y": 1000.0,
+            "balanco": 0.0
+           },
+           "ease": "step"
+          },
+          {
+           "t": 3.31,
+           "pose": {
+            "y": 250.0
+           },
+           "ease": "linear",
+           "in": 3.28
+          },
+          {
+           "t": 3.31,
+           "pose": {
+            "balanco": 3.4
+           },
+           "ease": "linear",
+           "in": 3.28
+          }
+         ]
+        }
+       }
+      }
+     ]
+    },
+    "linhas": 2,
+    "callout": [
+     {
+      "t": 1.52,
+      "text": "RAWR!",
+      "color": "vermelho"
+     }
+    ],
+    "cantam": [
+     "bilu"
+    ]
+   },
+   {
+    "linhas": 2,
+    "cenario": "mon_vila",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "fx": [
+     "confete"
+    ],
+    "cantam": [
+     "teco"
+    ],
+    "callout": [
+     {
+      "t": 1.61,
+      "text": "FOFINHO E MALUQUINHO!",
+      "color": "rosa"
+     }
+    ],
+    "atores": {
+     "teco": {
+      "x": 350,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "festa"
+       },
+       {
+        "t": 1.61,
+        "do": "laugh",
+        "dur": "resto"
+       }
+      ]
+     },
+     "zuzu": {
+      "x": 850,
+      "turn": 0.2,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "dance",
+        "dur": "resto",
+        "style": "pulinho"
+       }
+      ]
+     },
+     "mimi": {
+      "x": 1750,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "cintura"
+       },
+       {
+        "t": 1.81,
+        "do": "laugh",
+        "dur": "resto"
+       }
+      ]
+     },
+     "gogo": {
+      "x": 2250,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.15,
+        "do": "dance",
+        "dur": "resto",
+        "style": "roda"
+       }
+      ]
+     }
+    },
+    "objetos": {
+     "nv": {
+      "id": "nuvem",
+      "x": 2100,
+      "y": 300,
+      "z": 0,
+      "depth": 0.32,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "cara": 1.0,
+         "x": 2100.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.51,
+        "pose": {
+         "x": 2380.0
+        },
+        "ease": "linear",
+        "in": 3.48
+       }
+      ]
+     }
+    }
+   },
+   {
+    "seg": 4.8,
+    "cenario": "mon_palco",
+    "camera": {
+     "x": 1350,
+     "y": 600,
+     "zoom": 1.2,
+     "zoom_fim": 1.1
+    },
+    "fx": [
+     "notas"
+    ],
+    "objetos": {
+     "bat": {
+      "id": "bateria_show",
+      "x": 1700,
+      "y": 940,
+      "z": 4,
+      "depth": 0.6,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "kit_a4",
+        "dur": "resto"
+       }
+      ]
+     },
+     "tec": {
+      "id": "teclado_inst",
+      "x": 800,
+      "y": 940,
+      "z": 4,
+      "depth": 0.62,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "tecla": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 4.76,
+        "pose": {
+         "tecla": 9.6
+        },
+        "ease": "linear",
+        "in": 4.73
+       }
+      ]
+     }
+    },
+    "atores": {
+     "bilu": {
+      "x": 1700,
+      "y": 930,
+      "turn": -0.2,
+      "z": 3,
+      "segura": "baqueta_a4",
+      "segura_f": "baqueta_a4",
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_bateria_a4",
+        "dur": "resto"
+       }
+      ]
+     },
+     "zuzu": {
+      "x": 800,
+      "y": 930,
+      "turn": 0.2,
+      "z": 3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_teclado",
+        "dur": "resto"
+       }
+      ]
+     },
+     "nhoque": {
+      "x": 350,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "festa"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "zuzu"
+    ],
+    "titulo": "a banda"
+   }
+  ],
+  "refrao#3": [
+   {
+    "linhas": 2,
+    "cenario": "mon_raios_rosa",
+    "camera": {
+     "x": 960,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "fx": [
+     "estrelas"
+    ],
+    "cantam": [
+     "bilu"
+    ],
+    "callout": [
+     {
+      "t": 0.1,
+      "text": "FOFOLUCOS!",
+      "color": "roxo"
+     },
+     {
+      "t": 1.86,
+      "text": "FAZ A CARA DE MONSTRO!",
+      "color": "amarelo"
+     }
+    ],
+    "atores": {
+     "gogo": {
+      "x": 210,
+      "turn": 0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "festa"
+       },
+       {
+        "t": 1.86,
+        "do": "rawr",
+        "dur": "resto"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     },
+     "nhoque": {
+      "x": 710,
+      "turn": 0.1,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "festa"
+       },
+       {
+        "t": 1.9400000000000002,
+        "do": "rawr",
+        "dur": "resto"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     },
+     "zuzu": {
+      "x": 1210,
+      "turn": -0.1,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "festa"
+       },
+       {
+        "t": 2.02,
+        "do": "rawr",
+        "dur": "resto"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     },
+     "mimi": {
+      "x": 1710,
+      "turn": -0.25,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "festa"
+       },
+       {
+        "t": 2.1,
+        "do": "rawr",
+        "dur": "resto"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     }
+    },
+    "objetos": {
+     "bo": {
+      "id": "bolha",
+      "x": 300,
+      "y": 1000,
+      "z": 0,
+      "depth": 0.3,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "tam": 1.0,
+         "y": 1000.0,
+         "balanco": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 4.07,
+        "pose": {
+         "y": 250.0
+        },
+        "ease": "linear",
+        "in": 4.04
+       },
+       {
+        "t": 4.07,
+        "pose": {
+         "balanco": 4.1
+        },
+        "ease": "linear",
+        "in": 4.04
+       }
+      ]
+     }
+    }
+   },
+   {
+    "cenario": "mon_palco",
+    "camera": {
+     "x": 1250,
+     "y": 620,
+     "zoom": 1.15,
+     "zoom_fim": 1.05
+    },
+    "fx": [
+     "notas"
+    ],
+    "objetos": {
+     "bat": {
+      "id": "bateria_show",
+      "x": 1700,
+      "y": 940,
+      "z": 4,
+      "depth": 0.6,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "kit_a4",
+        "dur": "resto"
+       }
+      ]
+     },
+     "tec": {
+      "id": "teclado_inst",
+      "x": 800,
+      "y": 940,
+      "z": 4,
+      "depth": 0.62,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "tecla": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.86,
+        "pose": {
+         "tecla": 5.8
+        },
+        "ease": "linear",
+        "in": 2.83
+       }
+      ]
+     }
+    },
+    "atores": {
+     "bilu": {
+      "x": 1700,
+      "y": 930,
+      "turn": -0.2,
+      "z": 3,
+      "segura": "baqueta_a4",
+      "segura_f": "baqueta_a4",
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_bateria_a4",
+        "dur": "resto"
+       }
+      ]
+     },
+     "zuzu": {
+      "x": 800,
+      "y": 930,
+      "turn": 0.2,
+      "z": 3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_teclado",
+        "dur": "resto"
+       }
+      ]
+     },
+     "mimi": {
+      "x": 2250,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 1.3,
+        "do": "rawr",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "zuzu"
+    ],
+    "linhas": 2,
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "FOFOLUCOS!",
+      "color": "roxo"
+     }
+    ]
+   },
+   {
+    "tela_dividida": {
+     "layout": "diagonal",
+     "paineis": [
+      {
+       "cenario": "mon_noite",
+       "camera": {
+        "x": 1300,
+        "y": 560,
+        "zoom": 2.0,
+        "zoom_fim": 2.15
+       },
+       "cantam": [
+        "bilu"
+       ],
+       "atores": {
+        "bilu": {
+         "x": 1300,
+         "turn": 0.0,
+         "acoes": [
+          {
+           "t": 0.2,
+           "do": "rawr",
+           "dur": "resto"
+          }
+         ]
+        }
+       },
+       "objetos": {
+        "lua": {
+         "id": "lua",
+         "x": 2150,
+         "y": 420,
+         "z": 0,
+         "depth": 0.42,
+         "keys": [
+          {
+           "t": 0.0,
+           "pose": {},
+           "ease": "step"
+          },
+          {
+           "t": 0.0,
+           "pose": {
+            "brilho": 0.0
+           },
+           "ease": "out"
+          },
+          {
+           "t": 0.5,
+           "pose": {
+            "boca": 0.6
+           },
+           "ease": "out"
+          },
+          {
+           "t": 1.0,
+           "pose": {
+            "brilho": 1.0
+           },
+           "ease": "out",
+           "in": 0.97
+          }
+         ]
+        }
+       }
+      },
+      {
+       "cenario": "mon_cozinha",
+       "camera": {
+        "x": 1300,
+        "y": 560,
+        "zoom": 2.0,
+        "zoom_fim": 2.15
+       },
+       "atores": {
+        "nhoque": {
+         "x": 1300,
+         "turn": 0.0,
+         "acoes": [
+          {
+           "t": 1.68,
+           "do": "rawr",
+           "dur": "resto"
+          }
+         ]
+        }
+       },
+       "objetos": {
+        "bo": {
+         "id": "bolha",
+         "x": 800,
+         "y": 1000,
+         "z": 0,
+         "depth": 0.3,
+         "keys": [
+          {
+           "t": 0.0,
+           "pose": {
+            "tam": 1.0,
+            "y": 1000.0,
+            "balanco": 0.0
+           },
+           "ease": "step"
+          },
+          {
+           "t": 3.67,
+           "pose": {
+            "y": 250.0
+           },
+           "ease": "linear",
+           "in": 3.64
+          },
+          {
+           "t": 3.67,
+           "pose": {
+            "balanco": 3.7
+           },
+           "ease": "linear",
+           "in": 3.64
+          }
+         ]
+        }
+       }
+      }
+     ]
+    },
+    "linhas": 2,
+    "callout": [
+     {
+      "t": 1.68,
+      "text": "RAWR!",
+      "color": "vermelho"
+     }
+    ],
+    "cantam": [
+     "bilu"
+    ]
+   },
+   {
+    "cenario": "mon_palco",
+    "camera": {
+     "x": 1250,
+     "y": 620,
+     "zoom": 1.15,
+     "zoom_fim": 1.05
+    },
+    "fx": [
+     "notas"
+    ],
+    "objetos": {
+     "bat": {
+      "id": "bateria_show",
+      "x": 1700,
+      "y": 940,
+      "z": 4,
+      "depth": 0.6,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "kit_a4",
+        "dur": "resto"
+       }
+      ]
+     },
+     "tec": {
+      "id": "teclado_inst",
+      "x": 800,
+      "y": 940,
+      "z": 4,
+      "depth": 0.62,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "tecla": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 4.093,
+        "pose": {
+         "tecla": 8.3
+        },
+        "ease": "linear",
+        "in": 4.063
+       }
+      ]
+     }
+    },
+    "atores": {
+     "bilu": {
+      "x": 1700,
+      "y": 930,
+      "turn": -0.2,
+      "z": 3,
+      "segura": "baqueta_a4",
+      "segura_f": "baqueta_a4",
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_bateria_a4",
+        "dur": "resto"
+       }
+      ]
+     },
+     "zuzu": {
+      "x": 800,
+      "y": 930,
+      "turn": 0.2,
+      "z": 3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_teclado",
+        "dur": "resto"
+       }
+      ]
+     },
+     "nhoque": {
+      "x": 2250,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 1.86,
+        "do": "rawr",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "zuzu"
+    ],
+    "linhas": 2,
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "FOFOLUCOS!",
+      "color": "roxo"
+     }
+    ]
+   }
+  ],
+  "intervalo#1": [
+   {
+    "linhas": 1,
+    "seg": 5.24,
+    "cenario": "mon_vila",
+    "camera": {
+     "x": 1300,
+     "y": 515,
+     "zoom": 2.2,
+     "zoom_fim": 2.32
+    },
+    "cantam": [
+     "zuzu"
+    ],
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "FOFOLUCOS! RAWR!",
+      "color": "roxo"
+     }
+    ],
+    "atores": {
+     "zuzu": {
+      "x": 1300,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "rawr",
+        "dur": "resto"
+       },
+       {
+        "t": 1.6,
+        "do": "apontar_camera",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "objetos": {
+     "nv": {
+      "id": "nuvem",
+      "x": 300,
+      "y": 300,
+      "z": 0,
+      "depth": 0.32,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "cara": 1.0,
+         "x": 300.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 5.01,
+        "pose": {
+         "x": 580.0
+        },
+        "ease": "linear",
+        "in": 4.98
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "seg": 3.4,
+    "cenario": "mon_xadrez_verde",
+    "camera": {
+     "x": 960,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "fx": [
+     "confete"
+    ],
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "FOFOLUCOS!",
+      "color": "rosa"
+     }
+    ],
+    "cantam": [
+     "mimi"
+    ],
+    "atores": {
+     "mimi": {
+      "x": 380,
+      "turn": 0.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "cintura"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     },
+     "teco": {
+      "x": 960,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "dance",
+        "dur": "resto",
+        "style": "joelho"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     },
+     "nhoque": {
+      "x": 1540,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "palmas"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     }
+    },
+    "objetos": {
+     "bo": {
+      "id": "bolha",
+      "x": 1650,
+      "y": 1000,
+      "z": 0,
+      "depth": 0.3,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "tam": 1.0,
+         "y": 1000.0,
+         "balanco": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.34,
+        "pose": {
+         "y": 250.0
+        },
+        "ease": "linear",
+        "in": 3.31
+       },
+       {
+        "t": 3.34,
+        "pose": {
+         "balanco": 3.4
+        },
+        "ease": "linear",
+        "in": 3.31
+       }
+      ]
+     }
+    }
+   },
+   {
+    "seg": 4.01,
+    "cenario": "mon_palco",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.05,
+     "zoom_fim": 1.15
+    },
+    "fx": [
+     "notas"
+    ],
+    "objetos": {
+     "bat": {
+      "id": "bateria_show",
+      "x": 1700,
+      "y": 940,
+      "z": 4,
+      "depth": 0.6,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "kit_a4",
+        "dur": "resto"
+       }
+      ]
+     },
+     "tec": {
+      "id": "teclado_inst",
+      "x": 800,
+      "y": 940,
+      "z": 4,
+      "depth": 0.62,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "tecla": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 4.01,
+        "pose": {
+         "tecla": 8.0
+        },
+        "ease": "linear",
+        "in": 3.98
+       }
+      ]
+     }
+    },
+    "atores": {
+     "bilu": {
+      "x": 1700,
+      "y": 930,
+      "turn": -0.2,
+      "z": 3,
+      "segura": "baqueta_a4",
+      "segura_f": "baqueta_a4",
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_bateria_a4",
+        "dur": "resto"
+       }
+      ]
+     },
+     "zuzu": {
+      "x": 800,
+      "y": 930,
+      "turn": 0.2,
+      "z": 3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_teclado",
+        "dur": "resto"
+       }
+      ]
+     },
+     "gogo": {
+      "x": 350,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "bracos"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "zuzu"
+    ],
+    "titulo": "teclado e bateria"
+   }
+  ],
+  "intervalo#2": [
+   {
+    "linhas": 1,
+    "seg": 2.97,
+    "cenario": "mon_noite",
+    "camera": {
+     "x": 1300,
+     "y": 515,
+     "zoom": 2.2,
+     "zoom_fim": 2.32
+    },
+    "cantam": [
+     "gogo"
+    ],
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "FOFOLUCOS! RAWR!",
+      "color": "roxo"
+     }
+    ],
+    "atores": {
+     "gogo": {
+      "x": 1300,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "rawr",
+        "dur": "resto"
+       },
+       {
+        "t": 1.6,
+        "do": "apontar_camera",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "objetos": {
+     "lua": {
+      "id": "lua",
+      "x": 2150,
+      "y": 420,
+      "z": 0,
+      "depth": 0.42,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {},
+        "ease": "step"
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "brilho": 0.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 0.5,
+        "pose": {
+         "boca": 0.6
+        },
+        "ease": "out"
+       },
+       {
+        "t": 1.0,
+        "pose": {
+         "brilho": 1.0
+        },
+        "ease": "out",
+        "in": 0.97
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "seg": 3.4,
+    "cenario": "mon_xadrez_laranja",
+    "camera": {
+     "x": 960,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "fx": [
+     "confete"
+    ],
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "FOFOLUCOS!",
+      "color": "rosa"
+     }
+    ],
+    "cantam": [
+     "mimi"
+    ],
+    "atores": {
+     "mimi": {
+      "x": 380,
+      "turn": 0.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "cintura"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     },
+     "teco": {
+      "x": 960,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "dance",
+        "dur": "resto",
+        "style": "joelho"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     },
+     "nhoque": {
+      "x": 1540,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "palmas"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     }
+    },
+    "objetos": {
+     "bo": {
+      "id": "bolha",
+      "x": 1650,
+      "y": 1000,
+      "z": 0,
+      "depth": 0.3,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "tam": 1.0,
+         "y": 1000.0,
+         "balanco": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.34,
+        "pose": {
+         "y": 250.0
+        },
+        "ease": "linear",
+        "in": 3.31
+       },
+       {
+        "t": 3.34,
+        "pose": {
+         "balanco": 3.4
+        },
+        "ease": "linear",
+        "in": 3.31
+       }
+      ]
+     }
+    }
+   },
+   {
+    "seg": 1.13,
+    "cenario": "mon_palco",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.05,
+     "zoom_fim": 1.15
+    },
+    "fx": [
+     "notas"
+    ],
+    "objetos": {
+     "bat": {
+      "id": "bateria_show",
+      "x": 1700,
+      "y": 940,
+      "z": 4,
+      "depth": 0.6,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "kit_a4",
+        "dur": "resto"
+       }
+      ]
+     },
+     "tec": {
+      "id": "teclado_inst",
+      "x": 800,
+      "y": 940,
+      "z": 4,
+      "depth": 0.62,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "tecla": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.13,
+        "pose": {
+         "tecla": 2.3
+        },
+        "ease": "linear",
+        "in": 1.1
+       }
+      ]
+     }
+    },
+    "atores": {
+     "bilu": {
+      "x": 1700,
+      "y": 930,
+      "turn": -0.2,
+      "z": 3,
+      "segura": "baqueta_a4",
+      "segura_f": "baqueta_a4",
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_bateria_a4",
+        "dur": "resto"
+       }
+      ]
+     },
+     "zuzu": {
+      "x": 800,
+      "y": 930,
+      "turn": 0.2,
+      "z": 3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_teclado",
+        "dur": "resto"
+       }
+      ]
+     },
+     "gogo": {
+      "x": 350,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "bracos"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "zuzu"
+    ],
+    "titulo": "teclado e bateria"
+   }
+  ],
+  "intervalo#3": [
+   {
+    "seg": 3.52,
+    "cenario": "mon_palco",
+    "camera": {
+     "x": 1250,
+     "y": 620,
+     "zoom": 1.15,
+     "zoom_fim": 1.05
+    },
+    "fx": [
+     "notas"
+    ],
+    "objetos": {
+     "bat": {
+      "id": "bateria_show",
+      "x": 1700,
+      "y": 940,
+      "z": 4,
+      "depth": 0.6,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "kit_a4",
+        "dur": "resto"
+       }
+      ]
+     },
+     "tec": {
+      "id": "teclado_inst",
+      "x": 800,
+      "y": 940,
+      "z": 4,
+      "depth": 0.62,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "tecla": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.493,
+        "pose": {
+         "tecla": 7.0
+        },
+        "ease": "linear",
+        "in": 3.463
+       }
+      ]
+     }
+    },
+    "atores": {
+     "bilu": {
+      "x": 1700,
+      "y": 930,
+      "turn": -0.2,
+      "z": 3,
+      "segura": "baqueta_a4",
+      "segura_f": "baqueta_a4",
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_bateria_a4",
+        "dur": "resto"
+       }
+      ]
+     },
+     "zuzu": {
+      "x": 800,
+      "y": 930,
+      "turn": 0.2,
+      "z": 3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_teclado",
+        "dur": "resto"
+       }
+      ]
+     },
+     "mimi": {
+      "x": 2250,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "festa"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "zuzu"
+    ],
+    "titulo": "a banda"
+   },
+   {
+    "seg": 3.52,
+    "cenario": "mon_brilho_laranja",
+    "camera": {
+     "x": 960,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "fx": [
+     "confete"
+    ],
+    "titulo": "a turma dança",
+    "cantam": [
+     "gogo"
+    ],
+    "atores": {
+     "gogo": {
+      "x": 210,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "roda"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     },
+     "teco": {
+      "x": 710,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "dance",
+        "dur": "resto",
+        "style": "pulinho"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     },
+     "nhoque": {
+      "x": 1210,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "festa"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     },
+     "bilu": {
+      "x": 1710,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "dance",
+        "dur": "resto",
+        "style": "sapinho"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     }
+    },
+    "objetos": {
+     "bo": {
+      "id": "bolha",
+      "x": 1650,
+      "y": 1000,
+      "z": 0,
+      "depth": 0.3,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "tam": 1.0,
+         "y": 1000.0,
+         "balanco": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.44,
+        "pose": {
+         "y": 250.0
+        },
+        "ease": "linear",
+        "in": 3.41
+       },
+       {
+        "t": 3.44,
+        "pose": {
+         "balanco": 3.5
+        },
+        "ease": "linear",
+        "in": 3.41
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "ponte#1": [
+   {
+    "linhas": 1,
+    "cenario": "mon_cozinha",
+    "camera": {
+     "x": 1300,
+     "y": 515,
+     "zoom": 2.2,
+     "zoom_fim": 2.32
+    },
+    "callout": [
+     {
+      "t": 0.1,
+      "text": "MOSTRA O DENTE!",
+      "color": "vermelho"
+     }
+    ],
+    "cantam": [
+     "nhoque"
+    ],
+    "atores": {
+     "nhoque": {
+      "x": 1300,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "rawr",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "objetos": {
+     "bo": {
+      "id": "bolha",
+      "x": 300,
+      "y": 1000,
+      "z": 0,
+      "depth": 0.3,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "tam": 1.0,
+         "y": 1000.0,
+         "balanco": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.04,
+        "pose": {
+         "y": 250.0
+        },
+        "ease": "linear",
+        "in": 2.01
+       },
+       {
+        "t": 2.04,
+        "pose": {
+         "balanco": 2.1
+        },
+        "ease": "linear",
+        "in": 2.01
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "mon_parque",
+    "camera": {
+     "x": 1300,
+     "y": 600,
+     "zoom": 1.75,
+     "zoom_fim": 1.85
+    },
+    "callout": [
+     {
+      "t": 0.1,
+      "text": "MOSTRA A GARRA!",
+      "color": "rosa"
+     }
+    ],
+    "cantam": [
+     "mimi"
+    ],
+    "atores": {
+     "mimi": {
+      "x": 1300,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "rawr",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "objetos": {
+     "nv": {
+      "id": "nuvem",
+      "x": 1700,
+      "y": 300,
+      "z": 0,
+      "depth": 0.32,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "cara": 1.0,
+         "x": 1700.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.64,
+        "pose": {
+         "x": 1980.0
+        },
+        "ease": "linear",
+        "in": 1.61
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "mon_raios_vermelho",
+    "camera": {
+     "x": 960,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "callout": [
+     {
+      "t": 0.1,
+      "text": "BALANÇA O RABO!",
+      "color": "verde"
+     }
+    ],
+    "cantam": [
+     "gogo"
+    ],
+    "atores": {
+     "gogo": {
+      "x": 700,
+      "turn": -0.75,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "cintura"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     },
+     "zuzu": {
+      "x": 1250,
+      "turn": 0.75,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "dance",
+        "dur": "resto",
+        "style": "cintura"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     }
+    },
+    "objetos": {
+     "bo": {
+      "id": "bolha",
+      "x": 800,
+      "y": 1000,
+      "z": 0,
+      "depth": 0.3,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "tam": 1.0,
+         "y": 1000.0,
+         "balanco": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.17,
+        "pose": {
+         "y": 250.0
+        },
+        "ease": "linear",
+        "in": 1.14
+       },
+       {
+        "t": 1.17,
+        "pose": {
+         "balanco": 1.2
+        },
+        "ease": "linear",
+        "in": 1.14
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "mon_noite",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "flash": true,
+    "tremor": [
+     2.1
+    ],
+    "cantam": [
+     "bilu"
+    ],
+    "callout": [
+     {
+      "t": 1.89,
+      "text": "BU!",
+      "color": "vermelho"
+     }
+    ],
+    "atores": {
+     "bilu": {
+      "x": 1300,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 1.68,
+        "do": "rawr",
+        "dur": "resto"
+       }
+      ]
+     },
+     "teco": {
+      "x": 500,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 2.1,
+        "do": "shock_reaction",
+        "dur": "resto"
+       }
+      ],
+      "expr": "surprised"
+     },
+     "mimi": {
+      "x": 2100,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 2.1,
+        "do": "jump",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "objetos": {
+     "lua": {
+      "id": "lua",
+      "x": 2150,
+      "y": 420,
+      "z": 0,
+      "depth": 0.42,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {},
+        "ease": "step"
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "brilho": 0.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 0.5,
+        "pose": {
+         "boca": 0.6
+        },
+        "ease": "out"
+       },
+       {
+        "t": 1.0,
+        "pose": {
+         "brilho": 1.0
+        },
+        "ease": "out",
+        "in": 0.97
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "verso#2": [
+   {
+    "linhas": 1,
+    "cenario": "mon_vila",
+    "camera": {
+     "x": 1700,
+     "y": 430,
+     "zoom": 1.6,
+     "zoom_fim": 1.7
+    },
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "GOGO!",
+      "color": "verde"
+     }
+    ],
+    "cantam": [
+     "gogo"
+    ],
+    "atores": {
+     "gogo": {
+      "x": 1700,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "look_around",
+        "dur": "resto"
+       }
+      ],
+      "y": 860,
+      "depth": 0.9
+     }
+    },
+    "objetos": {
+     "nv": {
+      "id": "nuvem",
+      "x": 300,
+      "y": 300,
+      "z": 0,
+      "depth": 0.32,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "cara": 1.0,
+         "x": 300.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.47,
+        "pose": {
+         "x": 580.0
+        },
+        "ease": "linear",
+        "in": 2.44
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "mon_parque",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "MIMI!",
+      "color": "rosa"
+     }
+    ],
+    "cantam": [
+     "mimi"
+    ],
+    "objetos": {
+     "ce": {
+      "id": "cerquinha",
+      "x": 1300,
+      "y": 960,
+      "z": 4,
+      "depth": 1.0
+     },
+     "nv": {
+      "id": "nuvem",
+      "x": 1700,
+      "y": 300,
+      "z": 0,
+      "depth": 0.32,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "cara": 1.0,
+         "x": 1700.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.21,
+        "pose": {
+         "x": 1980.0
+        },
+        "ease": "linear",
+        "in": 1.18
+       }
+      ]
+     }
+    },
+    "atores": {
+     "mimi": {
+      "x": 700,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "run",
+        "to_x": 1100,
+        "dur": 0.6
+       },
+       {
+        "t": 0.6,
+        "do": "jump",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "mon_vila",
+    "camera": {
+     "x": 1300,
+     "y": 600,
+     "zoom": 1.4,
+     "zoom_fim": 1.48
+    },
+    "callout": [
+     {
+      "t": 0.4,
+      "text": "MEDO? NADA!",
+      "color": "laranja"
+     }
+    ],
+    "cantam": [
+     "zuzu"
+    ],
+    "atores": {
+     "zuzu": {
+      "x": 850,
+      "turn": 0.25,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "bacana",
+        "dur": "resto"
+       }
+      ]
+     },
+     "bilu": {
+      "x": 1300,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "bacana",
+        "dur": "resto"
+       }
+      ]
+     },
+     "nhoque": {
+      "x": 1750,
+      "turn": -0.25,
+      "acoes": [
+       {
+        "t": 0.3,
+        "do": "bacana",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "objetos": {
+     "nv": {
+      "id": "nuvem",
+      "x": 900,
+      "y": 300,
+      "z": 0,
+      "depth": 0.32,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "cara": 1.0,
+         "x": 900.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.64,
+        "pose": {
+         "x": 1180.0
+        },
+        "ease": "linear",
+        "in": 1.61
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "mon_noite",
+    "camera": {
+     "x": 1300,
+     "y": 640,
+     "zoom": 1.75,
+     "zoom_fim": 1.85
+    },
+    "escurece": [
+     0.0,
+     0.35
+    ],
+    "callout": [
+     {
+      "t": 0.4,
+      "text": "DO ESCURO!",
+      "color": "azul"
+     }
+    ],
+    "cantam": [
+     "teco"
+    ],
+    "atores": {
+     "teco": {
+      "x": 1000,
+      "turn": 0.25,
+      "acoes": [
+       {
+        "t": 0.3,
+        "do": "shock_reaction",
+        "dur": "resto"
+       }
+      ],
+      "expr": "scared"
+     },
+     "mimi": {
+      "x": 1600,
+      "turn": -0.25,
+      "acoes": [
+       {
+        "t": 0.5,
+        "do": "shock_reaction",
+        "dur": "resto"
+       }
+      ],
+      "expr": "scared"
+     }
+    },
+    "objetos": {
+     "lua": {
+      "id": "lua",
+      "x": 2150,
+      "y": 420,
+      "z": 0,
+      "depth": 0.42,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {},
+        "ease": "step"
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "brilho": 0.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 0.5,
+        "pose": {
+         "boca": 0.6
+        },
+        "ease": "out"
+       },
+       {
+        "t": 1.0,
+        "pose": {
+         "brilho": 1.0
+        },
+        "ease": "out",
+        "in": 0.97
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "mon_quarto",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "escurece": [
+     0.45,
+     0.0
+    ],
+    "callout": [
+     {
+      "t": 0.4,
+      "text": "LANTERNA!",
+      "color": "amarelo"
+     }
+    ],
+    "cantam": [
+     "bilu"
+    ],
+    "objetos": {
+     "l": {
+      "id": "lanterna",
+      "x": 900,
+      "y": 960,
+      "z": 5,
+      "depth": 0.9,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "liga": 0.0,
+         "dir": -0.04
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.5,
+        "pose": {
+         "liga": 1.0
+        },
+        "ease": "out",
+        "in": 0.47
+       }
+      ]
+     },
+     "bo": {
+      "id": "bolha",
+      "x": 300,
+      "y": 1000,
+      "z": 0,
+      "depth": 0.3,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "tam": 1.0,
+         "y": 1000.0,
+         "balanco": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.61,
+        "pose": {
+         "y": 250.0
+        },
+        "ease": "linear",
+        "in": 1.58
+       },
+       {
+        "t": 1.61,
+        "pose": {
+         "balanco": 1.7
+        },
+        "ease": "linear",
+        "in": 1.58
+       }
+      ]
+     }
+    },
+    "atores": {
+     "bilu": {
+      "x": 1800,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "look_around",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "mon_quarto",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "tremor": [
+     0.3
+    ],
+    "flash": true,
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "AI!",
+      "color": "vermelho"
+     }
+    ],
+    "cantam": [
+     "teco"
+    ],
+    "objetos": {
+     "l": {
+      "id": "lanterna",
+      "x": 2350,
+      "y": 960,
+      "z": 5,
+      "depth": 0.8,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "liga": 1.0,
+         "dir": 0.5
+        },
+        "ease": "step"
+       }
+      ]
+     },
+     "bo": {
+      "id": "bolha",
+      "x": 1650,
+      "y": 1000,
+      "z": 0,
+      "depth": 0.3,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "tam": 1.0,
+         "y": 1000.0,
+         "balanco": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.04,
+        "pose": {
+         "y": 250.0
+        },
+        "ease": "linear",
+        "in": 2.01
+       },
+       {
+        "t": 2.04,
+        "pose": {
+         "balanco": 2.1
+        },
+        "ease": "linear",
+        "in": 2.01
+       }
+      ]
+     }
+    },
+    "atores": {
+     "teco": {
+      "x": 500,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "jump",
+        "dur": "resto"
+       }
+      ],
+      "expr": "surprised"
+     },
+     "gogo": {
+      "x": 1000,
+      "turn": 0.2,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "jump",
+        "dur": "resto"
+       }
+      ],
+      "expr": "surprised"
+     },
+     "zuzu": {
+      "x": 1500,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.05,
+        "do": "jump",
+        "dur": "resto"
+       }
+      ],
+      "expr": "surprised"
+     }
+    }
+   },
+   {
+    "tela_dividida": {
+     "layout": "diagonal",
+     "paineis": [
+      {
+       "cenario": "mon_noite",
+       "camera": {
+        "x": 1300,
+        "y": 600,
+        "zoom": 1.6,
+        "zoom_fim": 1.7
+       },
+       "cantam": [
+        "teco"
+       ],
+       "atores": {
+        "teco": {
+         "x": 1300,
+         "turn": 0.0,
+         "acoes": [
+          {
+           "t": 0.1,
+           "do": "shock_reaction",
+           "dur": "resto"
+          }
+         ],
+         "expr": "scared"
+        }
+       },
+       "objetos": {
+        "lua": {
+         "id": "lua",
+         "x": 2150,
+         "y": 420,
+         "z": 0,
+         "depth": 0.42,
+         "keys": [
+          {
+           "t": 0.0,
+           "pose": {},
+           "ease": "step"
+          },
+          {
+           "t": 0.0,
+           "pose": {
+            "brilho": 0.0
+           },
+           "ease": "out"
+          },
+          {
+           "t": 0.5,
+           "pose": {
+            "boca": 0.6
+           },
+           "ease": "out"
+          },
+          {
+           "t": 1.0,
+           "pose": {
+            "brilho": 1.0
+           },
+           "ease": "out",
+           "in": 0.97
+          }
+         ]
+        }
+       }
+      },
+      {
+       "cenario": "mon_parque",
+       "camera": {
+        "x": 1300,
+        "y": 600,
+        "zoom": 1.6,
+        "zoom_fim": 1.7
+       },
+       "atores": {
+        "mimi": {
+         "x": 1300,
+         "turn": 0.0,
+         "acoes": [
+          {
+           "t": 0.1,
+           "do": "laugh",
+           "dur": "resto"
+          }
+         ]
+        }
+       },
+       "objetos": {
+        "nv": {
+         "id": "nuvem",
+         "x": 900,
+         "y": 300,
+         "z": 0,
+         "depth": 0.32,
+         "keys": [
+          {
+           "t": 0.0,
+           "pose": {
+            "cara": 1.0,
+            "x": 900.0
+           },
+           "ease": "step"
+          },
+          {
+           "t": 2.47,
+           "pose": {
+            "x": 1180.0
+           },
+           "ease": "linear",
+           "in": 2.44
+          }
+         ]
+        }
+       }
+      }
+     ]
+    },
+    "linhas": 1,
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "FOFINHO E MEDROSO!",
+      "color": "rosa"
+     }
+    ],
+    "cantam": [
+     "bilu"
+    ]
+   },
+   {
+    "linhas": 1,
+    "cenario": "mon_parque",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "fx": [
+     "estrelas"
+    ],
+    "callout": [
+     {
+      "t": 0.4,
+      "text": "NUNCA VI!",
+      "color": "laranja"
+     }
+    ],
+    "cantam": [
+     "nhoque"
+    ],
+    "atores": {
+     "nhoque": {
+      "x": 400,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "laugh",
+        "dur": "resto"
+       }
+      ]
+     },
+     "bilu": {
+      "x": 900,
+      "turn": 0.2,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "dance",
+        "dur": "resto",
+        "style": "pulinho"
+       }
+      ]
+     },
+     "teco": {
+      "x": 1700,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "laugh",
+        "dur": "resto"
+       }
+      ]
+     },
+     "gogo": {
+      "x": 2200,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "festa"
+       }
+      ]
+     }
+    },
+    "objetos": {
+     "nv": {
+      "id": "nuvem",
+      "x": 2100,
+      "y": 300,
+      "z": 0,
+      "depth": 0.32,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "cara": 1.0,
+         "x": 2100.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.67,
+        "pose": {
+         "x": 2380.0
+        },
+        "ease": "linear",
+        "in": 3.64
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "final#1": [
+   {
+    "linhas": 1,
+    "cenario": "mon_vila",
+    "camera": {
+     "x": 1300,
+     "y": 515,
+     "zoom": 2.2,
+     "zoom_fim": 2.32
+    },
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "GOSTOU DOS FOFOLUCOS?",
+      "color": "roxo"
+     }
+    ],
+    "cantam": [
+     "bilu"
+    ],
+    "atores": {
+     "bilu": {
+      "x": 1300,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "apontar_camera",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "objetos": {
+     "nv": {
+      "id": "nuvem",
+      "x": 300,
+      "y": 300,
+      "z": 0,
+      "depth": 0.32,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "cara": 1.0,
+         "x": 300.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.87,
+        "pose": {
+         "x": 580.0
+        },
+        "ease": "linear",
+        "in": 2.84
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "mon_brilho_rosa",
+    "camera": {
+     "x": 960,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "DÁ UM JOINHA!",
+      "color": "azul"
+     }
+    ],
+    "fx": [
+     "estrelas"
+    ],
+    "cantam": [
+     "zuzu"
+    ],
+    "objetos": {
+     "joinha": {
+      "x": 1380,
+      "y": 900,
+      "z": 3,
+      "depth": 1.3,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "escala": 0.0
+        }
+       },
+       {
+        "t": 0.4,
+        "pose": {
+         "escala": 1.0
+        },
+        "ease": "back",
+        "in": 0.37
+       }
+      ]
+     },
+     "bo": {
+      "id": "bolha",
+      "x": 1650,
+      "y": 1000,
+      "z": 0,
+      "depth": 0.3,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "tam": 1.0,
+         "y": 1000.0,
+         "balanco": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.97,
+        "pose": {
+         "y": 250.0
+        },
+        "ease": "linear",
+        "in": 1.94
+       },
+       {
+        "t": 1.97,
+        "pose": {
+         "balanco": 2.0
+        },
+        "ease": "linear",
+        "in": 1.94
+       }
+      ]
+     }
+    },
+    "atores": {
+     "zuzu": {
+      "x": 640,
+      "turn": 0.2,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "bacana",
+        "dur": "resto"
+       }
+      ],
+      "y": 1010,
+      "depth": 1.0
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "mon_vila",
+    "camera": {
+     "x": 1300,
+     "y": 640,
+     "zoom": 1.75,
+     "zoom_fim": 1.85
+    },
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "CHAMA O PAPAI E A MAMÃE!",
+      "color": "verde"
+     }
+    ],
+    "cantam": [
+     "mimi"
+    ],
+    "atores": {
+     "mimi": {
+      "x": 1000,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "point",
+        "dur": "resto"
+       }
+      ]
+     },
+     "teco": {
+      "x": 1600,
+      "turn": -0.25,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "wave",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "objetos": {
+     "nv": {
+      "id": "nuvem",
+      "x": 900,
+      "y": 300,
+      "z": 0,
+      "depth": 0.32,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "cara": 1.0,
+         "x": 900.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.81,
+        "pose": {
+         "x": 1180.0
+        },
+        "ease": "linear",
+        "in": 2.78
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "mon_raios_vermelho",
+    "camera": {
+     "x": 960,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "callout": [
+     {
+      "t": 0.5,
+      "text": "INSCREVA-SE!",
+      "color": "vermelho"
+     }
+    ],
+    "fx": [
+     "coracoes"
+    ],
+    "cantam": [
+     "gogo"
+    ],
+    "objetos": {
+     "botao": {
+      "id": "botao_inscrever",
+      "x": 1260,
+      "y": 760,
+      "z": 3,
+      "depth": 1.2,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "escala": 0.0,
+         "aperta": 0.0
+        }
+       },
+       {
+        "t": 0.4,
+        "pose": {
+         "escala": 1.0
+        },
+        "ease": "back",
+        "in": 0.37
+       },
+       {
+        "t": 1.6,
+        "pose": {
+         "aperta": 1.0
+        },
+        "ease": "out",
+        "in": 1.57
+       },
+       {
+        "t": 1.9,
+        "pose": {
+         "aperta": 0.0
+        },
+        "ease": "in",
+        "in": 0.27
+       }
+      ]
+     },
+     "bo": {
+      "id": "bolha",
+      "x": 1300,
+      "y": 1000,
+      "z": 0,
+      "depth": 0.3,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "tam": 1.0,
+         "y": 1000.0,
+         "balanco": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 4.07,
+        "pose": {
+         "y": 250.0
+        },
+        "ease": "linear",
+        "in": 4.04
+       },
+       {
+        "t": 4.07,
+        "pose": {
+         "balanco": 4.1
+        },
+        "ease": "linear",
+        "in": 4.04
+       }
+      ]
+     }
+    },
+    "atores": {
+     "gogo": {
+      "x": 560,
+      "turn": 0.2,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "point",
+        "dur": "resto"
+       },
+       {
+        "t": 2.63,
+        "do": "rawr",
+        "dur": "resto"
+       }
+      ],
+      "y": 1010,
+      "depth": 1.0
+     }
+    }
+   }
+  ],
+  "final#2": [
+   {
+    "linhas": 1,
+    "seg": 3.6,
+    "cenario": "mon_vila",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "fx": [
+     "coracoes"
+    ],
+    "cantam": [
+     "bilu"
+    ],
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "FOFOLUCOS!",
+      "color": "roxo"
+     },
+     {
+      "t": 1.5,
+      "text": "TCHAU!",
+      "color": "amarelo"
+     }
+    ],
+    "atores": {
+     "teco": {
+      "x": 260,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "wave",
+        "dur": "resto"
+       }
+      ],
+      "depth": 0.78
+     },
+     "gogo": {
+      "x": 676,
+      "turn": 0.25,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "wave",
+        "dur": "resto"
+       }
+      ],
+      "depth": 0.78
+     },
+     "bilu": {
+      "x": 1092,
+      "turn": 0.1,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "wave",
+        "dur": "resto"
+       }
+      ],
+      "depth": 0.78
+     },
+     "mimi": {
+      "x": 1508,
+      "turn": -0.1,
+      "acoes": [
+       {
+        "t": 0.30000000000000004,
+        "do": "wave",
+        "dur": "resto"
+       }
+      ],
+      "depth": 0.78
+     },
+     "zuzu": {
+      "x": 1924,
+      "turn": -0.25,
+      "acoes": [
+       {
+        "t": 0.4,
+        "do": "wave",
+        "dur": "resto"
+       }
+      ],
+      "depth": 0.78
+     },
+     "nhoque": {
+      "x": 2340,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.5,
+        "do": "wave",
+        "dur": "resto"
+       }
+      ],
+      "depth": 0.78
+     }
+    },
+    "objetos": {
+     "nv": {
+      "id": "nuvem",
+      "x": 300,
+      "y": 300,
+      "z": 0,
+      "depth": 0.32,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "cara": 1.0,
+         "x": 300.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.54,
+        "pose": {
+         "x": 580.0
+        },
+        "ease": "linear",
+        "in": 3.51
+       }
+      ]
+     }
+    }
+   },
+   {
+    "seg": 4.97,
+    "cenario": "mon_noite",
+    "camera": {
+     "x": 1300,
+     "y": 515,
+     "zoom": 2.2,
+     "zoom_fim": 2.32
+    },
+    "flash": true,
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "RAWR!",
+      "color": "vermelho"
+     }
+    ],
+    "titulo": "o último RAWR",
+    "cantam": [
+     "nhoque"
+    ],
+    "atores": {
+     "nhoque": {
+      "x": 1300,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "rawr",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "objetos": {
+     "lua": {
+      "id": "lua",
+      "x": 2150,
+      "y": 420,
+      "z": 0,
+      "depth": 0.42,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {},
+        "ease": "step"
+       },
+       {
+        "t": 0.0,
+        "pose": {
+         "brilho": 0.0
+        },
+        "ease": "out"
+       },
+       {
+        "t": 0.5,
+        "pose": {
+         "boca": 0.6
+        },
+        "ease": "out"
+       },
+       {
+        "t": 1.0,
+        "pose": {
+         "brilho": 1.0
+        },
+        "ease": "out",
+        "in": 0.97
+       }
+      ]
+     }
+    }
+   }
+  ]
+ }
+}

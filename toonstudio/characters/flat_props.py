@@ -26,7 +26,12 @@ PAL = {"leite": "#FFFFFF", "vidro": "#CFE8FA", "banana": "#FFD84A", "banana_pont
 SOMBRINHA = ["#E9545D", "#FFD23F", "#2DB34A", "#3C8BF0", "#B865E6", "#FF8A1F"]
 
 
+SEM_CONTORNO = False      # multicanal: objetos do canal Fofolucos são chapados sem contorno (liga em _Prop.draw)
+
+
 def shape(k: Ink, pts, fill: str, line: str | None = None, alpha: float = 1.0, w: float = LINE, smooth: bool = True):
+    if SEM_CONTORNO:
+        w = 0.0
     br = Brush(width=w, vary=0.0, ink=_rgba(line or dark(fill)), jitter=0.0)
     if not smooth:                       # polígono reto: amostra as arestas (cantos vivos, contorno uniforme)
         dense = []
@@ -268,9 +273,14 @@ class _Prop(Character):
                          defaults={"turn": 0.0, "hidden": 0.0, **defaults})
 
     def draw(self, ink: Ink, P: dict) -> None:
+        global SEM_CONTORNO
         if P.get("hidden", 0) > 0.5:
             return
-        self.paint(ink, P)
+        SEM_CONTORNO = P.get("sem_contorno", 0.0) > 0.5
+        try:
+            self.paint(ink, P)
+        finally:
+            SEM_CONTORNO = False
 
 
 class Janela(_Prop):
@@ -3306,3 +3316,27 @@ class Destaque(_Prop):
 
 
 PROPS.update({"destaque": Destaque})
+
+
+class Lanterna(_Prop):
+    """Lanterna de mão GRANDE (Fofolucos 01: "mas se acende a lanterna…"): corpo amarelo, vidro, botão. `liga` 0→1 acende o
+    facho de luz (cone amarelo-claro transparente), `dir` em voltas (0 = para a direita, −0.25 = para cima)."""
+
+    def __init__(self):
+        super().__init__("lanterna", "Lanterna", (1400, 900), (700, 840), 260, {"liga": 0.0, "dir": 0.0})
+
+    def paint(self, k, P):
+        a = 2 * math.pi * P["dir"]
+        def R(x, y):
+            return (x * math.cos(a) - y * math.sin(a), -120 + x * math.sin(a) + y * math.cos(a))
+        lg = max(0.0, min(1.0, P["liga"]))
+        if lg > 0.02:                                           # facho de luz
+            pts = [R(110, -38), R(110 + 520, -230), R(110 + 560, 0), R(110 + 520, 230), R(110, 38)]
+            shape(k, pts, "#FFF6A8", line="#FFF6A8", alpha=0.55 * lg, w=0.0)
+        shape(k, [R(-120, -34), R(60, -34), R(60, 34), R(-120, 34)], "#FFC93C", line="#C98A1E", smooth=False)
+        shape(k, [R(60, -50), R(112, -50), R(112, 50), R(60, 50)], "#FF8A3D", line="#C9561A", smooth=False)
+        shape(k, [R(104, -42), R(118, -42), R(118, 42), R(104, 42)], "#FFF6A8" if lg > 0.5 else "#CFE8FA", line="#9FB3C8", smooth=False)
+        shape(k, ellipse_pts(*R(-20, -34), 16, 9, a, 12), "#E9433F", line="#A82A26")
+
+
+PROPS.update({"lanterna": Lanterna})

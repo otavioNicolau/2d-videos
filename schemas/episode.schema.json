@@ -176,6 +176,10 @@
           },
           "minItems": 2,
           "maxItems": 2
+        },
+        "logo_png": {
+          "type": "string",
+          "description": "logo do canal em imagem (multicanal: Fofolucos)"
         }
       }
     },

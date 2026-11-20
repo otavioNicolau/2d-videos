@@ -403,12 +403,19 @@ def _performance(a: dict, dur: float, graphic: bool) -> dict:
     return perf
 
 
+def _props_sem_contorno() -> bool:
+    from ..core.canal import atual
+    return bool(atual().raw.get("props_sem_contorno"))
+
+
 def _objetos(objs: dict, cast: dict, dur: float | None = None) -> dict:
     out = {}
     for name, o in (objs or {}).items():
         cid = o.get("id", name)
         cast[name] = {"character": cid}
         st = {"x": o.get("x", 960), "y": o.get("y", GROUND), "z": o.get("z", 1), **o.get("pose", {})}
+        if _props_sem_contorno():                             # multicanal: Fofolucos = chapado SEM contorno também nos objetos
+            st["sem_contorno"] = 1.0
         if "depth" in o or (ESCALA != 1.0 and cid not in NAO_ESCALA):
             st["depth"] = round(o.get("depth", 1.0) * (1.0 if cid in NAO_ESCALA else ESCALA), 3)
         perf = {"start": st, "exposure": 1}

@@ -23,7 +23,8 @@ from toonstudio.core.canal import atual as _canal_atual   # multicanal (20/11/20
 M = _canal_atual().musicas
 PJ_CANAL = _canal_atual().projetos
 HIST = M / "MELHORIA_CENAS.json"
-PRINCIPAIS = tuple(_canal_atual().protagonistas) or ("laurinha", "luisinho")
+_PP = _canal_atual().raw.get("placar_principais")         # Fofolucos: sem dupla fixa → a turma toda conta como elenco
+PRINCIPAIS = tuple(_PP) if _PP is not None else (tuple(_canal_atual().protagonistas) or ("laurinha", "luisinho"))
 
 # (medida, rótulo, mínimo, máximo, como melhorar)
 ITENS = [
@@ -58,7 +59,7 @@ def medir(roteiro: dict) -> dict:
         telas += bool(p.get("tela_dividida"))
         c = p.get("cenario")
         c = c if isinstance(c, str) else json.dumps(c)
-        if c.startswith(("danca_", "padrao_")):
+        if c.startswith(("danca_", "padrao_", "mon_raios_", "mon_xadrez_", "mon_brilho_")):   # fundos gráficos (os dois canais)
             danca += 1
         else:
             cen.add(c)
