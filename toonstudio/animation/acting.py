@@ -329,6 +329,51 @@ def careta(char, st, a):
     return ActionResult(keys=keys, dur=d, ex=1)
 
 
+_PARTES = {   # 28 "Do Pé à Cabeça": onde as mãos tocam (alcance limitado pela cabeça grande: "cabeça" = mãos dos lados dela)
+    "pe": {"body_y": 75, "squash": 0.88, "lean": 0.45, "hand_n_x": -95, "hand_n_y": 170, "hand_f_x": 95, "hand_f_y": 170,
+           "hand_n_bend": 0.0, "hand_f_bend": 0.0, "foot_n_bend": 0.7, "foot_f_bend": 0.7, "paw_n": 3, "paw_f": 3},
+    "joelho": {"body_y": 45, "squash": 0.92, "lean": 0.15, "hand_n_x": -75, "hand_n_y": 125, "hand_f_x": 75, "hand_f_y": 125,
+               "foot_n_bend": 0.55, "foot_f_bend": 0.55, "paw_n": 3, "paw_f": 3},
+    "barriga": {"hand_n_x": 20, "hand_n_y": 55, "hand_f_x": -20, "hand_f_y": 55, "paw_n": 3, "paw_f": 3},
+    "ombro": {"hand_n_x": -55, "hand_n_y": 0, "hand_f_x": 55, "hand_f_y": 0, "hand_n_bend": -0.8, "hand_f_bend": 0.8,
+              "paw_n": 3, "paw_f": 3, "body_y": -6},
+    "cabeca": {"hand_n_x": -75, "hand_n_y": -235, "hand_f_x": 75, "hand_f_y": -235, "hand_n_bend": 0.8, "hand_f_bend": -0.8,
+               "paw_n": 3, "paw_f": 3},
+}
+_NEUTRO_PARTES = {"body_y": 0, "squash": 1.0, "lean": 0.0, "foot_n_bend": 0.0, "foot_f_bend": 0.0}
+
+
+@action("tocar", "acting", "MÃO NA PARTE DO CORPO (28): `parte` pe|joelho|barriga|ombro|cabeca — vai até lá na batida e dá "
+        "tapinhas no ritmo; `partes` 'pe,joelho,…' sobe parte a parte dividindo o tempo.", {"dur": "s", "parte": "pe", "partes": ""})
+def tocar(char, st, a):
+    d = _d(a, 1.6)
+    partes = [p for p in (a.get("partes") or a.get("parte", "pe")).split(",") if p in _PARTES]
+    passo = d / max(1, len(partes))
+    keys = [(0.0, {}, "step")]
+    for i, p in enumerate(partes):
+        t0 = i * passo
+        alvo = {**_NEUTRO_PARTES, **_PARTES[p], **expression("happy")}
+        keys.append((t0 + min(0.25, passo * 0.4), alvo, "back"))
+        t, k = t0 + 0.25, 0
+        while t < t0 + passo - 0.2:                          # tapinhas: a mão desce e sobe um pouquinho
+            t += 0.2
+            k += 1
+            keys.append((round(t, 3), {"hand_n_y": alvo["hand_n_y"] + (8 if k % 2 else 0),
+                                       "hand_f_y": alvo["hand_f_y"] + (8 if k % 2 else 0)}, "inout"))
+    return ActionResult(keys=keys, dur=d, ex=1)
+
+
+@action("beijo", "acting", "Manda um BEIJO para a câmera: mão na boca (biquinho), joga o beijo com o braço esticado, olhinhos "
+        "fechados de alegria.", {"dur": "s"})
+def beijo(char, st, a):
+    d = _d(a, 1.4)
+    return ActionResult(keys=[
+        (0.0, {}, "step"),
+        (0.3, {**AT_MOUTH, "mouth": "F", "lid": 0.5}, "inout"),
+        (0.55, {"hand_n_x": 150, "hand_n_y": -70, "hand_n_bend": 0.1, "paw_n": 3, "mouth": "B", **expression("joy")}, "back"),
+        (d, {"head_tilt": 0.12}, "inout")], dur=d, ex=1)
+
+
 @action("tampar_nariz", "acting", "Tampa o nariz com a mão da frente (bafinho!), olhinhos apertados, cabeça para trás.",
         {"dur": "s"})
 def tampar_nariz(char, st, a):

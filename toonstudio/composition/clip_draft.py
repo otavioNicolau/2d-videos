@@ -350,8 +350,16 @@ def _camera(spec, bg: str, atores: dict, dur: float) -> dict:
         x = _clamp_x(x, min(z0, z1), w)
         half_h = 540 / max(1.0, min(z0, z1))
         y = max(half_h, min(1080 - half_h, y))
+    xf, yf = x, y
+    if isinstance(spec, dict) and (spec.get("x_fim") is not None or spec.get("y_fim") is not None):
+        xf = spec["x_fim"] if spec.get("x_fim") is not None else x
+        yf = spec["y_fim"] if spec.get("y_fim") is not None else y
+        if not graphic:
+            xf = _clamp_x(xf, min(z0, z1), w)
+            half_h = 540 / max(1.0, min(z0, z1))
+            yf = max(half_h, min(1080 - half_h, yf))
     return {"keys": [{"t": 0, "x": round(x, 1), "y": round(y, 1), "zoom": z0},
-                     {"t": round(dur, 3), "x": round(x, 1), "y": round(y, 1), "zoom": z1, "ease": "inout"}],
+                     {"t": round(dur, 3), "x": round(xf, 1), "y": round(yf, 1), "zoom": z1, "ease": "inout"}],
             "beat": dict(BEAT_CAM)}
 
 

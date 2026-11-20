@@ -3276,3 +3276,33 @@ class LimaoCara(_Prop):
 
 
 PROPS.update({"limoeiro": Limoeiro, "limao_cara": LimaoCara})
+
+
+def _estrela(k: Ink, x: float, y: float, r: float, cor: str, ang: float = 0.0) -> None:
+    pts = [(x + math.cos(ang + i * math.pi / 5 - math.pi / 2) * (r if i % 2 == 0 else r * 0.45),
+            y + math.sin(ang + i * math.pi / 5 - math.pi / 2) * (r if i % 2 == 0 else r * 0.45)) for i in range(10)]
+    shape(k, pts, cor, smooth=False)
+
+
+class Destaque(_Prop):
+    """Marcador de PARTE DO CORPO (28 "Do Pé à Cabeça"): anel de estrelinhas girando e pulsando em volta do ponto.
+    `giro` fase (linear), `pulso` 0→1 (cresce na batida), `cor` 0..4. A origem é o CENTRO do anel."""
+
+    CORES = ("#FFD23F", "#FF6FA8", "#3C8BF0", "#2DB34A", "#B865E6")
+
+    def __init__(self):
+        super().__init__("destaque", "Destaque de parte do corpo", (700, 700), (350, 350), 300, {"giro": 0.0, "pulso": 0.0, "cor": 0.0})
+
+    def paint(self, k, P):
+        cor = self.CORES[int(round(P["cor"])) % len(self.CORES)]
+        R_ = 120 * (1.0 + 0.18 * max(0.0, min(1.0, P["pulso"])))
+        g = P["giro"] * 2 * math.pi
+        for i in range(6):
+            a = g + i * math.pi / 3
+            _estrela(k, math.cos(a) * R_, math.sin(a) * R_, 26 if i % 2 else 34, cor, ang=a)
+        for i in range(6):
+            a = -g * 0.7 + (i + 0.5) * math.pi / 3
+            k.dot(math.cos(a) * R_ * 0.72, math.sin(a) * R_ * 0.72, 7, _rgba("#FFFFFF", 0.9))
+
+
+PROPS.update({"destaque": Destaque})
