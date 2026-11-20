@@ -67,13 +67,14 @@ class FlatMonstro(FlatMuri):
         hv = View(max(-1, min(1, P["turn"] + P["head_turn"])), P["back"])
         ht = ang * 0.5 + P["head_tilt"] * f
 
-        if L.extra.get("cauda"):                                # rabinho com espinho na ponta (atrás do corpo)
+        if L.extra.get("cauda"):                                # rabinho com POMPOM na ponta (20/11: nada de ponta de flecha — não lembrar diabinho)
             fase = P.get("hair_bounce", 0.0) * 0.6 + P["body_x"] * 0.01
             b0 = T((-f * 30, -6))
             pts = [b0, T((-f * 80, 4)), T((-f * 112, -26 + 10 * fase)), T((-f * 120, -58 + 10 * fase))]
             self._line(ink, pts, dark(L.body, 0.85), w=16)
             tip = pts[-1]
-            self._shape(ink, [(tip[0] - 16, tip[1] + 6), (tip[0], tip[1] - 30), (tip[0] + 16, tip[1] + 6)], L.extra["cauda"], smooth=False)
+            for dx, dy, rr in ((-9, 4, 13), (9, 4, 13), (0, -9, 14), (0, 3, 15)):        # pompom peludinho
+                self._blob(ink, tip[0] + dx, tip[1] + dy, rr, rr, L.extra["cauda"])
         self._arm(ink, P, "f", T((lerp(42 * f, 10 * f, s), -64)), f, behind=True)
         self._leg(ink, P, "f", T((lerp(22 * f, 8 * f, s), -4)), f, s, 0.0, behind=True)
         self._leg(ink, P, "n", T((lerp(-22 * f, -6 * f, s), -2)), f, s, 0.0, behind=False)
@@ -161,6 +162,11 @@ class FlatMonstro(FlatMuri):
                         self._blob(k, tip[0] - 2, tip[1] - 4, 5, 5, BRILHO)
                 else:
                     self._blob(k, tip[0], tip[1], 20, 20, L.antenas)
+        if L.extra.get("orelhas_redondas"):                 # orelhas redondas de bichinho (atrás da cabeça)
+            for side in (-1, 1):
+                b = rot((C[0] + side * r * 0.82 + f * s * 10, C[1] - r * 0.62), ht, C)
+                self._blob(k, b[0], b[1], 40, 40, L.body)
+                self._blob(k, b[0] + side * 3, b[1] + 3, 24, 24, L.extra["orelhas_redondas"])
         if L.extra.get("orelhas"):                          # orelhas pontudas de morcego (atrás da cabeça)
             for side in (-1, 1):
                 b = rot((C[0] + side * r * 0.78 + f * s * 10, C[1] - r * 0.45), ht, C)
@@ -337,6 +343,6 @@ MIMI = MonstroLook(body="#FF6FB1", belly="#FFD3E7", feet="#2E9BFF", olhos=2, chi
 ZUZU = MonstroLook(body="#FF8A2B", belly="#FFD7AE", feet="#2E9BFF", olhos=2, cheek="#FF5A7A",                              # laranja: chifre único
                    extra={"chifre_unico": "#FFE14D", "iris": "#9BFF5A", "sobrancelha": True, "serrinha": True, "garras": True,
                           "cauda": "#FFE14D", "manchas": "#E8661A", "tenis": "#FFFFFF"})
-NHOQUE = MonstroLook(body="#F2384E", belly="#FFB8C2", feet="#2A1630", olhos=2, cheek="#FF8FA0",                              # vermelho: bocão e orelhas de morcego
-                   extra={"orelhas": "#FF8FA0", "bocao": True, "presas_grandes": True, "sobrancelha": True, "garras": True,
-                          "cauda": "#2A1630", "manchas": "#C81F38", "tenis": "#FFD23F"})
+NHOQUE = MonstroLook(body="#FF5A5F", belly="#FFC7CB", feet="#2E9BFF", olhos=2, cheek="#FF9AA6",                              # coral: bocão comilão, orelhas redondas
+                   extra={"orelhas_redondas": "#FFB3BA", "bocao": True, "presas_grandes": True, "sobrancelha": True, "garras": True,
+                          "cauda": "#FFD23F", "manchas": "#E8434B", "tenis": "#FFFFFF"})

@@ -11,7 +11,10 @@ Aprovado pelo usuário em 20/11/2026 (turma, cenários, enquadramentos e logo).
 - **Olho de bolinha** escura com dois brilhos brancos, **abaixo do meio do rosto**; boca simples escura com língua.
 - **Sobrancelha sempre** (atitude para 5 a 8 anos), em arco suave; brava = inclinada / "V".
 - Cores **saturadas**; bochecha rosada.
-- **Fofinho e assustador**: presas e dentes pontudos, garrinhas brancas, rabinho com espinho, manchas, chifres/antenas.
+- **Fofinho e assustador**: presas e dentes pontudos, garrinhas brancas, rabinho com **pompom**, manchas, chifres/antenas.
+- **Nunca "diabinho"** (20/11/2026 — muitas famílias rejeitam): nada de rabo com ponta de flecha, nem a combinação
+  vermelho + chifres + rabo pontudo + orelha/asa de morcego; nada de tridente, fogo ou cara de "capetinha".
+- **Palavras na letra**: "maluquinho" (não "louco"/"maluco"); evitar "chifrão"/"chifrudo" (duplo sentido para adulto).
   Pose de marca: **"RAWR!"** (garras para cima, dentes, sobrancelha brava) — sempre divertida, nunca de dar medo de verdade.
 - Inspiração: o jeito geral dos clipes infantis de referência (chapado, cabeção, cores fortes). **Personagens, nome,
   logo e cenas são originais.**
@@ -24,7 +27,7 @@ Aprovado pelo usuário em 20/11/2026 (turma, cenários, enquadramentos e logo).
 | `gogo` | **Gogo** | verde | olhos na ponta das antenas, bocão de dentes |
 | `mimi` | **Mimi** | rosa | peludinha (pelagem em volta da cabeça), chifrinhos brancos, presas |
 | `zuzu` | **Zuzu** | laranja | chifre único listrado, olhos com anel verde |
-| `nhoque` | **Nhoque** | vermelho | bocão e orelhas de morcego |
+| `nhoque` | **Nhoque** | coral | bocão comilão, orelhas redondas |
 
 Código: `toonstudio/characters/flat_monstro.py` (mesmo esqueleto de poses da Laurinha: danças, ações, expressões e
 visemas funcionam igual). Nunca pôr um monstrinho na frente de fundo da mesma cor (Teco × roxo, Bilu × azul…).
