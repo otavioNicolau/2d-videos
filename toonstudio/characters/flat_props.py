@@ -2971,34 +2971,38 @@ class Polvo(_Prop):
                           "tchau": 0.0, "cor": 0.0, "boca": 0.0, "lid": 0.0})
 
     @staticmethod
-    def _braco(k, x0, y0, head, curl, L, cor, linha, ventosa, onda, ag, i, K=1.0):
-        pts, N = [(x0, y0)], 16
-        h = head
+    def _braco(k, x0, y0, head, bend, tip, L, cor, linha, ventosa, onda, ag, i, K=1.0, r0=46.0):
+        """Braço grosso que afina até uma pontinha redonda: direção = head + bend·s + tip·s³ (a ponta ENROLA) + uma onda
+        que corre do corpo para a ponta, quase em fase entre os braços (dança junto, não embola)."""
+        N = 22
+        amp = 0.10 + 0.32 * ag
+        pts = [(x0, y0)]
         for j in range(1, N + 1):
             s = j / N
-            h = head + curl * s * s + (0.28 + 0.9 * ag) * s * math.sin(2 * math.pi * onda + s * 3.2 + i * 1.7)
+            h = head + bend * s + tip * s ** 3 + amp * s * math.sin(2 * math.pi * onda - s * 2.6 + i * 0.7)
             x, y = pts[-1]
             pts.append((x + math.cos(h) * L / N, y + math.sin(h) * L / N))
-        lado_a, lado_b = [], []
+
+        def raio(s):
+            return (r0 * (1 - s) ** 0.85 + 7 * s) * K
+        lado_a, lado_b, normais = [], [], []
         for j, (x, y) in enumerate(pts):
-            s = j / N
-            r = (34 * (1 - s) + 8 * s) * K
-            if j < N:
-                dx, dy = pts[j + 1][0] - x, pts[j + 1][1] - y
-            else:
-                dx, dy = x - pts[j - 1][0], y - pts[j - 1][1]
+            a_, b_ = pts[max(0, j - 1)], pts[min(N, j + 1)]
+            dx, dy = b_[0] - a_[0], b_[1] - a_[1]
             n_ = math.hypot(dx, dy) or 1
             nx, ny = -dy / n_, dx / n_
+            normais.append((nx, ny))
+            r = raio(j / N)
             lado_a.append((x + nx * r, y + ny * r))
             lado_b.append((x - nx * r, y - ny * r))
-        shape(k, lado_a + lado_b[::-1], cor, line=linha)
-        for j in range(2, N - 1, 2):                                       # ventosas (bolinhas claras de um lado)
+        tx, ty = pts[-1]
+        shape(k, lado_a + [(tx + math.cos(h) * raio(1), ty + math.sin(h) * raio(1))] + lado_b[::-1], cor, line=linha)
+        lado_v = 1 if tip >= 0 else -1                                     # ventosas do lado de DENTRO da curva
+        for j in range(3, N - 1, 2):
             s = j / N
-            r = (34 * (1 - s) + 8 * s) * K
-            x, y = pts[j]
-            dx, dy = pts[j + 1][0] - x, pts[j + 1][1] - y
-            n_ = math.hypot(dx, dy) or 1
-            k.shape(ellipse_pts(x - dy / n_ * r * 0.45, y + dx / n_ * r * 0.45, r * 0.32, r * 0.32, 0, 10), fill=_rgba(ventosa), line=0)
+            r = raio(s)
+            (x, y), (nx, ny) = pts[j], normais[j]
+            k.shape(ellipse_pts(x + nx * r * 0.5 * lado_v, y + ny * r * 0.5 * lado_v, r * 0.3, r * 0.3, 0, 10), fill=_rgba(ventosa), line=0)
         return pts[-1], h
 
     def paint(self, k, P):
@@ -3008,42 +3012,50 @@ class Polvo(_Prop):
         on, ag = P["onda"], max(0.0, min(1.0, P["agita"]))
         conta, ab, tc = max(0.0, min(8.0, P["conta"])), max(0.0, min(1.0, P["abraco"])), max(0.0, min(1.0, P["tchau"]))
         K = 0.84                                                           # cabe no quadro do nível (topete abaixo de −900)
-        cx, cy = 0.0, -640.0 * K                                           # centro da cabeça
+        cx, cy = 0.0, -490.0 * K                                           # centro da cabeça (pernas novas: as pontinhas no chão)
         pontas, na_frente = {}, []
         ordem = (0, 7, 1, 6, 2, 5, 3, 4)                                   # desenha de fora para dentro
         for i in ordem:
             u = (i - 3.5) / 3.5                                            # −1 (esquerda) … +1 (direita)
-            x0, y0 = cx + u * 150 * K, cy + 200 * K
-            head = math.pi / 2 - u * 1.15                                  # em leque, para baixo e para os lados
-            curl = 1.3 * (1 if u < 0 else -1) * (0.4 + 0.6 * abs(u))       # pontinha enrola para fora
-            L = 380 * K
-            sobe = max(0.0, min(1.0, conta - [3, 4, 2, 5, 1, 6, 0, 7].index(i)))   # contagem: de dentro para fora? não: 1º = braço 3
-            sobe = max(sobe, tc)
             lado = 1 if u > 0 else -1
+            # 20/11 (usuário: "melhore as pernas"): pernas em LEQUE que não se cruzam — descem, abrem pelo chão e a
+            # pontinha enrola para cima; as do meio mais curtas, as de fora mais compridas
+            x0, y0 = cx + u * 175 * K, cy + (175 + 45 * (1 - abs(u))) * K
+            head = math.pi / 2 - u * 0.75
+            bend = -u * 0.85
+            tip = -lado * (1.3 + 0.6 * abs(u))
+            L = (300 + 90 * abs(u)) * K
+            sobe = max(0.0, min(1.0, conta - [3, 4, 2, 5, 1, 6, 0, 7].index(i)))   # contagem: de dentro para fora
+            sobe = max(sobe, tc)
             if sobe > 0:                                                   # braço levantado (contagem / tchau): sai do lado da cabeça
                 alvo = -math.pi / 2 + lado * (0.2 + 1.05 * abs(u))         # em leque: os de dentro mais para cima
                 head = head + (alvo - head) * sobe
-                curl = curl * (1 - sobe) + (0.5 * lado) * sobe
+                bend = bend * (1 - sobe) + 0.25 * lado * sobe
+                tip = tip * (1 - sobe) + 1.1 * lado * sobe
                 bx, by = cx + lado * (205 - 25 * abs(u)) * K, cy + (110 + 60 * abs(u)) * K   # nasce na borda da cabeça
                 x0, y0 = x0 + (bx - x0) * sobe, y0 + (by - y0) * sobe
-                L = L * (1 - 0.15 * sobe)
-            if ab > 0:                                                     # abraço: os braços cruzam a frente do corpo
-                alvo = (-0.25 if u < 0 else math.pi + 0.25)
+                L = L * (1 - 0.1 * sobe)
+            if ab > 0 and i in (0, 1, 6, 7):                               # abraço: os braços de FORA abrem e envolvem quem está do lado
+                alvo = math.pi + 0.35 if lado < 0 else -0.35
                 head = head + (alvo - head) * ab
-                curl = curl * (1 - ab) + (0.9 if u < 0 else -0.9) * ab
-                L = L * (1 - 0.15 * ab)
+                bend = bend * (1 - ab) + 1.5 * lado * ab                      # curva para baixo e de volta para o corpo
+                tip = tip * (1 - ab) + (1.1 if lado > 0 else -1.1) * ab
+                bx, by = cx + lado * 200 * K, cy + (120 + (60 if i in (1, 6) else 0)) * K
+                x0, y0 = x0 + (bx - x0) * ab, y0 + (by - y0) * ab
+                L = L * (1 + 0.1 * ab) if i in (0, 7) else L * (1 - 0.05 * ab)
             if P["tambor"] > 0.5 and i == 0:
-                head, curl = math.pi * 0.95, -0.4
-            if P["pao"] > 0.5 and i == 7:
-                head, curl = -0.35, -1.6
-            if P["pente"] > 0.5 and i == 6:
-                head, curl = -math.pi / 2 + 0.1, -2.6
-            if ab > 0.5 and i in (2, 3, 4, 5):
-                continue                                                   # os do meio ficam atrás (desenhados depois da cabeça)
-            if sobe > 0.3:
-                na_frente.append((i, x0, y0, head, curl, L))               # levantado: desenhado POR CIMA da cabeça
+                head, bend, tip = math.pi * 0.95, -0.25, -0.2
+            if P["pao"] > 0.5 and i == 7:                                  # sobe pela lateral e leva o pão para perto da boca
+                head, bend, tip = -0.5, -0.9, -0.5
+                x0, y0 = cx + 205 * K, cy + 120 * K
+            if P["pente"] > 0.5 and i == 6:                                # sobe pela lateral e penteia o TOPETE (não passa no rosto)
+                head, bend, tip = -math.pi / 2 + 0.15, -1.1, -0.9
+                x0, y0 = cx + 215 * K, cy + 40 * K
+                L = 330 * K
+            if sobe > 0.3 or (ab > 0.5 and i in (0, 1, 6, 7)) or (P["pao"] > 0.5 and i == 7) or (P["pente"] > 0.5 and i == 6):
+                na_frente.append((i, x0, y0, head, bend, tip, L))         # levantado/abraçando: POR CIMA da cabeça
                 continue
-            pontas[i] = self._braco(k, x0, y0, head, curl, L, cor, linha, ventosa, on, ag, i, K)
+            pontas[i] = self._braco(k, x0, y0, head, bend, tip, L, cor, linha, ventosa, on, ag, i, K)
         shape(k, ellipse_pts(cx, cy, 240 * K, 255 * K, 0, 40), cor, line=linha)                       # cabeça
         shape(k, ellipse_pts(cx - 80 * K, cy - 120 * K, 70 * K, 40 * K, -0.5, 20), _mix(cor, "#FFFFFF", 0.35))  # brilho
         for dx, h_ in ((-22, 70), (0, 90), (24, 66)):                                        # topetinho
@@ -3064,13 +3076,8 @@ class Polvo(_Prop):
             shape(k, [(cx - 58 * K, cy + 78 * K), (cx + 58 * K, cy + 78 * K), (cx + 30 * K, cy + (90 + 70 * b) * K), (cx - 30 * K, cy + (90 + 70 * b) * K)],
                   "#8A2E2E", line=linha)
             shape(k, ellipse_pts(cx, cy + (92 + 52 * b) * K, 24 * K, (12 * b + 4) * K, 0, 12), "#FF8FA8")
-        for i, x0, y0, head, curl, L in na_frente:
-            pontas[i] = self._braco(k, x0, y0, head, curl, L, cor, linha, ventosa, on, 0.15 + ag, i, K)
-        if ab > 0.5:                                                       # abraço: braços do meio por cima da barriga
-            for i in (2, 5, 3, 4):
-                u = (i - 3.5) / 3.5
-                pontas[i] = self._braco(k, cx + u * 150 * K, cy + 200 * K, (-0.25 if u < 0 else math.pi + 0.25), (0.9 if u < 0 else -0.9),
-                                        330 * K, cor, linha, ventosa, on, ag, i, K)
+        for i, x0, y0, head, bend, tip, L in na_frente:
+            pontas[i] = self._braco(k, x0, y0, head, bend, tip, L, cor, linha, ventosa, on, 0.15 + ag, i, K, r0=40.0)
         if P["tambor"] > 0.5 and 0 in pontas:                              # tamborzinho na ponta do braço 0
             (tx, ty), _ = pontas[0]
             box(k, tx - 70 * K, ty - 40 * K, tx + 70 * K, ty + 40 * K, "#E9545D", line="#B83A42", r=12)

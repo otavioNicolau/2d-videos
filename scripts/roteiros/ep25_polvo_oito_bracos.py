@@ -32,8 +32,8 @@ def pv(d, x=1650, y=990, depth=0.85, z=2, **canais):
         else:
             ks += [{"t": round(t, 2), "pose": {c: float(val)}, "ease": "out"} for t, val in v]
     ks[0]["pose"].update(pose)
-    # 0,83 (× desenho 0,84 = 0,7): com a escala 1,45 o polvo cortava a cabeça no alto do quadro (conferido no storyboard)
-    return {"id": "polvo", "x": x, "y": y, "z": z, "depth": round(depth * 0.83, 3), "keys": sorted(ks, key=lambda k: k["t"])}
+    # 0,9 (desenho × 0,84, pernas novas de 20/11): com a escala 1,45 o polvo cortava a cabeça no alto do quadro (conferido no storyboard)
+    return {"id": "polvo", "x": x, "y": y, "z": z, "depth": round(depth * 0.9, 3), "keys": sorted(ks, key=lambda k: k["t"])}
 
 
 def bolinha_peixe(x, y, d, para=1):
