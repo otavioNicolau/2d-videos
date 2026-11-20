@@ -144,20 +144,20 @@ class FlatMonstro(FlatMuri):
         for side in (-1, 1):                                 # bochechas suaves
             x, c = v.sphere(C[0], r * 0.86, side * 0.78)
             if c > 0.25:
-                q = rot((x, C[1] + 40), ht, C)
-                k.shape(ellipse_pts(q[0], q[1], 24 * c, 17, 0, 16), fill=_rgba(L.cheek, 0.45 + 0.4 * P.get("blush", 1.0)), line=0)
+                q = rot((x, C[1] + 50), ht, C)
+                k.shape(ellipse_pts(q[0], q[1], 22 * c, 15, 0, 16), fill=_rgba(L.cheek, 0.8 + 0.2 * P.get("blush", 1.0)), line=0)
         if L.olhos == 1:                                     # Bulu: UM olhão no meio
             sh = _rosto(v)[1]
             x = C[0] + r * 0.74 * math.sin(max(-0.9, min(0.9, sh)))
-            self._eye(k, P, rot((x, C[1] - 18), ht, C), 0.8 + 0.2 * math.cos(sh), 0, f, s, ESCURO)
+            self._eye(k, P, rot((x, C[1] - 4), ht, C), 0.8 + 0.2 * math.cos(sh), 0, f, s, ESCURO)
         else:
             for side in (-1, 1):
                 e = _olho(v, C[0], r, side)
                 if e:
-                    self._eye(k, P, rot((e[0], C[1] - 14), ht, C), e[1], side, f, s, ESCURO)
+                    self._eye(k, P, rot((e[0], C[1] + 8), ht, C), e[1], side, f, s, ESCURO)       # olhos abaixo do meio (referência)
         a_m = max(-1.0, min(1.0, _rosto(v)[1]))
         nx_ = C[0] + r * 0.7 * math.sin(a_m)
-        self._mouth(k, P, rot((nx_, C[1] + 56), ht, C), f, s, ESCURO)
+        self._mouth(k, P, rot((nx_, C[1] + 66), ht, C), f, s, ESCURO)
 
     def _eye(self, k: Ink, P, E, c, side, f, s, line):
         ex, ey = E
@@ -243,6 +243,6 @@ BULU = MonstroLook(body="#3DA5F4", belly="#9AD8FF", feet="#1C6CB8", olhos=1, chi
 TETE = MonstroLook(body="#B27BFF", belly="#E6CCFF", feet="#7A43D6", olhos=2, antenas="#FF6FB5", dente=True, cheek="#FF8FC8")
 # versão "5 a 8 anos" (20/11): sobrancelha sempre, tênis com sola e faixa, pelo espetado, bochecha mais discreta
 BULU_58 = MonstroLook(body="#2F9BF0", belly="#9AD8FF", feet="#E9433F", olhos=1, chifres="#FFC93C", pelo=True, presas=True,
-                      cheek="#FF9CC2", extra={"sobrancelha": True, "tenis": "#FFD23F", "espetado": True})
-TETE_58 = MonstroLook(body="#A66BFF", belly="#E6CCFF", feet="#19B7A6", olhos=2, antenas="#FF4FA3", dente=True, cheek="#FF8FC8",
+                      cheek="#FF8FB3", extra={"sobrancelha": True, "tenis": "#FFD23F", "espetado": True})
+TETE_58 = MonstroLook(body="#A66BFF", belly="#E6CCFF", feet="#19B7A6", olhos=2, antenas="#FF4FA3", dente=True, cheek="#FF9AD0",
                       extra={"sobrancelha": True, "tenis": "#FFFFFF"})
