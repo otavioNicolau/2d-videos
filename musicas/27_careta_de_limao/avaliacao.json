@@ -1,0 +1,57 @@
+{
+ "schema": "avaliacao-1.0",
+ "versoes": {
+  "v1": {
+   "arquivo": "v1.wav",
+   "duracao": 206.0,
+   "bpm": 107.7,
+   "bpm_nota": "",
+   "tom": "Fá maior",
+   "voz_inicio": 1.25,
+   "refrao_inicio": 0.0,
+   "cantado": 76,
+   "intervalos": [
+    [
+     10.3,
+     8.7
+    ],
+    [
+     59.6,
+     9.1
+    ],
+    [
+     122.5,
+     9.0
+    ],
+    [
+     178.4,
+     5.7
+    ]
+   ],
+   "fim_depois_da_voz": 5.8,
+   "final": "esmaecendo",
+   "silencio_final": 0.1,
+   "acerto": 87,
+   "nao_reconhecidas": [
+    "azedinho",
+    "luisinho",
+    "mordi",
+    "entortou"
+   ],
+   "pontos_a_conferir": [
+    "duração 206 s fora do alvo 140–170 s"
+   ]
+  }
+ },
+ "ouvido": {
+  "v1": {
+   "1 começo chama atenção": null,
+   "5 melodia combina com a letra": null,
+   "6 dá vontade de dançar": null,
+   "7 pronúncia natural": null,
+   "8 tem a cara do canal": null,
+   "9 nenhum trecho cansativo": null
+  }
+ },
+ "escolhida": null
+}
