@@ -308,7 +308,7 @@ def rascunho(project_dir: Path, musica: Path, titulo: str | None = None, permiti
 #          "objetos": {nome: {id?, x,y,z, pose:{…}, keys:[{t,pose}]}}, "fx": [...], "callout": "TEXTO" | [{t,text,…}],
 #          "flash": bool, "tremor": [t…] (a tela treme), "sons": [{t, id, vol}] (efeito sonoro; vol em dB, 0 = nível padrão), "escurece": [a0, a1] (luz baixando), "transicao": tipo, "cantam": [...], "tela_dividida": {"layout", "paineis": [sub-plano, sub-plano]}}
 # Atuação: "dur": "resto" vai até o fim do plano. O canto (boca) vem da letra: quem canta a parte e está no plano.
-GRAPHIC = ("danca_", "padrao_")
+GRAPHIC = ("danca_", "padrao_", "mon_raios_", "mon_xadrez_", "mon_brilho_")
 ESCALA = 1.0            # multiplica o tamanho (depth) de atores e objetos do roteiro; "escala_personagens" no roteiro.json
 NAO_ESCALA = {"joinha", "botao_inscrever", "logo", "numero"}      # peças de interface: tamanho fixo
 SING_CAST = ("laurinha", "luisinho")

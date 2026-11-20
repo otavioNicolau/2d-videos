@@ -13,6 +13,9 @@ INTERIOR = ("plano_banheiro", "plano_quarto_rosa", "plano_quarto_azul", "plano_c
 
 
 def known(bg_id: str) -> bool:
+    if bg_id.startswith("mon_"):                      # 2º canal: Bulu e Tetê (chapado sem contorno)
+        from .monstrinho import known as _mk
+        return _mk(bg_id)
     if bg_id in STATIC:
         return True
     if bg_id in INTERIOR:
@@ -32,8 +35,9 @@ def known(bg_id: str) -> bool:
 def catalog() -> list[str]:
     from .dance import COLORS
     from .interior import MOTIVOS
-    return (sorted(STATIC) + list(INTERIOR) + [f"danca_{k}_{c}" for k in ("ondas", "raios", "xadrez", "bolinhas") for c in COLORS]
-            + [f"padrao_{m}_{c}" for m in MOTIVOS for c in COLORS])
+    from .monstrinho import catalog as _mcat
+    return _mcat() + (sorted(STATIC) + list(INTERIOR) + [f"danca_{k}_{c}" for k in ("ondas", "raios", "xadrez", "bolinhas") for c in COLORS]
+                      + [f"padrao_{m}_{c}" for m in MOTIVOS for c in COLORS])
 
 
 def ensure(bg_id: str, scale: float = 1.5) -> dict:
@@ -41,7 +45,7 @@ def ensure(bg_id: str, scale: float = 1.5) -> dict:
     if not known(bg_id):
         raise KeyError(f"cenário desconhecido: {bg_id} (disponíveis: {', '.join(catalog())})")
     out = LIBRARY / "backgrounds" / bg_id / "layers"
-    mod = STATIC.get(bg_id) or ("interior" if bg_id in INTERIOR or bg_id.startswith("padrao_") else "dance")
+    mod = "monstrinho" if bg_id.startswith("mon_") else (STATIC.get(bg_id) or ("interior" if bg_id in INTERIOR or bg_id.startswith("padrao_") else "dance"))
     h = file_sha(ROOT / "toonstudio" / "backgrounds" / f"{mod}.py", ROOT / "toonstudio" / "backgrounds" / "painter.py")
     stamp = out / ".hash"
     meta_p = out / "background.json"
@@ -58,6 +62,9 @@ def ensure(bg_id: str, scale: float = 1.5) -> dict:
         elif mod == "plano":
             from . import plano
             plano.build(bg_id, out, scale=scale)
+        elif mod == "monstrinho":
+            from . import monstrinho
+            monstrinho.build(bg_id, out, scale=scale)
         elif mod == "fofo":
             from . import fofo
             fofo.build(bg_id, out, scale=scale)
