@@ -152,3 +152,7 @@ Também 20/11: o bloco AVISOS do suno.txt ficava DEPOIS do [End] — foi copiado
 **Lição 20/11 (27):** antes de passar um `suno.txt` ao usuário, conferir se a LETRA está no formato do trio: 1 ponte só,
 nenhum refrão "faster", intro só com teclado/sax/bateria. A 27 foi gerada com a letra antiga (2 pontes + "faster") e saiu
 com 3:26; foi cortada no compasso para 2:50. As letras 28–49 foram corrigidas em lote (`scripts/lotes/formato_trio.py`).
+
+**20/11 — E13 confirmado:** 27 = 4,8 e 28 = 4,9 (maior nota do canal). A bateria de banda caiu para ~0,015–0,019 (era 0,046
+na 26 = 4,7). A 28 tem o contratempo mais alto desde a 21 (0,74) e o baixo no contratempo 0,56; a voz baixa/larga do placar
+(25,5% / 0,20) NÃO pesou no ouvido. Manter o E13 sem mexer até cair a nota (um ajuste por vez).
