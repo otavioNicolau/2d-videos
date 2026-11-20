@@ -75,8 +75,9 @@ def validate(ep: dict) -> Report:
     from ..core.config import PROJECTS
     st = ep.get("soundtrack")
     if st:
-        if not (PROJECTS / ep["id"] / st["file"]).exists():
-            r.errors.append(f"trilha não encontrada: projects/{ep['id']}/{st['file']} (use `toonstudio song import`)")
+        pj = ep.get("projeto", ep["id"])                # multicanal: "fofolucos/ep01-…"
+        if not (PROJECTS / pj / st["file"]).exists():
+            r.errors.append(f"trilha não encontrada: projects/{pj}/{st['file']} (use `toonstudio song import`)")
         total = sum(s["duration"] for s in ep["scenes"])
         if abs(total - (st["end"] - st["start"])) > 0.05:
             r.errors.append(f"soma das cenas ({total:.2f}s) ≠ trecho da música ({st['end'] - st['start']:.2f}s): o vídeo "

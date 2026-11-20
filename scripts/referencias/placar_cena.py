@@ -18,9 +18,12 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-M = ROOT / "musicas"
+sys.path.insert(0, str(ROOT))
+from toonstudio.core.canal import atual as _canal_atual   # multicanal (20/11/2026): TOONSTUDIO_CANAL=fofolucos …
+M = _canal_atual().musicas
+PJ_CANAL = _canal_atual().projetos
 HIST = M / "MELHORIA_CENAS.json"
-PRINCIPAIS = ("laurinha", "luisinho")
+PRINCIPAIS = tuple(_canal_atual().protagonistas) or ("laurinha", "luisinho")
 
 # (medida, rótulo, mínimo, máximo, como melhorar)
 ITENS = [

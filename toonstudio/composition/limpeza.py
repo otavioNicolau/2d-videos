@@ -35,6 +35,19 @@ def _tem_mp4_final(proj: Path) -> bool:
 
 
 def limpar_builds(manter: int = 3, simular: bool = False, root: Path = PROJECTS) -> list[tuple[str, int, str]]:
+    """Regra por CANAL (multicanal, 20/11/2026): a raiz (Laurinha) e cada `projects/<canal>/` guardam o build só dos
+    `manter` episódios mais recentes DAQUELE canal."""
+    feito = _limpar_pasta(manter, simular, root)
+    if root == PROJECTS:
+        from ..core.canal import lista
+        for cid in lista():
+            sub = root / cid
+            if sub.is_dir():
+                feito += [(f"{cid}/{n}", t, r) for n, t, r in _limpar_pasta(manter, simular, sub)]
+    return feito
+
+
+def _limpar_pasta(manter: int, simular: bool, root: Path) -> list[tuple[str, int, str]]:
     """Apaga os `build` fora dos `manter` episódios mais recentes. Devolve [(projeto, bytes, resultado)]."""
     nums = sorted({int(m.group(1)) for d in root.iterdir() if (m := re.match(r"^ep(\d+)-", d.name))})
     recentes = set(nums[-manter:]) if manter > 0 else set()
@@ -47,7 +60,8 @@ def limpar_builds(manter: int = 3, simular: bool = False, root: Path = PROJECTS)
         m = re.match(r"^ep(\d+)-", d.name)
         if m and int(m.group(1)) in recentes:
             continue
-        if d.name in rodando:
+        rel = str(d.relative_to(PROJECTS)) if d.is_relative_to(PROJECTS) else d.name
+        if d.name in rodando or rel in rodando:
             feito.append((d.name, 0, "mantido: renderizando agora"))
             continue
         if m and not _tem_mp4_final(d):

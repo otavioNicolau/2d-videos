@@ -27,9 +27,12 @@ from toonstudio.core.config import PROJECTS  # noqa: E402
 from toonstudio.core.registry import character  # noqa: E402
 from toonstudio.render.pipeline import Episode  # noqa: E402
 
-M = ROOT / "musicas"
+sys.path.insert(0, str(ROOT))
+from toonstudio.core.canal import atual as _canal_atual   # multicanal (20/11/2026): TOONSTUDIO_CANAL=fofolucos …
+M = _canal_atual().musicas
+PJ_CANAL = _canal_atual().projetos
 HIST = M / "MELHORIA_ANIMACAO.json"
-CAST = ("laurinha", "luisinho")
+CAST = tuple(_canal_atual().protagonistas) or ("laurinha", "luisinho")
 VERSAO_ATUAL = "A3"           # versão da biblioteca de animação (subir a cada ajuste; registrar em PROCESSO_MELHORIA.md)
 
 # (medida, rótulo, mínimo, máximo, o que mexer)
@@ -52,7 +55,7 @@ def _poses(tl) -> list[dict]:
 
 
 def medir(n: str) -> dict:
-    proj = next(PROJECTS.glob(f"ep{n}-*"))
+    proj = next(PJ_CANAL.glob(f"ep{n}-*"))
     ep = Episode(proj.name)
     song = ep.song()
     fps = ep.fps

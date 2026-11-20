@@ -18,7 +18,10 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-M = ROOT / "musicas"
+sys.path.insert(0, str(ROOT))
+from toonstudio.core.canal import atual as _canal_atual   # multicanal (20/11/2026): TOONSTUDIO_CANAL=fofolucos …
+M = _canal_atual().musicas
+PJ_CANAL = _canal_atual().projetos
 REF = ROOT / "referencias" / "animadinhos" / "analise"
 NOS = ROOT / "referencias" / "nossas"
 HIST = M / "MELHORIA.json"
@@ -54,7 +57,7 @@ def nota_item(v, lo, hi):
 
 def preparar(n: str) -> tuple[Path, dict]:
     d = next(M.glob(f"{n}_*"))
-    proj = next((ROOT / "projects").glob(f"ep{n}-*"))
+    proj = next(PJ_CANAL.glob(f"ep{n}-*"))
     nome = proj.name
     wav = proj / "musica" / "trabalho.wav"
     (NOS / "audio").mkdir(parents=True, exist_ok=True)

@@ -496,3 +496,22 @@ def test_proibido_importar_musica_cortada(tmp_path):
         f.write_bytes(b"RIFF")
         with pytest.raises(StudioError):
             import_song(f, tmp_path / "proj")
+
+
+def test_multicanal_perfis_e_projeto(monkeypatch):
+    """Multicanal (20/11/2026): Laurinha é o padrão com os caminhos de sempre; Fofolucos tem pasta, marca e entrega próprias;
+    o canal de um projeto vem da pasta (projects/<canal>/…)."""
+    from toonstudio.core import canal
+    from toonstudio.core.config import ROOT
+    monkeypatch.delenv(canal.ENV, raising=False)
+    la, fo = canal.carregar("laurinha"), canal.carregar("fofolucos")
+    assert la.musicas == ROOT / "musicas" and la.windows.name == "Laurinha e Luisinho"
+    assert fo.musicas == ROOT / "canais" / "fofolucos" / "musicas" and fo.windows.name == "Fofolucos"
+    assert fo.logo_png and fo.logo_png.exists()
+    assert canal.atual().id == "laurinha"
+    assert canal.id_do_projeto("ep28-do-pe-a-cabeca") == "laurinha"
+    assert canal.id_do_projeto("fofolucos/ep01-teste") == "fofolucos"
+    monkeypatch.setenv(canal.ENV, "fofolucos")
+    from toonstudio.audio import composer
+    assert composer.estilos()["canal"]["versao"] == "F1"
+    assert "fofolucos" in composer.vozes()["vozes"]

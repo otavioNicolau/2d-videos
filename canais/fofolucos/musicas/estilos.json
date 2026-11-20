@@ -1,0 +1,702 @@
+{
+ "schema": "estilos-1.0",
+ "nota": "Estilos do canal FOFOLUCOS (canais/fofolucos). Base: musicas/estilos.json da Laurinha (E13) com a assinatura do canal (órgão assustador-divertido, voz de menino 11–14).",
+ "canal": {
+  "sempre": "major key, happy, playful spooky-fun monster party mood (never scary, never dark), Brazilian Portuguese, native Brazilian accent",
+  "coro": "",
+  "exclude_sempre": [
+   "sad",
+   "explicit",
+   "dark",
+   "long intro",
+   "European Portuguese accent",
+   "Spanish accent",
+   "minor key",
+   "fade out",
+   "extended outro",
+   "medley",
+   "full band",
+   "drum fills",
+   "drum solo",
+   "busy arrangement",
+   "choir",
+   "backing vocals",
+   "vocal harmonies",
+   "layered vocals",
+   "ad-libs",
+   "orchestral",
+   "many instruments",
+   "live drums",
+   "acoustic drums",
+   "drum variations",
+   "percussion ensemble",
+   "vocal reverb",
+   "echo",
+   "weak bass",
+   "second voice",
+   "duet",
+   "call and response",
+   "double-tracked vocals",
+   "answering voice",
+   "group vocals"
+  ],
+  "duracao": "sing every line of the lyrics, full song with all verses and choruses",
+  "producao": "built-in keyboard rhythm with programmed kick, snare and claps repeating the same loop through the whole song, deep bouncy keyboard bass, bright arranger-keyboard piano melody up front, a playful spooky cartoon organ riff in the intro and answering the vocal between the lines, a few playful cartoon sound effects (boing, toy bells), single dry centered lead vocal, close and clear, lots of space in the mix, polished kids music production",
+  "nota_producao": "18/11/2026: análise de 18 músicas da Animadinhos (musicas/REFERENCIA_ANIMADINHOS.md): arranjo enxuto de teclado/eletrônico, voz e batida empatadas (41 × 38 %), efeitos de desenho; as nossas saíam com banda + batucada e voz a 58 %.",
+  "nota_voz": "18/11/2026: a voz da referência é UMA só e centralizada (largura 0,00–0,02); as nossas tinham coro/vozes de fundo espalhados (0,08–0,29) e muitos instrumentos — 'muita informação' (usuário). Uma voz por vez, respostas cantadas pela mesma voz.",
+  "nota_batida": "18/11/2026: na referência cada batida soa idêntica (semelhança 0,95–0,98: ritmo pronto de teclado arranjador, um loop simples a música inteira); nas nossas 0,66–0,87 (bateria 'tocada', com viradas e percussão variando). Usuário: 'batidas como se fosse bateria, bumbo, algo feito no teclado, pra dar ritmo'.",
+  "abertura": "Brazilian arranger keyboard kids song (teclado arranjador), one simple keyboard drum loop",
+  "nota_ajustes_14": "18/11/2026 (take v2 da 14): baixo fraco (5,6 % × 11 % da referência) → 'deep bouncy keyboard bass'; voz larga (0,17 × 0,01) → 'dry centered vocal' e Exclude 'vocal reverb, echo'; tirado 'repeated chorus' do Exclude (o bloco repete de propósito); Exclude sem termos repetidos.",
+  "versao": "F1",
+  "historico": [
+   {
+    "versao": "F1",
+    "data": "2026-11-20",
+    "mudanca": "canal Fofolucos: fórmula E13 da Laurinha (teclado 1º, loop eletrônico de bateria 2º — a 28 tirou 4,9) com a assinatura do canal: órgão de desenho 'assustador-divertido' no lugar do sax; voz de menino de 11 a 14 anos",
+    "motivo": "canal novo: monstrinhos fofinhos e assustadores, 5 a 8 anos"
+   }
+  ],
+  "versao_por_voz": {
+   "fofolucos": "F1"
+  },
+  "nota_sincope": "19/11/2026 (usuário: 'focar nas batidas do som contagiante'): raio-x da bateria (scripts/referencias/batida.py) — referência síncope 0,69 e bumbo reto 0,50; nossas 0,56 e 0,67. A nota de ouvido sobe com a síncope e o baixo fora do tempo (14: 0,39→nota 3 … 18: 0,72 e baixo 0,90→nota 4,6). A 19 v1 (rock com 'punk-rock drumming, driving kick') saiu reta: 0,41.",
+  "nota_loop": "19/11/2026 (usuário ouvindo a 19 v2): 'Animadinhos são ritmos e batidas que não mudam muito durante a música; a nossa está ficando ainda estilo banda'. Medido: loop igual referência 0,96 × 19 v1 0,84 × 19 v2 0,75; outros instrumentos 9 % × 20 %. E8: um loop sincopado só, sem virada entre as partes, mesma batida no verso e no refrão, sem solo/quebra.",
+  "nota_regressao": "19/11/2026, usuário: 'estamos regredindo: segunda voz e sem as batidas viciantes que estávamos conquistando entre a 15 e 17'. Notas: 15–17 (E5/E6) = 4, 18 (E6) = 4,6, 19 (E7) = 3,8. Regra do processo: mudança que piora volta atrás → E9 = E6 de novo (+ Exclude contra segunda voz). O raio-x de síncope continua só como medida, não como alvo do Style.",
+  "suno_avancado": {
+   "Vocal Gender": "nenhum (não marcar)",
+   "Duration": "Auto",
+   "Max Mode": "Off",
+   "Weirdness": "50%",
+   "Style Influence": "50%",
+   "Audio Influence": "25%",
+   "Variety": "Normal",
+   "Personalize": "Off"
+  },
+  "nota_suno_avancado": "19/11/2026: o usuário mostrou as opções Advanced do Suno v6. Style Influence alto = obedece mais ao Style (teclado, loop, uma voz); Weirdness baixo = menos invenção (menos segunda voz, menos partes novas, batida mais constante); Audio Influence alto = puxa mais o som da Voice (Luisinho v2/Laurinha v2, criadas de takes de teclado); Variety baixa = menos variação; Duration Custom 2:40 = acaba no tempo certo (a 18 saiu com 3:45). · RESULTADO (19/11): com Style 80 %, Weirdness 20 %, Audio 60 %, Variety Off e Vocal Gender o Suno gerou ~1 min e a voz saiu com cara de autotune, em mais de 6 gerações. Voltou tudo para o padrão do Suno (o que gerou a 15–18). Se for testar de novo: UMA opção por vez, começando pelo Weirdness (35 %).",
+  "duracao_antes_E10": "short song under 2 minutes 40 seconds, ends after the last chorus",
+  "nota_duracao_E10": "19/11/2026: com Style Influence 80 % e Duration Custom 2:40 o Suno gerou menos de 50 s — obedeceu ao pé da letra 'short song under 2 minutes 40 seconds'. Tirado do Style (agora pede para cantar a letra toda) e Duration volta para Auto.",
+  "nota_sax": "19/11/2026, usuário: 'o Animadinhos usa muito ritmos com saxofone, bateria e teclado'. Medido (18 referências): teclado/piano em 15/18 (nossas 3–4× menos), sintetizador 13/18, bateria em ~metade, saxofone/metais claros em 3/18 (+3 leves) e ZERO nas nossas. E11 = E9 + piano de teclado arranjador na frente + riff de saxofone (som de sax do teclado) respondendo a voz.",
+  "trio": {
+   "ativo": true,
+   "abertura": "kids song played by ONLY three instruments: keyboard first, drums second, playful spooky organ third",
+   "producao": "keyboard loud and in front, BRIGHT HIGH-PITCHED: arranger keyboard 'pisadinha' bass and chords on every beat plus a catchy high piano melody, after EVERY sung line a short catchy high keyboard riff answers (tram-tram-tram-ram), strong punchy ELECTRONIC drums second: the keyboard's own drum-machine loop repeating the exact same beat all song (no live drummer), a playful spooky cartoon organ very soft and rare (only a short riff in the intro and breaks), nothing else, single dry centered lead vocal",
+   "peso_style": "arranger keyboard 'pisadinha' leading the song, pumping bass and chords on every beat (tum-tcha), the same groove in verse and chorus",
+   "exclude_extra": [
+    "guitar",
+    "electric guitar",
+    "acoustic guitar",
+    "bass guitar",
+    "strings",
+    "violin",
+    "orchestra",
+    "trumpet",
+    "trombone",
+    "brass section",
+    "accordion",
+    "flute",
+    "whistle",
+    "percussion",
+    "surdo",
+    "cuica",
+    "tambourine",
+    "shaker",
+    "synth pads",
+    "sound effects",
+    "ukulele",
+    "harmonica",
+    "saxophone",
+    "sax",
+    "brass"
+   ],
+   "tirar_do_exclude": [],
+   "nota": "19/11/2026, usuário: 'quero usar esses 3 instrumentos nas próximas músicas para teste — APENAS ELES' (saxofone, bateria e teclado, como o Animadinhos). · Ajuste do usuário: 'preciso que a bateria seja forte, pra marcar o ritmo, e as pisadinhas do teclado também; o saxofone fica em 3º' → ordem: bateria forte > teclado pisadinha > sax (só abertura, antes do refrão e intervalos). · Nova ordem do usuário (19/11): TECLADO em 1º, BATERIA em 2º, SAX em 3º. · Usuário (19/11): 'reduzir um pouco mais o saxofone e aumentar o teclado com som mais agudo' → sax bem baixo e raro (só abertura/intervalos, fora da abertura da letra), teclado mais alto e agudo. · Usuário (20/11): no Animadinhos cada frase cantada é respondida por um som de teclado bem marcante — 'O Luisinho comprou uma casa! tram tram tramram' — isso deixa a música animada. A partir da 25: Style pede o riff de teclado depois de cada verso e as marcações [Verse]/[Chorus] ganham 'short keyboard riff after each line' (o 'tram tram' não vai na letra para o Suno não cantar). · 20/11 (E13): 26 (reggae) tirou 4,7 — usuário: 'está sem batida viciante'. Medido: 'bateria de banda' 0,046 (o triplo das 21–25, ~0,015) e o loop menos repetido (0,738): o ritmo puxou bateria acústica de banda. A bateria do trio passa a ser o loop ELETRÔNICO do teclado (drum machine, sempre a mesma batida) e 'live drums/acoustic drums' voltam para o Exclude.",
+   "intervalo": "[Instrumental Break - {s} seconds, bright high keyboard melody, keyboard pisadinha and strong drums, a short playful spooky organ riff]",
+   "intro": "[Intro - bright high keyboard melody, keyboard pisadinha and strong drums]",
+   "resposta_teclado": true
+  }
+ },
+ "peso": {
+  "forte": {
+   "descricao": "festa: batida eletrônica forte (bumbo e palmas), voz e batida empatadas (referência: voz 41 %, bateria 38 %)",
+   "style": "steady keyboard drum loop with strong kick and claps, catchy spooky organ and keyboard riff before every chorus",
+   "exclude": [
+    "slow",
+    "ballad",
+    "soft drums",
+    "weak drums",
+    "quiet beat"
+   ],
+   "intervalo": "[Instrumental Break - {s} seconds, catchy spooky organ and keyboard riff over the beat]"
+  },
+  "media": {
+   "descricao": "groove forte e bem marcado, percussão presente",
+   "style": "steady keyboard drum loop, clear danceable rhythm",
+   "exclude": [
+    "slow",
+    "ballad",
+    "weak drums",
+    "quiet beat"
+   ],
+   "intervalo": "[Instrumental Break - {s} seconds, catchy spooky organ and keyboard riff over the beat]"
+  },
+  "marcada": {
+   "descricao": "groove marcado e dançante, sem bateria pesada",
+   "style": "steady marked groove, clear danceable beat, light percussion",
+   "exclude": [
+    "heavy drums",
+    "aggressive",
+    "distorted guitars",
+    "ballad",
+    "lullaby",
+    "sleepy"
+   ],
+   "intervalo": "[Instrumental Break - {s} seconds, groove, keyboard and soft spooky organ riff]"
+  }
+ },
+ "ritmos": {
+  "frevo": {
+   "nome": "Frevo pernambucano",
+   "bpm": [
+    150,
+    170,
+    160
+   ],
+   "peso": "forte",
+   "genero": "frevo pernambucano, Brazilian carnival",
+   "bateria": "keyboard preset frevo beat loop, fast snare",
+   "instrumentos": "keyboard brass section (synth trumpets), bright piano",
+   "clima": "euphoric street carnival",
+   "temas": [
+    "carnaval",
+    "festa",
+    "euforia",
+    "bicho que pula",
+    "bicho que voa",
+    "voar"
+   ],
+   "estruturas": [
+    "A",
+    "D",
+    "C"
+   ],
+   "exclude": []
+  },
+  "marchinha": {
+   "nome": "Marchinha de carnaval",
+   "bpm": [
+    120,
+    138,
+    128
+   ],
+   "peso": "forte",
+   "genero": "marchinha de carnaval, Brazilian carnival march",
+   "bateria": "keyboard preset marching beat loop, kick on every beat",
+   "instrumentos": "keyboard brass, toy glockenspiel",
+   "clima": "festive sing-along",
+   "temas": [
+    "carnaval",
+    "fantasia",
+    "desfile",
+    "rotina",
+    "humor"
+   ],
+   "estruturas": [
+    "A",
+    "C"
+   ],
+   "exclude": []
+  },
+  "axe": {
+   "nome": "Axé",
+   "bpm": [
+    130,
+    145,
+    140
+   ],
+   "peso": "forte",
+   "genero": "axé music, Bahia carnival",
+   "bateria": "keyboard preset axé beat loop with claps",
+   "instrumentos": "bright keyboard riffs, synth brass stabs",
+   "clima": "euphoric party",
+   "temas": [
+    "dança",
+    "comandos",
+    "cores",
+    "festa",
+    "pular"
+   ],
+   "estruturas": [
+    "B",
+    "D",
+    "A"
+   ],
+   "exclude": []
+  },
+  "pagodao": {
+   "nome": "Pagodão baiano",
+   "bpm": [
+    128,
+    140,
+    135
+   ],
+   "peso": "forte",
+   "genero": "pagodão baiano, Bahia party percussion",
+   "bateria": "keyboard preset pagodão beat loop with claps",
+   "instrumentos": "keyboard riffs, synth bass",
+   "clima": "euphoric",
+   "temas": [
+    "amizade",
+    "roda",
+    "palmas",
+    "dança",
+    "comandos"
+   ],
+   "estruturas": [
+    "A",
+    "D",
+    "B"
+   ],
+   "exclude": []
+  },
+  "forro_piseiro": {
+   "nome": "Forró piseiro",
+   "bpm": [
+    150,
+    170,
+    160
+   ],
+   "peso": "forte",
+   "genero": "forró piseiro, northeastern Brazil party",
+   "bateria": "keyboard preset piseiro loop, kick on every beat",
+   "instrumentos": "piseiro keyboard (teclado) lead with accordion sound, synth bass",
+   "clima": "festa junina energy",
+   "temas": [
+    "são joão",
+    "roça",
+    "bichos do campo",
+    "passeio",
+    "dança",
+    "arrastar o pé"
+   ],
+   "estruturas": [
+    "A",
+    "D",
+    "E"
+   ],
+   "exclude": []
+  },
+  "forro_pe_de_serra": {
+   "nome": "Forró pé de serra",
+   "bpm": [
+    120,
+    145,
+    132
+   ],
+   "peso": "media",
+   "genero": "forró pé de serra, traditional northeastern Brazil",
+   "bateria": "keyboard preset forró loop with zabumba and triangle sounds",
+   "instrumentos": "keyboard (teclado) with accordion sound, piano",
+   "clima": "joyful country dance",
+   "temas": [
+    "são joão",
+    "roça",
+    "família",
+    "comida típica",
+    "bichos do campo"
+   ],
+   "estruturas": [
+    "A",
+    "E",
+    "C"
+   ],
+   "exclude": []
+  },
+  "baiao": {
+   "nome": "Baião",
+   "bpm": [
+    115,
+    135,
+    125
+   ],
+   "peso": "media",
+   "genero": "baião, northeastern Brazil",
+   "bateria": "keyboard preset baião loop",
+   "instrumentos": "keyboard (teclado) baião riff with accordion sound, bass",
+   "clima": "bouncy and proud",
+   "temas": [
+    "sertão",
+    "bichos",
+    "historinha",
+    "viagem",
+    "trem"
+   ],
+   "estruturas": [
+    "E",
+    "A",
+    "C"
+   ],
+   "exclude": []
+  },
+  "xote": {
+   "nome": "Xote",
+   "bpm": [
+    90,
+    110,
+    100
+   ],
+   "peso": "marcada",
+   "genero": "xote, northeastern Brazil, swaying couple dance",
+   "bateria": "keyboard preset xote loop",
+   "instrumentos": "keyboard (teclado) melody with accordion sound, bass",
+   "clima": "sweet and swaying",
+   "temas": [
+    "carinho",
+    "família",
+    "bicho lento",
+    "chuva",
+    "fim de tarde",
+    "abraço"
+   ],
+   "estruturas": [
+    "A",
+    "E"
+   ],
+   "exclude": []
+  },
+  "samba_infantil": {
+   "nome": "Samba infantil",
+   "bpm": [
+    95,
+    115,
+    105
+   ],
+   "peso": "media",
+   "genero": "samba, Brazilian kids samba, roda de samba",
+   "bateria": "keyboard preset samba loop with pandeiro sound",
+   "instrumentos": "cavaquinho, bright piano",
+   "clima": "warm and joyful",
+   "temas": [
+    "amizade",
+    "roda",
+    "família",
+    "comida",
+    "festa em casa"
+   ],
+   "estruturas": [
+    "A",
+    "B",
+    "C"
+   ],
+   "exclude": []
+  },
+  "samba_enredo": {
+   "nome": "Samba-enredo",
+   "bpm": [
+    140,
+    150,
+    145
+   ],
+   "peso": "forte",
+   "genero": "samba-enredo, escola de samba carnival parade",
+   "bateria": "keyboard preset samba loop, surdos marking the beat, whistle",
+   "instrumentos": "keyboard, synth brass",
+   "clima": "grand parade",
+   "temas": [
+    "desfile",
+    "contagem",
+    "grande festa",
+    "carnaval",
+    "história do bairro"
+   ],
+   "estruturas": [
+    "F",
+    "A",
+    "E"
+   ],
+   "exclude": []
+  },
+  "batucada": {
+   "nome": "Batucada (percussão brasileira)",
+   "bpm": [
+    120,
+    140,
+    130
+   ],
+   "peso": "forte",
+   "genero": "Brazilian batucada, drum line party",
+   "bateria": "keyboard preset batucada loop with surdo and agogô sounds",
+   "instrumentos": "keyboard stabs, kids chant",
+   "clima": "tribal fun",
+   "temas": [
+    "dança",
+    "comandos",
+    "corpo",
+    "sons",
+    "percussão corporal"
+   ],
+   "estruturas": [
+    "B",
+    "D"
+   ],
+   "exclude": [
+    "guitar solo"
+   ]
+  },
+  "ciranda": {
+   "nome": "Ciranda",
+   "bpm": [
+    95,
+    115,
+    105
+   ],
+   "peso": "marcada",
+   "genero": "ciranda pernambucana, circle dance, swaying",
+   "bateria": "keyboard preset ciranda loop, bass drum on every beat",
+   "instrumentos": "piano, keyboard flute",
+   "clima": "gentle and joyful, everyone holding hands",
+   "temas": [
+    "roda",
+    "amizade",
+    "mar",
+    "praia",
+    "carinho",
+    "voar"
+   ],
+   "estruturas": [
+    "A",
+    "C"
+   ],
+   "exclude": []
+  },
+  "pop_infantil": {
+   "nome": "Pop infantil",
+   "bpm": [
+    115,
+    130,
+    124
+   ],
+   "peso": "media",
+   "genero": "upbeat kids pop, bright and catchy",
+   "bateria": "keyboard preset pop drum loop with claps",
+   "instrumentos": "bright piano, synth lead",
+   "clima": "sunny and bouncy",
+   "temas": [
+    "rotina",
+    "banho",
+    "escola",
+    "cores",
+    "formas",
+    "amizade"
+   ],
+   "estruturas": [
+    "A",
+    "B",
+    "F"
+   ],
+   "exclude": []
+  },
+  "reggae_infantil": {
+   "nome": "Reggae infantil",
+   "bpm": [
+    78,
+    100,
+    96
+   ],
+   "peso": "marcada",
+   "genero": "kids reggae, sunny and relaxed",
+   "bateria": "keyboard preset reggae one drop loop",
+   "instrumentos": "organ bubble, piano skank",
+   "clima": "happy and laid back",
+   "temas": [
+    "chuva",
+    "natureza",
+    "bicho lento",
+    "praia",
+    "preguiça",
+    "calma alegre"
+   ],
+   "estruturas": [
+    "A",
+    "E"
+   ],
+   "exclude": [],
+   "bpm_nota": "20/11: até 100 — o grupo 'lento e dançante' da referência (Animadinhos) fica em 94–117; a 86 arrastava"
+  },
+  "rock_infantil": {
+   "nome": "Rock infantil",
+   "bpm": [
+    150,
+    170,
+    165
+   ],
+   "peso": "forte",
+   "genero": "energetic kids rock, shout-along",
+   "bateria": "keyboard preset pop-rock beat loop, syncopated kick, claps on 2 and 4",
+   "instrumentos": "bright pop-punk electric guitars, happy major-key guitar riff, bass",
+   "clima": "adventurous and sunny",
+   "temas": [
+    "aventura",
+    "desafio",
+    "energia",
+    "dinossauro",
+    "super-herói",
+    "escovar os dentes"
+   ],
+   "estruturas": [
+    "A",
+    "E",
+    "D"
+   ],
+   "exclude": [
+    "screaming",
+    "metal growl",
+    "dark riff",
+    "heavy metal"
+   ]
+  },
+  "funk_infantil": {
+   "nome": "Funk brasileiro infantil",
+   "bpm": [
+    125,
+    150,
+    130
+   ],
+   "peso": "forte",
+   "genero": "Brazilian funk for kids, clean and playful",
+   "bateria": "keyboard preset tamborzão loop with claps",
+   "instrumentos": "funk synth stabs, vocal chops",
+   "clima": "playful dance party",
+   "temas": [
+    "dança",
+    "comandos",
+    "comida",
+    "parou",
+    "imitar"
+   ],
+   "estruturas": [
+    "D",
+    "B",
+    "A"
+   ],
+   "exclude": [
+    "adult themes",
+    "sensual",
+    "aggressive",
+    "distorted bass"
+   ],
+   "cuidados": "sem gírias de baile, sem passos sensuais; comandos de brincadeira (pula, para, gira, abaixa)"
+  },
+  "eletronica_infantil": {
+   "nome": "Eletrônica infantil",
+   "bpm": [
+    120,
+    128,
+    124
+   ],
+   "peso": "media",
+   "genero": "kids electronic dance pop, playful synthpop",
+   "bateria": "keyboard preset four-on-the-floor loop",
+   "instrumentos": "sparkly synth leads, arpeggios",
+   "clima": "futuristic and fun",
+   "temas": [
+    "espaço",
+    "robô",
+    "foguete",
+    "futuro",
+    "luzes"
+   ],
+   "estruturas": [
+    "A",
+    "R",
+    "F"
+   ],
+   "exclude": [
+    "dark",
+    "aggressive",
+    "dubstep"
+   ]
+  },
+  "disco_infantil": {
+   "nome": "Disco infantil",
+   "bpm": [
+    110,
+    124,
+    118
+   ],
+   "peso": "media",
+   "genero": "kids disco funk, groovy and shiny",
+   "bateria": "keyboard preset disco loop, four-on-the-floor",
+   "instrumentos": "synth strings, electric piano",
+   "clima": "party dress-up fun",
+   "temas": [
+    "fantasia",
+    "festa",
+    "dança",
+    "profissões",
+    "brilho"
+   ],
+   "estruturas": [
+    "B",
+    "R",
+    "C"
+   ],
+   "exclude": []
+  },
+  "sertanejo_infantil": {
+   "nome": "Sertanejo infantil (country)",
+   "bpm": [
+    100,
+    120,
+    110
+   ],
+   "peso": "media",
+   "genero": "kids sertanejo country, Brazilian farm song",
+   "bateria": "keyboard preset country loop with stomp and clap",
+   "instrumentos": "acoustic guitar, viola caipira",
+   "clima": "cheerful farm party",
+   "temas": [
+    "fazenda",
+    "bichos do campo",
+    "quintal",
+    "roça",
+    "cavalo"
+   ],
+   "estruturas": [
+    "F",
+    "A",
+    "C"
+   ],
+   "exclude": []
+  },
+  "latino_infantil": {
+   "nome": "Latino infantil (reggaeton/suingueira)",
+   "bpm": [
+    92,
+    115,
+    100
+   ],
+   "peso": "media",
+   "genero": "kids reggaeton, Latin dance pop, Brazilian suingueira",
+   "bateria": "keyboard preset dembow loop with claps",
+   "instrumentos": "bright piano, synth lead",
+   "clima": "bouncy, playful, swaying dance",
+   "temas": [
+    "dança",
+    "comandos",
+    "bichos",
+    "comida",
+    "brincadeira"
+   ],
+   "estruturas": [
+    "R",
+    "A"
+   ],
+   "exclude": [
+    "sensual",
+    "adult themes",
+    "explicit",
+    "aggressive"
+   ]
+  }
+ }
+}

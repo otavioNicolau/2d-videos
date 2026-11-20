@@ -21,8 +21,9 @@ def call(t, text, color, **kw):
 
 class Roteiro:
     def __init__(self, projeto: str, musica: str, canta: str):
+        from toonstudio.core.canal import carregar, id_do_projeto      # multicanal: "fofolucos/ep01-…"
         self.proj = ROOT / "projects" / projeto
-        self.mus = ROOT / "musicas" / musica
+        self.mus = carregar(id_do_projeto(projeto)).musicas / musica
         self.song = json.loads((self.proj / "analise" / "song.json").read_text(encoding="utf-8"))
         self.lines = json.loads((self.proj / "analise" / "letra.json").read_text(encoding="utf-8"))["lines"]
         self.beats = self.song["beats"]

@@ -24,7 +24,13 @@ from pathlib import Path
 
 from ..core.config import ROOT, StudioError
 
-MUSICAS = ROOT / "musicas"
+MUSICAS = ROOT / "musicas"                 # canal padrão (Laurinha); o canal atual vem de _mus()
+
+
+def _mus() -> Path:
+    """Pasta de músicas do canal atual (toonstudio.core.canal; padrão: musicas/)."""
+    from ..core.canal import atual
+    return atual().musicas
 STYLE_AVISO = 1000          # limite usual do campo Style nas versões recentes do Suno (pode variar)
 
 GENEROS_NA_LETRA = ["frevo", "rock", "axé", "axe", "samba", "forró", "forro", "xote", "baião", "baiao", "funk", "reggae",
@@ -45,16 +51,16 @@ def _json(p: Path) -> dict:
 
 
 def estilos() -> dict:
-    return _json(MUSICAS / "estilos.json")
+    return _json(_mus() / "estilos.json")
 
 
 def vozes() -> dict:
-    return _json(MUSICAS / "vozes.json")
+    return _json(_mus() / "vozes.json")
 
 
 def pasta(nome: str) -> Path:
     """Aceita o nome completo da pasta ('01_zum_zum_cheguei'), o número ('01') ou parte do nome ('lagoa')."""
-    cands = [d for d in sorted(MUSICAS.iterdir()) if (d / "ficha.json").exists()]
+    cands = [d for d in sorted(_mus().iterdir()) if (d / "ficha.json").exists()]
     exact = [d for d in cands if d.name == nome]
     hit = exact or [d for d in cands if d.name.startswith(nome + "_")] or [d for d in cands if nome in d.name]
     if len(hit) != 1:
@@ -63,7 +69,7 @@ def pasta(nome: str) -> Path:
 
 
 def todas() -> list[Path]:
-    return [d for d in sorted(MUSICAS.iterdir()) if (d / "ficha.json").exists()]
+    return [d for d in sorted(_mus().iterdir()) if (d / "ficha.json").exists()]
 
 
 def ficha(d: Path) -> dict:
@@ -512,7 +518,7 @@ def nova(nome: str, titulo: str, ritmo: str, tipo: str, estrutura: str = "A", vo
     if ritmo not in E["ritmos"]:
         raise StudioError(f"ritmo desconhecido: {ritmo} (opções: {', '.join(E['ritmos'])})")
     n = max([int(d.name[:2]) for d in todas() if d.name[:2].isdigit()] + [0]) + 1
-    d = MUSICAS / f"{n:02d}_{nome}"
+    d = _mus() / f"{n:02d}_{nome}"
     if d.exists():
         raise StudioError(f"{d} já existe")
     d.mkdir()

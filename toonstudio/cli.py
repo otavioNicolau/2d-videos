@@ -38,6 +38,7 @@ from .core.config import LIBRARY, PROJECTS, StudioError, to_win, tool
 
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(prog="toonstudio")
+    ap.add_argument("--canal", help="canal (canais/<id>/canal.json); padrão: o do projeto, senão laurinha")
     sub = ap.add_subparsers(dest="cmd", required=True)
     v = sub.add_parser("validate"); v.add_argument("episode")
     b = sub.add_parser("build"); b.add_argument("episode"); b.add_argument("--scene", action="append"); b.add_argument("--force", action="store_true")
@@ -65,6 +66,13 @@ def main(argv=None) -> int:
     k = sub.add_parser("krita"); k.add_argument("file")
     o = sub.add_parser("opentoonz"); o.add_argument("episode"); o.add_argument("scene")
     args = ap.parse_args(argv)
+    import os
+    from .core import canal as _canal
+    if args.canal:                                    # multicanal (20/11/2026)
+        _canal.carregar(args.canal)
+        os.environ[_canal.ENV] = args.canal
+    elif getattr(args, "episode", None):
+        _canal.usar_do_projeto(args.episode)
     try:
         if args.cmd == "validate":
             from .core.validate import validate

@@ -16,7 +16,12 @@ from ..characters.base import expression
 from ..core.config import LIBRARY
 from ..core.registry import character
 
-OUT = LIBRARY / "brand" / "canal"
+OUT = LIBRARY / "brand" / "canal"          # canal padrão; o atual vem de _out()
+
+
+def _out() -> Path:
+    from ..core.canal import atual
+    return atual().brand / "canal"
 FONT = str(LIBRARY / "fonts" / "Poppins-ExtraBold.ttf")
 
 
@@ -94,13 +99,13 @@ def capa() -> Path:
     lu = _char("luisinho", {**ACENA, "turn": -0.2}, 395)
     _paste(img, la, 700, 928)
     _paste(img, lu, 1860, 928)
-    OUT.mkdir(parents=True, exist_ok=True)
-    p = OUT / "capa_2560x1440.png"
+    _out().mkdir(parents=True, exist_ok=True)
+    p = _out() / "capa_2560x1440.png"
     img.convert("RGB").save(p, quality=95)
     g = img.copy()
     dg = ImageDraw.Draw(g)
     dg.rectangle([507, 508, 2053, 931], outline=(255, 0, 0), width=6)
-    g.convert("RGB").resize((1280, 720)).save(OUT / "capa_guia_area_segura.png")
+    g.convert("RGB").resize((1280, 720)).save(_out() / "capa_guia_area_segura.png")
     return p
 
 
@@ -120,21 +125,21 @@ def perfil() -> Path:
     _paste(img, lu, 600, 940)
     mask = Image.new("L", (S, S), 0)
     ImageDraw.Draw(mask).ellipse([0, 0, S, S], fill=255)
-    p = OUT / "perfil_800x800.png"
+    p = _out() / "perfil_800x800.png"
     img.convert("RGB").save(p)
     prev = Image.new("RGBA", (S, S), (0, 0, 0, 0))
     prev.paste(img, (0, 0), mask)
-    prev.save(OUT / "perfil_previa_redonda.png")
+    prev.save(_out() / "perfil_previa_redonda.png")
     return p
 
 
 def marca_dagua() -> Path:
-    im = Image.open(OUT / "perfil_800x800.png").convert("RGBA").resize((150, 150), Image.LANCZOS)
+    im = Image.open(_out() / "perfil_800x800.png").convert("RGBA").resize((150, 150), Image.LANCZOS)
     mask = Image.new("L", (150, 150), 0)
     ImageDraw.Draw(mask).ellipse([2, 2, 148, 148], fill=255)
     out = Image.new("RGBA", (150, 150), (0, 0, 0, 0))
     out.paste(im, (0, 0), mask)
-    p = OUT / "marca_dagua_150x150.png"
+    p = _out() / "marca_dagua_150x150.png"
     out.save(p)
     return p
 
@@ -238,8 +243,8 @@ def miniatura(titulo: str, nome: str, cena: dict | None = None) -> Path:
         d.text((x, y), l, font=f, fill=TINTA, stroke_width=22, stroke_fill=TINTA)
         d.text((x, y), l, font=f, fill=(255, 255, 255) if i == 0 else (255, 226, 40), stroke_width=9, stroke_fill=TINTA)
         y += size + 12
-    OUT.mkdir(parents=True, exist_ok=True)
-    p = OUT / f"miniatura_{nome}.png"
+    _out().mkdir(parents=True, exist_ok=True)
+    p = _out() / f"miniatura_{nome}.png"
     img.convert("RGB").save(p, quality=95)
     return p
 

@@ -286,13 +286,15 @@ def rascunho(project_dir: Path, musica: Path, titulo: str | None = None, permiti
     if scenes:
         scenes[-1]["transition_out"] = "fade"
     total = round(sum(s["duration"] for s in scenes), 4)
-    ep = {"schema": "1.1", "id": project_dir.name, "title": titulo or f["titulo"],
+    from ..core.config import PROJECTS as _PJ
+    ep = {"schema": "1.1", "id": project_dir.name, "projeto": str(project_dir.relative_to(_PJ)) if project_dir.is_relative_to(_PJ) else project_dir.name,
+          "title": titulo or f["titulo"],
           "logline": f"Clipe de \"{f['titulo']}\" — {f.get('tema', '')}. Montado do roteiro verso a verso (roteiro.json).",
           "fps": FPS, "resolution": [1920, 1080], "background": PARQUE,
           "soundtrack": {"file": "musica/trabalho.wav", "analysis": "analise/song.json", "start": 0.0, "end": total,
                          "fade_out": 0.6, "beat_grid": "full"},
           "captions": {"lyrics": "analise/letra.json", "style": "palavra_a_palavra"},
-          "overlays": {"logo": True, "channel": ["LAURINHA", "e Luisinho"]},
+          "overlays": _overlays_do_canal(project_dir),
           "cast": {**{k: {"character": v} for k, v in CAST.items()}, **cast_extra},
           "approval": {"storyboard": False, "final_render": False},
           "scenes": scenes}
@@ -308,6 +310,16 @@ def rascunho(project_dir: Path, musica: Path, titulo: str | None = None, permiti
 #          "objetos": {nome: {id?, x,y,z, pose:{…}, keys:[{t,pose}]}}, "fx": [...], "callout": "TEXTO" | [{t,text,…}],
 #          "flash": bool, "tremor": [t…] (a tela treme), "sons": [{t, id, vol}] (efeito sonoro; vol em dB, 0 = nível padrão), "escurece": [a0, a1] (luz baixando), "transicao": tipo, "cantam": [...], "tela_dividida": {"layout", "paineis": [sub-plano, sub-plano]}}
 # Atuação: "dur": "resto" vai até o fim do plano. O canto (boca) vem da letra: quem canta a parte e está no plano.
+def _overlays_do_canal(project_dir: Path) -> dict:
+    """Logo do canto do vídeo: o do canal do projeto (multicanal, 20/11/2026)."""
+    from ..core.canal import usar_do_projeto
+    cn = usar_do_projeto(project_dir)
+    ov = {"logo": True, "channel": list(cn.logo_texto)}
+    if cn.logo_png and cn.logo_png.exists():
+        ov["logo_png"] = str(cn.logo_png)
+    return ov
+
+
 GRAPHIC = ("danca_", "padrao_", "mon_raios_", "mon_xadrez_", "mon_brilho_")
 ESCALA = 1.0            # multiplica o tamanho (depth) de atores e objetos do roteiro; "escala_personagens" no roteiro.json
 NAO_ESCALA = {"joinha", "botao_inscrever", "logo", "numero"}      # peças de interface: tamanho fixo

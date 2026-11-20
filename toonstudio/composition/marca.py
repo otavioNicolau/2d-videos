@@ -108,16 +108,20 @@ def _efeitos_sonoros(pdir: Path, wav: Path, inicio: float) -> int:
 
 def final(project: str) -> Path:
     """Vídeo completo do episódio: vinheta (se houver) + clipe + chamada (se houver), 1080p 30 fps, áudio 48 kHz."""
+    from ..core.canal import usar_do_projeto
+    cn = usar_do_projeto(project)                      # multicanal: vinheta/chamada do canal do projeto
     pdir = PROJECTS / project
+    nome = Path(project).name                          # "fofolucos/ep01-x" → "ep01-x"
     out_dir = pdir / "output"
-    clips = sorted(out_dir.glob(f"{project}*.mp4"))
+    clips = sorted(out_dir.glob(f"{nome}*.mp4"))
     clips = [c for c in clips if "COMPLETO" not in c.name]
     if not clips:
         raise StudioError(f"renderize o clipe antes (`toonstudio build {project}`)")
     clip = clips[0]
-    parts = [p for p in (BRAND / "vinheta.mp4", clip, BRAND / "chamada.mp4") if p.exists()]
+    vin, cha = cn.vinheta, cn.chamada
+    parts = [p for p in (vin, clip, cha) if p and p.exists()]
     tag = "COMPLETO" + ("_CANDIDATO" if "CANDIDATO" in clip.name else "")
-    out = out_dir / f"{project}_{tag}.mp4"
+    out = out_dir / f"{nome}_{tag}.mp4"
     ins, fil = [], ""
     for i, p in enumerate(parts):
         ins += ["-i", str(p)]
@@ -135,7 +139,7 @@ def final(project: str) -> Path:
     subprocess.run([tool("ffmpeg"), "-y", "-loglevel", "error", "-i", str(cru.with_suffix(".mov")), "-vn", "-c:a", "pcm_s16le",
                     str(bruto)], check=True)
     rb = rebalancear(bruto, rebal)               # voz × batida no peso da referência (o Suno põe a voz muito na frente)
-    inicio = _duracao(BRAND / "vinheta.mp4") if (BRAND / "vinheta.mp4") in parts else 0.0
+    inicio = _duracao(vin) if vin in parts else 0.0
     sons = _efeitos_sonoros(pdir, rebal, inicio)  # efeitos do roteiro ("sons"): antes da masterização, no mesmo nível
     rel = {"rebalanceamento": rb, "efeitos_sonoros": sons, **masterizar(rebal, mestre)}
     subprocess.run([tool("ffmpeg"), "-y", "-loglevel", "error", "-i", str(cru.with_suffix(".mov")), "-i", str(mestre),

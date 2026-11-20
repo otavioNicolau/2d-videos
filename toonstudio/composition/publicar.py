@@ -106,6 +106,8 @@ def publicar(project: str, musica: Path, copiar: bool = True) -> Path:
     from ..audio import composer
     from .canal import miniatura
     from .marca import final
+    from ..core.canal import usar_do_projeto
+    cn = usar_do_projeto(project)                               # multicanal: entrega, marca e textos do canal do projeto
     pdir = PROJECTS / project
     f = composer.ficha(musica)
     yt = f.get("youtube", {})
@@ -118,22 +120,22 @@ def publicar(project: str, musica: Path, copiar: bool = True) -> Path:
     mp4 = out / f"{slug}.mp4"
     shutil.copy2(completo, mp4)
     total = _dur(mp4)
-    vin = LIBRARY / "brand" / "vinheta.mp4"
-    offset = _dur(vin) if vin.exists() else 0.0
-    titulo = f"{f['titulo'].upper()} 🐝 Laurinha e Luisinho (Música Infantil)"
-    tags = ", ".join(dict.fromkeys([re.sub(r"[^\w\s]", "", f["titulo"].lower().replace("-", " ")).strip(), "Laurinha e Luisinho", "música infantil",
-                                    "clipe infantil", "desenho infantil", "músicas para crianças",
+    vin = cn.vinheta
+    offset = _dur(vin) if vin and vin.exists() else 0.0
+    titulo = f"{f['titulo'].upper()} {cn.titulo_sufixo}".strip()
+    tags = ", ".join(dict.fromkeys([re.sub(r"[^\w\s]", "", f["titulo"].lower().replace("-", " ")).strip(), *cn.tags,
                                     *[d for d in f.get("dia_a_dia", [])][:3], composer.estilos()["ritmos"][f["ritmo"]]["nome"].lower()]))
-    hashtags = "#musicainfantil #laurinhaeluisinho #desenhoinfantil"
+    hashtags = cn.hashtags
     desc = [f"TÍTULO\n{titulo}", "", "DESCRIÇÃO", yt["resumo"].strip(), ""]
     if f.get("curiosidade"):
         desc += [f"💡 Você sabia? {yt.get('curiosidade') or f['curiosidade'][0].upper() + f['curiosidade'][1:]}!".replace("!!", "!"), ""]
-    pls = list(dict.fromkeys([PLAYLIST_GERAL, *f.get("playlists", [])]))      # musicas/PLAYLISTS.md
-    links = json.loads(LINKS_PLAYLISTS.read_text(encoding="utf-8")) if LINKS_PLAYLISTS.exists() else {}
+    pls = list(dict.fromkeys([cn.playlist_geral, *f.get("playlists", [])]))   # musicas/PLAYLISTS.md
+    lk = cn.musicas / "playlists_links.json"
+    links = json.loads(lk.read_text(encoding="utf-8")) if lk.exists() else {}
     desc += ["🎵 Letra:", _letra_publicavel(musica), "",
              "📺 Mais músicas nas playlists:"] + [f"▶️ {n}" + (f": {links[n]}" if links.get(n) else "") for n in pls] + ["",
              "👍 Peça para um adulto se inscrever no canal e deixar o joinha!", "",
-             "Música e animação originais © Laurinha e Luisinho.", hashtags, "", "TAGS", tags, "",
+             cn.copyright, hashtags, "", "TAGS", tags, "",
              "PLAYLISTS (adicionar o vídeo em)"] + [f"- {n}" for n in pls] + ["",
              "OBS.: canal para crianças — comentários ficam desativados pelo YouTube (não há comentário fixado)."]
     (out / f"{slug}.descricao.txt").write_text("\n".join(desc) + "\n", encoding="utf-8")
@@ -167,13 +169,13 @@ def publicar(project: str, musica: Path, copiar: bool = True) -> Path:
     Image.open(png).convert("RGB").save(out / f"miniatura-{slug}-1280x720.jpg", quality=92)
     if copiar:
         n = re.match(r"^(\d+)_", musica.name)
-        dest = WIN_ROOT / _win_safe(f"{n.group(1) if n else '00'} {f['titulo']}") / "Vídeo longo"   # como em ~/videos
+        dest = cn.windows / _win_safe(f"{n.group(1) if n else '00'} {f['titulo']}") / "Vídeo longo"   # como em ~/videos
         dest.mkdir(parents=True, exist_ok=True)
         for p in out.iterdir():
             shutil.copy2(p, dest / p.name)
-        canal = WIN_ROOT / "Canal"
+        canal = cn.windows / "Canal"
         canal.mkdir(parents=True, exist_ok=True)
-        src = LIBRARY / "brand" / "canal"
+        src = cn.brand / "canal"
         for p in src.glob("*.png"):
             if "guia" not in p.name and "miniatura" not in p.name:
                 shutil.copy2(p, canal / p.name)

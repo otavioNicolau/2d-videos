@@ -1,0 +1,13 @@
+{
+ "schema": "vozes-1.0",
+ "nota": "Vozes do canal Fofolucos. Uma voz principal (menino de 11 a 14 anos) para todas as músicas; a turma não tem dupla fixa. 'suno_persona' fica vazio até a Persona ser criada no Suno a partir do 1º take aprovado.",
+ "vozes": {
+  "fofolucos": {
+   "descricao": "menino de 11 a 14 anos: animado, voz clara e firme, divertido e um pouco 'malandrinho' (o narrador da Vila Monstrinha)",
+   "style": "energetic boy vocal, about 12 years old, clear, playful and confident",
+   "tag": "Fofolucos, boy vocal",
+   "bordao": "Fofolucos! Rawr!",
+   "suno_persona": null
+  }
+ }
+}
