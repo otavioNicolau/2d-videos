@@ -58,9 +58,101 @@
  "youtube": {
   "resumo": "CARETA DE LIMÃO! 🍋 A Laurinha mordeu um limãozinho do quintal da vovó e… o olho fechou, a boca entortou e o cabelo arrepiou! O vovô mordeu: careta! A vovó mordeu: careta! Agora é a sua vez!",
   "resumo_short": "CARETA DE LIMÃO! 🍋 Azedinho, azedão: faça careta com a Laurinha e o Luisinho!",
-  "curiosidade": "Limão azedo faz careta, e com água e um pouquinho de açúcar vira limonada"
+  "curiosidade": "Limão azedo faz careta, e com água e um pouquinho de açúcar vira limonada",
+  "miniatura": "CARETA DE\nLIMÃO!",
+  "miniatura_cena": {
+   "fundo": "aneis",
+   "cores": [
+    [
+     200,
+     230,
+     76
+    ],
+    [
+     255,
+     226,
+     92
+    ],
+    [
+     120,
+     200,
+     90
+    ],
+    [
+     255,
+     245,
+     170
+    ],
+    [
+     90,
+     180,
+     70
+    ]
+   ],
+   "heroi": {
+    "id": "laurinha",
+    "pose": {
+     "turn": 0.2,
+     "mouth": "X",
+     "hand_n_x": -135,
+     "hand_n_y": -135,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3,
+     "careta": 1.0,
+     "brow_l": 0.7,
+     "brow_r": 0.7
+    }
+   },
+   "par": {
+    "id": "luisinho",
+    "pose": {
+     "turn": -0.2,
+     "mouth": "D",
+     "hand_n_x": -135,
+     "hand_n_y": -135,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3,
+     "eyes_happy": 1.0,
+     "smile": 1.0
+    }
+   },
+   "objetos": [
+    {
+     "id": "limoeiro",
+     "pose": {
+      "balanco": 0.1
+     },
+     "tam": 260,
+     "x": 150,
+     "base": 380
+    }
+   ],
+   "frente": [
+    {
+     "id": "limao_cara",
+     "pose": {
+      "careta": 1.0
+     },
+     "tam": 380,
+     "x": 760,
+     "base": 740
+    }
+   ]
+  }
  },
  "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz)",
  "persona": "laurinha",
- "suno_congelado": "E13 (20/11/2026) — já usado no Suno; letra antiga (2 pontes + refrão 'faster') → take de 3:26 cortado para 2:50 no formato do trio"
+ "suno_congelado": "E13 (20/11/2026) — já usado no Suno; letra antiga (2 pontes + refrão 'faster') → take de 3:26 cortado para 2:50 no formato do trio",
+ "playlists": [
+  "Músicas Infantis da Laurinha e do Luisinho 🐝",
+  "Dançar e Brincar com o Corpo 💃🕺"
+ ]
 }
