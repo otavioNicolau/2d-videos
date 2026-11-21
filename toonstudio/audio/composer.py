@@ -182,7 +182,7 @@ def style(f: dict, ritmo: str | None = None, bpm: int | None = None, E: dict | N
     genero = r["genero"].split(",")[0].strip()
     trio = E["canal"].get("trio", {})
     if trio.get("ativo"):                 # E12 (19/11): só sax, bateria e teclado — o ritmo entra só como groove
-        # 22/11: o ritmo pode trazer o PRÓPRIO groove (ex.: latino = dembow); o do canal ("palmas no 2 e 4") apagava o dembow
+        # 21/11: o ritmo pode trazer o PRÓPRIO groove (ex.: latino = dembow); o do canal ("palmas no 2 e 4") apagava o dembow
         parts = [E["canal"].get("duracao", ""), trio["abertura"], f"{genero} groove", f"{bpm} bpm", r.get("peso_style") or trio["peso_style"],
                  trio["producao"], r["clima"], f.get("style_extra", ""), voz, V["coro"].get("style", ""), E["canal"]["sempre"]]
         return ", ".join(x for x in parts if x)

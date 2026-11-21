@@ -151,7 +151,7 @@ Elemento que falhar em qualquer item é corrigido antes de entrar. A verificaç�
 - Bocas trocadas por visema (fala/canto). Piscadas.
 - Sem molas exageradas, sem braço de borracha, sem câmera pulsando.
 
-## 7c. Enquadramento e nitidez (22/11 — "deixar o canal Laurinha do mesmo jeito do Fofolucos: cenas próximas")
+## 7c. Enquadramento e nitidez (21/11 — "deixar o canal Laurinha do mesmo jeito do Fofolucos: cenas próximas")
 Vale da **29 em diante** (as já publicadas ficam como estão). Mesmas regras do Fofolucos (`canais/fofolucos/BIBLIA_VISUAL.md` §4/§4b):
 - Misturar três tamanhos no mesmo bloco — **CABEÇA** (rosto e ombros, zoom ≈ 1,85–1,95: expressão, piada, bordão),
   **BUSTO** (cintura para cima, zoom ≈ 1,55–1,62: cantar) e **CORPO TODO** (zoom ≈ 1,0: dança, ação). Alvo: ~20 % cabeça,

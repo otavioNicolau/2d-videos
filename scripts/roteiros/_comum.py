@@ -15,7 +15,7 @@ LA, LU = "laurinha", "luisinho"
 SALAO = "plano_salao"
 
 
-# ── enquadramentos dos dois canais (Fofolucos 21/11 → Laurinha 22/11: "cenas próximas") ──
+# ── enquadramentos dos dois canais (Fofolucos 21/11 → Laurinha 21/11: "cenas próximas") ──
 # misturar CABEÇA / BUSTO / CORPO no mesmo bloco; a câmera ainda sobe sozinha se cabelo/chifre/antena for cortar
 # (canal.json camera_protege_topo) e o boneco é desenhado na resolução do plano (nivel_escala_auto)
 def cab(x=1300):

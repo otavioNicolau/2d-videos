@@ -19,11 +19,11 @@ contra baixo, bateria, teclado". Os três altos e na frente: teclado arranjador 
 eletrônica do teclado (o mesmo loop a música toda). O sax fica só como toque na abertura e nos intervalos.
 Vale da 29 em diante (`estilos.json → canal.trio`, versão E14; E13 = 27/28, sem contrabaixo).
 
-## Igual ao Fofolucos (22/11/2026 — "deixar o canal Laurinha do mesmo jeito desse")
+## Igual ao Fofolucos (21/11/2026 — "deixar o canal Laurinha do mesmo jeito desse")
 - **Estrutura enxuta** (as músicas saíam com mais de 3 min): **1 bordão só** (depois do 1º refrão) com intervalo de
   **4 s**; depois do 2º refrão, intervalo de **6 s**; o 3º refrão é **meio refrão** (as 4 primeiras linhas,
   `[Chorus - louder, last time, half chorus]`). Modelo em `canal.json → modelo_letra`. As letras 29–49 foram
-  convertidas assim em 22/11 (o 2º bordão + intervalo de 8 s saíram; o 1º intervalo de 8 s virou 4 s).
+  convertidas assim em 21/11 (o 2º bordão + intervalo de 8 s saíram; o 1º intervalo de 8 s virou 4 s).
 - **Groove próprio do ritmo**: um ritmo pode trazer o seu groove em `estilos.json → ritmos.<r>.peso_style` (vale
   antes do groove do canal). Primeiro caso: **latino = dembow** (Fofolucos 03 "Cosquinha de Monstrinho", nota 4,9 —
   batida sincopada 0,72 e baixo no contratempo 0,59, os dois no alvo pela primeira vez). Usado na 33 e na 44.

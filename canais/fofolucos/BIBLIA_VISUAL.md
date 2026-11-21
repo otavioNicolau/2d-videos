@@ -42,12 +42,12 @@ visemas funcionam igual). Nunca pôr um monstrinho na frente de fundo da mesma c
   bolinhas coloridas) com o **reflexo de verdade** do monstrinho dentro do vidro, virado para quem está na frente.
   Canais: `quem` (0 bilu … 5 nhoque), `rawr`, `susto`, `fofo`, `vira`, `brilho`, `tam`. Usado na virada da 02: o Bilu
   faz a careta mais feroz, o reflexo "faz igual" e o Bilu cai sentado de susto.
-- **`cosquinha`** (22/11, para a 03) — sentindo cosquinha: rindo sem parar (olhinhos apertados, boca aberta), mãozinhas
+- **`cosquinha`** (21/11, para a 03) — sentindo cosquinha: rindo sem parar (olhinhos apertados, boca aberta), mãozinhas
   na barriga, o corpo contorce de um lado para o outro e quica. Para "segurar o riso" antes: `expr: determined`.
-- **`pena`** (22/11) — pena de cosquinha (rosa/lilás/amarelo, `cor` 1–3), abana com `mexe` (crescendo no tempo) e
+- **`pena`** (21/11) — pena de cosquinha (rosa/lilás/amarelo, `cor` 1–3), abana com `mexe` (crescendo no tempo) e
   inclina com `giro`. **Em CLOSE ela vem de FORA, pela direita, e só a ponta encosta** no cantinho (chifrinho,
   anteninha, bochecha) — no 1º storyboard da 03 ela tapava o rosto (`pena_cab` no roteiro fo03).
-- **`mosquinha`** (22/11) — mosquinha fofa (bolinha azul-escura, olhões, sorriso), asinhas batendo com `asa`;
+- **`mosquinha`** (21/11) — mosquinha fofa (bolinha azul-escura, olhões, sorriso), asinhas batendo com `asa`;
   `pousada` 1 fecha as asas. A origem é o pezinho: pousa na ponta do chifrinho do Zuzu em (1300, 335) com ele em x 1300.
 - Closes do **Zuzu** (chifre de unicórnio alto): usar BUSTO — no CABEÇA a câmera sobe pelo chifre e corta a boca.
 

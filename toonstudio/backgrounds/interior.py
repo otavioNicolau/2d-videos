@@ -682,7 +682,7 @@ SCENES = {"plano_banheiro": banheiro, "plano_quarto_rosa": lambda rng: quarto("r
           "plano_jardim": jardim, "plano_lagoa": lagoa, "plano_sala": sala, "plano_espaco": espaco, "plano_lua": lua_chao, "plano_campo": campo, "plano_gelo": gelo, "plano_mar_gelado": mar_gelado, "plano_praia": praia, "plano_fundo_mar": fundo_mar, "plano_salao": salao, "plano_oficina": oficina}
 
 
-# 22/11: cenários da Laurinha desenhados a 2,2x (antes 1,5x fixo em cada cena) — os closes ficam nítidos, como no Fofolucos
+# 21/11: cenários da Laurinha desenhados a 2,2x (antes 1,5x fixo em cada cena) — os closes ficam nítidos, como no Fofolucos
 ESC_CENA = 2.2
 
 

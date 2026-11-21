@@ -1,4 +1,4 @@
-"""Abertura do canal FOFOLUCOS v2 (22/11/2026) — no formato da abertura do Animadinhos, ≤ 5 s.
+"""Abertura do canal FOFOLUCOS v2 (21/11/2026) — no formato da abertura do Animadinhos, ≤ 5 s.
 
 Análise da referência (Animadinhos, igual em todos os vídeos, ~5,8 s):
   0,0–2,1 s  "roleta": um personagem por vez no centro, troca a cada 0,125 s, cada troca com um "bip" que SOBE de tom
@@ -8,7 +8,7 @@ Análise da referência (Animadinhos, igual em todos os vídeos, ~5,8 s):
   4,6 s      clarão branco → logo com brilhos; ~1 s de logo e entra a música.
 Pedido do usuário: "pegar só um efeito simples e mostrar os monstrinhos um por um" → em vez da mini-música do Suno, só
 efeitos sintetizados (toonstudio/audio/sfx.py, sem licença a cumprir).
-22/11: testada a frase "Fofolucos! RAWR!" do tema (voz isolada e voz + batida) → o usuário REPROVOU ("melhor deixar sem a
+21/11: testada a frase "Fofolucos! RAWR!" do tema (voz isolada e voz + batida) → o usuário REPROVOU ("melhor deixar sem a
 voz"). Abertura SEM VOZ NENHUMA.
 
 Linha do tempo (4,7 s): roleta 0,00–2,00 (15 trocas de 4 quadros, bips subindo, termina no Bilu) · Bilu sozinho, carinha
@@ -65,7 +65,7 @@ def _poe(buf: np.ndarray, x: np.ndarray, t: float, g: float) -> None:
 
 
 def audio() -> np.ndarray:
-    """Só efeitos (sem voz, decisão do usuário 22/11)."""
+    """Só efeitos (sem voz, decisão do usuário 21/11)."""
     buf = np.zeros(int(DUR * SR), np.float32)
     for i in range(N_ROLETA):                                    # roleta subindo de tom: Dó5 → Ré6
         _poe(buf, _bip(523.25 * 2 ** (i / 12)), T0 + i * SLOT, 0.42)
@@ -87,7 +87,7 @@ def audio() -> np.ndarray:
 # ───────────────────────────── imagem ─────────────────────────────
 def _q(t: float) -> float:
     """Tempo de chave arredondado PARA BAIXO no milésimo: com round() a chave caía 0,3 ms depois do quadro e a roleta
-    mostrava 1 quadro vazio entre dois monstrinhos (22/11)."""
+    mostrava 1 quadro vazio entre dois monstrinhos (21/11)."""
     return math.floor(t * 1000 + 1e-6) / 1000
 
 

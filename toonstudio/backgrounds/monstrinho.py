@@ -296,7 +296,7 @@ def cozinha(rng):
 
 
 def abertura(rng):
-    """Abertura do canal (22/11, referência: abertura do Animadinhos): céu claro e limpo, nuvens espalhadas, estrelinhas
+    """Abertura do canal (21/11, referência: abertura do Animadinhos): céu claro e limpo, nuvens espalhadas, estrelinhas
     nas cores da turma e um CHÃO DE NUVENS (a turma pisa nas nuvens). Fundo claro = qualquer monstrinho se destaca."""
     s, c = _surf(W_INT, H, ESC_CENA)
     p = P(c)

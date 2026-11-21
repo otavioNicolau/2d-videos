@@ -117,7 +117,7 @@ def _efeitos_sonoros(pdir: Path, wav: Path, inicio: float) -> int:
 
 def _rebalancear_so_clipe(bruto: Path, saida: Path, inicio: float, fim: float, rebalancear) -> dict:
     """Rebalanceia (voz × batida, Demucs) SÓ a música; vinheta e chamada são peças prontas e entram intactas, no MESMO
-    volume percebido (LUFS) do clipe já rebalanceado. 22/11: com a mistura inteira rebalanceada, os ganhos da música valiam
+    volume percebido (LUFS) do clipe já rebalanceado. 21/11: com a mistura inteira rebalanceada, os ganhos da música valiam
     também para a vinheta — a abertura do Fofolucos saiu 4 dB abaixo da música na 01 e igual na 02."""
     import numpy as np
     import soundfile as sf
@@ -164,7 +164,7 @@ def final(project: str) -> Path:
     pdir = PROJECTS / project
     nome = Path(project).name                          # "fofolucos/ep01-x" → "ep01-x"
     out_dir = pdir / "output"
-    # o clipe MAIS RECENTE (22/11: por nome pegava o "ep01.mp4" antigo em vez do re-render nítido "_CANDIDATO")
+    # o clipe MAIS RECENTE (21/11: por nome pegava o "ep01.mp4" antigo em vez do re-render nítido "_CANDIDATO")
     clips = sorted((c for c in out_dir.glob(f"{nome}*.mp4") if "COMPLETO" not in c.name),
                    key=lambda c: c.stat().st_mtime, reverse=True)
     if not clips:
