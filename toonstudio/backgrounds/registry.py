@@ -40,13 +40,18 @@ def catalog() -> list[str]:
                       + [f"padrao_{m}_{c}" for m in MOTIVOS for c in COLORS])
 
 
+ESC_CENA_LAURINHA = 2.2
+
+
 def ensure(bg_id: str, scale: float = 1.5) -> dict:
     """Constrói o cenário se faltar ou se o código mudou. Retorna o background.json."""
     if not known(bg_id):
         raise KeyError(f"cenário desconhecido: {bg_id} (disponíveis: {', '.join(catalog())})")
     out = LIBRARY / "backgrounds" / bg_id / "layers"
     mod = "monstrinho" if bg_id.startswith("mon_") else (STATIC.get(bg_id) or ("interior" if bg_id in INTERIOR or bg_id.startswith("padrao_") else "dance"))
-    h = file_sha(ROOT / "toonstudio" / "backgrounds" / f"{mod}.py", ROOT / "toonstudio" / "backgrounds" / "painter.py")
+    if mod in ("plano", "interior"):          # 22/11: cenários da Laurinha a 2,2x como os do Fofolucos (closes nítidos)
+        scale = max(scale, ESC_CENA_LAURINHA)
+    h = file_sha(ROOT / "toonstudio" / "backgrounds" / f"{mod}.py", ROOT / "toonstudio" / "backgrounds" / "painter.py") + f":{scale}"
     stamp = out / ".hash"
     meta_p = out / "background.json"
     if not (meta_p.exists() and stamp.exists() and stamp.read_text() == h):

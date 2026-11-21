@@ -69,7 +69,8 @@ Cores próprias dos protagonistas: ver §4.
 5. Detalhe interno = **traço solto** da cor do contorno (rabisco de folha, risquinho de grama, costura).
 6. Sombra (quando usada) = **oval chapado** escuro e semitransparente sob os pés. Nada mais.
 7. Cenário **não** tem desfoque. Profundidade só por sobreposição, escala e cor levemente mais clara no fundo.
-8. Câmera: enquadramentos estáveis; cortes secos; panorâmica lateral lenta; zoom só em momentos pontuais.
+8. Câmera: enquadramentos estáveis; cortes secos; panorâmica lateral lenta. **Da 29 em diante: CABEÇA / BUSTO /
+   CORPO misturados (§7c)**, como no Fofolucos.
 
 ---
 
@@ -149,6 +150,17 @@ Elemento que falhar em qualquer item é corrigido antes de entrar. A verificaç�
 - Andar em perfil com passinhos e quique pequeno; voo com asas trocando entre 2–3 poses e corpo flutuando devagar.
 - Bocas trocadas por visema (fala/canto). Piscadas.
 - Sem molas exageradas, sem braço de borracha, sem câmera pulsando.
+
+## 7c. Enquadramento e nitidez (22/11 — "deixar o canal Laurinha do mesmo jeito do Fofolucos: cenas próximas")
+Vale da **29 em diante** (as já publicadas ficam como estão). Mesmas regras do Fofolucos (`canais/fofolucos/BIBLIA_VISUAL.md` §4/§4b):
+- Misturar três tamanhos no mesmo bloco — **CABEÇA** (rosto e ombros, zoom ≈ 1,85–1,95: expressão, piada, bordão),
+  **BUSTO** (cintura para cima, zoom ≈ 1,55–1,62: cantar) e **CORPO TODO** (zoom ≈ 1,0: dança, ação). Alvo: ~20 % cabeça,
+  ~45 % busto, ~35 % corpo. Funções `cab()`, `busto()`, `corpo()` e `GCAM` em `scripts/roteiros/_comum.py`.
+- **Cabelo, laço, antena e asinhas SEMPRE inteiros**: a câmera sobe sozinha o necessário (`camera_protege_topo`).
+- **Espaço entre personagens** ≥ 430 na tela (~650 de x no roteiro); mais de 3 no corpo todo → duas fileiras.
+- **Nitidez**: cada plano desenhado na resolução em que aparece (`nivel_escala_auto`, até 3x); cenários a 2,2x
+  (`interior.py`/`plano.py`); **traço sem tremor** (`tremor_traco: 0`) — o contorno continua (regra §3), só não "ferve".
+- Conferir sempre um quadro de close a 100 % antes de mostrar.
 
 ## 7b. Miniatura (YouTube, 1280×720)
 - Fundo: cada vídeo tem CORES e FORMATO próprios (nunca repetir a combinação de outro vídeo). Formatos: `raios` (leque), `faixas` (listras diagonais), `circulo` (fundo cortado na diagonal + círculo grande atrás da personagem), `aneis` (círculos concêntricos). 4 cores fortes, ligadas ao tema, que contrastem com a personagem (Luisinho azul não vai sobre azul).

@@ -51,7 +51,7 @@ def _floor(F: Flat, w, col):
 
 def quarto(cor: str, rng) -> tuple[skia.Surface, int]:
     parede, papel, chao = QUARTO[cor]
-    s, c = _surf(W_INT, H, 1.5)
+    s, c = _surf(W_INT, H, ESC_CENA)
     F = Flat(c)
     c.drawRect(skia.Rect(0, 0, W_INT, H), skia.Paint(Color4f=skia.Color4f(*_rgba(parede))))
     for y in range(60, FLOOR_Y - 40, 120):                       # papel de parede: bolinhas desencontradas
@@ -80,7 +80,7 @@ def quarto(cor: str, rng) -> tuple[skia.Surface, int]:
 
 
 def cozinha(rng) -> tuple[skia.Surface, int]:
-    s, c = _surf(W_INT, H, 1.5)
+    s, c = _surf(W_INT, H, ESC_CENA)
     F = Flat(c)
     c.drawRect(skia.Rect(0, 0, W_INT, H), skia.Paint(Color4f=skia.Color4f(*_rgba("#FFF4C9"))))
     for x in range(0, W_INT, 90):                                 # azulejos
@@ -115,7 +115,7 @@ def cozinha(rng) -> tuple[skia.Surface, int]:
 
 def casa_frente(rng) -> tuple[skia.Surface, int]:
     w = W_INT
-    s, c = _surf(w, H, 1.5)
+    s, c = _surf(w, H, ESC_CENA)
     F = Flat(c)
     c.drawRect(skia.Rect(0, 0, w, H), skia.Paint(Color4f=skia.Color4f(*_rgba(PPAL["ceu"]))))
     for x, y in ((200, 140), (900, 90), (2300, 160)):
@@ -143,7 +143,7 @@ def casa_frente(rng) -> tuple[skia.Surface, int]:
 
 def escola(rng) -> tuple[skia.Surface, int]:
     w = W_INT
-    s, c = _surf(w, H, 1.5)
+    s, c = _surf(w, H, ESC_CENA)
     F = Flat(c)
     c.drawRect(skia.Rect(0, 0, w, H), skia.Paint(Color4f=skia.Color4f(*_rgba(PPAL["ceu"]))))
     for x, y in ((260, 120), (1400, 80), (2350, 150)):
@@ -171,7 +171,7 @@ def escola(rng) -> tuple[skia.Surface, int]:
 
 def ceu(rng) -> tuple[skia.Surface, int]:
     w = W_INT
-    s, c = _surf(w, H, 1.5)
+    s, c = _surf(w, H, ESC_CENA)
     F = Flat(c)
     c.drawRect(skia.Rect(0, 0, w, H), skia.Paint(Color4f=skia.Color4f(*_rgba("#9CCBFA"))))
     for _ in range(14):
@@ -294,7 +294,7 @@ def padrao(kind: str, color: str, scale: float, gap: int = 180):
 
 
 def banheiro(rng) -> tuple[skia.Surface, int]:
-    s, c = _surf(W_INT, H, 1.5)
+    s, c = _surf(W_INT, H, ESC_CENA)
     F = Flat(c)
     c.drawRect(skia.Rect(0, 0, W_INT, H), skia.Paint(Color4f=skia.Color4f(*_rgba("#D6F1FF"))))
     for xx in range(0, W_INT, 110):                               # azulejos azuis
@@ -321,7 +321,7 @@ def banheiro(rng) -> tuple[skia.Surface, int]:
 def jardim(rng) -> tuple[skia.Surface, int]:
     """Jardim visto por quem é pequenininho (mundo pequenino): hastes de flores e folhas de grama GIGANTES, céu, chão de grama."""
     w = W_INT
-    s, c = _surf(w, H, 1.5)
+    s, c = _surf(w, H, ESC_CENA)
     F = Flat(c)
     c.drawRect(skia.Rect(0, 0, w, H), skia.Paint(Color4f=skia.Color4f(*_rgba("#A8D8FF"))))
     for x, y, sc in ((300, 140, 1.4), (1150, 90, 1.7), (2050, 160, 1.3)):
@@ -351,7 +351,7 @@ def lagoa(rng) -> tuple[skia.Surface, int]:
     """Beira da lagoa vista de pertinho: céu de tarde, árvores ao fundo, a água com brilhos e vitórias-régias,
     margem de grama na frente (onde a turma pisa)."""
     w = W_INT
-    s, c = _surf(w, H, 1.5)
+    s, c = _surf(w, H, ESC_CENA)
     F = Flat(c)
     c.drawRect(skia.Rect(0, 0, w, H), skia.Paint(Color4f=skia.Color4f(*_rgba("#AEDCFF"))))
     for x, y, sc in ((420, 130, 1.4), (1450, 90, 1.6), (2250, 150, 1.2)):
@@ -379,7 +379,7 @@ def lagoa(rng) -> tuple[skia.Surface, int]:
 def sala(rng) -> tuple[skia.Surface, int]:
     """Sala da casa em dezembro: parede creme com listrinhas, janela com dia de sol (Natal no calor), sofá e tapete.
     A árvore de Natal é prop (acende/apaga); aqui fica só o cenário."""
-    s, c = _surf(W_INT, H, 1.5)
+    s, c = _surf(W_INT, H, ESC_CENA)
     F = Flat(c)
     c.drawRect(skia.Rect(0, 0, W_INT, H), skia.Paint(Color4f=skia.Color4f(*_rgba("#FFF1D6"))))
     for x in range(0, W_INT, 90):                                 # listrinhas verticais
@@ -407,7 +407,7 @@ def sala(rng) -> tuple[skia.Surface, int]:
 def espaco(rng) -> tuple[skia.Surface, int]:
     """Espaço: azul-escuro com estrelinhas e planetinhas coloridos (sem chão)."""
     w = W_INT
-    s, c = _surf(w, H, 1.5)
+    s, c = _surf(w, H, ESC_CENA)
     F = Flat(c)
     c.drawRect(skia.Rect(0, 0, w, H), skia.Paint(Color4f=skia.Color4f(*_rgba("#1B2A6B"))))
     for _ in range(140):
@@ -422,7 +422,7 @@ def espaco(rng) -> tuple[skia.Surface, int]:
 def lua_chao(rng) -> tuple[skia.Surface, int]:
     """Chão da lua (cinza claro com crateras) e céu escuro estrelado; a Terra fica como prop."""
     w = W_INT
-    s, c = _surf(w, H, 1.5)
+    s, c = _surf(w, H, ESC_CENA)
     F = Flat(c)
     c.drawRect(skia.Rect(0, 0, w, H), skia.Paint(Color4f=skia.Color4f(*_rgba("#1B2A6B"))))
     for _ in range(90):
@@ -437,7 +437,7 @@ def campo(rng) -> tuple[skia.Surface, int]:
     """Campo do carneirinho (Méé, Carneirinho!): céu azul com nuvens fofas, morrinhos verdes que se sobrepõem,
     cerquinha de madeira ao fundo, florzinhas e tufinhos no gramado da frente (onde a turma pisa)."""
     w = W_INT
-    s, c = _surf(w, H, 1.5)
+    s, c = _surf(w, H, ESC_CENA)
     F = Flat(c)
     c.drawRect(skia.Rect(0, 0, w, H), skia.Paint(Color4f=skia.Color4f(*_rgba("#9ED6FF"))))
     F.oval(2280, 150, 90, 90, "#FFE066")                                    # solzinho
@@ -466,7 +466,7 @@ def gelo(rng) -> tuple[skia.Surface, int]:
     """Polo gelado (Andar de Pinguim): céu clarinho, mar azul ao fundo com icebergs, chão de gelo branco-azulado com
     montinhos de neve (atrás deles um pinguim pode se esconder) e risquinhos de gelo liso (para escorregar)."""
     w = W_INT
-    s, c = _surf(w, H, 1.5)
+    s, c = _surf(w, H, ESC_CENA)
     F = Flat(c)
     c.drawRect(skia.Rect(0, 0, w, H), skia.Paint(Color4f=skia.Color4f(*_rgba("#CDEBFF"))))
     F.oval(2250, 160, 80, 80, "#FFF3B0")
@@ -494,7 +494,7 @@ def mar_gelado(rng) -> tuple[skia.Surface, int]:
     """Debaixo d'água no mar gelado (o pinguim "voa" nadando): faixas de azul, raios de luz, bolhinhas,
     a beira do gelo lá em cima e algas e pedrinhas no fundo."""
     w = W_INT
-    s, c = _surf(w, H, 1.5)
+    s, c = _surf(w, H, ESC_CENA)
     F = Flat(c)
     c.drawRect(skia.Rect(0, 0, w, H), skia.Paint(Color4f=skia.Color4f(*_rgba("#3E9BE0"))))
     for y0, col in ((360, "#3590D6"), (620, "#2C82C9"), (860, "#2474B8")):
@@ -521,7 +521,7 @@ def fundo_mar(rng) -> tuple[skia.Surface, int]:
     corais coloridos (rosa, laranja, roxo), algas balançando, areia clarinha com conchas e estrelas-do-mar, e a TOCA do
     polvo (pedra redonda com entrada escura) à esquerda."""
     w = W_INT
-    s, c = _surf(w, H, 1.5)
+    s, c = _surf(w, H, ESC_CENA)
     F = Flat(c)
     c.drawRect(skia.Rect(0, 0, w, H), skia.Paint(Color4f=skia.Color4f(*_rgba("#5FD3E0"))))
     for y0, col in ((300, "#4CC6D8"), (560, "#3BB5CF"), (790, "#30A6C4")):
@@ -567,7 +567,7 @@ def praia(rng) -> tuple[skia.Surface, int]:
     """Praia de férias vista de pertinho: céu de verão, mar com ondinhas, areia dourada com conchinhas e estrelas-do-mar,
     guarda-sol listrado ao fundo (castelo, siri e onda são props)."""
     w = W_INT
-    s, c = _surf(w, H, 1.5)
+    s, c = _surf(w, H, ESC_CENA)
     F = Flat(c)
     c.drawRect(skia.Rect(0, 0, w, H), skia.Paint(Color4f=skia.Color4f(*_rgba("#9ED8FF"))))
     for x, y, sc in ((420, 150, 1.3), (1500, 110, 1.6), (2150, 210, 1.0)):
@@ -606,7 +606,7 @@ def salao(rng) -> tuple[skia.Surface, int]:
     """Salão de carnaval (Carnaval da Turminha): parede colorida com serpentinas e bandeirinhas, máscaras penduradas,
     chão de tábua com confete espalhado."""
     w = W_INT
-    s, c = _surf(w, H, 1.5)
+    s, c = _surf(w, H, ESC_CENA)
     F = Flat(c)
     c.drawRect(skia.Rect(0, 0, w, H), skia.Paint(Color4f=skia.Color4f(*_rgba("#7B5CFF"))))
     for x in range(0, w, 260):                                              # faixas na parede
@@ -636,7 +636,7 @@ def oficina(rng) -> tuple[skia.Surface, int]:
     """Oficina do Luisinho (Robô Dançarino): parede verde-água com quadro de ferramentas (chave, martelo, chave de fenda),
     engrenagens coloridas, bancada de madeira com caixa de peças, chão de tábua com parafusos."""
     w = W_INT
-    s, c = _surf(w, H, 1.5)
+    s, c = _surf(w, H, ESC_CENA)
     F = Flat(c)
     c.drawRect(skia.Rect(0, 0, w, H), skia.Paint(Color4f=skia.Color4f(*_rgba("#BFEBD9"))))
     for y in range(40, FLOOR_Y - 40, 120):                                  # azulejinhos da parede
@@ -682,6 +682,10 @@ SCENES = {"plano_banheiro": banheiro, "plano_quarto_rosa": lambda rng: quarto("r
           "plano_jardim": jardim, "plano_lagoa": lagoa, "plano_sala": sala, "plano_espaco": espaco, "plano_lua": lua_chao, "plano_campo": campo, "plano_gelo": gelo, "plano_mar_gelado": mar_gelado, "plano_praia": praia, "plano_fundo_mar": fundo_mar, "plano_salao": salao, "plano_oficina": oficina}
 
 
+# 22/11: cenários da Laurinha desenhados a 2,2x (antes 1,5x fixo em cada cena) — os closes ficam nítidos, como no Fofolucos
+ESC_CENA = 2.2
+
+
 def build(bg_id: str, out_dir: Path, scale: float = 1.5, seed: int = 11) -> dict:
     out_dir.mkdir(parents=True, exist_ok=True)
     if bg_id.startswith("padrao_"):
@@ -696,7 +700,7 @@ def build(bg_id: str, out_dir: Path, scale: float = 1.5, seed: int = 11) -> dict
         rng = np.random.default_rng(seed)
         s, w = SCENES[bg_id](rng)
         s.makeImageSnapshot().save(str(out_dir / "MG_cena.png"), skia.kPNG)
-        meta = {"id": bg_id, "name": bg_id.replace("plano_", "Plano — ").replace("_", " "), "width": w, "height": H, "scale": scale,
+        meta = {"id": bg_id, "name": bg_id.replace("plano_", "Plano — ").replace("_", " "), "width": w, "height": H, "scale": ESC_CENA,
                 "landmarks": {"ground_y": 930, "floor_y": FLOOR_Y}, "estilo": "canais/laurinha/BIBLIA_VISUAL.md",
                 "layers": [{"name": "MG_cena", "file": "MG_cena.png", "parallax": 1.0, "z": -20, "width": w, "height": H}]}
     (out_dir / "background.json").write_text(json.dumps(meta, indent=2, ensure_ascii=False), encoding="utf-8")

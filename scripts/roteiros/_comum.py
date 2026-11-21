@@ -15,6 +15,27 @@ LA, LU = "laurinha", "luisinho"
 SALAO = "plano_salao"
 
 
+# ── enquadramentos dos dois canais (Fofolucos 21/11 → Laurinha 22/11: "cenas próximas") ──
+# misturar CABEÇA / BUSTO / CORPO no mesmo bloco; a câmera ainda sobe sozinha se cabelo/chifre/antena for cortar
+# (canal.json camera_protege_topo) e o boneco é desenhado na resolução do plano (nivel_escala_auto)
+def cab(x=1300):
+    return {"x": x, "y": 500, "zoom": 1.85, "zoom_fim": 1.95}
+
+
+def busto(x=1300, y=560):
+    return {"x": x, "y": y, "zoom": 1.55, "zoom_fim": 1.62}
+
+
+def corpo(x=1300, x_fim=None):
+    c = {"x": x, "y": 560, "zoom": 1.0, "zoom_fim": 1.08}
+    if x_fim:
+        c["x_fim"] = x_fim
+    return c
+
+
+GCAM = {"x": 960, "y": 560, "zoom": 1.0, "zoom_fim": 1.06}       # fundos gráficos (raios/xadrez/brilho/padrão)
+
+
 def call(t, text, color, **kw):
     return {"t": round(max(0.0, t), 2), "text": text, "color": color, **kw}
 
