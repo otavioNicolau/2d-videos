@@ -3340,3 +3340,172 @@ class Lanterna(_Prop):
 
 
 PROPS.update({"lanterna": Lanterna})
+
+
+class EspelhoReflexo(_Prop):
+    """Espelho de pé da Vila Monstrinha (Fofolucos 02, "o Bilu treinou no espelho a careta mais feroz… mas o espelho fez
+    igual"): moldura roxa com chifrinhos, pezinhos, e DENTRO o REFLEXO de verdade de um monstrinho (desenhado pelo próprio
+    personagem, virado para quem está na frente e recortado no vidro).
+    Canais: `quem` 0–5 (bilu, teco, gogo, mimi, zuzu, nhoque), `rawr` 0→1 (o reflexo faz o RAWR: garras, dentes,
+    sobrancelha brava), `susto` 0→1 (olhão arregalado), `fofo` 0→1 (carinha fofinho), `vira` (virada do reflexo:
+    −0,45 = olhando para a esquerda, para quem está na frente), `brilho` 0→1 (estrelinha no vidro), `tam` escala do reflexo."""
+    QUEM = ("bilu", "teco", "gogo", "mimi", "zuzu", "nhoque")
+
+    def __init__(self):
+        super().__init__("espelho_reflexo", "Espelho com reflexo", (700, 900), (350, 860), 760,
+                         {"quem": 0.0, "rawr": 0.0, "susto": 0.0, "fofo": 0.0, "vira": -0.45, "brilho": 0.0, "tam": 0.95})
+
+    def paint(self, k, P):
+        from ..core.registry import character
+        from .base import expression
+        cx, cy, rx, ry = 0.0, -470.0, 190.0, 255.0                     # vidro (oval)
+        moldura, sombra = "#7B4BE0", "#5B31B5"
+        for sx in (-1, 1):                                              # pezinhos e chifrinhos da moldura
+            shape(k, [(sx * 105, -215), (sx * 145, -215), (sx * 178, 0), (sx * 118, 0)], sombra, smooth=False)
+            shape(k, [(sx * 100, cy - ry - 18), (sx * 78, cy - ry - 110), (sx * 42, cy - ry - 12)], "#FFD23F")
+        shape(k, ellipse_pts(cx, cy, rx + 34, ry + 34, 0, 48), moldura)
+        shape(k, ellipse_pts(cx, cy + 10, rx + 34, ry + 26, 0, 48), sombra, alpha=0.35)
+        shape(k, ellipse_pts(cx, cy, rx, ry, 0, 48), "#BFE6FF")
+        for j in range(5):                                              # bolinhas na moldura (Vila Monstrinha)
+            a = -math.pi / 2 + (j - 2) * 0.55
+            shape(k, ellipse_pts(cx + (rx + 17) * math.cos(a), cy + (ry + 17) * math.sin(a), 9, 9, 0, 12),
+                  ("#FF6FB1", "#FFD23F", "#38C44F", "#2F9BF0", "#FF8A2B")[j])
+        # reflexo: o próprio monstrinho, recortado no vidro
+        cid = self.QUEM[int(round(max(0, min(5, P["quem"]))))]
+        ch = character(cid)
+        rw, su, fo = (max(0.0, min(1.0, P[c])) for c in ("rawr", "susto", "fofo"))
+        pose = {**expression("happy"), "turn": P["vira"], "mouth": "X"}
+        if fo > 0.01:
+            pose = {**pose, **expression("fofinho", fo)}
+        if su > 0.01:
+            pose = {**pose, **expression("shock", su), "mouth": "O" if su > 0.5 else "X"}
+        if rw > 0.01:
+            garras = {"hand_n_x": -125, "hand_n_y": -115, "hand_n_bend": 0.6, "paw_n": 3, "hand_f_x": 125, "hand_f_y": -115,
+                      "hand_f_bend": -0.6, "paw_f": 3}
+            pose = {**pose, **{c: pose.get(c, 0.0) + (v - pose.get(c, 0.0)) * rw for c, v in garras.items() if c.startswith("hand")},
+                    "paw_n": 3 if rw > 0.5 else 0, "paw_f": 3 if rw > 0.5 else 0,
+                    "brow_l": 0.85 * rw, "brow_r": 0.85 * rw, "jaw": 0.4 * rw, "smile": 0.6,
+                    "mouth": "D" if rw > 0.4 else pose["mouth"], "eyes_happy": 0.0, "lid": 0.0}
+        c = k.c
+        c.save()
+        clip = skia.Path()
+        clip.addOval(skia.Rect.MakeLTRB(cx - rx, cy - ry, cx + rx, cy + ry))
+        c.clipPath(clip, skia.ClipOp.kIntersect, True)
+        tam = P["tam"]
+        c.translate(cx + 10, cy + ry * 1.32)                             # reflexo grande: o pé fica abaixo do vidro (cabeça e garras enchem o espelho)
+        c.scale(tam, tam)
+        ch.draw(k, ch.pose(**pose))
+        c.restore()
+        c.save()
+        c.clipPath(clip, skia.ClipOp.kIntersect, True)
+        for dx, wd in ((-120, 34), (-60, 16)):                           # faixas de brilho do vidro (por cima do reflexo)
+            shape(k, [(cx + dx, cy - ry), (cx + dx + wd, cy - ry), (cx + dx + wd + 260, cy + ry), (cx + dx + 260, cy + ry)],
+                  "#FFFFFF", alpha=0.28, smooth=False)
+        c.restore()
+        if P["brilho"] > 0.05:
+            _estrela(k, cx + 120, cy - 170, 34 * P["brilho"], "#FFFFFF")
+
+
+PROPS.update({"espelho_reflexo": EspelhoReflexo})
+
+
+class LogoPNG(_Prop):
+    """Logo do canal a partir do PNG aprovado (Fofolucos: library/brand/fofolucos/logo.png) para a vinheta.
+    Canais: `escala` (entra com "pop"), `giro` (balanço). Cabe no quadro padrão dos níveis (1300×1000): 1100 de largura."""
+    _cache: dict = {}
+
+    def __init__(self):
+        super().__init__("logo_png", "Logo do canal (PNG)", (1300, 1000), (650, 900), 600, {"escala": 1.0, "giro": 0.0})
+
+    def paint(self, k, P):
+        s = max(0.0, P["escala"])
+        if s < 0.02:
+            return
+        from ..core.canal import atual
+        arq = str(atual().logo_png or "")
+        img = self._cache.get(arq)
+        if img is None:
+            img = self._cache[arq] = skia.Image.open(arq)
+        W = 1100.0
+        Hh = W * img.height() / img.width()
+        k.c.save()
+        k.c.translate(0, -510)
+        k.c.rotate(math.degrees(P["giro"]))
+        k.c.scale(s, s)
+        k.c.drawImageRect(img, skia.Rect(-W / 2, -Hh / 2, W / 2, Hh / 2),
+                          skia.SamplingOptions(skia.FilterMode.kLinear, skia.MipmapMode.kLinear), skia.Paint(AntiAlias=True))
+        k.c.restore()
+
+
+PROPS.update({"logo_png": LogoPNG})
+
+
+class Pena(_Prop):
+    """Pena de cosquinha (Fofolucos 03): pena comprida e fofinha, levemente curvada, com farpinhas por dentro e penugem na
+    base. `giro` (rad) inclina; `mexe` cresce com o tempo e faz a pena ABANAR (cosquinha: sin(2π·mexe) · 0,35 rad);
+    `cor` 1 rosa · 2 lilás · 3 amarelo. A origem é a ponta de baixo da haste (onde a mão segura)."""
+    CORES = {1: ("#FF6FB5", "#FFB8DC"), 2: ("#A77BFF", "#D9C6FF"), 3: ("#FFC93D", "#FFE9A6")}
+
+    def __init__(self):
+        super().__init__("pena", "Pena de cosquinha", (1100, 720), (550, 660), 300, {"giro": 0.0, "mexe": 0.0, "cor": 1.0})
+
+    def paint(self, k, P):
+        c0, c1 = self.CORES.get(int(round(P["cor"])), self.CORES[1])
+        ang = P["giro"] + 0.35 * math.sin(2 * math.pi * P["mexe"])
+        k.c.save()
+        k.c.rotate(math.degrees(ang), 0, 0)
+        L, base = 400.0, -60.0
+
+        def eixo(u):                                          # haste levemente curvada
+            return 28 * math.sin(math.pi * u * 0.9), base - u * L
+
+        esq, dir_ = [], []
+        for j in range(31):
+            u = j / 30
+            cx, cy = eixo(u)
+            w = 92 * (math.sin(math.pi * min(1.0, u ** 0.75)) ** 0.65) * (1 - 0.15 * u)
+            esq.append((cx - w, cy))
+            dir_.append((cx + w * 0.85, cy))
+        shape(k, esq + list(reversed(dir_)), c0)
+        for j in range(2, 12):                                # farpinhas claras (da haste para fora, inclinadas para cima)
+            u = j / 13
+            cx, cy = eixo(u)
+            w = 92 * (math.sin(math.pi * u ** 0.75) ** 0.65) * (1 - 0.15 * u)
+            ln(k, [(cx - 6, cy), (cx - w * 0.75, cy - 38)], c1, w=LINE * 1.4)
+            ln(k, [(cx + 6, cy), (cx + w * 0.65, cy - 34)], c1, w=LINE * 1.4)
+        for dx, dy, r in ((-26, -46, 22), (22, -50, 20), (-4, -34, 18), (-40, -70, 16), (34, -74, 15)):   # penugem
+            shape(k, ellipse_pts(dx, dy, r, r, 0, 18), c1)
+        ln(k, [(0, 0)] + [eixo(j / 20 * 0.97) for j in range(21)], "#FFFFFF", w=LINE * 2.0)        # haste
+        k.c.restore()
+
+
+class Mosquinha(_Prop):
+    """Mosquinha fofa (Fofolucos 03, pousa no chifrinho do Zuzu): bolinha azul-escura com olhões brancos e sorriso,
+    asinhas transparentes que BATEM com `asa` (cresce com o tempo: sin(2π·asa·…)); `pousada` 0→1 fecha as asinhas.
+    A origem é o pezinho (para pousar onde a chave mandar)."""
+
+    def __init__(self):
+        super().__init__("mosquinha", "Mosquinha", (360, 360), (180, 300), 120, {"asa": 0.0, "pousada": 0.0, "giro": 0.0})
+
+    def paint(self, k, P):
+        k.c.save()
+        k.c.rotate(math.degrees(P["giro"]), 0, -60)
+        pous = max(0.0, min(1.0, P["pousada"]))
+        bat = (1 - pous) * math.sin(2 * math.pi * P["asa"])
+        for s_ in (-1, 1):                                      # asinhas (atrás do corpo)
+            a = s_ * (0.5 + 0.45 * bat) * (1 - 0.6 * pous)
+            pts = ellipse_pts(s_ * 48, -118, 52, 30, a, 24)
+            shape(k, pts, "#DDF3FF", alpha=0.75)
+        for s_ in (-1, 1):                                      # perninhas
+            ln(k, [(s_ * 14, -30), (s_ * 22, -4)], "#2C2F66", w=LINE * 1.4)
+        shape(k, ellipse_pts(0, -70, 52, 48, 0, 32), "#3B3F7A")                       # corpo
+        shape(k, ellipse_pts(-12, -86, 14, 9, -0.5, 16), "#5A60A8")                   # brilho do corpo
+        for s_ in (-1, 1):                                      # olhões
+            shape(k, ellipse_pts(s_ * 20, -84, 17, 19, 0, 24), "#FFFFFF")
+            shape(k, ellipse_pts(s_ * 20 + 3, -82, 8, 9, 0, 16), "#1E1E3A")
+            k.dot(s_ * 20 + 6, -87, 3, _rgba("#FFFFFF", 1.0))
+        ln(k, [(-12, -52), (0, -46), (12, -52)], "#FF9AC8", w=LINE * 1.3)              # sorrisinho
+        k.c.restore()
+
+
+PROPS.update({"pena": Pena, "mosquinha": Mosquinha})

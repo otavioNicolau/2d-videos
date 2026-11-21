@@ -1,0 +1,131 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Cosquinha de Monstrinho",
+ "gancho": "Cosquinha, cosquinha!",
+ "palavras_tema": [
+  "cosquinha",
+  "risada",
+  "rawr",
+  "chifrinho",
+  "mosquinha"
+ ],
+ "tipo": "danca",
+ "tema": "cada monstrinho tem um cantinho secreto de cosquinha (Bilu no chifrinho, Gogo na anteninha, Mimi no pelinho, Nhoque na barriguinha); refrão-desafio 'quem aguenta? ninguém!'. Ponte com piada e ciência: tentar fazer cosquinha em você mesmo não dá — só funciona com um amiguinho. Virada: o Zuzu jura que não sente cosquinha, resiste à pena e ao pincel… e uma mosquinha pousa no chifrinho dele e ele rola de rir",
+ "dia_a_dia": [
+  "brincar de cosquinha com a família",
+  "rir junto com os amigos",
+  "descobrir o próprio corpo (pé, barriga, braço)"
+ ],
+ "curiosidade": "ninguém consegue fazer cosquinha em si mesmo: o cérebro já sabe onde a própria mão vai encostar e não leva susto — por isso a cosquinha só funciona quando é outra pessoa",
+ "ritmo": "latino_infantil",
+ "bpm": 110,
+ "estrutura": "R",
+ "voz": "fofolucos",
+ "cantam": {
+  "verso": "fofolucos",
+  "refrão": "fofolucos",
+  "ponte": "fofolucos (comandos e piada da cosquinha)"
+ },
+ "cenas": [
+  {
+   "parte": "intro",
+   "ideia": "Vila: uma pena flutua e faz cosquinha no Bilu, que segura o riso e explode num RAWR-risada; 'quem aguenta?'; a turma no raios"
+  },
+  {
+   "parte": "verso 1",
+   "ideia": "o cantinho de cada um em closes rápidos com a pena: Bilu (chifrinho), Gogo (anteninha), Mimi (pelinho), Nhoque (barriguinha) — cada um ri de um jeito"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "turma rindo e dançando o rebolado latino; 'quem aguenta? ninguém!' com todos caindo na risada; letreiros COSQUINHA! / RÁ-RÁ-RÁ!"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "o Teco tenta fazer cosquinha nele mesmo e NADA (cara de dúvida); 'só funciona com um amiguinho!' — comandos: mexe o pezinho, balança a barriga, levanta o bracinho; o Gogo chega e faz cuti-cuti, os dois riem"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "o Zuzu de cara séria resiste à pena e ao pincel; uma mosquinha pousa no chifrinho dele; ele gargalha e rola pelo chão da vila"
+  },
+  {
+   "parte": "final",
+   "ideia": "'faz cosquinha no papai! e na mamãe!' · joinha · inscreva-se · tchau em duas fileiras · último RAWR-risada do Zuzu"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [],
+ "status": "aprovada",
+ "versoes": [
+  "Cosquinha de Monstrinho (1)"
+ ],
+ "persona": "fofolucos",
+ "youtube": {
+  "resumo": "COSQUINHA DE MONSTRINHO! 👾 Cada Fofoluco tem um cantinho secreto de cosquinha: o Bilu no chifrinho, o Gogo na anteninha, a Mimi no pelinho e o Nhoque na barriguinha! E o Zuzu, que jurava que não sentia cosquinha? Quem aguenta? NINGUÉM! Dança, ri e faz cosquinha no papai e na mamãe!",
+  "resumo_short": "COSQUINHA DE MONSTRINHO! 👾 Quem aguenta? Ninguém! Rá-rá-rá… RAWR!",
+  "curiosidade": "Ninguém consegue fazer cosquinha em si mesmo! O cérebro já sabe onde a própria mão vai encostar e não leva susto — por isso a cosquinha só funciona quando é outra pessoa. Testa aí!",
+  "miniatura": "COSQUINHA\nDE MONSTRINHO!",
+  "miniatura_cena": {
+   "fundo": "faixas",
+   "centro": [
+    400,
+    430
+   ],
+   "cores": [
+    [
+     64,
+     200,
+     220
+    ],
+    [
+     58,
+     120,
+     255
+    ],
+    [
+     155,
+     79,
+     240
+    ],
+    [
+     70,
+     214,
+     119
+    ]
+   ],
+   "heroi": {
+    "id": "zuzu",
+    "pose": {
+     "expr": "laughing",
+     "turn": 0.15,
+     "mouth": "D",
+     "jaw": 0.7,
+     "hand_n_x": -40,
+     "hand_n_y": 35,
+     "hand_n_bend": 0.8,
+     "hand_f_x": 40,
+     "hand_f_y": 35,
+     "hand_f_bend": -0.8
+    }
+   },
+   "par": {
+    "id": "mimi",
+    "pose": {
+     "expr": "laughing",
+     "turn": -0.2,
+     "mouth": "D",
+     "jaw": 0.6
+    },
+    "tam": 540,
+    "x": 1040,
+    "corte": 120
+   }
+  }
+ },
+ "playlists": [
+  "Músicas dos Fofolucos 👾"
+ ],
+ "escolhida": "Cosquinha de Monstrinho (1)"
+}

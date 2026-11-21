@@ -26,8 +26,9 @@ FONT = str(LIBRARY / "fonts" / "Poppins-ExtraBold.ttf")
 
 
 def _char(cid: str, pose: dict, height: int) -> Image.Image:
+    from ..core.canal import atual
     ch = character(cid)
-    s = ch.render(pose, scale=2.4)
+    s = ch.render(pose, scale=2.4, jitter=float(atual().raw.get("tremor_traco", 0.5)))   # Fofolucos: traço liso
     a = s.makeImageSnapshot().toarray()
     im = Image.fromarray(a[..., [2, 1, 0, 3]])
     im = im.crop(im.getbbox())

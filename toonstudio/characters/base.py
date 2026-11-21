@@ -32,6 +32,7 @@ FACE_NEUTRAL = {
     "tears": 0.0, "sweat": 0.0, "blush": 0.0,
     "eyes_happy": 0.0,                  # >0,5: olhos fechados em arco "^^" (alegria pura, canto, riso)
     "careta": 0.0,                      # >0,5: CARETA DE AZEDO (27): olhos espremidos "> <", boca torta, antenas arrepiadas
+    "fofo": 0.0,                        # >0,5: CARINHA FOFINHO (Fofolucos 02): olhão brilhando, bochecha corada maior
 }
 
 EXPRESSIONS: dict[str, dict[str, float]] = {
@@ -51,6 +52,8 @@ EXPRESSIONS: dict[str, dict[str, float]] = {
     "determined": {"brow_l": 0.6, "brow_r": 0.6, "brow_y": -0.2, "smile": -0.2, "lid": 0.15},
     "joy": {"eyes_happy": 1.0, "smile": 1.0, "brow_y": 0.5, "blush": 1.0, "jaw": 0.25},
     "azedo": {"careta": 1.0, "brow_l": 0.7, "brow_r": 0.7, "smile": -0.4},
+    "fofinho": {"fofo": 1.0, "eye_scale": 1.22, "brow_y": 0.7, "brow_l": -0.25, "brow_r": -0.25, "smile": 0.85,
+                "blush": 1.0, "pupil": 1.0},
 }
 
 VISEMES = "ABCDEFGHX"   # Rhubarb (Preston Blair estendido)

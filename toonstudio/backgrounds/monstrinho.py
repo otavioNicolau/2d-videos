@@ -22,7 +22,7 @@ from .plano import Flat, _surf
 
 W_INT, H = 2600, 1080
 CHAO_Y = 760
-CENAS = ("mon_parque", "mon_vila", "mon_quarto", "mon_palco", "mon_noite", "mon_escola", "mon_cozinha")
+CENAS = ("mon_parque", "mon_vila", "mon_quarto", "mon_palco", "mon_noite", "mon_escola", "mon_cozinha", "mon_abertura")
 GRAF_KINDS = ("raios", "xadrez", "brilho")
 CORES = {"roxo": ("#4A158F", "#9B4FF0"), "azul": ("#0A4FC0", "#3AA6FF"), "verde": ("#0B8740", "#46D677"),
          "laranja": ("#E85A08", "#FFA63A"), "rosa": ("#C2166C", "#FF6AB2"), "vermelho": ("#B00D28", "#FF4A5E")}
@@ -189,7 +189,7 @@ def palco(rng):
     p.grad_r(1300, 420, 1400, "#8E44E0", "#2A0E5C")
     cores = ["#FF5CA8", "#FFD23F", "#2ECC9A", "#2E9BFF", "#FF8A3D"]
     for j in range(60):                                                           # bolinhas de luz na parede
-        x, y = 300 + (j % 12) * 180, 120 + (j // 12) * 120
+        x, y = 300 + (j % 12) * 180, 215 + (j // 12) * 112
         p.circ(x, y, 22, cores[j % 5])
     for sd, x0 in ((-1, 0), (1, W_INT)):                                          # cortinas vermelhas
         xs = [x0 + sd * w for w in (0, 380)]
@@ -198,7 +198,15 @@ def palco(rng):
         for k in range(4):
             xx = x0 + sd * (60 + k * 85)
             p.rect(min(xx, xx + sd * 18), 0, max(xx, xx + sd * 18), CHAO_Y + 40, "#B0102C")
-    p.rect(0, 0, W_INT, 70, "#B0102C")
+    # bambinela (21/11): a faixa lisa de 70 no alto parecia um risco vermelho no quadro da banda (as cortinas laterais
+    # ficam fora da câmera) → barra de cortina franzida, em ondas, com friso dourado — lê como palco de teatro
+    p.rect(0, 0, W_INT, 95, "#B0102C")
+    for x in range(0, W_INT + 120, 120):
+        p.circ(x + 60, 95, 62, "#B0102C")                                         # ondas da barra
+        p.rect(x + 8, 0, x + 22, 120, "#94091F")                                  # dobras
+    p.rect(0, 0, W_INT, 22, "#FFC83D")                                            # friso dourado
+    for x in range(0, W_INT + 120, 120):
+        p.circ(x + 60, 150, 9, "#FFC83D")                                         # pinguinhos dourados nas pontas
     p.rect(0, CHAO_Y - 10, W_INT, H, "#8A4B23")                                   # tablado
     p.rect(0, CHAO_Y - 10, W_INT, CHAO_Y + 20, "#A85E2E")
     for x in range(0, W_INT, 200):
@@ -287,8 +295,35 @@ def cozinha(rng):
     return s, W_INT
 
 
+def abertura(rng):
+    """Abertura do canal (22/11, referência: abertura do Animadinhos): céu claro e limpo, nuvens espalhadas, estrelinhas
+    nas cores da turma e um CHÃO DE NUVENS (a turma pisa nas nuvens). Fundo claro = qualquer monstrinho se destaca."""
+    s, c = _surf(W_INT, H, ESC_CENA)
+    p = P(c)
+    p.grad_v(0, 0, W_INT, H, "#BFE4FF", "#EEF8FF")
+    for x, y, s_ in ((180, 120, 0.8), (700, 70, 0.6), (1160, 150, 0.7), (1620, 80, 0.65), (2050, 140, 0.8), (2480, 70, 0.6),
+                     (430, 330, 0.5), (2230, 340, 0.55), (90, 560, 0.5), (2530, 560, 0.5)):
+        p.nuvem(x, y, s_)
+    cores = ["#FF6AB2", "#FFD23F", "#9B4FF0", "#46D677", "#3AA6FF", "#FF8A3D"]
+    for _ in range(70):                                         # estrelinhas e bolinhas (confete) pelo céu
+        x, y = rng.uniform(0, W_INT), rng.uniform(20, 860)
+        cor = cores[int(rng.integers(0, len(cores)))]
+        if rng.random() < 0.45:
+            p.estrela(x, y, rng.uniform(9, 18), cor, ang=float(rng.uniform(0, 1.2)))
+        else:
+            p.circ(x, y, rng.uniform(5, 10), cor, alpha=0.8)
+    for x in range(-80, W_INT + 160, 150):                     # chão de nuvens: sombra azulada + fofura branca
+        r = 120 + 30 * math.sin(x / 170)
+        p.circ(x, 1000 - 0.25 * r, r, "#D2E7FF")
+    for x in range(-40, W_INT + 160, 150):
+        r = 105 + 25 * math.sin(x / 130 + 1.0)
+        p.circ(x, 1030 - 0.25 * r, r, "#FFFFFF")
+    p.rect(0, 1010, W_INT, H, "#FFFFFF")
+    return s, W_INT
+
+
 SCENES = {"mon_parque": parque, "mon_vila": vila, "mon_quarto": quarto, "mon_palco": palco, "mon_noite": noite,
-          "mon_escola": escola, "mon_cozinha": cozinha}
+          "mon_escola": escola, "mon_cozinha": cozinha, "mon_abertura": abertura}
 
 
 # ───────────────────────── fundos gráficos ─────────────────────────

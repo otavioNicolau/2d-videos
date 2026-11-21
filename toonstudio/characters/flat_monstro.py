@@ -17,6 +17,7 @@ from .kit import ik2
 
 ESCURO = "#2A1630"          # olho, boca fechada, sobrancelha (nunca preto puro de contorno: não há contorno)
 BRILHO = "#FFFFFF"
+FOFO_REFLEXO = "#6A4C9C"     # carinha fofinho: reflexo lilás no fundo do olho (olho "brilhando")
 LIMB_M = 26.0               # braço/perna grossinhos
 R_CAB = 132.0               # raio da cabeça
 
@@ -205,7 +206,8 @@ class FlatMonstro(FlatMuri):
             x, c = v.sphere(C[0], r * 0.86, side * 0.78)
             if c > 0.25:
                 q = rot((x, C[1] + 50), ht, C)
-                k.shape(ellipse_pts(q[0], q[1], 22 * c, 15, 0, 16), fill=_rgba(L.cheek, 0.8 + 0.2 * P.get("blush", 1.0)), line=0)
+                fo = 1.0 + 0.45 * max(0.0, min(1.0, P.get("fofo", 0.0)))          # fofinho: bochecha maior e mais corada
+                k.shape(ellipse_pts(q[0], q[1], 22 * c * fo, 15 * fo, 0, 16), fill=_rgba(L.cheek, 0.8 + 0.2 * P.get("blush", 1.0)), line=0)
         if L.olhos == 0:                                     # olhos só nas hastes (Gogo)
             pass
         elif L.olhos == 1:                                     # Bilu: UM olhão no meio
@@ -249,7 +251,12 @@ class FlatMonstro(FlatMuri):
             if self.look.extra.get("iris"):                    # anel colorido em volta (olho que "brilha")
                 self._blob(k, ex + lx, ey + ly + (R - ry) * 0.5, rx + 7, ry + 7, self.look.extra["iris"])
             self._blob(k, ex + lx, ey + ly + (R - ry) * 0.5, rx, ry, ESCURO)
-            if ry > R * 0.4:                                   # brilho branco (duas bolinhas)
+            if ry > R * 0.4 and P.get("fofo", 0) > 0.5:       # CARINHA FOFINHO: olho "brilhando" (reflexo lilás embaixo,
+                self._blob(k, ex + lx, ey + ly + R * 0.42, rx * 0.62, R * 0.3, FOFO_REFLEXO)   # brilho grande + 2 estrelinhas)
+                self._blob(k, ex + lx - rx * 0.28, ey + ly - R * 0.3, R * 0.42, R * 0.4, BRILHO)
+                self._blob(k, ex + lx + rx * 0.36, ey + ly + R * 0.2, R * 0.17, R * 0.17, BRILHO)
+                self._blob(k, ex + lx + rx * 0.05, ey + ly + R * 0.5, R * 0.09, R * 0.09, BRILHO)
+            elif ry > R * 0.4:                                 # brilho branco (duas bolinhas)
                 self._blob(k, ex + lx - rx * 0.32, ey + ly - R * 0.32, R * 0.32, R * 0.32, BRILHO)
                 self._blob(k, ex + lx + rx * 0.3, ey + ly + R * 0.28, R * 0.13, R * 0.13, BRILHO)
         b = P["brow_l"] if side <= 0 else P["brow_r"]

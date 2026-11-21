@@ -256,7 +256,7 @@ class Episode:
             a0, a1 = (float(v) for v in s["escurece"])
             for i in range(n):
                 fade[i] = max(fade[i], a0 + (a1 - a0) * i / max(1, n - 1))
-        if s is self.ep["scenes"][0]:
+        if s is self.ep["scenes"][0] and not s.get("sem_fade_in"):   # abertura do canal começa já na 1ª batida
             k = int(0.4 * self.fps)
             for i in range(k):
                 fade[i] = max(fade[i], 1 - (i + 1) / k)

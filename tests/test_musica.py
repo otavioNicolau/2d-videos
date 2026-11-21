@@ -185,12 +185,22 @@ def test_muricoca_flight_lands_with_feet_on_the_ground():
     assert poses[8]["fly"] > 0.5 and poses[-1]["fly"] < 0.5 and abs(poses[-1]["y"] - 1000) < 1
 
 
-def test_brand_library_renders_props_family_and_scenes():
+def _canal_do_prop(pid, monkeypatch):
+    """Props que desenham um arquivo do canal (logo_png → logo.png do Fofolucos) só existem no canal que tem o arquivo."""
+    if pid == "logo_png":
+        monkeypatch.setenv("TOONSTUDIO_CANAL", "fofolucos")
+    else:
+        monkeypatch.delenv("TOONSTUDIO_CANAL", raising=False)
+
+
+def test_brand_library_renders_props_family_and_scenes(monkeypatch):
     from toonstudio.backgrounds import registry
     from toonstudio.characters.flat_props import PROPS, ITEMS
     from toonstudio.core.registry import character
     for pid in list(PROPS) + ["mamae", "vovo"]:
+        _canal_do_prop(pid, monkeypatch)
         character(pid).render({}, scale=0.2)
+    monkeypatch.delenv("TOONSTUDIO_CANAL", raising=False)
     for item in ITEMS:
         character("laurinha").render({"holding": item}, scale=0.2)
     for bg in ("plano_quarto_rosa", "plano_cozinha", "plano_escola", "padrao_bananas_azul"):
@@ -327,7 +337,7 @@ def test_wave_keeps_hand_up_during_the_whole_goodbye():
     assert all(P[i]["hand_n_y"] < -75 and P[i]["hand_n_x"] < -125 for i in range(6, 56)), "a mão do tchau escorrega ou some atrás da cabeça"
 
 
-def test_every_prop_fits_the_level_canvas():
+def test_every_prop_fits_the_level_canvas(monkeypatch):
     """O render desenha cada nível num quadro fixo (LEVEL_CANVAS/ANCHOR): o que passa da borda é cortado no vídeo
     (a árvore de Natal saiu sem o topo, e o storyboard não mostra isso)."""
     import numpy as np
@@ -337,6 +347,7 @@ def test_every_prop_fits_the_level_canvas():
     cortados = []
     for pid in PROPS:
         from toonstudio.characters.base import to_array
+        _canal_do_prop(pid, monkeypatch)
         a = to_array(character(pid).render({}, 0.25, 0, 0, canvas=LEVEL_CANVAS, anchor=LEVEL_ANCHOR))
         al = a[..., 3]
         if al[0, :].max() > 0 or al[:, 0].max() > 0 or al[:, -1].max() > 0:
@@ -513,5 +524,5 @@ def test_multicanal_perfis_e_projeto(monkeypatch):
     assert canal.id_do_projeto("fofolucos/ep01-teste") == "fofolucos"
     monkeypatch.setenv(canal.ENV, "fofolucos")
     from toonstudio.audio import composer
-    assert composer.estilos()["canal"]["versao"] == "F2"
+    assert composer.estilos()["canal"]["versao"] == "F3"
     assert "fofolucos" in composer.vozes()["vozes"]

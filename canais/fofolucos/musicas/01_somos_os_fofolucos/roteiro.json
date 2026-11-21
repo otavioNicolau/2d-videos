@@ -4648,7 +4648,8 @@
         "dur": "resto"
        }
       ],
-      "expr": "surprised"
+      "expr": "surprised",
+      "depth": 0.8
      },
      "gogo": {
       "x": 1150,
@@ -4660,7 +4661,8 @@
         "dur": "resto"
        }
       ],
-      "expr": "surprised"
+      "expr": "surprised",
+      "depth": 0.8
      },
      "zuzu": {
       "x": 1850,
@@ -4672,7 +4674,8 @@
         "dur": "resto"
        }
       ],
-      "expr": "surprised"
+      "expr": "surprised",
+      "depth": 0.8
      }
     }
    },

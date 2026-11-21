@@ -68,6 +68,15 @@ def _duracao(p: Path) -> float:
     return float(r.stdout.strip())
 
 
+def _lufs(p: Path) -> float | None:
+    """Volume percebido (LUFS integrado, EBU R128) do áudio de um arquivo."""
+    import re
+    r = subprocess.run([tool("ffmpeg"), "-hide_banner", "-nostats", "-i", str(p), "-vn", "-af", "ebur128", "-f", "null", "-"],
+                       capture_output=True, text=True)
+    m = re.findall(r"I:\s+(-?[\d.]+) LUFS", r.stderr)
+    return float(m[-1]) if m else None
+
+
 def _efeitos_sonoros(pdir: Path, wav: Path, inicio: float) -> int:
     """Mistura os efeitos sonoros das cenas (`sfx`, vindos de "sons" no roteiro) no áudio já equilibrado, in loco.
     Nível: pico do efeito ≈ 3× o RMS da música (soa como um instrumento de percussão) × `volume_db`. Devolve quantos."""
@@ -106,6 +115,48 @@ def _efeitos_sonoros(pdir: Path, wav: Path, inicio: float) -> int:
     return len(lista)
 
 
+def _rebalancear_so_clipe(bruto: Path, saida: Path, inicio: float, fim: float, rebalancear) -> dict:
+    """Rebalanceia (voz × batida, Demucs) SÓ a música; vinheta e chamada são peças prontas e entram intactas, no MESMO
+    volume percebido (LUFS) do clipe já rebalanceado. 22/11: com a mistura inteira rebalanceada, os ganhos da música valiam
+    também para a vinheta — a abertura do Fofolucos saiu 4 dB abaixo da música na 01 e igual na 02."""
+    import numpy as np
+    import soundfile as sf
+    x, sr = sf.read(str(bruto), dtype="float32")
+    a, b = int(round(inicio * sr)), min(len(x), int(round(fim * sr)))
+    if a == 0 and b >= len(x):
+        return rebalancear(bruto, saida)
+    cl_in, cl_out = saida.with_name(saida.stem + "_clipe.wav"), saida.with_name(saida.stem + "_clipe_rebal.wav")
+    sf.write(str(cl_in), x[a:b], sr)
+    rb = rebalancear(cl_in, cl_out)
+    y, sr2 = sf.read(str(cl_out), dtype="float32")
+    if sr2 != sr:                                   # o Demucs devolve 44,1 kHz; o vídeo é 48 kHz
+        from math import gcd
+        from scipy.signal import resample_poly
+        g = gcd(sr, sr2)
+        y = resample_poly(y, sr // g, sr2 // g, axis=0).astype(np.float32)
+        sf.write(str(cl_out), y, sr)
+    if y.shape[1:] != x.shape[1:]:
+        raise StudioError("rebalanceamento devolveu áudio com outro número de canais")
+    l_clip = _lufs(cl_out)
+    pedacos, ganhos = [], {}
+    for nome, seg in (("vinheta", x[:a]), ("clipe", y), ("chamada", x[b:])):
+        if nome != "clipe" and len(seg):
+            tmp = saida.with_name(saida.stem + f"_{nome}.wav")
+            sf.write(str(tmp), seg, sr)
+            lp = _lufs(tmp)
+            tmp.unlink(missing_ok=True)
+            g = max(-12.0, min(12.0, l_clip - lp)) if (l_clip is not None and lp is not None) else 0.0
+            ganhos[nome] = round(g, 1)
+            seg = seg * 10 ** (g / 20)
+        pedacos.append(seg)
+    mix = np.concatenate(pedacos)
+    pico = float(np.abs(mix).max()) or 1.0
+    sf.write(str(saida), (mix * min(1.0, 0.95 / pico)).astype(np.float32), sr)
+    for p in (cl_in, cl_out):
+        p.unlink(missing_ok=True)
+    return {**rb, "pecas_fixas_ganho_db": ganhos}
+
+
 def final(project: str) -> Path:
     """Vídeo completo do episódio: vinheta (se houver) + clipe + chamada (se houver), 1080p 30 fps, áudio 48 kHz."""
     from ..core.canal import usar_do_projeto
@@ -113,8 +164,9 @@ def final(project: str) -> Path:
     pdir = PROJECTS / project
     nome = Path(project).name                          # "fofolucos/ep01-x" → "ep01-x"
     out_dir = pdir / "output"
-    clips = sorted(out_dir.glob(f"{nome}*.mp4"))
-    clips = [c for c in clips if "COMPLETO" not in c.name]
+    # o clipe MAIS RECENTE (22/11: por nome pegava o "ep01.mp4" antigo em vez do re-render nítido "_CANDIDATO")
+    clips = sorted((c for c in out_dir.glob(f"{nome}*.mp4") if "COMPLETO" not in c.name),
+                   key=lambda c: c.stat().st_mtime, reverse=True)
     if not clips:
         raise StudioError(f"renderize o clipe antes (`toonstudio build {project}`)")
     clip = clips[0]
@@ -138,8 +190,9 @@ def final(project: str) -> Path:
     rebal = out.with_name(out.stem + "_audio_rebal.wav")
     subprocess.run([tool("ffmpeg"), "-y", "-loglevel", "error", "-i", str(cru.with_suffix(".mov")), "-vn", "-c:a", "pcm_s16le",
                     str(bruto)], check=True)
-    rb = rebalancear(bruto, rebal)               # voz × batida no peso da referência (o Suno põe a voz muito na frente)
     inicio = _duracao(vin) if vin in parts else 0.0
+    fim = inicio + _duracao(clip) if cha in parts else 1e9    # sem chamada: o clipe vai até o fim (sobra de amostras incluída)
+    rb = _rebalancear_so_clipe(bruto, rebal, inicio, fim, rebalancear)
     sons = _efeitos_sonoros(pdir, rebal, inicio)  # efeitos do roteiro ("sons"): antes da masterização, no mesmo nível
     rel = {"rebalanceamento": rb, "efeitos_sonoros": sons, **masterizar(rebal, mestre)}
     subprocess.run([tool("ffmpeg"), "-y", "-loglevel", "error", "-i", str(cru.with_suffix(".mov")), "-i", str(mestre),

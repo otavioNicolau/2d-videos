@@ -1,0 +1,133 @@
+{
+  "episode": "marca-abertura",
+  "scenes": {
+    "s01_roleta": {
+      "frames": 111,
+      "performers": {
+        "teco": {
+          "drawings": 111,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 110
+          },
+          "empty_frames": 0
+        },
+        "zuzu": {
+          "drawings": 111,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 110
+          },
+          "empty_frames": 0
+        },
+        "gogo": {
+          "drawings": 111,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 110
+          },
+          "empty_frames": 0
+        },
+        "bilu": {
+          "drawings": 111,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 110
+          },
+          "empty_frames": 0
+        },
+        "nhoque": {
+          "drawings": 111,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 110
+          },
+          "empty_frames": 0
+        },
+        "mimi": {
+          "drawings": 111,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 110
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s02_logo": {
+      "frames": 30,
+      "performers": {
+        "teco": {
+          "drawings": 30,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 29
+          },
+          "empty_frames": 0
+        },
+        "zuzu": {
+          "drawings": 30,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 29
+          },
+          "empty_frames": 0
+        },
+        "gogo": {
+          "drawings": 30,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 29
+          },
+          "empty_frames": 0
+        },
+        "bilu": {
+          "drawings": 30,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 29
+          },
+          "empty_frames": 0
+        },
+        "nhoque": {
+          "drawings": 30,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 29
+          },
+          "empty_frames": 0
+        },
+        "mimi": {
+          "drawings": 30,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 29
+          },
+          "empty_frames": 0
+        },
+        "logo_fofolucos": {
+          "drawings": 30,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 29
+          },
+          "empty_frames": 1
+        }
+      },
+      "issues": [
+        "logo_fofolucos: 1 quadros vazios (ex.: [1])"
+      ],
+      "frozen_samples": 0
+    }
+  },
+  "warnings": [
+    "storyboard s01_roleta: pendente",
+    "storyboard s02_logo: pendente"
+  ],
+  "lines": {},
+  "video": "/home/otavio/2d/projects/fofolucos/marca-abertura/output/marca-abertura.mp4",
+  "contact_sheet": "/home/otavio/2d/projects/fofolucos/marca-abertura/output/prancha.png",
+  "approved": true
+}

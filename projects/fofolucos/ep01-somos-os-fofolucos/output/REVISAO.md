@@ -1,8 +1,8 @@
 # Revisão — Somos os Fofolucos!
 
-- Vídeo: `ep01-somos-os-fofolucos_CANDIDATO.mp4`
+- Vídeo: `ep01-somos-os-fofolucos.mp4`
 - Prancha: `prancha.png`
-- Aprovação humana do render final: **PENDENTE (vídeo é candidato)**
+- Aprovação humana do render final: **SIM**
 
 ## Falas (QA por transcrição cega)
 
@@ -11,11 +11,75 @@
 
 ## Cenas
 
+- **s01_intro** — 102 quadros; gogo: 102 desenhos, mimi: 102 desenhos, nv: 102 desenhos
+- **s02_intro** — 39 quadros; bilu: 39 desenhos, nv: 39 desenhos
+- **s03_intro** — 76 quadros; mimi: 76 desenhos, zuzu: 76 desenhos, nv: 76 desenhos
+- **s04_intro** — 78 quadros; teco: 78 desenhos, gogo: 78 desenhos, mimi: 78 desenhos, nhoque: 78 desenhos, bo: 78 desenhos
+- **s05_intro** — 90 quadros; bilu: 90 desenhos, zuzu: 90 desenhos, bat: 89 desenhos, tec: 90 desenhos
+- **s06_intro** — 98 quadros; bilu: 98 desenhos, zuzu: 98 desenhos, teco: 98 desenhos, bat: 98 desenhos, tec: 98 desenhos
+- **s07_verso** — 89 quadros; bilu: 89 desenhos, teco: 89 desenhos, nv: 89 desenhos
+- **s08_verso** — 113 quadros; gogo: 113 desenhos, mimi: 113 desenhos, nhoque: 113 desenhos, nv: 113 desenhos
+- **s09_verso__p0** — 102 quadros; zuzu: 102 desenhos, m: 102 desenhos, nv: 102 desenhos
+- **s09_verso__p1** — 102 quadros; teco: 102 desenhos, m: 102 desenhos, bo: 102 desenhos
+- **s09_verso** — 102 quadros; 
+- **s10_verso** — 127 quadros; nhoque: 127 desenhos, bo: 127 desenhos
 - **s11_verso** — 76 quadros; bilu: 76 desenhos, m: 76 desenhos, nv: 76 desenhos
+- **s12_verso** — 127 quadros; teco: 127 desenhos, n: 123 desenhos, bo: 127 desenhos
+  - ⚠ n: 1 quadros vazios (ex.: [1])
+- **s13_verso** — 88 quadros; zuzu: 88 desenhos, m: 88 desenhos, nv: 88 desenhos
+- **s14_verso** — 134 quadros; nhoque: 134 desenhos, lua: 127 desenhos
+- **s15_refrao** — 113 quadros; teco: 113 desenhos, gogo: 113 desenhos, bilu: 113 desenhos, nhoque: 113 desenhos, bo: 113 desenhos
+- **s16_refrao** — 101 quadros; mimi: 101 desenhos, gogo: 101 desenhos, nv: 101 desenhos
+- **s17_refrao__p0** — 102 quadros; bilu: 102 desenhos, lua: 102 desenhos
+- **s17_refrao__p1** — 102 quadros; nhoque: 102 desenhos, bo: 102 desenhos
+- **s17_refrao** — 102 quadros; 
+- **s18_refrao** — 139 quadros; teco: 103 desenhos, zuzu: 139 desenhos, mimi: 104 desenhos, gogo: 139 desenhos, nv: 139 desenhos
+- **s19_intervalo** — 152 quadros; zuzu: 152 desenhos, nv: 152 desenhos
+- **s20_intervalo** — 102 quadros; mimi: 102 desenhos, teco: 102 desenhos, nhoque: 102 desenhos, bo: 102 desenhos
+- **s21_intervalo** — 126 quadros; bilu: 126 desenhos, zuzu: 126 desenhos, gogo: 126 desenhos, bat: 126 desenhos, tec: 126 desenhos
+- **s22_ponte** — 63 quadros; nhoque: 63 desenhos, bo: 63 desenhos
+- **s23_ponte** — 51 quadros; mimi: 51 desenhos, nv: 51 desenhos
+- **s24_ponte** — 37 quadros; gogo: 37 desenhos, zuzu: 37 desenhos, bo: 37 desenhos
+- **s25_ponte** — 126 quadros; bilu: 126 desenhos, teco: 126 desenhos, mimi: 126 desenhos, lua: 122 desenhos
+- **s26_verso** — 76 quadros; gogo: 76 desenhos, nv: 76 desenhos
+- **s27_verso** — 38 quadros; mimi: 38 desenhos, ce: 38 desenhos, nv: 38 desenhos
+- **s28_verso** — 51 quadros; zuzu: 51 desenhos, bilu: 51 desenhos, nhoque: 51 desenhos, nv: 51 desenhos
+- **s29_verso** — 50 quadros; teco: 50 desenhos, mimi: 50 desenhos, lua: 50 desenhos
+- **s30_verso** — 50 quadros; bilu: 50 desenhos, l: 50 desenhos, bo: 50 desenhos
+- **s31_verso** — 63 quadros; teco: 63 desenhos, gogo: 63 desenhos, zuzu: 63 desenhos, l: 63 desenhos, bo: 63 desenhos
+- **s32_verso__p0** — 76 quadros; teco: 76 desenhos, lua: 76 desenhos
+- **s32_verso__p1** — 76 quadros; mimi: 41 desenhos, nv: 76 desenhos
+- **s32_verso** — 76 quadros; 
+- **s33_verso** — 112 quadros; nhoque: 58 desenhos, bilu: 112 desenhos, teco: 61 desenhos, gogo: 112 desenhos, nv: 112 desenhos
+- **s34_refrao** — 100 quadros; mimi: 100 desenhos, zuzu: 100 desenhos, bilu: 100 desenhos, teco: 100 desenhos, bo: 100 desenhos
+- **s35_refrao** — 100 quadros; mimi: 100 desenhos, gogo: 100 desenhos, bo: 100 desenhos
+- **s36_refrao__p0** — 101 quadros; zuzu: 101 desenhos, nv: 101 desenhos
+- **s36_refrao__p1** — 101 quadros; teco: 101 desenhos, bo: 101 desenhos
+- **s36_refrao** — 101 quadros; 
+- **s37_refrao** — 107 quadros; teco: 78 desenhos, zuzu: 107 desenhos, mimi: 81 desenhos, gogo: 107 desenhos, nv: 107 desenhos
+- **s38_refrao** — 144 quadros; bilu: 144 desenhos, zuzu: 144 desenhos, nhoque: 144 desenhos, bat: 144 desenhos, tec: 144 desenhos
+- **s39_intervalo** — 87 quadros; gogo: 87 desenhos, lua: 87 desenhos
+- **s40_intervalo** — 102 quadros; mimi: 102 desenhos, teco: 102 desenhos, nhoque: 102 desenhos, bo: 102 desenhos
+- **s41_intervalo** — 36 quadros; bilu: 36 desenhos, zuzu: 36 desenhos, gogo: 36 desenhos, bat: 36 desenhos, tec: 36 desenhos
+- **s42_refrao** — 124 quadros; gogo: 124 desenhos, nhoque: 124 desenhos, zuzu: 124 desenhos, mimi: 124 desenhos, bo: 124 desenhos
+- **s43_refrao** — 87 quadros; bilu: 87 desenhos, zuzu: 87 desenhos, mimi: 87 desenhos, bat: 87 desenhos, tec: 87 desenhos
+- **s44_refrao__p0** — 112 quadros; bilu: 112 desenhos, lua: 109 desenhos
+- **s44_refrao__p1** — 112 quadros; nhoque: 112 desenhos, bo: 112 desenhos
+- **s44_refrao** — 112 quadros; 
+- **s45_refrao** — 124 quadros; bilu: 124 desenhos, zuzu: 124 desenhos, nhoque: 124 desenhos, bat: 124 desenhos, tec: 124 desenhos
+- **s46_intervalo** — 106 quadros; bilu: 106 desenhos, zuzu: 106 desenhos, mimi: 106 desenhos, bat: 105 desenhos, tec: 106 desenhos
+- **s47_intervalo** — 105 quadros; gogo: 105 desenhos, teco: 105 desenhos, nhoque: 105 desenhos, bilu: 105 desenhos, bo: 105 desenhos
+- **s48_final** — 88 quadros; bilu: 88 desenhos, nv: 88 desenhos
+- **s49_final** — 61 quadros; zuzu: 61 desenhos, joinha: 61 desenhos, bo: 61 desenhos
+  - ⚠ joinha: 1 quadros vazios (ex.: [1])
+- **s50_final** — 86 quadros; mimi: 86 desenhos, teco: 86 desenhos, nv: 86 desenhos
+- **s51_final** — 124 quadros; gogo: 124 desenhos, botao: 124 desenhos, bo: 124 desenhos
+  - ⚠ botao: 1 quadros vazios (ex.: [1])
+- **s52_final** — 108 quadros; teco: 108 desenhos, gogo: 108 desenhos, bilu: 108 desenhos, zuzu: 108 desenhos, mimi: 108 desenhos, nhoque: 108 desenhos, nv: 108 desenhos
+- **s53_final** — 149 quadros; nhoque: 149 desenhos, lua: 129 desenhos
 
 ## Avisos
 
-- render final ainda não aprovado (approval.final_render = false): será gerado como CANDIDATO
 - storyboard s01_intro: pendente
 - storyboard s02_intro: pendente
 - storyboard s03_intro: pendente

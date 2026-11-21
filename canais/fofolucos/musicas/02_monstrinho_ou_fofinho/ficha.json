@@ -29,27 +29,27 @@
  "cenas": [
   {
    "parte": "intro",
-   "ideia": "Vila Monstrinha: a turma em roda; letreiro 'MONSTRINHO OU FOFINHO?'"
+   "ideia": "Vila: Bilu faz RAWR e Mimi a carinha fofinho; 'quem adivinha?'; a turma no raios laranja; a banda"
   },
   {
    "parte": "verso 1",
-   "ideia": "o jogo explicado: no 'monstrinho!' todos rosnam (rawr), no 'fofinho!' piscam e fazem carinho (corações); quem erra vai pro meio dançar"
+   "ideia": "o jogo: MONSTRINHO = close RAWR do Bilu + turma rosnando no raios vermelho; FOFINHO = close fofinho da Mimi + turma fofinha no brilho azul; o Nhoque erra e vai dançar no meio"
   },
   {
    "parte": "refrão",
-   "ideia": "alterna a cada frase: MONSTRINHO (fundo de raios vermelho, close RAWR) × FOFINHO (fundo de brilho rosa, corações, beijinho); 'quem errar dança sozinho' = o Nhoque erra e dança no meio"
+   "ideia": "busto RAWR em dupla · close FOFINHO com corações · quem errou dança sozinho (twist) · a turma no raios (cenário e elenco mudam a cada refrão)"
   },
   {
    "parte": "ponte",
-   "ideia": "comandos cada vez mais rápidos: closes de cabeça trocando entre cara brava e cara fofa; no fim 'ufa… fofinho!' todos desabam fofos"
+   "ideia": "comandos: garra (Mimi), palminha, pula bem alto, giradinha, rapidinho → close do Zuzu trocando RAWR/fofinho/RAWR → 'ufa… fofinho!'"
   },
   {
    "parte": "verso 2",
-   "ideia": "o Bilu no quarto em frente ao espelho treinando a careta; o reflexo faz RAWR junto; o Bilu cai sentado; a turma ri na porta"
+   "ideia": "o Bilu no quarto em frente ao ESPELHO (espelho_reflexo): o reflexo faz o RAWR junto, 'fez igual!', o Bilu escorrega e cai sentado; a turma ri"
   },
   {
    "parte": "final",
-   "ideia": "convite: 'e você? monstrinho ou fofinho?' — joinha, inscreva-se com o papai e a mamãe; tchau com RAWR"
+   "ideia": "'e você? monstrinho ou fofinho?' · joinha · chama o papai e a mamãe · inscreva-se · tchau em duas fileiras · último RAWR da Mimi"
   }
  ],
  "duracao_alvo": [
@@ -57,16 +57,91 @@
   170
  ],
  "alternativas": [],
- "status": "rascunho",
- "versoes": [],
+ "status": "aprovada",
+ "versoes": [
+  "Monstrinho ou Fofinho_",
+  "Monstro ou Fofinho_"
+ ],
  "persona": "fofolucos",
  "youtube": {
   "resumo": "MONSTRINHO OU FOFINHO? 👾 Brinca com os Fofolucos! Quando eu falo MONSTRINHO, faz a cara de bravo… RAWR! Quando eu falo FOFINHO, faz a carinha mais fofa! E o Bilu? Fez careta no espelho e levou um susto dele mesmo!",
   "resumo_short": "MONSTRINHO OU FOFINHO? 👾 Faz a cara certa… RAWR!",
   "curiosidade": "O baiacu, um peixinho do mar, faz igual aos Fofolucos: quando quer parecer um monstrinho, ele se enche de água e vira uma bola cheia de espinhos. Quando o perigo passa, volta a ser um peixinho fofinho!",
-  "miniatura": "MONSTRINHO OU\nFOFINHO?"
+  "miniatura": "MONSTRINHO\nOU FOFINHO?",
+  "miniatura_cena": {
+   "fundo": "circulo",
+   "centro": [
+    400,
+    430
+   ],
+   "cores": [
+    [
+     64,
+     200,
+     220
+    ],
+    [
+     255,
+     210,
+     63
+    ],
+    [
+     255,
+     111,
+     177
+    ],
+    [
+     142,
+     68,
+     239
+    ]
+   ],
+   "heroi": {
+    "id": "bilu",
+    "pose": {
+     "turn": 0.15,
+     "mouth": "D",
+     "jaw": 0.35,
+     "smile": 0.6,
+     "brow_l": 0.85,
+     "brow_r": 0.85,
+     "hand_n_x": -125,
+     "hand_n_y": -115,
+     "hand_n_bend": 0.6,
+     "paw_n": 3,
+     "hand_f_x": 125,
+     "hand_f_y": -115,
+     "hand_f_bend": -0.6,
+     "paw_f": 3,
+     "eyes_happy": 0.0,
+     "lid": 0.0,
+     "eye_scale": 1.15
+    }
+   },
+   "par": {
+    "id": "mimi",
+    "pose": {
+     "expr": "fofinho",
+     "turn": -0.2,
+     "mouth": "X",
+     "hand_n_x": 15,
+     "hand_n_y": 20,
+     "hand_n_bend": 0.9,
+     "paw_n": 3,
+     "hand_f_x": -15,
+     "hand_f_y": 20,
+     "hand_f_bend": -0.9,
+     "paw_f": 3,
+     "head_tilt": 0.12
+    },
+    "tam": 560,
+    "x": 1040,
+    "corte": 120
+   }
+  }
  },
  "playlists": [
   "Músicas dos Fofolucos 👾"
- ]
+ ],
+ "escolhida": "Monstrinho ou Fofinho_"
 }

@@ -1,0 +1,78 @@
+{
+  "episode": "marca-vinheta",
+  "scenes": {
+    "s01_vinheta": {
+      "frames": 114,
+      "performers": {
+        "bilu": {
+          "drawings": 114,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 113
+          },
+          "empty_frames": 0
+        },
+        "mimi": {
+          "drawings": 114,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 113
+          },
+          "empty_frames": 0
+        },
+        "teco": {
+          "drawings": 114,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 113
+          },
+          "empty_frames": 0
+        },
+        "nhoque": {
+          "drawings": 114,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 113
+          },
+          "empty_frames": 0
+        },
+        "gogo": {
+          "drawings": 114,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 113
+          },
+          "empty_frames": 0
+        },
+        "zuzu": {
+          "drawings": 114,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 113
+          },
+          "empty_frames": 0
+        },
+        "logo_fofolucos": {
+          "drawings": 113,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 113
+          },
+          "empty_frames": 3
+        }
+      },
+      "issues": [
+        "logo_fofolucos: 3 quadros vazios (ex.: [1, 2, 3])"
+      ],
+      "frozen_samples": 0
+    }
+  },
+  "warnings": [
+    "render final ainda não aprovado (approval.final_render = false): será gerado como CANDIDATO",
+    "storyboard s01_vinheta: pendente"
+  ],
+  "lines": {},
+  "video": "/home/otavio/2d/projects/fofolucos/marca-vinheta/output/marca-vinheta_CANDIDATO.mp4",
+  "contact_sheet": "/home/otavio/2d/projects/fofolucos/marca-vinheta/output/prancha.png",
+  "approved": false
+}

@@ -18,6 +18,8 @@ animação, nota de ouvido e de olho, um ajuste por vez. Aqui só o que é difer
 - **Assinatura do canal: órgão de desenho "assustador-divertido"** (só na abertura e nos intervalos), no lugar do sax.
 - Clima: festa de monstrinhos — engraçado, um friozinho na barriga, **nunca escuro, nunca de dar medo**; sempre tom maior.
 - Duração alvo 2:20–2:50, formato do trio (1 ponte, sem refrão "faster"). **Proibido cortar a música.**
+  Estrutura enxuta (21/11, "sempre gera mais de 3 min"): **1 bordão só** (depois do 1º refrão), intervalos de **4 e 6 s**,
+  o 3º refrão é **meio refrão** (4 linhas). Groove viciante no andamento do ritmo (nunca abaixo do mínimo dele).
 
 ## 3. Letra (5 a 8 anos)
 - **NUNCA a palavra "monstro"** (usuário, 21/11): sempre **monstrinho/monstrinhos** — também no título, nos letreiros

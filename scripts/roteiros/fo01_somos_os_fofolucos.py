@@ -275,8 +275,8 @@ R.partes["verso#2"] = [
     {"linhas": 1, "cenario": QUARTO, "camera": corpo(1300), "tremor": [0.3], "flash": True, "callout": [call(0.2, "AI!", "vermelho")],
      "cantam": [TE],
      "objetos": {"l": obj("lanterna", 2350, 960, 0.8, d[5], z=5, fixo={"liga": 1.0, "dir": 0.5})},
-     "atores": {TE: a(450, ("jump", 0.0), turn=0.3, expr="surprised"), GO: a(1150, ("jump", 0.1), turn=0.2, expr="surprised"),
-                ZU: a(1850, ("jump", 0.05), turn=-0.2, expr="surprised")}},
+     "atores": {TE: a(450, ("jump", 0.0), turn=0.3, expr="surprised", depth=0.8), GO: a(1150, ("jump", 0.1), turn=0.2, expr="surprised", depth=0.8),
+                ZU: a(1850, ("jump", 0.05), turn=-0.2, expr="surprised", depth=0.8)}},     # menores: o pulo de susto cabe no quadro
     R.dividida({"cenario": NOITE, "camera": {"x": 1300, "y": 600, "zoom": 1.6, "zoom_fim": 1.7}, "cantam": [TE],
                 "atores": {TE: a(1300, ("shock_reaction", 0.1), expr="scared")}},
                {"cenario": PARQUE, "camera": {"x": 1300, "y": 600, "zoom": 1.6, "zoom_fim": 1.7},

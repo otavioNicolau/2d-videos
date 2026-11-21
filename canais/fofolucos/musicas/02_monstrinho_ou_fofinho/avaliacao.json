@@ -1,0 +1,132 @@
+{
+ "schema": "avaliacao-1.0",
+ "versoes": {
+  "Monstro ou Fofinho_": {
+   "arquivo": "Monstro ou Fofinho_.wav",
+   "duracao": 198.1,
+   "bpm": 107.7,
+   "bpm_nota": "",
+   "tom": "Mi menor",
+   "voz_inicio": 3.1,
+   "refrao_inicio": null,
+   "cantado": 71,
+   "intervalos": [
+    [
+     19.4,
+     6.0
+    ],
+    [
+     69.1,
+     3.8
+    ],
+    [
+     95.2,
+     5.8
+    ],
+    [
+     145.7,
+     6.9
+    ],
+    [
+     168.8,
+     2.6
+    ],
+    [
+     172.1,
+     3.3
+    ],
+    [
+     192.2,
+     3.6
+    ]
+   ],
+   "fim_depois_da_voz": 0.3,
+   "final": "corte seco",
+   "silencio_final": 0.0,
+   "acerto": 50,
+   "nao_reconhecidas": [
+    "rawr",
+    "fofolucos",
+    "lindinho",
+    "bilu",
+    "espelho",
+    "adivinha",
+    "pisca",
+    "dancar",
+    "garra",
+    "treinou",
+    "careta",
+    "mais"
+   ],
+   "pontos_a_conferir": [
+    "andamento 108 fora da faixa do Funk brasileiro infantil (125–150)",
+    "o gancho não foi reconhecido na transcrição",
+    "duração 198 s fora do alvo 140–170 s",
+    "só 50% da letra reconhecida — ouvir a pronúncia",
+    "tom menor (o canal é sempre em tom maior)"
+   ]
+  },
+  "Monstrinho ou Fofinho_": {
+   "arquivo": "Monstrinho ou Fofinho_.wav",
+   "duracao": 152.8,
+   "bpm": 129.2,
+   "bpm_nota": "",
+   "tom": "Sol maior",
+   "voz_inicio": 2.6,
+   "refrao_inicio": null,
+   "cantado": 66,
+   "intervalos": [
+    [
+     11.0,
+     7.2
+    ],
+    [
+     52.8,
+     9.4
+    ],
+    [
+     107.6,
+     14.7
+    ]
+   ],
+   "fim_depois_da_voz": 4.2,
+   "final": "esmaecendo",
+   "silencio_final": 0.2,
+   "acerto": 77,
+   "nao_reconhecidas": [
+    "rawr",
+    "bilu",
+    "monstrinha",
+    "pisca",
+    "olho",
+    "mostra",
+    "pula",
+    "arregalou",
+    "sentado"
+   ],
+   "pontos_a_conferir": [
+    "o gancho não foi reconhecido na transcrição",
+    "só 77% da letra reconhecida — ouvir a pronúncia"
+   ]
+  }
+ },
+ "ouvido": {
+  "Monstro ou Fofinho_": {
+   "1 começo chama atenção": null,
+   "5 melodia combina com a letra": null,
+   "6 dá vontade de dançar": null,
+   "7 pronúncia natural": null,
+   "8 tem a cara do canal": null,
+   "9 nenhum trecho cansativo": null
+  },
+  "Monstrinho ou Fofinho_": {
+   "1 começo chama atenção": null,
+   "5 melodia combina com a letra": null,
+   "6 dá vontade de dançar": null,
+   "7 pronúncia natural": null,
+   "8 tem a cara do canal": null,
+   "9 nenhum trecho cansativo": null
+  }
+ },
+ "escolhida": "Monstrinho ou Fofinho_"
+}

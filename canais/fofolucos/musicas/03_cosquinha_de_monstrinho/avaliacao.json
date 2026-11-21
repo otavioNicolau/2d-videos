@@ -1,0 +1,53 @@
+{
+ "schema": "avaliacao-1.0",
+ "versoes": {
+  "Cosquinha de Monstrinho (1)": {
+   "arquivo": "Cosquinha de Monstrinho (1).wav",
+   "duracao": 164.0,
+   "bpm": 107.7,
+   "bpm_nota": "",
+   "tom": "Dó maior",
+   "voz_inicio": 1.05,
+   "refrao_inicio": 35.0,
+   "cantado": 73,
+   "intervalos": [
+    [
+     10.8,
+     7.1
+    ],
+    [
+     57.4,
+     9.2
+    ],
+    [
+     118.5,
+     17.8
+    ]
+   ],
+   "fim_depois_da_voz": 2.6,
+   "final": "corte seco",
+   "silencio_final": 0.8,
+   "acerto": 82,
+   "nao_reconhecidas": [
+    "rawr",
+    "cuti",
+    "tentaram",
+    "tenta",
+    "pincel",
+    "ponta"
+   ],
+   "pontos_a_conferir": []
+  }
+ },
+ "ouvido": {
+  "Cosquinha de Monstrinho (1)": {
+   "1 começo chama atenção": null,
+   "5 melodia combina com a letra": null,
+   "6 dá vontade de dançar": null,
+   "7 pronúncia natural": null,
+   "8 tem a cara do canal": null,
+   "9 nenhum trecho cansativo": null
+  }
+ },
+ "escolhida": "Cosquinha de Monstrinho (1)"
+}

@@ -435,11 +435,13 @@ def _sem_cortar_topo(y: float, x: float, z0: float, z1: float, atores: dict, gra
         except Exception:
             continue
         d = a.get("depth", 1.3 if graphic else 1.0) * ESCALA
-        t = a.get("y", 1010 if graphic else GROUND) - h * d - margem
+        acoes = {ac.get("do") for ac in a.get("acoes", [])}
+        extra = 95 if acoes & {"jump", "pulinho", "shock_reaction"} else (45 if "rawr" in acoes else 0)   # pulo / esticão do RAWR
+        t = a.get("y", 1010 if graphic else GROUND) - (h + extra) * d - margem
         topo = t if topo is None else min(topo, t)
     if topo is None:
         return y
-    return max(540 / z, min(y, topo + 540 / z))
+    return max(540 / max(1.0, min(z0, z1)), min(y, topo + 540 / z))       # nunca acima do topo do cenário (zoom mínimo)
 
 
 def _props_sem_contorno() -> bool:
@@ -559,6 +561,12 @@ def _plano_scene(p: dict, occ: int, dur: float, plines: list, t0: float, cantam_
         # o destaque nunca passa do fim do próprio plano (senão encavala com o do plano seguinte)
         sc["callouts"] = [{"t": c.get("t", 0.2), "text": c["text"], "dur": round(min(c.get("dur", 1.8), max(0.6, dur - c.get("t", 0.2))), 3),
                            "color": c.get("color", CORES[len(c["text"]) % len(CORES)]), "y": c.get("y", 170)} for c in co]
+        # nem encavala com o PRÓXIMO destaque do mesmo plano (21/11, Fofolucos 02: "M FOFINHO! O!", "FOF TCHAU! OS!")
+        cs = sorted(sc["callouts"], key=lambda c: c["t"])
+        for a, b in zip(cs, cs[1:]):
+            if a.get("y") == b.get("y"):
+                a["dur"] = round(max(0.3, min(a["dur"], b["t"] - a["t"] - 0.05)), 3)
+        sc["callouts"] = cs
     sing = [s for w in atores if w in SING_CAST for s in _sing(plines, t0, t0 + dur, p.get("cantam") or cantam_bloco, w)]
     if sing:
         sc["sing"] = sing

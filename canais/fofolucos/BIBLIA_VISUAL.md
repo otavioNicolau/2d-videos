@@ -33,6 +33,24 @@ Aprovado pelo usuário em 20/11/2026 (turma, cenários, enquadramentos e logo).
 Código: `toonstudio/characters/flat_monstro.py` (mesmo esqueleto de poses da Laurinha: danças, ações, expressões e
 visemas funcionam igual). Nunca pôr um monstrinho na frente de fundo da mesma cor (Teco × roxo, Bilu × azul…).
 
+## 2b. Ações e objetos próprios do canal
+- **`rawr`** — a cara de monstrinho bravo-divertido: garras para cima, dentes, sobrancelha brava, tremidinha.
+- **`fofinho`** (21/11, para a 02) — o contrário do RAWR: mãozinhas juntinhas no peito, **olhão brilhando** (brilho
+  grande + estrelinhas + reflexo lilás no fundo do olho), bochecha corada maior, cabeça balançando devagarinho.
+  Expressão `fofinho` (parâmetro de rosto `fofo`).
+- **`espelho_reflexo`** (21/11, para a 02) — espelho de pé da Vila Monstrinha (moldura roxa com chifrinhos amarelos e
+  bolinhas coloridas) com o **reflexo de verdade** do monstrinho dentro do vidro, virado para quem está na frente.
+  Canais: `quem` (0 bilu … 5 nhoque), `rawr`, `susto`, `fofo`, `vira`, `brilho`, `tam`. Usado na virada da 02: o Bilu
+  faz a careta mais feroz, o reflexo "faz igual" e o Bilu cai sentado de susto.
+- **`cosquinha`** (22/11, para a 03) — sentindo cosquinha: rindo sem parar (olhinhos apertados, boca aberta), mãozinhas
+  na barriga, o corpo contorce de um lado para o outro e quica. Para "segurar o riso" antes: `expr: determined`.
+- **`pena`** (22/11) — pena de cosquinha (rosa/lilás/amarelo, `cor` 1–3), abana com `mexe` (crescendo no tempo) e
+  inclina com `giro`. **Em CLOSE ela vem de FORA, pela direita, e só a ponta encosta** no cantinho (chifrinho,
+  anteninha, bochecha) — no 1º storyboard da 03 ela tapava o rosto (`pena_cab` no roteiro fo03).
+- **`mosquinha`** (22/11) — mosquinha fofa (bolinha azul-escura, olhões, sorriso), asinhas batendo com `asa`;
+  `pousada` 1 fecha as asas. A origem é o pezinho: pousa na ponta do chifrinho do Zuzu em (1300, 335) com ele em x 1300.
+- Closes do **Zuzu** (chifre de unicórnio alto): usar BUSTO — no CABEÇA a câmera sobe pelo chifre e corta a boca.
+
 ## 3. Cenários (próprios, diferentes dos da Laurinha)
 `toonstudio/backgrounds/monstrinho.py` — chapados sem contorno, céu com degradê suave, nuvens fofas, árvores de copa redonda.
 - De história: `mon_parque`, `mon_vila` (Vila Monstrinha: casinhas com chifrinhos e janelas-olho), `mon_quarto`,

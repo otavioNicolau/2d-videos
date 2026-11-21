@@ -451,6 +451,10 @@
         "flash_in": {
           "type": "boolean"
         },
+        "sem_fade_in": {
+          "type": "boolean",
+          "description": "1ª cena sem o fade do preto (abertura do canal começa já no 1º som)"
+        },
         "escurece": {
           "type": "array",
           "items": {

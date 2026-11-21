@@ -1,0 +1,618 @@
+{
+  "schema": "1.1",
+  "id": "marca-vinheta",
+  "projeto": "fofolucos/marca-vinheta",
+  "title": "Vinheta — Fofolucos",
+  "logline": "Peça fixa do canal: abertura de 3,79 s com a repetição 'Fofolucos! Rawr!' do tema (Suno, áudio original).",
+  "fps": 30,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "background": "mon_vila",
+  "soundtrack": {
+    "file": "musica/trabalho.wav",
+    "analysis": "analise/song.json",
+    "start": 0.0,
+    "end": 3.79,
+    "fade_out": 0.0,
+    "beat_grid": "full"
+  },
+  "overlays": {
+    "logo": false
+  },
+  "cast": {
+    "bilu": {
+      "character": "bilu"
+    },
+    "mimi": {
+      "character": "mimi"
+    },
+    "teco": {
+      "character": "teco"
+    },
+    "nhoque": {
+      "character": "nhoque"
+    },
+    "gogo": {
+      "character": "gogo"
+    },
+    "zuzu": {
+      "character": "zuzu"
+    },
+    "logo_fofolucos": {
+      "character": "logo_png"
+    }
+  },
+  "approval": {
+    "storyboard": false,
+    "final_render": false
+  },
+  "scenes": [
+    {
+      "id": "s01_vinheta",
+      "title": "Vinheta Fofolucos",
+      "duration": 3.79,
+      "background": "mon_vila",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540,
+            "zoom": 1.0
+          },
+          {
+            "t": 3.79,
+            "x": 1300,
+            "y": 540,
+            "zoom": 1.05,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.0,
+          "sway": 0,
+          "bounce": 0
+        },
+        "shake": [
+          {
+            "t": 3.07,
+            "dur": 0.35,
+            "amp": 10.0
+          }
+        ]
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "characters": {
+        "bilu": {
+          "start": {
+            "x": 1115,
+            "y": 1700,
+            "turn": 0.15,
+            "expr": "joy",
+            "z": 3,
+            "depth": 0.86
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.38,
+              "do": "dance",
+              "style": "pulinho",
+              "dur": 0.83
+            },
+            {
+              "t": 1.23,
+              "do": "rawr",
+              "dur": 0.72
+            },
+            {
+              "t": 1.97,
+              "do": "dance",
+              "style": "pulinho",
+              "dur": 1.08
+            },
+            {
+              "t": 3.07,
+              "do": "rawr",
+              "dur": 0.72
+            }
+          ],
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "y": 1700
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.14,
+              "pose": {
+                "y": 1700
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.36,
+              "pose": {
+                "y": 965
+              },
+              "ease": "back"
+            }
+          ]
+        },
+        "mimi": {
+          "start": {
+            "x": 1485,
+            "y": 1700,
+            "turn": -0.15,
+            "expr": "joy",
+            "z": 3,
+            "depth": 0.86
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.38,
+              "do": "dance",
+              "style": "pulinho",
+              "dur": 0.83
+            },
+            {
+              "t": 1.23,
+              "do": "rawr",
+              "dur": 0.72
+            },
+            {
+              "t": 1.97,
+              "do": "dance",
+              "style": "pulinho",
+              "dur": 1.08
+            },
+            {
+              "t": 3.1,
+              "do": "rawr",
+              "dur": 0.69
+            }
+          ],
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "y": 1700
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.14,
+              "pose": {
+                "y": 1700
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.36,
+              "pose": {
+                "y": 965
+              },
+              "ease": "back"
+            }
+          ]
+        },
+        "teco": {
+          "start": {
+            "x": 815,
+            "y": 1700,
+            "turn": 0.2,
+            "expr": "joy",
+            "z": 3,
+            "depth": 0.86
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.68,
+              "do": "dance",
+              "style": "pulinho",
+              "dur": 0.53
+            },
+            {
+              "t": 1.23,
+              "do": "rawr",
+              "dur": 0.72
+            },
+            {
+              "t": 1.97,
+              "do": "dance",
+              "style": "pulinho",
+              "dur": 1.08
+            },
+            {
+              "t": 3.13,
+              "do": "rawr",
+              "dur": 0.66
+            }
+          ],
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "y": 1700
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.44,
+              "pose": {
+                "y": 1700
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.66,
+              "pose": {
+                "y": 965
+              },
+              "ease": "back"
+            }
+          ]
+        },
+        "nhoque": {
+          "start": {
+            "x": 1785,
+            "y": 1700,
+            "turn": -0.2,
+            "expr": "joy",
+            "z": 3,
+            "depth": 0.86
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.68,
+              "do": "dance",
+              "style": "pulinho",
+              "dur": 0.53
+            },
+            {
+              "t": 1.23,
+              "do": "rawr",
+              "dur": 0.72
+            },
+            {
+              "t": 1.97,
+              "do": "dance",
+              "style": "pulinho",
+              "dur": 1.08
+            },
+            {
+              "t": 3.07,
+              "do": "rawr",
+              "dur": 0.72
+            }
+          ],
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "y": 1700
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.44,
+              "pose": {
+                "y": 1700
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.66,
+              "pose": {
+                "y": 965
+              },
+              "ease": "back"
+            }
+          ]
+        },
+        "gogo": {
+          "start": {
+            "x": 515,
+            "y": 1700,
+            "turn": 0.25,
+            "expr": "joy",
+            "z": 3,
+            "depth": 0.86
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 1.12,
+              "do": "dance",
+              "style": "pulinho",
+              "dur": 0.09
+            },
+            {
+              "t": 1.23,
+              "do": "rawr",
+              "dur": 0.72
+            },
+            {
+              "t": 1.97,
+              "do": "dance",
+              "style": "pulinho",
+              "dur": 1.08
+            },
+            {
+              "t": 3.1,
+              "do": "rawr",
+              "dur": 0.69
+            }
+          ],
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "y": 1700
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.88,
+              "pose": {
+                "y": 1700
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.1,
+              "pose": {
+                "y": 965
+              },
+              "ease": "back"
+            }
+          ]
+        },
+        "zuzu": {
+          "start": {
+            "x": 2085,
+            "y": 1700,
+            "turn": -0.25,
+            "expr": "joy",
+            "z": 3,
+            "depth": 0.86
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 1.12,
+              "do": "dance",
+              "style": "pulinho",
+              "dur": 0.09
+            },
+            {
+              "t": 1.23,
+              "do": "rawr",
+              "dur": 0.72
+            },
+            {
+              "t": 1.97,
+              "do": "dance",
+              "style": "pulinho",
+              "dur": 1.08
+            },
+            {
+              "t": 3.13,
+              "do": "rawr",
+              "dur": 0.66
+            }
+          ],
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "y": 1700
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.88,
+              "pose": {
+                "y": 1700
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.1,
+              "pose": {
+                "y": 965
+              },
+              "ease": "back"
+            }
+          ]
+        }
+      },
+      "props": {
+        "logo_fofolucos": {
+          "start": {
+            "x": 1300,
+            "y": 770,
+            "z": 1,
+            "escala": 0.0,
+            "depth": 0.9
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "escala": 0.0,
+                "giro": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.18,
+              "pose": {
+                "escala": 1.12
+              },
+              "ease": "out"
+            },
+            {
+              "t": 0.34,
+              "pose": {
+                "escala": 1.0
+              },
+              "ease": "inout"
+            },
+            {
+              "t": 1.23,
+              "pose": {
+                "escala": 1.0,
+                "giro": 0.0
+              }
+            },
+            {
+              "t": 1.33,
+              "pose": {
+                "escala": 1.08,
+                "giro": 0.035
+              },
+              "ease": "out"
+            },
+            {
+              "t": 1.47,
+              "pose": {
+                "escala": 1.0,
+                "giro": -0.02
+              },
+              "ease": "inout"
+            },
+            {
+              "t": 1.63,
+              "pose": {
+                "giro": 0.0
+              },
+              "ease": "inout"
+            },
+            {
+              "t": 1.97,
+              "pose": {
+                "escala": 1.0
+              }
+            },
+            {
+              "t": 2.05,
+              "pose": {
+                "escala": 1.04
+              },
+              "ease": "out"
+            },
+            {
+              "t": 2.17,
+              "pose": {
+                "escala": 1.0
+              },
+              "ease": "inout"
+            },
+            {
+              "t": 2.25,
+              "pose": {
+                "escala": 1.0
+              }
+            },
+            {
+              "t": 2.33,
+              "pose": {
+                "escala": 1.04
+              },
+              "ease": "out"
+            },
+            {
+              "t": 2.45,
+              "pose": {
+                "escala": 1.0
+              },
+              "ease": "inout"
+            },
+            {
+              "t": 2.69,
+              "pose": {
+                "escala": 1.0
+              }
+            },
+            {
+              "t": 2.77,
+              "pose": {
+                "escala": 1.04
+              },
+              "ease": "out"
+            },
+            {
+              "t": 2.81,
+              "pose": {
+                "escala": 1.0
+              }
+            },
+            {
+              "t": 2.89,
+              "pose": {
+                "escala": 1.0
+              },
+              "ease": "inout"
+            },
+            {
+              "t": 2.89,
+              "pose": {
+                "escala": 1.04
+              },
+              "ease": "out"
+            },
+            {
+              "t": 3.01,
+              "pose": {
+                "escala": 1.0
+              },
+              "ease": "inout"
+            },
+            {
+              "t": 3.07,
+              "pose": {
+                "escala": 1.0,
+                "giro": 0.0
+              }
+            },
+            {
+              "t": 3.17,
+              "pose": {
+                "escala": 1.08,
+                "giro": 0.035
+              },
+              "ease": "out"
+            },
+            {
+              "t": 3.31,
+              "pose": {
+                "escala": 1.0,
+                "giro": -0.02
+              },
+              "ease": "inout"
+            },
+            {
+              "t": 3.47,
+              "pose": {
+                "giro": 0.0
+              },
+              "ease": "inout"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

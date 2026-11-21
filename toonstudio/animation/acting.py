@@ -393,6 +393,45 @@ def rawr(char, st, a):
     return ActionResult(keys=keys, dur=d, ex=1)
 
 
+@action("fofinho", "acting", "CARINHA FOFINHO (Fofolucos 02, o contrário do RAWR): mãozinhas juntinhas embaixo do queixo, "
+        "olhão brilhando, bochecha corada, cabeça inclinando de um lado para o outro devagarinho.", {"dur": "s"})
+def fofinho(char, st, a):
+    d = _d(a, 1.6)
+    junto = {"hand_n_x": 15, "hand_n_y": 20, "hand_n_bend": 0.9, "paw_n": 3, "hand_f_x": -15, "hand_f_y": 20,
+             "hand_f_bend": -0.9, "paw_f": 3}
+    keys = [(0.0, {}, "step"),
+            (0.3, {**junto, **expression("fofinho"), "mouth": "X", "body_y": 6, "squash": 0.97, "lean": 0.0,
+                   "brow_l": -0.25, "brow_r": -0.25}, "back")]
+    t, k = 0.3, 0
+    while t < d - 0.35:                                   # balancinho fofo da cabeça
+        t += 0.45
+        k += 1
+        keys.append((round(min(t, d - 0.1), 3), {"head_tilt": 0.12 if k % 2 else -0.12}, "inout"))
+    keys.append((d, {"head_tilt": 0.0, "body_y": 0, "squash": 1.0}, "inout"))
+    return ActionResult(keys=keys, dur=d, ex=1)
+
+
+@action("cosquinha", "acting", "SENTINDO COSQUINHA (Fofolucos 03): rindo sem parar (olhinhos apertados, boca aberta), "
+        "mãozinhas na barriga, o corpo se contorce de um lado para o outro e quica — não aguenta!", {"dur": "s"})
+def cosquinha(char, st, a):
+    d = _d(a, 1.6)
+    barriga = {"hand_n_x": 25, "hand_n_y": 50, "hand_n_bend": 0.7, "paw_n": 3, "hand_f_x": -25, "hand_f_y": 50,
+               "hand_f_bend": -0.7, "paw_f": 3}
+    keys = [(0.0, {}, "step"),
+            (0.15, {**barriga, **expression("laughing"), "mouth": "D", "jaw": 0.6, "body_y": 10, "squash": 0.93}, "back")]
+    t, k = 0.15, 0
+    while t < d - 0.3:                                    # contorce: lado a lado + quique, cabeça balançando
+        t += 0.13
+        k += 1
+        lado = 1 if k % 2 else -1
+        keys.append((round(min(t, d - 0.12), 3), {"body_x": 9 * lado, "lean": 0.1 * lado, "head_tilt": -0.1 * lado,
+                                                   "body_y": 4 if k % 2 else 14, "squash": 1.03 if k % 2 else 0.94,
+                                                   "jaw": 0.45 if k % 3 else 0.7}, "inout"))
+    keys.append((d, {"body_x": 0, "lean": 0.0, "head_tilt": 0.0, "body_y": 0, "squash": 1.0, "jaw": 0.0, "mouth": "X",
+                     **expression("joy")}, "inout"))
+    return ActionResult(keys=keys, dur=d, ex=1)
+
+
 @action("tampar_nariz", "acting", "Tampa o nariz com a mão da frente (bafinho!), olhinhos apertados, cabeça para trás.",
         {"dur": "s"})
 def tampar_nariz(char, st, a):
