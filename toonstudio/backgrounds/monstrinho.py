@@ -115,7 +115,7 @@ def _ceu_campo(p: P, rng, ceu=("#38A8F5", "#BDE6FF"), morro=("#7FD35E", "#5DBB45
 
 
 def parque(rng):
-    s, c = _surf(W_INT, H, 1.5)
+    s, c = _surf(W_INT, H, ESC_CENA)
     p = P(c)
     _ceu_campo(p, rng)
     for x, h in ((180, 520), (640, 430), (1880, 470), (2420, 540)):
@@ -129,7 +129,7 @@ def parque(rng):
 
 def vila(rng):
     """Vila Monstrinha: casinhas coloridas com CHIFRINHOS no telhado e janelas redondas (olhos)."""
-    s, c = _surf(W_INT, H, 1.5)
+    s, c = _surf(W_INT, H, ESC_CENA)
     p = P(c)
     p.grad_v(0, 0, W_INT, CHAO_Y, "#3DB2FF", "#C9EEFF")
     for x, y, s_ in ((350, 140, 1.0), (1300, 100, 1.2), (2200, 160, 0.9)):
@@ -158,7 +158,7 @@ def vila(rng):
 
 
 def quarto(rng):
-    s, c = _surf(W_INT, H, 1.5)
+    s, c = _surf(W_INT, H, ESC_CENA)
     p = P(c)
     p.rect(0, 0, W_INT, CHAO_Y, "#7FD8C8")
     for x in range(0, W_INT, 120):                                                # listras da parede
@@ -184,7 +184,7 @@ def quarto(rng):
 
 
 def palco(rng):
-    s, c = _surf(W_INT, H, 1.5)
+    s, c = _surf(W_INT, H, ESC_CENA)
     p = P(c)
     p.grad_r(1300, 420, 1400, "#8E44E0", "#2A0E5C")
     cores = ["#FF5CA8", "#FFD23F", "#2ECC9A", "#2E9BFF", "#FF8A3D"]
@@ -209,7 +209,7 @@ def palco(rng):
 
 
 def noite(rng):
-    s, c = _surf(W_INT, H, 1.5)
+    s, c = _surf(W_INT, H, ESC_CENA)
     p = P(c)
     p.grad_v(0, 0, W_INT, CHAO_Y, "#160B4A", "#5B2A9E")
     p.circ(2050, 230, 120, "#FFF2A8")
@@ -231,7 +231,7 @@ def noite(rng):
 
 
 def escola(rng):
-    s, c = _surf(W_INT, H, 1.5)
+    s, c = _surf(W_INT, H, ESC_CENA)
     p = P(c)
     p.rect(0, 0, W_INT, CHAO_Y, "#FFE38A")
     p.rect(0, CHAO_Y - 220, W_INT, CHAO_Y, "#FFC94D")                             # rodapé alto
@@ -260,7 +260,7 @@ def escola(rng):
 
 
 def cozinha(rng):
-    s, c = _surf(W_INT, H, 1.5)
+    s, c = _surf(W_INT, H, ESC_CENA)
     p = P(c)
     p.rect(0, 0, W_INT, CHAO_Y, "#FF9E80")
     for x in range(0, W_INT, 100):                                               # azulejos em losango (sem contorno: tons)
@@ -296,7 +296,7 @@ def _raios(cor, scale):
     c0, c1 = CORES[cor]
     s0, c = _surf(GW, GH, scale)
     P(c).grad_r(GW / 2, GH / 2, GW * 0.7, c1, c0, GW, GH)
-    s1, c = _surf(3000, 3000, scale)
+    s1, c = _surf(3000, 3000, scale * ESC_RAIOS)
     p = P(c)
     n = 16
     for j in range(n):                                                            # raios em ESPIRAL (curvos)
@@ -342,13 +342,18 @@ def _brilho(cor, scale, rng):
     return s
 
 
+# 21/11: cenários de história desenhados a 2,2x (antes 1,5x): os closes do canal (zoom ~2x) ficavam serrilhados
+ESC_CENA = 2.2
+ESC_RAIOS = 1.7         # espiral: aparece a 1/0,6 do desenho → desenhada já nesse tamanho (antes ampliava 1,67x)
+
+
 def build(bg_id: str, out_dir: Path, scale: float = 1.5, seed: int = 7) -> dict:
     out_dir.mkdir(parents=True, exist_ok=True)
     rng = np.random.default_rng(seed)
     if bg_id in SCENES:
         s, w = SCENES[bg_id](rng)
         s.makeImageSnapshot().save(str(out_dir / "MG_cena.png"), skia.kPNG)
-        meta = {"id": bg_id, "name": bg_id.replace("mon_", "Fofolucos — "), "width": w, "height": H, "scale": scale,
+        meta = {"id": bg_id, "name": bg_id.replace("mon_", "Fofolucos — "), "width": w, "height": H, "scale": ESC_CENA,
                 "landmarks": {"ground_y": 930, "floor_y": CHAO_Y}, "estilo": "canais/fofolucos/BIBLIA_VISUAL.md",
                 "layers": [{"name": "MG_cena", "file": "MG_cena.png", "parallax": 1.0, "z": -20, "width": w, "height": H}]}
     else:
@@ -361,7 +366,7 @@ def build(bg_id: str, out_dir: Path, scale: float = 1.5, seed: int = 7) -> dict:
             s1.makeImageSnapshot().save(str(out_dir / "BG_raios.png"), skia.kPNG)
             meta["layers"] += [{"name": "BG_cor", "file": "BG_cor.png", "parallax": 0.0, "z": -50, "width": GW, "height": GH, "fixed": True},
                                {"name": "BG_raios", "file": "BG_raios.png", "parallax": 0.0, "z": -49, "width": 3000, "height": 3000,
-                                "fixed": True, "scale_override": 0.6, "spin_per_beat": 5.0, "center": True}]
+                                "fixed": True, "scale_override": 0.6 * ESC_RAIOS, "spin_per_beat": 5.0, "center": True}]
         elif kind == "xadrez":
             s0, w_, h_, per = _xadrez(cor, 1.0)
             s0.makeImageSnapshot().save(str(out_dir / "BG_padrao.png"), skia.kPNG)

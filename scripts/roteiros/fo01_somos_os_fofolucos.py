@@ -30,12 +30,12 @@ def dur(T):
 
 
 # ── enquadramentos (bíblia §4) ──
-def cab(x=1300):                       # CABEÇA: cabeça e peito enchendo a tela
-    return {"x": x, "y": 515, "zoom": 2.2, "zoom_fim": 2.32}
+def cab(x=1300):                       # CABEÇA: cabeça e peito enchendo a tela (21/11: 2,2→1,85, chifres cabem)
+    return {"x": x, "y": 500, "zoom": 1.85, "zoom_fim": 1.95}
 
 
-def busto(x=1300, y=650):              # BUSTO: corte na cintura
-    return {"x": x, "y": y, "zoom": 1.75, "zoom_fim": 1.85}
+def busto(x=1300, y=560):              # BUSTO: corte na cintura (21/11: 1,75→1,55; a câmera sobe para mostrar o chifre)
+    return {"x": x, "y": y, "zoom": 1.55, "zoom_fim": 1.62}
 
 
 def corpo(x=1300, x_fim=None):         # CORPO TODO
@@ -90,7 +90,7 @@ def num(d, n, x=2050, y=330):
 
 def banda(cen, d, cam=None, extra=None):
     """a banda da turma: Bilu na bateria, Zuzu no teclado (+ quem mais dançar em `extra`)."""
-    p = R.banda(cen, d, teclado=True, sax=ZU, bateria=BI, cam=cam or {"x": 1250, "y": 620, "zoom": 1.15, "zoom_fim": 1.05}, extra=extra)
+    p = R.banda(cen, d, teclado=True, sax=ZU, bateria=BI, cam=cam or {"x": 1350, "y": 600, "zoom": 1.0, "zoom_fim": 1.04}, extra=extra)
     p["cantam"] = [ZU]
     return p
 
@@ -104,14 +104,14 @@ R.partes["intro"] = [
     {"linhas": 1, "cenario": VILA, "camera": cab(1300), "flash": True, "callout": [call(0.1, "FOFOLUCOS!", "roxo")], "cantam": [BI],
      "atores": {BI: a(1300, ("rawr", 0.1))}},
     {"linhas": 1, "cenario": PARQUE, "camera": busto(1300), "callout": [call(0.2, "RAWR!", "laranja")], "cantam": [MI],
-     "atores": {MI: a(1050, ("rawr", 0.0), turn=0.25), ZU: a(1550, ("rawr", 0.2), turn=-0.25)}},
+     "atores": {MI: a(900, ("rawr", 0.0), turn=0.25), ZU: a(1700, ("rawr", 0.2), turn=-0.25)}},
     {"linhas": 1, "seg": 2.6, "cenario": RAIOS["laranja"], "camera": GCAM, "fx": ["confete"], "cantam": [TE],
      "callout": [call(0.2, "FOFINHO E MALUQUINHO!", "rosa")],
      "atores": {TE: g(210, ("dance", 0.0, "festa"), turn=0.2), GO: g(710, ("dance", 0.1, "pulinho")), MI: g(1210, ("dance", 0.0, "bracos")),
                 NH: g(1710, ("dance", 0.15, "festa"), turn=-0.2)}},
     {**banda(PALCO, 3.0), "titulo": "a banda da turma"},
-    {**banda(PALCO, max(0.6, d[5]), cam={"x": 1300, "y": 560, "zoom": 1.0, "zoom_fim": 1.1},
-             extra={TE: a(2250, ("dance", 0.0, "festa"), turn=-0.3)}), "titulo": "teclado e bateria"},
+    {**banda(PALCO, max(0.6, d[5]), cam={"x": 1350, "y": 560, "zoom": 1.0, "zoom_fim": 1.06},
+             extra={TE: a(2300, ("dance", 0.0, "festa"), turn=-0.3)}), "titulo": "teclado e bateria"},
 ]
 
 
@@ -123,11 +123,11 @@ R.partes["verso#1"] = [
      "atores": {BI: a(300, ("walk", 0.0), turn=0.3) | {"acoes": [{"t": 0.0, "do": "walk", "to_x": 1100, "dur": 2.4},
                                                                   {"t": 2.5, "do": "wave", "dur": "resto"}]},
                 TE: a(2300, ("wave", 0.3), turn=-0.3)}},
-    {"linhas": 1, "cenario": VILA, "camera": {"x": 1300, "y": 600, "zoom": 1.4, "zoom_fim": 1.48}, "tremor": [1.4], "callout": [call(0.6, "DE ARREPIAR!", "laranja")], "cantam": [GO],
-     "atores": {GO: a(850, ("dance", 0.0, "treme"), turn=0.25), MI: a(1300, ("dance", 0.1, "treme")), NH: a(1750, ("dance", 0.2, "treme"), turn=-0.25)}},
-    R.dividida({"cenario": PARQUE, "camera": {"x": 1300, "y": 500, "zoom": 2.0, "zoom_fim": 2.1}, "cantam": [ZU],
+    {"linhas": 1, "cenario": VILA, "camera": {"x": 1300, "y": 600, "zoom": 1.15, "zoom_fim": 1.2}, "tremor": [1.4], "callout": [call(0.6, "DE ARREPIAR!", "laranja")], "cantam": [GO],
+     "atores": {GO: a(640, ("dance", 0.0, "treme"), turn=0.25), MI: a(1300, ("dance", 0.1, "treme")), NH: a(1960, ("dance", 0.2, "treme"), turn=-0.25)}},
+    R.dividida({"cenario": PARQUE, "camera": {"x": 1300, "y": 500, "zoom": 1.8, "zoom_fim": 1.88}, "cantam": [ZU],
                 "objetos": {"m": anel(d[2], 1300, 300, cor=0)}, "atores": {ZU: a(1300, ("dance", 0.0, "cabeca"))}},
-               {"cenario": ESCOLA, "camera": {"x": 1300, "y": 500, "zoom": 2.0, "zoom_fim": 2.1},
+               {"cenario": ESCOLA, "camera": {"x": 1300, "y": 500, "zoom": 1.8, "zoom_fim": 1.88},
                 "objetos": {"m": anel(d[2], 1300, 300, cor=2)}, "atores": {TE: a(1300, ("dance", 0.0, "cabeca"))}},
                linhas=1, layout="vertical", callout=[call(0.2, "CHIFRE!", "amarelo"), call(1.4, "ANTENA!", "azul")]),
     {"linhas": 1, "cenario": COZ, "camera": cab(1300), "callout": [call(0.3, "DENTINHO!", "vermelho")], "cantam": [NH],
@@ -160,12 +160,12 @@ def refrao(n):
         dd = round(t1 - t0, 2)
         meio = round(dd * 0.45, 2)
         if i == 4:
-            p = {**banda(PALCO, dd, cam={"x": 1350, "y": 600, "zoom": 1.2, "zoom_fim": 1.1},
-                         extra={NH: a(350, ("dance", 0.0, "festa"), turn=0.3)}), "titulo": "a banda"}
+            p = {**banda(PALCO, dd, cam={"x": 1350, "y": 600, "zoom": 1.04, "zoom_fim": 1.0},
+                         extra={NH: a(2300, ("dance", 0.0, "festa"), turn=-0.3)}), "titulo": "a banda"}
             out.append(p)
             continue
         if n == 3 and i in (1, 3):
-            p = banda(PALCO, dd, extra={(MI if i == 1 else NH): a(2250, ("rawr", meio), turn=-0.3)})
+            p = banda(PALCO, dd, extra={(MI if i == 1 else NH): a(2300, ("rawr", meio), turn=-0.3)})
             p.pop("seg")
             p.update({"linhas": 2, "callout": [call(0.2, "FOFOLUCOS!", "roxo")]})
         elif i == 0:                                       # a turma inteira faz a cara de monstro (corpo todo, fundo de raios)
@@ -177,24 +177,24 @@ def refrao(n):
             if n == 1:
                 p["flash"] = True
         elif i == 1:                                       # mostra a garrinha! (busto, dois monstrinhos)
-            p = {"linhas": 2, "cenario": CEN_REF[n][1], "camera": busto(1300, 630), "cantam": [MI],
+            p = {"linhas": 2, "cenario": CEN_REF[n][1], "camera": busto(1300), "cantam": [MI],
                  "callout": [call(meio, "MOSTRA A GARRINHA!", "rosa")],
-                 "atores": {MI: a(1000, ("dance", 0.0, "bracos"), ("rawr", meio), turn=0.25),
-                            GO: a(1600, ("dance", 0.1, "bracos"), ("rawr", meio + 0.1), turn=-0.25)}}
+                 "atores": {MI: a(900, ("dance", 0.0, "bracos"), ("rawr", meio), turn=0.25),
+                            GO: a(1700, ("dance", 0.1, "bracos"), ("rawr", meio + 0.1), turn=-0.25)}}
         elif i == 2:                                       # faz a cara de monstro! (tela dividida em CABEÇA)
             pa, pb = ((BI, NOITE), (NH, COZ)) if n != 2 else ((ZU, VILA), (TE, QUARTO))
-            p = R.dividida({"cenario": pa[1], "camera": {"x": 1300, "y": 560, "zoom": 2.0, "zoom_fim": 2.15}, "cantam": [pa[0]],
+            p = R.dividida({"cenario": pa[1], "camera": {"x": 1300, "y": 520, "zoom": 1.8, "zoom_fim": 1.9}, "cantam": [pa[0]],
                             "atores": {pa[0]: a(1300, ("rawr", 0.2))}},
-                           {"cenario": pb[1], "camera": {"x": 1300, "y": 560, "zoom": 2.0, "zoom_fim": 2.15},
+                           {"cenario": pb[1], "camera": {"x": 1300, "y": 520, "zoom": 1.8, "zoom_fim": 1.9},
                             "atores": {pb[0]: a(1300, ("rawr", meio))}},
                            linhas=2, layout="diagonal" if n % 2 else "vertical", callout=[call(meio, "RAWR!", "vermelho")])
         else:                                              # fofinho e maluquinho! (corpo todo, a turma ri e dança)
             p = {"linhas": 2, "cenario": (PARQUE, VILA, PARQUE)[n - 1], "camera": corpo(1300), "fx": ["confete"], "cantam": [TE],
                  "callout": [call(meio, "FOFINHO E MALUQUINHO!", "rosa")],
-                 "atores": {TE: a(350, ("dance", 0.0, "festa"), ("laugh", meio), turn=0.3),
-                            ZU: a(850, ("dance", 0.1, "pulinho"), turn=0.2),
-                            MI: a(1750, ("dance", 0.0, "cintura"), ("laugh", meio + 0.2), turn=-0.2),
-                            GO: a(2250, ("dance", 0.15, "roda"), turn=-0.3)}}
+                 "atores": {TE: a(378, ("dance", 0.0, "festa"), ("laugh", meio), turn=0.3),
+                            ZU: a(993, ("dance", 0.1, "pulinho"), turn=0.2),
+                            MI: a(1607, ("dance", 0.0, "cintura"), ("laugh", meio + 0.2), turn=-0.2),
+                            GO: a(2222, ("dance", 0.15, "roda"), turn=-0.3)}}
         out.append(p)
     return out
 
@@ -209,7 +209,7 @@ def intervalo(key, n):
     D = b["e"] - b["s"]
     if not bl:
         s1 = round(D / 2, 2)
-        return [{**banda(PALCO, s1, extra={MI: a(2250, ("dance", 0.0, "festa"), turn=-0.3)}), "titulo": "a banda"},
+        return [{**banda(PALCO, s1, extra={MI: a(2300, ("dance", 0.0, "festa"), turn=-0.3)}), "titulo": "a banda"},
                 {"seg": round(D - s1, 2), "cenario": "mon_brilho_laranja", "camera": GCAM, "fx": ["confete"], "titulo": "a turma dança",
                  "cantam": [GO],
                  "atores": {GO: g(210, ("dance", 0.0, "roda")), TE: g(710, ("dance", 0.1, "pulinho")), NH: g(1210, ("dance", 0.0, "festa")),
@@ -226,8 +226,8 @@ def intervalo(key, n):
                        NH: g(1540, ("dance", 0.0, "palmas"), turn=-0.2)}}]
     resto = round(D - p1 - p2, 2)
     if resto >= 0.6:
-        out.append({**banda(PALCO, resto, cam={"x": 1300, "y": 560, "zoom": 1.05, "zoom_fim": 1.15},
-                            extra={GO: a(350, ("dance", 0.0, "bracos"), turn=0.3)}), "titulo": "teclado e bateria"})
+        out.append({**banda(PALCO, resto, cam={"x": 1350, "y": 560, "zoom": 1.0, "zoom_fim": 1.06},
+                            extra={GO: a(2300, ("dance", 0.0, "bracos"), turn=-0.3)}), "titulo": "teclado e bateria"})
     return out
 
 
@@ -241,7 +241,7 @@ dp = dur(T)
 R.partes["ponte#1"] = [
     {"linhas": 1, "cenario": COZ, "camera": cab(1300), "callout": [call(0.1, "MOSTRA O DENTE!", "branco" if False else "vermelho")], "cantam": [NH],
      "atores": {NH: a(1300, ("rawr", 0.0))}},
-    {"linhas": 1, "cenario": PARQUE, "camera": busto(1300, 600), "callout": [call(0.1, "MOSTRA A GARRA!", "rosa")], "cantam": [MI],
+    {"linhas": 1, "cenario": PARQUE, "camera": busto(1300), "callout": [call(0.1, "MOSTRA A GARRA!", "rosa")], "cantam": [MI],
      "atores": {MI: a(1300, ("rawr", 0.0))}},
     {"linhas": 1, "cenario": RAIOS["vermelho"], "camera": GCAM, "callout": [call(0.1, "BALANÇA O RABO!", "verde")], "cantam": [GO],
      "atores": {GO: g(700, ("dance", 0.0, "cintura"), turn=-0.75), ZU: g(1250, ("dance", 0.1, "cintura"), turn=0.75)}},
@@ -263,11 +263,11 @@ R.partes["verso#2"] = [
      "objetos": {"ce": {"id": "cerquinha", "x": 1300, "y": 960, "z": 4, "depth": 1.0}},
      "atores": {MI: {"x": 700, "turn": 0.3, "acoes": [{"t": 0.0, "do": "run", "to_x": 1100, "dur": 0.6},
                                                      {"t": 0.6, "do": "jump", "dur": "resto"}]}}},
-    {"linhas": 1, "cenario": VILA, "camera": {"x": 1300, "y": 600, "zoom": 1.4, "zoom_fim": 1.48}, "callout": [call(0.4, "MEDO? NADA!", "laranja")], "cantam": [ZU],
-     "atores": {ZU: a(850, ("bacana", 0.1), turn=0.25), BI: a(1300, ("bacana", 0.2)), NH: a(1750, ("bacana", 0.3), turn=-0.25)}},
-    {"linhas": 1, "cenario": NOITE, "camera": busto(1300, 640), "escurece": [0.0, 0.35], "callout": [call(0.4, "DO ESCURO!", "azul")],
+    {"linhas": 1, "cenario": VILA, "camera": {"x": 1300, "y": 600, "zoom": 1.15, "zoom_fim": 1.2}, "callout": [call(0.4, "MEDO? NADA!", "laranja")], "cantam": [ZU],
+     "atores": {ZU: a(640, ("bacana", 0.1), turn=0.25), BI: a(1300, ("bacana", 0.2)), NH: a(1960, ("bacana", 0.3), turn=-0.25)}},
+    {"linhas": 1, "cenario": NOITE, "camera": busto(1300), "escurece": [0.0, 0.35], "callout": [call(0.4, "DO ESCURO!", "azul")],
      "cantam": [TE],
-     "atores": {TE: a(1000, ("shock_reaction", 0.3), turn=0.25, expr="scared"), MI: a(1600, ("shock_reaction", 0.5), turn=-0.25, expr="scared")}},
+     "atores": {TE: a(900, ("shock_reaction", 0.3), turn=0.25, expr="scared"), MI: a(1700, ("shock_reaction", 0.5), turn=-0.25, expr="scared")}},
     {"linhas": 1, "cenario": QUARTO, "camera": corpo(1300), "escurece": [0.45, 0.0], "callout": [call(0.4, "LANTERNA!", "amarelo")],
      "cantam": [BI],
      "objetos": {"l": obj("lanterna", 900, 960, 0.9, d[4], z=5, fixo={"liga": 0.0, "dir": -0.04}, pts={"liga": [(0.5, 1.0)]})},
@@ -275,16 +275,16 @@ R.partes["verso#2"] = [
     {"linhas": 1, "cenario": QUARTO, "camera": corpo(1300), "tremor": [0.3], "flash": True, "callout": [call(0.2, "AI!", "vermelho")],
      "cantam": [TE],
      "objetos": {"l": obj("lanterna", 2350, 960, 0.8, d[5], z=5, fixo={"liga": 1.0, "dir": 0.5})},
-     "atores": {TE: a(500, ("jump", 0.0), turn=0.3, expr="surprised"), GO: a(1000, ("jump", 0.1), turn=0.2, expr="surprised"),
-                ZU: a(1500, ("jump", 0.05), turn=-0.2, expr="surprised")}},
+     "atores": {TE: a(450, ("jump", 0.0), turn=0.3, expr="surprised"), GO: a(1150, ("jump", 0.1), turn=0.2, expr="surprised"),
+                ZU: a(1850, ("jump", 0.05), turn=-0.2, expr="surprised")}},
     R.dividida({"cenario": NOITE, "camera": {"x": 1300, "y": 600, "zoom": 1.6, "zoom_fim": 1.7}, "cantam": [TE],
                 "atores": {TE: a(1300, ("shock_reaction", 0.1), expr="scared")}},
                {"cenario": PARQUE, "camera": {"x": 1300, "y": 600, "zoom": 1.6, "zoom_fim": 1.7},
                 "atores": {MI: a(1300, ("laugh", 0.1))}},
                linhas=1, layout="diagonal", callout=[call(0.3, "FOFINHO E MEDROSO!", "rosa")]),
     {"linhas": 1, "cenario": PARQUE, "camera": corpo(1300), "fx": ["estrelas"], "callout": [call(0.4, "NUNCA VI!", "laranja")], "cantam": [NH],
-     "atores": {NH: a(400, ("laugh", 0.0), turn=0.3), BI: a(900, ("dance", 0.1, "pulinho"), turn=0.2),
-                TE: a(1700, ("laugh", 0.2), turn=-0.2), GO: a(2200, ("dance", 0.0, "festa"), turn=-0.3)}},
+     "atores": {NH: a(378, ("laugh", 0.0), turn=0.3), BI: a(993, ("dance", 0.1, "pulinho"), turn=0.2),
+                TE: a(1607, ("laugh", 0.2), turn=-0.2), GO: a(2222, ("dance", 0.0, "festa"), turn=-0.3)}},
 ]
 
 # ───────── final: convite + tchau (Rawr!) ─────────
@@ -296,8 +296,8 @@ R.partes["final#1"] = [
     {"linhas": 1, "cenario": "mon_brilho_rosa", "camera": GCAM, "callout": [call(0.3, "DÁ UM JOINHA!", "azul")], "fx": ["estrelas"], "cantam": [ZU],
      "objetos": {"joinha": {"x": 1380, "y": 900, "z": 3, "depth": 1.3, "keys": [{"t": 0.0, "pose": {"escala": 0.0}}, {"t": 0.4, "pose": {"escala": 1.0}, "ease": "back"}]}},
      "atores": {ZU: g(640, ("bacana", 0.2), turn=0.2) | {"depth": 1.0}}},
-    {"linhas": 1, "cenario": VILA, "camera": busto(1300, 640), "callout": [call(0.3, "CHAMA O PAPAI E A MAMÃE!", "verde")], "cantam": [MI],
-     "atores": {MI: a(1000, ("point", 0.1), turn=0.3), TE: a(1600, ("wave", 0.2), turn=-0.25)}},
+    {"linhas": 1, "cenario": VILA, "camera": busto(1300), "callout": [call(0.3, "CHAMA O PAPAI E A MAMÃE!", "verde")], "cantam": [MI],
+     "atores": {MI: a(900, ("point", 0.1), turn=0.3), TE: a(1700, ("wave", 0.2), turn=-0.25)}},
     {"linhas": 1, "cenario": RAIOS["vermelho"], "camera": GCAM, "callout": [call(0.5, "INSCREVA-SE!", "vermelho")], "fx": ["coracoes"], "cantam": [GO],
      "objetos": {"botao": {"id": "botao_inscrever", "x": 1260, "y": 760, "z": 3, "depth": 1.2,
                            "keys": [{"t": 0.0, "pose": {"escala": 0.0, "aperta": 0.0}}, {"t": 0.4, "pose": {"escala": 1.0}, "ease": "back"},
@@ -309,8 +309,9 @@ dfim = round(f1 - f0, 2)
 R.partes["final#2"] = [
     {"linhas": 1, "seg": 3.6, "cenario": VILA, "camera": corpo(1300), "fx": ["coracoes"], "cantam": [BI],
      "callout": [call(0.2, "FOFOLUCOS!", "roxo"), call(1.5, "TCHAU!", "amarelo")],
-     "atores": {c: a(x, ("wave", 0.0 + 0.1 * k), turn=tn, depth=0.78) for k, (c, x, tn) in
-                enumerate(((TE, 260, 0.3), (GO, 676, 0.25), (BI, 1092, 0.1), (MI, 1508, -0.1), (ZU, 1924, -0.25), (NH, 2340, -0.3)))}},
+     "atores": {c: a(x, ("wave", 0.0 + 0.1 * k), turn=tn, y=y, depth=dp, z=zz) for k, (c, x, y, dp, zz, tn) in
+                enumerate(((TE, 400, 880, 0.62, 2, 0.3), (GO, 1000, 880, 0.62, 2, 0.15), (BI, 1600, 880, 0.62, 2, -0.15),
+                           (ZU, 2200, 880, 0.62, 2, -0.3), (MI, 700, 975, 0.74, 3, 0.2), (NH, 1900, 975, 0.74, 3, -0.2)))}},
     {"seg": round(dfim - 3.6, 2), "cenario": NOITE, "camera": cab(1300), "flash": True, "callout": [call(0.2, "RAWR!", "vermelho")],
      "titulo": "o último RAWR", "cantam": [NH], "atores": {NH: a(1300, ("rawr", 0.1))}},
 ]

@@ -75,9 +75,9 @@
     "cenario": "mon_vila",
     "camera": {
      "x": 1300,
-     "y": 515,
-     "zoom": 2.2,
-     "zoom_fim": 2.32
+     "y": 500,
+     "zoom": 1.85,
+     "zoom_fim": 1.95
     },
     "flash": true,
     "callout": [
@@ -136,9 +136,9 @@
     "cenario": "mon_parque",
     "camera": {
      "x": 1300,
-     "y": 650,
-     "zoom": 1.75,
-     "zoom_fim": 1.85
+     "y": 560,
+     "zoom": 1.55,
+     "zoom_fim": 1.62
     },
     "callout": [
      {
@@ -152,7 +152,7 @@
     ],
     "atores": {
      "mimi": {
-      "x": 1050,
+      "x": 900,
       "turn": 0.25,
       "acoes": [
        {
@@ -163,7 +163,7 @@
       ]
      },
      "zuzu": {
-      "x": 1550,
+      "x": 1700,
       "turn": -0.25,
       "acoes": [
        {
@@ -324,10 +324,10 @@
     "seg": 3.0,
     "cenario": "mon_palco",
     "camera": {
-     "x": 1250,
-     "y": 620,
-     "zoom": 1.15,
-     "zoom_fim": 1.05
+     "x": 1350,
+     "y": 600,
+     "zoom": 1.0,
+     "zoom_fim": 1.04
     },
     "fx": [
      "notas"
@@ -414,10 +414,10 @@
     "seg": 3.27,
     "cenario": "mon_palco",
     "camera": {
-     "x": 1300,
+     "x": 1350,
      "y": 560,
      "zoom": 1.0,
-     "zoom_fim": 1.1
+     "zoom_fim": 1.06
     },
     "fx": [
      "notas"
@@ -495,7 +495,7 @@
       ]
      },
      "teco": {
-      "x": 2250,
+      "x": 2300,
       "turn": -0.3,
       "acoes": [
        {
@@ -598,8 +598,8 @@
     "camera": {
      "x": 1300,
      "y": 600,
-     "zoom": 1.4,
-     "zoom_fim": 1.48
+     "zoom": 1.15,
+     "zoom_fim": 1.2
     },
     "tremor": [
      1.4
@@ -616,7 +616,7 @@
     ],
     "atores": {
      "gogo": {
-      "x": 850,
+      "x": 640,
       "turn": 0.25,
       "acoes": [
        {
@@ -640,7 +640,7 @@
       ]
      },
      "nhoque": {
-      "x": 1750,
+      "x": 1960,
       "turn": -0.25,
       "acoes": [
        {
@@ -689,8 +689,8 @@
        "camera": {
         "x": 1300,
         "y": 500,
-        "zoom": 2.0,
-        "zoom_fim": 2.1
+        "zoom": 1.8,
+        "zoom_fim": 1.88
        },
        "cantam": [
         "zuzu"
@@ -824,8 +824,8 @@
        "camera": {
         "x": 1300,
         "y": 500,
-        "zoom": 2.0,
-        "zoom_fim": 2.1
+        "zoom": 1.8,
+        "zoom_fim": 1.88
        },
        "objetos": {
         "m": {
@@ -984,9 +984,9 @@
     "cenario": "mon_cozinha",
     "camera": {
      "x": 1300,
-     "y": 515,
-     "zoom": 2.2,
-     "zoom_fim": 2.32
+     "y": 500,
+     "zoom": 1.85,
+     "zoom_fim": 1.95
     },
     "callout": [
      {
@@ -1053,9 +1053,9 @@
     "cenario": "mon_parque",
     "camera": {
      "x": 1300,
-     "y": 515,
-     "zoom": 2.2,
-     "zoom_fim": 2.32
+     "y": 500,
+     "zoom": 1.85,
+     "zoom_fim": 1.95
     },
     "callout": [
      {
@@ -1180,9 +1180,9 @@
     "cenario": "mon_escola",
     "camera": {
      "x": 1300,
-     "y": 515,
-     "zoom": 2.2,
-     "zoom_fim": 2.32
+     "y": 500,
+     "zoom": 1.85,
+     "zoom_fim": 1.95
     },
     "callout": [
      {
@@ -1312,9 +1312,9 @@
     "cenario": "mon_vila",
     "camera": {
      "x": 1300,
-     "y": 650,
-     "zoom": 1.75,
-     "zoom_fim": 1.85
+     "y": 560,
+     "zoom": 1.55,
+     "zoom_fim": 1.62
     },
     "callout": [
      {
@@ -1447,9 +1447,9 @@
     "cenario": "mon_noite",
     "camera": {
      "x": 1300,
-     "y": 515,
-     "zoom": 2.2,
-     "zoom_fim": 2.32
+     "y": 500,
+     "zoom": 1.85,
+     "zoom_fim": 1.95
     },
     "tremor": [
      2.23
@@ -1667,9 +1667,9 @@
     "cenario": "mon_parque",
     "camera": {
      "x": 1300,
-     "y": 630,
-     "zoom": 1.75,
-     "zoom_fim": 1.85
+     "y": 560,
+     "zoom": 1.55,
+     "zoom_fim": 1.62
     },
     "cantam": [
      "mimi"
@@ -1683,7 +1683,7 @@
     ],
     "atores": {
      "mimi": {
-      "x": 1000,
+      "x": 900,
       "turn": 0.25,
       "acoes": [
        {
@@ -1700,7 +1700,7 @@
       ]
      },
      "gogo": {
-      "x": 1600,
+      "x": 1700,
       "turn": -0.25,
       "acoes": [
        {
@@ -1753,9 +1753,9 @@
        "cenario": "mon_noite",
        "camera": {
         "x": 1300,
-        "y": 560,
-        "zoom": 2.0,
-        "zoom_fim": 2.15
+        "y": 520,
+        "zoom": 1.8,
+        "zoom_fim": 1.9
        },
        "cantam": [
         "bilu"
@@ -1816,9 +1816,9 @@
        "cenario": "mon_cozinha",
        "camera": {
         "x": 1300,
-        "y": 560,
-        "zoom": 2.0,
-        "zoom_fim": 2.15
+        "y": 520,
+        "zoom": 1.8,
+        "zoom_fim": 1.9
        },
        "atores": {
         "nhoque": {
@@ -1908,7 +1908,7 @@
     ],
     "atores": {
      "teco": {
-      "x": 350,
+      "x": 378,
       "turn": 0.3,
       "acoes": [
        {
@@ -1925,7 +1925,7 @@
       ]
      },
      "zuzu": {
-      "x": 850,
+      "x": 993,
       "turn": 0.2,
       "acoes": [
        {
@@ -1937,7 +1937,7 @@
       ]
      },
      "mimi": {
-      "x": 1750,
+      "x": 1607,
       "turn": -0.2,
       "acoes": [
        {
@@ -1954,7 +1954,7 @@
       ]
      },
      "gogo": {
-      "x": 2250,
+      "x": 2222,
       "turn": -0.3,
       "acoes": [
        {
@@ -2143,9 +2143,9 @@
     "cenario": "mon_escola",
     "camera": {
      "x": 1300,
-     "y": 630,
-     "zoom": 1.75,
-     "zoom_fim": 1.85
+     "y": 560,
+     "zoom": 1.55,
+     "zoom_fim": 1.62
     },
     "cantam": [
      "mimi"
@@ -2159,7 +2159,7 @@
     ],
     "atores": {
      "mimi": {
-      "x": 1000,
+      "x": 900,
       "turn": 0.25,
       "acoes": [
        {
@@ -2176,7 +2176,7 @@
       ]
      },
      "gogo": {
-      "x": 1600,
+      "x": 1700,
       "turn": -0.25,
       "acoes": [
        {
@@ -2238,9 +2238,9 @@
        "cenario": "mon_vila",
        "camera": {
         "x": 1300,
-        "y": 560,
-        "zoom": 2.0,
-        "zoom_fim": 2.15
+        "y": 520,
+        "zoom": 1.8,
+        "zoom_fim": 1.9
        },
        "cantam": [
         "zuzu"
@@ -2290,9 +2290,9 @@
        "cenario": "mon_quarto",
        "camera": {
         "x": 1300,
-        "y": 560,
-        "zoom": 2.0,
-        "zoom_fim": 2.15
+        "y": 520,
+        "zoom": 1.8,
+        "zoom_fim": 1.9
        },
        "atores": {
         "teco": {
@@ -2382,7 +2382,7 @@
     ],
     "atores": {
      "teco": {
-      "x": 350,
+      "x": 378,
       "turn": 0.3,
       "acoes": [
        {
@@ -2399,7 +2399,7 @@
       ]
      },
      "zuzu": {
-      "x": 850,
+      "x": 993,
       "turn": 0.2,
       "acoes": [
        {
@@ -2411,7 +2411,7 @@
       ]
      },
      "mimi": {
-      "x": 1750,
+      "x": 1607,
       "turn": -0.2,
       "acoes": [
        {
@@ -2428,7 +2428,7 @@
       ]
      },
      "gogo": {
-      "x": 2250,
+      "x": 2222,
       "turn": -0.3,
       "acoes": [
        {
@@ -2474,8 +2474,8 @@
     "camera": {
      "x": 1350,
      "y": 600,
-     "zoom": 1.2,
-     "zoom_fim": 1.1
+     "zoom": 1.04,
+     "zoom_fim": 1.0
     },
     "fx": [
      "notas"
@@ -2553,8 +2553,8 @@
       ]
      },
      "nhoque": {
-      "x": 350,
-      "turn": 0.3,
+      "x": 2300,
+      "turn": -0.3,
       "acoes": [
        {
         "t": 0.0,
@@ -2717,10 +2717,10 @@
    {
     "cenario": "mon_palco",
     "camera": {
-     "x": 1250,
-     "y": 620,
-     "zoom": 1.15,
-     "zoom_fim": 1.05
+     "x": 1350,
+     "y": 600,
+     "zoom": 1.0,
+     "zoom_fim": 1.04
     },
     "fx": [
      "notas"
@@ -2798,7 +2798,7 @@
       ]
      },
      "mimi": {
-      "x": 2250,
+      "x": 2300,
       "turn": -0.3,
       "acoes": [
        {
@@ -2829,9 +2829,9 @@
        "cenario": "mon_noite",
        "camera": {
         "x": 1300,
-        "y": 560,
-        "zoom": 2.0,
-        "zoom_fim": 2.15
+        "y": 520,
+        "zoom": 1.8,
+        "zoom_fim": 1.9
        },
        "cantam": [
         "bilu"
@@ -2892,9 +2892,9 @@
        "cenario": "mon_cozinha",
        "camera": {
         "x": 1300,
-        "y": 560,
-        "zoom": 2.0,
-        "zoom_fim": 2.15
+        "y": 520,
+        "zoom": 1.8,
+        "zoom_fim": 1.9
        },
        "atores": {
         "nhoque": {
@@ -2963,10 +2963,10 @@
    {
     "cenario": "mon_palco",
     "camera": {
-     "x": 1250,
-     "y": 620,
-     "zoom": 1.15,
-     "zoom_fim": 1.05
+     "x": 1350,
+     "y": 600,
+     "zoom": 1.0,
+     "zoom_fim": 1.04
     },
     "fx": [
      "notas"
@@ -3044,7 +3044,7 @@
       ]
      },
      "nhoque": {
-      "x": 2250,
+      "x": 2300,
       "turn": -0.3,
       "acoes": [
        {
@@ -3075,9 +3075,9 @@
     "cenario": "mon_vila",
     "camera": {
      "x": 1300,
-     "y": 515,
-     "zoom": 2.2,
-     "zoom_fim": 2.32
+     "y": 500,
+     "zoom": 1.85,
+     "zoom_fim": 1.95
     },
     "cantam": [
      "zuzu"
@@ -3243,10 +3243,10 @@
     "seg": 4.01,
     "cenario": "mon_palco",
     "camera": {
-     "x": 1300,
+     "x": 1350,
      "y": 560,
-     "zoom": 1.05,
-     "zoom_fim": 1.15
+     "zoom": 1.0,
+     "zoom_fim": 1.06
     },
     "fx": [
      "notas"
@@ -3324,8 +3324,8 @@
       ]
      },
      "gogo": {
-      "x": 350,
-      "turn": 0.3,
+      "x": 2300,
+      "turn": -0.3,
       "acoes": [
        {
         "t": 0.0,
@@ -3349,9 +3349,9 @@
     "cenario": "mon_noite",
     "camera": {
      "x": 1300,
-     "y": 515,
-     "zoom": 2.2,
-     "zoom_fim": 2.32
+     "y": 500,
+     "zoom": 1.85,
+     "zoom_fim": 1.95
     },
     "cantam": [
      "gogo"
@@ -3528,10 +3528,10 @@
     "seg": 1.13,
     "cenario": "mon_palco",
     "camera": {
-     "x": 1300,
+     "x": 1350,
      "y": 560,
-     "zoom": 1.05,
-     "zoom_fim": 1.15
+     "zoom": 1.0,
+     "zoom_fim": 1.06
     },
     "fx": [
      "notas"
@@ -3609,8 +3609,8 @@
       ]
      },
      "gogo": {
-      "x": 350,
-      "turn": 0.3,
+      "x": 2300,
+      "turn": -0.3,
       "acoes": [
        {
         "t": 0.0,
@@ -3632,10 +3632,10 @@
     "seg": 3.52,
     "cenario": "mon_palco",
     "camera": {
-     "x": 1250,
-     "y": 620,
-     "zoom": 1.15,
-     "zoom_fim": 1.05
+     "x": 1350,
+     "y": 600,
+     "zoom": 1.0,
+     "zoom_fim": 1.04
     },
     "fx": [
      "notas"
@@ -3713,7 +3713,7 @@
       ]
      },
      "mimi": {
-      "x": 2250,
+      "x": 2300,
       "turn": -0.3,
       "acoes": [
        {
@@ -3848,9 +3848,9 @@
     "cenario": "mon_cozinha",
     "camera": {
      "x": 1300,
-     "y": 515,
-     "zoom": 2.2,
-     "zoom_fim": 2.32
+     "y": 500,
+     "zoom": 1.85,
+     "zoom_fim": 1.95
     },
     "callout": [
      {
@@ -3917,9 +3917,9 @@
     "cenario": "mon_parque",
     "camera": {
      "x": 1300,
-     "y": 600,
-     "zoom": 1.75,
-     "zoom_fim": 1.85
+     "y": 560,
+     "zoom": 1.55,
+     "zoom_fim": 1.62
     },
     "callout": [
      {
@@ -4299,8 +4299,8 @@
     "camera": {
      "x": 1300,
      "y": 600,
-     "zoom": 1.4,
-     "zoom_fim": 1.48
+     "zoom": 1.15,
+     "zoom_fim": 1.2
     },
     "callout": [
      {
@@ -4314,7 +4314,7 @@
     ],
     "atores": {
      "zuzu": {
-      "x": 850,
+      "x": 640,
       "turn": 0.25,
       "acoes": [
        {
@@ -4336,7 +4336,7 @@
       ]
      },
      "nhoque": {
-      "x": 1750,
+      "x": 1960,
       "turn": -0.25,
       "acoes": [
        {
@@ -4380,9 +4380,9 @@
     "cenario": "mon_noite",
     "camera": {
      "x": 1300,
-     "y": 640,
-     "zoom": 1.75,
-     "zoom_fim": 1.85
+     "y": 560,
+     "zoom": 1.55,
+     "zoom_fim": 1.62
     },
     "escurece": [
      0.0,
@@ -4400,7 +4400,7 @@
     ],
     "atores": {
      "teco": {
-      "x": 1000,
+      "x": 900,
       "turn": 0.25,
       "acoes": [
        {
@@ -4412,7 +4412,7 @@
       "expr": "scared"
      },
      "mimi": {
-      "x": 1600,
+      "x": 1700,
       "turn": -0.25,
       "acoes": [
        {
@@ -4639,7 +4639,7 @@
     },
     "atores": {
      "teco": {
-      "x": 500,
+      "x": 450,
       "turn": 0.3,
       "acoes": [
        {
@@ -4651,7 +4651,7 @@
       "expr": "surprised"
      },
      "gogo": {
-      "x": 1000,
+      "x": 1150,
       "turn": 0.2,
       "acoes": [
        {
@@ -4663,7 +4663,7 @@
       "expr": "surprised"
      },
      "zuzu": {
-      "x": 1500,
+      "x": 1850,
       "turn": -0.2,
       "acoes": [
        {
@@ -4831,7 +4831,7 @@
     ],
     "atores": {
      "nhoque": {
-      "x": 400,
+      "x": 378,
       "turn": 0.3,
       "acoes": [
        {
@@ -4842,7 +4842,7 @@
       ]
      },
      "bilu": {
-      "x": 900,
+      "x": 993,
       "turn": 0.2,
       "acoes": [
        {
@@ -4854,7 +4854,7 @@
       ]
      },
      "teco": {
-      "x": 1700,
+      "x": 1607,
       "turn": -0.2,
       "acoes": [
        {
@@ -4865,7 +4865,7 @@
       ]
      },
      "gogo": {
-      "x": 2200,
+      "x": 2222,
       "turn": -0.3,
       "acoes": [
        {
@@ -4912,9 +4912,9 @@
     "cenario": "mon_vila",
     "camera": {
      "x": 1300,
-     "y": 515,
-     "zoom": 2.2,
-     "zoom_fim": 2.32
+     "y": 500,
+     "zoom": 1.85,
+     "zoom_fim": 1.95
     },
     "callout": [
      {
@@ -5068,9 +5068,9 @@
     "cenario": "mon_vila",
     "camera": {
      "x": 1300,
-     "y": 640,
-     "zoom": 1.75,
-     "zoom_fim": 1.85
+     "y": 560,
+     "zoom": 1.55,
+     "zoom_fim": 1.62
     },
     "callout": [
      {
@@ -5084,7 +5084,7 @@
     ],
     "atores": {
      "mimi": {
-      "x": 1000,
+      "x": 900,
       "turn": 0.3,
       "acoes": [
        {
@@ -5095,7 +5095,7 @@
       ]
      },
      "teco": {
-      "x": 1600,
+      "x": 1700,
       "turn": -0.25,
       "acoes": [
        {
@@ -5285,7 +5285,7 @@
     ],
     "atores": {
      "teco": {
-      "x": 260,
+      "x": 400,
       "turn": 0.3,
       "acoes": [
        {
@@ -5294,11 +5294,13 @@
         "dur": "resto"
        }
       ],
-      "depth": 0.78
+      "y": 880,
+      "depth": 0.62,
+      "z": 2
      },
      "gogo": {
-      "x": 676,
-      "turn": 0.25,
+      "x": 1000,
+      "turn": 0.15,
       "acoes": [
        {
         "t": 0.1,
@@ -5306,11 +5308,13 @@
         "dur": "resto"
        }
       ],
-      "depth": 0.78
+      "y": 880,
+      "depth": 0.62,
+      "z": 2
      },
      "bilu": {
-      "x": 1092,
-      "turn": 0.1,
+      "x": 1600,
+      "turn": -0.15,
       "acoes": [
        {
         "t": 0.2,
@@ -5318,11 +5322,13 @@
         "dur": "resto"
        }
       ],
-      "depth": 0.78
+      "y": 880,
+      "depth": 0.62,
+      "z": 2
      },
-     "mimi": {
-      "x": 1508,
-      "turn": -0.1,
+     "zuzu": {
+      "x": 2200,
+      "turn": -0.3,
       "acoes": [
        {
         "t": 0.30000000000000004,
@@ -5330,11 +5336,13 @@
         "dur": "resto"
        }
       ],
-      "depth": 0.78
+      "y": 880,
+      "depth": 0.62,
+      "z": 2
      },
-     "zuzu": {
-      "x": 1924,
-      "turn": -0.25,
+     "mimi": {
+      "x": 700,
+      "turn": 0.2,
       "acoes": [
        {
         "t": 0.4,
@@ -5342,11 +5350,13 @@
         "dur": "resto"
        }
       ],
-      "depth": 0.78
+      "y": 975,
+      "depth": 0.74,
+      "z": 3
      },
      "nhoque": {
-      "x": 2340,
-      "turn": -0.3,
+      "x": 1900,
+      "turn": -0.2,
       "acoes": [
        {
         "t": 0.5,
@@ -5354,7 +5364,9 @@
         "dur": "resto"
        }
       ],
-      "depth": 0.78
+      "y": 975,
+      "depth": 0.74,
+      "z": 3
      }
     },
     "objetos": {
@@ -5390,9 +5402,9 @@
     "cenario": "mon_noite",
     "camera": {
      "x": 1300,
-     "y": 515,
-     "zoom": 2.2,
-     "zoom_fim": 2.32
+     "y": 500,
+     "zoom": 1.85,
+     "zoom_fim": 1.95
     },
     "flash": true,
     "callout": [

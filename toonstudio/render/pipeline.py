@@ -36,9 +36,9 @@ def log(msg: str) -> None:
 
 # ------------------------------------------------------------------ desenho dos níveis (paralelo)
 def _draw_one(args):
-    cid, pose, path, scale, seed = args
+    cid, pose, path, scale, seed, jitter = args
     ch = character(cid)
-    ch.render_png(pose, path, scale=scale, seed=seed, jitter=0.45, canvas=LEVEL_CANVAS, anchor=LEVEL_ANCHOR)
+    ch.render_png(pose, path, scale=scale, seed=seed, jitter=jitter, canvas=LEVEL_CANVAS, anchor=LEVEL_ANCHOR)
     return path
 
 
@@ -52,6 +52,15 @@ class Episode:
         self.fps = int(self.ep["fps"])
         self.W, self.H = self.ep["resolution"]
         self.scale = float(setting("render", "level_scale", 1.5))
+        from ..core.canal import carregar, id_do_projeto
+        try:
+            raw = carregar(id_do_projeto(self.dir)).raw
+        except Exception:
+            raw = {}
+        self.auto_escala = bool(raw.get("nivel_escala_auto"))
+        # tremor de traço à mão (muda a cada desenho): 0,45 no canal da Laurinha; o Fofolucos é vetor liso (21/11: as
+        # bordas "fervendo" pareciam baixa resolução)
+        self.jitter = float(raw.get("tremor_traco", 0.45))
         self.report: dict = {"episode": self.ep["id"], "scenes": {}, "warnings": [], "lines": {}}
 
     # -------------------------------------------------------------- etapas
@@ -129,11 +138,29 @@ class Episode:
         return lines
 
     # -------------------------------------------------------------- cena
+    def _nivel_escala(self, s: dict) -> float:
+        """Resolução dos desenhos do plano. Padrão: level_scale (1,5). Canais com `nivel_escala_auto` (Fofolucos, 21/11:
+        closes de 2,3x saíam serrilhados) desenham cada plano no tamanho em que ele aparece na tela: zoom máximo
+        (+ batida/soco) × maior profundidade, entre o padrão e 3,0 — nítido no close sem pesar os planos abertos."""
+        if not self.auto_escala:
+            return self.scale
+        cam = s.get("camera", {})
+        beat = cam.get("beat") or {}
+        z = max([k["zoom"] for k in cam.get("keys", [])] or [1.0])
+        z *= (1 + float(beat.get("bar_zoom", 0.0))) * (1 + float(beat.get("pulse", 0.0)))
+        z *= 1 + max([p.get("zoom", 0.2) for p in cam.get("punch", [])] or [0.0])
+        d = 1.0
+        for spec in s.get("characters", {}).values():
+            d = max(d, float(spec.get("start", {}).get("depth", 1.0)),
+                    *[float(k.get("pose", k).get("depth", 0)) for k in spec.get("keys", [])])
+        return max(self.scale, min(3.0, math.ceil(z * d * 4) / 4))
+
     def scene(self, s: dict, bgs: dict, lines: dict, force: bool = False, offset: float = 0.0, song: dict | None = None) -> Path:
         if s.get("panels"):
             return self._split_scene(s, bgs, lines, force, offset, song)
         sid = s["id"]
         sdir = self.build / "scenes" / sid
+        scale = self._nivel_escala(s)
         n = int(round(s["duration"] * self.fps))
         bg_id = s.get("background", self.ep["background"])
         bg = bgs[bg_id]
@@ -144,7 +171,7 @@ class Episode:
         beats_local = [b - g0 for b in song["grid"] if -2 <= b - g0 <= s["duration"] + 2] if song else []
         sing_cues = self._sing(s, song, g0) if song else {}
         h = sha({"scene": s, "cast": {w: self.ep["cast"][w] for w in perf}, "lines": line_meta, "fps": self.fps,
-                 "res": [self.W, self.H], "scale": self.scale, "code": file_sha(*CODE_HASH_PATHS), "v": 4,
+                 "res": [self.W, self.H], "scale": scale, **({"jitter": self.jitter} if self.jitter != 0.45 else {}), "code": file_sha(*CODE_HASH_PATHS), "v": 4,
                  "godot": file_sha(GODOT_PROJECT / "compositor.gd"), "bg": [bg_id, bg.get("layers")],
                  "beats": [round(b, 3) for b in beats_local], "sing": sing_cues})
         comp_dir = sdir / "comp"
@@ -175,7 +202,7 @@ class Episode:
             if ldir.exists():
                 shutil.rmtree(ldir)
             ldir.mkdir(parents=True)
-            jobs = [(cid, d, str(ldir / f"{who}.{i + 1:04d}.png"), self.scale, i) for i, d in enumerate(drawings)]
+            jobs = [(cid, d, str(ldir / f"{who}.{i + 1:04d}.png"), scale, i, self.jitter) for i, d in enumerate(drawings)]
             with ProcessPoolExecutor(max_workers=max(1, (os.cpu_count() or 2) - 1)) as ex:
                 list(ex.map(_draw_one, jobs, chunksize=4))
             (ldir / "drawings.json").write_text(json.dumps(drawings, default=str))
@@ -197,7 +224,7 @@ class Episode:
             qa["issues"].append("timing de cena editado no OpenToonz foi respeitado")
         log(f"  OpenToonz: montando xsheet ({len(columns)} colunas)")
         render_scenes = ot.build_scenes(edit, sdir / "otscenes", columns)
-        cw, chh = int(LEVEL_CANVAS[0] * self.scale), int(LEVEL_CANVAS[1] * self.scale)
+        cw, chh = int(LEVEL_CANVAS[0] * scale), int(LEVEL_CANVAS[1] * scale)
         for p in [edit, *render_scenes.values()]:
             ot.patch_camera(p, cw, chh, self.fps)
         self.state.mark(f"tnz:{sid}", ot.scene_hash(edit))
@@ -215,8 +242,8 @@ class Episode:
             st = tracks[who]["stage"]
             vis = [True] * n
             performers.append({"name": who, "dir": str(out), "pattern": "f.%04d.png",
-                               "anchor": [LEVEL_ANCHOR[0] * self.scale, LEVEL_ANCHOR[1] * self.scale],
-                               "level_scale": self.scale, "z": tracks[who]["z"],
+                               "anchor": [LEVEL_ANCHOR[0] * scale, LEVEL_ANCHOR[1] * scale],
+                               "level_scale": scale, "z": tracks[who]["z"],
                                "track": [[st[i]["x"], st[i]["y"], st[i].get("depth", 1.0), vis[i]] for i in range(n)]})
         # câmera por quadro
         cam = self._camera(s, n, song, g0)

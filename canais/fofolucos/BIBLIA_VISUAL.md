@@ -14,13 +14,14 @@ Aprovado pelo usuário em 20/11/2026 (turma, cenários, enquadramentos e logo).
 - **Fofinho e assustador**: presas e dentes pontudos, garrinhas brancas, rabinho com **pompom**, manchas, chifres/antenas.
 - **Nunca "diabinho"** (20/11/2026 — muitas famílias rejeitam): nada de rabo com ponta de flecha, nem a combinação
   vermelho + chifres + rabo pontudo + orelha/asa de morcego; nada de tridente, fogo ou cara de "capetinha".
-- **Palavras na letra**: "maluquinho" (não "louco"/"maluco"); evitar "chifrão"/"chifrudo" (duplo sentido para adulto).
+- **Palavras na letra**: "maluquinho" (não "louco"/"maluco"); evitar "chifrão"/"chifrudo" (duplo sentido para adulto);
+  **nunca "monstro"** — sempre "monstrinho" (21/11), também nos letreiros (callouts) do vídeo.
 - Pose de marca: **"RAWR!"** (garras para cima, dentes, sobrancelha brava) — sempre divertida, nunca de dar medo de verdade.
 - Inspiração: o jeito geral dos clipes infantis de referência (chapado, cabeção, cores fortes). **Personagens, nome,
   logo e cenas são originais.**
 
 ## 2. A turma (sem dupla fixa — cada música escolhe quem aparece)
-| id | Nome | Cor | Jeito de monstro |
+| id | Nome | Cor | Jeito de monstrinho |
 |---|---|---|---|
 | `bilu` | **Bilu** | azul | um olhão com anel amarelo, chifres curvos, presas, pelo espetado |
 | `teco` | **Teco** | roxo | três olhinhos (um na testa), anteninhas, dentes em serrinha |
@@ -39,14 +40,25 @@ visemas funcionam igual). Nunca pôr um monstrinho na frente de fundo da mesma c
 - De refrão/destaque: `mon_raios_<cor>` (espiral que gira na batida), `mon_xadrez_<cor>`, `mon_brilho_<cor>`
   (cores: roxo, azul, verde, laranja, rosa, vermelho).
 
-## 4. Enquadramento (medido na referência, 20/11)
+## 4. Enquadramento (medido na referência, 20/11; revisto 21/11)
 Misturar sempre três tamanhos (a referência varia muito; o nosso canal 1 repetia o mesmo tamanho):
-- **CABEÇA** — cabeça e peito enchendo a tela (expressão, piada, "RAWR!"), zoom ≈ 2,3;
-- **BUSTO** — corte na cintura (cantar), zoom ≈ 1,75;
+- **CABEÇA** — cabeça e peito enchendo a tela (expressão, piada, "RAWR!"), zoom ≈ 1,85–1,95;
+- **BUSTO** — corte na cintura (cantar), zoom ≈ 1,55–1,62;
 - **CORPO TODO** — o monstrinho com ≈ 60 % da altura da tela (dança, ação).
 Alvo: ~20 % cabeça, ~45 % busto, ~35 % corpo todo.
+- **Chifre, antena e olho na haste SEMPRE inteiros** (21/11, pedido do usuário: o zoom 2,3 cortava). A câmera sobe
+  sozinha o necessário (`camera_protege_topo` no canal.json, medindo a altura real de cada monstrinho).
+- **Espaço entre monstrinhos** nos cenários de história (tamanho 1,45): ≥ 430 unidades entre centros já na tela
+  (no roteiro, ~650 de x entre vizinhos por causa da aproximação). Mais de 3 no corpo todo → espalhar a 440 ou fazer
+  **duas fileiras** (os baixinhos — Mimi, Nhoque — na frente). Na banda, quem dança junto fica à DIREITA da bateria.
+
+## 4b. Nitidez (21/11)
+- Cada plano é desenhado na resolução em que aparece (zoom × tamanho, até 3x — `nivel_escala_auto`); cenários de
+  história a 2,2x. Nada de imagem ampliada (o 1º render saiu serrilhado nos closes).
+- **Traço liso, sem tremor** (`tremor_traco: 0`): o tremor de traço à mão da Laurinha, sem contorno, deixava as
+  bordas "fervendo" e parecia baixa resolução.
 
 ## 5. Marca
-Logo: `library/brand/fofolucos/logo.png` (letras nas cores da turma, borda de adesivo, os dois "O" são olhos de monstro,
+Logo: `library/brand/fofolucos/logo.png` (letras nas cores da turma, borda de adesivo, os dois "O" são olhos de monstrinho,
 chifres no F e no S, presinha no U) — gerado por `scripts/canais/fofolucos_logo.py`.
 Entregas: `C:\Users\DELL\Videos\Fofolucos\NN Título\{Pré-produção, Vídeo longo}` e `Fofolucos\Canal\`.

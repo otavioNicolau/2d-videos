@@ -20,6 +20,7 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
+from functools import lru_cache
 
 FPS = 30
 PARQUE = "plano_parque"
@@ -370,6 +371,8 @@ def _camera(spec, bg: str, atores: dict, dur: float) -> dict:
             xf = _clamp_x(xf, min(z0, z1), w)
             half_h = 540 / max(1.0, min(z0, z1))
             yf = max(half_h, min(1080 - half_h, yf))
+    if _protege_topo():
+        y, yf = _sem_cortar_topo(y, x, z0, z1, atores, graphic), _sem_cortar_topo(yf, xf, z0, z1, atores, graphic)
     return {"keys": [{"t": 0, "x": round(x, 1), "y": round(y, 1), "zoom": z0},
                      {"t": round(dur, 3), "x": round(xf, 1), "y": round(yf, 1), "zoom": z1, "ease": "inout"}],
             "beat": dict(BEAT_CAM)}
@@ -401,6 +404,42 @@ def _performance(a: dict, dur: float, graphic: bool) -> dict:
     if a.get("keys"):
         perf["keys"] = a["keys"]
     return perf
+
+
+def _protege_topo() -> bool:
+    from ..core.canal import atual
+    return bool(atual().raw.get("camera_protege_topo"))
+
+
+@lru_cache(maxsize=None)
+def _altura(cid: str) -> float:
+    """Altura real do personagem acima do pé (chifre, antena, olho na haste…), em unidades, medida no desenho."""
+    import numpy as np
+    from ..core.registry import character
+    from ..render.pipeline import LEVEL_ANCHOR, LEVEL_CANVAS
+    s = character(cid).render({}, scale=0.5, canvas=LEVEL_CANVAS, anchor=LEVEL_ANCHOR)
+    ys = np.nonzero(np.asarray(s.makeImageSnapshot().toarray())[..., 3] > 10)[0]
+    return (LEVEL_ANCHOR[1] - ys.min() / 0.5) if len(ys) else 500.0
+
+
+def _sem_cortar_topo(y: float, x: float, z0: float, z1: float, atores: dict, graphic: bool, margem: float = 28) -> float:
+    """Câmera sobe o necessário para nenhum chifre/antena/olho de quem está no quadro sair por cima (20/11, pedido do
+    usuário: closes cortavam os chifres). Considera o zoom máximo do plano + o 'perto/longe' da batida."""
+    z = max(z0, z1) * (1 + BEAT_CAM.get("bar_zoom", 0.0)) * (1 + BEAT_CAM.get("pulse", 0.0))
+    topo = None
+    for who, a in atores.items():
+        if abs(a.get("x", 960) - x) > 960 / z + 250:
+            continue
+        try:
+            h = _altura(who)
+        except Exception:
+            continue
+        d = a.get("depth", 1.3 if graphic else 1.0) * ESCALA
+        t = a.get("y", 1010 if graphic else GROUND) - h * d - margem
+        topo = t if topo is None else min(topo, t)
+    if topo is None:
+        return y
+    return max(540 / z, min(y, topo + 540 / z))
 
 
 def _props_sem_contorno() -> bool:

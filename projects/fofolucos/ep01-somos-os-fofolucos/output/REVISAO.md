@@ -1,0 +1,71 @@
+# Revisão — Somos os Fofolucos!
+
+- Vídeo: `ep01-somos-os-fofolucos_CANDIDATO.mp4`
+- Prancha: `prancha.png`
+- Aprovação humana do render final: **PENDENTE (vídeo é candidato)**
+
+## Falas (QA por transcrição cega)
+
+| cena | texto | ouvido | sim. | dur. |
+|---|---|---|---|---|
+
+## Cenas
+
+- **s11_verso** — 76 quadros; bilu: 76 desenhos, m: 76 desenhos, nv: 76 desenhos
+
+## Avisos
+
+- render final ainda não aprovado (approval.final_render = false): será gerado como CANDIDATO
+- storyboard s01_intro: pendente
+- storyboard s02_intro: pendente
+- storyboard s03_intro: pendente
+- storyboard s04_intro: pendente
+- storyboard s05_intro: pendente
+- storyboard s06_intro: pendente
+- storyboard s07_verso: pendente
+- storyboard s08_verso: pendente
+- storyboard s09_verso: pendente
+- storyboard s10_verso: pendente
+- storyboard s11_verso: pendente
+- storyboard s12_verso: pendente
+- storyboard s13_verso: pendente
+- storyboard s14_verso: pendente
+- storyboard s15_refrao: pendente
+- storyboard s16_refrao: pendente
+- storyboard s17_refrao: pendente
+- storyboard s18_refrao: pendente
+- storyboard s19_intervalo: pendente
+- storyboard s20_intervalo: pendente
+- storyboard s21_intervalo: pendente
+- storyboard s22_ponte: pendente
+- storyboard s23_ponte: pendente
+- storyboard s24_ponte: pendente
+- storyboard s25_ponte: pendente
+- storyboard s26_verso: pendente
+- storyboard s27_verso: pendente
+- storyboard s28_verso: pendente
+- storyboard s29_verso: pendente
+- storyboard s30_verso: pendente
+- storyboard s31_verso: pendente
+- storyboard s32_verso: pendente
+- storyboard s33_verso: pendente
+- storyboard s34_refrao: pendente
+- storyboard s35_refrao: pendente
+- storyboard s36_refrao: pendente
+- storyboard s37_refrao: pendente
+- storyboard s38_refrao: pendente
+- storyboard s39_intervalo: pendente
+- storyboard s40_intervalo: pendente
+- storyboard s41_intervalo: pendente
+- storyboard s42_refrao: pendente
+- storyboard s43_refrao: pendente
+- storyboard s44_refrao: pendente
+- storyboard s45_refrao: pendente
+- storyboard s46_intervalo: pendente
+- storyboard s47_intervalo: pendente
+- storyboard s48_final: pendente
+- storyboard s49_final: pendente
+- storyboard s50_final: pendente
+- storyboard s51_final: pendente
+- storyboard s52_final: pendente
+- storyboard s53_final: pendente
