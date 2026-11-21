@@ -1,0 +1,72 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Monstrinho ou Fofinho?",
+ "gancho": "Monstrinho ou fofinho?",
+ "palavras_tema": [
+  "monstrinho",
+  "fofinho",
+  "rawr",
+  "careta",
+  "espelho"
+ ],
+ "tipo": "danca",
+ "tema": "jogo de cantar junto: 'monstrinho!' = cara brava e RAWR, 'fofinho!' = carinha fofa; quem errar dança sozinho no meio. Virada: o Bilu treina a careta mais feroz no espelho, o espelho 'faz igual' e ele se assusta com ele mesmo",
+ "dia_a_dia": [
+  "brincadeira de seguir o comando",
+  "fazer careta no espelho",
+  "rir de si mesmo"
+ ],
+ "curiosidade": "o baiacu, um peixinho do mar, faz igual aos Fofolucos: quando quer parecer um monstrinho, ele se enche de água e vira uma bola cheia de espinhos — e quando o perigo passa, volta a ser um peixinho fofinho",
+ "ritmo": "funk_infantil",
+ "bpm": 130,
+ "estrutura": "R",
+ "voz": "fofolucos",
+ "cantam": {
+  "verso": "fofolucos",
+  "refrão": "fofolucos",
+  "ponte": "fofolucos (comandos do jogo)"
+ },
+ "cenas": [
+  {
+   "parte": "intro",
+   "ideia": "Vila Monstrinha: a turma em roda; letreiro 'MONSTRINHO OU FOFINHO?'"
+  },
+  {
+   "parte": "verso 1",
+   "ideia": "o jogo explicado: no 'monstrinho!' todos rosnam (rawr), no 'fofinho!' piscam e fazem carinho (corações); quem erra vai pro meio dançar"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "alterna a cada frase: MONSTRINHO (fundo de raios vermelho, close RAWR) × FOFINHO (fundo de brilho rosa, corações, beijinho); 'quem errar dança sozinho' = o Nhoque erra e dança no meio"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "comandos cada vez mais rápidos: closes de cabeça trocando entre cara brava e cara fofa; no fim 'ufa… fofinho!' todos desabam fofos"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "o Bilu no quarto em frente ao espelho treinando a careta; o reflexo faz RAWR junto; o Bilu cai sentado; a turma ri na porta"
+  },
+  {
+   "parte": "final",
+   "ideia": "convite: 'e você? monstrinho ou fofinho?' — joinha, inscreva-se com o papai e a mamãe; tchau com RAWR"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [],
+ "status": "rascunho",
+ "versoes": [],
+ "persona": "fofolucos",
+ "youtube": {
+  "resumo": "MONSTRINHO OU FOFINHO? 👾 Brinca com os Fofolucos! Quando eu falo MONSTRINHO, faz a cara de bravo… RAWR! Quando eu falo FOFINHO, faz a carinha mais fofa! E o Bilu? Fez careta no espelho e levou um susto dele mesmo!",
+  "resumo_short": "MONSTRINHO OU FOFINHO? 👾 Faz a cara certa… RAWR!",
+  "curiosidade": "O baiacu, um peixinho do mar, faz igual aos Fofolucos: quando quer parecer um monstrinho, ele se enche de água e vira uma bola cheia de espinhos. Quando o perigo passa, volta a ser um peixinho fofinho!",
+  "miniatura": "MONSTRINHO OU\nFOFINHO?"
+ },
+ "playlists": [
+  "Músicas dos Fofolucos 👾"
+ ]
+}

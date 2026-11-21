@@ -422,6 +422,11 @@ def checar(d: Path) -> Checagem:
     hits = [w.rstrip("*") for w in PROIBIDAS if _tem(full, w)]
     if hits:
         ck.add("erro", "idade", "palavras inadequadas para a idade: " + ", ".join(hits))
+    from ..core.canal import atual as _canal_atual
+    evitar = _canal_atual().raw.get("palavras_evitar", {})        # regra de cada canal (ex.: Fofolucos: monstro → monstrinho)
+    ev = [f"{w} (use {s})" for w, s in evitar.items() if _tem(full, w)]
+    if ev:
+        ck.add("erro", "palavras do canal", "palavra que o canal evita: " + ", ".join(ev))
     ofs = [w for w in OFENSAS if _tem(full, w)]
     if ofs:
         ck.add("aviso", "idade", "confira o contexto (pode soar como xingamento): " + ", ".join(ofs))

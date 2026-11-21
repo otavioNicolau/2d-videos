@@ -38,5 +38,19 @@
  },
  "modelo_letra": "[Intro - {intro}]\nFofolucos! Rawr!\n\n[Verse - solo kid boy vocal]\n…\n\n[Virada]\n[Chorus]\n…\n\n[Bordão fofolucos]\nFofolucos!\n[Intervalo 8s]\n\n[Bridge - same kid boy voice gives commands]\n…\n\n[Verse - solo kid boy vocal]\n…\n\n[Virada]\n[Chorus]\n…\n\n[Bordão fofolucos]\nFofolucos!\n[Intervalo 8s]\n\n[Virada]\n[Chorus - louder]\n…\n\n[Intervalo 6s]\n\n[Outro - same kid boy voice, spoken]\nGostou…? Dá um joinha!\nChama o papai e a mamãe\nPra se inscrever no canal! Rawr!\n\n[Outro - one big final hit, hard stop]\nFofolucos! Tchau! Rawr!\n[End]\n",
  "props_sem_contorno": true,
- "placar_principais": []
+ "placar_principais": [],
+ "camera_protege_topo": true,
+ "nivel_escala_auto": true,
+ "tremor_traco": 0.0,
+ "palavras_evitar": {
+  "monstro": "monstrinho",
+  "monstros": "monstrinhos",
+  "monstrao": "monstrinho",
+  "maluco": "maluquinho",
+  "maluca": "maluquinha",
+  "louco": "maluquinho",
+  "louca": "maluquinha",
+  "chifrao": "chifrinho",
+  "chifrudo": "chifrinho"
+ }
 }
