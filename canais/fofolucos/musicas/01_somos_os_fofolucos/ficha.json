@@ -62,6 +62,125 @@
  "youtube": {
   "resumo": "SOMOS OS FOFOLUCOS! 👾 Lá na Vila Monstrinha mora uma turma de arrepiar: o Bilu do olhão, o Teco dos três olhinhos, o Gogo, a Mimi, o Zuzu e o Nhoque! Faz a cara de monstro com a gente… RAWR!",
   "resumo_short": "SOMOS OS FOFOLUCOS! 👾 Faz a cara de monstro… RAWR!",
-  "curiosidade": "Existe um bicho de verdade com um \"terceiro olho\", igual ao Teco: o tuatara, um réptil da Nova Zelândia, tem um olhinho no alto da cabeça que sente a luz"
- }
+  "curiosidade": "Existe um bicho de verdade com um \"terceiro olho\", igual ao Teco: o tuatara, um réptil da Nova Zelândia, tem um olhinho no alto da cabeça que sente a luz",
+  "miniatura": "SOMOS OS\nFOFOLUCOS!",
+  "miniatura_cena": {
+   "fundo": "raios",
+   "cores": [
+    [
+     166,
+     107,
+     255
+    ],
+    [
+     255,
+     138,
+     43
+    ],
+    [
+     56,
+     196,
+     79
+    ],
+    [
+     255,
+     111,
+     177
+    ],
+    [
+     47,
+     155,
+     240
+    ]
+   ],
+   "heroi": {
+    "id": "bilu",
+    "pose": {
+     "turn": 0.15,
+     "mouth": "D",
+     "jaw": 0.35,
+     "smile": 0.6,
+     "brow_l": 0.85,
+     "brow_r": 0.85,
+     "hand_n_x": -125,
+     "hand_n_y": -115,
+     "hand_n_bend": 0.6,
+     "paw_n": 3,
+     "hand_f_x": 125,
+     "hand_f_y": -115,
+     "hand_f_bend": -0.6,
+     "paw_f": 3,
+     "eyes_happy": 0.0,
+     "lid": 0.0,
+     "eye_scale": 1.15
+    }
+   },
+   "par": {
+    "id": "mimi",
+    "pose": {
+     "turn": -0.2,
+     "mouth": "D",
+     "eyes_happy": 1.0,
+     "smile": 1.0,
+     "hand_n_x": -130,
+     "hand_n_y": -130,
+     "hand_n_bend": 0.6,
+     "paw_n": 3,
+     "hand_f_x": 130,
+     "hand_f_y": -130,
+     "hand_f_bend": -0.6,
+     "paw_f": 3
+    }
+   },
+   "objetos": [
+    {
+     "id": "zuzu",
+     "pose": {
+      "turn": 0.2,
+      "mouth": "D",
+      "eyes_happy": 1.0,
+      "smile": 1.0,
+      "hand_n_x": -130,
+      "hand_n_y": -130,
+      "hand_n_bend": 0.6,
+      "paw_n": 3,
+      "hand_f_x": 130,
+      "hand_f_y": -130,
+      "hand_f_bend": -0.6,
+      "paw_f": 3
+     },
+     "tam": 250,
+     "x": 150,
+     "base": 420
+    }
+   ],
+   "frente": [
+    {
+     "id": "nhoque",
+     "pose": {
+      "turn": -0.2,
+      "mouth": "D",
+      "jaw": 0.35,
+      "smile": 0.6,
+      "brow_l": 0.85,
+      "brow_r": 0.85,
+      "hand_n_x": -125,
+      "hand_n_y": -115,
+      "hand_n_bend": 0.6,
+      "paw_n": 3,
+      "hand_f_x": 125,
+      "hand_f_y": -115,
+      "hand_f_bend": -0.6,
+      "paw_f": 3
+     },
+     "tam": 380,
+     "x": 760,
+     "base": 760
+    }
+   ]
+  }
+ },
+ "playlists": [
+  "Músicas dos Fofolucos 👾"
+ ]
 }
