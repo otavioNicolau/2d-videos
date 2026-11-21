@@ -52,17 +52,24 @@
   "nota_batida": "18/11/2026: na referência cada batida soa idêntica (semelhança 0,95–0,98: ritmo pronto de teclado arranjador, um loop simples a música inteira); nas nossas 0,66–0,87 (bateria 'tocada', com viradas e percussão variando). Usuário: 'batidas como se fosse bateria, bumbo, algo feito no teclado, pra dar ritmo'.",
   "abertura": "Brazilian arranger keyboard kids song (teclado arranjador), one simple keyboard drum loop",
   "nota_ajustes_14": "18/11/2026 (take v2 da 14): baixo fraco (5,6 % × 11 % da referência) → 'deep bouncy keyboard bass'; voz larga (0,17 × 0,01) → 'dry centered vocal' e Exclude 'vocal reverb, echo'; tirado 'repeated chorus' do Exclude (o bloco repete de propósito); Exclude sem termos repetidos.",
-  "versao": "F1",
+  "versao": "F2",
   "historico": [
    {
     "versao": "F1",
     "data": "2026-11-20",
     "mudanca": "canal Fofolucos: fórmula E13 da Laurinha (teclado 1º, loop eletrônico de bateria 2º — a 28 tirou 4,9) com a assinatura do canal: órgão de desenho 'assustador-divertido' no lugar do sax; voz de menino de 11 a 14 anos · 20/11 (antes do 1º take), usuário: 'preciso que essas músicas tenham muito teclado e bateria' → teclado na frente + bateria ELETRÔNICA grande e alta (tão alta quanto o teclado; bombo pesado, caixa estalada, palmas), órgão só um toque",
     "motivo": "canal novo: monstrinhos fofinhos e assustadores, 5 a 8 anos"
+   },
+   {
+    "versao": "F2",
+    "data": "21/11/2026",
+    "mudanca": "F1 + CONTRABAIXO como instrumento principal: teclado, baixo e bateria eletrônica, os três altos e na frente (muitos deles); toque do 3º instrumento só na abertura/intervalos; 'bass guitar' fora do Exclude",
+    "motivo": "usuário: o contrabaixo deixa a música divertida — 'contra baixo, bateria, teclado. muitos deles'",
+    "usado_em": "02 em diante"
    }
   ],
   "versao_por_voz": {
-   "fofolucos": "F1"
+   "fofolucos": "F2"
   },
   "nota_sincope": "19/11/2026 (usuário: 'focar nas batidas do som contagiante'): raio-x da bateria (scripts/referencias/batida.py) — referência síncope 0,69 e bumbo reto 0,50; nossas 0,56 e 0,67. A nota de ouvido sobe com a síncope e o baixo fora do tempo (14: 0,39→nota 3 … 18: 0,72 e baixo 0,90→nota 4,6). A 19 v1 (rock com 'punk-rock drumming, driving kick') saiu reta: 0,41.",
   "nota_loop": "19/11/2026 (usuário ouvindo a 19 v2): 'Animadinhos são ritmos e batidas que não mudam muito durante a música; a nossa está ficando ainda estilo banda'. Medido: loop igual referência 0,96 × 19 v1 0,84 × 19 v2 0,75; outros instrumentos 9 % × 20 %. E8: um loop sincopado só, sem virada entre as partes, mesma batida no verso e no refrão, sem solo/quebra.",
@@ -83,14 +90,13 @@
   "nota_sax": "19/11/2026, usuário: 'o Animadinhos usa muito ritmos com saxofone, bateria e teclado'. Medido (18 referências): teclado/piano em 15/18 (nossas 3–4× menos), sintetizador 13/18, bateria em ~metade, saxofone/metais claros em 3/18 (+3 leves) e ZERO nas nossas. E11 = E9 + piano de teclado arranjador na frente + riff de saxofone (som de sax do teclado) respondendo a voz.",
   "trio": {
    "ativo": true,
-   "abertura": "kids song with LOTS of keyboard and BIG drums: keyboard first, drums second (as loud as the keyboard), a little spooky organ third",
-   "producao": "keyboard loud and in front, BRIGHT HIGH-PITCHED catchy piano melody, after EVERY sung line a short catchy keyboard riff answers, BIG LOUD PUNCHY ELECTRONIC DRUMS as loud as the keyboard: the keyboard's own drum-machine loop with heavy kick, snappy snare and claps, the exact same beat all song (no live drummer), soft spooky organ only in the intro and breaks, nothing else, single dry centered lead vocal",
-   "peso_style": "arranger keyboard 'pisadinha' leading the song, pumping bass and chords on every beat (tum-tcha), the same groove in verse and chorus",
+   "abertura": "kids song with LOTS of keyboard, bass and drums: keyboard, electric bass and drums all loud and up front, a little spooky organ",
+   "producao": "BRIGHT HIGH-PITCHED keyboard: catchy high piano melody, a short catchy keyboard riff answers EVERY sung line; BIG FUN GROOVY BASS: bouncy funky slap bass, catchy bassline walking up and down, loud and clear; BIG PUNCHY ELECTRONIC DRUMS: drum-machine loop, heavy kick, snappy snare, claps, the same beat all song (no live drummer); soft spooky organ only in intro and breaks, nothing else, single dry centered lead vocal",
+   "peso_style": "arranger keyboard 'pisadinha' chords on every beat (tum-tcha), the same groove in verse and chorus",
    "exclude_extra": [
     "guitar",
     "electric guitar",
     "acoustic guitar",
-    "bass guitar",
     "strings",
     "violin",
     "orchestra",
@@ -114,9 +120,9 @@
     "brass"
    ],
    "tirar_do_exclude": [],
-   "nota": "19/11/2026, usuário: 'quero usar esses 3 instrumentos nas próximas músicas para teste — APENAS ELES' (saxofone, bateria e teclado, como o Animadinhos). · Ajuste do usuário: 'preciso que a bateria seja forte, pra marcar o ritmo, e as pisadinhas do teclado também; o saxofone fica em 3º' → ordem: bateria forte > teclado pisadinha > sax (só abertura, antes do refrão e intervalos). · Nova ordem do usuário (19/11): TECLADO em 1º, BATERIA em 2º, SAX em 3º. · Usuário (19/11): 'reduzir um pouco mais o saxofone e aumentar o teclado com som mais agudo' → sax bem baixo e raro (só abertura/intervalos, fora da abertura da letra), teclado mais alto e agudo. · Usuário (20/11): no Animadinhos cada frase cantada é respondida por um som de teclado bem marcante — 'O Luisinho comprou uma casa! tram tram tramram' — isso deixa a música animada. A partir da 25: Style pede o riff de teclado depois de cada verso e as marcações [Verse]/[Chorus] ganham 'short keyboard riff after each line' (o 'tram tram' não vai na letra para o Suno não cantar). · 20/11 (E13): 26 (reggae) tirou 4,7 — usuário: 'está sem batida viciante'. Medido: 'bateria de banda' 0,046 (o triplo das 21–25, ~0,015) e o loop menos repetido (0,738): o ritmo puxou bateria acústica de banda. A bateria do trio passa a ser o loop ELETRÔNICO do teclado (drum machine, sempre a mesma batida) e 'live drums/acoustic drums' voltam para o Exclude.",
-   "intervalo": "[Instrumental Break - {s} seconds, bright high keyboard melody, keyboard pisadinha and big punchy drums, a short spooky organ riff]",
-   "intro": "[Intro - bright high keyboard melody, keyboard pisadinha and strong drums]",
+   "nota": "19/11/2026, usuário: 'quero usar esses 3 instrumentos nas próximas músicas para teste — APENAS ELES' (saxofone, bateria e teclado, como o Animadinhos). · Ajuste do usuário: 'preciso que a bateria seja forte, pra marcar o ritmo, e as pisadinhas do teclado também; o saxofone fica em 3º' → ordem: bateria forte > teclado pisadinha > sax (só abertura, antes do refrão e intervalos). · Nova ordem do usuário (19/11): TECLADO em 1º, BATERIA em 2º, SAX em 3º. · Usuário (19/11): 'reduzir um pouco mais o saxofone e aumentar o teclado com som mais agudo' → sax bem baixo e raro (só abertura/intervalos, fora da abertura da letra), teclado mais alto e agudo. · Usuário (20/11): no Animadinhos cada frase cantada é respondida por um som de teclado bem marcante — 'O Luisinho comprou uma casa! tram tram tramram' — isso deixa a música animada. A partir da 25: Style pede o riff de teclado depois de cada verso e as marcações [Verse]/[Chorus] ganham 'short keyboard riff after each line' (o 'tram tram' não vai na letra para o Suno não cantar). · 20/11 (E13): 26 (reggae) tirou 4,7 — usuário: 'está sem batida viciante'. Medido: 'bateria de banda' 0,046 (o triplo das 21–25, ~0,015) e o loop menos repetido (0,738): o ritmo puxou bateria acústica de banda. A bateria do trio passa a ser o loop ELETRÔNICO do teclado (drum machine, sempre a mesma batida) e 'live drums/acoustic drums' voltam para o Exclude. · 21/11/2026, usuário: 'identifiquei outro instrumento que deixa a música divertida. preciso que coloque na essência dos dois canais: contra baixo, bateria, teclado. muitos deles' → o CONTRABAIXO entra como instrumento principal (baixo elétrico groovado, linha que anda e pula, alto e claro), junto com teclado e bateria eletrônica, os três fortes e na frente; 'bass guitar' saiu do Exclude.",
+   "intervalo": "[Instrumental Break - {s} seconds, bright high keyboard melody, keyboard pisadinha, groovy bass and strong drums, a short spooky organ riff]",
+   "intro": "[Intro - bright high keyboard melody, groovy bass and strong drums]",
    "resposta_teclado": true
   }
  },

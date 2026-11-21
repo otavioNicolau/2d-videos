@@ -12,6 +12,13 @@ Fonte única das regras: o passo a passo do Suno ([COMO_USAR_NO_SUNO.md](COMO_US
 
 ---
 
+## Essência do som (E14, 21/11/2026 — pedido do usuário)
+**TECLADO + CONTRABAIXO + BATERIA, muitos deles**: "identifiquei outro instrumento que deixa a música divertida —
+contra baixo, bateria, teclado". Os três altos e na frente: teclado arranjador (pisadinha, melodia aguda e o riff
+"tram-tram" depois de cada frase), **contrabaixo elétrico groovado** (linha que anda e pula, tipo slap) e bateria
+eletrônica do teclado (o mesmo loop a música toda). O sax fica só como toque na abertura e nos intervalos.
+Vale da 29 em diante (`estilos.json → canal.trio`, versão E14; E13 = 27/28, sem contrabaixo).
+
 ## 0. Jeito de escrever (18/11/2026 — análise da referência, aprovado pelo usuário; vale para toda letra nova)
 Detalhes em [REFERENCIA_ANIMADINHOS.md](REFERENCIA_ANIMADINHOS.md).
 1. **Premissa engraçada numa frase**: um personagem com um exagero (o queijo que estica até a lua, a vovó de patinete que
