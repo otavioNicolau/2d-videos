@@ -19,6 +19,15 @@ contra baixo, bateria, teclado". Os três altos e na frente: teclado arranjador 
 eletrônica do teclado (o mesmo loop a música toda). O sax fica só como toque na abertura e nos intervalos.
 Vale da 29 em diante (`estilos.json → canal.trio`, versão E14; E13 = 27/28, sem contrabaixo).
 
+## Som próprio do canal — E16 (21/11/2026, usuário revisando a 29)
+- **Só teclado + contrabaixo + bateria eletrônica** ("quero teclado, com baixo, bateria"). O sax saiu (fica no Exclude
+  com os metais).
+- **Groove próprio da Laurinha** ("deixe de lado ritmos como samba etc… faça o próprio"; "gosto de groove com muito
+  teclado e bateria"): o mesmo groove em todas as músicas da 29 em diante, sem nome de gênero no Style —
+  batida sincopada "boom-ch-boom-chick", caixa e palmas no contratempo, acordes de teclado pulando no contratempo,
+  riff de teclado, baixo pulando nos vãos, um padrão de 2 compassos repetido a música toda. Andamento **130–140 BPM** (usuário, 21/11: "quero 120 a 150" → "ajuste o bpm 130-140", nos dois canais)
+  (fichas ajustadas). Config: `estilos.json → canal.groove_proprio`. O campo `ritmo` da ficha fica só como referência.
+
 ## Igual ao Fofolucos (21/11/2026 — "deixar o canal Laurinha do mesmo jeito desse")
 - **Estrutura enxuta** (as músicas saíam com mais de 3 min): **1 bordão só** (depois do 1º refrão) com intervalo de
   **4 s**; depois do 2º refrão, intervalo de **6 s**; o 3º refrão é **meio refrão** (as 4 primeiras linhas,
@@ -290,3 +299,16 @@ Independentes da música do episódio; repetidas em todo vídeo:
   - se o filtro do Suno bloquear a letra tradicional, **não** trocar letras só para escapar do filtro: avisar e decidir;
   - a ficha marca `dominio_publico` com o trecho tradicional usado.
 - Para publicar com monetização, gerar no plano pago do Suno e conferir os termos atuais antes.
+
+
+## Duração a 130–140 BPM (21/11/2026 — usuário: "cuidado pro Suno não fazer música de 1:30")
+Andamento mais rápido encurta a música (a mesma letra a 130 em vez de 108 BPM sai ~17 % menor). Estrutura atual:
+**1 bordão + intervalo de 6 s**, **ponte cantada 2 vezes** ("De novo!" no meio), **intervalo de 8 s** e **último refrão
+inteiro**. O verificador estima a duração com o andamento (≈1,3 compasso por linha cantada, medido nos takes reais:
+Fofolucos 02/03 e Laurinha 29) e avisa abaixo de 140 s. Laurinha 29–49: estimativa 2:23–2:33.
+
+## Mais conteúdo (21/11/2026 — usuário: "as letras estão curtas, com pouco conteúdo")
+O **2º verso é sempre NOVO**, continuando a história com uma virada engraçada (nada de repetir o 1º verso), e a
+**ponte tem duas metades diferentes** ("E mais!" + comandos novos), não "De novo!" + repetição. O refrão continua se
+repetindo (é ele que a criança decora). Feito em 29–49 em 21/11. O aviso de "variedade" do verificador (34 linhas
+diferentes × 20–25 da referência) fica aceito.

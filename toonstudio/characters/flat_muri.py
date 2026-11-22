@@ -422,6 +422,18 @@ class FlatMuri(Character):
             for side in (-1, 1):
                 q = rot((nx_ + side * 26, C[1] + 34), ht, C)
                 self._shape(k, ellipse_pts(q[0], q[1], 30, 14, side * 0.35, 14), L.extra["bigodao"], line="#B8B8C8")
+        if P.get("oculos_cabeca", 0) > 0.5 and not v.back:   # óculos EM CIMA da cabeça (Laurinha 29: "tava na cabeça dela!")
+            lentes = []
+            for side in (-1, 1):
+                e = _olho(v, C[0], r, side)
+                if e:
+                    x, c = e
+                    q = rot((x, C[1] - r * 0.9), ht, C)
+                    lentes.append(q)
+                    k.shape(ellipse_pts(q[0], q[1], 32 * c, 26, 0, 20), fill=_rgba("#CFEFFF", 0.9),
+                            brush=Brush(LINE * 1.3, 0.0, _rgba("#8E44AD"), 0.0), dense=True, line=LINE * 1.3)
+            if len(lentes) == 2:
+                self._line(k, [(lentes[0][0] + 28, lentes[0][1]), (lentes[1][0] - 28, lentes[1][1])], "#8E44AD", w=LINE * 1.3)
         if P.get("coroa", 0) > 0.5 and not v.back:   # coroa (fantasia de princesa)
             base = [rot((C[0] + x, C[1] - r * 0.92 + y), ht, C) for x, y in ((-48, 6), (-48, -34), (-24, -12), (0, -46), (24, -12), (48, -34), (48, 6))]
             self._shape(k, base, "#FFD23F", line="#D9A520", smooth=False)

@@ -52,7 +52,7 @@
   "nota_batida": "18/11/2026: na referência cada batida soa idêntica (semelhança 0,95–0,98: ritmo pronto de teclado arranjador, um loop simples a música inteira); nas nossas 0,66–0,87 (bateria 'tocada', com viradas e percussão variando). Usuário: 'batidas como se fosse bateria, bumbo, algo feito no teclado, pra dar ritmo'.",
   "abertura": "Brazilian arranger keyboard kids song (teclado arranjador), one simple keyboard drum loop",
   "nota_ajustes_14": "18/11/2026 (take v2 da 14): baixo fraco (5,6 % × 11 % da referência) → 'deep bouncy keyboard bass'; voz larga (0,17 × 0,01) → 'dry centered vocal' e Exclude 'vocal reverb, echo'; tirado 'repeated chorus' do Exclude (o bloco repete de propósito); Exclude sem termos repetidos.",
-  "versao": "F3",
+  "versao": "F4",
   "historico": [
    {
     "versao": "F1",
@@ -73,10 +73,17 @@
     "mudanca": "F2 + GROOVE VICIANTE no centro do Style (loop de 2 compassos baixo+bateria repetido, palmas no 2 e 4, pisadinha no contratempo); Exclude 'half-time', 'laid back'; sem 'spooky' (puxou tom menor)",
     "motivo": "usuário: 'pra próximas músicas preciso de groove viciante'",
     "usado_em": "02 v2 em diante"
+   },
+   {
+    "versao": "F4",
+    "data": "21/11/2026",
+    "mudanca": "GROOVE PRÓPRIO do canal (sem nome de ritmo no Style), 120–150 BPM; teclado + contrabaixo + bateria eletrônica, órgão só na intro/intervalos",
+    "motivo": "usuário: 'deixe de lado ritmos… faça o próprio' (Laurinha) → 'ajuste fofolucos para groove próprio também'; 'quero 120 a 150 nos dois canais'",
+    "usado_em": "04 em diante"
    }
   ],
   "versao_por_voz": {
-   "fofolucos": "F3"
+   "fofolucos": "F4"
   },
   "nota_sincope": "19/11/2026 (usuário: 'focar nas batidas do som contagiante'): raio-x da bateria (scripts/referencias/batida.py) — referência síncope 0,69 e bumbo reto 0,50; nossas 0,56 e 0,67. A nota de ouvido sobe com a síncope e o baixo fora do tempo (14: 0,39→nota 3 … 18: 0,72 e baixo 0,90→nota 4,6). A 19 v1 (rock com 'punk-rock drumming, driving kick') saiu reta: 0,41.",
   "nota_loop": "19/11/2026 (usuário ouvindo a 19 v2): 'Animadinhos são ritmos e batidas que não mudam muito durante a música; a nossa está ficando ainda estilo banda'. Medido: loop igual referência 0,96 × 19 v1 0,84 × 19 v2 0,75; outros instrumentos 9 % × 20 %. E8: um loop sincopado só, sem virada entre as partes, mesma batida no verso e no refrão, sem solo/quebra.",
@@ -129,9 +136,25 @@
    ],
    "tirar_do_exclude": [],
    "nota": "19/11/2026, usuário: 'quero usar esses 3 instrumentos nas próximas músicas para teste — APENAS ELES' (saxofone, bateria e teclado, como o Animadinhos). · Ajuste do usuário: 'preciso que a bateria seja forte, pra marcar o ritmo, e as pisadinhas do teclado também; o saxofone fica em 3º' → ordem: bateria forte > teclado pisadinha > sax (só abertura, antes do refrão e intervalos). · Nova ordem do usuário (19/11): TECLADO em 1º, BATERIA em 2º, SAX em 3º. · Usuário (19/11): 'reduzir um pouco mais o saxofone e aumentar o teclado com som mais agudo' → sax bem baixo e raro (só abertura/intervalos, fora da abertura da letra), teclado mais alto e agudo. · Usuário (20/11): no Animadinhos cada frase cantada é respondida por um som de teclado bem marcante — 'O Luisinho comprou uma casa! tram tram tramram' — isso deixa a música animada. A partir da 25: Style pede o riff de teclado depois de cada verso e as marcações [Verse]/[Chorus] ganham 'short keyboard riff after each line' (o 'tram tram' não vai na letra para o Suno não cantar). · 20/11 (E13): 26 (reggae) tirou 4,7 — usuário: 'está sem batida viciante'. Medido: 'bateria de banda' 0,046 (o triplo das 21–25, ~0,015) e o loop menos repetido (0,738): o ritmo puxou bateria acústica de banda. A bateria do trio passa a ser o loop ELETRÔNICO do teclado (drum machine, sempre a mesma batida) e 'live drums/acoustic drums' voltam para o Exclude. · 21/11/2026, usuário: 'identifiquei outro instrumento que deixa a música divertida. preciso que coloque na essência dos dois canais: contra baixo, bateria, teclado. muitos deles' → o CONTRABAIXO entra como instrumento principal (baixo elétrico groovado, linha que anda e pula, alto e claro), junto com teclado e bateria eletrônica, os três fortes e na frente; 'bass guitar' saiu do Exclude. · 21/11/2026, usuário: 'pra próximas músicas preciso de GROOVE VICIANTE' → o groove vira o centro do Style: um loop de 2 compassos de baixo + bateria eletrônica (bumbo em todo tempo, palmas no 2 e 4) repetido a música toda, pisadinha do teclado nos contratempos. Fofolucos: tirado 'spooky' (a 02 v1 saiu em tom MENOR e a 108 BPM).",
-   "intervalo": "[Instrumental Break - {s} seconds, bright high keyboard melody, keyboard pisadinha, groovy bass and strong drums, a short cartoon organ riff]",
+   "intervalo": "[Instrumental Break - {s} seconds, bright high keyboard melody, LOTS of keyboard, groovy bass and strong drums, a short cartoon organ riff]",
    "intro": "[Intro - bright high keyboard melody, groovy bass and strong drums]",
    "resposta_teclado": true
+  },
+  "bpm_faixa": [
+   130,
+   140
+  ],
+  "nota_bpm_faixa": "21/11 (usuário: 'quero 120 a 150 … nos dois canais'): andamento de toda música nova entre 120 e 150 BPM (vale mais que a faixa do ritmo)",
+  "groove_proprio": {
+   "ativo": true,
+   "nome": "groove próprio dos Fofolucos",
+   "style": "THE FOFOLUCOS GROOVE: ADDICTIVE bouncy groove, syncopated drum-machine kick 'boom-ch-boom-chick', snappy snare and claps on the off-beats, keyboard stabs bouncing on the off-beats, bass hopping in the gaps, one catchy 2-bar pattern repeated hypnotically all song, danceable",
+   "curto": "ADDICTIVE monster-party groove with LOTS of keyboard and big drum-machine, syncopated bouncy kick, big groovy bass",
+   "bpm": [
+    130,
+    140
+   ],
+   "nota": "21/11 (usuário: 'ajuste fofolucos para groove próprio também'): UM groove do canal em toda música nova (04+), sem nome de gênero no Style; base no que deu nota 4,9 (03: batida sincopada + baixo no contratempo) e 4,8 (02: funk); 130–140 BPM. O órgão de desenho continua só na intro e nos intervalos (assinatura do canal)."
   }
  },
  "peso": {

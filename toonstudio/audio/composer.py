@@ -169,18 +169,46 @@ def grafia_suno(letra: str) -> str:
     return "".join(partes)
 
 
+def groove_proprio(E: dict | None = None) -> dict | None:
+    """21/11 (Laurinha, usuário: 'deixe de lado ritmos como samba etc… faça o próprio'): o canal tem UM groove próprio
+    (muito teclado + bateria eletrônica + contrabaixo) e o ritmo da ficha não entra no Style (nem o nome do gênero)."""
+    g = (E or estilos())["canal"].get("groove_proprio") or {}
+    return g if g.get("ativo") else None
+
+
+def faixa_bpm(E: dict | None = None) -> list | None:
+    """Faixa de andamento do canal (21/11, usuário: 'quero 120 a 150 … nos dois canais'): a do groove próprio ou
+    `canal.bpm_faixa`; None = sem limite (vale a faixa do ritmo)."""
+    E = E or estilos()
+    g = groove_proprio(E)
+    return (g or {}).get("bpm") or E["canal"].get("bpm_faixa")
+
+
+def bpm_proprio(f: dict, E: dict | None = None) -> int:
+    fx = faixa_bpm(E)
+    if not fx:
+        return f["bpm"]
+    lo, hi = fx
+    return int(min(hi, max(lo, f["bpm"])))
+
+
 def style(f: dict, ritmo: str | None = None, bpm: int | None = None, E: dict | None = None, V: dict | None = None) -> str:
     E = E or estilos()
     V = V or vozes()
     rid = ritmo or f["ritmo"]
     r = E["ritmos"][rid]
     p = E["peso"][r["peso"]]
-    bpm = bpm or (f["bpm"] if rid == f["ritmo"] else r["bpm"][2])
+    bpm = bpm or (bpm_proprio(f, E) if rid == f["ritmo"] else r["bpm"][2])
     voz = V["vozes"][f.get("voz", "dueto")]["style"]
     # 18/11 (take v2 da 14): o Suno pesa mais o começo do Style — "teclado arranjador" vem antes do ritmo, e o ritmo entra como
     # "groove" (o nome sozinho, ex. "axé music, Bahia carnival", puxava percussão ao vivo e batida variada)
     genero = r["genero"].split(",")[0].strip()
     trio = E["canal"].get("trio", {})
+    gp = groove_proprio(E)
+    if trio.get("ativo") and gp:          # groove próprio do canal: sem nome de ritmo, sem groove do ritmo
+        parts = [E["canal"].get("duracao", ""), trio["abertura"], f"{bpm_proprio(f, E)} bpm", gp["style"], trio["producao"],
+                 f.get("style_extra", ""), voz, V["coro"].get("style", ""), E["canal"]["sempre"]]
+        return ", ".join(x for x in parts if x)
     if trio.get("ativo"):                 # E12 (19/11): só sax, bateria e teclado — o ritmo entra só como groove
         # 21/11: o ritmo pode trazer o PRÓPRIO groove (ex.: latino = dembow); o do canal ("palmas no 2 e 4") apagava o dembow
         parts = [E["canal"].get("duracao", ""), trio["abertura"], f"{genero} groove", f"{bpm} bpm", r.get("peso_style") or trio["peso_style"],
@@ -198,9 +226,13 @@ def style_curto(f: dict, ritmo: str | None = None, E: dict | None = None, V: dic
     V = V or vozes()
     rid = ritmo or f["ritmo"]
     r = E["ritmos"][rid]
-    bpm = f["bpm"] if rid == f["ritmo"] else r["bpm"][2]
+    bpm = bpm_proprio(f, E) if rid == f["ritmo"] else r["bpm"][2]
     peso = {"forte": "punchy electronic beat, strong kick and claps", "media": "strong punchy groove",
             "marcada": "steady marked groove"}[r["peso"]]
+    gp = groove_proprio(E)
+    if gp:
+        return ", ".join([x for x in [E["canal"].get("duracao", "")] if x] + [gp["curto"], f"{bpm_proprio(f, E)} bpm",
+                          V["vozes"][f.get("voz", "dueto")]["style"], "major key, Brazilian Portuguese"])
     return ", ".join([x for x in [E["canal"].get("duracao", "")] if x] + [r["genero"].split(",")[0], f"{bpm} bpm", peso, r["bateria"].split(",")[0],
                       V["vozes"][f.get("voz", "dueto")]["style"], "major key, Brazilian Portuguese"])
 
@@ -236,15 +268,19 @@ def prompt(d: Path) -> dict:
     letra = (d / "letra.txt").read_text(encoding="utf-8")
     r = E["ritmos"][f["ritmo"]]
     voz = V["vozes"][f.get("persona") or f.get("voz", "dueto")]     # "persona": quem conduz (uma Voice por faixa no Suno)
-    res = {"titulo": f["titulo"], "ritmo": r["nome"], "bpm": f["bpm"], "style": style(f, E=E, V=V),
+    gp = groove_proprio(E)
+    res = {"titulo": f["titulo"], "ritmo": (f"{gp['nome']} (o ritmo da ficha não entra)" if gp else r["nome"]),
+           "bpm": bpm_proprio(f, E), "style": style(f, E=E, V=V),
            "style_curto": style_curto(f, E=E, V=V), "exclude": exclude(f, E=E),
            "lyrics": grafia_suno(expandir(letra, r["peso"], E, V)), "persona": voz.get("suno_persona"), "voz": f.get("persona") or f.get("voz", "dueto"),
            "avisos": [], "alternativas": []}
     if len(res["lyrics"].rstrip()) > LIMITE_LETRA:
         res["avisos"].append(f"letra com {len(res['lyrics'].rstrip())} caracteres: passa do limite do Suno ({LIMITE_LETRA})")
     lo, hi, _ = r["bpm"]
-    if not lo <= f["bpm"] <= hi:
-        res["avisos"].append(f"andamento {f['bpm']} fora da faixa do {r['nome']} ({lo}–{hi})")
+    if faixa_bpm(E):                                         # faixa do canal (120–150) vale mais que a do ritmo
+        lo, hi = faixa_bpm(E)
+    if not gp and not lo <= res["bpm"] <= hi:                # com groove próprio o ritmo da ficha não vale
+        res["avisos"].append(f"andamento {res['bpm']} fora da faixa do {r['nome']} ({lo}–{hi})")
     c = contradicoes(res["style"], res["exclude"])
     if c:
         res["avisos"].append("contradição Style × Exclude: " + ", ".join(c))
@@ -345,9 +381,16 @@ def _segundos_tag(tag: str) -> float:
     return float(m.group(1)) if m else 0.0
 
 
-def estimar_duracao(seq: list[tuple[str, str]]) -> float:
-    """Estimativa GROSSEIRA (calibrada na referência: ~1,9 s por verso de ~4 palavras, ~1 compasso de respiro entre as
-    partes). A medição real das versões do Suno (F4) é que vale."""
+COMPASSOS_POR_LINHA = 1.3      # 21/11: medido nos takes reais (Fofolucos 02 1,48 · 03 1,31 · Laurinha 29 1,25), intro/viradas/outro incluídos
+
+
+def estimar_duracao(seq: list[tuple[str, str]], bpm: float | None = None) -> float:
+    """Com o andamento (21/11): cada linha cantada ≈ 1,3 compasso de 4 tempos + os intervalos marcados — a 130–140 BPM
+    a música encurta (cuidado do usuário: 'pro Suno não fazer música de 1:30'). Sem andamento: a estimativa antiga
+    (≈1,9 s por verso de ~4 palavras). A medição real das versões do Suno é que vale."""
+    if bpm:
+        canto = sum(1 for k, _ in seq if k == "canto")
+        return round(canto * COMPASSOS_POR_LINHA * 240.0 / bpm + sum(_segundos_tag(x) for k, x in seq if k != "canto"), 1)
     t = 0.0
     for kind, txt in seq:
         if kind == "canto":
@@ -500,7 +543,7 @@ def checar(d: Path) -> Checagem:
     if nresp > 6:
         ck.add("aviso", "respostas", f"{nresp} respostas entre parênteses (referência: quase nenhuma; uma voz só, sem respostinha em todo verso)")
     # duração estimada
-    est = estimar_duracao(seq)
+    est = estimar_duracao(seq, bpm_proprio(f, E))
     ck.metricas["duracao_estimada"] = est
     lo, hi = f.get("duracao_alvo", [140, 170])
     if est < lo:  # sem folga: a 12 (estimativa 122 s) saiu com 103 s e o Suno completou com outra letra
@@ -651,8 +694,11 @@ def medir_versao(d: Path, audio: Path, log=print) -> dict:
          "final": fim["tipo"], "silencio_final": fim["silencio"], **cmp}
     pontos = []
     lo, hi, _ = r["bpm"]
+    gp = groove_proprio()
+    if faixa_bpm():                                          # faixa do canal (groove próprio ou bpm_faixa)
+        lo, hi = faixa_bpm()
     if not lo - 3 <= bpm <= hi + 3:
-        pontos.append(f"andamento {bpm:.0f} fora da faixa do {r['nome']} ({lo}–{hi})")
+        pontos.append(f"andamento {bpm:.0f} fora da faixa ({lo}–{hi}) do {gp['nome'] if gp else r['nome']}")
     if m["voz_inicio"] is not None and m["voz_inicio"] > 6:
         pontos.append(f"voz só entra em {m['voz_inicio']} s (ideal ≤ 5 s)")
     if m["refrao_inicio"] is None:

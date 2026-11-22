@@ -1,0 +1,201 @@
+{
+ "schema": "avaliacao-1.0",
+ "versoes": {
+  "Mamãe Querida": {
+   "arquivo": "Mamãe Querida.wav",
+   "duracao": 145.6,
+   "bpm": 107.7,
+   "bpm_nota": "",
+   "tom": "Sol maior",
+   "voz_inicio": 1.5,
+   "refrao_inicio": 0.0,
+   "cantado": 70,
+   "intervalos": [
+    [
+     51.7,
+     8.2
+    ],
+    [
+     104.2,
+     14.5
+    ]
+   ],
+   "fim_depois_da_voz": 5.2,
+   "final": "corte seco",
+   "silencio_final": 0.2,
+   "acerto": 91,
+   "nao_reconhecidas": [
+    "luisinho",
+    "superpoder",
+    "sara",
+    "dodoi"
+   ],
+   "pontos_a_conferir": []
+  },
+  "Mamãe Querida (1)": {
+   "arquivo": "Mamãe Querida (1).wav",
+   "duracao": 111.1,
+   "bpm": 136.0,
+   "bpm_nota": "",
+   "tom": "Dó maior",
+   "voz_inicio": 2.2,
+   "refrao_inicio": 2.2,
+   "cantado": 80,
+   "intervalos": [
+    [
+     11.3,
+     6.7
+    ]
+   ],
+   "fim_depois_da_voz": 7.4,
+   "final": "corte seco",
+   "silencio_final": 0.2,
+   "acerto": 64,
+   "nao_reconhecidas": [
+    "laurinha",
+    "luisinho",
+    "gira",
+    "superpoder",
+    "sara",
+    "dodoi",
+    "dancar",
+    "acabar",
+    "procurou",
+    "gostou",
+    "joinha",
+    "chama"
+   ],
+   "pontos_a_conferir": [
+    "duração 111 s fora do alvo 140–170 s",
+    "só 64% da letra reconhecida — ouvir a pronúncia",
+    "menos de 2 intervalos de dança"
+   ]
+  },
+  "Mamãe Querida (2)": {
+   "arquivo": "Mamãe Querida (2).wav",
+   "duracao": 162.8,
+   "bpm": 136.0,
+   "bpm_nota": "",
+   "tom": "Sol maior",
+   "voz_inicio": 2.35,
+   "refrao_inicio": 32.6,
+   "cantado": 69,
+   "intervalos": [
+    [
+     10.8,
+     6.8
+    ],
+    [
+     50.9,
+     6.4
+    ],
+    [
+     93.1,
+     2.6
+    ],
+    [
+     109.4,
+     13.0
+    ],
+    [
+     128.1,
+     6.9
+    ],
+    [
+     158.5,
+     3.3
+    ]
+   ],
+   "fim_depois_da_voz": 0.0,
+   "final": "corte seco",
+   "silencio_final": 0.0,
+   "acerto": 84,
+   "nao_reconhecidas": [
+    "laurinha",
+    "luisinho",
+    "gira",
+    "superpoder",
+    "beijinho",
+    "sara",
+    "dodoi",
+    "sofa",
+    "euzinha",
+    "chama",
+    "tchau"
+   ],
+   "pontos_a_conferir": []
+  },
+  "Mamãe Querida (3)": {
+   "arquivo": "Mamãe Querida (3).wav",
+   "duracao": 151.2,
+   "bpm": 136.0,
+   "bpm_nota": "",
+   "tom": "Ré maior",
+   "voz_inicio": 1.45,
+   "refrao_inicio": 0.0,
+   "cantado": 70,
+   "intervalos": [
+    [
+     9.4,
+     6.2
+    ],
+    [
+     48.8,
+     12.9
+    ],
+    [
+     106.6,
+     12.3
+    ]
+   ],
+   "fim_depois_da_voz": 1.1,
+   "final": "esmaecendo",
+   "silencio_final": 0.9,
+   "acerto": 94,
+   "nao_reconhecidas": [
+    "luisinho",
+    "superpoder",
+    "sara",
+    "dodoi",
+    "cade",
+    "chama"
+   ],
+   "pontos_a_conferir": []
+  }
+ },
+ "ouvido": {
+  "Mamãe Querida": {
+   "1 começo chama atenção": null,
+   "5 melodia combina com a letra": null,
+   "6 dá vontade de dançar": null,
+   "7 pronúncia natural": null,
+   "8 tem a cara do canal": null,
+   "9 nenhum trecho cansativo": null
+  },
+  "Mamãe Querida (1)": {
+   "1 começo chama atenção": null,
+   "5 melodia combina com a letra": null,
+   "6 dá vontade de dançar": null,
+   "7 pronúncia natural": null,
+   "8 tem a cara do canal": null,
+   "9 nenhum trecho cansativo": null
+  },
+  "Mamãe Querida (2)": {
+   "1 começo chama atenção": null,
+   "5 melodia combina com a letra": null,
+   "6 dá vontade de dançar": null,
+   "7 pronúncia natural": null,
+   "8 tem a cara do canal": null,
+   "9 nenhum trecho cansativo": null
+  },
+  "Mamãe Querida (3)": {
+   "1 começo chama atenção": null,
+   "5 melodia combina com a letra": null,
+   "6 dá vontade de dançar": null,
+   "7 pronúncia natural": null,
+   "8 tem a cara do canal": null,
+   "9 nenhum trecho cansativo": null
+  }
+ },
+ "escolhida": "Mamãe Querida (3)"
+}

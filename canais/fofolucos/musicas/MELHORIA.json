@@ -94,5 +94,38 @@
    "teclado/synth reconhecido (baixo)",
    "bateria de banda reconhecida (alto)"
   ]
+ },
+ {
+  "musica": "04",
+  "titulo": "Tem Criança Debaixo da Cama!",
+  "estilo": "F4",
+  "medidas": {
+   "voz_%": 28.5,
+   "bateria_%": 45.2,
+   "baixo_%": 7.9,
+   "outros_%": 18.3,
+   "largura_voz": 0.114,
+   "batidas_identicas": 0.757,
+   "duracao_s": 202.8,
+   "teclado_eletronico": 0.021,
+   "bateria_banda": 0.007,
+   "percussao": 0.005,
+   "metais": 0.002,
+   "sincope": 0.27,
+   "baixo_sincopado": 0.8
+  },
+  "acertos": "4/12",
+  "nota": 5.0,
+  "obs": "F4 groove próprio 136 BPM; tom MENOR (Sol menor) e batida pouco sincopada (0,27), mas o usuário adorou (3:23, inteira)",
+  "falhas": [
+   "voz no som (%) (baixo)",
+   "baixo no som (%) (baixo)",
+   "outros instrumentos (%) (alto)",
+   "largura da voz (0 = uma voz no centro) (alto)",
+   "batida de teclado (loop igual) (baixo)",
+   "teclado/synth reconhecido (baixo)",
+   "batida sincopada (contratempo) — o 'contagiante' (baixo)",
+   "duração do take (s) (alto)"
+  ]
  }
 ]

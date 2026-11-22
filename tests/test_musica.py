@@ -54,18 +54,23 @@ def test_style_is_built_per_rhythm_without_contradictions():
     assert "heavy" not in calmo                                       # xote/ciranda/reggae: groove marcado, sem peso
 
 
-def test_trio_so_sax_bateria_teclado():
-    """E12/E13 (usuário, 19/11: 'APENAS ELES'): o Style pede só sax, bateria e teclado e o Exclude barra o resto."""
+def test_trio_so_teclado_baixo_bateria():
+    """E16 (usuário, 21/11: 'quero teclado, com baixo, bateria'): o Style pede só teclado, contrabaixo e bateria; o sax
+    (E12–E15) foi para o Exclude junto com o resto."""
     E = c.estilos()
     if not E["canal"].get("trio", {}).get("ativo"):
         return
     f = {"ritmo": "samba_enredo", "bpm": 145, "voz": "luisinho"}
     s, x = c.style(f), c.exclude(f)
-    assert "saxophone" in s and "drums" in s and "keyboard" in s
+    assert "bass" in s and "drums" in s and "keyboard" in s
+    assert "saxophone" not in s and "saxophone" in x
     assert "whistle" not in s and "surdos" not in s and "guitar" not in s
     assert "guitar" in x and "whistle" in x
     # E13 (20/11): a bateria é o loop ELETRÔNICO do teclado — bateria de banda (ao vivo/acústica) fica no Exclude
-    assert "drum-machine loop" in s and "live drums" in x and "acoustic drums" in x
+    assert "drum-machine" in s and "live drums" in x and "acoustic drums" in x
+    # E16 (21/11, "deixe de lado ritmos… faça o próprio"): groove próprio do canal, sem o nome do ritmo da ficha
+    if c.groove_proprio(E):
+        assert "samba" not in s.lower() and c.groove_proprio(E)["style"] in s
 
 
 def test_shortcuts_follow_the_beat_weight():
@@ -524,5 +529,5 @@ def test_multicanal_perfis_e_projeto(monkeypatch):
     assert canal.id_do_projeto("fofolucos/ep01-teste") == "fofolucos"
     monkeypatch.setenv(canal.ENV, "fofolucos")
     from toonstudio.audio import composer
-    assert composer.estilos()["canal"]["versao"] == "F3"
+    assert composer.estilos()["canal"]["versao"] == "F4"
     assert "fofolucos" in composer.vozes()["vozes"]

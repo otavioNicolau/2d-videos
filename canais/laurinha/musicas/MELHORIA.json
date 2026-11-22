@@ -775,5 +775,36 @@
    "largura da voz (0 = uma voz no centro) (alto)",
    "batida de teclado (loop igual) (baixo)"
   ]
+ },
+ {
+  "musica": "29",
+  "titulo": "Mamãe Querida",
+  "estilo": "E16",
+  "medidas": {
+   "voz_%": 38.9,
+   "bateria_%": 27.1,
+   "baixo_%": 4.4,
+   "outros_%": 29.6,
+   "largura_voz": 0.098,
+   "batidas_identicas": 0.723,
+   "duracao_s": 151.2,
+   "teclado_eletronico": 0.043,
+   "bateria_banda": 0.018,
+   "percussao": 0.012,
+   "metais": 0.002,
+   "sincope": 0.54,
+   "baixo_sincopado": 0.68
+  },
+  "acertos": "6/12",
+  "nota": 4.8,
+  "obs": "E16 groove próprio 136 BPM, 2º verso novo (óculos); teclado dominante, bateria/baixo baixos",
+  "falhas": [
+   "batida no som (%) (baixo)",
+   "baixo no som (%) (baixo)",
+   "outros instrumentos (%) (alto)",
+   "largura da voz (0 = uma voz no centro) (alto)",
+   "batida de teclado (loop igual) (baixo)",
+   "batida sincopada (contratempo) — o 'contagiante' (baixo)"
+  ]
  }
 ]

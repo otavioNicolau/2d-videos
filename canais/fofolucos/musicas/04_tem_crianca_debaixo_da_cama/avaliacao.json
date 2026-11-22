@@ -1,0 +1,63 @@
+{
+ "schema": "avaliacao-1.0",
+ "versoes": {
+  "Tem Criança Debaixo da Cama!": {
+   "arquivo": "Tem Criança Debaixo da Cama!.wav",
+   "duracao": 202.8,
+   "bpm": 136.0,
+   "bpm_nota": "",
+   "tom": "Sol menor",
+   "voz_inicio": 3.9,
+   "refrao_inicio": null,
+   "cantado": 68,
+   "intervalos": [
+    [
+     12.2,
+     6.9
+    ],
+    [
+     78.2,
+     9.8
+    ],
+    [
+     143.1,
+     14.8
+    ]
+   ],
+   "fim_depois_da_voz": 1.2,
+   "final": "corte seco",
+   "silencio_final": 0.4,
+   "acerto": 86,
+   "nao_reconhecidas": [
+    "fofolucos",
+    "rawr",
+    "crec",
+    "lencol",
+    "monstrinha",
+    "bilu",
+    "cara",
+    "abaixa",
+    "devagarinho",
+    "brilha",
+    "tava",
+    "nhoque"
+   ],
+   "pontos_a_conferir": [
+    "o gancho não foi reconhecido na transcrição",
+    "duração 203 s fora do alvo 140–170 s",
+    "tom menor (o canal é sempre em tom maior)"
+   ]
+  }
+ },
+ "ouvido": {
+  "Tem Criança Debaixo da Cama!": {
+   "1 começo chama atenção": null,
+   "5 melodia combina com a letra": null,
+   "6 dá vontade de dançar": null,
+   "7 pronúncia natural": null,
+   "8 tem a cara do canal": null,
+   "9 nenhum trecho cansativo": null
+  }
+ },
+ "escolhida": "Tem Criança Debaixo da Cama!"
+}

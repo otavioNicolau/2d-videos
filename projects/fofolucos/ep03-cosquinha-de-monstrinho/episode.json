@@ -88,8 +88,9 @@
   },
   "approval": {
     "storyboard": true,
-    "final_render": false,
-    "notes": "storyboard e miniatura aprovados pelo usuário em 21/11"
+    "final_render": true,
+    "notes": "storyboard, miniatura e vídeo aprovados pelo usuário em 21/11",
+    "approved_by": "Otavio"
   },
   "scenes": [
     {

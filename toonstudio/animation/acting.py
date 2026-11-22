@@ -54,7 +54,7 @@ def comer(char, st, a):
     item = a.get("item", "banana")
     keys = [(0.0, {"holding": item, **HOLD_SIDE}, "step"),
             (0.25, {**AT_MOUTH, "mouth": "D"}, "inout"),
-            (0.4, {"mouth": "X", "holding": {"banana": "banana_mordida", "pao_queijo": "pao_queijo_mordido"}.get(item, item)}, "step"),
+            (0.4, {"mouth": "X", "holding": {"banana": "banana_mordida", "pao_queijo": "pao_queijo_mordido", "biscoito": "biscoito_mordido"}.get(item, item)}, "step"),
             (0.6, {**HOLD_SIDE}, "inout")]
     t = 0.6
     while t < d - 0.15:                                    # mastiga

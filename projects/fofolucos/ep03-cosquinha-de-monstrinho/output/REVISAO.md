@@ -1,8 +1,8 @@
 # Revisão — Cosquinha de Monstrinho
 
-- Vídeo: `ep03-cosquinha-de-monstrinho_CANDIDATO.mp4`
+- Vídeo: `ep03-cosquinha-de-monstrinho.mp4`
 - Prancha: `prancha.png`
-- Aprovação humana do render final: **PENDENTE (vídeo é candidato)**
+- Aprovação humana do render final: **SIM**
 
 ## Falas (QA por transcrição cega)
 
@@ -64,7 +64,6 @@
 
 ## Avisos
 
-- render final ainda não aprovado (approval.final_render = false): será gerado como CANDIDATO
 - storyboard s01_intro: pendente
 - storyboard s02_intro: pendente
 - storyboard s03_intro: pendente

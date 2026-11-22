@@ -1735,7 +1735,6 @@
     }
   },
   "warnings": [
-    "render final ainda não aprovado (approval.final_render = false): será gerado como CANDIDATO",
     "storyboard s01_intro: pendente",
     "storyboard s02_intro: pendente",
     "storyboard s03_intro: pendente",
@@ -1786,7 +1785,7 @@
     "storyboard s48_final: pendente"
   ],
   "lines": {},
-  "video": "/home/otavio/2d/projects/fofolucos/ep03-cosquinha-de-monstrinho/output/ep03-cosquinha-de-monstrinho_CANDIDATO.mp4",
+  "video": "/home/otavio/2d/projects/fofolucos/ep03-cosquinha-de-monstrinho/output/ep03-cosquinha-de-monstrinho.mp4",
   "contact_sheet": "/home/otavio/2d/projects/fofolucos/ep03-cosquinha-de-monstrinho/output/prancha.png",
-  "approved": false
+  "approved": true
 }

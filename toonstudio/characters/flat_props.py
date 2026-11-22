@@ -62,7 +62,8 @@ def ln(k: Ink, pts, col: str, w: float = LINE, alpha: float = 1.0):
 
 ITEMS = ("copo_leite", "copo_vazio", "banana", "banana_mordida", "pente", "garrafinha", "carrinho", "sombrinha", "escova",
          "suco", "fatia_bolo", "fatia_grande", "escova_pasta", "escova_guitarra", "apito", "sapato", "estrela_natal", "sorvete",
-         "baqueta", "saxofone", "pao_queijo", "pao_queijo_mordido", "baqueta_a4", "limao", "limao_mordido", "limonada")
+         "baqueta", "saxofone", "pao_queijo", "pao_queijo_mordido", "baqueta_a4", "limao", "limao_mordido", "limonada",
+         "biscoito", "biscoito_mordido")
 
 
 ITEM_SCALE = 1.6
@@ -90,6 +91,17 @@ def draw_item(k: Ink, name: str, H: tuple[float, float], f: float = 1.0, ang: fl
     elif name in ("pao_queijo", "pao_queijo_mordido"):                 # pãozinho de queijo na mão (24)
         x, y = q(0, -34)
         _paozinho(k, x, y, 0.62 * S, 1.0 if name.endswith("mordido") else 0.0)
+    elif name in ("biscoito", "biscoito_mordido"):                    # biscoito com gotas de chocolate (Fofolucos 04)
+        x, y = q(0, -34)
+        r = 26 * S
+        if name == "biscoito_mordido":                                 # a mordida: falta um pedaço redondo em cima à direita
+            pts = [(x + r * math.cos(t / 40 * 2 * math.pi), y + r * math.sin(t / 40 * 2 * math.pi)) for t in range(40)]
+            pts = [p_ for p_ in pts if math.hypot(p_[0] - (x + r * 0.75), p_[1] - (y - r * 0.6)) > r * 0.5]
+            shape(k, pts, "#D9A15B", line="#A8713A")
+        else:
+            shape(k, ellipse_pts(x, y, r, r * 0.95, 0, 28), "#D9A15B", line="#A8713A")
+        for dx, dy in ((-0.4, -0.3), (0.2, -0.45), (0.35, 0.2), (-0.2, 0.35), (-0.05, -0.02)):
+            shape(k, ellipse_pts(x + dx * r, y + dy * r, r * 0.13, r * 0.11, 0, 10), "#5B3A22", line=None)
     elif name == "pente":
         box(k, *q(-10, -70), *q(10, 10), PAL["pente"], r=6) if f > 0 else box(k, *q(10, -70), *q(-10, 10), PAL["pente"], r=6)
         for j in range(6):

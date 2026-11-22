@@ -47,7 +47,7 @@
   "nota_batida": "18/11/2026: na referência cada batida soa idêntica (semelhança 0,95–0,98: ritmo pronto de teclado arranjador, um loop simples a música inteira); nas nossas 0,66–0,87 (bateria 'tocada', com viradas e percussão variando). Usuário: 'batidas como se fosse bateria, bumbo, algo feito no teclado, pra dar ritmo'.",
   "abertura": "Brazilian arranger keyboard kids song (teclado arranjador), one simple keyboard drum loop",
   "nota_ajustes_14": "18/11/2026 (take v2 da 14): baixo fraco (5,6 % × 11 % da referência) → 'deep bouncy keyboard bass'; voz larga (0,17 × 0,01) → 'dry centered vocal' e Exclude 'vocal reverb, echo'; tirado 'repeated chorus' do Exclude (o bloco repete de propósito); Exclude sem termos repetidos.",
-  "versao": "E15",
+  "versao": "E17",
   "historico": [
    {
     "versao": "E1",
@@ -157,11 +157,25 @@
     "mudanca": "E14 + GROOVE VICIANTE no centro do Style (loop de 2 compassos baixo+bateria repetido, palmas no 2 e 4, pisadinha no contratempo); Exclude 'half-time', 'laid back'",
     "motivo": "usuário: 'pra próximas músicas preciso de groove viciante'",
     "usado_em": "29 em diante"
+   },
+   {
+    "versao": "E16",
+    "data": "21/11/2026",
+    "mudanca": "SÓ teclado + contrabaixo + bateria eletrônica (sax fora: Style sem sax, sax/metais no Exclude) e GROOVE PRÓPRIO do canal (sem nome de ritmo no Style; 100–128 BPM)",
+    "motivo": "usuário, revisando a 29: 'quero teclado, com baixo, bateria' · 'no 30 pra frente gosto de groove com muito teclado e bateria' · 'deixe de lado ritmos como samba etc… faça o próprio'",
+    "usado_em": "29 em diante"
+   },
+   {
+    "versao": "E17",
+    "data": "21/11/2026",
+    "mudanca": "E16 + bateria e contrabaixo mais fortes no começo do Style ('BIG LOUD drum-machine (strong kick and claps) and a deep bouncy bass up front')",
+    "motivo": "placar da 29 (nota 4,8): bateria 27 % e baixo 4 % abaixo da referência (38 % e 11 %), teclado 30 %; um ajuste por vez",
+    "usado_em": "30 em diante"
    }
   ],
   "versao_por_voz": {
-   "laurinha": "E15",
-   "luisinho": "E15"
+   "laurinha": "E17",
+   "luisinho": "E17"
   },
   "nota_sincope": "19/11/2026 (usuário: 'focar nas batidas do som contagiante'): raio-x da bateria (scripts/referencias/batida.py) — referência síncope 0,69 e bumbo reto 0,50; nossas 0,56 e 0,67. A nota de ouvido sobe com a síncope e o baixo fora do tempo (14: 0,39→nota 3 … 18: 0,72 e baixo 0,90→nota 4,6). A 19 v1 (rock com 'punk-rock drumming, driving kick') saiu reta: 0,41.",
   "nota_loop": "19/11/2026 (usuário ouvindo a 19 v2): 'Animadinhos são ritmos e batidas que não mudam muito durante a música; a nossa está ficando ainda estilo banda'. Medido: loop igual referência 0,96 × 19 v1 0,84 × 19 v2 0,75; outros instrumentos 9 % × 20 %. E8: um loop sincopado só, sem virada entre as partes, mesma batida no verso e no refrão, sem solo/quebra.",
@@ -182,8 +196,8 @@
   "nota_sax": "19/11/2026, usuário: 'o Animadinhos usa muito ritmos com saxofone, bateria e teclado'. Medido (18 referências): teclado/piano em 15/18 (nossas 3–4× menos), sintetizador 13/18, bateria em ~metade, saxofone/metais claros em 3/18 (+3 leves) e ZERO nas nossas. E11 = E9 + piano de teclado arranjador na frente + riff de saxofone (som de sax do teclado) respondendo a voz.",
   "trio": {
    "ativo": true,
-   "abertura": "kids song with LOTS of keyboard, electric bass and drums, all loud and up front, a little saxophone",
-   "producao": "BRIGHT HIGH-PITCHED keyboard: catchy high piano melody, a short catchy keyboard riff answers EVERY sung line; BIG FUN GROOVY BASS: bouncy funky slap bass hook, loud and clear; BIG PUNCHY ELECTRONIC DRUMS, the same beat all song (no live drummer); saxophone very soft and rare (only intro and breaks), nothing else, single dry centered lead vocal",
+   "abertura": "kids song with ONLY keyboard, electric bass and drums: BIG LOUD drum-machine (strong kick and claps) and a deep bouncy bass up front, LOTS of keyboard",
+   "producao": "BRIGHT HIGH-PITCHED keyboard: catchy high piano melody, a short catchy keyboard riff answers EVERY sung line; BIG FUN GROOVY BASS: bouncy funky slap bass hook, loud and clear; BIG PUNCHY ELECTRONIC DRUMS, the same beat all song (no live drummer); nothing else, single dry centered lead vocal",
    "peso_style": "ADDICTIVE head-bobbing groove: groovy bass and a punchy drum-machine loop (kick on every beat, claps on 2 and 4), one catchy 2-bar pattern repeated hypnotically all song, keyboard 'pisadinha' chords bouncing on the off-beats, danceable",
    "exclude_extra": [
     "guitar",
@@ -208,13 +222,27 @@
     "ukulele",
     "harmonica",
     "organ",
-    "half-time"
+    "half-time",
+    "saxophone",
+    "sax",
+    "brass"
    ],
    "tirar_do_exclude": [],
    "nota": "19/11/2026, usuário: 'quero usar esses 3 instrumentos nas próximas músicas para teste — APENAS ELES' (saxofone, bateria e teclado, como o Animadinhos). · Ajuste do usuário: 'preciso que a bateria seja forte, pra marcar o ritmo, e as pisadinhas do teclado também; o saxofone fica em 3º' → ordem: bateria forte > teclado pisadinha > sax (só abertura, antes do refrão e intervalos). · Nova ordem do usuário (19/11): TECLADO em 1º, BATERIA em 2º, SAX em 3º. · Usuário (19/11): 'reduzir um pouco mais o saxofone e aumentar o teclado com som mais agudo' → sax bem baixo e raro (só abertura/intervalos, fora da abertura da letra), teclado mais alto e agudo. · Usuário (20/11): no Animadinhos cada frase cantada é respondida por um som de teclado bem marcante — 'O Luisinho comprou uma casa! tram tram tramram' — isso deixa a música animada. A partir da 25: Style pede o riff de teclado depois de cada verso e as marcações [Verse]/[Chorus] ganham 'short keyboard riff after each line' (o 'tram tram' não vai na letra para o Suno não cantar). · 20/11 (E13): 26 (reggae) tirou 4,7 — usuário: 'está sem batida viciante'. Medido: 'bateria de banda' 0,046 (o triplo das 21–25, ~0,015) e o loop menos repetido (0,738): o ritmo puxou bateria acústica de banda. A bateria do trio passa a ser o loop ELETRÔNICO do teclado (drum machine, sempre a mesma batida) e 'live drums/acoustic drums' voltam para o Exclude. · 21/11/2026, usuário: 'identifiquei outro instrumento que deixa a música divertida. preciso que coloque na essência dos dois canais: contra baixo, bateria, teclado. muitos deles' → o CONTRABAIXO entra como instrumento principal (baixo elétrico groovado, linha que anda e pula, alto e claro), junto com teclado e bateria eletrônica, os três fortes e na frente; 'bass guitar' saiu do Exclude. · 21/11/2026, usuário: 'pra próximas músicas preciso de GROOVE VICIANTE' → o groove vira o centro do Style: um loop de 2 compassos de baixo + bateria eletrônica (bumbo em todo tempo, palmas no 2 e 4) repetido a música toda, pisadinha do teclado nos contratempos. Fofolucos: tirado 'spooky' (a 02 v1 saiu em tom MENOR e a 108 BPM).",
-   "intervalo": "[Instrumental Break - {s} seconds, bright high keyboard melody, keyboard pisadinha, groovy bass and strong drums, a soft short sax riff]",
+   "intervalo": "[Instrumental Break - {s} seconds, bright high keyboard melody, LOTS of keyboard, groovy bass and strong drums]",
    "intro": "[Intro - bright high keyboard melody, groovy bass and strong drums]",
    "resposta_teclado": true
+  },
+  "groove_proprio": {
+   "ativo": true,
+   "nome": "groove próprio da Laurinha",
+   "style": "THE LAURINHA GROOVE: ADDICTIVE head-bobbing groove with LOTS of keyboard and BIG drum-machine: syncopated bouncy kick 'boom-ch-boom-chick', snappy snare and claps on the off-beats, bright keyboard chords bouncing on the off-beats and a catchy keyboard riff, groovy bass hopping in the gaps, one catchy 2-bar pattern repeated hypnotically all song, danceable",
+   "curto": "ADDICTIVE kids groove with LOTS of keyboard and big drum-machine, syncopated bouncy kick, groovy bass",
+   "bpm": [
+    130,
+    140
+   ],
+   "nota": "21/11 (usuário: 'deixe de lado ritmos como samba etc… faça o próprio'): UM groove do canal em todas as músicas (29+), sem nome de gênero no Style; base no que deu nota 4,9 (batida sincopada 'boom-ch-boom-chick' + baixo no contratempo); andamento 130–140 BPM (usuário, 21/11: 'quero 120 a 150' → 'ajuste o bpm 130-140'). Os grooves por ritmo (ritmos.*.peso_style) ficam guardados, sem uso."
   }
  },
  "peso": {
@@ -306,7 +334,9 @@
     "A",
     "C"
    ],
-   "exclude": []
+   "exclude": [],
+   "peso_style": "ADDICTIVE MARCHINHA groove: bouncy drum-machine march loop (kick on 1 and 3, snappy snare on 2 and 4, short snare pickups), LOTS of bright keyboard melody, groovy walking bass, one 2-bar pattern repeated all song, danceable",
+   "nota_groove": "21/11: groove próprio do ritmo com MUITO teclado e bateria eletrônica + contrabaixo (usuário: 'no 30 pra frente gosto de groove com muito teclado e bateria')"
   },
   "axe": {
    "nome": "Axé",
@@ -332,7 +362,9 @@
     "D",
     "A"
    ],
-   "exclude": []
+   "exclude": [],
+   "peso_style": "ADDICTIVE AXÉ groove: punchy drum-machine axé loop (syncopated kick, big claps, driving hi-hats), LOTS of bright keyboard stabs and a catchy keyboard riff, groovy bass, one 2-bar pattern repeated all song, jumping dance",
+   "nota_groove": "21/11: groove próprio do ritmo com MUITO teclado e bateria eletrônica + contrabaixo (usuário: 'no 30 pra frente gosto de groove com muito teclado e bateria')"
   },
   "pagodao": {
    "nome": "Pagodão baiano",
@@ -358,7 +390,9 @@
     "D",
     "B"
    ],
-   "exclude": []
+   "exclude": [],
+   "peso_style": "ADDICTIVE PAGODÃO groove: heavy drum-machine loop with syncopated kick and snare (Bahia pagodão swing), LOTS of keyboard stabs on the off-beats and a catchy keyboard riff, groovy bass, one 2-bar pattern repeated all song, danceable",
+   "nota_groove": "21/11: groove próprio do ritmo com MUITO teclado e bateria eletrônica + contrabaixo (usuário: 'no 30 pra frente gosto de groove com muito teclado e bateria')"
   },
   "forro_piseiro": {
    "nome": "Forró piseiro",
@@ -385,7 +419,9 @@
     "D",
     "E"
    ],
-   "exclude": []
+   "exclude": [],
+   "peso_style": "ADDICTIVE PISEIRO groove: fast drum-machine loop (kick on every beat, snappy snare on the off-beats 'tum-tcha'), LOTS of arranger keyboard pisadinha chords and a catchy keyboard lead riff, groovy bass, one 2-bar pattern repeated all song, danceable",
+   "nota_groove": "21/11: groove próprio do ritmo com MUITO teclado e bateria eletrônica + contrabaixo (usuário: 'no 30 pra frente gosto de groove com muito teclado e bateria')"
   },
   "forro_pe_de_serra": {
    "nome": "Forró pé de serra",
@@ -411,7 +447,9 @@
     "E",
     "C"
    ],
-   "exclude": []
+   "exclude": [],
+   "peso_style": "ADDICTIVE FORRÓ groove: drum-machine forró loop (kick on 1 and on the 'and' of 2, snare on the off-beats, steady hi-hat), LOTS of arranger keyboard playing the forró melody, groovy bass, one 2-bar pattern repeated all song, danceable",
+   "nota_groove": "21/11: groove próprio do ritmo com MUITO teclado e bateria eletrônica + contrabaixo (usuário: 'no 30 pra frente gosto de groove com muito teclado e bateria')"
   },
   "baiao": {
    "nome": "Baião",
@@ -437,7 +475,9 @@
     "A",
     "C"
    ],
-   "exclude": []
+   "exclude": [],
+   "peso_style": "ADDICTIVE BAIÃO groove: drum-machine baião loop (kick on 1 and on the 'and' of 2, snare on 2 and 4), LOTS of arranger keyboard playing the baião melody, groovy syncopated bass, one 2-bar pattern repeated all song, danceable",
+   "nota_groove": "21/11: groove próprio do ritmo com MUITO teclado e bateria eletrônica + contrabaixo (usuário: 'no 30 pra frente gosto de groove com muito teclado e bateria')"
   },
   "xote": {
    "nome": "Xote",
@@ -463,7 +503,9 @@
     "A",
     "E"
    ],
-   "exclude": []
+   "exclude": [],
+   "peso_style": "ADDICTIVE XOTE groove: swaying drum-machine loop (kick on 1 and 3, snare on the 'and' of 2 and on 4), LOTS of keyboard chords and a sweet catchy keyboard melody, groovy bass, one 2-bar pattern repeated all song, swaying dance",
+   "nota_groove": "21/11: groove próprio do ritmo com MUITO teclado e bateria eletrônica + contrabaixo (usuário: 'no 30 pra frente gosto de groove com muito teclado e bateria')"
   },
   "samba_infantil": {
    "nome": "Samba infantil",
@@ -474,7 +516,7 @@
    ],
    "peso": "media",
    "genero": "samba, Brazilian kids samba, roda de samba",
-   "bateria": "keyboard preset samba loop with pandeiro sound",
+   "bateria": "keyboard preset samba drum-machine loop",
    "instrumentos": "cavaquinho, bright piano",
    "clima": "warm and joyful",
    "temas": [
@@ -489,7 +531,9 @@
     "B",
     "C"
    ],
-   "exclude": []
+   "exclude": [],
+   "peso_style": "ADDICTIVE head-bobbing groove: groovy bass and a punchy drum-machine loop with a SAMBA swing (kick on 1 and on the 'and' of 2, syncopated snare and claps), one catchy 2-bar pattern repeated hypnotically all song, keyboard chords on the off-beats, danceable",
+   "nota_groove": "21/11: samba só com teclado, contrabaixo e bateria eletrônica (usuário: 'quero teclado, com baixo, bateria') — sem pandeiro/cavaquinho"
   },
   "samba_enredo": {
    "nome": "Samba-enredo",
@@ -595,7 +639,9 @@
     "B",
     "F"
    ],
-   "exclude": []
+   "exclude": [],
+   "peso_style": "ADDICTIVE POP groove: punchy drum-machine loop (four-on-the-floor kick, big claps on 2 and 4, bouncy 16th hi-hats), LOTS of bright keyboard stabs on the off-beats and a catchy keyboard riff, groovy bass, one 2-bar pattern repeated all song, danceable",
+   "nota_groove": "21/11: groove próprio do ritmo com MUITO teclado e bateria eletrônica + contrabaixo (usuário: 'no 30 pra frente gosto de groove com muito teclado e bateria')"
   },
   "reggae_infantil": {
    "nome": "Reggae infantil",
@@ -622,7 +668,9 @@
     "E"
    ],
    "exclude": [],
-   "bpm_nota": "20/11: até 100 — o grupo 'lento e dançante' da referência (Animadinhos) fica em 94–117; a 86 arrastava"
+   "bpm_nota": "20/11: até 100 — o grupo 'lento e dançante' da referência (Animadinhos) fica em 94–117; a 86 arrastava",
+   "peso_style": "ADDICTIVE kids REGGAE groove: drum-machine one-drop (kick and snare together on 3), keyboard skank chords on every off-beat, LOTS of bright keyboard melody, deep groovy bass, one 2-bar pattern repeated all song, swaying dance",
+   "nota_groove": "21/11: groove próprio do ritmo com MUITO teclado e bateria eletrônica + contrabaixo (usuário: 'no 30 pra frente gosto de groove com muito teclado e bateria')"
   },
   "rock_infantil": {
    "nome": "Rock infantil",
@@ -654,7 +702,9 @@
     "metal growl",
     "dark riff",
     "heavy metal"
-   ]
+   ],
+   "peso_style": "ADDICTIVE kids ROCK groove: driving drum-machine loop (kick on 1 and 3, big snare on 2 and 4, eighth-note hi-hats), LOTS of punchy keyboard power chords and a catchy keyboard riff, driving bass, one 2-bar pattern repeated all song, energetic",
+   "nota_groove": "21/11: groove próprio do ritmo com MUITO teclado e bateria eletrônica + contrabaixo (usuário: 'no 30 pra frente gosto de groove com muito teclado e bateria')"
   },
   "funk_infantil": {
    "nome": "Funk brasileiro infantil",
@@ -742,7 +792,9 @@
     "R",
     "C"
    ],
-   "exclude": []
+   "exclude": [],
+   "peso_style": "ADDICTIVE DISCO groove: four-on-the-floor drum-machine kick, open hi-hat on the off-beats, claps on 2 and 4, LOTS of funky keyboard chords and a catchy keyboard riff, octave disco bass, one 2-bar pattern repeated all song, danceable",
+   "nota_groove": "21/11: groove próprio do ritmo com MUITO teclado e bateria eletrônica + contrabaixo (usuário: 'no 30 pra frente gosto de groove com muito teclado e bateria')"
   },
   "sertanejo_infantil": {
    "nome": "Sertanejo infantil (country)",
@@ -768,7 +820,9 @@
     "A",
     "C"
    ],
-   "exclude": []
+   "exclude": [],
+   "peso_style": "ADDICTIVE SERTANEJO groove: bouncy drum-machine loop (kick on 1 and 3, snare on 2 and 4, shuffle hi-hats), LOTS of arranger keyboard chords and a catchy keyboard melody, groovy bass walking up and down, one 2-bar pattern repeated all song, danceable",
+   "nota_groove": "21/11: groove próprio do ritmo com MUITO teclado e bateria eletrônica + contrabaixo (usuário: 'no 30 pra frente gosto de groove com muito teclado e bateria')"
   },
   "latino_infantil": {
    "nome": "Latino infantil (reggaeton/suingueira)",

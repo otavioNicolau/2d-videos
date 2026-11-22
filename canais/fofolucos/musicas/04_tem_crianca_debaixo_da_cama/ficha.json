@@ -1,0 +1,134 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Tem Criança Debaixo da Cama!",
+ "gancho": "Tem criança debaixo da cama!",
+ "palavras_tema": [
+  "criança",
+  "cama",
+  "lanterna",
+  "valente",
+  "medo"
+ ],
+ "tipo": "danca",
+ "tema": "medo bobo AO CONTRÁRIO: de noite o Bilu ouve 'crec, crec' debaixo da cama e acha que é uma CRIANÇA (os monstrinhos têm medo de criança!). Refrão-pedido de ajuda. Ponte = comandos de coragem (respira fundo, cara de valente, lanterna, levanta o lençol… um, dois, três!). Virada: a turma levanta o lençol e era o Nhoque de pijama comendo biscoito escondido",
+ "dia_a_dia": [
+  "medo do escuro na hora de dormir",
+  "ter coragem com a ajuda dos amigos",
+  "lanterna e pijama"
+ ],
+ "curiosidade": "o vaga-lume acende a própria luz! Ele tem uma lanterninha natural na barriga e pisca para conversar com os amigos no escuro",
+ "ritmo": "funk_infantil",
+ "bpm": 136,
+ "estrutura": "R",
+ "voz": "fofolucos",
+ "cantam": {
+  "verso": "fofolucos",
+  "refrão": "fofolucos",
+  "ponte": "fofolucos (comandos de coragem)"
+ },
+ "cenas": [
+  {
+   "parte": "intro",
+   "ideia": "noite na Vila Monstrinha (lua com carinha): o quarto escuro, a cama tremendo, o Bilu espiando de olhão arregalado; a turma no raios"
+  },
+  {
+   "parte": "verso 1",
+   "ideia": "o Bilu apaga a luz e deita; 'crec, crec!' (letreiro), a cama treme; o Bilu se esconde debaixo do cobertor: 'será que é uma criança?!'"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "a turma em pânico fofo (shock_reaction), pede ajuda em close; dança do medo no xadrez; muda cenário e elenco a cada refrão"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "comandos de coragem: respira fundo, cara de valente (RAWR pequenininho), acende a lanterna (feixe de luz), abaixa devagarinho, levanta o lençol, um, dois, três!"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "a turma com lanternas; levantam o lençol… era o NHOQUE de pijama comendo biscoito (crec, crec); todos caem na risada"
+  },
+  {
+   "parte": "final",
+   "ideia": "'e você? tem medo de quê?' · joinha · inscreva-se · tchau na cama, todos de pijama, luz apagando · último RAWR do Nhoque com biscoito"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [],
+ "status": "aprovada",
+ "versoes": [
+  "Tem Criança Debaixo da Cama!"
+ ],
+ "persona": "fofolucos",
+ "youtube": {
+  "resumo": "TEM CRIANÇA DEBAIXO DA CAMA! 👾 De noite, o Bilu ouviu um barulho: crec, crec! E se for uma CRIANÇA?! Respira fundo, faz cara de valente, acende a lanterna… um, dois, três! E quem estava lá? O Nhoque, de pijama, comendo biscoito escondido!",
+  "resumo_short": "TEM CRIANÇA DEBAIXO DA CAMA! 👾 Crec, crec… quem será?",
+  "curiosidade": "O vaga-lume acende a própria luz! Ele tem uma lanterninha natural na barriga e pisca para conversar com os amigos no escuro.",
+  "miniatura": "TEM CRIANÇA\nDEBAIXO DA CAMA!",
+  "miniatura_cena": {
+   "fundo": "raios",
+   "centro": [
+    400,
+    430
+   ],
+   "cores": [
+    [
+     255,
+     210,
+     63
+    ],
+    [
+     255,
+     150,
+     60
+    ],
+    [
+     64,
+     200,
+     220
+    ],
+    [
+     255,
+     240,
+     170
+    ]
+   ],
+   "heroi": {
+    "id": "bilu",
+    "pose": {
+     "expr": "scared",
+     "turn": 0.15,
+     "mouth": "O",
+     "jaw": 0.6,
+     "eye_scale": 1.3,
+     "hand_n_x": -40,
+     "hand_n_y": -90,
+     "hand_n_bend": 0.6,
+     "paw_n": 3,
+     "hand_f_x": 40,
+     "hand_f_y": -90,
+     "hand_f_bend": -0.6,
+     "paw_f": 3
+    }
+   },
+   "par": {
+    "id": "nhoque",
+    "pose": {
+     "expr": "joy",
+     "turn": -0.2,
+     "mouth": "D",
+     "holding": "biscoito_mordido"
+    },
+    "tam": 520,
+    "x": 1040,
+    "corte": 120
+   }
+  }
+ },
+ "playlists": [
+  "Músicas dos Fofolucos 👾"
+ ],
+ "escolhida": "Tem Criança Debaixo da Cama!"
+}
