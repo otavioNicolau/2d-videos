@@ -3,7 +3,8 @@
   validar → cenário → vozes (+visemas) → por cena: [timeline → desenhos (níveis) → OpenToonz (xsheet + tcomposer)
   → Godot (composição) → QA] → mixagem → montagem (FFmpeg) → pranchas de revisão.
 
-Sem aprovação humana (`approval.final_render`), o MP4 sai como CANDIDATO.
+Fluxo dos canais (23/11/2026): storyboard aprovado pelo usuário (`approval.storyboard`) = render DEFINITIVO
+(sem etapa de candidato). Sem nenhuma aprovação humana (nem storyboard nem `approval.final_render`), sai como CANDIDATO.
 """
 from __future__ import annotations
 
@@ -560,7 +561,8 @@ class Episode:
         return ["-vf", filt, "-map", "0:v"]
 
     def assemble(self, wav: Path) -> Path:
-        approved = bool(self.ep.get("approval", {}).get("final_render"))
+        ap = self.ep.get("approval", {})
+        approved = bool(ap.get("final_render") or ap.get("storyboard"))   # 23/11: storyboard aprovado → definitivo
         out_dir = self.dir / "output"
         out_dir.mkdir(exist_ok=True)
         seq = self.build / "episode_frames"

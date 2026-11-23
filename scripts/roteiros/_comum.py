@@ -144,8 +144,8 @@ class Roteiro:
                 for sb in subs:
                     for a in (sb.get("atores") or {}).values():
                         a["acoes"] = [ac for ac in a.get("acoes", []) if ac["t"] < d - 0.3] or a.get("acoes", [])[:1]
-                        if a.get("keys"):
-                            a["keys"] = [k for k in a["keys"] if k["t"] < d - 0.05]
+                        if a.get("keys"):                    # 21/11: transição também nas chaves do ator (senão ele "pula")
+                            a["keys"] = self._transicoes([k for k in a["keys"] if k["t"] < d - 0.05])
                     for o in (sb.get("objetos") or {}).values():
                         if o.get("keys"):
                             ks = [dict(k, t=round(min(k["t"], d - 0.04), 3)) if d - 0.04 < k["t"] <= d + 0.06 else k for k in o["keys"]]

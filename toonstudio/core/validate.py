@@ -165,6 +165,7 @@ def validate(ep: dict) -> Report:
                                     f"({left:.0f}..{right:.0f}, largura {layer['width']})")
             if not bg.get("graphic") and (y0 < -1 or y0 + vh > bg["height"] + 1):
                 r.errors.append(f"{sid}: câmera em y={k['y']} (zoom {k['zoom']}) mostra fora do cenário na vertical")
-    if not ep.get("approval", {}).get("final_render"):
-        r.warnings.append("render final ainda não aprovado (approval.final_render = false): será gerado como CANDIDATO")
+    ap = ep.get("approval", {})
+    if not (ap.get("final_render") or ap.get("storyboard")):
+        r.warnings.append("storyboard ainda não aprovado (approval.storyboard = false): o render sairá como CANDIDATO")
     return r

@@ -52,7 +52,7 @@
   "nota_batida": "18/11/2026: na referência cada batida soa idêntica (semelhança 0,95–0,98: ritmo pronto de teclado arranjador, um loop simples a música inteira); nas nossas 0,66–0,87 (bateria 'tocada', com viradas e percussão variando). Usuário: 'batidas como se fosse bateria, bumbo, algo feito no teclado, pra dar ritmo'.",
   "abertura": "Brazilian arranger keyboard kids song (teclado arranjador), one simple keyboard drum loop",
   "nota_ajustes_14": "18/11/2026 (take v2 da 14): baixo fraco (5,6 % × 11 % da referência) → 'deep bouncy keyboard bass'; voz larga (0,17 × 0,01) → 'dry centered vocal' e Exclude 'vocal reverb, echo'; tirado 'repeated chorus' do Exclude (o bloco repete de propósito); Exclude sem termos repetidos.",
-  "versao": "F4",
+  "versao": "F5",
   "historico": [
    {
     "versao": "F1",
@@ -80,10 +80,17 @@
     "mudanca": "GROOVE PRÓPRIO do canal (sem nome de ritmo no Style), 120–150 BPM; teclado + contrabaixo + bateria eletrônica, órgão só na intro/intervalos",
     "motivo": "usuário: 'deixe de lado ritmos… faça o próprio' (Laurinha) → 'ajuste fofolucos para groove próprio também'; 'quero 120 a 150 nos dois canais'",
     "usado_em": "04 em diante"
+   },
+   {
+    "versao": "F5",
+    "data": "21/11/2026",
+    "mudanca": "F4 + contrabaixo (e bateria) mais fortes no começo do Style ('BIG LOUD drum-machine and a deep bouncy bass up front'); Style enxugado para caber em 1000 (órgão só na produção; 'no live drummer' já está no Exclude)",
+    "motivo": "placar da 05 (nota 4,9): baixo 5 % × 11 % da referência; o mesmo ajuste deu certo na Laurinha (E17: 30 com baixo 9 %)",
+    "usado_em": "06 em diante"
    }
   ],
   "versao_por_voz": {
-   "fofolucos": "F4"
+   "fofolucos": "F5"
   },
   "nota_sincope": "19/11/2026 (usuário: 'focar nas batidas do som contagiante'): raio-x da bateria (scripts/referencias/batida.py) — referência síncope 0,69 e bumbo reto 0,50; nossas 0,56 e 0,67. A nota de ouvido sobe com a síncope e o baixo fora do tempo (14: 0,39→nota 3 … 18: 0,72 e baixo 0,90→nota 4,6). A 19 v1 (rock com 'punk-rock drumming, driving kick') saiu reta: 0,41.",
   "nota_loop": "19/11/2026 (usuário ouvindo a 19 v2): 'Animadinhos são ritmos e batidas que não mudam muito durante a música; a nossa está ficando ainda estilo banda'. Medido: loop igual referência 0,96 × 19 v1 0,84 × 19 v2 0,75; outros instrumentos 9 % × 20 %. E8: um loop sincopado só, sem virada entre as partes, mesma batida no verso e no refrão, sem solo/quebra.",
@@ -104,8 +111,8 @@
   "nota_sax": "19/11/2026, usuário: 'o Animadinhos usa muito ritmos com saxofone, bateria e teclado'. Medido (18 referências): teclado/piano em 15/18 (nossas 3–4× menos), sintetizador 13/18, bateria em ~metade, saxofone/metais claros em 3/18 (+3 leves) e ZERO nas nossas. E11 = E9 + piano de teclado arranjador na frente + riff de saxofone (som de sax do teclado) respondendo a voz.",
   "trio": {
    "ativo": true,
-   "abertura": "kids song with LOTS of keyboard, electric bass and drums, all loud and up front, a little cartoon organ",
-   "producao": "BRIGHT HIGH-PITCHED keyboard: catchy high piano melody, a short catchy keyboard riff answers EVERY sung line; BIG FUN GROOVY BASS: bouncy funky slap bass hook, loud and clear; BIG PUNCHY ELECTRONIC DRUMS, the same beat all song (no live drummer); soft cartoon organ only in intro and breaks, nothing else, single dry centered lead vocal",
+   "abertura": "kids song with LOTS of keyboard, electric bass and drums: BIG LOUD drum-machine and a deep bouncy bass up front",
+   "producao": "BRIGHT HIGH-PITCHED keyboard: catchy high piano melody, a short catchy keyboard riff answers EVERY sung line; BIG FUN GROOVY BASS: bouncy funky slap bass hook, loud and clear; BIG PUNCHY ELECTRONIC DRUMS, the same beat all song; soft cartoon organ only in intro and breaks, nothing else, single dry centered lead vocal",
    "peso_style": "ADDICTIVE head-bobbing groove: groovy bass and a punchy drum-machine loop (kick on every beat, claps on 2 and 4), one catchy 2-bar pattern repeated hypnotically all song, keyboard 'pisadinha' chords bouncing on the off-beats, danceable",
    "exclude_extra": [
     "guitar",

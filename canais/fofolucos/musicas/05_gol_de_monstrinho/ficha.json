@@ -1,0 +1,143 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Gol de Monstrinho!",
+ "gancho": "Gol de monstrinho!",
+ "palavras_tema": [
+  "gol",
+  "bola",
+  "chuta",
+  "goleiro",
+  "amigo"
+ ],
+ "tipo": "danca",
+ "tema": "futebol na Vila Monstrinha: cada um com o seu jeito (o Gogo vê o campo todo com o olhão, o Zuzu cabeceia com o chifrinho, o Teco corre ligeiro, o Nhoque goleiro pega até bola de travesseiro). Refrão 'chuta, chuta! passa pro amigo! gol de monstrinho!'. Ponte = comandos de jogo e dança (corre, pula pra cabecear, dribla, chuta; goleiro abre os braços, pega no ar, dança do gol). Virada: o Bilu chuta forte, a bola bate na lua e volta… cai no pé da Mimi, que só olhava, ela chuta fofinho e é GOL — trabalho em equipe, todo mundo pode fazer gol",
+ "dia_a_dia": [
+  "jogar bola com os amigos",
+  "passar a bola / trabalho em equipe",
+  "comemorar junto"
+ ],
+ "curiosidade": "a bola de futebol oficial tem 32 gomos costurados — os pentágonos e hexágonos juntinhos formam uma bola quase perfeita",
+ "ritmo": "funk_infantil",
+ "bpm": 136,
+ "estrutura": "R",
+ "voz": "fofolucos",
+ "cantam": {
+  "verso": "fofolucos",
+  "refrão": "fofolucos",
+  "ponte": "fofolucos (comandos de jogo e dança)"
+ },
+ "cenas": [
+  {
+   "parte": "intro",
+   "ideia": "o campinho da Vila Monstrinha (gramado, traves, torcida de bandeirinhas); a bola rola, o Bilu chuta e RAWR"
+  },
+  {
+   "parte": "verso 1",
+   "ideia": "a escalação: close do Gogo olhando com o olhão; o Zuzu cabeceando; o Teco correndo; o Nhoque goleiro pegando a bola (e um travesseiro!)"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "chuta, chuta (chute), passa pro amigo (a bola passa de um para outro), GOL (rede balançando, confete) e RAWR; muda cenário e elenco a cada refrão"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "comandos: corre no lugar, pula pra cabecear, dribla pro ladinho, chuta pro gol; e mais: goleiro abre os braços, pega no ar, comemora, dança do gol"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "o Bilu chuta com força, a bola sobe… bate na lua com carinha e volta; cai no pé da Mimi, que só olhava; ela chuta fofinho e é GOL; todo mundo pula"
+  },
+  {
+   "parte": "final",
+   "ideia": "'e você? gosta de jogar bola?' · joinha · inscreva-se · tchau da turma no campinho · último RAWR da Mimi artilheira"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [],
+ "status": "aprovada",
+ "versoes": [
+  "Gol de Monstrinho!"
+ ],
+ "persona": "fofolucos",
+ "youtube": {
+  "resumo": "GOL DE MONSTRINHO! 👾⚽ Hoje tem jogo na Vila Monstrinha: o Gogo vê o campo todo, o Zuzu cabeceia com o chifrinho e o Nhoque pega até bola de travesseiro! Chuta, chuta, passa pro amigo… E quem fez o gol? A Mimi! Todo mundo pode fazer gol!",
+  "resumo_short": "GOL DE MONSTRINHO! 👾⚽ Chuta, chuta, passa pro amigo… GOL!",
+  "curiosidade": "A bola de futebol tradicional tem 32 gomos costurados: os pentágonos e hexágonos juntinhos formam uma bola quase perfeita!",
+  "miniatura": "GOL DE\nMONSTRINHO!",
+  "miniatura_cena": {
+   "fundo": "raios",
+   "centro": [
+    400,
+    430
+   ],
+   "cores": [
+    [
+     255,
+     210,
+     63
+    ],
+    [
+     64,
+     200,
+     220
+    ],
+    [
+     255,
+     150,
+     60
+    ],
+    [
+     155,
+     79,
+     240
+    ]
+   ],
+   "heroi": {
+    "id": "mimi",
+    "pose": {
+     "expr": "joy",
+     "turn": 0.15,
+     "mouth": "D",
+     "hand_n_x": -135,
+     "hand_n_y": -135,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3
+    }
+   },
+   "par": {
+    "id": "bilu",
+    "pose": {
+     "expr": "joy",
+     "turn": -0.2,
+     "mouth": "D"
+    },
+    "tam": 520,
+    "x": 1040,
+    "corte": 120
+   },
+   "frente": [
+    {
+     "id": "bola_futebol",
+     "pose": {
+      "sem_contorno": 1.0,
+      "giro": 0.08
+     },
+     "tam": 190,
+     "x": 800,
+     "base": 700
+    }
+   ]
+  }
+ },
+ "playlists": [
+  "Músicas dos Fofolucos 👾"
+ ],
+ "escolhida": "Gol de Monstrinho!"
+}

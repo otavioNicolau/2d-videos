@@ -484,6 +484,9 @@ def _aproximar(p: dict, bg: str) -> dict:
     for a in (p.get("atores") or {}).values():
         if "x" in a:
             a["x"] = ap(a["x"])
+        for k in a.get("keys", []):                         # 21/11: ator que anda por chaves (motorista do carrinho)
+            if "x" in k.get("pose", {}):                    # acompanha o objeto, que já era aproximado
+                k["pose"]["x"] = ap(k["pose"]["x"])
         for ac in a.get("acoes", []):
             for k in ("to_x", "wall_x"):
                 if k in ac:

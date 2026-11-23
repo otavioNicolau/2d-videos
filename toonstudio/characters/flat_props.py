@@ -3521,3 +3521,220 @@ class Mosquinha(_Prop):
 
 
 PROPS.update({"pena": Pena, "mosquinha": Mosquinha})
+
+
+def _roda(k, x, y, r, giro):
+    """Roda de brinquedo: pneu escuro, calota clara e 4 raios que giram com `giro` (voltas)."""
+    shape(k, ellipse_pts(x, y, r, r, 0, 28), "#3A3F4B", line=dark("#3A3F4B"))
+    shape(k, ellipse_pts(x, y, r * 0.55, r * 0.55, 0, 22), "#D8DEE8", line=dark("#D8DEE8"))
+    for j in range(4):
+        a = 2 * math.pi * (giro + j / 4)
+        ln(k, [(x, y), (x + r * 0.5 * math.cos(a), y + r * 0.5 * math.sin(a))], "#8E98A8", w=LINE * 0.9)
+
+
+class Semaforo(_Prop):
+    """Semáforo de rua (Laurinha 30): poste, caixa com 3 luzes; `luz` 0 vermelho · 1 amarelo · 2 verde (a acesa brilha,
+    as outras ficam apagadinhas). A origem é o pé do poste."""
+
+    def __init__(self):
+        super().__init__("semaforo", "Semáforo", (420, 1000), (210, 960), 420, {"luz": 0.0})
+
+    def paint(self, k, P):
+        k.c.save()
+        k.c.scale(0.8, 0.8)                                        # cabe no quadro fixo dos níveis (LEVEL_CANVAS)
+        try:
+            self._paint(k, P)
+        finally:
+            k.c.restore()
+
+    def _paint(self, k, P):
+        shape(k, [(-14, 0), (14, 0), (14, -560), (-14, -560)], "#5E6678", line=dark("#5E6678"), smooth=False)
+        shape(k, [(-70, -560), (70, -560), (70, -900), (-70, -900)], "#2F3542", line=dark("#2F3542"))
+        acesa = int(round(max(0.0, min(2.0, P["luz"]))))
+        for j, (cor, apagada) in enumerate((("#FF4B4B", "#6E2B2B"), ("#FFD43B", "#6E5E2B"), ("#3DDC6B", "#2B5E3A"))):
+            y = -845 + j * 110
+            if j == acesa:
+                shape(k, ellipse_pts(0, y, 62, 62, 0, 24), cor, alpha=0.35)        # brilho em volta
+            shape(k, ellipse_pts(0, y, 42, 42, 0, 24), cor if j == acesa else apagada, line=dark("#2F3542"))
+            if j == acesa:
+                shape(k, ellipse_pts(-12, y - 14, 12, 8, -0.5, 12), "#FFFFFF", alpha=0.8)
+
+
+class CarrinhoAberto(_Prop):
+    """Carrinho aberto de criança (Laurinha 30, "saí no meu carrinho"), de lado, virado para a DIREITA: lataria rosa
+    arredondada, volante, farol, 2 rodas que giram com `roda` (voltas). O personagem fica ATRÁS (z menor) no mesmo x:
+    aparece do peito para cima, "sentado" dirigindo. `cor` 1 rosa · 2 azul · 3 amarelo."""
+    CORES = {1: "#FF7FB3", 2: "#5DADF0", 3: "#FFC93D"}
+
+    def __init__(self):
+        super().__init__("carrinho_aberto", "Carrinho aberto", (1000, 560), (500, 520), 300, {"roda": 0.0, "cor": 1.0})
+
+    def paint(self, k, P):
+        cor = self.CORES.get(int(round(P["cor"])), self.CORES[1])
+        corpo = [(-330, -35), (-340, -200), (-250, -260), (-60, -250), (40, -300), (250, -290), (330, -200), (340, -35)]   # desce até perto do chão: os pés do motorista não aparecem
+        shape(k, corpo, cor, line=dark(cor))
+        ln(k, [(40, -300), (90, -380)], "#5E6678", w=LINE * 2.2)                          # coluna do volante
+        shape(k, ellipse_pts(95, -390, 50, 18, -0.4, 20), "#3A3F4B", line=dark("#3A3F4B"))   # volante
+        shape(k, ellipse_pts(318, -220, 26, 22, 0, 16), "#FFF3B0", line=dark("#FFD43B"))      # farol
+        shape(k, [(-345, -150), (-320, -150), (-320, -110), (-345, -110)], "#FF4B4B", line=dark("#FF4B4B"), smooth=False)  # lanterna
+        ln(k, [(-200, -200), (180, -200)], dark(cor, 0.85), w=LINE * 1.2)                  # frisinho
+        _roda(k, -210, -70, 80, P["roda"])
+        _roda(k, 210, -70, 80, P["roda"])
+
+
+class Onibus(_Prop):
+    """Ônibus amarelo de cidade (Laurinha 30), de lado, virado para a DIREITA: janelas, porta, farol e rodas (`roda`)."""
+
+    def __init__(self):
+        super().__init__("onibus", "Ônibus", (1500, 760), (750, 720), 420, {"roda": 0.0})
+
+    def paint(self, k, P):
+        k.c.save()
+        k.c.scale(0.8, 0.8)                                        # cabe no quadro fixo dos níveis (LEVEL_CANVAS)
+        try:
+            self._paint(k, P)
+        finally:
+            k.c.restore()
+
+    def _paint(self, k, P):
+        corpo = []
+        for (cx, cy, r), t0 in (((590, -140, 50), 0.0), ((-590, -140, 50), math.pi / 2),           # cantos arredondados
+                                ((-590, -510, 50), math.pi), ((550, -470, 90), 1.5 * math.pi)):  # (frente mais redonda)
+            corpo += [(cx + r * math.cos(t0 + q * math.pi / 12), cy + r * math.sin(t0 + q * math.pi / 12)) for q in range(7)]
+        shape(k, corpo, "#FFC93D", line=dark("#FFC93D"), smooth=False)
+        for j in range(5):                                                                  # janelas
+            x0 = -590 + j * 220
+            shape(k, [(x0, -500), (x0 + 180, -500), (x0 + 180, -360), (x0, -360)], "#9BD3FF", line=dark("#9BD3FF"), smooth=False)
+        shape(k, [(500, -500), (600, -500), (630, -420), (630, -360), (500, -360)], "#9BD3FF", line=dark("#9BD3FF"), smooth=False)
+        shape(k, [(380, -340), (470, -340), (470, -120), (380, -120)], "#F2A93B", line=dark("#F2A93B"), smooth=False)   # porta
+        ln(k, [(-640, -300), (640, -300)], "#FF7A3D", w=LINE * 3)                         # faixa
+        shape(k, ellipse_pts(622, -170, 22, 20, 0, 14), "#FFF3B0", line=dark("#FFD43B"))
+        _roda(k, -400, -90, 95, P["roda"])
+        _roda(k, 400, -90, 95, P["roda"])
+
+
+class Moto(_Prop):
+    """Motinha de entrega (Laurinha 30, "e atrás uma motinha"), de lado, virada para a DIREITA: rodinhas (`roda`),
+    guidão, banco e baú vermelho. O personagem fica ATRÁS (z menor), "montado"."""
+
+    def __init__(self):
+        super().__init__("moto", "Motinha", (900, 560), (450, 520), 260, {"roda": 0.0})
+
+    def paint(self, k, P):
+        shape(k, [(-220, -60), (-240, -210), (-60, -230), (120, -200), (200, -60)], "#7ED99B", line=dark("#7ED99B"))   # desce: esconde os pés
+        shape(k, [(-270, -230), (-160, -230), (-160, -300), (-270, -300)], "#FF5A6E", line=dark("#FF5A6E"), smooth=False)   # baú (baixinho: não tampa o rosto)
+        shape(k, [(-90, -230), (60, -230), (60, -255), (-90, -255)], "#3A3F4B", line=dark("#3A3F4B"), smooth=False)        # banco
+        ln(k, [(150, -200), (210, -340)], "#5E6678", w=LINE * 2.2)
+        ln(k, [(180, -345), (250, -335)], "#3A3F4B", w=LINE * 2.6)                         # guidão
+        shape(k, ellipse_pts(228, -250, 22, 18, 0, 14), "#FFF3B0", line=dark("#FFD43B"))
+        _roda(k, -170, -80, 72, P["roda"])
+        _roda(k, 170, -80, 72, P["roda"])
+
+
+PROPS.update({"semaforo": Semaforo, "carrinho_aberto": CarrinhoAberto, "onibus": Onibus, "moto": Moto})
+
+
+# ───────────────────────── Fofolucos 05: futebol ─────────────────────────
+class BolaFutebol(_Prop):
+    """Bola de futebol (Fofolucos 05): branca com gomos roxo-escuros (pentágono no meio e meios-gomos na borda); `giro`
+    (voltas) gira a bola rolando/voando; `amassa` 0→1 achata no chute/quique; `tipo` 1 = a "bola de TRAVESSEIRO"
+    (travesseirinho creme com babadinho, o goleiro pega até ela). A origem é o pé da bola (no chão), raio 80."""
+    R = 80.0
+
+    def __init__(self):
+        super().__init__("bola_futebol", "Bola de futebol", (400, 400), (200, 360), 160, {"giro": 0.0, "amassa": 0.0, "tipo": 0.0})
+
+    def paint(self, k, P):
+        r = self.R
+        am = max(0.0, min(1.0, P["amassa"]))
+        k.c.save()
+        k.c.translate(0, 0)
+        k.c.scale(1 + 0.22 * am, 1 - 0.22 * am)                     # achata a partir do chão
+        k.c.translate(0, -r)
+        if P["tipo"] > 0.5:
+            self._travesseiro(k, P)
+        else:
+            self._bola(k, P, r)
+        k.c.restore()
+
+    def _bola(self, k, P, r):
+        shape(k, ellipse_pts(0, 0, r, r, 0, 40), "#FFFFFF", line="#C9CFE0")
+        k.c.save()
+        clip = skia.Path()
+        clip.addCircle(0, 0, r - 1.5)
+        k.c.clipPath(clip, skia.ClipOp.kIntersect, True)
+        a0 = 2 * math.pi * P["giro"]
+        gomo = "#3A2A6B"
+
+        def pent(cx, cy, rr, ang):
+            return [(cx + rr * math.cos(ang + j * 2 * math.pi / 5 - math.pi / 2), cy + rr * math.sin(ang + j * 2 * math.pi / 5 - math.pi / 2))
+                    for j in range(5)]
+        shape(k, pent(0, 0, r * 0.34, a0), gomo, smooth=False)
+        for j in range(5):
+            a = a0 + j * 2 * math.pi / 5 - math.pi / 2
+            cx, cy = math.cos(a) * r * 0.98, math.sin(a) * r * 0.98
+            shape(k, pent(cx, cy, r * 0.3, a + math.pi / 5), gomo, smooth=False)
+            ln(k, [(math.cos(a) * r * 0.34, math.sin(a) * r * 0.34), (math.cos(a) * r * 0.72, math.sin(a) * r * 0.72)], "#B9BFD6", w=LINE * 0.9)
+        k.c.restore()
+        shape(k, ellipse_pts(-r * 0.38, -r * 0.42, r * 0.2, r * 0.12, -0.6, 16), "#FFFFFF", alpha=0.85)   # brilho
+
+    def _travesseiro(self, k, P):
+        a = 0.35 * math.sin(2 * math.pi * P["giro"])
+        k.c.save()
+        k.c.rotate(math.degrees(a), 0, 0)
+        pts = []
+        for j in range(48):                                              # almofadinha de cantos fofos
+            t = 2 * math.pi * j / 48
+            c, s = math.cos(t), math.sin(t)
+            pts.append((115 * math.copysign(abs(c) ** 0.55, c), 72 * math.copysign(abs(s) ** 0.55, s)))
+        shape(k, pts, "#FFF1C9", line="#E6CF8F")
+        for sx, sy in ((-1, -1), (1, -1), (-1, 1), (1, 1)):              # pontinhas
+            shape(k, ellipse_pts(sx * 108, sy * 64, 16, 12, sx * sy * 0.7, 12), "#FFE39A")
+        ln(k, [(-70, 0), (-35, -10), (0, 0), (35, 10), (70, 0)], "#F2D88E", w=LINE * 1.2)
+        shape(k, ellipse_pts(-50, -36, 22, 10, -0.3, 14), "#FFFFFF", alpha=0.8)
+        k.c.restore()
+
+
+class Trave(_Prop):
+    """Trave do gol (Fofolucos 05): dois postes e o travessão brancos (com sombrinha azulada), a REDE atrás em
+    perspectiva (quadriculado branco translúcido). `rede` 0→1 = força do balanço da rede no GOL; `onda` cresce com o tempo
+    (fase da balançada). A origem é o meio da linha do gol (no chão); 1000 de largura × 560 de altura."""
+
+    def __init__(self):
+        super().__init__("trave", "Trave do gol", (1300, 1000), (650, 900), 560, {"rede": 0.0, "onda": 0.0})
+
+    def paint(self, k, P):
+        Lx, Ht, T = 500.0, 560.0, 16.0                                   # meia largura, altura, meia espessura
+        bx, bt, bb = 430.0, 470.0, -40.0                                  # fundo da rede (mais estreito, mais baixo, recuado)
+        amp = 60.0 * max(0.0, min(1.0, P["rede"]))
+        fase = 2 * math.pi * P["onda"]
+
+        def rede(u, v):                                                   # u 0→1 (esq→dir), v 0→1 (alto→chão) no fundo
+            x = -bx + 2 * bx * u
+            y = -bt + (bt + bb) * v
+            b = amp * math.sin(math.pi * u) * math.sin(math.pi * min(1.0, v * 1.1)) * math.cos(fase)
+            return x + b * 0.25 * math.sin(fase * 0.5 + u * 3), y + b * 0.35 - b * 0.5
+        fundo = [rede(u / 12, 0) for u in range(13)] + [rede(1, v / 8) for v in range(9)] + \
+                [rede(1 - u / 12, 1) for u in range(13)] + [rede(0, 1 - v / 8) for v in range(9)]
+        shape(k, fundo, "#FFFFFF", line="#FFFFFF", alpha=0.18, w=0.0)
+        for s_ in (-1, 1):                                                # laterais da rede (do poste ao fundo)
+            shape(k, [(s_ * Lx, -Ht), rede(0.5 + s_ * 0.5, 0), rede(0.5 + s_ * 0.5, 1), (s_ * Lx, 0)], "#FFFFFF", line="#FFFFFF", alpha=0.12, w=0.0)
+        shape(k, [(-Lx, -Ht), (Lx, -Ht), rede(1, 0), rede(0, 0)], "#FFFFFF", line="#FFFFFF", alpha=0.12, w=0.0)
+        for i in range(1, 12):                                            # quadriculado
+            ln(k, [rede(i / 12, v / 10) for v in range(11)], "#FFFFFF", w=LINE * 0.8, alpha=0.6)
+        for j in range(1, 9):
+            ln(k, [rede(u / 14, j / 9) for u in range(15)], "#FFFFFF", w=LINE * 0.8, alpha=0.6)
+        for s_ in (-1, 1):                                                # cordinhas do poste ao fundo
+            for j in range(0, 5):
+                v = j / 4
+                ln(k, [(s_ * Lx, -Ht + (Ht) * v), rede(0.5 + s_ * 0.5, v)], "#FFFFFF", w=LINE * 0.8, alpha=0.6)
+        for u in range(0, 7):
+            ln(k, [(-Lx + 2 * Lx * u / 6, -Ht), rede(u / 6, 0)], "#FFFFFF", w=LINE * 0.8, alpha=0.6)
+        for s_ in (-1, 1):                                                # postes
+            shape(k, [(s_ * Lx - T, 0), (s_ * Lx + T, 0), (s_ * Lx + T, -Ht), (s_ * Lx - T, -Ht)], "#FFFFFF", line="#C9D3E6", smooth=False)
+            shape(k, [(s_ * Lx + T * 0.2, 0), (s_ * Lx + T, 0), (s_ * Lx + T, -Ht + T), (s_ * Lx + T * 0.2, -Ht + T)], "#DCE4F2", smooth=False)
+        shape(k, [(-Lx - T, -Ht - T), (Lx + T, -Ht - T), (Lx + T, -Ht + T), (-Lx - T, -Ht + T)], "#FFFFFF", line="#C9D3E6", smooth=False)
+        shape(k, [(-Lx + T, -Ht + T * 0.2), (Lx - T, -Ht + T * 0.2), (Lx - T, -Ht + T), (-Lx + T, -Ht + T)], "#DCE4F2", smooth=False)
+
+
+PROPS.update({"bola_futebol": BolaFutebol, "trave": Trave})

@@ -529,5 +529,5 @@ def test_multicanal_perfis_e_projeto(monkeypatch):
     assert canal.id_do_projeto("fofolucos/ep01-teste") == "fofolucos"
     monkeypatch.setenv(canal.ENV, "fofolucos")
     from toonstudio.audio import composer
-    assert composer.estilos()["canal"]["versao"] == "F4"
+    assert composer.estilos()["canal"]["versao"] == "F5"
     assert "fofolucos" in composer.vozes()["vozes"]

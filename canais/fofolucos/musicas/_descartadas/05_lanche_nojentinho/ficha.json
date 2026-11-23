@@ -1,0 +1,125 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Lanche Nojentinho!",
+ "gancho": "Lanche nojentinho!",
+ "palavras_tema": [
+  "lanche",
+  "eca",
+  "coragem",
+  "provar",
+  "cozinheira"
+ ],
+ "tipo": "danca",
+ "tema": "comida nojentinha engraçada: a Mimi abre um restaurante na Vila Monstrinha com cardápio esquisito (sopa verde do pântano, olho de sapo no espeto, teia de aranha cor-de-rosa). Refrão-desafio 'quem vai ter coragem? um, dois, três… nham!'. Ponte = comandos de provar (tampa o nariz, cara de eca, fecha os olhinhos… mastiga devagar, lambe o beicinho). Virada: o Bilu prova de olhão fechado e era sopa de ERVILHA, uva e algodão-doce — antes de dizer 'eca', experimenta!",
+ "dia_a_dia": [
+  "experimentar comida nova",
+  "hora do lanche",
+  "não julgar pela aparência"
+ ],
+ "curiosidade": "a ervilha é uma sementinha que cresce dentro de uma vagem, como se fosse uma casinha verde com vários irmãozinhos dentro",
+ "ritmo": "funk_infantil",
+ "bpm": 134,
+ "estrutura": "R",
+ "voz": "fofolucos",
+ "cantam": {
+  "verso": "fofolucos",
+  "refrão": "fofolucos",
+  "ponte": "fofolucos (comandos de provar)"
+ },
+ "cenas": [
+  {
+   "parte": "intro",
+   "ideia": "a cozinha da Vila Monstrinha: a Mimi de cozinheira mexendo um caldeirão verde borbulhante; o Bilu faz cara de 'eca'"
+  },
+  {
+   "parte": "verso 1",
+   "ideia": "o restaurante da Mimi: cada prato esquisito em close (sopa verde, olho de sapo no espeto, teia cor-de-rosa); a turma faz careta; o Bilu fica quietinho"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "'eca, eca!' com careta (ação careta), 'quem vai ter coragem?' todos se olham, 'um, dois, três… nham!' e RAWR; muda cenário e elenco a cada refrão"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "comandos: tampa o nariz (tampar_nariz), cara de eca (careta), fecha os olhinhos, abre a boca; e mais: mastiga devagar (comer), lambe o beicinho, bate na barriga, pede mais"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "o Bilu prova de olhão fechado… 'ué! é sopa de ervilha!' e cai na risada; o olho de sapo era UVA, a teia era ALGODÃO-DOCE; 'antes de dizer eca, experimenta!'"
+  },
+  {
+   "parte": "final",
+   "ideia": "'e você? prova comida nova?' · joinha · inscreva-se · tchau com a turma na mesa do restaurante · último RAWR da Mimi cozinheira"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [],
+ "status": "rascunho",
+ "versoes": [],
+ "persona": "fofolucos",
+ "youtube": {
+  "resumo": "LANCHE NOJENTINHO! 👾 A Mimi abriu um restaurante na Vila Monstrinha: sopa verde do pântano, olho de sapo no espeto e teia de aranha cor-de-rosa! Eca, eca! Quem vai ter coragem? O Bilu provou de olhos fechados… e era sopa de ervilha, uva e algodão-doce! Antes de dizer eca, experimenta!",
+  "resumo_short": "LANCHE NOJENTINHO! 👾 Eca, eca… quem tem coragem? Nham!",
+  "curiosidade": "A ervilha é uma sementinha que cresce dentro de uma vagem, como se fosse uma casinha verde com vários irmãozinhos dentro!",
+  "miniatura": "LANCHE\nNOJENTINHO!",
+  "miniatura_cena": {
+   "fundo": "circulo",
+   "centro": [
+    400,
+    430
+   ],
+   "cores": [
+    [
+     255,
+     210,
+     63
+    ],
+    [
+     155,
+     79,
+     240
+    ],
+    [
+     255,
+     150,
+     60
+    ],
+    [
+     64,
+     200,
+     220
+    ]
+   ],
+   "heroi": {
+    "id": "bilu",
+    "pose": {
+     "expr": "azedo",
+     "turn": 0.15,
+     "mouth": "O",
+     "jaw": 0.4,
+     "hand_n_x": 20,
+     "hand_n_y": -60,
+     "hand_n_bend": 0.6,
+     "paw_n": 3
+    }
+   },
+   "par": {
+    "id": "mimi",
+    "pose": {
+     "expr": "joy",
+     "turn": -0.2,
+     "mouth": "D"
+    },
+    "tam": 520,
+    "x": 1040,
+    "corte": 120
+   }
+  }
+ },
+ "playlists": [
+  "Músicas dos Fofolucos 👾"
+ ]
+}

@@ -4,7 +4,7 @@ suave, nuvens fofas, árvores de copa redonda em dois verdes, fundos gráficos d
 confete. Toque próprio do canal: a Vila Monstrinha (casas com chifrinhos e janelas-olho).
 
 Ids (cenários de verdade, 2600×1080, chão em y≈930):
-  mon_parque · mon_vila · mon_quarto · mon_palco · mon_noite · mon_escola · mon_cozinha
+  mon_parque · mon_vila · mon_quarto · mon_palco · mon_noite · mon_escola · mon_cozinha · mon_campinho · mon_campinho_gol
 Fundos gráficos (ênfase/refrão; câmera no centro 960): mon_raios_<cor> · mon_xadrez_<cor> · mon_brilho_<cor>
 """
 from __future__ import annotations
@@ -22,7 +22,7 @@ from .plano import Flat, _surf
 
 W_INT, H = 2600, 1080
 CHAO_Y = 760
-CENAS = ("mon_parque", "mon_vila", "mon_quarto", "mon_palco", "mon_noite", "mon_escola", "mon_cozinha", "mon_abertura")
+CENAS = ("mon_parque", "mon_vila", "mon_quarto", "mon_palco", "mon_noite", "mon_escola", "mon_cozinha", "mon_abertura", "mon_campinho", "mon_campinho_gol")
 GRAF_KINDS = ("raios", "xadrez", "brilho")
 CORES = {"roxo": ("#4A158F", "#9B4FF0"), "azul": ("#0A4FC0", "#3AA6FF"), "verde": ("#0B8740", "#46D677"),
          "laranja": ("#E85A08", "#FFA63A"), "rosa": ("#C2166C", "#FF6AB2"), "vermelho": ("#B00D28", "#FF4A5E")}
@@ -322,8 +322,98 @@ def abertura(rng):
     return s, W_INT
 
 
+def campinho(rng, gol_x=None):
+    """Campinho de futebol da Vila Monstrinha (Fofolucos 05): céu, arquibancadinha CLARA com a torcida de monstrinhos
+    (bolinhas de cor clarinha com olhinhos e chifrinhos), bandeirinhas, placas amarelas e brancas na beira do campo
+    (nada da cor de um monstrinho atrás do corpo) e gramado listrado com as linhas brancas (lateral, meio de campo e o círculo central em
+    x ≈ 1300). As TRAVES são o objeto `trave` (a rede balança no gol)."""
+    s, c = _surf(W_INT, H, ESC_CENA)
+    p = P(c)
+    p.grad_v(0, 0, W_INT, 520, "#3DB2FF", "#C9EEFF")
+    for x, y, s_ in ((300, 110, 1.0), (1250, 80, 1.15), (2250, 130, 0.95)):
+        p.nuvem(x, y, s_)
+    # arquibancadinha: 4 degraus claros (creme / lilás clarinho)
+    degraus = [(400, "#F3E9FF"), (480, "#FFF4DC"), (560, "#F3E9FF"), (640, "#FFF4DC")]
+    p.rect(0, 380, W_INT, 700, "#E3D6FA")
+    for y, cor in degraus:
+        p.rect(0, y, W_INT, y + 72, cor)
+        p.rect(0, y + 64, W_INT, y + 72, "#D9CBF2")
+    tons = ["#FFC2DF", "#FFE89A", "#D7C2FF", "#B9DFFF", "#FFD0AE", "#FFB8C4"]
+    for y, _ in degraus:                                           # a torcida (cabecinhas clarinhas, olhinhos, chifrinhos)
+        x = float(rng.uniform(-20, 60))
+        while x < W_INT + 40:
+            cor = tons[int(rng.integers(0, len(tons)))]
+            r = float(rng.uniform(24, 30))
+            cy = y + 52 - r
+            for sd in (-1, 1):
+                p.poly([(x + sd * r * 0.35, cy - r * 0.75), (x + sd * r * 0.75, cy - r * 1.35), (x + sd * r * 0.8, cy - r * 0.55)], cor)
+            p.circ(x, cy, r, cor)
+            for sd in (-1, 1):
+                p.circ(x + sd * r * 0.36, cy - r * 0.12, r * 0.22, "#FFFFFF")
+                p.circ(x + sd * r * 0.36, cy - r * 0.08, r * 0.11, "#4A3A6A")
+            x += float(rng.uniform(78, 104))
+    # bandeirinhas no alto da arquibancada
+    band = ["#FF4FA0", "#FFC21A", "#3A9BFF", "#FF7A1F", "#9B4FF0"]
+    for j, x in enumerate(range(0, W_INT + 80, 80)):
+        yy = 360.0
+        p.poly([(x, yy), (x + 70, yy + 6), (x + 35, yy + 62)], band[j % len(band)], smooth=False)
+    p.rect(0, 352, W_INT, 362, "#FFFFFF")
+    # placas na beira do campo (cores fortes, nada verde)
+    # (amarelo e branco: nenhum monstrinho na frente da própria cor — Mimi rosa, Bilu azul, Teco roxo, Zuzu laranja)
+    listras = ["#FF4FA0", "#3A9BFF", "#9B4FF0", "#FF7A1F"]
+    for j, x in enumerate(range(0, W_INT, 260)):
+        amarela = j % 2 == 0
+        p.rect(x, 690, x + 260, CHAO_Y, "#FFD23F" if amarela else "#FFFFFF")
+        cor = "#FFFFFF" if amarela else listras[(j // 2) % len(listras)]
+        p.rect(x + 30, 712, x + 230, 724, cor, r=6)
+        p.rect(x + 60, 736, x + 200, 746, cor, r=5)
+    # gramado listrado em perspectiva + linhas brancas
+    p.rect(0, CHAO_Y, W_INT, H, "#4FB83F")
+    for j in range(-6, 14, 2):
+        x0, x1 = 1300 + (j - 0.5) * 230, 1300 + (j + 0.5) * 230
+        p.poly([(x0, CHAO_Y), (x1, CHAO_Y), (1300 + (x1 - 1300) * 1.9, H), (1300 + (x0 - 1300) * 1.9, H)], "#5DC84B", smooth=False)
+    if gol_x is not None:                                                     # perto do GOL: linha do gol + áreas
+        _area_do_gol(p, gol_x)
+        return s, W_INT
+    p.rect(0, CHAO_Y + 22, W_INT, CHAO_Y + 34, "#FFFFFF")                       # linha lateral
+    p.poly([(1292, CHAO_Y + 34), (1308, CHAO_Y + 34), (1318, H), (1282, H)], "#FFFFFF", smooth=False)   # meio de campo
+    for rx, ry, cor in ((330, 86, "#FFFFFF"), (316, 74, None)):                # círculo central (anel)
+        if cor:
+            p.oval(1300, 975, rx, ry, cor)
+        else:
+            p.c.save()
+            p.c.clipRect(skia.Rect(0, 0, W_INT, H))
+            p.oval(1300, 975, rx, ry, "#56C044")
+            p.c.restore()
+    p.poly([(1292, 900), (1308, 900), (1318, H), (1282, H)], "#FFFFFF", smooth=False)
+    p.circ(1300, 975, 12, "#FFFFFF")
+    return s, W_INT
+
+
+def _area_do_gol(p: P, gx: float):
+    """Gramado olhando para o gol: a LINHA DO GOL passa no pé da trave (y ≈ 905, onde fica o objeto `trave`), a pequena
+    e a grande área em perspectiva na frente dela e a marca do pênalti — nada de círculo central."""
+    yl, B = 900, 14                                                              # linha do gol (pé da trave)
+
+    def faixa(pts):
+        p.poly(pts, "#FFFFFF", smooth=False)
+    faixa([(0, yl), (W_INT, yl), (W_INT, yl + B), (0, yl + B)])
+    for (w0, w1, y1) in ((430, 470, 975), (820, 920, H + 40)):                   # pequena área · grande área
+        for sd in (-1, 1):                                                       # laterais (abrem para a câmera)
+            xa, xb = gx + sd * w0, gx + sd * w1
+            faixa([(xa - 7, yl), (xa + 7, yl), (xb + 9, y1), (xb - 9, y1)])
+        if y1 < H:
+            faixa([(gx - w1 - 9, y1 - 7), (gx + w1 + 9, y1 - 7), (gx + w1 + 9, y1 + 9), (gx - w1 - 9, y1 + 9)])
+    p.oval(gx, 1035, 13, 7, "#FFFFFF")                                           # marca do pênalti
+
+
+def campinho_gol(rng):
+    """mon_campinho visto de frente para o GOL (trave em x ≈ 1565, o lugar do gol nos roteiros com chute)."""
+    return campinho(rng, gol_x=1565)
+
+
 SCENES = {"mon_parque": parque, "mon_vila": vila, "mon_quarto": quarto, "mon_palco": palco, "mon_noite": noite,
-          "mon_escola": escola, "mon_cozinha": cozinha, "mon_abertura": abertura}
+          "mon_escola": escola, "mon_cozinha": cozinha, "mon_abertura": abertura, "mon_campinho": campinho, "mon_campinho_gol": campinho_gol}
 
 
 # ───────────────────────── fundos gráficos ─────────────────────────

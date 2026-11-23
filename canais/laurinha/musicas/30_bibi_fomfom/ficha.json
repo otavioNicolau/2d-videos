@@ -53,13 +53,86 @@
  "alternativas": [
   "marchinha"
  ],
- "status": "letra_revisada",
- "versoes": [],
+ "status": "aprovada",
+ "versoes": [
+  "Bi-Bi, Fom-Fom!"
+ ],
  "youtube": {
-  "resumo": "BI-BI, FOM-FOM! 🚗🚌 A Laurinha saiu no carrinho, mas tinha ônibus na frente e motinha atrás! Vermelho: todo mundo para. Verde: vai! O caminhão faz fom, a moto faz vrum, o trem faz piuí!",
+  "resumo": "BI-BI, FOM-FOM! 🚗 A Laurinha saiu no carrinho pra dar uma voltinha: na frente, um ônibus; atrás, o Luisinho de motinha! O sinal ficou vermelho, todo mundo parou… verde, vai! E quem atravessou a rua bem devagar? Uma mamãe pata com seis patinhos! Quá-quá, obrigada!",
   "resumo_short": "BI-BI, FOM-FOM! 🚗 Os sons dos carros e o sinal de trânsito com a Laurinha e o Luisinho!",
-  "curiosidade": "O ônibus da escola é amarelo para todo mundo enxergar de longe"
+  "curiosidade": "O ônibus da escola é amarelo para todo mundo enxergar de longe",
+  "miniatura": "BI-BI,\nFOM-FOM!",
+  "miniatura_cena": {
+   "fundo": "faixas",
+   "centro": [
+    400,
+    430
+   ],
+   "cores": [
+    [
+     155,
+     79,
+     240
+    ],
+    [
+     255,
+     210,
+     63
+    ],
+    [
+     110,
+     210,
+     120
+    ],
+    [
+     255,
+     150,
+     60
+    ]
+   ],
+   "heroi": {
+    "id": "laurinha",
+    "pose": {
+     "turn": 0.2,
+     "mouth": "D",
+     "eyes_happy": 1.0,
+     "smile": 1.0,
+     "hand_n_x": -135,
+     "hand_n_y": -135,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3
+    }
+   },
+   "par": {
+    "id": "luisinho",
+    "pose": {
+     "turn": -0.2,
+     "mouth": "D",
+     "eyes_happy": 1.0,
+     "smile": 1.0
+    },
+    "tam": 520,
+    "x": 1040,
+    "corte": 120
+   },
+   "objetos": [
+    {
+     "id": "semaforo",
+     "pose": {
+      "luz": 2.0
+     },
+     "tam": 330,
+     "x": 130,
+     "base": 700
+    }
+   ]
+  }
  },
  "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz)",
- "persona": "laurinha"
+ "persona": "laurinha",
+ "escolhida": "Bi-Bi, Fom-Fom!"
 }

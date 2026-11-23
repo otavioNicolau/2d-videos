@@ -1,0 +1,66 @@
+{
+ "schema": "avaliacao-1.0",
+ "versoes": {
+  "Bi-Bi, Fom-Fom!": {
+   "arquivo": "Bi-Bi, Fom-Fom!.wav",
+   "duracao": 153.2,
+   "bpm": 136.0,
+   "bpm_nota": "",
+   "tom": "Lá# maior",
+   "voz_inicio": 0.2,
+   "refrao_inicio": null,
+   "cantado": 69,
+   "intervalos": [
+    [
+     9.3,
+     7.0
+    ],
+    [
+     49.1,
+     14.1
+    ],
+    [
+     106.5,
+     15.0
+    ],
+    [
+     144.4,
+     3.2
+    ]
+   ],
+   "fim_depois_da_voz": 2.6,
+   "final": "esmaecendo",
+   "silencio_final": 0.2,
+   "acerto": 64,
+   "nao_reconhecidas": [
+    "cachorro",
+    "luisinho",
+    "tchum",
+    "vrum",
+    "trem",
+    "piui",
+    "mais",
+    "zuum",
+    "tuuu",
+    "ambulancia",
+    "pata",
+    "seis"
+   ],
+   "pontos_a_conferir": [
+    "o gancho não foi reconhecido na transcrição",
+    "só 64% da letra reconhecida — ouvir a pronúncia"
+   ]
+  }
+ },
+ "ouvido": {
+  "Bi-Bi, Fom-Fom!": {
+   "1 começo chama atenção": null,
+   "5 melodia combina com a letra": null,
+   "6 dá vontade de dançar": null,
+   "7 pronúncia natural": null,
+   "8 tem a cara do canal": null,
+   "9 nenhum trecho cansativo": null
+  }
+ },
+ "escolhida": "Bi-Bi, Fom-Fom!"
+}

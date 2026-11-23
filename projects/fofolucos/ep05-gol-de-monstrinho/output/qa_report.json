@@ -1,0 +1,1656 @@
+{
+  "episode": "ep05-gol-de-monstrinho",
+  "scenes": {
+    "s01_intro": {
+      "frames": 100,
+      "performers": {
+        "bilu": {
+          "drawings": 100,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 99
+          },
+          "empty_frames": 0
+        },
+        "bola": {
+          "drawings": 100,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 99
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s02_intro": {
+      "frames": 131,
+      "performers": {
+        "bilu": {
+          "drawings": 131,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 130
+          },
+          "empty_frames": 0
+        },
+        "trave": {
+          "drawings": 131,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 130
+          },
+          "empty_frames": 0
+        },
+        "bola": {
+          "drawings": 131,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 130
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s03_intro": {
+      "frames": 85,
+      "performers": {
+        "teco": {
+          "drawings": 85,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 84
+          },
+          "empty_frames": 0
+        },
+        "gogo": {
+          "drawings": 85,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 84
+          },
+          "empty_frames": 0
+        },
+        "bilu": {
+          "drawings": 85,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 84
+          },
+          "empty_frames": 0
+        },
+        "nhoque": {
+          "drawings": 85,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 84
+          },
+          "empty_frames": 0
+        },
+        "bo": {
+          "drawings": 85,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 84
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s04_intro": {
+      "frames": 151,
+      "performers": {
+        "bilu": {
+          "drawings": 151,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 150
+          },
+          "empty_frames": 0
+        },
+        "zuzu": {
+          "drawings": 145,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 150
+          },
+          "empty_frames": 0
+        },
+        "mimi": {
+          "drawings": 151,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 150
+          },
+          "empty_frames": 0
+        },
+        "bat": {
+          "drawings": 151,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 150
+          },
+          "empty_frames": 0
+        },
+        "tec": {
+          "drawings": 151,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 150
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s05_verso": {
+      "frames": 92,
+      "performers": {
+        "bilu": {
+          "drawings": 92,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 91
+          },
+          "empty_frames": 0
+        },
+        "bola": {
+          "drawings": 92,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 91
+          },
+          "empty_frames": 0
+        },
+        "nv": {
+          "drawings": 92,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 91
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s06_verso": {
+      "frames": 53,
+      "performers": {
+        "teco": {
+          "drawings": 53,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 52
+          },
+          "empty_frames": 0
+        },
+        "mimi": {
+          "drawings": 53,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 52
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s07_verso": {
+      "frames": 53,
+      "performers": {
+        "gogo": {
+          "drawings": 53,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 52
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s08_verso": {
+      "frames": 52,
+      "performers": {
+        "gogo": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        },
+        "bola": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        },
+        "bo": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s09_verso": {
+      "frames": 104,
+      "performers": {
+        "zuzu": {
+          "drawings": 104,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 103
+          },
+          "empty_frames": 0
+        },
+        "bola": {
+          "drawings": 104,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 103
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s10_verso": {
+      "frames": 40,
+      "performers": {
+        "teco": {
+          "drawings": 40,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 39
+          },
+          "empty_frames": 0
+        },
+        "bola": {
+          "drawings": 40,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 39
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s11_verso": {
+      "frames": 65,
+      "performers": {
+        "nhoque": {
+          "drawings": 65,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 64
+          },
+          "empty_frames": 0
+        },
+        "trave": {
+          "drawings": 65,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 64
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s12_verso": {
+      "frames": 131,
+      "performers": {
+        "nhoque": {
+          "drawings": 83,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 82
+          },
+          "empty_frames": 0
+        },
+        "bola": {
+          "drawings": 131,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 130
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s13_refrao": {
+      "frames": 106,
+      "performers": {
+        "bilu": {
+          "drawings": 106,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 105
+          },
+          "empty_frames": 0
+        },
+        "teco": {
+          "drawings": 106,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 105
+          },
+          "empty_frames": 0
+        },
+        "bola": {
+          "drawings": 106,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 105
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s14_refrao": {
+      "frames": 104,
+      "performers": {
+        "teco": {
+          "drawings": 104,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 103
+          },
+          "empty_frames": 0
+        },
+        "trave": {
+          "drawings": 104,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 103
+          },
+          "empty_frames": 0
+        },
+        "bola": {
+          "drawings": 104,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 103
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s15_refrao": {
+      "frames": 119,
+      "performers": {
+        "mimi": {
+          "drawings": 119,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 118
+          },
+          "empty_frames": 0
+        },
+        "zuzu": {
+          "drawings": 119,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 118
+          },
+          "empty_frames": 0
+        },
+        "nhoque": {
+          "drawings": 119,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 118
+          },
+          "empty_frames": 0
+        },
+        "bo": {
+          "drawings": 119,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 118
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s16_refrao": {
+      "frames": 183,
+      "performers": {
+        "bilu": {
+          "drawings": 134,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 133
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s17_intervalo": {
+      "frames": 41,
+      "performers": {
+        "teco": {
+          "drawings": 41,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 40
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s18_intervalo": {
+      "frames": 138,
+      "performers": {
+        "bilu": {
+          "drawings": 138,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 137
+          },
+          "empty_frames": 0
+        },
+        "zuzu": {
+          "drawings": 137,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 137
+          },
+          "empty_frames": 0
+        },
+        "nhoque": {
+          "drawings": 138,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 137
+          },
+          "empty_frames": 0
+        },
+        "bat": {
+          "drawings": 138,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 137
+          },
+          "empty_frames": 0
+        },
+        "tec": {
+          "drawings": 138,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 137
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s19_intervalo": {
+      "frames": 174,
+      "performers": {
+        "mimi": {
+          "drawings": 174,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 173
+          },
+          "empty_frames": 0
+        },
+        "zuzu": {
+          "drawings": 174,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 173
+          },
+          "empty_frames": 0
+        },
+        "bola": {
+          "drawings": 174,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 173
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s20_ponte": {
+      "frames": 26,
+      "performers": {
+        "teco": {
+          "drawings": 26,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 25
+          },
+          "empty_frames": 0
+        },
+        "mimi": {
+          "drawings": 26,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 25
+          },
+          "empty_frames": 0
+        },
+        "nhoque": {
+          "drawings": 26,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 25
+          },
+          "empty_frames": 0
+        },
+        "bo": {
+          "drawings": 26,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 25
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s21_ponte": {
+      "frames": 79,
+      "performers": {
+        "bilu": {
+          "drawings": 79,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 78
+          },
+          "empty_frames": 0
+        },
+        "bola": {
+          "drawings": 79,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 78
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s22_ponte": {
+      "frames": 27,
+      "performers": {
+        "teco": {
+          "drawings": 27,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 26
+          },
+          "empty_frames": 0
+        },
+        "bola": {
+          "drawings": 27,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 26
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s23_ponte": {
+      "frames": 50,
+      "performers": {
+        "mimi": {
+          "drawings": 50,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 49
+          },
+          "empty_frames": 0
+        },
+        "trave": {
+          "drawings": 50,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 49
+          },
+          "empty_frames": 0
+        },
+        "bola": {
+          "drawings": 50,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 49
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s24_ponte": {
+      "frames": 53,
+      "performers": {
+        "nhoque": {
+          "drawings": 53,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 52
+          },
+          "empty_frames": 0
+        },
+        "trave": {
+          "drawings": 53,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 52
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s25_ponte": {
+      "frames": 78,
+      "performers": {
+        "nhoque": {
+          "drawings": 78,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 77
+          },
+          "empty_frames": 0
+        },
+        "bola": {
+          "drawings": 78,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 77
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s26_ponte": {
+      "frames": 26,
+      "performers": {
+        "bilu": {
+          "drawings": 26,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 25
+          },
+          "empty_frames": 0
+        },
+        "mimi": {
+          "drawings": 15,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 14
+          },
+          "empty_frames": 0
+        },
+        "zuzu": {
+          "drawings": 26,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 25
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s27_ponte": {
+      "frames": 39,
+      "performers": {
+        "gogo": {
+          "drawings": 39,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 38
+          },
+          "empty_frames": 0
+        },
+        "teco": {
+          "drawings": 39,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 38
+          },
+          "empty_frames": 0
+        },
+        "mimi": {
+          "drawings": 39,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 38
+          },
+          "empty_frames": 0
+        },
+        "bilu": {
+          "drawings": 39,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 38
+          },
+          "empty_frames": 0
+        },
+        "bo": {
+          "drawings": 39,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 38
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s28_verso": {
+      "frames": 66,
+      "performers": {
+        "bilu": {
+          "drawings": 66,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 65
+          },
+          "empty_frames": 0
+        },
+        "bola": {
+          "drawings": 66,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 65
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s29_verso": {
+      "frames": 52,
+      "performers": {
+        "gogo": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        },
+        "bola": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        },
+        "nv": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s30_verso": {
+      "frames": 51,
+      "performers": {
+        "lua": {
+          "drawings": 51,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 50
+          },
+          "empty_frames": 0
+        },
+        "bola": {
+          "drawings": 51,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 50
+          },
+          "empty_frames": 0
+        },
+        "nv": {
+          "drawings": 51,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 50
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s31_verso": {
+      "frames": 53,
+      "performers": {
+        "teco": {
+          "drawings": 53,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 52
+          },
+          "empty_frames": 0
+        },
+        "bilu": {
+          "drawings": 53,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 52
+          },
+          "empty_frames": 0
+        },
+        "bola": {
+          "drawings": 53,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 52
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s32_verso": {
+      "frames": 52,
+      "performers": {
+        "mimi": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        },
+        "bola": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s33_verso": {
+      "frames": 52,
+      "performers": {
+        "mimi": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s34_verso": {
+      "frames": 52,
+      "performers": {
+        "mimi": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        },
+        "trave": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        },
+        "bola": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s35_verso": {
+      "frames": 105,
+      "performers": {
+        "teco": {
+          "drawings": 105,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 104
+          },
+          "empty_frames": 0
+        },
+        "mimi": {
+          "drawings": 105,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 104
+          },
+          "empty_frames": 0
+        },
+        "nhoque": {
+          "drawings": 105,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 104
+          },
+          "empty_frames": 0
+        },
+        "bilu": {
+          "drawings": 105,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 104
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s36_refrao": {
+      "frames": 104,
+      "performers": {
+        "mimi": {
+          "drawings": 104,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 103
+          },
+          "empty_frames": 0
+        },
+        "zuzu": {
+          "drawings": 104,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 103
+          },
+          "empty_frames": 0
+        },
+        "bola": {
+          "drawings": 104,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 103
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s37_refrao": {
+      "frames": 103,
+      "performers": {
+        "zuzu": {
+          "drawings": 103,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 102
+          },
+          "empty_frames": 0
+        },
+        "trave": {
+          "drawings": 103,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 102
+          },
+          "empty_frames": 0
+        },
+        "bola": {
+          "drawings": 103,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 102
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s38_refrao": {
+      "frames": 118,
+      "performers": {
+        "gogo": {
+          "drawings": 117,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 117
+          },
+          "empty_frames": 0
+        },
+        "teco": {
+          "drawings": 118,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 117
+          },
+          "empty_frames": 0
+        },
+        "nhoque": {
+          "drawings": 118,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 117
+          },
+          "empty_frames": 0
+        },
+        "bo": {
+          "drawings": 118,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 117
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s39_refrao": {
+      "frames": 130,
+      "performers": {
+        "zuzu": {
+          "drawings": 81,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 80
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s40_intervalo": {
+      "frames": 126,
+      "performers": {
+        "bilu": {
+          "drawings": 126,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 125
+          },
+          "empty_frames": 0
+        },
+        "zuzu": {
+          "drawings": 107,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 125
+          },
+          "empty_frames": 0
+        },
+        "gogo": {
+          "drawings": 126,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 125
+          },
+          "empty_frames": 0
+        },
+        "bat": {
+          "drawings": 126,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 125
+          },
+          "empty_frames": 0
+        },
+        "tec": {
+          "drawings": 126,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 125
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s41_intervalo": {
+      "frames": 126,
+      "performers": {
+        "teco": {
+          "drawings": 124,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 125
+          },
+          "empty_frames": 0
+        },
+        "bola": {
+          "drawings": 126,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 125
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s42_intervalo": {
+      "frames": 126,
+      "performers": {
+        "teco": {
+          "drawings": 125,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 125
+          },
+          "empty_frames": 0
+        },
+        "bilu": {
+          "drawings": 125,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 125
+          },
+          "empty_frames": 0
+        },
+        "zuzu": {
+          "drawings": 125,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 125
+          },
+          "empty_frames": 0
+        },
+        "nhoque": {
+          "drawings": 125,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 125
+          },
+          "empty_frames": 0
+        },
+        "bo": {
+          "drawings": 126,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 125
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s43_refrao": {
+      "frames": 103,
+      "performers": {
+        "nhoque": {
+          "drawings": 103,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 102
+          },
+          "empty_frames": 0
+        },
+        "mimi": {
+          "drawings": 103,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 102
+          },
+          "empty_frames": 0
+        },
+        "bola": {
+          "drawings": 103,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 102
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s44_refrao": {
+      "frames": 103,
+      "performers": {
+        "mimi": {
+          "drawings": 103,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 102
+          },
+          "empty_frames": 0
+        },
+        "trave": {
+          "drawings": 103,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 102
+          },
+          "empty_frames": 0
+        },
+        "bola": {
+          "drawings": 103,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 102
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s45_refrao": {
+      "frames": 117,
+      "performers": {
+        "gogo": {
+          "drawings": 117,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 116
+          },
+          "empty_frames": 0
+        },
+        "bilu": {
+          "drawings": 117,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 116
+          },
+          "empty_frames": 0
+        },
+        "zuzu": {
+          "drawings": 117,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 116
+          },
+          "empty_frames": 0
+        },
+        "bo": {
+          "drawings": 117,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 116
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s46_refrao": {
+      "frames": 117,
+      "performers": {
+        "mimi": {
+          "drawings": 69,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 68
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s47_final": {
+      "frames": 103,
+      "performers": {
+        "bilu": {
+          "drawings": 103,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 102
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s48_final": {
+      "frames": 52,
+      "performers": {
+        "zuzu": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        },
+        "joinha": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 1
+        },
+        "bo": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [
+        "joinha: 1 quadros vazios (ex.: [1])"
+      ],
+      "frozen_samples": 0
+    },
+    "s49_final": {
+      "frames": 90,
+      "performers": {
+        "mimi": {
+          "drawings": 90,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 89
+          },
+          "empty_frames": 0
+        },
+        "nhoque": {
+          "drawings": 90,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 89
+          },
+          "empty_frames": 0
+        },
+        "nv": {
+          "drawings": 90,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 89
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s50_final": {
+      "frames": 71,
+      "performers": {
+        "gogo": {
+          "drawings": 71,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 70
+          },
+          "empty_frames": 0
+        },
+        "botao": {
+          "drawings": 71,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 70
+          },
+          "empty_frames": 1
+        },
+        "bo": {
+          "drawings": 71,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 70
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [
+        "botao: 1 quadros vazios (ex.: [1])"
+      ],
+      "frozen_samples": 0
+    },
+    "s51_final": {
+      "frames": 175,
+      "performers": {
+        "bilu": {
+          "drawings": 175,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 174
+          },
+          "empty_frames": 0
+        },
+        "nhoque": {
+          "drawings": 175,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 174
+          },
+          "empty_frames": 0
+        },
+        "teco": {
+          "drawings": 175,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 174
+          },
+          "empty_frames": 0
+        },
+        "bola": {
+          "drawings": 144,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 174
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s52_final": {
+      "frames": 90,
+      "performers": {
+        "teco": {
+          "drawings": 90,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 89
+          },
+          "empty_frames": 0
+        },
+        "gogo": {
+          "drawings": 90,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 89
+          },
+          "empty_frames": 0
+        },
+        "mimi": {
+          "drawings": 90,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 89
+          },
+          "empty_frames": 0
+        },
+        "zuzu": {
+          "drawings": 90,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 89
+          },
+          "empty_frames": 0
+        },
+        "bilu": {
+          "drawings": 90,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 89
+          },
+          "empty_frames": 0
+        },
+        "nhoque": {
+          "drawings": 90,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 89
+          },
+          "empty_frames": 0
+        },
+        "nv": {
+          "drawings": 90,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 89
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s53_final": {
+      "frames": 43,
+      "performers": {
+        "mimi": {
+          "drawings": 43,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 42
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    }
+  },
+  "warnings": [
+    "render final ainda não aprovado (approval.final_render = false): será gerado como CANDIDATO",
+    "storyboard s01_intro: pendente",
+    "storyboard s02_intro: pendente",
+    "storyboard s03_intro: pendente",
+    "storyboard s04_intro: pendente",
+    "storyboard s05_verso: pendente",
+    "storyboard s06_verso: pendente",
+    "storyboard s07_verso: pendente",
+    "storyboard s08_verso: pendente",
+    "storyboard s09_verso: pendente",
+    "storyboard s10_verso: pendente",
+    "storyboard s11_verso: pendente",
+    "storyboard s12_verso: pendente",
+    "storyboard s13_refrao: pendente",
+    "storyboard s14_refrao: pendente",
+    "storyboard s15_refrao: pendente",
+    "storyboard s16_refrao: pendente",
+    "storyboard s17_intervalo: pendente",
+    "storyboard s18_intervalo: pendente",
+    "storyboard s19_intervalo: pendente",
+    "storyboard s20_ponte: pendente",
+    "storyboard s21_ponte: pendente",
+    "storyboard s22_ponte: pendente",
+    "storyboard s23_ponte: pendente",
+    "storyboard s24_ponte: pendente",
+    "storyboard s25_ponte: pendente",
+    "storyboard s26_ponte: pendente",
+    "storyboard s27_ponte: pendente",
+    "storyboard s28_verso: pendente",
+    "storyboard s29_verso: pendente",
+    "storyboard s30_verso: pendente",
+    "storyboard s31_verso: pendente",
+    "storyboard s32_verso: pendente",
+    "storyboard s33_verso: pendente",
+    "storyboard s34_verso: pendente",
+    "storyboard s35_verso: pendente",
+    "storyboard s36_refrao: pendente",
+    "storyboard s37_refrao: pendente",
+    "storyboard s38_refrao: pendente",
+    "storyboard s39_refrao: pendente",
+    "storyboard s40_intervalo: pendente",
+    "storyboard s41_intervalo: pendente",
+    "storyboard s42_intervalo: pendente",
+    "storyboard s43_refrao: pendente",
+    "storyboard s44_refrao: pendente",
+    "storyboard s45_refrao: pendente",
+    "storyboard s46_refrao: pendente",
+    "storyboard s47_final: pendente",
+    "storyboard s48_final: pendente",
+    "storyboard s49_final: pendente",
+    "storyboard s50_final: pendente",
+    "storyboard s51_final: pendente",
+    "storyboard s52_final: pendente",
+    "storyboard s53_final: pendente"
+  ],
+  "lines": {},
+  "video": "/home/otavio/2d/projects/fofolucos/ep05-gol-de-monstrinho/output/ep05-gol-de-monstrinho_CANDIDATO.mp4",
+  "contact_sheet": "/home/otavio/2d/projects/fofolucos/ep05-gol-de-monstrinho/output/prancha.png",
+  "approved": false
+}

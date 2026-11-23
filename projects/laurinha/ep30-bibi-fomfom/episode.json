@@ -1,0 +1,5671 @@
+{
+  "schema": "1.1",
+  "id": "ep30-bibi-fomfom",
+  "projeto": "laurinha/ep30-bibi-fomfom",
+  "title": "Bi-Bi, Fom-Fom!",
+  "logline": "Clipe de \"Bi-Bi, Fom-Fom!\" — os barulhos dos veículos e o sinal de trânsito. Montado do roteiro verso a verso (roteiro.json).",
+  "fps": 30,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "background": "plano_parque",
+  "soundtrack": {
+    "file": "musica/trabalho.wav",
+    "analysis": "analise/song.json",
+    "start": 0.0,
+    "end": 153.2,
+    "fade_out": 0.6,
+    "beat_grid": "full"
+  },
+  "captions": {
+    "lyrics": "analise/letra.json",
+    "style": "palavra_a_palavra"
+  },
+  "overlays": {
+    "logo": true,
+    "channel": [
+      "LAURINHA",
+      "e Luisinho"
+    ]
+  },
+  "cast": {
+    "laurinha": {
+      "character": "laurinha"
+    },
+    "luisinho": {
+      "character": "luisinho"
+    },
+    "carrinho_aberto": {
+      "character": "carrinho_aberto"
+    },
+    "mamae": {
+      "character": "mamae"
+    },
+    "bat": {
+      "character": "bateria_show"
+    },
+    "tec": {
+      "character": "teclado_inst"
+    },
+    "bus": {
+      "character": "onibus"
+    },
+    "moto": {
+      "character": "moto"
+    },
+    "sem": {
+      "character": "semaforo"
+    },
+    "pata": {
+      "character": "pato"
+    },
+    "p0": {
+      "character": "pato"
+    },
+    "p1": {
+      "character": "pato"
+    },
+    "p2": {
+      "character": "pato"
+    },
+    "p3": {
+      "character": "pato"
+    },
+    "p4": {
+      "character": "pato"
+    },
+    "p5": {
+      "character": "pato"
+    },
+    "joinha": {
+      "character": "joinha"
+    },
+    "botao": {
+      "character": "botao_inscrever"
+    }
+  },
+  "approval": {
+    "storyboard": true,
+    "final_render": true,
+    "notes": "aprovado pelo usuário em 22/11 (após corrigir os pés embaixo do carrinho/moto)",
+    "approved_by": "Otavio"
+  },
+  "scenes": [
+    {
+      "id": "s01_intro",
+      "title": "Bi-bi, fom-fom! Zum, zum!",
+      "duration": 5.4667,
+      "description": "Bi-bi, fom-fom! Zum, zum!",
+      "background": "plano_rua",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1100,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 5.467,
+            "x": 1100,
+            "y": 540.0,
+            "zoom": 1.08,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 484.4,
+            "y": 815,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 1.5,
+              "do": "wave",
+              "dur": 3.967
+            }
+          ],
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "x": 484.4
+              },
+              "ease": "step"
+            },
+            {
+              "t": 5.41,
+              "pose": {
+                "x": 1200.2
+              },
+              "ease": "linear",
+              "in": 5.38
+            }
+          ]
+        }
+      },
+      "props": {
+        "carrinho_aberto": {
+          "start": {
+            "x": 527.4,
+            "y": 930,
+            "z": 4,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cor": 1.0,
+                "x": 527.4,
+                "roda": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 5.41,
+              "pose": {
+                "x": 1243.2
+              },
+              "ease": "linear",
+              "in": 5.38
+            },
+            {
+              "t": 5.41,
+              "pose": {
+                "roda": 13.7
+              },
+              "ease": "linear",
+              "in": 5.38
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.4,
+          "text": "BI-BI, FOM-FOM!",
+          "dur": 1.8,
+          "color": "vermelho",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 1.86,
+          "to": 5.28
+        }
+      ]
+    },
+    {
+      "id": "s02_intro",
+      "title": "Bi-bi, fom-fom!",
+      "duration": 1.3666,
+      "description": "Bi-bi, fom-fom!",
+      "background": "plano_rua",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1240,
+            "y": 525.2,
+            "zoom": 1.55
+          },
+          {
+            "t": 1.367,
+            "x": 1240,
+            "y": 525.2,
+            "zoom": 1.62,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1240.0,
+            "y": 815,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.2,
+              "do": "apontar_camera",
+              "dur": 1.167
+            }
+          ]
+        }
+      },
+      "props": {
+        "carrinho_aberto": {
+          "start": {
+            "x": 1282.9,
+            "y": 930,
+            "z": 4,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cor": 1.0,
+                "x": 1282.9,
+                "roda": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.31,
+              "pose": {
+                "x": 1282.9
+              },
+              "ease": "linear",
+              "in": 1.28
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "BI-BI!",
+          "dur": 1.167,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.253,
+          "to": 1.357
+        }
+      ]
+    },
+    {
+      "id": "s03_intro",
+      "title": "Laurinha e Luisinho!",
+      "duration": 2.3,
+      "description": "Laurinha e Luisinho!",
+      "background": "danca_raios_amarelo",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.0
+          },
+          {
+            "t": 2.3,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 640,
+            "y": 1010,
+            "turn": 0.25,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.522
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "wave",
+              "dur": 2.2
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1280,
+            "y": 1010,
+            "turn": -0.25,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.522
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.2,
+              "do": "wave",
+              "dur": 2.1
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "flash_in": true,
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "LAURINHA E LUISINHO!",
+          "dur": 1.8,
+          "color": "roxo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.327,
+          "to": 2.287
+        }
+      ]
+    },
+    {
+      "id": "s04_intro",
+      "title": "a banda na rua",
+      "duration": 6.7667,
+      "description": "",
+      "background": "plano_rua",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1350,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 6.767,
+            "x": 1350,
+            "y": 540.0,
+            "zoom": 1.04,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 1600.5,
+            "y": 930,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45,
+            "holding": "baqueta_a4",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1,
+            "holding_f": "baqueta_a4"
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "toca_bateria_a4",
+              "dur": 6.767
+            }
+          ]
+        },
+        "laurinha": {
+          "start": {
+            "x": 956.3,
+            "y": 930,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "toca_teclado",
+              "dur": 6.767
+            }
+          ]
+        },
+        "mamae": {
+          "start": {
+            "x": 2030.0,
+            "y": 930,
+            "turn": -0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "dur": 6.767,
+              "style": "festa"
+            }
+          ]
+        }
+      },
+      "props": {
+        "bat": {
+          "start": {
+            "x": 1600.5,
+            "y": 940,
+            "z": 4,
+            "depth": 0.87
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "kit_a4",
+              "dur": 6.767
+            }
+          ]
+        },
+        "tec": {
+          "start": {
+            "x": 956.3,
+            "y": 940,
+            "z": 4,
+            "depth": 0.899
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tecla": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 6.727,
+              "pose": {
+                "tecla": 13.5
+              },
+              "ease": "linear",
+              "in": 6.697
+            }
+          ]
+        }
+      },
+      "fx": [
+        "notas"
+      ]
+    },
+    {
+      "id": "s05_verso",
+      "title": "Saí no meu carrinho",
+      "duration": 1.8,
+      "description": "Saí no meu carrinho",
+      "background": "plano_rua",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1000.0,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 1.8,
+            "x": 1100,
+            "y": 540.0,
+            "zoom": 1.08,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 327.6,
+            "y": 815,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.8,
+              "do": "wave",
+              "dur": 1.0
+            }
+          ],
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "x": 327.6
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.74,
+              "pose": {
+                "x": 971.8
+              },
+              "ease": "linear",
+              "in": 1.71
+            }
+          ]
+        }
+      },
+      "props": {
+        "carrinho_aberto": {
+          "start": {
+            "x": 370.5,
+            "y": 930,
+            "z": 4,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cor": 1.0,
+                "x": 370.5,
+                "roda": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.74,
+              "pose": {
+                "x": 1014.7
+              },
+              "ease": "linear",
+              "in": 1.71
+            },
+            {
+              "t": 1.74,
+              "pose": {
+                "roda": 4.5
+              },
+              "ease": "linear",
+              "in": 1.71
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.3,
+          "text": "SAÍ NO MEU CARRINHO!",
+          "dur": 1.5,
+          "color": "rosa",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.04,
+          "to": 1.79
+        }
+      ],
+      "transition_in": {
+        "type": "deslizar_cima",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s06_verso",
+      "title": "Pra dar uma voltinha,",
+      "duration": 1.8,
+      "description": "Pra dar uma voltinha,",
+      "background": "plano_parque",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1240,
+            "y": 525.2,
+            "zoom": 1.55
+          },
+          {
+            "t": 1.8,
+            "x": 1240,
+            "y": 525.2,
+            "zoom": 1.62,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1240.0,
+            "y": 815,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.2,
+              "do": "wave",
+              "dur": 1.6
+            }
+          ]
+        }
+      },
+      "props": {
+        "carrinho_aberto": {
+          "start": {
+            "x": 1282.9,
+            "y": 930,
+            "z": 4,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cor": 1.0,
+                "x": 1282.9,
+                "roda": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.74,
+              "pose": {
+                "x": 1282.9
+              },
+              "ease": "linear",
+              "in": 1.71
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.3,
+          "text": "UMA VOLTINHA!",
+          "dur": 1.5,
+          "color": "verde",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.3,
+          "to": 1.79
+        }
+      ]
+    },
+    {
+      "id": "s07_verso",
+      "title": "Mas na frente tinha um ônibus",
+      "duration": 2.2667,
+      "description": "Mas na frente tinha um ônibus",
+      "background": "plano_rua",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1250,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 2.267,
+            "x": 1250,
+            "y": 540.0,
+            "zoom": 1.08,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 634.4,
+            "y": 815,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.3,
+              "do": "look_around",
+              "dur": 1.967
+            }
+          ]
+        }
+      },
+      "props": {
+        "carrinho_aberto": {
+          "start": {
+            "x": 677.4,
+            "y": 930,
+            "z": 4,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cor": 1.0,
+                "x": 677.4,
+                "roda": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.21,
+              "pose": {
+                "x": 677.4
+              },
+              "ease": "linear",
+              "in": 2.18
+            }
+          ]
+        },
+        "bus": {
+          "start": {
+            "x": 1822.6,
+            "y": 930,
+            "z": 4,
+            "depth": 1.232
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {},
+              "ease": "step"
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.3,
+          "text": "UM ÔNIBUS NA FRENTE!",
+          "dur": 1.8,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.3,
+          "to": 2.257
+        }
+      ]
+    },
+    {
+      "id": "s08_verso",
+      "title": "E atrás uma motinha!",
+      "duration": 1.3666,
+      "description": "E atrás uma motinha!",
+      "background": "plano_rua",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1200,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 1.367,
+            "x": 1200,
+            "y": 540.0,
+            "zoom": 1.08,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1693.9,
+            "y": 815,
+            "turn": -0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.2,
+              "do": "look_around",
+              "dur": 1.167
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 656.0,
+            "y": 835,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.4,
+              "do": "wave",
+              "dur": 0.967
+            }
+          ],
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "x": 656.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.31,
+              "pose": {
+                "x": 835.0
+              },
+              "ease": "linear",
+              "in": 1.28
+            }
+          ]
+        }
+      },
+      "props": {
+        "carrinho_aberto": {
+          "start": {
+            "x": 1736.8,
+            "y": 930,
+            "z": 4,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cor": 1.0,
+                "x": 1736.8,
+                "roda": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.31,
+              "pose": {
+                "x": 1736.8
+              },
+              "ease": "linear",
+              "in": 1.28
+            }
+          ]
+        },
+        "moto": {
+          "start": {
+            "x": 627.4,
+            "y": 930,
+            "z": 4,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "x": 627.4,
+                "roda": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.31,
+              "pose": {
+                "x": 806.3
+              },
+              "ease": "linear",
+              "in": 1.28
+            },
+            {
+              "t": 1.31,
+              "pose": {
+                "roda": 3.4
+              },
+              "ease": "linear",
+              "in": 1.28
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.3,
+          "text": "E ATRÁS UMA MOTINHA!",
+          "dur": 1.067,
+          "color": "verde",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.153,
+          "to": 1.357
+        }
+      ]
+    },
+    {
+      "id": "s09_verso",
+      "title": "O sinal ficou vermelho:",
+      "duration": 1.8334,
+      "description": "O sinal ficou vermelho:",
+      "background": "plano_rua",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 420,
+            "zoom": 1.3
+          },
+          {
+            "t": 1.833,
+            "x": 1300,
+            "y": 420,
+            "zoom": 1.38,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {},
+      "props": {
+        "sem": {
+          "start": {
+            "x": 1300.0,
+            "y": 920,
+            "z": 1,
+            "depth": 1.015
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "luz": 0.0
+              },
+              "ease": "step"
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.3,
+          "text": "VERMELHO!",
+          "dur": 1.533,
+          "color": "vermelho",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s10_verso",
+      "title": "Todo mundo parou!",
+      "duration": 1.8,
+      "description": "Todo mundo parou!",
+      "background": "plano_rua",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 1.8,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.08,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1722.3,
+            "y": 815,
+            "turn": 0.3,
+            "expr": "surprised",
+            "z": 3,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "actions": []
+        },
+        "luisinho": {
+          "start": {
+            "x": 863.4,
+            "y": 835,
+            "turn": 0.3,
+            "expr": "surprised",
+            "z": 3,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "actions": []
+        }
+      },
+      "props": {
+        "carrinho_aberto": {
+          "start": {
+            "x": 1765.2,
+            "y": 930,
+            "z": 4,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cor": 1.0,
+                "x": 1765.2,
+                "roda": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.74,
+              "pose": {
+                "x": 1765.2
+              },
+              "ease": "linear",
+              "in": 1.71
+            }
+          ]
+        },
+        "moto": {
+          "start": {
+            "x": 834.8,
+            "y": 930,
+            "z": 4,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "x": 834.8,
+                "roda": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.74,
+              "pose": {
+                "x": 834.8
+              },
+              "ease": "linear",
+              "in": 1.71
+            }
+          ]
+        },
+        "sem": {
+          "start": {
+            "x": 2051.6,
+            "y": 920,
+            "z": 1,
+            "depth": 1.015
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "luz": 0.0
+              },
+              "ease": "step"
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "TODO MUNDO PAROU!",
+          "dur": 1.6,
+          "color": "laranja",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.253,
+          "to": 1.79
+        }
+      ]
+    },
+    {
+      "id": "s11_verso",
+      "title": "Ficou verde… vai!",
+      "duration": 1.8,
+      "description": "Ficou verde… vai!",
+      "background": "plano_rua",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 420,
+            "zoom": 1.3
+          },
+          {
+            "t": 1.8,
+            "x": 1300,
+            "y": 420,
+            "zoom": 1.38,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {},
+      "props": {
+        "sem": {
+          "start": {
+            "x": 1300.0,
+            "y": 920,
+            "z": 1,
+            "depth": 1.015
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "luz": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.4,
+              "pose": {
+                "luz": 2.0
+              },
+              "ease": "out",
+              "in": 0.37
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.5,
+          "text": "VERDE… VAI!",
+          "dur": 1.3,
+          "color": "verde",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s12_verso",
+      "title": "E a buzina tocou!",
+      "duration": 2.2666,
+      "description": "E a buzina tocou!",
+      "background": "plano_rua",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1240,
+            "y": 471.0,
+            "zoom": 1.85
+          },
+          {
+            "t": 2.267,
+            "x": 1240,
+            "y": 471.0,
+            "zoom": 1.95,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1240.0,
+            "y": 815,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "apontar_camera",
+              "dur": 2.167
+            }
+          ]
+        }
+      },
+      "props": {
+        "carrinho_aberto": {
+          "start": {
+            "x": 1282.9,
+            "y": 930,
+            "z": 4,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cor": 1.0,
+                "x": 1282.9,
+                "roda": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.21,
+              "pose": {
+                "x": 1282.9
+              },
+              "ease": "linear",
+              "in": 2.18
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "BI-BI!",
+          "dur": 1.8,
+          "color": "vermelho",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.173,
+          "to": 2.013
+        }
+      ]
+    },
+    {
+      "id": "s13_refrao",
+      "title": "Bi-bi, fom-fom!",
+      "duration": 3.6334,
+      "description": "Bi-bi, fom-fom! / Lá vem o carro!",
+      "background": "plano_rua",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1000.0,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 3.633,
+            "x": 1600.0,
+            "y": 540.0,
+            "zoom": 1.08,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 327.6,
+            "y": 815,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.6,
+              "do": "wave",
+              "dur": 3.033
+            }
+          ],
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "x": 327.6
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.57,
+              "pose": {
+                "x": 1830.7
+              },
+              "ease": "linear",
+              "in": 3.54
+            }
+          ]
+        }
+      },
+      "props": {
+        "carrinho_aberto": {
+          "start": {
+            "x": 370.5,
+            "y": 930,
+            "z": 4,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cor": 1.0,
+                "x": 370.5,
+                "roda": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.57,
+              "pose": {
+                "x": 1873.6
+              },
+              "ease": "linear",
+              "in": 3.54
+            },
+            {
+              "t": 3.57,
+              "pose": {
+                "roda": 14.5
+              },
+              "ease": "linear",
+              "in": 3.54
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "BI-BI, FOM-FOM!",
+          "dur": 1.66,
+          "color": "vermelho",
+          "y": 170
+        },
+        {
+          "t": 1.81,
+          "text": "LÁ VEM O CARRO!",
+          "dur": 1.8,
+          "color": "azul",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.207,
+          "to": 1.547
+        },
+        {
+          "who": "laurinha",
+          "from": 2.087,
+          "to": 3.567
+        }
+      ],
+      "transition_in": {
+        "type": "deslizar_esq",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s14_refrao",
+      "title": "Bi-bi, fom-fom!",
+      "duration": 3.6,
+      "description": "Bi-bi, fom-fom! / Sai da frente, cachorro!",
+      "background": "plano_casa_frente",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 494.6,
+            "zoom": 1.55
+          },
+          {
+            "t": 3.6,
+            "x": 1300,
+            "y": 494.6,
+            "zoom": 1.62,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 1300.0,
+            "y": 930,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 1.44,
+              "do": "point",
+              "dur": 2.16
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 1.62,
+          "text": "SAI DA FRENTE!",
+          "dur": 1.8,
+          "color": "laranja",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "luisinho",
+          "from": 0.0,
+          "to": 3.59
+        }
+      ]
+    },
+    {
+      "id": "s15_refrao",
+      "title": "Bi-bi, fom-fom!",
+      "duration": 3.6,
+      "description": "Bi-bi, fom-fom! / Lá vem o carro!",
+      "background": "danca_xadrez_verde",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.0
+          },
+          {
+            "t": 3.6,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 380,
+            "y": 1010,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.232
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "dur": 3.6,
+              "style": "roda"
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.232
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.05,
+              "do": "dance",
+              "dur": 3.55,
+              "style": "festa"
+            }
+          ]
+        },
+        "mamae": {
+          "start": {
+            "x": 1540,
+            "y": 1010,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.232
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "dance",
+              "dur": 3.5,
+              "style": "roda"
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "flash_in": true,
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "BI-BI, FOM-FOM!",
+          "dur": 1.8,
+          "color": "vermelho",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 1.573
+        },
+        {
+          "who": "laurinha",
+          "from": 2.153,
+          "to": 3.573
+        },
+        {
+          "who": "luisinho",
+          "from": 0.0,
+          "to": 1.573
+        },
+        {
+          "who": "luisinho",
+          "from": 2.153,
+          "to": 3.573
+        }
+      ]
+    },
+    {
+      "id": "s16_refrao",
+      "title": "Bi-bi, fom-fom!",
+      "duration": 3.6,
+      "description": "Bi-bi, fom-fom! / Sai da frente, cachorro!",
+      "background": "plano_parque",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1240,
+            "y": 471.0,
+            "zoom": 1.85
+          },
+          {
+            "t": 3.6,
+            "x": 1240,
+            "y": 471.0,
+            "zoom": 1.95,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1240.0,
+            "y": 815,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 1.08,
+              "do": "apontar_camera",
+              "dur": 2.52
+            }
+          ]
+        }
+      },
+      "props": {
+        "carrinho_aberto": {
+          "start": {
+            "x": 1282.9,
+            "y": 930,
+            "z": 4,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cor": 1.0,
+                "x": 1282.9,
+                "roda": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.54,
+              "pose": {
+                "x": 1282.9
+              },
+              "ease": "linear",
+              "in": 3.51
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 1.08,
+          "text": "BI-BI!",
+          "dur": 1.8,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 3.59
+        }
+      ]
+    },
+    {
+      "id": "s17_intervalo",
+      "title": "Bora, turminha!",
+      "duration": 3.0,
+      "description": "Bora, turminha! / Laurinha e Luisinho!",
+      "background": "plano_casa_frente",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 440.4,
+            "zoom": 1.85
+          },
+          {
+            "t": 3.0,
+            "x": 1300,
+            "y": 440.4,
+            "zoom": 1.95,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 1300.0,
+            "y": 930,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "apontar_camera",
+              "dur": 2.9
+            },
+            {
+              "t": 2.0,
+              "do": "wave",
+              "dur": 1.0
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "BORA, TURMINHA!",
+          "dur": 1.8,
+          "color": "laranja",
+          "y": 170
+        }
+      ],
+      "transition_in": {
+        "type": "giro",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s18_intervalo",
+      "title": "a banda na rua",
+      "duration": 6.0,
+      "description": "",
+      "background": "plano_rua",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1350,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 6.0,
+            "x": 1350,
+            "y": 540.0,
+            "zoom": 1.04,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 1600.5,
+            "y": 930,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45,
+            "holding": "baqueta_a4",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1,
+            "holding_f": "baqueta_a4"
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "toca_bateria_a4",
+              "dur": 6.0
+            }
+          ]
+        },
+        "laurinha": {
+          "start": {
+            "x": 956.3,
+            "y": 930,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "toca_teclado",
+              "dur": 6.0
+            }
+          ]
+        },
+        "mamae": {
+          "start": {
+            "x": 2030.0,
+            "y": 930,
+            "turn": -0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "dur": 6.0,
+              "style": "palmas"
+            }
+          ]
+        }
+      },
+      "props": {
+        "bat": {
+          "start": {
+            "x": 1600.5,
+            "y": 940,
+            "z": 4,
+            "depth": 0.87
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "kit_a4",
+              "dur": 6.0
+            }
+          ]
+        },
+        "tec": {
+          "start": {
+            "x": 956.3,
+            "y": 940,
+            "z": 4,
+            "depth": 0.899
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tecla": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 5.96,
+              "pose": {
+                "tecla": 12.0
+              },
+              "ease": "linear",
+              "in": 5.93
+            }
+          ]
+        }
+      },
+      "fx": [
+        "notas"
+      ]
+    },
+    {
+      "id": "s19_intervalo",
+      "title": "a turma dança",
+      "duration": 8.6,
+      "description": "",
+      "background": "danca_ondas_amarelo",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.0
+          },
+          {
+            "t": 8.6,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 380,
+            "y": 1010,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.232
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "dur": 8.6,
+              "style": "cintura"
+            }
+          ]
+        },
+        "mamae": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.232
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "dance",
+              "dur": 8.5,
+              "style": "festa"
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1540,
+            "y": 1010,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.232
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "dur": 8.6,
+              "style": "bracos"
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ]
+    },
+    {
+      "id": "s20_ponte",
+      "title": "O caminhão faz: fom!",
+      "duration": 1.7666,
+      "description": "O caminhão faz: fom!",
+      "background": "danca_raios_laranja",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.0
+          },
+          {
+            "t": 1.767,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.667
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "dur": 1.767,
+              "style": "bracos"
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "O CAMINHÃO: FOM!",
+          "dur": 1.667,
+          "color": "laranja",
+          "y": 170
+        }
+      ],
+      "transition_in": {
+        "type": "deslizar_esq",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s21_ponte",
+      "title": "A moto faz: vrum!",
+      "duration": 1.7667,
+      "description": "A moto faz: vrum!",
+      "background": "plano_rua",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1000.0,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 1.767,
+            "x": 1500,
+            "y": 540.0,
+            "zoom": 1.08,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 470.7,
+            "y": 835,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.3,
+              "do": "wave",
+              "dur": 1.467
+            }
+          ],
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "x": 470.7
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.71,
+              "pose": {
+                "x": 1687.5
+              },
+              "ease": "linear",
+              "in": 1.68
+            }
+          ]
+        }
+      },
+      "props": {
+        "moto": {
+          "start": {
+            "x": 442.1,
+            "y": 930,
+            "z": 4,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "x": 442.1,
+                "roda": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.71,
+              "pose": {
+                "x": 1658.9
+              },
+              "ease": "linear",
+              "in": 1.68
+            },
+            {
+              "t": 1.71,
+              "pose": {
+                "roda": 7.1
+              },
+              "ease": "linear",
+              "in": 1.68
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "A MOTO: VRUM!",
+          "dur": 1.667,
+          "color": "verde",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s22_ponte",
+      "title": "O trem faz: piuí!",
+      "duration": 1.8333,
+      "description": "O trem faz: piuí!",
+      "background": "danca_xadrez_amarelo",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.0
+          },
+          {
+            "t": 1.833,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.667
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "dur": 1.833,
+              "style": "marcha"
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "O TREM: PIUÍ!",
+          "dur": 1.733,
+          "color": "azul",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 1.823
+        }
+      ]
+    },
+    {
+      "id": "s23_ponte",
+      "title": "E o carrinho? Bi-bi! Tchum!",
+      "duration": 1.7667,
+      "description": "E o carrinho? Bi-bi! Tchum!",
+      "background": "plano_rua",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1240,
+            "y": 525.2,
+            "zoom": 1.55
+          },
+          {
+            "t": 1.767,
+            "x": 1240,
+            "y": 525.2,
+            "zoom": 1.62,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1240.0,
+            "y": 815,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "apontar_camera",
+              "dur": 1.667
+            }
+          ]
+        }
+      },
+      "props": {
+        "carrinho_aberto": {
+          "start": {
+            "x": 1282.9,
+            "y": 930,
+            "z": 4,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cor": 1.0,
+                "x": 1282.9,
+                "roda": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.71,
+              "pose": {
+                "x": 1282.9
+              },
+              "ease": "linear",
+              "in": 1.68
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "E O CARRINHO? BI-BI! TCHUM!",
+          "dur": 1.667,
+          "color": "rosa",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.007,
+          "to": 1.757
+        }
+      ]
+    },
+    {
+      "id": "s24_ponte",
+      "title": "E mais!",
+      "duration": 1.8333,
+      "description": "E mais! / O avião faz: zuum!",
+      "background": "danca_raios_azul",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.0
+          },
+          {
+            "t": 1.833,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.667
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "dur": 1.833,
+              "style": "asinhas"
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "E MAIS! O AVIÃO: ZUUM!",
+          "dur": 1.733,
+          "color": "azul",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.14,
+          "to": 1.823
+        }
+      ]
+    },
+    {
+      "id": "s25_ponte",
+      "title": "O barco faz: tuuu!",
+      "duration": 1.3,
+      "description": "O barco faz: tuuu!",
+      "background": "danca_ondas_verde",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.0
+          },
+          {
+            "t": 1.3,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.667
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "dur": 1.3,
+              "style": "balanco"
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "O BARCO: TUUU!",
+          "dur": 1.2,
+          "color": "azul",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s26_ponte",
+      "title": "A ambulância: uiô, uiô!",
+      "duration": 2.2667,
+      "description": "A ambulância: uiô, uiô!",
+      "background": "danca_raios_vermelho",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.0
+          },
+          {
+            "t": 2.267,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "mamae": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.667
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "dur": 2.267,
+              "style": "roda"
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "A AMBULÂNCIA: UIÔ, UIÔ!",
+          "dur": 1.8,
+          "color": "vermelho",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s27_ponte",
+      "title": "E o carrinho? Bi-bi! Tchum!",
+      "duration": 1.7667,
+      "description": "E o carrinho? Bi-bi! Tchum!",
+      "background": "plano_rua",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1240,
+            "y": 525.2,
+            "zoom": 1.55
+          },
+          {
+            "t": 1.767,
+            "x": 1240,
+            "y": 525.2,
+            "zoom": 1.62,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1240.0,
+            "y": 815,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "apontar_camera",
+              "dur": 1.667
+            }
+          ]
+        }
+      },
+      "props": {
+        "carrinho_aberto": {
+          "start": {
+            "x": 1282.9,
+            "y": 930,
+            "z": 4,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cor": 1.0,
+                "x": 1282.9,
+                "roda": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.71,
+              "pose": {
+                "x": 1282.9
+              },
+              "ease": "linear",
+              "in": 1.68
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "BI-BI! TCHUM!",
+          "dur": 1.667,
+          "color": "rosa",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.18,
+          "to": 1.757
+        }
+      ]
+    },
+    {
+      "id": "s28_verso",
+      "title": "Lá na frente parou tudo,",
+      "duration": 1.8,
+      "description": "Lá na frente parou tudo,",
+      "background": "plano_rua",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1000.0,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 1.8,
+            "x": 1000.0,
+            "y": 540.0,
+            "zoom": 1.08,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 570.7,
+            "y": 815,
+            "turn": 0.3,
+            "expr": "surprised",
+            "z": 3,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "actions": []
+        }
+      },
+      "props": {
+        "carrinho_aberto": {
+          "start": {
+            "x": 613.7,
+            "y": 930,
+            "z": 4,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cor": 1.0,
+                "x": 613.7,
+                "roda": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.74,
+              "pose": {
+                "x": 613.7
+              },
+              "ease": "linear",
+              "in": 1.71
+            }
+          ]
+        },
+        "sem": {
+          "start": {
+            "x": 971.6,
+            "y": 920,
+            "z": 1,
+            "depth": 1.015
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "luz": 0.0
+              },
+              "ease": "step"
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "PAROU TUDO!",
+          "dur": 1.6,
+          "color": "vermelho",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.213,
+          "to": 1.79
+        }
+      ],
+      "transition_in": {
+        "type": "cortina",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s29_verso",
+      "title": "Quem será que tá passando?",
+      "duration": 2.2333,
+      "description": "Quem será que tá passando?",
+      "background": "plano_rua",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1240,
+            "y": 525.2,
+            "zoom": 1.55
+          },
+          {
+            "t": 2.233,
+            "x": 1240,
+            "y": 525.2,
+            "zoom": 1.62,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1240.0,
+            "y": 815,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "look_around",
+              "dur": 2.133
+            }
+          ]
+        }
+      },
+      "props": {
+        "carrinho_aberto": {
+          "start": {
+            "x": 1282.9,
+            "y": 930,
+            "z": 4,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cor": 1.0,
+                "x": 1282.9,
+                "roda": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.17,
+              "pose": {
+                "x": 1282.9
+              },
+              "ease": "linear",
+              "in": 2.14
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "QUEM TÁ PASSANDO?",
+          "dur": 1.8,
+          "color": "roxo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.313,
+          "to": 1.993
+        }
+      ]
+    },
+    {
+      "id": "s30_verso",
+      "title": "Uma pata e seis patinhos,",
+      "duration": 1.3333,
+      "description": "Uma pata e seis patinhos,",
+      "background": "plano_rua",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 1.333,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.08,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {},
+      "props": {
+        "pata": {
+          "start": {
+            "x": 1192.6,
+            "y": 930,
+            "z": 4,
+            "depth": 1.305
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "x": 1192.6,
+                "pulo": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.3,
+              "pose": {
+                "asas": 0.4
+              },
+              "ease": "out"
+            },
+            {
+              "t": 1.27,
+              "pose": {
+                "x": 1407.4
+              },
+              "ease": "linear",
+              "in": 1.24
+            },
+            {
+              "t": 1.27,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 1.24
+            }
+          ]
+        },
+        "p0": {
+          "start": {
+            "x": 1056.6,
+            "y": 940,
+            "z": 4,
+            "depth": 0.652
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "x": 1056.6
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.27,
+              "pose": {
+                "x": 1271.4
+              },
+              "ease": "linear",
+              "in": 1.24
+            }
+          ]
+        },
+        "p1": {
+          "start": {
+            "x": 949.3,
+            "y": 940,
+            "z": 4,
+            "depth": 0.652
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "x": 949.3
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.27,
+              "pose": {
+                "x": 1164.0
+              },
+              "ease": "linear",
+              "in": 1.24
+            }
+          ]
+        },
+        "p2": {
+          "start": {
+            "x": 841.9,
+            "y": 940,
+            "z": 4,
+            "depth": 0.652
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "x": 841.9
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.27,
+              "pose": {
+                "x": 1056.6
+              },
+              "ease": "linear",
+              "in": 1.24
+            }
+          ]
+        },
+        "p3": {
+          "start": {
+            "x": 734.5,
+            "y": 940,
+            "z": 4,
+            "depth": 0.652
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "x": 734.5
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.27,
+              "pose": {
+                "x": 949.3
+              },
+              "ease": "linear",
+              "in": 1.24
+            }
+          ]
+        },
+        "p4": {
+          "start": {
+            "x": 627.2,
+            "y": 940,
+            "z": 4,
+            "depth": 0.652
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "x": 627.2
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.27,
+              "pose": {
+                "x": 841.9
+              },
+              "ease": "linear",
+              "in": 1.24
+            }
+          ]
+        },
+        "p5": {
+          "start": {
+            "x": 519.8,
+            "y": 940,
+            "z": 4,
+            "depth": 0.652
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "x": 519.8
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.27,
+              "pose": {
+                "x": 734.5
+              },
+              "ease": "linear",
+              "in": 1.24
+            }
+          ]
+        }
+      },
+      "fx": [
+        "coracoes"
+      ],
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "UMA PATA E SEIS PATINHOS!",
+          "dur": 1.133,
+          "color": "amarelo",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s31_verso",
+      "title": "Bem devagar, desfilando!",
+      "duration": 1.7667,
+      "description": "Bem devagar, desfilando!",
+      "background": "plano_rua",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1550,
+            "y": 620,
+            "zoom": 1.6
+          },
+          {
+            "t": 1.767,
+            "x": 1550,
+            "y": 620,
+            "zoom": 1.7,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {},
+      "props": {
+        "pata": {
+          "start": {
+            "x": 1478.4,
+            "y": 930,
+            "z": 4,
+            "depth": 1.305
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "x": 1478.4,
+                "pulo": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.3,
+              "pose": {
+                "asas": 0.4
+              },
+              "ease": "out"
+            },
+            {
+              "t": 1.71,
+              "pose": {
+                "x": 1657.4
+              },
+              "ease": "linear",
+              "in": 1.68
+            },
+            {
+              "t": 1.71,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 1.68
+            }
+          ]
+        },
+        "p0": {
+          "start": {
+            "x": 1342.4,
+            "y": 940,
+            "z": 4,
+            "depth": 0.652
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "x": 1342.4
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.71,
+              "pose": {
+                "x": 1521.4
+              },
+              "ease": "linear",
+              "in": 1.68
+            }
+          ]
+        },
+        "p1": {
+          "start": {
+            "x": 1235.1,
+            "y": 940,
+            "z": 4,
+            "depth": 0.652
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "x": 1235.1
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.71,
+              "pose": {
+                "x": 1414.0
+              },
+              "ease": "linear",
+              "in": 1.68
+            }
+          ]
+        },
+        "p2": {
+          "start": {
+            "x": 1127.7,
+            "y": 940,
+            "z": 4,
+            "depth": 0.652
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "x": 1127.7
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.71,
+              "pose": {
+                "x": 1306.6
+              },
+              "ease": "linear",
+              "in": 1.68
+            }
+          ]
+        },
+        "p3": {
+          "start": {
+            "x": 1020.3,
+            "y": 940,
+            "z": 4,
+            "depth": 0.652
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "x": 1020.3
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.71,
+              "pose": {
+                "x": 1199.3
+              },
+              "ease": "linear",
+              "in": 1.68
+            }
+          ]
+        },
+        "p4": {
+          "start": {
+            "x": 913.0,
+            "y": 940,
+            "z": 4,
+            "depth": 0.652
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "x": 913.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.71,
+              "pose": {
+                "x": 1091.9
+              },
+              "ease": "linear",
+              "in": 1.68
+            }
+          ]
+        },
+        "p5": {
+          "start": {
+            "x": 805.6,
+            "y": 940,
+            "z": 4,
+            "depth": 0.652
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "x": 805.6
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.71,
+              "pose": {
+                "x": 984.5
+              },
+              "ease": "linear",
+              "in": 1.68
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "BEM DEVAGAR…",
+          "dur": 1.567,
+          "color": "rosa",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s32_verso",
+      "title": "Ninguém buzinou,",
+      "duration": 1.8,
+      "description": "Ninguém buzinou,",
+      "background": "plano_rua",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 1.8,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.08,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1722.3,
+            "y": 815,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "actions": []
+        },
+        "luisinho": {
+          "start": {
+            "x": 863.4,
+            "y": 835,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "actions": []
+        }
+      },
+      "props": {
+        "carrinho_aberto": {
+          "start": {
+            "x": 1765.2,
+            "y": 930,
+            "z": 4,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cor": 1.0,
+                "x": 1765.2,
+                "roda": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.74,
+              "pose": {
+                "x": 1765.2
+              },
+              "ease": "linear",
+              "in": 1.71
+            }
+          ]
+        },
+        "moto": {
+          "start": {
+            "x": 834.8,
+            "y": 930,
+            "z": 4,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "x": 834.8,
+                "roda": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.74,
+              "pose": {
+                "x": 834.8
+              },
+              "ease": "linear",
+              "in": 1.71
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "NINGUÉM BUZINOU!",
+          "dur": 1.6,
+          "color": "verde",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.2,
+          "to": 1.79
+        }
+      ]
+    },
+    {
+      "id": "s33_verso",
+      "title": "Todo mundo esperou…",
+      "duration": 1.8,
+      "description": "Todo mundo esperou…",
+      "background": "plano_rua",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1240,
+            "y": 525.2,
+            "zoom": 1.55
+          },
+          {
+            "t": 1.8,
+            "x": 1240,
+            "y": 525.2,
+            "zoom": 1.62,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1240.0,
+            "y": 815,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "actions": []
+        }
+      },
+      "props": {
+        "carrinho_aberto": {
+          "start": {
+            "x": 1282.9,
+            "y": 930,
+            "z": 4,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cor": 1.0,
+                "x": 1282.9,
+                "roda": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.74,
+              "pose": {
+                "x": 1282.9
+              },
+              "ease": "linear",
+              "in": 1.71
+            }
+          ]
+        }
+      },
+      "fx": [
+        "coracoes"
+      ],
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "TODO MUNDO ESPEROU…",
+          "dur": 1.6,
+          "color": "azul",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.3,
+          "to": 1.79
+        }
+      ]
+    },
+    {
+      "id": "s34_verso",
+      "title": "\"Quá-quá, obrigada!\"",
+      "duration": 2.1667,
+      "description": "\"Quá-quá, obrigada!\"",
+      "background": "plano_rua",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 620,
+            "zoom": 1.5
+          },
+          {
+            "t": 2.167,
+            "x": 1300,
+            "y": 620,
+            "zoom": 1.6,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {},
+      "props": {
+        "pata": {
+          "start": {
+            "x": 1300.0,
+            "y": 930,
+            "z": 4,
+            "depth": 1.885
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {},
+              "ease": "step"
+            },
+            {
+              "t": 0.2,
+              "pose": {
+                "quem": 1.0
+              },
+              "ease": "out"
+            },
+            {
+              "t": 0.3,
+              "pose": {
+                "asas": 1.0
+              },
+              "ease": "out"
+            },
+            {
+              "t": 0.45,
+              "pose": {
+                "quem": 0.0
+              },
+              "ease": "out",
+              "in": 0.22
+            },
+            {
+              "t": 0.7,
+              "pose": {
+                "quem": 1.0
+              },
+              "ease": "out",
+              "in": 0.22
+            },
+            {
+              "t": 0.95,
+              "pose": {
+                "quem": 0.0
+              },
+              "ease": "out",
+              "in": 0.22
+            }
+          ]
+        }
+      },
+      "fx": [
+        "coracoes"
+      ],
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "QUÁ-QUÁ, OBRIGADA!",
+          "dur": 1.8,
+          "color": "rosa",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s35_verso",
+      "title": "E o trânsito andou!",
+      "duration": 1.8,
+      "description": "E o trânsito andou!",
+      "background": "plano_rua",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1000.0,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 1.8,
+            "x": 1500,
+            "y": 540.0,
+            "zoom": 1.08,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1028.6,
+            "y": 815,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.3,
+              "do": "wave",
+              "dur": 1.5
+            }
+          ],
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "x": 1028.6
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.74,
+              "pose": {
+                "x": 1887.5
+              },
+              "ease": "linear",
+              "in": 1.71
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 241.3,
+            "y": 835,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "actions": [],
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "x": 241.3
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.74,
+              "pose": {
+                "x": 885.5
+              },
+              "ease": "linear",
+              "in": 1.71
+            }
+          ]
+        }
+      },
+      "props": {
+        "carrinho_aberto": {
+          "start": {
+            "x": 1071.6,
+            "y": 930,
+            "z": 4,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cor": 1.0,
+                "x": 1071.6,
+                "roda": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.74,
+              "pose": {
+                "x": 1930.5
+              },
+              "ease": "linear",
+              "in": 1.71
+            },
+            {
+              "t": 1.74,
+              "pose": {
+                "roda": 4.5
+              },
+              "ease": "linear",
+              "in": 1.71
+            }
+          ]
+        },
+        "moto": {
+          "start": {
+            "x": 212.7,
+            "y": 930,
+            "z": 4,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "x": 212.7,
+                "roda": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.74,
+              "pose": {
+                "x": 856.8
+              },
+              "ease": "linear",
+              "in": 1.71
+            },
+            {
+              "t": 1.74,
+              "pose": {
+                "roda": 4.5
+              },
+              "ease": "linear",
+              "in": 1.71
+            }
+          ]
+        },
+        "sem": {
+          "start": {
+            "x": 1858.9,
+            "y": 920,
+            "z": 1,
+            "depth": 1.015
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "luz": 2.0
+              },
+              "ease": "step"
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "O TRÂNSITO ANDOU!",
+          "dur": 1.6,
+          "color": "verde",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 1.573
+        }
+      ]
+    },
+    {
+      "id": "s36_refrao",
+      "title": "Bi-bi, fom-fom!",
+      "duration": 3.6,
+      "description": "Bi-bi, fom-fom! / Lá vem o carro!",
+      "background": "plano_rua",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1000.0,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 3.6,
+            "x": 1600.0,
+            "y": 540.0,
+            "zoom": 1.08,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 327.6,
+            "y": 815,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.6,
+              "do": "wave",
+              "dur": 3.0
+            }
+          ],
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "x": 327.6
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.54,
+              "pose": {
+                "x": 1830.7
+              },
+              "ease": "linear",
+              "in": 3.51
+            }
+          ]
+        }
+      },
+      "props": {
+        "carrinho_aberto": {
+          "start": {
+            "x": 370.5,
+            "y": 930,
+            "z": 4,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cor": 2.0,
+                "x": 370.5,
+                "roda": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.54,
+              "pose": {
+                "x": 1873.6
+              },
+              "ease": "linear",
+              "in": 3.51
+            },
+            {
+              "t": 3.54,
+              "pose": {
+                "roda": 14.4
+              },
+              "ease": "linear",
+              "in": 3.51
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "BI-BI, FOM-FOM!",
+          "dur": 1.65,
+          "color": "vermelho",
+          "y": 170
+        },
+        {
+          "t": 1.8,
+          "text": "LÁ VEM O CARRO!",
+          "dur": 1.8,
+          "color": "azul",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "luisinho",
+          "from": 0.313,
+          "to": 1.593
+        },
+        {
+          "who": "luisinho",
+          "from": 2.283,
+          "to": 3.59
+        }
+      ],
+      "transition_in": {
+        "type": "deslizar_dir",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s37_refrao",
+      "title": "Bi-bi, fom-fom!",
+      "duration": 3.6,
+      "description": "Bi-bi, fom-fom! / Sai da frente, cachorro!",
+      "background": "plano_parque",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 494.6,
+            "zoom": 1.55
+          },
+          {
+            "t": 3.6,
+            "x": 1300,
+            "y": 494.6,
+            "zoom": 1.62,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1300.0,
+            "y": 930,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 1.44,
+              "do": "point",
+              "dur": 2.16
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 1.62,
+          "text": "SAI DA FRENTE!",
+          "dur": 1.8,
+          "color": "laranja",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.313,
+          "to": 3.59
+        }
+      ]
+    },
+    {
+      "id": "s38_refrao",
+      "title": "Bi-bi, fom-fom!",
+      "duration": 3.5666,
+      "description": "Bi-bi, fom-fom! / Lá vem o carro!",
+      "background": "danca_bolinhas_laranja",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.0
+          },
+          {
+            "t": 3.567,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 380,
+            "y": 1010,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.232
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "dur": 3.567,
+              "style": "roda"
+            }
+          ]
+        },
+        "mamae": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.232
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.05,
+              "do": "dance",
+              "dur": 3.517,
+              "style": "festa"
+            }
+          ]
+        },
+        "laurinha": {
+          "start": {
+            "x": 1540,
+            "y": 1010,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.232
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "dance",
+              "dur": 3.467,
+              "style": "roda"
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "BI-BI, FOM-FOM!",
+          "dur": 1.8,
+          "color": "vermelho",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "luisinho",
+          "from": 0.313,
+          "to": 1.573
+        },
+        {
+          "who": "luisinho",
+          "from": 2.243,
+          "to": 3.557
+        },
+        {
+          "who": "laurinha",
+          "from": 0.313,
+          "to": 1.573
+        },
+        {
+          "who": "laurinha",
+          "from": 2.243,
+          "to": 3.557
+        }
+      ]
+    },
+    {
+      "id": "s39_refrao",
+      "title": "Bi-bi, fom-fom!",
+      "duration": 3.5667,
+      "description": "Bi-bi, fom-fom! / Sai da frente, cachorro!",
+      "background": "plano_casa_frente",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1240,
+            "y": 471.0,
+            "zoom": 1.85
+          },
+          {
+            "t": 3.567,
+            "x": 1240,
+            "y": 471.0,
+            "zoom": 1.95,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 1240.0,
+            "y": 815,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 1.07,
+              "do": "apontar_camera",
+              "dur": 2.497
+            }
+          ]
+        }
+      },
+      "props": {
+        "carrinho_aberto": {
+          "start": {
+            "x": 1282.9,
+            "y": 930,
+            "z": 4,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cor": 2.0,
+                "x": 1282.9,
+                "roda": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.51,
+              "pose": {
+                "x": 1282.9
+              },
+              "ease": "linear",
+              "in": 3.48
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 1.07,
+          "text": "BI-BI!",
+          "dur": 1.8,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "luisinho",
+          "from": 0.337,
+          "to": 3.557
+        }
+      ]
+    },
+    {
+      "id": "s40_intervalo",
+      "title": "a banda na rua",
+      "duration": 7.1667,
+      "description": "",
+      "background": "plano_rua",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1350,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 7.167,
+            "x": 1350,
+            "y": 540.0,
+            "zoom": 1.04,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 1600.5,
+            "y": 930,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45,
+            "holding": "baqueta_a4",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1,
+            "holding_f": "baqueta_a4"
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "toca_bateria_a4",
+              "dur": 7.167
+            }
+          ]
+        },
+        "laurinha": {
+          "start": {
+            "x": 956.3,
+            "y": 930,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "toca_teclado",
+              "dur": 7.167
+            }
+          ]
+        },
+        "mamae": {
+          "start": {
+            "x": 2030.0,
+            "y": 930,
+            "turn": -0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "dur": 7.167,
+              "style": "festa"
+            }
+          ]
+        }
+      },
+      "props": {
+        "bat": {
+          "start": {
+            "x": 1600.5,
+            "y": 940,
+            "z": 4,
+            "depth": 0.87
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "kit_a4",
+              "dur": 7.167
+            }
+          ]
+        },
+        "tec": {
+          "start": {
+            "x": 956.3,
+            "y": 940,
+            "z": 4,
+            "depth": 0.899
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tecla": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 7.127,
+              "pose": {
+                "tecla": 14.3
+              },
+              "ease": "linear",
+              "in": 7.097
+            }
+          ]
+        }
+      },
+      "fx": [
+        "notas"
+      ],
+      "transition_in": {
+        "type": "deslizar_esq",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s41_intervalo",
+      "title": "a turma dança",
+      "duration": 7.1333,
+      "description": "",
+      "background": "danca_xadrez_laranja",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.0
+          },
+          {
+            "t": 7.133,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "mamae": {
+          "start": {
+            "x": 380,
+            "y": 1010,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.232
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "dur": 7.133,
+              "style": "palmas"
+            }
+          ]
+        },
+        "laurinha": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.232
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "dance",
+              "dur": 7.033,
+              "style": "roda"
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1540,
+            "y": 1010,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.232
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "dur": 7.133,
+              "style": "palmas"
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ]
+    },
+    {
+      "id": "s42_refrao",
+      "title": "Bi-bi, fom-fom!",
+      "duration": 3.1333,
+      "description": "Bi-bi, fom-fom! / Lá vem o carro!",
+      "background": "plano_rua",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1000.0,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 3.133,
+            "x": 1600.0,
+            "y": 540.0,
+            "zoom": 1.08,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 327.6,
+            "y": 815,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.6,
+              "do": "wave",
+              "dur": 2.533
+            }
+          ],
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "x": 327.6
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.07,
+              "pose": {
+                "x": 1830.7
+              },
+              "ease": "linear",
+              "in": 3.04
+            }
+          ]
+        }
+      },
+      "props": {
+        "carrinho_aberto": {
+          "start": {
+            "x": 370.5,
+            "y": 930,
+            "z": 4,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cor": 3.0,
+                "x": 370.5,
+                "roda": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.07,
+              "pose": {
+                "x": 1873.6
+              },
+              "ease": "linear",
+              "in": 3.04
+            },
+            {
+              "t": 3.07,
+              "pose": {
+                "roda": 12.5
+              },
+              "ease": "linear",
+              "in": 3.04
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "BI-BI, FOM-FOM!",
+          "dur": 1.41,
+          "color": "vermelho",
+          "y": 170
+        },
+        {
+          "t": 1.56,
+          "text": "LÁ VEM O CARRO!",
+          "dur": 1.573,
+          "color": "azul",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.12,
+          "to": 3.123
+        }
+      ],
+      "transition_in": {
+        "type": "deslizar_dir",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s43_refrao",
+      "title": "Bi-bi, fom-fom!",
+      "duration": 3.5334,
+      "description": "Bi-bi, fom-fom! / Sai da frente, cachorro!",
+      "background": "plano_casa_frente",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 494.6,
+            "zoom": 1.55
+          },
+          {
+            "t": 3.533,
+            "x": 1300,
+            "y": 494.6,
+            "zoom": 1.62,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "mamae": {
+          "start": {
+            "x": 1300.0,
+            "y": 930,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 1.41,
+              "do": "point",
+              "dur": 2.123
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 1.59,
+          "text": "SAI DA FRENTE!",
+          "dur": 1.8,
+          "color": "laranja",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s44_refrao",
+      "title": "Bi-bi, fom-fom!",
+      "duration": 3.5666,
+      "description": "Bi-bi, fom-fom! / Lá vem o carro!",
+      "background": "danca_raios_verde",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.0
+          },
+          {
+            "t": 3.567,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "mamae": {
+          "start": {
+            "x": 380,
+            "y": 1010,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.232
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "dur": 3.567,
+              "style": "roda"
+            }
+          ]
+        },
+        "laurinha": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.232
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.05,
+              "do": "dance",
+              "dur": 3.517,
+              "style": "festa"
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1540,
+            "y": 1010,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.232
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "dance",
+              "dur": 3.467,
+              "style": "roda"
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "BI-BI, FOM-FOM!",
+          "dur": 1.8,
+          "color": "vermelho",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.233,
+          "to": 3.557
+        },
+        {
+          "who": "luisinho",
+          "from": 0.233,
+          "to": 3.557
+        }
+      ]
+    },
+    {
+      "id": "s45_refrao",
+      "title": "Bi-bi, fom-fom!",
+      "duration": 3.5334,
+      "description": "Bi-bi, fom-fom! / Sai da frente, cachorro!",
+      "background": "plano_rua",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1240,
+            "y": 471.0,
+            "zoom": 1.85
+          },
+          {
+            "t": 3.533,
+            "x": 1240,
+            "y": 471.0,
+            "zoom": 1.95,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1240.0,
+            "y": 815,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 1.06,
+              "do": "apontar_camera",
+              "dur": 2.473
+            }
+          ]
+        }
+      },
+      "props": {
+        "carrinho_aberto": {
+          "start": {
+            "x": 1282.9,
+            "y": 930,
+            "z": 4,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cor": 1.0,
+                "x": 1282.9,
+                "roda": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.47,
+              "pose": {
+                "x": 1282.9
+              },
+              "ease": "linear",
+              "in": 3.44
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 1.06,
+          "text": "BI-BI!",
+          "dur": 1.8,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.227,
+          "to": 3.523
+        }
+      ]
+    },
+    {
+      "id": "s46_final",
+      "title": "Gostou do passeio?",
+      "duration": 2.6666,
+      "description": "Gostou do passeio?",
+      "background": "plano_rua",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1240,
+            "y": 471.0,
+            "zoom": 1.85
+          },
+          {
+            "t": 2.667,
+            "x": 1240,
+            "y": 471.0,
+            "zoom": 1.95,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1240.0,
+            "y": 815,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "apontar_camera",
+              "dur": 2.567
+            }
+          ]
+        }
+      },
+      "props": {
+        "carrinho_aberto": {
+          "start": {
+            "x": 1282.9,
+            "y": 930,
+            "z": 4,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cor": 1.0,
+                "x": 1282.9,
+                "roda": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.61,
+              "pose": {
+                "x": 1282.9
+              },
+              "ease": "linear",
+              "in": 2.58
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "GOSTOU DO PASSEIO?",
+          "dur": 1.8,
+          "color": "rosa",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.353,
+          "to": 2.553
+        }
+      ],
+      "transition_in": {
+        "type": "zoom",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s47_final",
+      "title": "Dá um joinha!",
+      "duration": 1.3334,
+      "description": "Dá um joinha!",
+      "background": "danca_raios_verde",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.0
+          },
+          {
+            "t": 1.333,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 640,
+            "y": 1010,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.2,
+              "do": "bacana",
+              "dur": 1.133
+            }
+          ]
+        }
+      },
+      "props": {
+        "joinha": {
+          "start": {
+            "x": 1380,
+            "y": 900,
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "escala": 0.0
+              }
+            },
+            {
+              "t": 0.4,
+              "pose": {
+                "escala": 1.0
+              },
+              "ease": "back",
+              "in": 0.37
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "DÁ UM JOINHA!",
+          "dur": 1.133,
+          "color": "azul",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s48_final",
+      "title": "Chama o papai e a mamãe",
+      "duration": 2.2,
+      "description": "Chama o papai e a mamãe",
+      "background": "plano_casa_frente",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 494.6,
+            "zoom": 1.55
+          },
+          {
+            "t": 2.2,
+            "x": 1300,
+            "y": 494.6,
+            "zoom": 1.62,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1049.5,
+            "y": 930,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "point",
+              "dur": 2.1
+            }
+          ]
+        },
+        "mamae": {
+          "start": {
+            "x": 1550.5,
+            "y": 930,
+            "turn": -0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.2,
+              "do": "wave",
+              "dur": 2.0
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.3,
+          "text": "CHAMA O PAPAI E A MAMÃE!",
+          "dur": 1.8,
+          "color": "verde",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 2.19
+        }
+      ]
+    },
+    {
+      "id": "s49_final",
+      "title": "Pra se inscrever no canal! Zum, zum!",
+      "duration": 6.6666,
+      "description": "Pra se inscrever no canal! Zum, zum!",
+      "background": "danca_raios_vermelho",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.0
+          },
+          {
+            "t": 6.667,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 560,
+            "y": 1010,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.2,
+              "do": "point",
+              "dur": 6.467
+            }
+          ]
+        }
+      },
+      "props": {
+        "botao": {
+          "start": {
+            "x": 1260,
+            "y": 760,
+            "z": 3,
+            "depth": 1.2
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "escala": 0.0,
+                "aperta": 0.0
+              }
+            },
+            {
+              "t": 0.4,
+              "pose": {
+                "escala": 1.0
+              },
+              "ease": "back",
+              "in": 0.37
+            },
+            {
+              "t": 1.6,
+              "pose": {
+                "aperta": 1.0
+              },
+              "ease": "out",
+              "in": 1.57
+            },
+            {
+              "t": 1.9,
+              "pose": {
+                "aperta": 0.0
+              },
+              "ease": "in",
+              "in": 0.27
+            }
+          ]
+        }
+      },
+      "fx": [
+        "coracoes"
+      ],
+      "callouts": [
+        {
+          "t": 0.5,
+          "text": "INSCREVA-SE!",
+          "dur": 1.8,
+          "color": "vermelho",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.093,
+          "to": 4.173
+        }
+      ]
+    },
+    {
+      "id": "s50_final",
+      "title": "Bi-bi, fom-fom! Tchau! Bi-bi!",
+      "duration": 3.2,
+      "description": "Bi-bi, fom-fom! Tchau! Bi-bi!",
+      "background": "plano_rua",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 3.2,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.08,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1722.3,
+            "y": 815,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "wave",
+              "dur": 3.2
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 863.4,
+            "y": 835,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "wave",
+              "dur": 3.1
+            }
+          ]
+        }
+      },
+      "props": {
+        "carrinho_aberto": {
+          "start": {
+            "x": 1765.2,
+            "y": 930,
+            "z": 4,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cor": 1.0,
+                "x": 1765.2,
+                "roda": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.14,
+              "pose": {
+                "x": 1765.2
+              },
+              "ease": "linear",
+              "in": 3.11
+            }
+          ]
+        },
+        "moto": {
+          "start": {
+            "x": 834.8,
+            "y": 930,
+            "z": 4,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "x": 834.8,
+                "roda": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.14,
+              "pose": {
+                "x": 834.8
+              },
+              "ease": "linear",
+              "in": 3.11
+            }
+          ]
+        }
+      },
+      "fx": [
+        "coracoes"
+      ],
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "BI-BI, FOM-FOM!",
+          "dur": 1.25,
+          "color": "vermelho",
+          "y": 170
+        },
+        {
+          "t": 1.5,
+          "text": "TCHAU!",
+          "dur": 1.7,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.217,
+          "to": 3.19
+        }
+      ],
+      "transition_in": {
+        "type": "deslizar_dir",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s51_final",
+      "title": "a última buzinada",
+      "duration": 2.8667,
+      "description": "",
+      "background": "plano_rua",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1240,
+            "y": 471.0,
+            "zoom": 1.85
+          },
+          {
+            "t": 2.867,
+            "x": 1240,
+            "y": 471.0,
+            "zoom": 1.95,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1240.0,
+            "y": 815,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "apontar_camera",
+              "dur": 2.767
+            }
+          ]
+        }
+      },
+      "props": {
+        "carrinho_aberto": {
+          "start": {
+            "x": 1282.9,
+            "y": 930,
+            "z": 4,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cor": 1.0,
+                "x": 1282.9,
+                "roda": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.81,
+              "pose": {
+                "x": 1282.9
+              },
+              "ease": "linear",
+              "in": 2.78
+            }
+          ]
+        }
+      },
+      "flash_in": true,
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "BI-BI!",
+          "dur": 1.8,
+          "color": "rosa",
+          "y": 170
+        }
+      ],
+      "transition_out": "fade"
+    }
+  ]
+}

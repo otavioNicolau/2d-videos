@@ -1,0 +1,65 @@
+{
+ "schema": "avaliacao-1.0",
+ "versoes": {
+  "Gol de Monstrinho!": {
+   "arquivo": "Gol de Monstrinho!.wav",
+   "duracao": 156.0,
+   "bpm": 136.0,
+   "bpm_nota": "",
+   "tom": "Sol maior",
+   "voz_inicio": 1.85,
+   "refrao_inicio": 1.2,
+   "cantado": 73,
+   "intervalos": [
+    [
+     10.6,
+     6.5
+    ],
+    [
+     57.0,
+     7.0
+    ],
+    [
+     108.2,
+     13.1
+    ],
+    [
+     145.8,
+     3.0
+    ]
+   ],
+   "fim_depois_da_voz": 1.2,
+   "final": "corte seco",
+   "silencio_final": 0.6,
+   "acerto": 78,
+   "nao_reconhecidas": [
+    "rawr",
+    "zuzu",
+    "cabeceia",
+    "teco",
+    "ligeiro",
+    "dribla",
+    "bracos",
+    "vamos",
+    "bilu",
+    "bateu",
+    "sorridente",
+    "caiu"
+   ],
+   "pontos_a_conferir": [
+    "só 78% da letra reconhecida — ouvir a pronúncia"
+   ]
+  }
+ },
+ "ouvido": {
+  "Gol de Monstrinho!": {
+   "1 começo chama atenção": null,
+   "5 melodia combina com a letra": null,
+   "6 dá vontade de dançar": null,
+   "7 pronúncia natural": null,
+   "8 tem a cara do canal": null,
+   "9 nenhum trecho cansativo": null
+  }
+ },
+ "escolhida": "Gol de Monstrinho!"
+}

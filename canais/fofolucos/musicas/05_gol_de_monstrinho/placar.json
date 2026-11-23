@@ -1,0 +1,31 @@
+{
+ "musica": "05",
+ "titulo": "Gol de Monstrinho!",
+ "estilo": "F4",
+ "medidas": {
+  "voz_%": 35.8,
+  "bateria_%": 39.9,
+  "baixo_%": 4.9,
+  "outros_%": 19.4,
+  "largura_voz": 0.08,
+  "batidas_identicas": 0.777,
+  "duracao_s": 156.0,
+  "teclado_eletronico": 0.025,
+  "bateria_banda": 0.011,
+  "percussao": 0.006,
+  "metais": 0.004,
+  "sincope": 0.52,
+  "baixo_sincopado": 0.7
+ },
+ "acertos": "6/12",
+ "nota": 4.9,
+ "obs": "F4 groove próprio 136 BPM; baixo 5 % (baixo), voz/bateria ok",
+ "falhas": [
+  "baixo no som (%) (baixo)",
+  "outros instrumentos (%) (alto)",
+  "largura da voz (0 = uma voz no centro) (alto)",
+  "batida de teclado (loop igual) (baixo)",
+  "teclado/synth reconhecido (baixo)",
+  "batida sincopada (contratempo) — o 'contagiante' (baixo)"
+ ]
+}

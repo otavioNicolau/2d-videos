@@ -173,6 +173,14 @@ def publicar(project: str, musica: Path, copiar: bool = True) -> Path:
         dest.mkdir(parents=True, exist_ok=True)
         for p in out.iterdir():
             shutil.copy2(p, dest / p.name)
+        pre = dest.parent / "Pré-produção"                    # 23/11: storyboard aprovado + suno.txt junto da entrega
+        pre.mkdir(exist_ok=True)
+        for p in (pdir / "output" / "storyboard.png", musica / "suno.txt"):
+            if p.exists():
+                shutil.copy2(p, pre / p.name)
+        cand = dest.parent / "Candidato (para aprovar)"        # pasta antiga de aprovação: só os arquivos finais ficam
+        if cand.exists():
+            shutil.rmtree(cand)
         canal = cn.windows / "Canal"
         canal.mkdir(parents=True, exist_ok=True)
         src = cn.brand / "canal"

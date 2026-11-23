@@ -2,7 +2,7 @@
 
   toonstudio validate <episódio>            valida contra schema, biblioteca e cobertura de câmera
   toonstudio build <episódio> [--scene s03] [--force]   produz (incremental) e gera o MP4 (candidato sem aprovação)
-  toonstudio approve <episódio> --by NOME   registra a aprovação humana do render final
+  toonstudio approve <episódio> --by NOME [--storyboard]   aprovação humana (--storyboard: storyboard aprovado → o build já sai DEFINITIVO)
   toonstudio modelsheet <personagem>        folha de modelo PNG + KRA (Krita)
   toonstudio background <id>                pinta o cenário e gera KRA com as camadas
   toonstudio catalog                        biblioteca de animações/expressões (JSON)
@@ -42,7 +42,7 @@ def main(argv=None) -> int:
     sub = ap.add_subparsers(dest="cmd", required=True)
     v = sub.add_parser("validate"); v.add_argument("episode")
     b = sub.add_parser("build"); b.add_argument("episode"); b.add_argument("--scene", action="append"); b.add_argument("--force", action="store_true")
-    a = sub.add_parser("approve"); a.add_argument("episode"); a.add_argument("--by", required=True); a.add_argument("--notes", default="")
+    a = sub.add_parser("approve"); a.add_argument("episode"); a.add_argument("--by", required=True); a.add_argument("--notes", default=""); a.add_argument("--storyboard", action="store_true")
     m = sub.add_parser("modelsheet"); m.add_argument("character")
     g = sub.add_parser("background"); g.add_argument("id", nargs="?", default="floresta_clareira")
     sub.add_parser("catalog")
@@ -91,9 +91,10 @@ def main(argv=None) -> int:
         if args.cmd == "approve":
             p = PROJECTS / args.episode / "episode.json"
             ep = json.loads(p.read_text(encoding="utf-8"))
-            ep.setdefault("approval", {}).update({"final_render": True, "approved_by": args.by, "notes": args.notes})
+            chave = "storyboard" if args.storyboard else "final_render"     # 23/11: storyboard aprovado = render definitivo
+            ep.setdefault("approval", {}).update({chave: True, "approved_by": args.by, "notes": args.notes})
             p.write_text(json.dumps(ep, ensure_ascii=False, indent=2), encoding="utf-8")
-            print(f"render final aprovado por {args.by}; rode `build` para gerar o MP4 final")
+            print(f"{'storyboard' if args.storyboard else 'render final'} aprovado por {args.by}; rode `build` para gerar o MP4 definitivo")
             return 0
         if args.cmd == "modelsheet":
             from .characters.modelsheet import build

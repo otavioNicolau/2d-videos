@@ -1,0 +1,4865 @@
+{
+ "schema": "roteiro-1.0",
+ "escala_personagens": 1.45,
+ "nota": "Roteiro do canal Fofolucos — 05 'Gol de Monstrinho!' (take inteiro, 2:36, F4, nota 4,9): futebol na Vila Monstrinha — cada um joga do seu jeito; refrão do passe e do gol (rede balançando); ponte de comandos de jogo; a virada: a bola bate na lua e cai no pé da Mimi, que faz o gol. Gerado por scripts/roteiros/fo05_gol_de_monstrinho.py.",
+ "partes": {
+  "intro#1": [
+   {
+    "linhas": 1,
+    "cenario": "mon_campinho",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "titulo": "o campinho da Vila Monstrinha",
+    "cantam": [
+     "bilu"
+    ],
+    "callout": [
+     {
+      "t": 0.5,
+      "text": "GOL DE MONSTRINHO!",
+      "color": "roxo"
+     }
+    ],
+    "objetos": {
+     "bola": {
+      "id": "bola_futebol",
+      "x": 300.0,
+      "y": 935.0,
+      "z": 4,
+      "depth": 0.8,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 300.0,
+         "y": 935.0,
+         "giro": 0.0,
+         "amassa": 0.0,
+         "tipo": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.3,
+        "pose": {
+         "x": 300.0,
+         "y": 935.0,
+         "giro": 0.0
+        },
+        "ease": "linear",
+        "in": 0.27
+       },
+       {
+        "t": 1.6,
+        "pose": {
+         "x": 1170.0,
+         "y": 935.0,
+         "giro": 1.74
+        },
+        "ease": "linear",
+        "in": 1.27
+       }
+      ]
+     }
+    },
+    "atores": {
+     "bilu": {
+      "x": 1300,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "look_around",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "cenario": "mon_campinho_gol",
+    "camera": {
+     "x": 1350,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "cantam": [
+     "bilu"
+    ],
+    "callout": [
+     {
+      "t": 0.1,
+      "text": "CHUTA, CHUTA…",
+      "color": "azul"
+     },
+     {
+      "t": 1.61,
+      "text": "GOL!",
+      "color": "amarelo"
+     }
+    ],
+    "fx": [
+     "confete"
+    ],
+    "objetos": {
+     "trave": {
+      "id": "trave",
+      "x": 1650,
+      "y": 905,
+      "z": 0,
+      "depth": 0.72,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "rede": 0.0,
+         "onda": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.61,
+        "pose": {
+         "rede": 0.0,
+         "onda": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.73,
+        "pose": {
+         "rede": 1.0
+        },
+        "ease": "out",
+        "in": 0.09
+       },
+       {
+        "t": 4.31,
+        "pose": {
+         "rede": 0.15,
+         "onda": 8.28
+        },
+        "ease": "linear",
+        "in": 2.55
+       }
+      ]
+     },
+     "bola": {
+      "id": "bola_futebol",
+      "x": 610.0,
+      "y": 935.0,
+      "z": 4,
+      "depth": 0.8,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 610.0,
+         "y": 935.0,
+         "giro": 0.0,
+         "amassa": 0.0,
+         "tipo": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.01,
+        "pose": {
+         "x": 610.0,
+         "y": 935.0,
+         "giro": 0.0
+        },
+        "ease": "linear",
+        "in": 0.98
+       },
+       {
+        "t": 1.31,
+        "pose": {
+         "x": 1130.0,
+         "y": 700.0,
+         "giro": 1.51
+        },
+        "ease": "linear",
+        "in": 0.27
+       },
+       {
+        "t": 1.61,
+        "pose": {
+         "x": 1650.0,
+         "y": 815.0,
+         "giro": 2.78
+        },
+        "ease": "linear",
+        "in": 0.27
+       }
+      ]
+     }
+    },
+    "atores": {
+     "bilu": {
+      "x": 500,
+      "turn": 0.35,
+      "acoes": [
+       {
+        "t": 0.66,
+        "do": "dance",
+        "dur": "resto",
+        "style": "chute"
+       }
+      ],
+      "expr": "determined"
+     }
+    },
+    "linhas": 1
+   },
+   {
+    "linhas": 1,
+    "cenario": "mon_raios_laranja",
+    "camera": {
+     "x": 960,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "flash": true,
+    "fx": [
+     "estrelas"
+    ],
+    "cantam": [
+     "gogo"
+    ],
+    "callout": [
+     {
+      "t": 0.1,
+      "text": "FOFOLUCOS! RAWR!",
+      "color": "roxo"
+     }
+    ],
+    "atores": {
+     "teco": {
+      "x": 210,
+      "turn": 0.2,
+      "acoes": [
+       {
+        "t": 0.3,
+        "do": "rawr",
+        "dur": "resto"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     },
+     "gogo": {
+      "x": 710,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.38,
+        "do": "rawr",
+        "dur": "resto"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     },
+     "bilu": {
+      "x": 1210,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.46,
+        "do": "rawr",
+        "dur": "resto"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     },
+     "nhoque": {
+      "x": 1710,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.54,
+        "do": "rawr",
+        "dur": "resto"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     }
+    },
+    "objetos": {
+     "bo": {
+      "id": "bolha",
+      "x": 800,
+      "y": 1000,
+      "z": 0,
+      "depth": 0.3,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "tam": 1.0,
+         "y": 1000.0,
+         "balanco": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.77,
+        "pose": {
+         "y": 250.0
+        },
+        "ease": "linear",
+        "in": 2.74
+       },
+       {
+        "t": 2.77,
+        "pose": {
+         "balanco": 2.8
+        },
+        "ease": "linear",
+        "in": 2.74
+       }
+      ]
+     }
+    }
+   },
+   {
+    "seg": 5.03,
+    "cenario": "mon_palco",
+    "camera": {
+     "x": 1350,
+     "y": 600,
+     "zoom": 1.0,
+     "zoom_fim": 1.04
+    },
+    "fx": [
+     "notas"
+    ],
+    "objetos": {
+     "bat": {
+      "id": "bateria_show",
+      "x": 1700,
+      "y": 940,
+      "z": 4,
+      "depth": 0.6,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "kit_a4",
+        "dur": "resto"
+       }
+      ]
+     },
+     "tec": {
+      "id": "teclado_inst",
+      "x": 800,
+      "y": 940,
+      "z": 4,
+      "depth": 0.62,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "tecla": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 4.993,
+        "pose": {
+         "tecla": 10.1
+        },
+        "ease": "linear",
+        "in": 4.963
+       }
+      ]
+     }
+    },
+    "atores": {
+     "bilu": {
+      "x": 1700,
+      "y": 930,
+      "turn": -0.2,
+      "z": 3,
+      "segura": "baqueta_a4",
+      "segura_f": "baqueta_a4",
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_bateria_a4",
+        "dur": "resto"
+       }
+      ]
+     },
+     "zuzu": {
+      "x": 800,
+      "y": 930,
+      "turn": 0.2,
+      "z": 3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_teclado",
+        "dur": "resto"
+       }
+      ]
+     },
+     "mimi": {
+      "x": 2300,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "chute"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "zuzu"
+    ],
+    "titulo": "teclado, baixo e bateria"
+   }
+  ],
+  "verso#1": [
+   {
+    "linhas": 1,
+    "cenario": "mon_vila",
+    "camera": {
+     "x": 900,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.08,
+     "x_fim": 1700
+    },
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "HOJE TEM JOGO!",
+      "color": "roxo"
+     }
+    ],
+    "cantam": [
+     "bilu"
+    ],
+    "objetos": {
+     "bola": {
+      "id": "bola_futebol",
+      "x": 820.0,
+      "y": 935.0,
+      "z": 4,
+      "depth": 0.8,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 820.0,
+         "y": 935.0,
+         "giro": 0.0,
+         "amassa": 0.0,
+         "tipo": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.2,
+        "pose": {
+         "x": 1700.0,
+         "y": 935.0,
+         "giro": 1.76
+        },
+        "ease": "linear",
+        "in": 2.17
+       }
+      ]
+     },
+     "nv": {
+      "id": "nuvem",
+      "x": 300,
+      "y": 300,
+      "z": 0,
+      "depth": 0.32,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "cara": 1.0,
+         "x": 300.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.01,
+        "pose": {
+         "x": 580.0
+        },
+        "ease": "linear",
+        "in": 2.98
+       }
+      ]
+     }
+    },
+    "atores": {
+     "bilu": {
+      "x": 650,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "walk",
+        "to_x": 1500,
+        "dur": 2.2,
+        "turn": 0.45
+       },
+       {
+        "t": 2.3,
+        "do": "wave",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "mon_campinho",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "TODO MUNDO NO GRAMADO!",
+      "color": "verde"
+     }
+    ],
+    "cantam": [
+     "mimi"
+    ],
+    "atores": {
+     "teco": {
+      "x": 500,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "walk",
+        "to_x": 1000,
+        "dur": 1.2,
+        "turn": 0.45
+       },
+       {
+        "t": 1.3,
+        "do": "wave",
+        "dur": "resto"
+       }
+      ]
+     },
+     "mimi": {
+      "x": 2100,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "walk",
+        "to_x": 1600,
+        "dur": 1.2,
+        "turn": -0.45
+       },
+       {
+        "t": 1.3,
+        "do": "wave",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "mon_campinho",
+    "camera": {
+     "x": 1300,
+     "y": 500,
+     "zoom": 1.85,
+     "zoom_fim": 1.95
+    },
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "OLHÃO!",
+      "color": "amarelo"
+     }
+    ],
+    "cantam": [
+     "gogo"
+    ],
+    "atores": {
+     "gogo": {
+      "x": 1300,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "look_around",
+        "dur": "resto"
+       }
+      ],
+      "expr": "surprised"
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "mon_brilho_azul",
+    "camera": {
+     "x": 960,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "fx": [
+     "estrelas"
+    ],
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "VÊ O CAMPO TODO!",
+      "color": "verde"
+     }
+    ],
+    "cantam": [
+     "gogo"
+    ],
+    "objetos": {
+     "bola": {
+      "id": "bola_futebol",
+      "x": 1500.0,
+      "y": 1000.0,
+      "z": 4,
+      "depth": 0.85,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 1500.0,
+         "y": 1000.0,
+         "giro": 0.0,
+         "amassa": 0.0,
+         "tipo": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.63,
+        "pose": {
+         "x": 1500.0,
+         "y": 1000.0,
+         "giro": 0.0
+        },
+        "ease": "linear",
+        "in": 1.6
+       }
+      ]
+     },
+     "bo": {
+      "id": "bolha",
+      "x": 1300,
+      "y": 1000,
+      "z": 0,
+      "depth": 0.3,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "tam": 1.0,
+         "y": 1000.0,
+         "balanco": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.67,
+        "pose": {
+         "y": 250.0
+        },
+        "ease": "linear",
+        "in": 1.64
+       },
+       {
+        "t": 1.67,
+        "pose": {
+         "balanco": 1.7
+        },
+        "ease": "linear",
+        "in": 1.64
+       }
+      ]
+     }
+    },
+    "atores": {
+     "gogo": {
+      "x": 700,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "point",
+        "dur": "resto"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "mon_campinho",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.55,
+     "zoom_fim": 1.62
+    },
+    "callout": [
+     {
+      "t": 1.3,
+      "text": "CABEÇADA!",
+      "color": "laranja"
+     }
+    ],
+    "cantam": [
+     "zuzu"
+    ],
+    "objetos": {
+     "bola": {
+      "id": "bola_futebol",
+      "x": 350.0,
+      "y": 520.0,
+      "z": 4,
+      "depth": 0.8,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 350.0,
+         "y": 520.0,
+         "giro": 0.0,
+         "amassa": 0.0,
+         "tipo": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.3,
+        "pose": {
+         "x": 1300.0,
+         "y": 300.0,
+         "giro": 2.34
+        },
+        "ease": "linear",
+        "in": 1.27
+       },
+       {
+        "t": 2.0,
+        "pose": {
+         "x": 2250.0,
+         "y": 420.0,
+         "giro": 4.48
+        },
+        "ease": "linear",
+        "in": 0.67
+       }
+      ]
+     }
+    },
+    "atores": {
+     "zuzu": {
+      "x": 1300,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 1.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "pulinho"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "mon_campinho",
+    "camera": {
+     "x": 1100,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.08,
+     "x_fim": 1900
+    },
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "CORRE, TECO!",
+      "color": "roxo"
+     }
+    ],
+    "cantam": [
+     "teco"
+    ],
+    "objetos": {
+     "bola": {
+      "id": "bola_futebol",
+      "x": 700.0,
+      "y": 935.0,
+      "z": 4,
+      "depth": 0.8,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 700.0,
+         "y": 935.0,
+         "giro": 0.0,
+         "amassa": 0.0,
+         "tipo": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.23,
+        "pose": {
+         "x": 2250.0,
+         "y": 935.0,
+         "giro": 3.1
+        },
+        "ease": "linear",
+        "in": 1.2
+       }
+      ]
+     }
+    },
+    "atores": {
+     "teco": {
+      "x": 500,
+      "turn": 0.4,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "run",
+        "to_x": 2050,
+        "dur": 1.13,
+        "turn": 0.45
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "mon_campinho_gol",
+    "camera": {
+     "x": 1565,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "NHOQUE GOLEIRO!",
+      "color": "vermelho"
+     }
+    ],
+    "cantam": [
+     "nhoque"
+    ],
+    "objetos": {
+     "trave": {
+      "id": "trave",
+      "x": 1565,
+      "y": 905,
+      "z": 0,
+      "depth": 0.75,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "rede": 0.0,
+         "onda": 0.0
+        },
+        "ease": "step"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "nhoque": {
+      "x": 1565,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.4,
+        "do": "rawr",
+        "dur": "resto"
+       }
+      ],
+      "z": 3,
+      "expr": "determined"
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "mon_campinho",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.55,
+     "zoom_fim": 1.62
+    },
+    "fx": [
+     "coracoes"
+    ],
+    "callout": [
+     {
+      "t": 0.4,
+      "text": "BOLA DE TRAVESSEIRO?!",
+      "color": "rosa"
+     }
+    ],
+    "cantam": [
+     "nhoque"
+    ],
+    "objetos": {
+     "bola": {
+      "id": "bola_futebol",
+      "x": 200.0,
+      "y": 400.0,
+      "z": 5,
+      "depth": 0.8,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 200.0,
+         "y": 400.0,
+         "giro": 0.0,
+         "amassa": 0.0,
+         "tipo": 1.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.1,
+        "pose": {
+         "x": 200.0,
+         "y": 400.0,
+         "giro": 0.0
+        },
+        "ease": "linear",
+        "in": 0.07
+       },
+       {
+        "t": 0.9,
+        "pose": {
+         "x": 1300.0,
+         "y": 905.0,
+         "giro": 3.21
+        },
+        "ease": "linear",
+        "in": 0.77
+       }
+      ]
+     }
+    },
+    "atores": {
+     "nhoque": {
+      "x": 1300,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 1.0,
+        "do": "laugh",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "refrao#1": [
+   {
+    "linhas": 2,
+    "cenario": "mon_campinho",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "cantam": [
+     "bilu"
+    ],
+    "callout": [
+     {
+      "t": 0.1,
+      "text": "CHUTA, CHUTA, CHUTA!",
+      "color": "roxo"
+     },
+     {
+      "t": 2.19,
+      "text": "PASSA PRO AMIGO!",
+      "color": "verde"
+     }
+    ],
+    "objetos": {
+     "bola": {
+      "id": "bola_futebol",
+      "x": 950.0,
+      "y": 935.0,
+      "z": 4,
+      "depth": 0.8,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 950.0,
+         "y": 935.0,
+         "giro": 0.0,
+         "amassa": 0.0,
+         "tipo": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.04,
+        "pose": {
+         "x": 950.0,
+         "y": 935.0,
+         "giro": 0.0
+        },
+        "ease": "linear",
+        "in": 2.01
+       },
+       {
+        "t": 2.94,
+        "pose": {
+         "x": 1580.0,
+         "y": 935.0,
+         "giro": 1.26
+        },
+        "ease": "linear",
+        "in": 0.87
+       }
+      ]
+     }
+    },
+    "atores": {
+     "bilu": {
+      "x": 820,
+      "turn": 0.35,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "chute"
+       }
+      ]
+     },
+     "teco": {
+      "x": 1780,
+      "turn": -0.35,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "wave",
+        "dur": 1.0
+       },
+       {
+        "t": 2.99,
+        "do": "dance",
+        "dur": "resto",
+        "style": "festa"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "cenario": "mon_campinho_gol",
+    "camera": {
+     "x": 1350,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "cantam": [
+     "teco"
+    ],
+    "callout": [
+     {
+      "t": 0.1,
+      "text": "CHUTA, CHUTA!",
+      "color": "azul"
+     },
+     {
+      "t": 2.17,
+      "text": "GOL!",
+      "color": "amarelo"
+     }
+    ],
+    "fx": [
+     "confete"
+    ],
+    "objetos": {
+     "trave": {
+      "id": "trave",
+      "x": 1650,
+      "y": 905,
+      "z": 0,
+      "depth": 0.72,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "rede": 0.0,
+         "onda": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.17,
+        "pose": {
+         "rede": 0.0,
+         "onda": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.29,
+        "pose": {
+         "rede": 1.0
+        },
+        "ease": "out",
+        "in": 0.09
+       },
+       {
+        "t": 3.41,
+        "pose": {
+         "rede": 0.15,
+         "onda": 3.9
+        },
+        "ease": "linear",
+        "in": 1.09
+       }
+      ]
+     },
+     "bola": {
+      "id": "bola_futebol",
+      "x": 610.0,
+      "y": 935.0,
+      "z": 4,
+      "depth": 0.8,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 610.0,
+         "y": 935.0,
+         "giro": 0.0,
+         "amassa": 0.0,
+         "tipo": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.62,
+        "pose": {
+         "x": 610.0,
+         "y": 935.0,
+         "giro": 0.0
+        },
+        "ease": "linear",
+        "in": 1.59
+       },
+       {
+        "t": 1.9,
+        "pose": {
+         "x": 1130.0,
+         "y": 700.0,
+         "giro": 1.51
+        },
+        "ease": "linear",
+        "in": 0.25
+       },
+       {
+        "t": 2.17,
+        "pose": {
+         "x": 1650.0,
+         "y": 815.0,
+         "giro": 2.78
+        },
+        "ease": "linear",
+        "in": 0.24
+       }
+      ]
+     }
+    },
+    "atores": {
+     "teco": {
+      "x": 500,
+      "turn": 0.35,
+      "acoes": [
+       {
+        "t": 1.27,
+        "do": "dance",
+        "dur": "resto",
+        "style": "chute"
+       }
+      ],
+      "expr": "determined"
+     }
+    },
+    "linhas": 2,
+    "flash": false
+   },
+   {
+    "linhas": 2,
+    "cenario": "mon_xadrez_verde",
+    "camera": {
+     "x": 960,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "fx": [
+     "estrelas"
+    ],
+    "cantam": [
+     "zuzu"
+    ],
+    "callout": [
+     {
+      "t": 0.1,
+      "text": "CHUTA, CHUTA, CHUTA!",
+      "color": "laranja"
+     },
+     {
+      "t": 2.17,
+      "text": "PASSA PRO AMIGO!",
+      "color": "verde"
+     }
+    ],
+    "atores": {
+     "mimi": {
+      "x": 380,
+      "turn": 0.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "chute"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     },
+     "zuzu": {
+      "x": 960,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.05,
+        "do": "dance",
+        "dur": "resto",
+        "style": "chute"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     },
+     "nhoque": {
+      "x": 1540,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "dance",
+        "dur": "resto",
+        "style": "chute"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     }
+    },
+    "objetos": {
+     "bo": {
+      "id": "bolha",
+      "x": 800,
+      "y": 1000,
+      "z": 0,
+      "depth": 0.3,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "tam": 1.0,
+         "y": 1000.0,
+         "balanco": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.91,
+        "pose": {
+         "y": 250.0
+        },
+        "ease": "linear",
+        "in": 3.88
+       },
+       {
+        "t": 3.91,
+        "pose": {
+         "balanco": 4.0
+        },
+        "ease": "linear",
+        "in": 3.88
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 2,
+    "cenario": "mon_campinho",
+    "camera": {
+     "x": 1300,
+     "y": 500,
+     "zoom": 1.85,
+     "zoom_fim": 1.95
+    },
+    "fx": [
+     "confete"
+    ],
+    "cantam": [
+     "bilu"
+    ],
+    "callout": [
+     {
+      "t": 1.58,
+      "text": "GOL DE MONSTRINHO!",
+      "color": "roxo"
+     }
+    ],
+    "atores": {
+     "bilu": {
+      "x": 1300,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "laugh",
+        "dur": 3.18
+       },
+       {
+        "t": 3.48,
+        "do": "rawr",
+        "dur": "resto"
+       }
+      ],
+      "expr": "joy"
+     }
+    }
+   }
+  ],
+  "refrao#2": [
+   {
+    "linhas": 2,
+    "cenario": "mon_campinho",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "cantam": [
+     "mimi"
+    ],
+    "callout": [
+     {
+      "t": 0.1,
+      "text": "CHUTA, CHUTA, CHUTA!",
+      "color": "roxo"
+     },
+     {
+      "t": 2.11,
+      "text": "PASSA PRO AMIGO!",
+      "color": "verde"
+     }
+    ],
+    "objetos": {
+     "bola": {
+      "id": "bola_futebol",
+      "x": 950.0,
+      "y": 935.0,
+      "z": 4,
+      "depth": 0.8,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 950.0,
+         "y": 935.0,
+         "giro": 0.0,
+         "amassa": 0.0,
+         "tipo": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.96,
+        "pose": {
+         "x": 950.0,
+         "y": 935.0,
+         "giro": 0.0
+        },
+        "ease": "linear",
+        "in": 1.93
+       },
+       {
+        "t": 2.86,
+        "pose": {
+         "x": 1580.0,
+         "y": 935.0,
+         "giro": 1.26
+        },
+        "ease": "linear",
+        "in": 0.87
+       }
+      ]
+     }
+    },
+    "atores": {
+     "mimi": {
+      "x": 820,
+      "turn": 0.35,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "chute"
+       }
+      ]
+     },
+     "zuzu": {
+      "x": 1780,
+      "turn": -0.35,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "wave",
+        "dur": 1.0
+       },
+       {
+        "t": 2.91,
+        "do": "dance",
+        "dur": "resto",
+        "style": "festa"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "cenario": "mon_campinho_gol",
+    "camera": {
+     "x": 1350,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "cantam": [
+     "zuzu"
+    ],
+    "callout": [
+     {
+      "t": 0.1,
+      "text": "CHUTA, CHUTA!",
+      "color": "azul"
+     },
+     {
+      "t": 2.17,
+      "text": "GOL!",
+      "color": "azul"
+     }
+    ],
+    "fx": [
+     "confete"
+    ],
+    "objetos": {
+     "trave": {
+      "id": "trave",
+      "x": 1650,
+      "y": 905,
+      "z": 0,
+      "depth": 0.72,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "rede": 0.0,
+         "onda": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.17,
+        "pose": {
+         "rede": 0.0,
+         "onda": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.29,
+        "pose": {
+         "rede": 1.0
+        },
+        "ease": "out",
+        "in": 0.09
+       },
+       {
+        "t": 3.37,
+        "pose": {
+         "rede": 0.15,
+         "onda": 3.78
+        },
+        "ease": "linear",
+        "in": 1.05
+       }
+      ]
+     },
+     "bola": {
+      "id": "bola_futebol",
+      "x": 610.0,
+      "y": 935.0,
+      "z": 4,
+      "depth": 0.8,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 610.0,
+         "y": 935.0,
+         "giro": 0.0,
+         "amassa": 0.0,
+         "tipo": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.62,
+        "pose": {
+         "x": 610.0,
+         "y": 935.0,
+         "giro": 0.0
+        },
+        "ease": "linear",
+        "in": 1.59
+       },
+       {
+        "t": 1.9,
+        "pose": {
+         "x": 1130.0,
+         "y": 700.0,
+         "giro": 1.51
+        },
+        "ease": "linear",
+        "in": 0.25
+       },
+       {
+        "t": 2.17,
+        "pose": {
+         "x": 1650.0,
+         "y": 815.0,
+         "giro": 2.78
+        },
+        "ease": "linear",
+        "in": 0.24
+       }
+      ]
+     }
+    },
+    "atores": {
+     "zuzu": {
+      "x": 500,
+      "turn": 0.35,
+      "acoes": [
+       {
+        "t": 1.27,
+        "do": "dance",
+        "dur": "resto",
+        "style": "chute"
+       }
+      ]
+     }
+    },
+    "linhas": 2,
+    "flash": false
+   },
+   {
+    "linhas": 2,
+    "cenario": "mon_xadrez_azul",
+    "camera": {
+     "x": 960,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "fx": [
+     "estrelas"
+    ],
+    "cantam": [
+     "teco"
+    ],
+    "callout": [
+     {
+      "t": 0.1,
+      "text": "CHUTA, CHUTA, CHUTA!",
+      "color": "laranja"
+     },
+     {
+      "t": 2.17,
+      "text": "PASSA PRO AMIGO!",
+      "color": "verde"
+     }
+    ],
+    "atores": {
+     "gogo": {
+      "x": 380,
+      "turn": 0.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "chute"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     },
+     "teco": {
+      "x": 960,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.05,
+        "do": "dance",
+        "dur": "resto",
+        "style": "chute"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     },
+     "nhoque": {
+      "x": 1540,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "dance",
+        "dur": "resto",
+        "style": "chute"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     }
+    },
+    "objetos": {
+     "bo": {
+      "id": "bolha",
+      "x": 800,
+      "y": 1000,
+      "z": 0,
+      "depth": 0.3,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "tam": 1.0,
+         "y": 1000.0,
+         "balanco": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.87,
+        "pose": {
+         "y": 250.0
+        },
+        "ease": "linear",
+        "in": 3.84
+       },
+       {
+        "t": 3.87,
+        "pose": {
+         "balanco": 3.9
+        },
+        "ease": "linear",
+        "in": 3.84
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 2,
+    "cenario": "mon_campinho",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.55,
+     "zoom_fim": 1.62
+    },
+    "fx": [
+     "confete"
+    ],
+    "cantam": [
+     "zuzu"
+    ],
+    "callout": [
+     {
+      "t": 1.58,
+      "text": "GOL DE MONSTRINHO!",
+      "color": "roxo"
+     }
+    ],
+    "atores": {
+     "zuzu": {
+      "x": 1300,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "laugh",
+        "dur": 3.12
+       },
+       {
+        "t": 3.42,
+        "do": "rawr",
+        "dur": "resto"
+       }
+      ],
+      "expr": "joy"
+     }
+    }
+   }
+  ],
+  "refrao#3": [
+   {
+    "linhas": 2,
+    "cenario": "mon_campinho",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "cantam": [
+     "nhoque"
+    ],
+    "callout": [
+     {
+      "t": 0.1,
+      "text": "CHUTA, CHUTA, CHUTA!",
+      "color": "roxo"
+     },
+     {
+      "t": 2.19,
+      "text": "PASSA PRO AMIGO!",
+      "color": "verde"
+     }
+    ],
+    "objetos": {
+     "bola": {
+      "id": "bola_futebol",
+      "x": 950.0,
+      "y": 935.0,
+      "z": 4,
+      "depth": 0.8,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 950.0,
+         "y": 935.0,
+         "giro": 0.0,
+         "amassa": 0.0,
+         "tipo": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.04,
+        "pose": {
+         "x": 950.0,
+         "y": 935.0,
+         "giro": 0.0
+        },
+        "ease": "linear",
+        "in": 2.01
+       },
+       {
+        "t": 2.94,
+        "pose": {
+         "x": 1580.0,
+         "y": 935.0,
+         "giro": 1.26
+        },
+        "ease": "linear",
+        "in": 0.87
+       }
+      ]
+     }
+    },
+    "atores": {
+     "nhoque": {
+      "x": 820,
+      "turn": 0.35,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "chute"
+       }
+      ]
+     },
+     "mimi": {
+      "x": 1780,
+      "turn": -0.35,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "wave",
+        "dur": 1.0
+       },
+       {
+        "t": 2.99,
+        "do": "dance",
+        "dur": "resto",
+        "style": "festa"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "cenario": "mon_campinho_gol",
+    "camera": {
+     "x": 1350,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "cantam": [
+     "mimi"
+    ],
+    "callout": [
+     {
+      "t": 0.1,
+      "text": "CHUTA, CHUTA!",
+      "color": "azul"
+     },
+     {
+      "t": 2.17,
+      "text": "GOL!",
+      "color": "rosa"
+     }
+    ],
+    "fx": [
+     "confete"
+    ],
+    "objetos": {
+     "trave": {
+      "id": "trave",
+      "x": 1650,
+      "y": 905,
+      "z": 0,
+      "depth": 0.72,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "rede": 0.0,
+         "onda": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.17,
+        "pose": {
+         "rede": 0.0,
+         "onda": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.29,
+        "pose": {
+         "rede": 1.0
+        },
+        "ease": "out",
+        "in": 0.09
+       },
+       {
+        "t": 3.37,
+        "pose": {
+         "rede": 0.15,
+         "onda": 3.78
+        },
+        "ease": "linear",
+        "in": 1.05
+       }
+      ]
+     },
+     "bola": {
+      "id": "bola_futebol",
+      "x": 610.0,
+      "y": 935.0,
+      "z": 4,
+      "depth": 0.8,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 610.0,
+         "y": 935.0,
+         "giro": 0.0,
+         "amassa": 0.0,
+         "tipo": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.62,
+        "pose": {
+         "x": 610.0,
+         "y": 935.0,
+         "giro": 0.0
+        },
+        "ease": "linear",
+        "in": 1.59
+       },
+       {
+        "t": 1.9,
+        "pose": {
+         "x": 1130.0,
+         "y": 700.0,
+         "giro": 1.51
+        },
+        "ease": "linear",
+        "in": 0.25
+       },
+       {
+        "t": 2.17,
+        "pose": {
+         "x": 1650.0,
+         "y": 815.0,
+         "giro": 2.78
+        },
+        "ease": "linear",
+        "in": 0.24
+       }
+      ]
+     }
+    },
+    "atores": {
+     "mimi": {
+      "x": 500,
+      "turn": 0.35,
+      "acoes": [
+       {
+        "t": 1.27,
+        "do": "dance",
+        "dur": "resto",
+        "style": "chute"
+       }
+      ],
+      "expr": "determined"
+     }
+    },
+    "linhas": 2,
+    "flash": true
+   },
+   {
+    "linhas": 2,
+    "cenario": "mon_xadrez_roxo",
+    "camera": {
+     "x": 960,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "fx": [
+     "estrelas"
+    ],
+    "cantam": [
+     "bilu"
+    ],
+    "callout": [
+     {
+      "t": 0.1,
+      "text": "CHUTA, CHUTA, CHUTA!",
+      "color": "laranja"
+     },
+     {
+      "t": 2.18,
+      "text": "PASSA PRO AMIGO!",
+      "color": "verde"
+     }
+    ],
+    "atores": {
+     "gogo": {
+      "x": 380,
+      "turn": 0.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "chute"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     },
+     "bilu": {
+      "x": 960,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.05,
+        "do": "dance",
+        "dur": "resto",
+        "style": "chute"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     },
+     "zuzu": {
+      "x": 1540,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "dance",
+        "dur": "resto",
+        "style": "chute"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     }
+    },
+    "objetos": {
+     "bo": {
+      "id": "bolha",
+      "x": 800,
+      "y": 1000,
+      "z": 0,
+      "depth": 0.3,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "tam": 1.0,
+         "y": 1000.0,
+         "balanco": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 3.84,
+        "pose": {
+         "y": 250.0
+        },
+        "ease": "linear",
+        "in": 3.81
+       },
+       {
+        "t": 3.84,
+        "pose": {
+         "balanco": 3.9
+        },
+        "ease": "linear",
+        "in": 3.81
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 2,
+    "cenario": "mon_campinho",
+    "camera": {
+     "x": 1300,
+     "y": 500,
+     "zoom": 1.85,
+     "zoom_fim": 1.95
+    },
+    "fx": [
+     "confete"
+    ],
+    "cantam": [
+     "mimi"
+    ],
+    "callout": [
+     {
+      "t": 1.6,
+      "text": "GOL DE MONSTRINHO!",
+      "color": "roxo"
+     }
+    ],
+    "atores": {
+     "mimi": {
+      "x": 1300,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "laugh",
+        "dur": 3.12
+       },
+       {
+        "t": 3.42,
+        "do": "rawr",
+        "dur": "resto"
+       }
+      ],
+      "expr": "joy"
+     }
+    }
+   }
+  ],
+  "intervalo#1": [
+   {
+    "linhas": 1,
+    "cenario": "mon_campinho",
+    "camera": {
+     "x": 1300,
+     "y": 500,
+     "zoom": 1.85,
+     "zoom_fim": 1.95
+    },
+    "cantam": [
+     "teco"
+    ],
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "FOFOLUCOS!",
+      "color": "roxo"
+     }
+    ],
+    "atores": {
+     "teco": {
+      "x": 1300,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "rawr",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "seg": 4.6,
+    "cenario": "mon_palco",
+    "camera": {
+     "x": 1350,
+     "y": 600,
+     "zoom": 1.0,
+     "zoom_fim": 1.04
+    },
+    "fx": [
+     "notas"
+    ],
+    "objetos": {
+     "bat": {
+      "id": "bateria_show",
+      "x": 1700,
+      "y": 940,
+      "z": 4,
+      "depth": 0.6,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "kit_a4",
+        "dur": "resto"
+       }
+      ]
+     },
+     "tec": {
+      "id": "teclado_inst",
+      "x": 800,
+      "y": 940,
+      "z": 4,
+      "depth": 0.62,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "tecla": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 4.56,
+        "pose": {
+         "tecla": 9.2
+        },
+        "ease": "linear",
+        "in": 4.53
+       }
+      ]
+     }
+    },
+    "atores": {
+     "bilu": {
+      "x": 1700,
+      "y": 930,
+      "turn": -0.2,
+      "z": 3,
+      "segura": "baqueta_a4",
+      "segura_f": "baqueta_a4",
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_bateria_a4",
+        "dur": "resto"
+       }
+      ]
+     },
+     "zuzu": {
+      "x": 800,
+      "y": 930,
+      "turn": 0.2,
+      "z": 3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_teclado",
+        "dur": "resto"
+       }
+      ]
+     },
+     "nhoque": {
+      "x": 2300,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "chute"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "zuzu"
+    ],
+    "titulo": "a banda"
+   },
+   {
+    "seg": 5.8,
+    "cenario": "mon_campinho",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "fx": [
+     "confete"
+    ],
+    "titulo": "a turma bate bola",
+    "cantam": [
+     "mimi"
+    ],
+    "callout": [
+     {
+      "t": 5.1,
+      "text": "FOFOLUCOS!",
+      "color": "roxo"
+     }
+    ],
+    "objetos": {
+     "bola": {
+      "id": "bola_futebol",
+      "x": 900.0,
+      "y": 935.0,
+      "z": 4,
+      "depth": 0.8,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 900.0,
+         "y": 935.0,
+         "giro": 0.0,
+         "amassa": 0.0,
+         "tipo": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.2,
+        "pose": {
+         "x": 900.0,
+         "y": 935.0,
+         "giro": 0.0
+        },
+        "ease": "linear",
+        "in": 0.17
+       },
+       {
+        "t": 1.0,
+        "pose": {
+         "x": 1620.0,
+         "y": 935.0,
+         "giro": 1.44
+        },
+        "ease": "linear",
+        "in": 0.77
+       },
+       {
+        "t": 1.9,
+        "pose": {
+         "x": 900.0,
+         "y": 935.0,
+         "giro": 2.88
+        },
+        "ease": "linear",
+        "in": 0.87
+       },
+       {
+        "t": 2.8,
+        "pose": {
+         "x": 1620.0,
+         "y": 935.0,
+         "giro": 4.32
+        },
+        "ease": "linear",
+        "in": 0.87
+       },
+       {
+        "t": 3.7,
+        "pose": {
+         "x": 900.0,
+         "y": 935.0,
+         "giro": 5.76
+        },
+        "ease": "linear",
+        "in": 0.87
+       },
+       {
+        "t": 4.6,
+        "pose": {
+         "x": 1620.0,
+         "y": 935.0,
+         "giro": 7.2
+        },
+        "ease": "linear",
+        "in": 0.87
+       }
+      ]
+     }
+    },
+    "atores": {
+     "mimi": {
+      "x": 700,
+      "turn": 0.35,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "chute"
+       }
+      ]
+     },
+     "zuzu": {
+      "x": 1850,
+      "turn": -0.35,
+      "acoes": [
+       {
+        "t": 0.3,
+        "do": "dance",
+        "dur": "resto",
+        "style": "chute"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "ponte#1": [
+   {
+    "linhas": 1,
+    "cenario": "mon_xadrez_azul",
+    "camera": {
+     "x": 960,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "callout": [
+     {
+      "t": 0.05,
+      "text": "CORRE NO LUGAR!",
+      "color": "azul"
+     }
+    ],
+    "cantam": [
+     "teco"
+    ],
+    "atores": {
+     "teco": {
+      "x": 380,
+      "turn": 0.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "marcha"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     },
+     "mimi": {
+      "x": 960,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.05,
+        "do": "dance",
+        "dur": "resto",
+        "style": "marcha"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     },
+     "nhoque": {
+      "x": 1540,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "dance",
+        "dur": "resto",
+        "style": "marcha"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     }
+    },
+    "objetos": {
+     "bo": {
+      "id": "bolha",
+      "x": 300,
+      "y": 1000,
+      "z": 0,
+      "depth": 0.3,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "tam": 1.0,
+         "y": 1000.0,
+         "balanco": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.81,
+        "pose": {
+         "y": 250.0
+        },
+        "ease": "linear",
+        "in": 0.78
+       },
+       {
+        "t": 0.81,
+        "pose": {
+         "balanco": 0.9
+        },
+        "ease": "linear",
+        "in": 0.78
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "mon_campinho",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "callout": [
+     {
+      "t": 0.1,
+      "text": "PULA PRA CABECEAR!",
+      "color": "laranja"
+     }
+    ],
+    "cantam": [
+     "bilu"
+    ],
+    "objetos": {
+     "bola": {
+      "id": "bola_futebol",
+      "x": 400.0,
+      "y": 520.0,
+      "z": 4,
+      "depth": 0.8,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 400.0,
+         "y": 520.0,
+         "giro": 0.0,
+         "amassa": 0.0,
+         "tipo": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.65,
+        "pose": {
+         "x": 1300.0,
+         "y": 230.0,
+         "giro": 2.38
+        },
+        "ease": "linear",
+        "in": 0.62
+       },
+       {
+        "t": 1.4,
+        "pose": {
+         "x": 2300.0,
+         "y": -100.0,
+         "giro": 5.04
+        },
+        "ease": "linear",
+        "in": 0.72
+       }
+      ]
+     }
+    },
+    "atores": {
+     "bilu": {
+      "x": 1300,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.3,
+        "do": "jump",
+        "dur": 0.7,
+        "height": 140
+       }
+      ],
+      "expr": "determined"
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "mon_campinho",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "callout": [
+     {
+      "t": 0.05,
+      "text": "DRIBLA PRO LADINHO!",
+      "color": "roxo"
+     }
+    ],
+    "cantam": [
+     "teco"
+    ],
+    "objetos": {
+     "bola": {
+      "id": "bola_futebol",
+      "x": 1180.0,
+      "y": 935.0,
+      "z": 4,
+      "depth": 0.8,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 1180.0,
+         "y": 935.0,
+         "giro": 0.0,
+         "amassa": 0.0,
+         "tipo": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.35,
+        "pose": {
+         "x": 1420.0,
+         "y": 935.0,
+         "giro": 0.48
+        },
+        "ease": "linear",
+        "in": 0.32
+       },
+       {
+        "t": 0.7,
+        "pose": {
+         "x": 1180.0,
+         "y": 935.0,
+         "giro": 0.96
+        },
+        "ease": "linear",
+        "in": 0.32
+       },
+       {
+        "t": 0.84,
+        "pose": {
+         "x": 1420.0,
+         "y": 935.0,
+         "giro": 1.44
+        },
+        "ease": "linear",
+        "in": 0.11
+       }
+      ]
+     }
+    },
+    "atores": {
+     "teco": {
+      "x": 1300,
+      "turn": 0.1,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "lado"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "cenario": "mon_campinho_gol",
+    "camera": {
+     "x": 1350,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "cantam": [
+     "mimi"
+    ],
+    "callout": [
+     {
+      "t": 0.05,
+      "text": "CHUTA PRO GOL: JÁ!",
+      "color": "rosa"
+     }
+    ],
+    "fx": [
+     "confete"
+    ],
+    "objetos": {
+     "trave": {
+      "id": "trave",
+      "x": 1650,
+      "y": 905,
+      "z": 0,
+      "depth": 0.72,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "rede": 0.0,
+         "onda": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.32,
+        "pose": {
+         "rede": 0.0,
+         "onda": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.44,
+        "pose": {
+         "rede": 1.0
+        },
+        "ease": "out",
+        "in": 0.09
+       },
+       {
+        "t": 1.61,
+        "pose": {
+         "rede": 0.15,
+         "onda": 1.05
+        },
+        "ease": "linear",
+        "in": 0.14
+       }
+      ]
+     },
+     "bola": {
+      "id": "bola_futebol",
+      "x": 610.0,
+      "y": 935.0,
+      "z": 4,
+      "depth": 0.8,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 610.0,
+         "y": 935.0,
+         "giro": 0.0,
+         "amassa": 0.0,
+         "tipo": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.77,
+        "pose": {
+         "x": 610.0,
+         "y": 935.0,
+         "giro": 0.0
+        },
+        "ease": "linear",
+        "in": 0.74
+       },
+       {
+        "t": 1.04,
+        "pose": {
+         "x": 1130.0,
+         "y": 700.0,
+         "giro": 1.51
+        },
+        "ease": "linear",
+        "in": 0.24
+       },
+       {
+        "t": 1.32,
+        "pose": {
+         "x": 1650.0,
+         "y": 815.0,
+         "giro": 2.78
+        },
+        "ease": "linear",
+        "in": 0.25
+       }
+      ]
+     }
+    },
+    "atores": {
+     "mimi": {
+      "x": 500,
+      "turn": 0.35,
+      "acoes": [
+       {
+        "t": 0.41999999999999993,
+        "do": "dance",
+        "dur": "resto",
+        "style": "chute"
+       }
+      ],
+      "expr": "determined"
+     }
+    },
+    "linhas": 1
+   },
+   {
+    "linhas": 2,
+    "cenario": "mon_campinho_gol",
+    "camera": {
+     "x": 1565,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "callout": [
+     {
+      "t": 0.05,
+      "text": "E MAIS!",
+      "color": "roxo"
+     },
+     {
+      "t": 0.71,
+      "text": "ABRE OS BRAÇOS, GOLEIRO!",
+      "color": "vermelho"
+     }
+    ],
+    "cantam": [
+     "nhoque"
+    ],
+    "objetos": {
+     "trave": {
+      "id": "trave",
+      "x": 1565,
+      "y": 905,
+      "z": 0,
+      "depth": 0.75,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "rede": 0.0,
+         "onda": 0.0
+        },
+        "ease": "step"
+       }
+      ]
+     }
+    },
+    "atores": {
+     "nhoque": {
+      "x": 1565,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.71,
+        "do": "rawr",
+        "dur": "resto"
+       }
+      ],
+      "z": 3,
+      "expr": "determined"
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "mon_campinho",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.55,
+     "zoom_fim": 1.62
+    },
+    "callout": [
+     {
+      "t": 0.1,
+      "text": "PEGA A BOLA NO AR!",
+      "color": "azul"
+     }
+    ],
+    "cantam": [
+     "nhoque"
+    ],
+    "objetos": {
+     "bola": {
+      "id": "bola_futebol",
+      "x": 250.0,
+      "y": 400.0,
+      "z": 5,
+      "depth": 0.8,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 250.0,
+         "y": 400.0,
+         "giro": 0.0,
+         "amassa": 0.0,
+         "tipo": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.1,
+        "pose": {
+         "x": 250.0,
+         "y": 400.0,
+         "giro": 0.0
+        },
+        "ease": "linear",
+        "in": 0.07
+       },
+       {
+        "t": 0.8,
+        "pose": {
+         "x": 1300.0,
+         "y": 905.0,
+         "giro": 3.11
+        },
+        "ease": "linear",
+        "in": 0.67
+       }
+      ]
+     }
+    },
+    "atores": {
+     "nhoque": {
+      "x": 1300,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.9,
+        "do": "bacana",
+        "dur": "resto"
+       }
+      ],
+      "expr": "joy"
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "mon_campinho",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "fx": [
+     "confete"
+    ],
+    "callout": [
+     {
+      "t": 0.1,
+      "text": "COMEMORA COM A TURMA!",
+      "color": "verde"
+     }
+    ],
+    "cantam": [
+     "mimi"
+    ],
+    "atores": {
+     "bilu": {
+      "x": 640,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "abraco",
+        "dur": "resto"
+       }
+      ]
+     },
+     "mimi": {
+      "x": 1300,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "laugh",
+        "dur": "resto"
+       }
+      ]
+     },
+     "zuzu": {
+      "x": 1960,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.3,
+        "do": "abraco",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "mon_brilho_laranja",
+    "camera": {
+     "x": 960,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "fx": [
+     "estrelas"
+    ],
+    "callout": [
+     {
+      "t": 0.1,
+      "text": "DANÇA DO GOL!",
+      "color": "rosa"
+     }
+    ],
+    "cantam": [
+     "gogo"
+    ],
+    "atores": {
+     "gogo": {
+      "x": 210,
+      "turn": 0.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "festa"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     },
+     "teco": {
+      "x": 710,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.05,
+        "do": "dance",
+        "dur": "resto",
+        "style": "festa"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     },
+     "mimi": {
+      "x": 1210,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "dance",
+        "dur": "resto",
+        "style": "festa"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     },
+     "bilu": {
+      "x": 1710,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.15,
+        "do": "dance",
+        "dur": "resto",
+        "style": "festa"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     }
+    },
+    "objetos": {
+     "bo": {
+      "id": "bolha",
+      "x": 1300,
+      "y": 1000,
+      "z": 0,
+      "depth": 0.3,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "tam": 1.0,
+         "y": 1000.0,
+         "balanco": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.24,
+        "pose": {
+         "y": 250.0
+        },
+        "ease": "linear",
+        "in": 1.21
+       },
+       {
+        "t": 1.24,
+        "pose": {
+         "balanco": 1.3
+        },
+        "ease": "linear",
+        "in": 1.21
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "verso#2": [
+   {
+    "linhas": 1,
+    "cenario": "mon_campinho",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "tremor": [
+     0.6
+    ],
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "CHUTOU COM FORÇA!",
+      "color": "azul"
+     }
+    ],
+    "cantam": [
+     "bilu"
+    ],
+    "objetos": {
+     "bola": {
+      "id": "bola_futebol",
+      "x": 1210.0,
+      "y": 935.0,
+      "z": 4,
+      "depth": 0.8,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 1210.0,
+         "y": 935.0,
+         "giro": 0.0,
+         "amassa": 0.0,
+         "tipo": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.55,
+        "pose": {
+         "x": 1210.0,
+         "y": 935.0,
+         "giro": 0.0
+        },
+        "ease": "linear",
+        "in": 0.52
+       },
+       {
+        "t": 1.3,
+        "pose": {
+         "x": 1700.0,
+         "y": -200.0,
+         "giro": 3.25
+        },
+        "ease": "linear",
+        "in": 0.72
+       }
+      ]
+     }
+    },
+    "atores": {
+     "bilu": {
+      "x": 1100,
+      "turn": 0.35,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "dance",
+        "dur": "resto",
+        "style": "chute"
+       }
+      ],
+      "expr": "determined"
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "mon_abertura",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "SUBIU, SUBIU…",
+      "color": "roxo"
+     }
+    ],
+    "cantam": [
+     "gogo"
+    ],
+    "objetos": {
+     "bola": {
+      "id": "bola_futebol",
+      "x": 1500.0,
+      "y": 1150.0,
+      "z": 4,
+      "depth": 0.8,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 1500.0,
+         "y": 1150.0,
+         "giro": 0.0,
+         "amassa": 0.0,
+         "tipo": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.63,
+        "pose": {
+         "x": 1700.0,
+         "y": 150.0,
+         "giro": 2.4
+        },
+        "ease": "linear",
+        "in": 1.6
+       }
+      ]
+     },
+     "nv": {
+      "id": "nuvem",
+      "x": 1700,
+      "y": 300,
+      "z": 0,
+      "depth": 0.32,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "cara": 1.0,
+         "x": 1700.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.67,
+        "pose": {
+         "x": 1980.0
+        },
+        "ease": "linear",
+        "in": 1.64
+       }
+      ]
+     }
+    },
+    "atores": {
+     "gogo": {
+      "x": 800,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "look_around",
+        "dur": "resto"
+       }
+      ],
+      "expr": "surprised"
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "mon_abertura",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "tremor": [
+     0.7
+    ],
+    "fx": [
+     "estrelas"
+    ],
+    "callout": [
+     {
+      "t": 0.6,
+      "text": "BATEU NA LUA!",
+      "color": "amarelo"
+     }
+    ],
+    "cantam": [
+     "bilu"
+    ],
+    "objetos": {
+     "lua": {
+      "id": "lua",
+      "x": 1600,
+      "y": 900,
+      "z": 1,
+      "depth": 0.62,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "boca": 0.0,
+         "brilho": 0.4
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.7,
+        "pose": {
+         "boca": 1.0
+        },
+        "ease": "out",
+        "in": 0.67
+       }
+      ]
+     },
+     "bola": {
+      "id": "bola_futebol",
+      "x": 900.0,
+      "y": 1150.0,
+      "z": 4,
+      "depth": 0.8,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 900.0,
+         "y": 1150.0,
+         "giro": 0.0,
+         "amassa": 0.0,
+         "tipo": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.7,
+        "pose": {
+         "x": 1380.0,
+         "y": 420.0,
+         "giro": 2.42
+        },
+        "ease": "linear",
+        "in": 0.67
+       },
+       {
+        "t": 1.6,
+        "pose": {
+         "x": 700.0,
+         "y": 1250.0,
+         "giro": 5.44
+        },
+        "ease": "linear",
+        "in": 0.87
+       }
+      ]
+     },
+     "nv": {
+      "id": "nuvem",
+      "x": 900,
+      "y": 300,
+      "z": 0,
+      "depth": 0.32,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "cara": 1.0,
+         "x": 900.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.64,
+        "pose": {
+         "x": 1180.0
+        },
+        "ease": "linear",
+        "in": 1.61
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "mon_campinho",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "QUEM VIU? QUEM VIU?",
+      "color": "laranja"
+     }
+    ],
+    "cantam": [
+     "teco"
+    ],
+    "objetos": {
+     "bola": {
+      "id": "bola_futebol",
+      "x": 1300.0,
+      "y": -200.0,
+      "z": 4,
+      "depth": 0.8,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 1300.0,
+         "y": -200.0,
+         "giro": 0.0,
+         "amassa": 0.0,
+         "tipo": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.67,
+        "pose": {
+         "x": 1300.0,
+         "y": 250.0,
+         "giro": 0.9
+        },
+        "ease": "linear",
+        "in": 1.64
+       }
+      ]
+     }
+    },
+    "atores": {
+     "teco": {
+      "x": 800,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "look_around",
+        "dur": "resto"
+       }
+      ],
+      "expr": "surprised"
+     },
+     "bilu": {
+      "x": 1800,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "look_around",
+        "dur": "resto"
+       }
+      ],
+      "expr": "surprised"
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "mon_campinho",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "NO PÉ DA MIMI!",
+      "color": "rosa"
+     }
+    ],
+    "cantam": [
+     "mimi"
+    ],
+    "objetos": {
+     "bola": {
+      "id": "bola_futebol",
+      "x": 1450.0,
+      "y": 100.0,
+      "z": 4,
+      "depth": 0.8,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 1450.0,
+         "y": 100.0,
+         "giro": 0.0,
+         "amassa": 0.0,
+         "tipo": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.8,
+        "pose": {
+         "x": 1420.0,
+         "y": 935.0,
+         "giro": 1.73
+        },
+        "ease": "linear",
+        "in": 0.77
+       },
+       {
+        "t": 0.82,
+        "pose": {
+         "amassa": 0.7
+        },
+        "ease": "out",
+        "in": 0.79
+       },
+       {
+        "t": 0.96,
+        "pose": {
+         "amassa": 0.0
+        },
+        "ease": "out",
+        "in": 0.11
+       },
+       {
+        "t": 1.1,
+        "pose": {
+         "x": 1430.0,
+         "y": 885.0,
+         "giro": 1.85
+        },
+        "ease": "linear",
+        "in": 0.27
+       },
+       {
+        "t": 1.35,
+        "pose": {
+         "x": 1440.0,
+         "y": 935.0,
+         "giro": 1.97
+        },
+        "ease": "linear",
+        "in": 0.22
+       }
+      ]
+     }
+    },
+    "atores": {
+     "mimi": {
+      "x": 1300,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.8,
+        "do": "shock_reaction",
+        "dur": 0.7
+       }
+      ],
+      "expr": "surprised"
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "mon_campinho",
+    "camera": {
+     "x": 1300,
+     "y": 500,
+     "zoom": 1.85,
+     "zoom_fim": 1.95
+    },
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "ELA SÓ OLHAVA…",
+      "color": "rosa"
+     }
+    ],
+    "cantam": [
+     "mimi"
+    ],
+    "atores": {
+     "mimi": {
+      "x": 1300,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "look_around",
+        "dur": "resto"
+       }
+      ],
+      "expr": "surprised"
+     }
+    }
+   },
+   {
+    "cenario": "mon_campinho_gol",
+    "camera": {
+     "x": 1350,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "cantam": [
+     "mimi"
+    ],
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "CHUTOU FOFINHO…",
+      "color": "rosa"
+     }
+    ],
+    "fx": [
+     "coracoes"
+    ],
+    "objetos": {
+     "trave": {
+      "id": "trave",
+      "x": 1650,
+      "y": 905,
+      "z": 0,
+      "depth": 0.72,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "rede": 0.0,
+         "onda": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.33,
+        "pose": {
+         "rede": 0.0,
+         "onda": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.45,
+        "pose": {
+         "rede": 0.5
+        },
+        "ease": "out",
+        "in": 0.09
+       },
+       {
+        "t": 1.67,
+        "pose": {
+         "rede": 0.075,
+         "onda": 1.2
+        },
+        "ease": "linear",
+        "in": 0.19
+       }
+      ]
+     },
+     "bola": {
+      "id": "bola_futebol",
+      "x": 610.0,
+      "y": 935.0,
+      "z": 4,
+      "depth": 0.8,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 610.0,
+         "y": 935.0,
+         "giro": 0.0,
+         "amassa": 0.0,
+         "tipo": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.5,
+        "pose": {
+         "x": 610.0,
+         "y": 935.0,
+         "giro": 0.0
+        },
+        "ease": "linear",
+        "in": 0.47
+       },
+       {
+        "t": 0.92,
+        "pose": {
+         "x": 1130.0,
+         "y": 860.0,
+         "giro": 1.19
+        },
+        "ease": "linear",
+        "in": 0.39
+       },
+       {
+        "t": 1.33,
+        "pose": {
+         "x": 1650.0,
+         "y": 815.0,
+         "giro": 2.32
+        },
+        "ease": "linear",
+        "in": 0.38
+       }
+      ]
+     }
+    },
+    "atores": {
+     "mimi": {
+      "x": 500,
+      "turn": 0.35,
+      "acoes": [
+       {
+        "t": 0.15000000000000002,
+        "do": "dance",
+        "dur": "resto",
+        "style": "chute"
+       }
+      ],
+      "expr": "determined"
+     }
+    },
+    "linhas": 1
+   },
+   {
+    "linhas": 1,
+    "cenario": "mon_campinho",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "flash": true,
+    "fx": [
+     "confete"
+    ],
+    "callout": [
+     {
+      "t": 0.1,
+      "text": "FOI GOL!",
+      "color": "amarelo"
+     },
+     {
+      "t": 1.57,
+      "text": "TODO MUNDO PULANDO!",
+      "color": "verde"
+     }
+    ],
+    "cantam": [
+     "mimi"
+    ],
+    "atores": {
+     "teco": {
+      "x": 400,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "dance",
+        "dur": "resto",
+        "style": "pulinho"
+       }
+      ]
+     },
+     "mimi": {
+      "x": 1000,
+      "turn": 0.15,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "pulinho"
+       }
+      ]
+     },
+     "nhoque": {
+      "x": 1600,
+      "turn": -0.15,
+      "acoes": [
+       {
+        "t": 0.05,
+        "do": "dance",
+        "dur": "resto",
+        "style": "pulinho"
+       }
+      ]
+     },
+     "bilu": {
+      "x": 2200,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "dance",
+        "dur": "resto",
+        "style": "pulinho"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "intervalo#2": [
+   {
+    "seg": 4.19,
+    "cenario": "mon_palco",
+    "camera": {
+     "x": 1350,
+     "y": 600,
+     "zoom": 1.0,
+     "zoom_fim": 1.04
+    },
+    "fx": [
+     "notas"
+    ],
+    "objetos": {
+     "bat": {
+      "id": "bateria_show",
+      "x": 1700,
+      "y": 940,
+      "z": 4,
+      "depth": 0.6,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "kit_a4",
+        "dur": "resto"
+       }
+      ]
+     },
+     "tec": {
+      "id": "teclado_inst",
+      "x": 800,
+      "y": 940,
+      "z": 4,
+      "depth": 0.62,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "tecla": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 4.16,
+        "pose": {
+         "tecla": 8.4
+        },
+        "ease": "linear",
+        "in": 4.13
+       }
+      ]
+     }
+    },
+    "atores": {
+     "bilu": {
+      "x": 1700,
+      "y": 930,
+      "turn": -0.2,
+      "z": 3,
+      "segura": "baqueta_a4",
+      "segura_f": "baqueta_a4",
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_bateria_a4",
+        "dur": "resto"
+       }
+      ]
+     },
+     "zuzu": {
+      "x": 800,
+      "y": 930,
+      "turn": 0.2,
+      "z": 3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "style": "toca_teclado",
+        "dur": "resto"
+       }
+      ]
+     },
+     "gogo": {
+      "x": 2300,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "festa"
+       }
+      ]
+     }
+    },
+    "cantam": [
+     "zuzu"
+    ],
+    "titulo": "a banda"
+   },
+   {
+    "seg": 4.19,
+    "cenario": "mon_campinho",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "titulo": "embaixadinha",
+    "cantam": [
+     "teco"
+    ],
+    "objetos": {
+     "bola": {
+      "id": "bola_futebol",
+      "x": 1480.0,
+      "y": 800.0,
+      "z": 4,
+      "depth": 0.8,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 1480.0,
+         "y": 800.0,
+         "giro": 0.0,
+         "amassa": 0.0,
+         "tipo": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.5,
+        "pose": {
+         "x": 1480.0,
+         "y": 935.0,
+         "giro": 0.375
+        },
+        "ease": "linear",
+        "in": 0.47
+       },
+       {
+        "t": 0.52,
+        "pose": {
+         "amassa": 0.7
+        },
+        "ease": "out",
+        "in": 0.49
+       },
+       {
+        "t": 0.66,
+        "pose": {
+         "amassa": 0.0
+        },
+        "ease": "out",
+        "in": 0.11
+       },
+       {
+        "t": 1.0,
+        "pose": {
+         "x": 1480.0,
+         "y": 800.0,
+         "giro": 0.75
+        },
+        "ease": "linear",
+        "in": 0.47
+       },
+       {
+        "t": 1.5,
+        "pose": {
+         "x": 1480.0,
+         "y": 935.0,
+         "giro": 1.125
+        },
+        "ease": "linear",
+        "in": 0.47
+       },
+       {
+        "t": 1.52,
+        "pose": {
+         "amassa": 0.7
+        },
+        "ease": "out",
+        "in": 0.83
+       },
+       {
+        "t": 1.66,
+        "pose": {
+         "amassa": 0.0
+        },
+        "ease": "out",
+        "in": 0.11
+       },
+       {
+        "t": 2.0,
+        "pose": {
+         "x": 1480.0,
+         "y": 800.0,
+         "giro": 1.5
+        },
+        "ease": "linear",
+        "in": 0.47
+       },
+       {
+        "t": 2.5,
+        "pose": {
+         "x": 1480.0,
+         "y": 935.0,
+         "giro": 1.875
+        },
+        "ease": "linear",
+        "in": 0.47
+       },
+       {
+        "t": 2.52,
+        "pose": {
+         "amassa": 0.7
+        },
+        "ease": "out",
+        "in": 0.83
+       },
+       {
+        "t": 2.66,
+        "pose": {
+         "amassa": 0.0
+        },
+        "ease": "out",
+        "in": 0.11
+       },
+       {
+        "t": 3.0,
+        "pose": {
+         "x": 1480.0,
+         "y": 800.0,
+         "giro": 2.25
+        },
+        "ease": "linear",
+        "in": 0.47
+       },
+       {
+        "t": 3.5,
+        "pose": {
+         "x": 1480.0,
+         "y": 935.0,
+         "giro": 2.625
+        },
+        "ease": "linear",
+        "in": 0.47
+       },
+       {
+        "t": 3.52,
+        "pose": {
+         "amassa": 0.7
+        },
+        "ease": "out",
+        "in": 0.83
+       },
+       {
+        "t": 3.66,
+        "pose": {
+         "amassa": 0.0
+        },
+        "ease": "out",
+        "in": 0.11
+       },
+       {
+        "t": 4.0,
+        "pose": {
+         "x": 1480.0,
+         "y": 800.0,
+         "giro": 3.0
+        },
+        "ease": "linear",
+        "in": 0.47
+       }
+      ]
+     }
+    },
+    "atores": {
+     "teco": {
+      "x": 1300,
+      "turn": -0.1,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "joelho"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "seg": 4.2,
+    "cenario": "mon_raios_verde",
+    "camera": {
+     "x": 960,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "fx": [
+     "estrelas"
+    ],
+    "titulo": "pezinho",
+    "cantam": [
+     "teco"
+    ],
+    "atores": {
+     "teco": {
+      "x": 210,
+      "turn": 0.2,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "pezinho"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     },
+     "bilu": {
+      "x": 710,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.05,
+        "do": "dance",
+        "dur": "resto",
+        "style": "pezinho"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     },
+     "zuzu": {
+      "x": 1210,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "dance",
+        "dur": "resto",
+        "style": "pezinho"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     },
+     "nhoque": {
+      "x": 1710,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.15,
+        "do": "dance",
+        "dur": "resto",
+        "style": "pezinho"
+       }
+      ],
+      "y": 1010,
+      "depth": 0.85
+     }
+    },
+    "objetos": {
+     "bo": {
+      "id": "bolha",
+      "x": 800,
+      "y": 1000,
+      "z": 0,
+      "depth": 0.3,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "tam": 1.0,
+         "y": 1000.0,
+         "balanco": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 4.14,
+        "pose": {
+         "y": 250.0
+        },
+        "ease": "linear",
+        "in": 4.11
+       },
+       {
+        "t": 4.14,
+        "pose": {
+         "balanco": 4.2
+        },
+        "ease": "linear",
+        "in": 4.11
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "final#1": [
+   {
+    "linhas": 1,
+    "cenario": "mon_campinho",
+    "camera": {
+     "x": 1300,
+     "y": 500,
+     "zoom": 1.85,
+     "zoom_fim": 1.95
+    },
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "E VOCÊ? GOSTA DE JOGAR BOLA?",
+      "color": "roxo"
+     }
+    ],
+    "cantam": [
+     "bilu"
+    ],
+    "atores": {
+     "bilu": {
+      "x": 1300,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "apontar_camera",
+        "dur": "resto"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "mon_brilho_rosa",
+    "camera": {
+     "x": 960,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "DÁ UM JOINHA!",
+      "color": "azul"
+     }
+    ],
+    "fx": [
+     "estrelas"
+    ],
+    "cantam": [
+     "zuzu"
+    ],
+    "objetos": {
+     "joinha": {
+      "x": 1380,
+      "y": 900,
+      "z": 3,
+      "depth": 1.3,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "escala": 0.0
+        }
+       },
+       {
+        "t": 0.4,
+        "pose": {
+         "escala": 1.0
+        },
+        "ease": "back",
+        "in": 0.37
+       }
+      ]
+     },
+     "bo": {
+      "id": "bolha",
+      "x": 1650,
+      "y": 1000,
+      "z": 0,
+      "depth": 0.3,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "tam": 1.0,
+         "y": 1000.0,
+         "balanco": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 1.67,
+        "pose": {
+         "y": 250.0
+        },
+        "ease": "linear",
+        "in": 1.64
+       },
+       {
+        "t": 1.67,
+        "pose": {
+         "balanco": 1.7
+        },
+        "ease": "linear",
+        "in": 1.64
+       }
+      ]
+     }
+    },
+    "atores": {
+     "zuzu": {
+      "x": 640,
+      "turn": 0.2,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "bacana",
+        "dur": "resto"
+       }
+      ],
+      "y": 1010,
+      "depth": 1.0
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "mon_vila",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.55,
+     "zoom_fim": 1.62
+    },
+    "callout": [
+     {
+      "t": 0.3,
+      "text": "CHAMA O PAPAI E A MAMÃE!",
+      "color": "verde"
+     }
+    ],
+    "cantam": [
+     "mimi"
+    ],
+    "atores": {
+     "mimi": {
+      "x": 900,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "point",
+        "dur": "resto"
+       }
+      ]
+     },
+     "nhoque": {
+      "x": 1700,
+      "turn": -0.25,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "wave",
+        "dur": "resto"
+       }
+      ]
+     }
+    },
+    "objetos": {
+     "nv": {
+      "id": "nuvem",
+      "x": 900,
+      "y": 300,
+      "z": 0,
+      "depth": 0.32,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "cara": 1.0,
+         "x": 900.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.94,
+        "pose": {
+         "x": 1180.0
+        },
+        "ease": "linear",
+        "in": 2.91
+       }
+      ]
+     }
+    }
+   },
+   {
+    "linhas": 1,
+    "cenario": "mon_raios_vermelho",
+    "camera": {
+     "x": 960,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.06
+    },
+    "callout": [
+     {
+      "t": 0.5,
+      "text": "INSCREVA-SE!",
+      "color": "vermelho"
+     }
+    ],
+    "fx": [
+     "coracoes"
+    ],
+    "cantam": [
+     "gogo"
+    ],
+    "objetos": {
+     "botao": {
+      "id": "botao_inscrever",
+      "x": 1260,
+      "y": 760,
+      "z": 3,
+      "depth": 1.2,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "escala": 0.0,
+         "aperta": 0.0
+        }
+       },
+       {
+        "t": 0.4,
+        "pose": {
+         "escala": 1.0
+        },
+        "ease": "back",
+        "in": 0.37
+       },
+       {
+        "t": 1.6,
+        "pose": {
+         "aperta": 1.0
+        },
+        "ease": "out",
+        "in": 1.57
+       },
+       {
+        "t": 1.9,
+        "pose": {
+         "aperta": 0.0
+        },
+        "ease": "in",
+        "in": 0.27
+       }
+      ]
+     },
+     "bo": {
+      "id": "bolha",
+      "x": 1300,
+      "y": 1000,
+      "z": 0,
+      "depth": 0.3,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "tam": 1.0,
+         "y": 1000.0,
+         "balanco": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.31,
+        "pose": {
+         "y": 250.0
+        },
+        "ease": "linear",
+        "in": 2.28
+       },
+       {
+        "t": 2.31,
+        "pose": {
+         "balanco": 2.4
+        },
+        "ease": "linear",
+        "in": 2.28
+       }
+      ]
+     }
+    },
+    "atores": {
+     "gogo": {
+      "x": 560,
+      "turn": 0.2,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "point",
+        "dur": "resto"
+       },
+       {
+        "t": 0.97,
+        "do": "rawr",
+        "dur": "resto"
+       }
+      ],
+      "y": 1010,
+      "depth": 1.0
+     }
+    }
+   },
+   {
+    "seg": 5.83,
+    "cenario": "mon_campinho",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "fx": [
+     "confete"
+    ],
+    "titulo": "a turma dança no campinho",
+    "cantam": [
+     "nhoque"
+    ],
+    "objetos": {
+     "bola": {
+      "id": "bola_futebol",
+      "x": 1430.0,
+      "y": 935.0,
+      "z": 4,
+      "depth": 0.8,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "x": 1430.0,
+         "y": 935.0,
+         "giro": 0.0,
+         "amassa": 0.0,
+         "tipo": 0.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 0.1,
+        "pose": {
+         "x": 1430.0,
+         "y": 935.0,
+         "giro": 0.0
+        },
+        "ease": "linear",
+        "in": 0.07
+       }
+      ]
+     }
+    },
+    "atores": {
+     "bilu": {
+      "x": 640,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "dance",
+        "dur": "resto",
+        "style": "festa"
+       }
+      ]
+     },
+     "nhoque": {
+      "x": 1300,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "dance",
+        "dur": "resto",
+        "style": "chute"
+       }
+      ]
+     },
+     "teco": {
+      "x": 1960,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.05,
+        "do": "dance",
+        "dur": "resto",
+        "style": "festa"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "final#2": [
+   {
+    "linhas": 1,
+    "seg": 3.0,
+    "cenario": "mon_abertura",
+    "camera": {
+     "x": 1300,
+     "y": 560,
+     "zoom": 1.0,
+     "zoom_fim": 1.08
+    },
+    "fx": [
+     "estrelas"
+    ],
+    "cantam": [
+     "bilu"
+    ],
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "FOFOLUCOS!",
+      "color": "roxo"
+     },
+     {
+      "t": 1.4,
+      "text": "TCHAU!",
+      "color": "amarelo"
+     }
+    ],
+    "atores": {
+     "teco": {
+      "x": 400,
+      "turn": 0.3,
+      "acoes": [
+       {
+        "t": 0.0,
+        "do": "wave",
+        "dur": "resto"
+       }
+      ],
+      "y": 880,
+      "depth": 0.62,
+      "z": 2
+     },
+     "gogo": {
+      "x": 1000,
+      "turn": 0.15,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "wave",
+        "dur": "resto"
+       }
+      ],
+      "y": 880,
+      "depth": 0.62,
+      "z": 2
+     },
+     "mimi": {
+      "x": 1600,
+      "turn": -0.15,
+      "acoes": [
+       {
+        "t": 0.2,
+        "do": "wave",
+        "dur": "resto"
+       }
+      ],
+      "y": 880,
+      "depth": 0.62,
+      "z": 2
+     },
+     "zuzu": {
+      "x": 2200,
+      "turn": -0.3,
+      "acoes": [
+       {
+        "t": 0.30000000000000004,
+        "do": "wave",
+        "dur": "resto"
+       }
+      ],
+      "y": 880,
+      "depth": 0.62,
+      "z": 2
+     },
+     "bilu": {
+      "x": 700,
+      "turn": 0.2,
+      "acoes": [
+       {
+        "t": 0.4,
+        "do": "wave",
+        "dur": "resto"
+       }
+      ],
+      "y": 975,
+      "depth": 0.74,
+      "z": 3
+     },
+     "nhoque": {
+      "x": 1900,
+      "turn": -0.2,
+      "acoes": [
+       {
+        "t": 0.5,
+        "do": "wave",
+        "dur": "resto"
+       }
+      ],
+      "y": 975,
+      "depth": 0.74,
+      "z": 3
+     }
+    },
+    "objetos": {
+     "nv": {
+      "id": "nuvem",
+      "x": 300,
+      "y": 300,
+      "z": 0,
+      "depth": 0.32,
+      "keys": [
+       {
+        "t": 0.0,
+        "pose": {
+         "cara": 1.0,
+         "x": 300.0
+        },
+        "ease": "step"
+       },
+       {
+        "t": 2.94,
+        "pose": {
+         "x": 580.0
+        },
+        "ease": "linear",
+        "in": 2.91
+       }
+      ]
+     }
+    }
+   },
+   {
+    "seg": 1.43,
+    "cenario": "mon_campinho",
+    "camera": {
+     "x": 1300,
+     "y": 500,
+     "zoom": 1.85,
+     "zoom_fim": 1.95
+    },
+    "flash": true,
+    "fx": [
+     "confete"
+    ],
+    "callout": [
+     {
+      "t": 0.2,
+      "text": "RAWR!",
+      "color": "vermelho"
+     }
+    ],
+    "titulo": "o último RAWR da Mimi artilheira",
+    "cantam": [
+     "mimi"
+    ],
+    "atores": {
+     "mimi": {
+      "x": 1300,
+      "turn": 0.0,
+      "acoes": [
+       {
+        "t": 0.1,
+        "do": "rawr",
+        "dur": "resto"
+       }
+      ],
+      "expr": "joy"
+     }
+    }
+   }
+  ]
+ }
+}

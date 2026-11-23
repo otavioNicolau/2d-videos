@@ -50,10 +50,11 @@ def write(ep, mp4: Path) -> Path:
     rep = dict(ep.report)
     rep["video"] = str(mp4)
     rep["contact_sheet"] = str(sheet)
-    rep["approved"] = bool(ep.ep.get("approval", {}).get("final_render"))
+    ap = ep.ep.get("approval", {})
+    rep["approved"] = bool(ap.get("final_render") or ap.get("storyboard"))   # 23/11: storyboard aprovado → definitivo
     (out_dir / "qa_report.json").write_text(json.dumps(rep, indent=2, ensure_ascii=False))
     lines = [f"# Revisão — {ep.ep['title']}", "", f"- Vídeo: `{mp4.name}`", f"- Prancha: `{sheet.name}`",
-             f"- Aprovação humana do render final: **{'SIM' if rep['approved'] else 'PENDENTE (vídeo é candidato)'}**", "",
+             f"- Aprovação humana (storyboard → render definitivo): **{'SIM' if rep['approved'] else 'PENDENTE (vídeo é candidato)'}**", "",
              "## Falas (QA por transcrição cega)", "", "| cena | texto | ouvido | sim. | dur. |", "|---|---|---|---|---|"]
     for k, v in rep.get("lines", {}).items():
         lines.append(f"| {k} | {v['text']} | {v['heard']} | {v['similarity']:.2f} | {v['duration']:.2f}s |")

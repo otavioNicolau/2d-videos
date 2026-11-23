@@ -141,6 +141,57 @@ def casa_frente(rng) -> tuple[skia.Surface, int]:
     return s, w
 
 
+def rua(rng) -> tuple[skia.Surface, int]:
+    """Rua da cidade (Laurinha 30 "Bi-Bi, Fom-Fom!", 21/11): lojinhas e casinhas chapadas, calçada com árvores e postes,
+    rua de asfalto com faixa tracejada e FAIXA DE PEDESTRE no meio (x ≈ 1300, onde os patinhos atravessam).
+    Os carros andam na rua (chão em y ≈ 930)."""
+    w = W_INT
+    s, c = _surf(w, H, ESC_CENA)
+    F = Flat(c)
+    c.drawRect(skia.Rect(0, 0, w, H), skia.Paint(Color4f=skia.Color4f(*_rgba(PPAL["ceu"]))))
+    for x, y in ((240, 110), (1150, 70), (2250, 130)):
+        F.cloud(x, y, 1.0)
+    cores = ["#FF9A6B", "#FFD166", "#8FD3FF", "#C49BFF", "#7ED99B", "#FF8FB8"]
+    x = -40
+    k = 0
+    while x < w + 40:                                              # fileira de lojinhas e casinhas
+        bw = 300 + 80 * (k % 3)
+        top = (300, 360, 420, 460)[(k * 7) % 4]
+        col = cores[k % len(cores)]
+        F.shape([(x, 700), (x, top), (x + bw, top), (x + bw, 700)], col, smooth=False)
+        F.shape([(x - 18, top + 10), (x + bw / 2, top - 70), (x + bw + 18, top + 10)], PPAL["telhado"], smooth=False)
+        for j in range(2):                                         # janelas
+            wx = x + bw * (0.3 + 0.4 * j)
+            F.shape([(wx - 45, top + 50), (wx + 45, top + 50), (wx + 45, top + 120), (wx - 45, top + 120)], PPAL["janela"], smooth=False)
+            F.line([(wx, top + 50), (wx, top + 120)], dark(PPAL["janela"]), w=LINE * 0.8)
+        if k % 2 == 0:                                             # porta / toldo de loja
+            F.shape([(x + bw / 2 - 50, 700), (x + bw / 2 - 50, 580), (x + bw / 2 + 50, 580), (x + bw / 2 + 50, 700)], PPAL["porta"], smooth=False)
+        else:
+            for j in range(5):
+                tc = "#FFFFFF" if j % 2 else "#FF5A6E"
+                F.shape([(x + 20 + j * (bw - 40) / 5, 600), (x + 20 + (j + 1) * (bw - 40) / 5, 600),
+                         (x + 20 + (j + 1) * (bw - 40) / 5, 645), (x + 20 + j * (bw - 40) / 5, 645)], tc, smooth=False)
+        x += bw + 30
+        k += 1
+    F.shape([(-20, 700), (w + 20, 700), (w + 20, 830), (-20, 830)], "#D9DDE3", smooth=False)      # calçada
+    for xx in range(0, w, 160):
+        F.line([(xx, 700), (xx - 30, 830)], "#C2C7CF", w=LINE * 0.8)
+    for xx in (380, 1000, 1700, 2300):                             # árvores e postes na calçada
+        F.tree(xx, 730, 300, rng)
+    for xx in (650, 1950):
+        F.line([(xx, 740), (xx, 420)], "#5E6678", w=LINE * 3)
+        F.oval(xx, 410, 34, 24, "#FFE066")
+    F.shape([(-20, 830), (w + 20, 830), (w + 20, H + 20), (-20, H + 20)], "#5B6270", smooth=False)    # asfalto
+    F.shape([(-20, 830), (w + 20, 830), (w + 20, 846), (-20, 846)], "#8C939F", smooth=False)          # meio-fio
+    for xx in range(-40, w, 220):                                  # faixa tracejada
+        if abs(xx + 60 - 1300) > 260:
+            F.shape([(xx, 1000), (xx + 120, 1000), (xx + 120, 1016), (xx, 1016)], "#FFFFFF", line=False, smooth=False)
+    for j in range(7):                                             # faixa de pedestre (zebra) no meio
+        zx = 1300 - 210 + j * 60
+        F.shape([(zx, 860), (zx + 36, 860), (zx + 36, 1075), (zx, 1075)], "#FFFFFF", line=False, smooth=False)
+    return s, w
+
+
 def escola(rng) -> tuple[skia.Surface, int]:
     w = W_INT
     s, c = _surf(w, H, ESC_CENA)
@@ -678,7 +729,7 @@ def oficina(rng) -> tuple[skia.Surface, int]:
 
 
 SCENES = {"plano_banheiro": banheiro, "plano_quarto_rosa": lambda rng: quarto("rosa", rng), "plano_quarto_azul": lambda rng: quarto("azul", rng),
-          "plano_cozinha": cozinha, "plano_casa_frente": casa_frente, "plano_escola": escola, "plano_ceu": ceu,
+          "plano_cozinha": cozinha, "plano_casa_frente": casa_frente, "plano_rua": rua, "plano_escola": escola, "plano_ceu": ceu,
           "plano_jardim": jardim, "plano_lagoa": lagoa, "plano_sala": sala, "plano_espaco": espaco, "plano_lua": lua_chao, "plano_campo": campo, "plano_gelo": gelo, "plano_mar_gelado": mar_gelado, "plano_praia": praia, "plano_fundo_mar": fundo_mar, "plano_salao": salao, "plano_oficina": oficina}
 
 
