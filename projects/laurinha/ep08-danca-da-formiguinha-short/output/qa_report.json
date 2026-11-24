@@ -1,0 +1,164 @@
+{
+  "episode": "ep08-danca-da-formiguinha-short",
+  "scenes": {
+    "s01_refrao": {
+      "frames": 119,
+      "performers": {
+        "formiguinha": {
+          "drawings": 119,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 118
+          },
+          "empty_frames": 0
+        },
+        "laurinha": {
+          "drawings": 119,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 118
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 119,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 118
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s02_refrao": {
+      "frames": 119,
+      "performers": {
+        "laurinha": {
+          "drawings": 119,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 118
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 119,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 118
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s03_refrao": {
+      "frames": 105,
+      "performers": {
+        "formiguinha": {
+          "drawings": 105,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 104
+          },
+          "empty_frames": 0
+        },
+        "laurinha": {
+          "drawings": 105,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 104
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 105,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 104
+          },
+          "empty_frames": 0
+        },
+        "joaninha": {
+          "drawings": 105,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 104
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s04_refrao": {
+      "frames": 80,
+      "performers": {
+        "formiguinha": {
+          "drawings": 80,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 79
+          },
+          "empty_frames": 0
+        },
+        "laurinha": {
+          "drawings": 80,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 79
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 80,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 79
+          },
+          "empty_frames": 0
+        },
+        "b1": {
+          "drawings": 80,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 79
+          },
+          "empty_frames": 0
+        },
+        "b2": {
+          "drawings": 80,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 79
+          },
+          "empty_frames": 0
+        },
+        "b3": {
+          "drawings": 80,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 79
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    }
+  },
+  "warnings": [
+    "storyboard ainda não aprovado (approval.storyboard = false): o render sairá como CANDIDATO",
+    "storyboard s01_refrao: sem storyboard",
+    "storyboard s02_refrao: sem storyboard",
+    "storyboard s03_refrao: sem storyboard",
+    "storyboard s04_refrao: sem storyboard"
+  ],
+  "lines": {},
+  "video": "/home/otavio/2d/projects/laurinha/ep08-danca-da-formiguinha-short/output/ep08-danca-da-formiguinha-short_CANDIDATO.mp4",
+  "contact_sheet": "/home/otavio/2d/projects/laurinha/ep08-danca-da-formiguinha-short/output/prancha.png",
+  "approved": false
+}

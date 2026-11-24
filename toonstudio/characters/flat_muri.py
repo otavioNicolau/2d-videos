@@ -418,7 +418,15 @@ class FlatMuri(Character):
         nx_ = C[0] + r * 0.72 * math.sin(a_m)              # boca sempre dentro da cabeça, inclusive de perfil
         self._mouth(k, P, rot((nx_, C[1] + 52), ht, C), f, s, line)
         self._boca_fx(k, P, rot((nx_, C[1] + 52), ht, C), f)
-        if L.extra.get("bigodao") and not v.back:   # bigodão do vovô
+        if L.extra.get("bigodao_grande") and not v.back:   # BIGODÃO do vovô Ciço (Laurinha 32): enrolado nas pontas, cobre a boca
+            cor = L.extra["bigodao_grande"]
+            for side in (-1, 1):
+                q = rot((nx_ + side * 40, C[1] + 40), ht, C)
+                self._shape(k, ellipse_pts(q[0], q[1], 52, 24, side * 0.28, 20), cor, line="#A9A9B8")
+                pc = rot((nx_ + side * 90, C[1] + 24), ht, C)               # pontinha virada pra cima (enrolada)
+                self._shape(k, ellipse_pts(pc[0], pc[1], 24, 11, -side * 0.95, 14), cor, line="#A9A9B8")
+                self._line(k, [rot((nx_ + side * 20, C[1] + 44), ht, C), rot((nx_ + side * 62, C[1] + 38), ht, C)], "#C4C4D2", w=LINE * 0.7)
+        elif L.extra.get("bigodao") and not v.back:   # bigodão do vovô
             for side in (-1, 1):
                 q = rot((nx_ + side * 26, C[1] + 34), ht, C)
                 self._shape(k, ellipse_pts(q[0], q[1], 30, 14, side * 0.35, 14), L.extra["bigodao"], line="#B8B8C8")
@@ -562,7 +570,14 @@ class FlatMuri(Character):
                     p1 = (ex + math.cos(a) * (rx + 13), ey + math.sin(a) * (ry + 13))
                     self._line(k, [p0, p1], PUPIL, w=LINE * 0.75)
         b = P["brow_l"] if side < 0 else P["brow_r"]
-        if abs(b) > 0.15 or P["brow_y"] > 0.5 or L.extra.get("sobrancelha"):
+        if L.extra.get("sobrancelhona"):            # sobrancelhas GROSSAS do vovô Ciço: cara de bravo (abaixa por dentro),
+            alegre = max(0.0, min(1.0, P["brow_y"] * 1.6))   # que some quando ele sorri (brow_y alto = alegre)
+            ang = (0.42 + 0.25 * max(0.0, b)) * (1 - alegre) * (1 if side < 0 else -1)   # ponta de dentro ABAIXA
+            bx, by_ = ex, ey - ry - 20 - P["brow_y"] * 10
+            for dx, dy, rr in ((-10, 2, 1.0), (10, -3, 0.9)):                         # dois tufos: sobrancelha cheia
+                k.shape(ellipse_pts(bx + dx * c * math.cos(ang), by_ + dy + dx * math.sin(ang), 24 * c * rr, 15 * rr, ang, 18),
+                        fill=_rgba(L.extra["sobrancelhona"]), brush=Brush(LINE * 0.8, 0.0, _rgba("#A9A9B8"), 0.0), dense=True, line=LINE * 0.8)
+        elif abs(b) > 0.15 or P["brow_y"] > 0.5 or L.extra.get("sobrancelha"):
             by = ey - ry - 14 - P["brow_y"] * 8
             inner = 1 if side < 0 else -1
             y_in, y_out = by + b * 10, by - b * 4
@@ -640,6 +655,11 @@ VOVO = FlatLook(body="#8FD9C4", belly_a="#FFE066", belly_b="#3FA98C", shoe="#E95
                 pom="#3FA98C", cheek="#FF9AAE", lashes=True, extra={"oculos": True, "coque": "#E4E4EE", "cabelo": "#E4E4EE"})
 VOVOZINHO = FlatLook(body="#9CC3E6", belly_a="#FFE066", belly_b="#4F7FB0", shoe="#4F7FB0", sole="#FFFFFF",
                      pom="#4F7FB0", cheek="#FF9AAE", extra={"oculos": True, "bigodao": "#E4E4EE", "cabelo": "#E4E4EE"})
+# vovô Ciço (Laurinha 32, usuário 23/11): o mesmo vovô do canal com BIGODÃO enrolado e sobrancelhas grossas — cara de
+# bravo, mas é um amor (sorrindo, as sobrancelhas sobem)
+VOVO_CICO = FlatLook(body="#9CC3E6", belly_a="#FFE066", belly_b="#4F7FB0", shoe="#4F7FB0", sole="#FFFFFF",
+                     pom="#4F7FB0", cheek="#FF9AAE", extra={"oculos": True, "bigodao_grande": "#F2F2F7", "sobrancelhona": "#F2F2F7",
+                                                            "cabelo": "#E4E4EE"})
 # amigas da turma (música 02): mesmo modelo, detalhes próprios
 JOANINHA = FlatLook(body="#F2545B", belly_a="#F2545B", belly_b="#2B2B33", shoe="#2B2B33", sole="#FFD23F",
                     pom="#2B2B33", cheek="#FF9AAE", lashes=True, extra={"pintas": "#2B2B33", "abdomen_liso": True})

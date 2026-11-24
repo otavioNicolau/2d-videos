@@ -1,0 +1,173 @@
+{
+  "episode": "ep07-pisca-pisca-short",
+  "scenes": {
+    "s01_refrao": {
+      "frames": 126,
+      "performers": {
+        "laurinha": {
+          "drawings": 126,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 125
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 126,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 125
+          },
+          "empty_frames": 0
+        },
+        "arvore": {
+          "drawings": 126,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 125
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s02_refrao": {
+      "frames": 79,
+      "performers": {
+        "laurinha": {
+          "drawings": 79,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 78
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 79,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 78
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s03_refrao": {
+      "frames": 79,
+      "performers": {
+        "laurinha": {
+          "drawings": 79,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 78
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 79,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 78
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s04_refrao": {
+      "frames": 202,
+      "performers": {
+        "arvore": {
+          "drawings": 202,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 201
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s05_refrao": {
+      "frames": 112,
+      "performers": {
+        "laurinha": {
+          "drawings": 112,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 111
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 112,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 111
+          },
+          "empty_frames": 0
+        },
+        "arvore": {
+          "drawings": 112,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 111
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s06_refrao": {
+      "frames": 102,
+      "performers": {
+        "laurinha": {
+          "drawings": 102,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 101
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 102,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 101
+          },
+          "empty_frames": 0
+        },
+        "arvore": {
+          "drawings": 102,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 101
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    }
+  },
+  "warnings": [
+    "s01_refrao/arvore: chave em 4.187s após o fim da cena",
+    "storyboard ainda não aprovado (approval.storyboard = false): o render sairá como CANDIDATO",
+    "storyboard s01_refrao: pendente",
+    "storyboard s02_refrao: pendente",
+    "storyboard s03_refrao: pendente",
+    "storyboard s04_refrao: pendente",
+    "storyboard s05_refrao: sem storyboard",
+    "storyboard s06_refrao: sem storyboard"
+  ],
+  "lines": {},
+  "video": "/home/otavio/2d/projects/laurinha/ep07-pisca-pisca-short/output/ep07-pisca-pisca-short_CANDIDATO.mp4",
+  "contact_sheet": "/home/otavio/2d/projects/laurinha/ep07-pisca-pisca-short/output/prancha.png",
+  "approved": false
+}

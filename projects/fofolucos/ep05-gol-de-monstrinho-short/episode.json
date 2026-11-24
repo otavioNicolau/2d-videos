@@ -1,0 +1,610 @@
+{
+  "schema": "1.1",
+  "id": "ep05-gol-de-monstrinho-short",
+  "projeto": "fofolucos/ep05-gol-de-monstrinho",
+  "title": "Gol de Monstrinho! — Short",
+  "logline": "Clipe de \"Gol de Monstrinho!\" — futebol na Vila Monstrinha: cada um com o seu jeito (o Gogo vê o campo todo com o olhão, o Zuzu cabeceia com o chifrinho, o Teco corre ligeiro, o Nhoque goleiro pega até bola de travesseiro). Refrão 'chuta, chuta! passa pro amigo! gol de monstrinho!'. Ponte = comandos de jogo e dança (corre, pula pra cabecear, dribla, chuta; goleiro abre os braços, pega no ar, dança do gol). Virada: o Bilu chuta forte, a bola bate na lua e volta… cai no pé da Mimi, que só olhava, ela chuta fofinho e é GOL — trabalho em equipe, todo mundo pode fazer gol. Montado do roteiro verso a verso (roteiro.json).",
+  "fps": 30,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "background": "plano_parque",
+  "soundtrack": {
+    "file": "musica/trabalho.wav",
+    "analysis": "analise/song.json",
+    "start": 0.0,
+    "end": 14.3667,
+    "fade_out": 0.3,
+    "beat_grid": "full"
+  },
+  "captions": {
+    "lyrics": "analise/letra.json",
+    "style": "palavra_a_palavra"
+  },
+  "overlays": {
+    "logo": true,
+    "channel": [
+      "FOFOLUCOS",
+      ""
+    ],
+    "logo_png": "/home/otavio/2d/library/brand/fofolucos/logo.png"
+  },
+  "cast": {
+    "laurinha": {
+      "character": "laurinha"
+    },
+    "luisinho": {
+      "character": "luisinho"
+    },
+    "bilu": {
+      "character": "bilu"
+    },
+    "bola": {
+      "character": "bola_futebol"
+    },
+    "trave": {
+      "character": "trave"
+    },
+    "teco": {
+      "character": "teco"
+    },
+    "gogo": {
+      "character": "gogo"
+    },
+    "nhoque": {
+      "character": "nhoque"
+    },
+    "bo": {
+      "character": "bolha"
+    },
+    "zuzu": {
+      "character": "zuzu"
+    },
+    "mimi": {
+      "character": "mimi"
+    },
+    "bat": {
+      "character": "bateria_show"
+    },
+    "tec": {
+      "character": "teclado_inst"
+    },
+    "nv": {
+      "character": "nuvem"
+    },
+    "lua": {
+      "character": "lua"
+    },
+    "joinha": {
+      "character": "joinha"
+    },
+    "botao": {
+      "character": "botao_inscrever"
+    }
+  },
+  "approval": {
+    "storyboard": false,
+    "final_render": false
+  },
+  "scenes": [
+    {
+      "id": "s01_refrao",
+      "title": "Chuta, chuta, chuta!",
+      "duration": 3.4334,
+      "description": "Chuta, chuta, chuta! / Passa pro amigo!",
+      "background": "mon_campinho",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1300.0,
+            "y": 540.0,
+            "zoom": 1.808
+          },
+          {
+            "t": 3.4334,
+            "x": 1300.0,
+            "y": 540.0,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "nhoque": {
+          "start": {
+            "x": 1111.2907191149354,
+            "y": 930,
+            "turn": 0.35,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "dur": 3.433,
+              "style": "chute"
+            }
+          ]
+        },
+        "mimi": {
+          "start": {
+            "x": 1488.7092808850646,
+            "y": 930,
+            "turn": -0.35,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "wave",
+              "dur": 1.0
+            },
+            {
+              "t": 2.99,
+              "do": "dance",
+              "dur": 0.443,
+              "style": "festa"
+            }
+          ]
+        }
+      },
+      "props": {
+        "bola": {
+          "start": {
+            "x": 1111.2907191149354,
+            "y": 935.0,
+            "z": 2,
+            "sem_contorno": 1.0,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "x": 1049.5,
+                "y": 935.0,
+                "giro": 0.0,
+                "amassa": 0.0,
+                "tipo": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.04,
+              "pose": {
+                "x": 1049.5,
+                "y": 935.0,
+                "giro": 0.0
+              },
+              "ease": "linear",
+              "in": 2.01
+            },
+            {
+              "t": 2.94,
+              "pose": {
+                "x": 1500.4,
+                "y": 935.0,
+                "giro": 1.26
+              },
+              "ease": "linear",
+              "in": 0.87
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "CHUTA, CHUTA, CHUTA!",
+          "dur": 1.8,
+          "color": "roxo",
+          "y": 170
+        },
+        {
+          "t": 2.19,
+          "text": "PASSA PRO AMIGO!",
+          "dur": 1.243,
+          "color": "verde",
+          "y": 170
+        }
+      ],
+      "flash_in": true
+    },
+    {
+      "id": "s02_refrao",
+      "title": "Chuta, chuta, chuta!",
+      "duration": 3.4333,
+      "description": "Chuta, chuta, chuta! / Gol de monstrinho! Rawr!",
+      "background": "mon_campinho_gol",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 741.6,
+            "y": 540.0,
+            "zoom": 1.808
+          },
+          {
+            "t": 3.4333,
+            "x": 741.6,
+            "y": 540.0,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "mimi": {
+          "start": {
+            "x": 741.6,
+            "y": 930,
+            "turn": 0.35,
+            "expr": "determined",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 1.27,
+              "do": "dance",
+              "dur": 2.163,
+              "style": "chute"
+            }
+          ]
+        }
+      },
+      "props": {
+        "trave": {
+          "start": {
+            "x": 930.3092808850646,
+            "y": 905,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 1.044
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "rede": 0.0,
+                "onda": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.17,
+              "pose": {
+                "rede": 0.0,
+                "onda": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.29,
+              "pose": {
+                "rede": 1.0
+              },
+              "ease": "out",
+              "in": 0.09
+            },
+            {
+              "t": 3.37,
+              "pose": {
+                "rede": 0.15,
+                "onda": 3.78
+              },
+              "ease": "linear",
+              "in": 1.05
+            }
+          ]
+        },
+        "bola": {
+          "start": {
+            "x": 820.3,
+            "y": 935.0,
+            "z": 4,
+            "sem_contorno": 1.0,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "x": 820.3,
+                "y": 935.0,
+                "giro": 0.0,
+                "amassa": 0.0,
+                "tipo": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.62,
+              "pose": {
+                "x": 820.3,
+                "y": 935.0,
+                "giro": 0.0
+              },
+              "ease": "linear",
+              "in": 1.59
+            },
+            {
+              "t": 1.9,
+              "pose": {
+                "x": 1192.5,
+                "y": 700.0,
+                "giro": 1.51
+              },
+              "ease": "linear",
+              "in": 0.25
+            },
+            {
+              "t": 2.17,
+              "pose": {
+                "x": 1564.7,
+                "y": 815.0,
+                "giro": 2.78
+              },
+              "ease": "linear",
+              "in": 0.24
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "flash_in": true,
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "CHUTA, CHUTA!",
+          "dur": 1.8,
+          "color": "azul",
+          "y": 170
+        },
+        {
+          "t": 2.17,
+          "text": "GOL!",
+          "dur": 1.263,
+          "color": "rosa",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s03_refrao",
+      "title": "Chuta, chuta, chuta!",
+      "duration": 3.9,
+      "description": "Chuta, chuta, chuta! / Passa pro amigo!",
+      "background": "mon_xadrez_roxo",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 3.9,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "gogo": {
+          "start": {
+            "x": 810.0,
+            "y": 1190,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "dur": 3.9,
+              "style": "chute"
+            }
+          ]
+        },
+        "bilu": {
+          "start": {
+            "x": 1110.0,
+            "y": 1190,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.05,
+              "do": "dance",
+              "dur": 3.85,
+              "style": "chute"
+            }
+          ]
+        },
+        "zuzu": {
+          "start": {
+            "x": 960.0,
+            "y": 800,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 2,
+            "depth": 0.85
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "dance",
+              "dur": 3.8,
+              "style": "chute"
+            }
+          ]
+        }
+      },
+      "props": {
+        "bo": {
+          "start": {
+            "x": 800,
+            "y": 1000,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.435
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tam": 1.0,
+                "y": 1000.0,
+                "balanco": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.84,
+              "pose": {
+                "y": 250.0
+              },
+              "ease": "linear",
+              "in": 3.81
+            },
+            {
+              "t": 3.84,
+              "pose": {
+                "balanco": 3.9
+              },
+              "ease": "linear",
+              "in": 3.81
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "CHUTA, CHUTA, CHUTA!",
+          "dur": 1.8,
+          "color": "laranja",
+          "y": 170
+        },
+        {
+          "t": 2.18,
+          "text": "PASSA PRO AMIGO!",
+          "dur": 1.72,
+          "color": "verde",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s04_refrao",
+      "title": "Chuta, chuta, chuta!",
+      "duration": 3.6,
+      "description": "Chuta, chuta, chuta! / Gol de monstrinho! Rawr!",
+      "background": "mon_campinho",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1300.0,
+            "y": 523.9189189189188,
+            "zoom": 1.85
+          },
+          {
+            "t": 3.6,
+            "x": 1300.0,
+            "y": 523.9189189189188,
+            "zoom": 1.85
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "mimi": {
+          "start": {
+            "x": 1300.0,
+            "y": 930,
+            "turn": 0.0,
+            "expr": "joy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "laugh",
+              "dur": 3.12
+            },
+            {
+              "t": 3.42,
+              "do": "rawr",
+              "dur": 0.48
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "callouts": [
+        {
+          "t": 1.6,
+          "text": "GOL DE MONSTRINHO!",
+          "dur": 1.8,
+          "color": "roxo",
+          "y": 170
+        }
+      ]
+    }
+  ]
+}

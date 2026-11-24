@@ -1,0 +1,6615 @@
+{
+  "schema": "1.1",
+  "id": "ep06-cade-o-monstrinho",
+  "projeto": "fofolucos/ep06-cade-o-monstrinho",
+  "title": "Cadê o Monstrinho?",
+  "logline": "Clipe de \"Cadê o Monstrinho?\" — esconde-esconde na Vila Monstrinha: o Gogo conta (e espia com o olhão!), e cada monstrinho se esconde mal — o chifre do Bilu fica de fora da moita, a antena do Teco aparece no muro, a Mimi finge que é flor e a barriga do Nhoque ronca. Refrão-pergunta para a criança apontar: 'cadê o monstrinho? tá aqui? tá ali? achei!'. Ponte = comandos de esconder (tapa os olhos, conta até três, ponta do pé, agacha quieto, segura a risada). Virada: o Zuzu ninguém acha… laranja no meio das abóboras, dormindo e roncando. Montado do roteiro verso a verso (roteiro.json).",
+  "fps": 30,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "background": "plano_parque",
+  "soundtrack": {
+    "file": "musica/trabalho.wav",
+    "analysis": "analise/song.json",
+    "start": 0.0,
+    "end": 169.9667,
+    "fade_out": 0.6,
+    "beat_grid": "full"
+  },
+  "captions": {
+    "lyrics": "analise/letra.json",
+    "style": "palavra_a_palavra"
+  },
+  "overlays": {
+    "logo": true,
+    "channel": [
+      "FOFOLUCOS",
+      ""
+    ],
+    "logo_png": "/home/otavio/2d/library/brand/fofolucos/logo.png"
+  },
+  "cast": {
+    "laurinha": {
+      "character": "laurinha"
+    },
+    "luisinho": {
+      "character": "luisinho"
+    },
+    "gogo": {
+      "character": "gogo"
+    },
+    "bilu": {
+      "character": "bilu"
+    },
+    "mimi": {
+      "character": "mimi"
+    },
+    "nv": {
+      "character": "nuvem"
+    },
+    "bo": {
+      "character": "bolha"
+    },
+    "teco": {
+      "character": "teco"
+    },
+    "nhoque": {
+      "character": "nhoque"
+    },
+    "zuzu": {
+      "character": "zuzu"
+    },
+    "bat": {
+      "character": "bateria_show"
+    },
+    "tec": {
+      "character": "teclado_inst"
+    },
+    "moita": {
+      "character": "moita"
+    },
+    "muro": {
+      "character": "muro"
+    },
+    "canteiro": {
+      "character": "canteiro"
+    },
+    "ab0": {
+      "character": "abobora"
+    },
+    "ab1": {
+      "character": "abobora"
+    },
+    "ab2": {
+      "character": "abobora"
+    },
+    "ab3": {
+      "character": "abobora"
+    },
+    "ab4": {
+      "character": "abobora"
+    },
+    "ab5": {
+      "character": "abobora"
+    },
+    "ab6": {
+      "character": "abobora"
+    },
+    "ab7": {
+      "character": "abobora"
+    },
+    "joinha": {
+      "character": "joinha"
+    },
+    "botao": {
+      "character": "botao_inscrever"
+    }
+  },
+  "approval": {
+    "storyboard": true,
+    "final_render": false,
+    "approved_by": "Otavio",
+    "notes": "storyboard aprovado pelo usuário em 23/11 (APROVADO, PODE RENDERIZAR AS DUAS)"
+  },
+  "scenes": [
+    {
+      "id": "s01_intro",
+      "title": "Cadê o monstrinho?",
+      "duration": 7.5,
+      "description": "Cadê o monstrinho?",
+      "background": "mon_vila",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 7.5,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.08,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "gogo": {
+          "start": {
+            "x": 870.5,
+            "y": 930,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "estatua",
+              "dur": 7.5
+            }
+          ],
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "lid": 1.0
+              },
+              "ease": "step"
+            }
+          ]
+        },
+        "bilu": {
+          "start": {
+            "x": 1443.2,
+            "y": 930,
+            "turn": -0.45,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "run",
+              "dur": 7.4,
+              "to_x": 2158.9
+            }
+          ]
+        },
+        "mimi": {
+          "start": {
+            "x": 1729.5,
+            "y": 930,
+            "turn": -0.45,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "run",
+              "dur": 7.4,
+              "to_x": 2445.2
+            }
+          ]
+        }
+      },
+      "props": {
+        "nv": {
+          "start": {
+            "x": 584.2,
+            "y": 300,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.464
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cara": 1.0,
+                "x": 584.2
+              },
+              "ease": "step"
+            },
+            {
+              "t": 7.44,
+              "pose": {
+                "x": 784.7
+              },
+              "ease": "linear",
+              "in": 7.41
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 5.7,
+          "text": "CADÊ O MONSTRINHO?",
+          "dur": 1.8,
+          "color": "roxo",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s02_intro",
+      "title": "Um, dois, três… lá vou eu!",
+      "duration": 4.8667,
+      "description": "Um, dois, três… lá vou eu!",
+      "background": "mon_brilho_rosa",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 4.867,
+            "x": 960,
+            "y": 540.0,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "gogo": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.885
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 2.92,
+              "do": "point",
+              "dur": 1.947
+            }
+          ],
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "lid": 1.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.68,
+              "pose": {
+                "lid": 0.0
+              },
+              "ease": "out",
+              "in": 2.65
+            }
+          ]
+        }
+      },
+      "props": {
+        "bo": {
+          "start": {
+            "x": 1650,
+            "y": 1000,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.435
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tam": 1.0,
+                "y": 1000.0,
+                "balanco": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 4.81,
+              "pose": {
+                "y": 250.0
+              },
+              "ease": "linear",
+              "in": 4.78
+            },
+            {
+              "t": 4.81,
+              "pose": {
+                "balanco": 4.9
+              },
+              "ease": "linear",
+              "in": 4.78
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "UM, DOIS, TRÊS…",
+          "dur": 1.8,
+          "color": "azul",
+          "y": 170
+        },
+        {
+          "t": 2.92,
+          "text": "LÁ VOU EU!",
+          "dur": 1.8,
+          "color": "amarelo",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s03_intro",
+      "title": "Fofolucos! Rawr!",
+      "duration": 1.8333,
+      "description": "Fofolucos! Rawr!",
+      "background": "mon_raios_laranja",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.0
+          },
+          {
+            "t": 1.833,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "teco": {
+          "start": {
+            "x": 210,
+            "y": 1010,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.232
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.3,
+              "do": "rawr",
+              "dur": 1.533
+            }
+          ]
+        },
+        "gogo": {
+          "start": {
+            "x": 710,
+            "y": 1010,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.232
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.38,
+              "do": "rawr",
+              "dur": 1.453
+            }
+          ]
+        },
+        "bilu": {
+          "start": {
+            "x": 1210,
+            "y": 1010,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.232
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.46,
+              "do": "rawr",
+              "dur": 1.373
+            }
+          ]
+        },
+        "nhoque": {
+          "start": {
+            "x": 1710,
+            "y": 1010,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.232
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.54,
+              "do": "rawr",
+              "dur": 1.293
+            }
+          ]
+        }
+      },
+      "props": {
+        "bo": {
+          "start": {
+            "x": 800,
+            "y": 1000,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.435
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tam": 1.0,
+                "y": 1000.0,
+                "balanco": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.77,
+              "pose": {
+                "y": 250.0
+              },
+              "ease": "linear",
+              "in": 1.74
+            },
+            {
+              "t": 1.77,
+              "pose": {
+                "balanco": 1.8
+              },
+              "ease": "linear",
+              "in": 1.74
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "flash_in": true,
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "FOFOLUCOS! RAWR!",
+          "dur": 1.733,
+          "color": "roxo",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s04_intro",
+      "title": "teclado, baixo e bateria",
+      "duration": 3.0333,
+      "description": "",
+      "background": "mon_palco",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1350,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 3.033,
+            "x": 1350,
+            "y": 540.0,
+            "zoom": 1.04,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "bilu": {
+          "start": {
+            "x": 1600.5,
+            "y": 930,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45,
+            "holding": "baqueta_a4",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1,
+            "holding_f": "baqueta_a4"
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "toca_bateria_a4",
+              "dur": 3.033
+            }
+          ]
+        },
+        "zuzu": {
+          "start": {
+            "x": 956.3,
+            "y": 930,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "toca_teclado",
+              "dur": 3.033
+            }
+          ]
+        },
+        "mimi": {
+          "start": {
+            "x": 2030.0,
+            "y": 930,
+            "turn": -0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "dur": 3.033,
+              "style": "festa"
+            }
+          ]
+        }
+      },
+      "props": {
+        "bat": {
+          "start": {
+            "x": 1600.5,
+            "y": 940,
+            "z": 4,
+            "sem_contorno": 1.0,
+            "depth": 0.87
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "kit_a4",
+              "dur": 3.033
+            }
+          ]
+        },
+        "tec": {
+          "start": {
+            "x": 956.3,
+            "y": 940,
+            "z": 4,
+            "sem_contorno": 1.0,
+            "depth": 0.899
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tecla": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.993,
+              "pose": {
+                "tecla": 6.1
+              },
+              "ease": "linear",
+              "in": 2.963
+            }
+          ]
+        }
+      },
+      "fx": [
+        "notas"
+      ]
+    },
+    {
+      "id": "s05_verso",
+      "title": "Esconde-esconde na Vila,",
+      "duration": 3.5,
+      "description": "Esconde-esconde na Vila,",
+      "background": "mon_parque",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 3.5,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.08,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "teco": {
+          "start": {
+            "x": 584.2,
+            "y": 930,
+            "turn": 0.45,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "run",
+              "dur": 3.4,
+              "to_x": 1300.0
+            }
+          ]
+        },
+        "nhoque": {
+          "start": {
+            "x": 2015.8,
+            "y": 930,
+            "turn": -0.45,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "run",
+              "dur": 3.4,
+              "to_x": 1586.3
+            }
+          ]
+        },
+        "zuzu": {
+          "start": {
+            "x": 942.1,
+            "y": 930,
+            "turn": 0.45,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "run",
+              "dur": 3.4,
+              "to_x": 83.2
+            }
+          ]
+        }
+      },
+      "props": {
+        "nv": {
+          "start": {
+            "x": 584.2,
+            "y": 300,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.464
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cara": 1.0,
+                "x": 584.2
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.44,
+              "pose": {
+                "x": 784.7
+              },
+              "ease": "linear",
+              "in": 3.41
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.3,
+          "text": "ESCONDE-ESCONDE!",
+          "dur": 1.8,
+          "color": "laranja",
+          "y": 170
+        }
+      ],
+      "transition_in": {
+        "type": "deslizar_cima",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s06_verso",
+      "title": "O Gogo vai contar,",
+      "duration": 4.4334,
+      "description": "O Gogo vai contar,",
+      "background": "mon_brilho_laranja",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 4.433,
+            "x": 960,
+            "y": 540.0,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "gogo": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.885
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "estatua",
+              "dur": 4.433
+            }
+          ],
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "lid": 1.0
+              },
+              "ease": "step"
+            }
+          ]
+        }
+      },
+      "props": {
+        "bo": {
+          "start": {
+            "x": 1650,
+            "y": 1000,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.435
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tam": 1.0,
+                "y": 1000.0,
+                "balanco": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 4.37,
+              "pose": {
+                "y": 250.0
+              },
+              "ease": "linear",
+              "in": 4.34
+            },
+            {
+              "t": 4.37,
+              "pose": {
+                "balanco": 4.4
+              },
+              "ease": "linear",
+              "in": 4.34
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.3,
+          "text": "O GOGO VAI CONTAR!",
+          "dur": 1.8,
+          "color": "verde",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s07_verso",
+      "title": "Fechou o olhão… espiou!",
+      "duration": 2.1333,
+      "description": "Fechou o olhão… espiou!",
+      "background": "mon_vila",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 870,
+            "y": 494.6,
+            "zoom": 1.55
+          },
+          {
+            "t": 2.133,
+            "x": 870,
+            "y": 494.6,
+            "zoom": 1.62,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "gogo": {
+          "start": {
+            "x": 748.3,
+            "y": 930,
+            "turn": 0.1,
+            "expr": "sly",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "estatua",
+              "dur": 2.133
+            }
+          ],
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "lid": 0.55
+              },
+              "ease": "step"
+            }
+          ]
+        }
+      },
+      "props": {
+        "nv": {
+          "start": {
+            "x": 891.5,
+            "y": 300,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.464
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cara": 1.0,
+                "x": 891.5
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.07,
+              "pose": {
+                "x": 1091.9
+              },
+              "ease": "linear",
+              "in": 2.04
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.4,
+          "text": "ESPIOU!",
+          "dur": 1.733,
+          "color": "amarelo",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s08_verso",
+      "title": "\"Ei, Gogo! Não vale espiar!\"",
+      "duration": 2.7333,
+      "description": "\"Ei, Gogo! Não vale espiar!\"",
+      "background": "mon_raios_azul",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.0
+          },
+          {
+            "t": 2.733,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "mimi": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.0,
+            "expr": "angry",
+            "z": 3,
+            "depth": 1.885
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "shake_fist",
+              "dur": 2.633
+            }
+          ]
+        }
+      },
+      "props": {
+        "bo": {
+          "start": {
+            "x": 1300,
+            "y": 1000,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.435
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tam": 1.0,
+                "y": 1000.0,
+                "balanco": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.67,
+              "pose": {
+                "y": 250.0
+              },
+              "ease": "linear",
+              "in": 2.64
+            },
+            {
+              "t": 2.67,
+              "pose": {
+                "balanco": 2.7
+              },
+              "ease": "linear",
+              "in": 2.64
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "NÃO VALE ESPIAR!",
+          "dur": 1.8,
+          "color": "vermelho",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s09_verso",
+      "title": "O Bilu atrás da moita,",
+      "duration": 3.0667,
+      "description": "O Bilu atrás da moita,",
+      "background": "mon_parque",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 3.067,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.08,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "bilu": {
+          "start": {
+            "x": 1300.0,
+            "y": 935,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 2,
+            "depth": 1.377
+          },
+          "exposure": 1,
+          "actions": []
+        }
+      },
+      "props": {
+        "moita": {
+          "start": {
+            "x": 1300.0,
+            "y": 935,
+            "z": 4,
+            "sem_contorno": 1.0,
+            "depth": 1.232
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "balanca": 1.0,
+                "onda": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.01,
+              "pose": {
+                "onda": 3.1
+              },
+              "ease": "linear",
+              "in": 2.98
+            }
+          ]
+        },
+        "nv": {
+          "start": {
+            "x": 584.2,
+            "y": 300,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.464
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cara": 1.0,
+                "x": 584.2
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.01,
+              "pose": {
+                "x": 784.7
+              },
+              "ease": "linear",
+              "in": 2.98
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.3,
+          "text": "O BILU ATRÁS DA MOITA…",
+          "dur": 1.8,
+          "color": "azul",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s10_verso",
+      "title": "Mas o chifre ficou de fora,",
+      "duration": 3.5333,
+      "description": "Mas o chifre ficou de fora,",
+      "background": "mon_parque",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 500,
+            "zoom": 1.85
+          },
+          {
+            "t": 3.533,
+            "x": 1300,
+            "y": 500,
+            "zoom": 1.95,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "bilu": {
+          "start": {
+            "x": 1300.0,
+            "y": 935,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 2,
+            "depth": 1.377
+          },
+          "exposure": 1,
+          "actions": []
+        }
+      },
+      "props": {
+        "moita": {
+          "start": {
+            "x": 1300.0,
+            "y": 935,
+            "z": 4,
+            "sem_contorno": 1.0,
+            "depth": 1.232
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "balanca": 1.0,
+                "onda": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.47,
+              "pose": {
+                "onda": 3.5
+              },
+              "ease": "linear",
+              "in": 3.44
+            }
+          ]
+        },
+        "nv": {
+          "start": {
+            "x": 1586.3,
+            "y": 300,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.464
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cara": 1.0,
+                "x": 1586.3
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.47,
+              "pose": {
+                "x": 1786.7
+              },
+              "ease": "linear",
+              "in": 3.44
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "O CHIFRE FICOU DE FORA!",
+          "dur": 1.8,
+          "color": "laranja",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s11_verso",
+      "title": "O Teco atrás do muro…",
+      "duration": 3.5,
+      "description": "O Teco atrás do muro…",
+      "background": "mon_parque",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 3.5,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.08,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "teco": {
+          "start": {
+            "x": 1300.0,
+            "y": 935,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 2,
+            "depth": 1.377
+          },
+          "exposure": 1,
+          "actions": []
+        }
+      },
+      "props": {
+        "muro": {
+          "start": {
+            "x": 1300.0,
+            "y": 935,
+            "z": 4,
+            "sem_contorno": 1.0,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {},
+              "ease": "step"
+            }
+          ]
+        },
+        "nv": {
+          "start": {
+            "x": 1013.7,
+            "y": 300,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.464
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cara": 1.0,
+                "x": 1013.7
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.44,
+              "pose": {
+                "x": 1214.1
+              },
+              "ease": "linear",
+              "in": 3.41
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.3,
+          "text": "O TECO ATRÁS DO MURO…",
+          "dur": 1.8,
+          "color": "roxo",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s12_verso",
+      "title": "E a antena? Aparece agora!",
+      "duration": 5.3,
+      "description": "E a antena? Aparece agora!",
+      "background": "mon_parque",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 460,
+            "zoom": 1.55
+          },
+          {
+            "t": 5.3,
+            "x": 1300,
+            "y": 460,
+            "zoom": 1.62,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "teco": {
+          "start": {
+            "x": 1300.0,
+            "y": 935,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 2,
+            "depth": 1.377
+          },
+          "exposure": 1,
+          "actions": []
+        }
+      },
+      "props": {
+        "muro": {
+          "start": {
+            "x": 1300.0,
+            "y": 935,
+            "z": 4,
+            "sem_contorno": 1.0,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {},
+              "ease": "step"
+            }
+          ]
+        },
+        "nv": {
+          "start": {
+            "x": 1872.6,
+            "y": 300,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.464
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cara": 1.0,
+                "x": 1872.6
+              },
+              "ease": "step"
+            },
+            {
+              "t": 5.24,
+              "pose": {
+                "x": 2073.0
+              },
+              "ease": "linear",
+              "in": 5.21
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "E A ANTENA?",
+          "dur": 1.8,
+          "color": "verde",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s13_refrao",
+      "title": "Cadê o monstrinho?",
+      "duration": 3.5,
+      "description": "Cadê o monstrinho? / Tá aqui? Tá ali?",
+      "background": "mon_vila",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 3.5,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.08,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "gogo": {
+          "start": {
+            "x": 655.8,
+            "y": 930,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "look_around",
+              "dur": 3.5
+            }
+          ]
+        }
+      },
+      "props": {
+        "nv": {
+          "start": {
+            "x": 584.2,
+            "y": 300,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.464
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cara": 1.0,
+                "x": 584.2
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.44,
+              "pose": {
+                "x": 784.7
+              },
+              "ease": "linear",
+              "in": 3.41
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "CADÊ O MONSTRINHO?",
+          "dur": 1.6,
+          "color": "roxo",
+          "y": 170
+        },
+        {
+          "t": 1.75,
+          "text": "TÁ AQUI? TÁ ALI?",
+          "dur": 1.75,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "transition_in": {
+        "type": "deslizar_esq",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s14_refrao",
+      "title": "Cadê o monstrinho?",
+      "duration": 3.9667,
+      "description": "Cadê o monstrinho? / Achei! Sai daí! Rawr!",
+      "background": "mon_parque",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 3.967,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.08,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "bilu": {
+          "start": {
+            "x": 1300.0,
+            "y": 935,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 2,
+            "depth": 1.305
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 2.25,
+              "do": "rawr",
+              "dur": 1.717
+            }
+          ],
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "y": 935.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.15,
+              "pose": {
+                "y": 935.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.4,
+              "pose": {
+                "y": 765.0
+              },
+              "ease": "out",
+              "in": 0.22
+            }
+          ]
+        }
+      },
+      "props": {
+        "moita": {
+          "start": {
+            "x": 1300.0,
+            "y": 935,
+            "z": 4,
+            "sem_contorno": 1.0,
+            "depth": 1.232
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "balanca": 1.0,
+                "onda": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.91,
+              "pose": {
+                "onda": 4.0
+              },
+              "ease": "linear",
+              "in": 3.88
+            }
+          ]
+        },
+        "nv": {
+          "start": {
+            "x": 1586.3,
+            "y": 300,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.464
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cara": 1.0,
+                "x": 1586.3
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.91,
+              "pose": {
+                "x": 1786.7
+              },
+              "ease": "linear",
+              "in": 3.88
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 2.15,
+          "text": "ACHEI!",
+          "dur": 0.55,
+          "color": "laranja",
+          "y": 170
+        },
+        {
+          "t": 2.75,
+          "text": "SAI DAÍ! RAWR!",
+          "dur": 1.217,
+          "color": "vermelho",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s15_refrao",
+      "title": "Cadê o monstrinho?",
+      "duration": 3.0667,
+      "description": "Cadê o monstrinho? / Tá aqui? Tá ali?",
+      "background": "mon_xadrez_verde",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.0
+          },
+          {
+            "t": 3.067,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "bilu": {
+          "start": {
+            "x": 380,
+            "y": 1010,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.232
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "dur": 3.067,
+              "style": "festa"
+            }
+          ]
+        },
+        "mimi": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.232
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.05,
+              "do": "dance",
+              "dur": 3.017,
+              "style": "chute"
+            }
+          ]
+        },
+        "nhoque": {
+          "start": {
+            "x": 1540,
+            "y": 1010,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.232
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "dance",
+              "dur": 2.967,
+              "style": "festa"
+            }
+          ]
+        }
+      },
+      "props": {
+        "bo": {
+          "start": {
+            "x": 800,
+            "y": 1000,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.435
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tam": 1.0,
+                "y": 1000.0,
+                "balanco": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.01,
+              "pose": {
+                "y": 250.0
+              },
+              "ease": "linear",
+              "in": 2.98
+            },
+            {
+              "t": 3.01,
+              "pose": {
+                "balanco": 3.1
+              },
+              "ease": "linear",
+              "in": 2.98
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "flash_in": true,
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "CADÊ O MONSTRINHO?",
+          "dur": 1.8,
+          "color": "roxo",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s16_refrao",
+      "title": "Cadê o monstrinho?",
+      "duration": 5.3,
+      "description": "Cadê o monstrinho? / Achei! Sai daí! Rawr!",
+      "background": "mon_raios_laranja",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 5.3,
+            "x": 960,
+            "y": 540.0,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "bilu": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.958
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 2.38,
+              "do": "rawr",
+              "dur": 2.92
+            }
+          ]
+        }
+      },
+      "props": {
+        "bo": {
+          "start": {
+            "x": 1300,
+            "y": 1000,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.435
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tam": 1.0,
+                "y": 1000.0,
+                "balanco": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 5.24,
+              "pose": {
+                "y": 250.0
+              },
+              "ease": "linear",
+              "in": 5.21
+            },
+            {
+              "t": 5.24,
+              "pose": {
+                "balanco": 5.3
+              },
+              "ease": "linear",
+              "in": 5.21
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "callouts": [
+        {
+          "t": 2.65,
+          "text": "SAI DAÍ! RAWR!",
+          "dur": 1.8,
+          "color": "vermelho",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s17_intervalo",
+      "title": "Fofolucos! Rawr!",
+      "duration": 3.0666,
+      "description": "Fofolucos! Rawr!",
+      "background": "mon_raios_roxo",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.0
+          },
+          {
+            "t": 3.067,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "nhoque": {
+          "start": {
+            "x": 700,
+            "y": 1010,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.595
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.2,
+              "do": "rawr",
+              "dur": 2.867
+            }
+          ]
+        },
+        "zuzu": {
+          "start": {
+            "x": 1300,
+            "y": 1010,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.595
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.35,
+              "do": "rawr",
+              "dur": 2.717
+            }
+          ]
+        }
+      },
+      "props": {
+        "bo": {
+          "start": {
+            "x": 300,
+            "y": 1000,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.435
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tam": 1.0,
+                "y": 1000.0,
+                "balanco": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.01,
+              "pose": {
+                "y": 250.0
+              },
+              "ease": "linear",
+              "in": 2.98
+            },
+            {
+              "t": 3.01,
+              "pose": {
+                "balanco": 3.1
+              },
+              "ease": "linear",
+              "in": 2.98
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "FOFOLUCOS! RAWR!",
+          "dur": 1.8,
+          "color": "laranja",
+          "y": 170
+        }
+      ],
+      "transition_in": {
+        "type": "giro",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s18_intervalo",
+      "title": "Fofolucos!",
+      "duration": 5.4667,
+      "description": "Fofolucos!",
+      "background": "mon_palco",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1350,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 5.467,
+            "x": 1350,
+            "y": 540.0,
+            "zoom": 1.04,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "bilu": {
+          "start": {
+            "x": 1600.5,
+            "y": 930,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45,
+            "holding": "baqueta_a4",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1,
+            "holding_f": "baqueta_a4"
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "toca_bateria_a4",
+              "dur": 5.467
+            }
+          ]
+        },
+        "zuzu": {
+          "start": {
+            "x": 956.3,
+            "y": 930,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "toca_teclado",
+              "dur": 5.467
+            }
+          ]
+        },
+        "teco": {
+          "start": {
+            "x": 2030.0,
+            "y": 930,
+            "turn": -0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "dur": 5.467,
+              "style": "festa"
+            }
+          ]
+        }
+      },
+      "props": {
+        "bat": {
+          "start": {
+            "x": 1600.5,
+            "y": 940,
+            "z": 4,
+            "sem_contorno": 1.0,
+            "depth": 0.87
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "kit_a4",
+              "dur": 5.467
+            }
+          ]
+        },
+        "tec": {
+          "start": {
+            "x": 956.3,
+            "y": 940,
+            "z": 4,
+            "sem_contorno": 1.0,
+            "depth": 0.899
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tecla": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 5.427,
+              "pose": {
+                "tecla": 10.9
+              },
+              "ease": "linear",
+              "in": 5.397
+            }
+          ]
+        }
+      },
+      "fx": [
+        "notas"
+      ]
+    },
+    {
+      "id": "s19_intervalo",
+      "title": "Tapa os olhos!",
+      "duration": 6.8,
+      "description": "Tapa os olhos!",
+      "background": "mon_parque",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 6.8,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.08,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "mimi": {
+          "start": {
+            "x": 827.6,
+            "y": 930,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "dur": 6.8,
+              "style": "festa"
+            }
+          ]
+        },
+        "bilu": {
+          "start": {
+            "x": 1300.0,
+            "y": 930,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "dance",
+              "dur": 6.7,
+              "style": "chute"
+            }
+          ]
+        },
+        "nhoque": {
+          "start": {
+            "x": 1772.4,
+            "y": 930,
+            "turn": -0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.05,
+              "do": "dance",
+              "dur": 6.75,
+              "style": "festa"
+            }
+          ]
+        }
+      },
+      "props": {
+        "nv": {
+          "start": {
+            "x": 1013.7,
+            "y": 300,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.464
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cara": 1.0,
+                "x": 1013.7
+              },
+              "ease": "step"
+            },
+            {
+              "t": 6.74,
+              "pose": {
+                "x": 1214.1
+              },
+              "ease": "linear",
+              "in": 6.71
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ]
+    },
+    {
+      "id": "s20_ponte",
+      "title": "instrumental",
+      "duration": 1.3333,
+      "description": "",
+      "background": "mon_brilho_rosa",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 1.333,
+            "x": 960,
+            "y": 540.0,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "gogo": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.885
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "estatua",
+              "dur": 1.333
+            }
+          ],
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "lid": 1.0
+              },
+              "ease": "step"
+            }
+          ]
+        }
+      },
+      "props": {
+        "bo": {
+          "start": {
+            "x": 300,
+            "y": 1000,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.435
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tam": 1.0,
+                "y": 1000.0,
+                "balanco": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.27,
+              "pose": {
+                "y": 250.0
+              },
+              "ease": "linear",
+              "in": 1.24
+            },
+            {
+              "t": 1.27,
+              "pose": {
+                "balanco": 1.3
+              },
+              "ease": "linear",
+              "in": 1.24
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.0,
+          "text": "TAPA OS OLHOS!",
+          "dur": 1.333,
+          "color": "laranja",
+          "y": 170
+        }
+      ],
+      "transition_in": {
+        "type": "deslizar_esq",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s21_ponte",
+      "title": "Conta até três!",
+      "duration": 1.7,
+      "description": "Conta até três!",
+      "background": "mon_raios_roxo",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.0
+          },
+          {
+            "t": 1.7,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "bilu": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.885
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "point",
+              "dur": 1.6
+            }
+          ]
+        }
+      },
+      "props": {
+        "bo": {
+          "start": {
+            "x": 1650,
+            "y": 1000,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.435
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tam": 1.0,
+                "y": 1000.0,
+                "balanco": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.64,
+              "pose": {
+                "y": 250.0
+              },
+              "ease": "linear",
+              "in": 1.61
+            },
+            {
+              "t": 1.64,
+              "pose": {
+                "balanco": 1.7
+              },
+              "ease": "linear",
+              "in": 1.61
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "CONTA ATÉ TRÊS!",
+          "dur": 1.6,
+          "color": "azul",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s22_ponte",
+      "title": "Na ponta do pé…",
+      "duration": 1.7667,
+      "description": "Na ponta do pé…",
+      "background": "mon_xadrez_azul",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.0
+          },
+          {
+            "t": 1.767,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "mimi": {
+          "start": {
+            "x": 500,
+            "y": 1010,
+            "turn": 0.45,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.595
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "sneak",
+              "dur": 1.67,
+              "to_x": 1400.0
+            }
+          ]
+        }
+      },
+      "props": {
+        "bo": {
+          "start": {
+            "x": 800,
+            "y": 1000,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.435
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tam": 1.0,
+                "y": 1000.0,
+                "balanco": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.71,
+              "pose": {
+                "y": 250.0
+              },
+              "ease": "linear",
+              "in": 1.68
+            },
+            {
+              "t": 1.71,
+              "pose": {
+                "balanco": 1.8
+              },
+              "ease": "linear",
+              "in": 1.68
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "NA PONTA DO PÉ…",
+          "dur": 1.667,
+          "color": "rosa",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s23_ponte",
+      "title": "Se esconde de vez!",
+      "duration": 1.7667,
+      "description": "Se esconde de vez!",
+      "background": "mon_parque",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 1.767,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.08,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "teco": {
+          "start": {
+            "x": 727.4,
+            "y": 930,
+            "turn": 0.45,
+            "expr": "happy",
+            "z": 2,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "run",
+              "dur": 1.67,
+              "to_x": 1443.2
+            }
+          ]
+        }
+      },
+      "props": {
+        "muro": {
+          "start": {
+            "x": 1443.2,
+            "y": 935,
+            "z": 4,
+            "sem_contorno": 1.0,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {},
+              "ease": "step"
+            }
+          ]
+        },
+        "nv": {
+          "start": {
+            "x": 1872.6,
+            "y": 300,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.464
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cara": 1.0,
+                "x": 1872.6
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.71,
+              "pose": {
+                "x": 2073.0
+              },
+              "ease": "linear",
+              "in": 1.68
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "SE ESCONDE DE VEZ!",
+          "dur": 1.667,
+          "color": "roxo",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s24_ponte",
+      "title": "E mais!",
+      "duration": 3.0333,
+      "description": "E mais! / Agacha bem quieto!",
+      "background": "mon_brilho_azul",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.0
+          },
+          {
+            "t": 3.033,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "nhoque": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.885
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.3,
+              "do": "sit",
+              "dur": 2.733
+            }
+          ]
+        }
+      },
+      "props": {
+        "bo": {
+          "start": {
+            "x": 300,
+            "y": 1000,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.435
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tam": 1.0,
+                "y": 1000.0,
+                "balanco": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.97,
+              "pose": {
+                "y": 250.0
+              },
+              "ease": "linear",
+              "in": 2.94
+            },
+            {
+              "t": 2.97,
+              "pose": {
+                "balanco": 3.0
+              },
+              "ease": "linear",
+              "in": 2.94
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "E MAIS! AGACHA BEM QUIETO!",
+          "dur": 1.8,
+          "color": "verde",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s25_ponte",
+      "title": "Segura a risada!",
+      "duration": 0.8667,
+      "description": "Segura a risada!",
+      "background": "mon_raios_verde",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 552.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 0.867,
+            "x": 960,
+            "y": 552.0,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "zuzu": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.0,
+            "expr": "laughing",
+            "z": 3,
+            "depth": 1.885
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "estatua",
+              "dur": 0.867
+            }
+          ]
+        }
+      },
+      "props": {
+        "bo": {
+          "start": {
+            "x": 1650,
+            "y": 1000,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.435
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tam": 1.0,
+                "y": 1000.0,
+                "balanco": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.81,
+              "pose": {
+                "y": 250.0
+              },
+              "ease": "linear",
+              "in": 0.78
+            },
+            {
+              "t": 0.81,
+              "pose": {
+                "balanco": 0.9
+              },
+              "ease": "linear",
+              "in": 0.78
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "SEGURA A RISADA!",
+          "dur": 0.767,
+          "color": "laranja",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s26_ponte",
+      "title": "Ninguém faz barulho…",
+      "duration": 2.1666,
+      "description": "Ninguém faz barulho…",
+      "background": "mon_xadrez_rosa",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.0
+          },
+          {
+            "t": 2.167,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "gogo": {
+          "start": {
+            "x": 1400,
+            "y": 1010,
+            "turn": -0.45,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.377
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "sneak",
+              "dur": 2.07,
+              "to_x": 600.0
+            }
+          ]
+        }
+      },
+      "props": {
+        "bo": {
+          "start": {
+            "x": 800,
+            "y": 1000,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.435
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tam": 1.0,
+                "y": 1000.0,
+                "balanco": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.11,
+              "pose": {
+                "y": 250.0
+              },
+              "ease": "linear",
+              "in": 2.08
+            },
+            {
+              "t": 2.11,
+              "pose": {
+                "balanco": 2.2
+              },
+              "ease": "linear",
+              "in": 2.08
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "NINGUÉM FAZ BARULHO…",
+          "dur": 1.8,
+          "color": "azul",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s27_ponte",
+      "title": "Psiu! Nem uma piscada!",
+      "duration": 1.7334,
+      "description": "Psiu! Nem uma piscada!",
+      "background": "mon_brilho_laranja",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 1.733,
+            "x": 960,
+            "y": 540.0,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "teco": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.0,
+            "expr": "surprised",
+            "z": 3,
+            "depth": 2.03
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "estatua",
+              "dur": 1.733
+            }
+          ]
+        }
+      },
+      "props": {
+        "bo": {
+          "start": {
+            "x": 1300,
+            "y": 1000,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.435
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tam": 1.0,
+                "y": 1000.0,
+                "balanco": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.67,
+              "pose": {
+                "y": 250.0
+              },
+              "ease": "linear",
+              "in": 1.64
+            },
+            {
+              "t": 1.67,
+              "pose": {
+                "balanco": 1.7
+              },
+              "ease": "linear",
+              "in": 1.64
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "PSIU! NEM UMA PISCADA!",
+          "dur": 1.633,
+          "color": "roxo",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s28_verso",
+      "title": "A Mimi, no canteiro,",
+      "duration": 2.6333,
+      "description": "A Mimi, no canteiro,",
+      "background": "mon_parque",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 2.633,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.08,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "mimi": {
+          "start": {
+            "x": 1300.0,
+            "y": 935,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 2,
+            "depth": 1.377
+          },
+          "exposure": 1,
+          "actions": []
+        }
+      },
+      "props": {
+        "canteiro": {
+          "start": {
+            "x": 1300.0,
+            "y": 935,
+            "z": 4,
+            "sem_contorno": 1.0,
+            "depth": 1.812
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "vento": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.57,
+              "pose": {
+                "vento": 2.1
+              },
+              "ease": "linear",
+              "in": 2.54
+            }
+          ]
+        },
+        "nv": {
+          "start": {
+            "x": 584.2,
+            "y": 300,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.464
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cara": 1.0,
+                "x": 584.2
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.57,
+              "pose": {
+                "x": 784.7
+              },
+              "ease": "linear",
+              "in": 2.54
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "A MIMI NO CANTEIRO…",
+          "dur": 1.8,
+          "color": "rosa",
+          "y": 170
+        }
+      ],
+      "transition_in": {
+        "type": "cortina",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s29_verso",
+      "title": "Fingiu que era flor,",
+      "duration": 1.7333,
+      "description": "Fingiu que era flor,",
+      "background": "mon_parque",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 470,
+            "zoom": 1.55
+          },
+          {
+            "t": 1.733,
+            "x": 1300,
+            "y": 470,
+            "zoom": 1.62,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "mimi": {
+          "start": {
+            "x": 1300.0,
+            "y": 935,
+            "turn": 0.0,
+            "expr": "fofinho",
+            "z": 2,
+            "depth": 1.377
+          },
+          "exposure": 1,
+          "actions": []
+        }
+      },
+      "props": {
+        "canteiro": {
+          "start": {
+            "x": 1300.0,
+            "y": 935,
+            "z": 4,
+            "sem_contorno": 1.0,
+            "depth": 1.812
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "vento": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.67,
+              "pose": {
+                "vento": 1.4
+              },
+              "ease": "linear",
+              "in": 1.64
+            }
+          ]
+        },
+        "nv": {
+          "start": {
+            "x": 1586.3,
+            "y": 300,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.464
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cara": 1.0,
+                "x": 1586.3
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.67,
+              "pose": {
+                "x": 1786.7
+              },
+              "ease": "linear",
+              "in": 1.64
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "FINGIU QUE ERA FLOR!",
+          "dur": 1.533,
+          "color": "amarelo",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s30_verso",
+      "title": "Mas a barriga do Nhoque",
+      "duration": 1.7334,
+      "description": "Mas a barriga do Nhoque",
+      "background": "mon_parque",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 1.733,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.08,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "nhoque": {
+          "start": {
+            "x": 1300.0,
+            "y": 935,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 2,
+            "depth": 1.377
+          },
+          "exposure": 1,
+          "actions": []
+        }
+      },
+      "props": {
+        "moita": {
+          "start": {
+            "x": 1300.0,
+            "y": 935,
+            "z": 4,
+            "sem_contorno": 1.0,
+            "depth": 1.232
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "onda": 0.0,
+                "balanca": 1.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.67,
+              "pose": {
+                "onda": 1.7
+              },
+              "ease": "linear",
+              "in": 1.64
+            }
+          ]
+        },
+        "nv": {
+          "start": {
+            "x": 1013.7,
+            "y": 300,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.464
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cara": 1.0,
+                "x": 1013.7
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.67,
+              "pose": {
+                "x": 1214.1
+              },
+              "ease": "linear",
+              "in": 1.64
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "MAS A BARRIGA DO NHOQUE…",
+          "dur": 1.533,
+          "color": "vermelho",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s31_verso",
+      "title": "Roncou igual tambor!",
+      "duration": 1.7666,
+      "description": "Roncou igual tambor!",
+      "background": "mon_parque",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 460,
+            "zoom": 1.55
+          },
+          {
+            "t": 1.767,
+            "x": 1300,
+            "y": 460,
+            "zoom": 1.62,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        },
+        "shake": [
+          {
+            "t": 0.2,
+            "dur": 0.35,
+            "amp": 14.0
+          },
+          {
+            "t": 0.7,
+            "dur": 0.35,
+            "amp": 14.0
+          }
+        ]
+      },
+      "characters": {
+        "nhoque": {
+          "start": {
+            "x": 1300.0,
+            "y": 935,
+            "turn": 0.0,
+            "expr": "surprised",
+            "z": 2,
+            "depth": 1.377
+          },
+          "exposure": 1,
+          "actions": []
+        }
+      },
+      "props": {
+        "moita": {
+          "start": {
+            "x": 1300.0,
+            "y": 935,
+            "z": 4,
+            "sem_contorno": 1.0,
+            "depth": 1.232
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "onda": 0.0,
+                "balanca": 1.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.71,
+              "pose": {
+                "onda": 1.8
+              },
+              "ease": "linear",
+              "in": 1.68
+            }
+          ]
+        },
+        "nv": {
+          "start": {
+            "x": 1872.6,
+            "y": 300,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.464
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cara": 1.0,
+                "x": 1872.6
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.71,
+              "pose": {
+                "x": 2073.0
+              },
+              "ease": "linear",
+              "in": 1.68
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "RONC! RONC!",
+          "dur": 1.667,
+          "color": "laranja",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s32_verso",
+      "title": "E o Zuzu? Ninguém achou…",
+      "duration": 2.1667,
+      "description": "E o Zuzu? Ninguém achou…",
+      "background": "mon_vila",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 2.167,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.08,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "gogo": {
+          "start": {
+            "x": 799.0,
+            "y": 930,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "look_around",
+              "dur": 2.167
+            }
+          ]
+        },
+        "bilu": {
+          "start": {
+            "x": 1300.0,
+            "y": 930,
+            "turn": 0.0,
+            "expr": "confused",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "look_around",
+              "dur": 2.067
+            }
+          ]
+        },
+        "mimi": {
+          "start": {
+            "x": 1801.0,
+            "y": 930,
+            "turn": -0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.05,
+              "do": "look_around",
+              "dur": 2.117
+            }
+          ]
+        }
+      },
+      "props": {
+        "nv": {
+          "start": {
+            "x": 584.2,
+            "y": 300,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.464
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cara": 1.0,
+                "x": 584.2
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.11,
+              "pose": {
+                "x": 784.7
+              },
+              "ease": "linear",
+              "in": 2.08
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "E O ZUZU? NINGUÉM ACHOU…",
+          "dur": 1.8,
+          "color": "laranja",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s33_verso",
+      "title": "Sumiu? Que mistério!",
+      "duration": 1.3,
+      "description": "Sumiu? Que mistério!",
+      "background": "mon_raios_roxo",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 1.3,
+            "x": 960,
+            "y": 540.0,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "gogo": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.0,
+            "expr": "confused",
+            "z": 3,
+            "depth": 1.885
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "look_around",
+              "dur": 1.3
+            }
+          ]
+        }
+      },
+      "props": {
+        "bo": {
+          "start": {
+            "x": 1650,
+            "y": 1000,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.435
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tam": 1.0,
+                "y": 1000.0,
+                "balanco": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.24,
+              "pose": {
+                "y": 250.0
+              },
+              "ease": "linear",
+              "in": 1.21
+            },
+            {
+              "t": 1.24,
+              "pose": {
+                "balanco": 1.3
+              },
+              "ease": "linear",
+              "in": 1.21
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "SUMIU? QUE MISTÉRIO!",
+          "dur": 1.1,
+          "color": "verde",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s34_verso",
+      "title": "Laranja entre as abóboras,",
+      "duration": 2.2,
+      "description": "Laranja entre as abóboras,",
+      "background": "mon_parque",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 2.2,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.08,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "zuzu": {
+          "start": {
+            "x": 1300.0,
+            "y": 975,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 2,
+            "depth": 1.377
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "estatua",
+              "dur": 2.2
+            }
+          ],
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "lid": 1.0
+              },
+              "ease": "step"
+            }
+          ]
+        }
+      },
+      "props": {
+        "ab0": {
+          "start": {
+            "x": 899.2,
+            "y": 945,
+            "z": 4,
+            "sem_contorno": 1.0,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tom": 0.0
+              },
+              "ease": "step"
+            }
+          ]
+        },
+        "ab1": {
+          "start": {
+            "x": 1063.8,
+            "y": 975,
+            "z": 4,
+            "sem_contorno": 1.0,
+            "depth": 1.522
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tom": 2.0
+              },
+              "ease": "step"
+            }
+          ]
+        },
+        "ab2": {
+          "start": {
+            "x": 1543.4,
+            "y": 975,
+            "z": 4,
+            "sem_contorno": 1.0,
+            "depth": 1.522
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tom": 1.0
+              },
+              "ease": "step"
+            }
+          ]
+        },
+        "ab3": {
+          "start": {
+            "x": 1715.1,
+            "y": 945,
+            "z": 4,
+            "sem_contorno": 1.0,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tom": 0.0
+              },
+              "ease": "step"
+            }
+          ]
+        },
+        "ab4": {
+          "start": {
+            "x": 1199.8,
+            "y": 1025,
+            "z": 4,
+            "sem_contorno": 1.0,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tom": 1.0
+              },
+              "ease": "step"
+            }
+          ]
+        },
+        "ab5": {
+          "start": {
+            "x": 1414.5,
+            "y": 1025,
+            "z": 4,
+            "sem_contorno": 1.0,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tom": 2.0
+              },
+              "ease": "step"
+            }
+          ]
+        },
+        "ab6": {
+          "start": {
+            "x": 977.9,
+            "y": 905,
+            "z": 1,
+            "sem_contorno": 1.0,
+            "depth": 1.232
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tom": 2.0
+              },
+              "ease": "step"
+            }
+          ]
+        },
+        "ab7": {
+          "start": {
+            "x": 1636.4,
+            "y": 905,
+            "z": 1,
+            "sem_contorno": 1.0,
+            "depth": 1.232
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tom": 1.0
+              },
+              "ease": "step"
+            }
+          ]
+        },
+        "nv": {
+          "start": {
+            "x": 1013.7,
+            "y": 300,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.464
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cara": 1.0,
+                "x": 1013.7
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.14,
+              "pose": {
+                "x": 1214.1
+              },
+              "ease": "linear",
+              "in": 2.11
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "LARANJA ENTRE AS ABÓBORAS…",
+          "dur": 1.8,
+          "color": "laranja",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s35_verso",
+      "title": "Dormindo e roncando, é sério!",
+      "duration": 4.3,
+      "description": "Dormindo e roncando, é sério!",
+      "background": "mon_parque",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 560,
+            "zoom": 1.55
+          },
+          {
+            "t": 4.3,
+            "x": 1300,
+            "y": 560,
+            "zoom": 1.62,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "zuzu": {
+          "start": {
+            "x": 1300.0,
+            "y": 975,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 2,
+            "depth": 1.377
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "estatua",
+              "dur": 4.3
+            }
+          ],
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "lid": 1.0
+              },
+              "ease": "step"
+            }
+          ]
+        }
+      },
+      "props": {
+        "ab0": {
+          "start": {
+            "x": 899.2,
+            "y": 945,
+            "z": 4,
+            "sem_contorno": 1.0,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tom": 0.0
+              },
+              "ease": "step"
+            }
+          ]
+        },
+        "ab1": {
+          "start": {
+            "x": 1063.8,
+            "y": 975,
+            "z": 4,
+            "sem_contorno": 1.0,
+            "depth": 1.522
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tom": 2.0
+              },
+              "ease": "step"
+            }
+          ]
+        },
+        "ab2": {
+          "start": {
+            "x": 1543.4,
+            "y": 975,
+            "z": 4,
+            "sem_contorno": 1.0,
+            "depth": 1.522
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tom": 1.0
+              },
+              "ease": "step"
+            }
+          ]
+        },
+        "ab3": {
+          "start": {
+            "x": 1715.1,
+            "y": 945,
+            "z": 4,
+            "sem_contorno": 1.0,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tom": 0.0
+              },
+              "ease": "step"
+            }
+          ]
+        },
+        "ab4": {
+          "start": {
+            "x": 1199.8,
+            "y": 1025,
+            "z": 4,
+            "sem_contorno": 1.0,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tom": 1.0
+              },
+              "ease": "step"
+            }
+          ]
+        },
+        "ab5": {
+          "start": {
+            "x": 1414.5,
+            "y": 1025,
+            "z": 4,
+            "sem_contorno": 1.0,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tom": 2.0
+              },
+              "ease": "step"
+            }
+          ]
+        },
+        "ab6": {
+          "start": {
+            "x": 977.9,
+            "y": 905,
+            "z": 1,
+            "sem_contorno": 1.0,
+            "depth": 1.232
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tom": 2.0
+              },
+              "ease": "step"
+            }
+          ]
+        },
+        "ab7": {
+          "start": {
+            "x": 1636.4,
+            "y": 905,
+            "z": 1,
+            "sem_contorno": 1.0,
+            "depth": 1.232
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tom": 1.0
+              },
+              "ease": "step"
+            }
+          ]
+        },
+        "nv": {
+          "start": {
+            "x": 1872.6,
+            "y": 300,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.464
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cara": 1.0,
+                "x": 1872.6
+              },
+              "ease": "step"
+            },
+            {
+              "t": 4.24,
+              "pose": {
+                "x": 2073.0
+              },
+              "ease": "linear",
+              "in": 4.21
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "DORMINDO E RONCANDO!",
+          "dur": 1.8,
+          "color": "roxo",
+          "y": 170
+        },
+        {
+          "t": 2.37,
+          "text": "ZZZ…",
+          "dur": 1.8,
+          "color": "azul",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s36_refrao",
+      "title": "Cadê o monstrinho?",
+      "duration": 3.0667,
+      "description": "Cadê o monstrinho? / Tá aqui? Tá ali?",
+      "background": "mon_vila",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 3.067,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.08,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "gogo": {
+          "start": {
+            "x": 655.8,
+            "y": 930,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "look_around",
+              "dur": 3.067
+            }
+          ]
+        }
+      },
+      "props": {
+        "nv": {
+          "start": {
+            "x": 584.2,
+            "y": 300,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.464
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cara": 1.0,
+                "x": 584.2
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.01,
+              "pose": {
+                "x": 784.7
+              },
+              "ease": "linear",
+              "in": 2.98
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "CADÊ O MONSTRINHO?",
+          "dur": 1.38,
+          "color": "roxo",
+          "y": 170
+        },
+        {
+          "t": 1.53,
+          "text": "TÁ AQUI? TÁ ALI?",
+          "dur": 1.537,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "transition_in": {
+        "type": "deslizar_dir",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s37_refrao",
+      "title": "Cadê o monstrinho?",
+      "duration": 3.4333,
+      "description": "Cadê o monstrinho? / Achei! Sai daí! Rawr!",
+      "background": "mon_parque",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 3.433,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.08,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "teco": {
+          "start": {
+            "x": 1300.0,
+            "y": 935,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 2,
+            "depth": 1.305
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 2.23,
+              "do": "rawr",
+              "dur": 1.203
+            }
+          ],
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "y": 935.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.13,
+              "pose": {
+                "y": 935.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.38,
+              "pose": {
+                "y": 745.0
+              },
+              "ease": "out",
+              "in": 0.22
+            }
+          ]
+        }
+      },
+      "props": {
+        "muro": {
+          "start": {
+            "x": 1300.0,
+            "y": 935,
+            "z": 4,
+            "sem_contorno": 1.0,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {},
+              "ease": "step"
+            }
+          ]
+        },
+        "nv": {
+          "start": {
+            "x": 1586.3,
+            "y": 300,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.464
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cara": 1.0,
+                "x": 1586.3
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.37,
+              "pose": {
+                "x": 1786.7
+              },
+              "ease": "linear",
+              "in": 3.34
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 2.13,
+          "text": "ACHEI!",
+          "dur": 0.55,
+          "color": "laranja",
+          "y": 170
+        },
+        {
+          "t": 2.73,
+          "text": "SAI DAÍ! RAWR!",
+          "dur": 0.703,
+          "color": "vermelho",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s38_refrao",
+      "title": "Cadê o monstrinho?",
+      "duration": 3.5,
+      "description": "Cadê o monstrinho? / Tá aqui? Tá ali?",
+      "background": "mon_xadrez_azul",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.0
+          },
+          {
+            "t": 3.5,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "teco": {
+          "start": {
+            "x": 380,
+            "y": 1010,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.232
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "dur": 3.5,
+              "style": "festa"
+            }
+          ]
+        },
+        "zuzu": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.232
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.05,
+              "do": "dance",
+              "dur": 3.45,
+              "style": "chute"
+            }
+          ]
+        },
+        "nhoque": {
+          "start": {
+            "x": 1540,
+            "y": 1010,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.232
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "dance",
+              "dur": 3.4,
+              "style": "festa"
+            }
+          ]
+        }
+      },
+      "props": {
+        "bo": {
+          "start": {
+            "x": 800,
+            "y": 1000,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.435
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tam": 1.0,
+                "y": 1000.0,
+                "balanco": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.44,
+              "pose": {
+                "y": 250.0
+              },
+              "ease": "linear",
+              "in": 3.41
+            },
+            {
+              "t": 3.44,
+              "pose": {
+                "balanco": 3.5
+              },
+              "ease": "linear",
+              "in": 3.41
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "CADÊ O MONSTRINHO?",
+          "dur": 1.8,
+          "color": "roxo",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s39_refrao",
+      "title": "Cadê o monstrinho?",
+      "duration": 4.7667,
+      "description": "Cadê o monstrinho? / Achei! Sai daí! Rawr!",
+      "background": "mon_brilho_laranja",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 4.767,
+            "x": 960,
+            "y": 540.0,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "teco": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.958
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 2.15,
+              "do": "rawr",
+              "dur": 2.617
+            }
+          ]
+        }
+      },
+      "props": {
+        "bo": {
+          "start": {
+            "x": 1300,
+            "y": 1000,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.435
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tam": 1.0,
+                "y": 1000.0,
+                "balanco": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 4.71,
+              "pose": {
+                "y": 250.0
+              },
+              "ease": "linear",
+              "in": 4.68
+            },
+            {
+              "t": 4.71,
+              "pose": {
+                "balanco": 4.8
+              },
+              "ease": "linear",
+              "in": 4.68
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "callouts": [
+        {
+          "t": 2.38,
+          "text": "SAI DAÍ! RAWR!",
+          "dur": 1.8,
+          "color": "vermelho",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s40_intervalo",
+      "title": "teclado, baixo e bateria",
+      "duration": 7.3666,
+      "description": "",
+      "background": "mon_palco",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1350,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 7.367,
+            "x": 1350,
+            "y": 540.0,
+            "zoom": 1.04,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "bilu": {
+          "start": {
+            "x": 1600.5,
+            "y": 930,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45,
+            "holding": "baqueta_a4",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1,
+            "holding_f": "baqueta_a4"
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "toca_bateria_a4",
+              "dur": 7.367
+            }
+          ]
+        },
+        "zuzu": {
+          "start": {
+            "x": 956.3,
+            "y": 930,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "toca_teclado",
+              "dur": 7.367
+            }
+          ]
+        },
+        "gogo": {
+          "start": {
+            "x": 2030.0,
+            "y": 930,
+            "turn": -0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "dur": 7.367,
+              "style": "festa"
+            }
+          ]
+        }
+      },
+      "props": {
+        "bat": {
+          "start": {
+            "x": 1600.5,
+            "y": 940,
+            "z": 4,
+            "sem_contorno": 1.0,
+            "depth": 0.87
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "kit_a4",
+              "dur": 7.367
+            }
+          ]
+        },
+        "tec": {
+          "start": {
+            "x": 956.3,
+            "y": 940,
+            "z": 4,
+            "sem_contorno": 1.0,
+            "depth": 0.899
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tecla": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 7.327,
+              "pose": {
+                "tecla": 14.7
+              },
+              "ease": "linear",
+              "in": 7.297
+            }
+          ]
+        }
+      },
+      "fx": [
+        "notas"
+      ],
+      "transition_in": {
+        "type": "deslizar_esq",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s41_intervalo",
+      "title": "o Zuzu acordou e dança",
+      "duration": 7.3667,
+      "description": "",
+      "background": "mon_parque",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 7.367,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.08,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "teco": {
+          "start": {
+            "x": 870.5,
+            "y": 930,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "dur": 7.367,
+              "style": "festa"
+            }
+          ]
+        },
+        "zuzu": {
+          "start": {
+            "x": 1300.0,
+            "y": 930,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "dance",
+              "dur": 7.267,
+              "style": "chute"
+            }
+          ]
+        },
+        "bilu": {
+          "start": {
+            "x": 1729.5,
+            "y": 930,
+            "turn": -0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.05,
+              "do": "dance",
+              "dur": 7.317,
+              "style": "festa"
+            }
+          ]
+        }
+      },
+      "props": {
+        "ab0": {
+          "start": {
+            "x": 1872.6,
+            "y": 935,
+            "z": 1,
+            "sem_contorno": 1.0,
+            "depth": 1.595
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {},
+              "ease": "step"
+            }
+          ]
+        },
+        "ab1": {
+          "start": {
+            "x": 727.4,
+            "y": 935,
+            "z": 1,
+            "sem_contorno": 1.0,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tom": 2.0
+              },
+              "ease": "step"
+            }
+          ]
+        },
+        "nv": {
+          "start": {
+            "x": 1586.3,
+            "y": 300,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.464
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cara": 1.0,
+                "x": 1586.3
+              },
+              "ease": "step"
+            },
+            {
+              "t": 7.31,
+              "pose": {
+                "x": 1786.7
+              },
+              "ease": "linear",
+              "in": 7.28
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ]
+    },
+    {
+      "id": "s42_refrao",
+      "title": "Cadê o monstrinho?",
+      "duration": 3.0333,
+      "description": "Cadê o monstrinho? / Tá aqui? Tá ali?",
+      "background": "mon_vila",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 3.033,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.08,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "gogo": {
+          "start": {
+            "x": 655.8,
+            "y": 930,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "look_around",
+              "dur": 3.033
+            }
+          ]
+        }
+      },
+      "props": {
+        "nv": {
+          "start": {
+            "x": 584.2,
+            "y": 300,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.464
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cara": 1.0,
+                "x": 584.2
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.97,
+              "pose": {
+                "x": 784.7
+              },
+              "ease": "linear",
+              "in": 2.94
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "CADÊ O MONSTRINHO?",
+          "dur": 1.36,
+          "color": "roxo",
+          "y": 170
+        },
+        {
+          "t": 1.51,
+          "text": "TÁ AQUI? TÁ ALI?",
+          "dur": 1.523,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "transition_in": {
+        "type": "deslizar_dir",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s43_refrao",
+      "title": "Cadê o monstrinho?",
+      "duration": 3.4334,
+      "description": "Cadê o monstrinho? / Achei! Sai daí! Rawr!",
+      "background": "mon_parque",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 3.433,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.08,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "mimi": {
+          "start": {
+            "x": 1300.0,
+            "y": 935,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 2,
+            "depth": 1.305
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 2.21,
+              "do": "rawr",
+              "dur": 1.223
+            }
+          ],
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "y": 935.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.11,
+              "pose": {
+                "y": 935.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.36,
+              "pose": {
+                "y": 715.0
+              },
+              "ease": "out",
+              "in": 0.22
+            }
+          ]
+        }
+      },
+      "props": {
+        "canteiro": {
+          "start": {
+            "x": 1300.0,
+            "y": 935,
+            "z": 4,
+            "sem_contorno": 1.0,
+            "depth": 1.812
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "vento": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.37,
+              "pose": {
+                "vento": 2.7
+              },
+              "ease": "linear",
+              "in": 3.34
+            }
+          ]
+        },
+        "nv": {
+          "start": {
+            "x": 1586.3,
+            "y": 300,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.464
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cara": 1.0,
+                "x": 1586.3
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.37,
+              "pose": {
+                "x": 1786.7
+              },
+              "ease": "linear",
+              "in": 3.34
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 2.11,
+          "text": "ACHEI!",
+          "dur": 0.55,
+          "color": "laranja",
+          "y": 170
+        },
+        {
+          "t": 2.71,
+          "text": "SAI DAÍ! RAWR!",
+          "dur": 0.723,
+          "color": "vermelho",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s44_refrao",
+      "title": "Cadê o monstrinho?",
+      "duration": 3.4666,
+      "description": "Cadê o monstrinho? / Tá aqui? Tá ali?",
+      "background": "mon_xadrez_roxo",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.0
+          },
+          {
+            "t": 3.467,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "mimi": {
+          "start": {
+            "x": 380,
+            "y": 1010,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.232
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "dur": 3.467,
+              "style": "festa"
+            }
+          ]
+        },
+        "bilu": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.232
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.05,
+              "do": "dance",
+              "dur": 3.417,
+              "style": "chute"
+            }
+          ]
+        },
+        "zuzu": {
+          "start": {
+            "x": 1540,
+            "y": 1010,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.232
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "dance",
+              "dur": 3.367,
+              "style": "festa"
+            }
+          ]
+        }
+      },
+      "props": {
+        "bo": {
+          "start": {
+            "x": 800,
+            "y": 1000,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.435
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tam": 1.0,
+                "y": 1000.0,
+                "balanco": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.41,
+              "pose": {
+                "y": 250.0
+              },
+              "ease": "linear",
+              "in": 3.38
+            },
+            {
+              "t": 3.41,
+              "pose": {
+                "balanco": 3.5
+              },
+              "ease": "linear",
+              "in": 3.38
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "CADÊ O MONSTRINHO?",
+          "dur": 1.8,
+          "color": "roxo",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s45_refrao",
+      "title": "Cadê o monstrinho?",
+      "duration": 4.7667,
+      "description": "Cadê o monstrinho? / Achei! Sai daí! Rawr!",
+      "background": "mon_raios_azul",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 4.767,
+            "x": 960,
+            "y": 540.0,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "mimi": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.958
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 2.15,
+              "do": "rawr",
+              "dur": 2.617
+            }
+          ]
+        }
+      },
+      "props": {
+        "bo": {
+          "start": {
+            "x": 1300,
+            "y": 1000,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.435
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tam": 1.0,
+                "y": 1000.0,
+                "balanco": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 4.71,
+              "pose": {
+                "y": 250.0
+              },
+              "ease": "linear",
+              "in": 4.68
+            },
+            {
+              "t": 4.71,
+              "pose": {
+                "balanco": 4.8
+              },
+              "ease": "linear",
+              "in": 4.68
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "callouts": [
+        {
+          "t": 2.38,
+          "text": "SAI DAÍ! RAWR!",
+          "dur": 1.8,
+          "color": "vermelho",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s46_final",
+      "title": "E você? Achou todo mundo?",
+      "duration": 2.8,
+      "description": "E você? Achou todo mundo?",
+      "background": "mon_vila",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 870,
+            "y": 494.6,
+            "zoom": 1.55
+          },
+          {
+            "t": 2.8,
+            "x": 870,
+            "y": 494.6,
+            "zoom": 1.62,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "gogo": {
+          "start": {
+            "x": 748.3,
+            "y": 930,
+            "turn": 0.1,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "apontar_camera",
+              "dur": 2.7
+            }
+          ]
+        }
+      },
+      "props": {
+        "nv": {
+          "start": {
+            "x": 462.0,
+            "y": 300,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.464
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cara": 1.0,
+                "x": 462.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.74,
+              "pose": {
+                "x": 662.4
+              },
+              "ease": "linear",
+              "in": 2.71
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "E VOCÊ? ACHOU TODO MUNDO?",
+          "dur": 1.8,
+          "color": "roxo",
+          "y": 170
+        }
+      ],
+      "transition_in": {
+        "type": "zoom",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s47_final",
+      "title": "Dá um joinha!",
+      "duration": 1.2667,
+      "description": "Dá um joinha!",
+      "background": "mon_brilho_rosa",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.0
+          },
+          {
+            "t": 1.267,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "zuzu": {
+          "start": {
+            "x": 640,
+            "y": 1010,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.2,
+              "do": "bacana",
+              "dur": 1.067
+            }
+          ]
+        }
+      },
+      "props": {
+        "joinha": {
+          "start": {
+            "x": 1380,
+            "y": 900,
+            "z": 3,
+            "sem_contorno": 1.0,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "escala": 0.0
+              }
+            },
+            {
+              "t": 0.4,
+              "pose": {
+                "escala": 1.0
+              },
+              "ease": "back",
+              "in": 0.37
+            }
+          ]
+        },
+        "bo": {
+          "start": {
+            "x": 1650,
+            "y": 1000,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.435
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tam": 1.0,
+                "y": 1000.0,
+                "balanco": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.21,
+              "pose": {
+                "y": 250.0
+              },
+              "ease": "linear",
+              "in": 1.18
+            },
+            {
+              "t": 1.21,
+              "pose": {
+                "balanco": 1.3
+              },
+              "ease": "linear",
+              "in": 1.18
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "DÁ UM JOINHA!",
+          "dur": 1.067,
+          "color": "azul",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s48_final",
+      "title": "Chama o papai e a mamãe",
+      "duration": 2.5666,
+      "description": "Chama o papai e a mamãe",
+      "background": "mon_vila",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 560,
+            "zoom": 1.55
+          },
+          {
+            "t": 2.567,
+            "x": 1300,
+            "y": 560,
+            "zoom": 1.62,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "mimi": {
+          "start": {
+            "x": 1013.7,
+            "y": 930,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "point",
+              "dur": 2.467
+            }
+          ]
+        },
+        "nhoque": {
+          "start": {
+            "x": 1586.3,
+            "y": 930,
+            "turn": -0.25,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.2,
+              "do": "wave",
+              "dur": 2.367
+            }
+          ]
+        }
+      },
+      "props": {
+        "nv": {
+          "start": {
+            "x": 1013.7,
+            "y": 300,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.464
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cara": 1.0,
+                "x": 1013.7
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.51,
+              "pose": {
+                "x": 1214.1
+              },
+              "ease": "linear",
+              "in": 2.48
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.3,
+          "text": "CHAMA O PAPAI E A MAMÃE!",
+          "dur": 1.8,
+          "color": "verde",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s49_final",
+      "title": "Pra se inscrever no canal! Rawr!",
+      "duration": 4.7667,
+      "description": "Pra se inscrever no canal! Rawr!",
+      "background": "mon_raios_vermelho",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.0
+          },
+          {
+            "t": 4.767,
+            "x": 960,
+            "y": 560,
+            "zoom": 1.06,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "gogo": {
+          "start": {
+            "x": 560,
+            "y": 1010,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.2,
+              "do": "point",
+              "dur": 4.567
+            },
+            {
+              "t": 3.37,
+              "do": "rawr",
+              "dur": 1.397
+            }
+          ]
+        }
+      },
+      "props": {
+        "botao": {
+          "start": {
+            "x": 1260,
+            "y": 760,
+            "z": 3,
+            "sem_contorno": 1.0,
+            "depth": 1.2
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "escala": 0.0,
+                "aperta": 0.0
+              }
+            },
+            {
+              "t": 0.4,
+              "pose": {
+                "escala": 1.0
+              },
+              "ease": "back",
+              "in": 0.37
+            },
+            {
+              "t": 1.6,
+              "pose": {
+                "aperta": 1.0
+              },
+              "ease": "out",
+              "in": 1.57
+            },
+            {
+              "t": 1.9,
+              "pose": {
+                "aperta": 0.0
+              },
+              "ease": "in",
+              "in": 0.27
+            }
+          ]
+        },
+        "bo": {
+          "start": {
+            "x": 1300,
+            "y": 1000,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.435
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tam": 1.0,
+                "y": 1000.0,
+                "balanco": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 4.71,
+              "pose": {
+                "y": 250.0
+              },
+              "ease": "linear",
+              "in": 4.68
+            },
+            {
+              "t": 4.71,
+              "pose": {
+                "balanco": 4.8
+              },
+              "ease": "linear",
+              "in": 4.68
+            }
+          ]
+        }
+      },
+      "fx": [
+        "coracoes"
+      ],
+      "callouts": [
+        {
+          "t": 0.5,
+          "text": "INSCREVA-SE!",
+          "dur": 1.8,
+          "color": "vermelho",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s50_final",
+      "title": "Fofolucos! Tchau! Rawr!",
+      "duration": 3.0,
+      "description": "Fofolucos! Tchau! Rawr!",
+      "background": "mon_abertura",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.0
+          },
+          {
+            "t": 3.0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.08,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "teco": {
+          "start": {
+            "x": 655.8,
+            "y": 880,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 2,
+            "depth": 0.899
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "wave",
+              "dur": 3.0
+            }
+          ]
+        },
+        "gogo": {
+          "start": {
+            "x": 1085.3,
+            "y": 880,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 2,
+            "depth": 0.899
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "wave",
+              "dur": 2.9
+            }
+          ]
+        },
+        "mimi": {
+          "start": {
+            "x": 1514.7,
+            "y": 880,
+            "turn": -0.15,
+            "expr": "happy",
+            "z": 2,
+            "depth": 0.899
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.2,
+              "do": "wave",
+              "dur": 2.8
+            }
+          ]
+        },
+        "zuzu": {
+          "start": {
+            "x": 1944.2,
+            "y": 880,
+            "turn": -0.3,
+            "expr": "happy",
+            "z": 2,
+            "depth": 0.899
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.30000000000000004,
+              "do": "wave",
+              "dur": 2.7
+            }
+          ]
+        },
+        "bilu": {
+          "start": {
+            "x": 870.5,
+            "y": 975,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.073
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.4,
+              "do": "wave",
+              "dur": 2.6
+            }
+          ]
+        },
+        "nhoque": {
+          "start": {
+            "x": 1729.5,
+            "y": 975,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.073
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.5,
+              "do": "wave",
+              "dur": 2.5
+            }
+          ]
+        }
+      },
+      "props": {
+        "nv": {
+          "start": {
+            "x": 584.2,
+            "y": 300,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.464
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cara": 1.0,
+                "x": 584.2
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.94,
+              "pose": {
+                "x": 784.7
+              },
+              "ease": "linear",
+              "in": 2.91
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "FOFOLUCOS!",
+          "dur": 1.15,
+          "color": "roxo",
+          "y": 170
+        },
+        {
+          "t": 1.4,
+          "text": "TCHAU!",
+          "dur": 1.6,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "transition_in": {
+        "type": "deslizar_dir",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s51_final",
+      "title": "o Zuzu acorda: RAWR!",
+      "duration": 2.5667,
+      "description": "",
+      "background": "mon_parque",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300,
+            "y": 553.3,
+            "zoom": 1.55
+          },
+          {
+            "t": 2.567,
+            "x": 1300,
+            "y": 553.3,
+            "zoom": 1.62,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "zuzu": {
+          "start": {
+            "x": 1300.0,
+            "y": 995,
+            "turn": 0.0,
+            "expr": "joy",
+            "z": 2,
+            "depth": 1.377
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.4,
+              "do": "rawr",
+              "dur": 2.167
+            }
+          ],
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "lid": 1.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.35,
+              "pose": {
+                "lid": 0.0
+              },
+              "ease": "out",
+              "in": 0.32
+            }
+          ]
+        }
+      },
+      "props": {
+        "ab0": {
+          "start": {
+            "x": 899.2,
+            "y": 945,
+            "z": 4,
+            "sem_contorno": 1.0,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tom": 0.0
+              },
+              "ease": "step"
+            }
+          ]
+        },
+        "ab1": {
+          "start": {
+            "x": 1063.8,
+            "y": 975,
+            "z": 4,
+            "sem_contorno": 1.0,
+            "depth": 1.522
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tom": 2.0
+              },
+              "ease": "step"
+            }
+          ]
+        },
+        "ab2": {
+          "start": {
+            "x": 1543.4,
+            "y": 975,
+            "z": 4,
+            "sem_contorno": 1.0,
+            "depth": 1.522
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tom": 1.0
+              },
+              "ease": "step"
+            }
+          ]
+        },
+        "ab3": {
+          "start": {
+            "x": 1715.1,
+            "y": 945,
+            "z": 4,
+            "sem_contorno": 1.0,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tom": 0.0
+              },
+              "ease": "step"
+            }
+          ]
+        },
+        "ab4": {
+          "start": {
+            "x": 1199.8,
+            "y": 1025,
+            "z": 4,
+            "sem_contorno": 1.0,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tom": 1.0
+              },
+              "ease": "step"
+            }
+          ]
+        },
+        "ab5": {
+          "start": {
+            "x": 1414.5,
+            "y": 1025,
+            "z": 4,
+            "sem_contorno": 1.0,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tom": 2.0
+              },
+              "ease": "step"
+            }
+          ]
+        },
+        "ab6": {
+          "start": {
+            "x": 977.9,
+            "y": 905,
+            "z": 1,
+            "sem_contorno": 1.0,
+            "depth": 1.232
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tom": 2.0
+              },
+              "ease": "step"
+            }
+          ]
+        },
+        "ab7": {
+          "start": {
+            "x": 1636.4,
+            "y": 905,
+            "z": 1,
+            "sem_contorno": 1.0,
+            "depth": 1.232
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tom": 1.0
+              },
+              "ease": "step"
+            }
+          ]
+        },
+        "nv": {
+          "start": {
+            "x": 1586.3,
+            "y": 300,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.464
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cara": 1.0,
+                "x": 1586.3
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.51,
+              "pose": {
+                "x": 1786.7
+              },
+              "ease": "linear",
+              "in": 2.48
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "flash_in": true,
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "RAWR!",
+          "dur": 1.8,
+          "color": "vermelho",
+          "y": 170
+        }
+      ],
+      "transition_out": "fade"
+    }
+  ]
+}

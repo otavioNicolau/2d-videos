@@ -1,0 +1,61 @@
+{
+ "schema": "avaliacao-1.0",
+ "versoes": {
+  "Cadê o Monstrinho_": {
+   "arquivo": "Cadê o Monstrinho_.wav",
+   "duracao": 170.0,
+   "bpm": 136.0,
+   "bpm_nota": "",
+   "tom": "Sol maior",
+   "voz_inicio": 5.9,
+   "refrao_inicio": 5.5,
+   "cantado": 71,
+   "intervalos": [
+    [
+     70.2,
+     6.8
+    ],
+    [
+     123.8,
+     14.8
+    ],
+    [
+     166.1,
+     2.7
+    ]
+   ],
+   "fim_depois_da_voz": 0.4,
+   "final": "esmaecendo",
+   "silencio_final": 0.2,
+   "acerto": 76,
+   "nao_reconhecidas": [
+    "rawr",
+    "fofolucos",
+    "fechou",
+    "tapa",
+    "psiu",
+    "piscada",
+    "mimi",
+    "nhoque",
+    "igual",
+    "tambor",
+    "zuzu",
+    "laranja"
+   ],
+   "pontos_a_conferir": [
+    "só 76% da letra reconhecida — ouvir a pronúncia"
+   ]
+  }
+ },
+ "ouvido": {
+  "Cadê o Monstrinho_": {
+   "1 começo chama atenção": null,
+   "5 melodia combina com a letra": null,
+   "6 dá vontade de dançar": null,
+   "7 pronúncia natural": null,
+   "8 tem a cara do canal": null,
+   "9 nenhum trecho cansativo": null
+  }
+ },
+ "escolhida": "Cadê o Monstrinho_"
+}

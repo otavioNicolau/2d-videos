@@ -1,0 +1,1062 @@
+{
+  "schema": "1.1",
+  "id": "ep13-andar-de-pinguim-short",
+  "title": "Andar de Pinguim — Short",
+  "logline": "Clipe de \"Andar de Pinguim\" — imitar o jeito de andar do pinguim. Montado do roteiro verso a verso (roteiro.json).",
+  "fps": 30,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "background": "plano_parque",
+  "soundtrack": {
+    "file": "musica/trabalho.wav",
+    "analysis": "analise/song.json",
+    "start": 0.0,
+    "end": 12.853,
+    "fade_out": 0.3,
+    "beat_grid": "full"
+  },
+  "captions": {
+    "lyrics": "analise/letra.json",
+    "style": "palavra_a_palavra"
+  },
+  "overlays": {
+    "logo": true,
+    "channel": [
+      "LAURINHA",
+      "e Luisinho"
+    ]
+  },
+  "cast": {
+    "laurinha": {
+      "character": "laurinha"
+    },
+    "luisinho": {
+      "character": "luisinho"
+    },
+    "ping": {
+      "character": "pinguim"
+    },
+    "p1": {
+      "character": "pinguim"
+    },
+    "p2": {
+      "character": "pinguim"
+    },
+    "p3": {
+      "character": "pinguim"
+    },
+    "p4": {
+      "character": "pinguim"
+    },
+    "p5": {
+      "character": "pinguim"
+    },
+    "p6": {
+      "character": "pinguim"
+    },
+    "joinha": {
+      "character": "joinha"
+    },
+    "mamae": {
+      "character": "mamae"
+    },
+    "botao": {
+      "character": "botao_inscrever"
+    }
+  },
+  "approval": {
+    "storyboard": false,
+    "final_render": false
+  },
+  "projeto": "laurinha/ep13-andar-de-pinguim",
+  "scenes": [
+    {
+      "id": "s01_refrao",
+      "title": "Andar de pinguim! Ê!",
+      "duration": 3.7063,
+      "description": "Andar de pinguim! Ê! / Pé grudadinho! Tic, tic!",
+      "background": "plano_gelo",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.34,
+            "x": 850.0,
+            "y": 540.0,
+            "zoom": 1.808
+          },
+          {
+            "t": 3.706,
+            "x": 850.0,
+            "y": 540.0,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 661.2907191149354,
+            "y": 930,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.34,
+              "do": "dance",
+              "style": "lado",
+              "dur": 3.367
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1038.7092808850646,
+            "y": 930,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.34,
+              "do": "dance",
+              "style": "lado",
+              "dur": 3.367
+            }
+          ]
+        }
+      },
+      "props": {
+        "p1": {
+          "start": {
+            "x": 1038.7092808850646,
+            "y": 930,
+            "z": 1,
+            "lado": -1,
+            "depth": 0.8
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.34,
+              "pose": {
+                "x": 2150
+              }
+            },
+            {
+              "t": 0.34,
+              "pose": {
+                "anda": 0.0
+              }
+            },
+            {
+              "t": 0.34,
+              "pose": {
+                "anda": 0.5
+              },
+              "ease": "inout",
+              "in": 0.0
+            },
+            {
+              "t": 1.129,
+              "pose": {
+                "anda": 1.0
+              },
+              "ease": "inout",
+              "in": 0.789
+            },
+            {
+              "t": 1.872,
+              "pose": {
+                "anda": 1.5
+              },
+              "ease": "inout",
+              "in": 0.743
+            },
+            {
+              "t": 2.592,
+              "pose": {
+                "anda": 2.0
+              },
+              "ease": "inout",
+              "in": 0.72
+            },
+            {
+              "t": 3.335,
+              "pose": {
+                "anda": 2.5
+              },
+              "ease": "inout",
+              "in": 0.743
+            },
+            {
+              "t": 3.666,
+              "pose": {
+                "x": 1150
+              },
+              "ease": "linear",
+              "in": 3.326
+            }
+          ]
+        },
+        "p2": {
+          "start": {
+            "x": 1038.7092808850646,
+            "y": 930,
+            "z": 1,
+            "lado": -1,
+            "depth": 0.752
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.34,
+              "pose": {
+                "x": 2350
+              }
+            },
+            {
+              "t": 0.34,
+              "pose": {
+                "anda": 0.25
+              }
+            },
+            {
+              "t": 0.34,
+              "pose": {
+                "anda": 0.75
+              },
+              "ease": "inout",
+              "in": 0.0
+            },
+            {
+              "t": 1.129,
+              "pose": {
+                "anda": 1.25
+              },
+              "ease": "inout",
+              "in": 0.789
+            },
+            {
+              "t": 1.872,
+              "pose": {
+                "anda": 1.75
+              },
+              "ease": "inout",
+              "in": 0.743
+            },
+            {
+              "t": 2.592,
+              "pose": {
+                "anda": 2.25
+              },
+              "ease": "inout",
+              "in": 0.72
+            },
+            {
+              "t": 3.335,
+              "pose": {
+                "anda": 2.75
+              },
+              "ease": "inout",
+              "in": 0.743
+            },
+            {
+              "t": 3.666,
+              "pose": {
+                "x": 1350
+              },
+              "ease": "linear",
+              "in": 3.326
+            }
+          ]
+        },
+        "p3": {
+          "start": {
+            "x": 1038.7092808850646,
+            "y": 930,
+            "z": 1,
+            "lado": -1,
+            "depth": 0.7040000000000001
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.34,
+              "pose": {
+                "x": 2550
+              }
+            },
+            {
+              "t": 0.34,
+              "pose": {
+                "anda": 0.5
+              }
+            },
+            {
+              "t": 0.34,
+              "pose": {
+                "anda": 1.0
+              },
+              "ease": "inout",
+              "in": 0.0
+            },
+            {
+              "t": 1.129,
+              "pose": {
+                "anda": 1.5
+              },
+              "ease": "inout",
+              "in": 0.789
+            },
+            {
+              "t": 1.872,
+              "pose": {
+                "anda": 2.0
+              },
+              "ease": "inout",
+              "in": 0.743
+            },
+            {
+              "t": 2.592,
+              "pose": {
+                "anda": 2.5
+              },
+              "ease": "inout",
+              "in": 0.72
+            },
+            {
+              "t": 3.335,
+              "pose": {
+                "anda": 3.0
+              },
+              "ease": "inout",
+              "in": 0.743
+            },
+            {
+              "t": 3.666,
+              "pose": {
+                "x": 1550
+              },
+              "ease": "linear",
+              "in": 3.326
+            }
+          ]
+        },
+        "p4": {
+          "start": {
+            "x": 1038.7092808850646,
+            "y": 930,
+            "z": 1,
+            "lado": -1,
+            "depth": 0.8
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.34,
+              "pose": {
+                "x": 2750
+              }
+            },
+            {
+              "t": 0.34,
+              "pose": {
+                "anda": 0.75
+              }
+            },
+            {
+              "t": 0.34,
+              "pose": {
+                "anda": 1.25
+              },
+              "ease": "inout",
+              "in": 0.0
+            },
+            {
+              "t": 1.129,
+              "pose": {
+                "anda": 1.75
+              },
+              "ease": "inout",
+              "in": 0.789
+            },
+            {
+              "t": 1.872,
+              "pose": {
+                "anda": 2.25
+              },
+              "ease": "inout",
+              "in": 0.743
+            },
+            {
+              "t": 2.592,
+              "pose": {
+                "anda": 2.75
+              },
+              "ease": "inout",
+              "in": 0.72
+            },
+            {
+              "t": 3.335,
+              "pose": {
+                "anda": 3.25
+              },
+              "ease": "inout",
+              "in": 0.743
+            },
+            {
+              "t": 3.666,
+              "pose": {
+                "x": 1750
+              },
+              "ease": "linear",
+              "in": 3.326
+            }
+          ]
+        },
+        "p5": {
+          "start": {
+            "x": 1038.7092808850646,
+            "y": 930,
+            "z": 1,
+            "lado": -1,
+            "depth": 0.752
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.34,
+              "pose": {
+                "x": 2950
+              }
+            },
+            {
+              "t": 0.34,
+              "pose": {
+                "anda": 1.0
+              }
+            },
+            {
+              "t": 0.34,
+              "pose": {
+                "anda": 1.5
+              },
+              "ease": "inout",
+              "in": 0.0
+            },
+            {
+              "t": 1.129,
+              "pose": {
+                "anda": 2.0
+              },
+              "ease": "inout",
+              "in": 0.789
+            },
+            {
+              "t": 1.872,
+              "pose": {
+                "anda": 2.5
+              },
+              "ease": "inout",
+              "in": 0.743
+            },
+            {
+              "t": 2.592,
+              "pose": {
+                "anda": 3.0
+              },
+              "ease": "inout",
+              "in": 0.72
+            },
+            {
+              "t": 3.335,
+              "pose": {
+                "anda": 3.5
+              },
+              "ease": "inout",
+              "in": 0.743
+            },
+            {
+              "t": 3.666,
+              "pose": {
+                "x": 1950
+              },
+              "ease": "linear",
+              "in": 3.326
+            }
+          ]
+        }
+      },
+      "flash_in": true,
+      "callouts": [
+        {
+          "t": 0.49,
+          "text": "ANDAR DE PINGUIM!",
+          "dur": 1.8,
+          "color": "verde",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.673,
+          "to": 3.686
+        },
+        {
+          "who": "luisinho",
+          "from": 0.673,
+          "to": 3.686
+        }
+      ]
+    },
+    {
+      "id": "s02_refrao",
+      "title": "Andar de pinguim! Ê!",
+      "duration": 2.9334,
+      "description": "Andar de pinguim! Ê! / Balança, balança! Ê!",
+      "background": "danca_xadrez_verde",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 2.9334,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 800.0,
+            "y": 1010,
+            "turn": 0.25,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.15
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "balanco",
+              "dur": 2.933
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1120.0,
+            "y": 1010,
+            "turn": -0.25,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.15
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "balanco",
+              "dur": 2.933
+            }
+          ]
+        }
+      },
+      "props": {
+        "ping": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "z": 2,
+            "lado": 1,
+            "depth": 1.05
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "anda": 0.0
+              }
+            },
+            {
+              "t": 0.0,
+              "pose": {
+                "anda": 0.5
+              },
+              "ease": "inout",
+              "in": 0.0
+            },
+            {
+              "t": 0.0,
+              "pose": {
+                "asas": 0.0
+              }
+            },
+            {
+              "t": 0.0,
+              "pose": {
+                "asas": 1.0
+              },
+              "ease": "out",
+              "in": 0.0
+            },
+            {
+              "t": 0.744,
+              "pose": {
+                "anda": 1.0
+              },
+              "ease": "inout",
+              "in": 0.744
+            },
+            {
+              "t": 0.744,
+              "pose": {
+                "asas": 0.0
+              },
+              "ease": "out",
+              "in": 0.744
+            },
+            {
+              "t": 1.463,
+              "pose": {
+                "anda": 1.5
+              },
+              "ease": "inout",
+              "in": 0.719
+            },
+            {
+              "t": 1.463,
+              "pose": {
+                "asas": 1.0
+              },
+              "ease": "out",
+              "in": 0.719
+            },
+            {
+              "t": 2.206,
+              "pose": {
+                "anda": 2.0
+              },
+              "ease": "inout",
+              "in": 0.743
+            },
+            {
+              "t": 2.206,
+              "pose": {
+                "asas": 0.0
+              },
+              "ease": "out",
+              "in": 0.743
+            }
+          ]
+        }
+      },
+      "fx": [
+        "notas"
+      ],
+      "callouts": [
+        {
+          "t": 1.64,
+          "text": "BALANÇA, BALANÇA!",
+          "dur": 1.293,
+          "color": "rosa",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.092,
+          "to": 2.923
+        },
+        {
+          "who": "luisinho",
+          "from": 0.092,
+          "to": 2.923
+        }
+      ]
+    },
+    {
+      "id": "s03_refrao",
+      "title": "Andar de pinguim! Ê!",
+      "duration": 3.3333,
+      "description": "Andar de pinguim! Ê! / Pé grudadinho! Tic, tic!",
+      "background": "plano_gelo",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1500,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          },
+          {
+            "t": 3.3333,
+            "x": 1500,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1500,
+            "y": 930,
+            "turn": -0.3,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "pezinho",
+              "dur": 3.333
+            }
+          ]
+        }
+      },
+      "props": {
+        "ping": {
+          "start": {
+            "x": 1311.2907191149354,
+            "y": 930,
+            "z": 2,
+            "lado": 1,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "anda": 0.0
+              }
+            },
+            {
+              "t": 0.0,
+              "pose": {
+                "anda": 0.5
+              },
+              "ease": "inout",
+              "in": 0.0
+            },
+            {
+              "t": 0.372,
+              "pose": {
+                "anda": 1.0
+              },
+              "ease": "inout",
+              "in": 0.372
+            },
+            {
+              "t": 0.743,
+              "pose": {
+                "anda": 1.5
+              },
+              "ease": "inout",
+              "in": 0.371
+            },
+            {
+              "t": 1.115,
+              "pose": {
+                "anda": 2.0
+              },
+              "ease": "inout",
+              "in": 0.372
+            },
+            {
+              "t": 1.486,
+              "pose": {
+                "anda": 2.5
+              },
+              "ease": "inout",
+              "in": 0.371
+            },
+            {
+              "t": 1.858,
+              "pose": {
+                "anda": 3.0
+              },
+              "ease": "inout",
+              "in": 0.372
+            },
+            {
+              "t": 2.206,
+              "pose": {
+                "anda": 3.5
+              },
+              "ease": "inout",
+              "in": 0.348
+            },
+            {
+              "t": 2.578,
+              "pose": {
+                "anda": 4.0
+              },
+              "ease": "inout",
+              "in": 0.372
+            },
+            {
+              "t": 2.949,
+              "pose": {
+                "anda": 4.5
+              },
+              "ease": "inout",
+              "in": 0.371
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 2.6,
+          "text": "TIC, TIC!",
+          "dur": 0.733,
+          "color": "laranja",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.283,
+          "to": 3.323
+        }
+      ]
+    },
+    {
+      "id": "s04_refrao",
+      "title": "Andar de pinguim! Ê!",
+      "duration": 2.88,
+      "description": "Andar de pinguim! Ê! / Balança, balança! Ê!",
+      "background": "danca_bolinhas_rosa",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 2.88,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 800.0,
+            "y": 1010,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.2
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "balanco",
+              "dur": 2.933
+            }
+          ]
+        },
+        "laurinha": {
+          "start": {
+            "x": 1120.0,
+            "y": 1010,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.2
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "balanco",
+              "dur": 2.933
+            }
+          ]
+        }
+      },
+      "props": {
+        "p1": {
+          "start": {
+            "x": 707.8786020846107,
+            "y": 1010,
+            "z": 2,
+            "lado": 1,
+            "depth": 0.9
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "anda": 0.0
+              }
+            },
+            {
+              "t": 0.0,
+              "pose": {
+                "anda": 0.5
+              },
+              "ease": "inout",
+              "in": 0.0
+            },
+            {
+              "t": 0.743,
+              "pose": {
+                "anda": 1.0
+              },
+              "ease": "inout",
+              "in": 0.743
+            },
+            {
+              "t": 1.486,
+              "pose": {
+                "anda": 1.5
+              },
+              "ease": "inout",
+              "in": 0.743
+            },
+            {
+              "t": 2.206,
+              "pose": {
+                "anda": 2.0
+              },
+              "ease": "inout",
+              "in": 0.72
+            }
+          ]
+        },
+        "p2": {
+          "start": {
+            "x": 1212.1213979153893,
+            "y": 1010,
+            "z": 2,
+            "lado": -1,
+            "depth": 0.9
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "anda": 0.5
+              }
+            },
+            {
+              "t": 0.0,
+              "pose": {
+                "anda": 1.0
+              },
+              "ease": "inout",
+              "in": 0.0
+            },
+            {
+              "t": 0.743,
+              "pose": {
+                "anda": 1.5
+              },
+              "ease": "inout",
+              "in": 0.743
+            },
+            {
+              "t": 1.486,
+              "pose": {
+                "anda": 2.0
+              },
+              "ease": "inout",
+              "in": 0.743
+            },
+            {
+              "t": 2.206,
+              "pose": {
+                "anda": 2.5
+              },
+              "ease": "inout",
+              "in": 0.72
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "callouts": [
+        {
+          "t": 1.65,
+          "text": "Ê!",
+          "dur": 1.283,
+          "color": "verde",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "luisinho",
+          "from": 0.075,
+          "to": 2.86
+        },
+        {
+          "who": "laurinha",
+          "from": 0.075,
+          "to": 2.86
+        }
+      ]
+    }
+  ]
+}

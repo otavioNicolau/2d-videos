@@ -1,0 +1,682 @@
+{
+  "schema": "1.1",
+  "id": "ep31-chule-de-sapo-short",
+  "projeto": "laurinha/ep31-chule-de-sapo",
+  "title": "Chulé de Sapo! — Short",
+  "logline": "Clipe de \"Chulé de Sapo!\" — o sapo do chulé que espanta até o gambá: lava o pé, mas calça a meia suja e o chulé volta. Montado do roteiro verso a verso (roteiro.json).",
+  "fps": 30,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "background": "plano_parque",
+  "soundtrack": {
+    "file": "musica/trabalho.wav",
+    "analysis": "analise/song.json",
+    "start": 0.0,
+    "end": 14.2333,
+    "fade_out": 0.3,
+    "beat_grid": "full"
+  },
+  "captions": {
+    "lyrics": "analise/letra.json",
+    "style": "palavra_a_palavra"
+  },
+  "overlays": {
+    "logo": true,
+    "channel": [
+      "LAURINHA",
+      "e Luisinho"
+    ]
+  },
+  "cast": {
+    "laurinha": {
+      "character": "laurinha"
+    },
+    "luisinho": {
+      "character": "luisinho"
+    },
+    "sapo": {
+      "character": "sapo"
+    },
+    "nv": {
+      "character": "nuvem_chule"
+    },
+    "mamae": {
+      "character": "mamae"
+    },
+    "bota": {
+      "character": "bota"
+    },
+    "rosa": {
+      "character": "roseira"
+    },
+    "mosca": {
+      "character": "mosquinha"
+    },
+    "mosq": {
+      "character": "mosquinha"
+    },
+    "gamba": {
+      "character": "gamba"
+    },
+    "bat": {
+      "character": "bateria_show"
+    },
+    "tec": {
+      "character": "teclado_inst"
+    },
+    "meia": {
+      "character": "meia"
+    },
+    "sab": {
+      "character": "sabonete"
+    },
+    "bolha": {
+      "character": "bolha"
+    },
+    "joinha": {
+      "character": "joinha"
+    },
+    "botao": {
+      "character": "botao_inscrever"
+    }
+  },
+  "approval": {
+    "storyboard": false,
+    "final_render": false
+  },
+  "scenes": [
+    {
+      "id": "s01_refrao",
+      "title": "Que chulé! Que chulé!",
+      "duration": 3.6667,
+      "description": "Que chulé! Que chulé! / Chulé de sapo, ê!",
+      "background": "plano_salao",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1300.0,
+            "y": 540.0,
+            "zoom": 1.808
+          },
+          {
+            "t": 3.6667,
+            "x": 1300.0,
+            "y": 540.0,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "mamae": {
+          "start": {
+            "x": 1300.0,
+            "y": 730,
+            "turn": 0.3,
+            "expr": "azedo",
+            "z": 2,
+            "depth": 1.0875
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.3,
+              "do": "tampar_nariz",
+              "dur": 3.367
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1450.0,
+            "y": 970,
+            "turn": -0.3,
+            "expr": "azedo",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.5,
+              "do": "tampar_nariz",
+              "dur": 3.167
+            }
+          ]
+        }
+      },
+      "props": {
+        "nv": {
+          "start": {
+            "x": 2230.5,
+            "y": 700,
+            "z": 5,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "x": 2230.5,
+                "onda": 0.0,
+                "tam": 1.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.61,
+              "pose": {
+                "x": 369.5
+              },
+              "ease": "linear",
+              "in": 3.58
+            },
+            {
+              "t": 3.61,
+              "pose": {
+                "onda": 5.5
+              },
+              "ease": "linear",
+              "in": 3.58
+            },
+            {
+              "t": 3.61,
+              "pose": {
+                "tam": 1.0
+              },
+              "ease": "linear",
+              "in": 3.58
+            }
+          ]
+        },
+        "sapo": {
+          "start": {
+            "x": 1150.0,
+            "y": 970,
+            "z": 3,
+            "depth": 1.885,
+            "lado": 1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "lid": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.0,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "out"
+            },
+            {
+              "t": 0.21,
+              "pose": {
+                "pulo": 0.45
+              },
+              "ease": "out",
+              "in": 0.18
+            },
+            {
+              "t": 0.42,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "out",
+              "in": 0.18
+            },
+            {
+              "t": 0.63,
+              "pose": {
+                "pulo": 0.45
+              },
+              "ease": "out",
+              "in": 0.18
+            },
+            {
+              "t": 0.84,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "out",
+              "in": 0.18
+            },
+            {
+              "t": 1.05,
+              "pose": {
+                "pulo": 0.45
+              },
+              "ease": "out",
+              "in": 0.18
+            },
+            {
+              "t": 1.26,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "out",
+              "in": 0.18
+            },
+            {
+              "t": 1.47,
+              "pose": {
+                "pulo": 0.45
+              },
+              "ease": "out",
+              "in": 0.18
+            },
+            {
+              "t": 1.68,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "out",
+              "in": 0.18
+            },
+            {
+              "t": 1.89,
+              "pose": {
+                "pulo": 0.45
+              },
+              "ease": "out",
+              "in": 0.18
+            },
+            {
+              "t": 2.1,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "out",
+              "in": 0.18
+            },
+            {
+              "t": 2.31,
+              "pose": {
+                "pulo": 0.45
+              },
+              "ease": "out",
+              "in": 0.18
+            },
+            {
+              "t": 2.52,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "out",
+              "in": 0.18
+            },
+            {
+              "t": 2.73,
+              "pose": {
+                "pulo": 0.45
+              },
+              "ease": "out",
+              "in": 0.18
+            },
+            {
+              "t": 2.94,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "out",
+              "in": 0.18
+            },
+            {
+              "t": 3.15,
+              "pose": {
+                "pulo": 0.45
+              },
+              "ease": "out",
+              "in": 0.18
+            },
+            {
+              "t": 3.36,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "out",
+              "in": 0.18
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "QUE CHULÉ!",
+          "dur": 1.68,
+          "color": "verde",
+          "y": 170
+        },
+        {
+          "t": 1.83,
+          "text": "CHULÉ DE SAPO, Ê!",
+          "dur": 1.8,
+          "color": "roxo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "luisinho",
+          "from": 0.14,
+          "to": 3.657
+        }
+      ],
+      "flash_in": true
+    },
+    {
+      "id": "s02_refrao",
+      "title": "Que chulé! Que chulé!",
+      "duration": 3.2666,
+      "description": "Que chulé! Que chulé! / Vai lavar o pé!",
+      "background": "plano_lagoa",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1192.6,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          },
+          {
+            "t": 3.2666,
+            "x": 1192.6,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {},
+      "props": {
+        "sapo": {
+          "start": {
+            "x": 1192.6,
+            "y": 930,
+            "z": 4,
+            "depth": 2.755,
+            "lado": 1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "lid": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.2,
+              "pose": {
+                "croac": 1.0
+              },
+              "ease": "out"
+            },
+            {
+              "t": 0.55,
+              "pose": {
+                "croac": 0.0
+              },
+              "ease": "out",
+              "in": 0.32
+            },
+            {
+              "t": 1.8,
+              "pose": {
+                "croac": 1.0
+              },
+              "ease": "out",
+              "in": 1.22
+            },
+            {
+              "t": 2.15,
+              "pose": {
+                "croac": 0.0
+              },
+              "ease": "out",
+              "in": 0.32
+            }
+          ]
+        },
+        "bota": {
+          "start": {
+            "x": 1381.3092808850645,
+            "y": 930,
+            "z": 5,
+            "depth": 1.885
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cheiro": 1.0,
+                "onda": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.21,
+              "pose": {
+                "onda": 2.0
+              },
+              "ease": "linear",
+              "in": 3.18
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 1.47,
+          "text": "VAI LAVAR O PÉ!",
+          "dur": 1.797,
+          "color": "azul",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s03_refrao",
+      "title": "Que chulé! Que chulé!",
+      "duration": 2.8334,
+      "description": "Que chulé! Que chulé! / Chulé de sapo, ê!",
+      "background": "danca_raios_azul",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 2.8334,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "mamae": {
+          "start": {
+            "x": 960.0,
+            "y": 800,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 2,
+            "depth": 0.85
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "dur": 2.833,
+              "style": "pezinho"
+            }
+          ]
+        },
+        "laurinha": {
+          "start": {
+            "x": 810.0,
+            "y": 1190,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.05,
+              "do": "dance",
+              "dur": 2.783,
+              "style": "festa"
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1110.0,
+            "y": 1190,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "dance",
+              "dur": 2.733,
+              "style": "pezinho"
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "QUE CHULÉ!",
+          "dur": 1.8,
+          "color": "verde",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.247,
+          "to": 2.823
+        },
+        {
+          "who": "luisinho",
+          "from": 0.247,
+          "to": 2.823
+        }
+      ]
+    },
+    {
+      "id": "s04_refrao",
+      "title": "Que chulé! Que chulé!",
+      "duration": 4.4666,
+      "description": "Que chulé! Que chulé! / Vai lavar o pé!",
+      "background": "plano_jardim",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1300.0,
+            "y": 523.9189189189188,
+            "zoom": 1.85
+          },
+          {
+            "t": 4.4666,
+            "x": 1300.0,
+            "y": 523.9189189189188,
+            "zoom": 1.85
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 1300.0,
+            "y": 930,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "tampar_nariz",
+              "dur": 2.01
+            },
+            {
+              "t": 2.23,
+              "do": "point",
+              "dur": 2.237
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 1.79,
+          "text": "VAI LAVAR O PÉ!",
+          "dur": 1.8,
+          "color": "azul",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "luisinho",
+          "from": 0.013,
+          "to": 3.673
+        }
+      ]
+    }
+  ]
+}

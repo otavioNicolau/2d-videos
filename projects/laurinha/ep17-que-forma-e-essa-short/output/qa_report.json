@@ -1,0 +1,140 @@
+{
+  "episode": "ep17-que-forma-e-essa-short",
+  "scenes": {
+    "s01_refrao": {
+      "frames": 101,
+      "performers": {
+        "laurinha": {
+          "drawings": 101,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 100
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 101,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 100
+          },
+          "empty_frames": 0
+        },
+        "c1": {
+          "drawings": 101,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 100
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s02_refrao": {
+      "frames": 111,
+      "performers": {
+        "laurinha": {
+          "drawings": 111,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 110
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 111,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 110
+          },
+          "empty_frames": 0
+        },
+        "c1": {
+          "drawings": 111,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 110
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s03_refrao": {
+      "frames": 99,
+      "performers": {
+        "laurinha": {
+          "drawings": 99,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 98
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 99,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 98
+          },
+          "empty_frames": 0
+        },
+        "c2": {
+          "drawings": 99,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 98
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s04_refrao": {
+      "frames": 90,
+      "performers": {
+        "laurinha": {
+          "drawings": 72,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 71
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 72,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 71
+          },
+          "empty_frames": 0
+        },
+        "c2": {
+          "drawings": 90,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 89
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    }
+  },
+  "warnings": [
+    "storyboard ainda não aprovado (approval.storyboard = false): o render sairá como CANDIDATO",
+    "storyboard s01_refrao: pendente",
+    "storyboard s02_refrao: pendente",
+    "storyboard s03_refrao: pendente",
+    "storyboard s04_refrao: pendente"
+  ],
+  "lines": {},
+  "video": "/home/otavio/2d/projects/laurinha/ep17-que-forma-e-essa-short/output/ep17-que-forma-e-essa-short_CANDIDATO.mp4",
+  "contact_sheet": "/home/otavio/2d/projects/laurinha/ep17-que-forma-e-essa-short/output/prancha.png",
+  "approved": false
+}

@@ -1,0 +1,260 @@
+{
+  "episode": "ep03-cosquinha-de-monstrinho-short",
+  "scenes": {
+    "s01_refrao": {
+      "frames": 78,
+      "performers": {
+        "zuzu": {
+          "drawings": 78,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 77
+          },
+          "empty_frames": 0
+        },
+        "bilu": {
+          "drawings": 78,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 77
+          },
+          "empty_frames": 0
+        },
+        "nhoque": {
+          "drawings": 78,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 77
+          },
+          "empty_frames": 0
+        },
+        "nv": {
+          "drawings": 78,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 77
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s02_refrao": {
+      "frames": 65,
+      "performers": {
+        "zuzu": {
+          "drawings": 65,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 64
+          },
+          "empty_frames": 0
+        },
+        "bilu": {
+          "drawings": 65,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 64
+          },
+          "empty_frames": 0
+        },
+        "nhoque": {
+          "drawings": 65,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 64
+          },
+          "empty_frames": 0
+        },
+        "nv": {
+          "drawings": 65,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 64
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s03_refrao": {
+      "frames": 131,
+      "performers": {
+        "teco": {
+          "drawings": 131,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 130
+          },
+          "empty_frames": 0
+        },
+        "pena": {
+          "drawings": 131,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 130
+          },
+          "empty_frames": 0
+        },
+        "nv": {
+          "drawings": 131,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 130
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s04_refrao": {
+      "frames": 132,
+      "performers": {
+        "bilu": {
+          "drawings": 132,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 131
+          },
+          "empty_frames": 0
+        },
+        "mimi": {
+          "drawings": 132,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 131
+          },
+          "empty_frames": 0
+        },
+        "teco": {
+          "drawings": 132,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 131
+          },
+          "empty_frames": 0
+        },
+        "bo": {
+          "drawings": 132,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 131
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s05_refrao": {
+      "frames": 82,
+      "performers": {
+        "teco": {
+          "drawings": 82,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 81
+          },
+          "empty_frames": 0
+        },
+        "gogo": {
+          "drawings": 82,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 81
+          },
+          "empty_frames": 0
+        },
+        "mimi": {
+          "drawings": 82,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 81
+          },
+          "empty_frames": 0
+        },
+        "zuzu": {
+          "drawings": 82,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 81
+          },
+          "empty_frames": 0
+        },
+        "bo": {
+          "drawings": 82,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 81
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s06_refrao": {
+      "frames": 81,
+      "performers": {
+        "teco": {
+          "drawings": 81,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 80
+          },
+          "empty_frames": 0
+        },
+        "gogo": {
+          "drawings": 81,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 80
+          },
+          "empty_frames": 0
+        },
+        "mimi": {
+          "drawings": 81,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 80
+          },
+          "empty_frames": 0
+        },
+        "zuzu": {
+          "drawings": 81,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 80
+          },
+          "empty_frames": 0
+        },
+        "bo": {
+          "drawings": 81,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 80
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    }
+  },
+  "warnings": [
+    "storyboard ainda não aprovado (approval.storyboard = false): o render sairá como CANDIDATO",
+    "storyboard s01_refrao: pendente",
+    "storyboard s02_refrao: pendente",
+    "storyboard s03_refrao: sem storyboard",
+    "storyboard s04_refrao: sem storyboard",
+    "storyboard s05_refrao: sem storyboard",
+    "storyboard s06_refrao: sem storyboard"
+  ],
+  "lines": {},
+  "video": "/home/otavio/2d/projects/fofolucos/ep03-cosquinha-de-monstrinho-short/output/ep03-cosquinha-de-monstrinho-short_CANDIDATO.mp4",
+  "contact_sheet": "/home/otavio/2d/projects/fofolucos/ep03-cosquinha-de-monstrinho-short/output/prancha.png",
+  "approved": false
+}

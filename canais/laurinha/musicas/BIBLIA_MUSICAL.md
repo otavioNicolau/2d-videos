@@ -37,6 +37,19 @@ Vale da 29 em diante (`estilos.json → canal.trio`, versão E14; E13 = 27/28, s
   antes do groove do canal). Primeiro caso: **latino = dembow** (Fofolucos 03 "Cosquinha de Monstrinho", nota 4,9 —
   batida sincopada 0,72 e baixo no contratempo 0,59, os dois no alvo pela primeira vez). Usado na 33 e na 44.
 
+## Público: 5 a 8 anos (23/11/2026 — usuário: "os dois canais será essa faixa daqui pra frente")
+Vale para toda letra nova ou reescrita, nos DOIS canais (igual ao Fofolucos). A 31 "Chulé de Sapo!" foi a primeira.
+- **História com piada e virada**: mini-enredo com surpresa no fim; se a letra faz uma pergunta ("por quê?"), a resposta
+  vem como piada (a 31: o chulé voltou porque ele calçou a meia suja).
+- **Humor de 5 a 8**: ironia e exagero (até o gambá tapa o nariz), nojinho engraçado, o personagem que se dá mal.
+- **Vocabulário um pouco mais rico** e **menos diminutivo de bebê** (pezinho, cheirosinho, unhinha → pé, cheiroso, unha);
+  o diminutivo fica só onde é nome/carinho (Laurinha, turminha, monstrinho).
+- **Comandos-desafio** na ponte (pula num pé só e no outro, sem parar; quem consegue…?), não só gestos simples.
+- **Sem conteúdo de bebê**: nada de aula de cores, números, contar ovinhos ou "o bicho faz assim" puro — se o tema for
+  esse, ele ganha uma virada engraçada.
+- Continua valendo tudo abaixo: versos de 3–5 palavras, rima em todo par, gancho de 3 palavras, refrão que repete, uma
+  voz, convite final com o papai e a mamãe.
+
 ## 0. Jeito de escrever (18/11/2026 — análise da referência, aprovado pelo usuário; vale para toda letra nova)
 Detalhes em [REFERENCIA_ANIMADINHOS.md](REFERENCIA_ANIMADINHOS.md).
 1. **Premissa engraçada numa frase**: um personagem com um exagero (o queijo que estica até a lua, a vovó de patinete que

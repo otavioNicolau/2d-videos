@@ -1,0 +1,146 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "O Bigodão do Vovô Ciço!",
+ "gancho": "bigodão do vovô",
+ "palavras_tema": [
+  "vovô",
+  "bigode",
+  "bigodão",
+  "bravo",
+  "abraço"
+ ],
+ "tipo": "personagem",
+ "tema": "o vovô Ciço, avô da Laurinha e do Luisinho, tem um bigodão enrolado que deixa ele com CARA DE BRAVO — mas ele é um amor; tem CIÚMES do bigode e não deixa NINGUÉM tocar ('no bigode, não, não, não!'). Refrão: 'ninguém pode tocar! bravo? que nada! vem abraçar!'. Ponte = fazer bigode com o dedo e cara de zangado, esconder porque o vovô tá do lado; chegar de mansinho pra tocar… 'Ei! Nem pensar, né!'. Virada: o Luisinho cai e chora; o vovô chega bravo, abre um sorrisão e deixa, SÓ HOJE e em segredo, ele puxar o bigode — e sorri",
+ "dia_a_dia": [
+  "carinho com os avós",
+  "quem parece bravo também pode ser um amor",
+  "respeitar o que é do outro (pedir antes de tocar)"
+ ],
+ "curiosidade": "o bigode cresce mais ou menos um centímetro por mês",
+ "ritmo": "pagodao",
+ "bpm": 135,
+ "estrutura": "A",
+ "voz": "laurinha",
+ "cantam": {
+  "verso": "laurinha",
+  "refrão": "laurinha",
+  "ponte": "laurinha (comandos)"
+ },
+ "cenas": [
+  {
+   "parte": "intro",
+   "ideia": "a casa do vovô Ciço; close do bigodão enrolado e a cara de bravo"
+  },
+  {
+   "parte": "verso 1",
+   "ideia": "o vovô de cara fechada por causa do bigodão… e piscando pros netos (é um amor); o gato e o cachorro chegam perto do bigode e ele: 'não, não, não!' (dedinho balançando)"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "todo mundo tenta tocar o bigode e o vovô desvia; no fim abre os braços e dá um abraço de urso nos netos"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "comandos: bigode com o dedo, cara de zangado, esconde o bigode (o vovô tá do lado!); de mansinho, na ponta do pé… 'Ei! Nem pensar, né!'"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "o Luisinho cai e chora; o vovô chega de cara brava, abre um sorrisão e deixa ele puxar o bigode só hoje, em segredo; o vovô sorri"
+  },
+  {
+   "parte": "final",
+   "ideia": "convite; o vovô dando tchau com os netos e o dedinho 'nem pensar' pro bigode"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [],
+ "status": "aprovada",
+ "versoes": [
+  "O Bigodão do Vovô Ciço!",
+  "O Bigodão do Vovô Ciço! (1)"
+ ],
+ "persona": "laurinha",
+ "youtube": {
+  "resumo": "O BIGODÃO DO VOVÔ CIÇO! 👴🥸 O vovô da Laurinha e do Luisinho tem um bigodão enrolado que deixa ele com cara de bravo… mas ele é um amor! Só tem uma regra: ninguém pode tocar no bigode! Será que alguém consegue? Faz bigode com o dedo e canta junto!",
+  "resumo_short": "BIGODÃO DO VOVÔ! 🥸 Ninguém pode tocar!",
+  "curiosidade": "O bigode cresce mais ou menos um centímetro por mês!",
+  "miniatura": "BIGODÃO\nDO VOVÔ!",
+  "miniatura_cena": {
+   "fundo": "circulo",
+   "centro": [
+    400,
+    430
+   ],
+   "cores": [
+    [
+     255,
+     150,
+     60
+    ],
+    [
+     255,
+     210,
+     63
+    ],
+    [
+     233,
+     84,
+     93
+    ],
+    [
+     255,
+     240,
+     170
+    ]
+   ],
+   "heroi": {
+    "id": "vovo_cico",
+    "pose": {
+     "turn": 0.15,
+     "brow_l": 0.9,
+     "brow_r": 0.9,
+     "brow_y": -0.4,
+     "smile": -0.6,
+     "hand_n_x": -40,
+     "hand_n_y": -150,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "eyes_happy": 0.0,
+     "lid": 0.25,
+     "pupil": 0.8,
+     "mouth": "X"
+    }
+   },
+   "par": {
+    "id": "luisinho",
+    "pose": {
+     "turn": -0.2,
+     "mouth": "D",
+     "eyes_happy": 1.0,
+     "smile": 1.0,
+     "bigode": 1.0
+    },
+    "tam": 520,
+    "x": 1040,
+    "corte": 120
+   },
+   "objetos": [
+    {
+     "id": "gato",
+     "pose": {
+      "assusta": 1.0,
+      "lado": 1.0
+     },
+     "tam": 250,
+     "x": 760,
+     "base": 700
+    }
+   ]
+  }
+ },
+ "revisao": "23/11/2026: música nova a pedido do usuário (substitui 'Bicho Faz Assim!', guardada em _descartadas); letra para 5 a 8 anos; personagem novo: vovô Ciço (bigodão, cara de bravo mas é um amor, ciúmes do bigode)",
+ "escolhida": "O Bigodão do Vovô Ciço! (1)"
+}

@@ -1,0 +1,711 @@
+{
+  "schema": "1.1",
+  "id": "ep26-gelatina-short",
+  "title": "Gelatina! — Short",
+  "logline": "Clipe de \"Gelatina!\" — a gelatina da vovó que sai correndo e faz todo mundo tremer. Montado do roteiro verso a verso (roteiro.json).",
+  "fps": 30,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "background": "plano_parque",
+  "soundtrack": {
+    "file": "musica/trabalho.wav",
+    "analysis": "analise/song.json",
+    "start": 0.0,
+    "end": 13.677,
+    "fade_out": 0.3,
+    "beat_grid": "full"
+  },
+  "captions": {
+    "lyrics": "analise/letra.json",
+    "style": "palavra_a_palavra"
+  },
+  "overlays": {
+    "logo": true,
+    "channel": [
+      "LAURINHA",
+      "e Luisinho"
+    ]
+  },
+  "cast": {
+    "laurinha": {
+      "character": "laurinha"
+    },
+    "luisinho": {
+      "character": "luisinho"
+    },
+    "vovo": {
+      "character": "vovo"
+    },
+    "m": {
+      "character": "mesa"
+    },
+    "g": {
+      "character": "gelatina"
+    },
+    "n": {
+      "character": "nuvem"
+    },
+    "bat": {
+      "character": "bateria_show"
+    },
+    "tec": {
+      "character": "teclado_inst"
+    },
+    "vovozinho": {
+      "character": "vovozinho"
+    },
+    "mamae": {
+      "character": "mamae"
+    },
+    "cx": {
+      "character": "caixa_brinquedos"
+    },
+    "c": {
+      "character": "gato"
+    },
+    "j": {
+      "character": "janela"
+    },
+    "cm": {
+      "character": "cama"
+    },
+    "s": {
+      "character": "sol"
+    },
+    "pl": {
+      "character": "plantinha"
+    },
+    "p": {
+      "character": "pipa"
+    },
+    "pt": {
+      "character": "pato"
+    },
+    "sb": {
+      "character": "sabonete"
+    },
+    "b": {
+      "character": "bolha"
+    },
+    "v": {
+      "character": "ventilador"
+    },
+    "joinha": {
+      "character": "joinha"
+    },
+    "botao": {
+      "character": "botao_inscrever"
+    }
+  },
+  "approval": {
+    "storyboard": false,
+    "final_render": false
+  },
+  "projeto": "laurinha/ep26-gelatina",
+  "scenes": [
+    {
+      "id": "s01_refrao",
+      "title": "Gelatina, gelatina!",
+      "duration": 3.1917,
+      "description": "Gelatina, gelatina! / Treme, treme, treme!",
+      "background": "plano_quarto_azul",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.392,
+            "x": 1335.75,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          },
+          {
+            "t": 3.192,
+            "x": 1335.75,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1147.0407191149354,
+            "y": 930,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.492,
+              "do": "dance",
+              "style": "treme",
+              "dur": 2.7
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1524.4592808850646,
+            "y": 930,
+            "turn": -0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.592,
+              "do": "dance",
+              "style": "treme",
+              "dur": 2.6
+            }
+          ]
+        }
+      },
+      "props": {
+        "g": {
+          "start": {
+            "x": 1300.0,
+            "y": 1000,
+            "z": 2,
+            "depth": 1.015
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.392,
+              "pose": {
+                "fase": 0.0,
+                "treme": 0.0,
+                "boca": 0.8
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.392,
+              "pose": {
+                "treme": 0.4
+              },
+              "ease": "out",
+              "in": 0.0
+            },
+            {
+              "t": 1.652,
+              "pose": {
+                "treme": 1.0
+              },
+              "ease": "out",
+              "in": 1.23
+            },
+            {
+              "t": 3.142,
+              "pose": {
+                "fase": 7.28
+              },
+              "ease": "linear",
+              "in": 2.72
+            }
+          ]
+        },
+        "cx": {
+          "start": {
+            "x": 1147.0407191149354,
+            "y": 930,
+            "z": 1,
+            "depth": 1.015
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.392,
+              "pose": {},
+              "ease": "step"
+            },
+            {
+              "t": 0.992,
+              "pose": {
+                "carrinho": 1.0
+              },
+              "ease": "out"
+            }
+          ]
+        },
+        "v": {
+          "start": {
+            "x": 1524.4592808850646,
+            "y": 940,
+            "z": 1,
+            "depth": 0.797
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.392,
+              "pose": {
+                "vento": 1.0,
+                "giro": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.132,
+              "pose": {
+                "giro": 8.399999999999999
+              },
+              "ease": "linear",
+              "in": 2.71
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "callouts": [
+        {
+          "t": 0.592,
+          "text": "GELATINA!",
+          "dur": 1.8,
+          "color": "roxo",
+          "y": 170
+        },
+        {
+          "t": 1.792,
+          "text": "TREME, TREME!",
+          "dur": 1.4,
+          "color": "vermelho",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.565,
+          "to": 3.172
+        },
+        {
+          "who": "luisinho",
+          "from": 0.565,
+          "to": 3.172
+        }
+      ],
+      "flash_in": true
+    },
+    {
+      "id": "s02_refrao",
+      "title": "Gelatina, gelatina!",
+      "duration": 3.2333,
+      "description": "Gelatina, gelatina! / Ninguém fica firme!",
+      "background": "plano_cozinha",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1264.2,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          },
+          {
+            "t": 3.2333,
+            "x": 1264.2,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 1452.9092808850646,
+            "y": 930,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45,
+            "holding": "baqueta_a4",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1,
+            "holding_f": "baqueta_a4"
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "toca_bateria_a4",
+              "dur": 3.233
+            }
+          ]
+        },
+        "laurinha": {
+          "start": {
+            "x": 1075.4907191149355,
+            "y": 930,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45,
+            "holding": "saxofone",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "toca_sax",
+              "dur": 3.233
+            }
+          ]
+        }
+      },
+      "props": {
+        "bat": {
+          "start": {
+            "x": 1452.9092808850646,
+            "y": 940,
+            "z": 2,
+            "depth": 0.87
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "kit_a4",
+              "dur": 3.233
+            }
+          ]
+        },
+        "g": {
+          "start": {
+            "x": 1452.9092808850646,
+            "y": 960,
+            "z": 2,
+            "depth": 0.652
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "fase": 0.0,
+                "treme": 1.0,
+                "boca": 0.8
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.18,
+              "pose": {
+                "fase": 8.4
+              },
+              "ease": "linear",
+              "in": 3.15
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "callouts": [
+        {
+          "t": 0.3,
+          "text": "TREME, TREME!",
+          "dur": 1.8,
+          "color": "vermelho",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "luisinho",
+          "from": 0.313,
+          "to": 3.223
+        },
+        {
+          "who": "laurinha",
+          "from": 0.313,
+          "to": 3.223
+        }
+      ]
+    },
+    {
+      "id": "s03_refrao",
+      "title": "Gelatina, gelatina!",
+      "duration": 3.2,
+      "description": "Gelatina, gelatina! / Treme, treme, treme!",
+      "background": "plano_sala",
+      "fx": [],
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1300.0,
+            "y": 540,
+            "zoom": 1.808
+          },
+          {
+            "t": 3.2,
+            "x": 1300.0,
+            "y": 540,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1140.0,
+            "y": 930,
+            "turn": 0.25,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "dance",
+              "style": "treme",
+              "dur": 3.1
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1460.0,
+            "y": 930,
+            "turn": -0.25,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.2,
+              "do": "dance",
+              "style": "treme",
+              "dur": 3.0
+            }
+          ]
+        }
+      },
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.26,
+          "to": 3.19
+        },
+        {
+          "who": "luisinho",
+          "from": 0.26,
+          "to": 3.19
+        }
+      ]
+    },
+    {
+      "id": "s04_refrao",
+      "title": "Gelatina, gelatina!",
+      "duration": 4.052,
+      "description": "Gelatina, gelatina! / Ninguém fica firme!",
+      "background": "plano_cozinha",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1264.2,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          },
+          {
+            "t": 3.633,
+            "x": 1264.2,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 1452.9092808850646,
+            "y": 930,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45,
+            "holding": "baqueta_a4",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1,
+            "holding_f": "baqueta_a4"
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "toca_bateria_a4",
+              "dur": 3.633
+            }
+          ]
+        },
+        "laurinha": {
+          "start": {
+            "x": 1075.4907191149355,
+            "y": 930,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "toca_teclado",
+              "dur": 3.633
+            }
+          ]
+        }
+      },
+      "props": {
+        "bat": {
+          "start": {
+            "x": 1452.9092808850646,
+            "y": 940,
+            "z": 2,
+            "depth": 0.87
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "kit_a4",
+              "dur": 3.633
+            }
+          ]
+        },
+        "tec": {
+          "start": {
+            "x": 1075.4907191149355,
+            "y": 940,
+            "z": 2,
+            "depth": 0.899
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tecla": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.593,
+              "pose": {
+                "tecla": 7.3
+              },
+              "ease": "linear",
+              "in": 3.563
+            }
+          ]
+        },
+        "g": {
+          "start": {
+            "x": 1075.4907191149355,
+            "y": 960,
+            "z": 2,
+            "depth": 0.652
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "fase": 0.0,
+                "treme": 1.0,
+                "boca": 0.8
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.58,
+              "pose": {
+                "fase": 9.44
+              },
+              "ease": "linear",
+              "in": 3.55
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "callouts": [
+        {
+          "t": 0.3,
+          "text": "TREME, TREME!",
+          "dur": 1.8,
+          "color": "vermelho",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "luisinho",
+          "from": 0.32,
+          "to": 3.62
+        },
+        {
+          "who": "laurinha",
+          "from": 0.32,
+          "to": 3.62
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+ "schema": "avaliacao-1.0",
+ "versoes": {
+  "Chulé de Sapo!": {
+   "arquivo": "Chulé de Sapo!.wav",
+   "duracao": 151.3,
+   "bpm": 143.6,
+   "bpm_nota": "",
+   "tom": "Ré# maior",
+   "voz_inicio": 3.15,
+   "refrao_inicio": null,
+   "cantado": 69,
+   "intervalos": [
+    [
+     47.5,
+     13.7
+    ],
+    [
+     100.8,
+     13.5
+    ]
+   ],
+   "fim_depois_da_voz": 5.2,
+   "final": "esmaecendo",
+   "silencio_final": 0.0,
+   "acerto": 71,
+   "nao_reconhecidas": [
+    "chule",
+    "luisinho",
+    "baile",
+    "roseira",
+    "tonta",
+    "tapa",
+    "abana",
+    "pula",
+    "saiu",
+    "cheirando",
+    "chama",
+    "ploft"
+   ],
+   "pontos_a_conferir": [
+    "andamento 144 fora da faixa (130–140) do groove próprio da Laurinha",
+    "o gancho não foi reconhecido na transcrição",
+    "só 71% da letra reconhecida — ouvir a pronúncia"
+   ]
+  }
+ },
+ "ouvido": {
+  "Chulé de Sapo!": {
+   "1 começo chama atenção": null,
+   "5 melodia combina com a letra": null,
+   "6 dá vontade de dançar": null,
+   "7 pronúncia natural": null,
+   "8 tem a cara do canal": null,
+   "9 nenhum trecho cansativo": null
+  }
+ },
+ "escolhida": "Chulé de Sapo!"
+}

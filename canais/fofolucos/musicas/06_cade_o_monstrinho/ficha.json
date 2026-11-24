@@ -1,0 +1,149 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Cadê o Monstrinho?",
+ "gancho": "cadê o monstrinho",
+ "palavras_tema": [
+  "esconde-esconde",
+  "achei",
+  "conta",
+  "monstrinho"
+ ],
+ "tipo": "brincadeira",
+ "tema": "esconde-esconde na Vila Monstrinha: o Gogo conta (e espia com o olhão!), e cada monstrinho se esconde mal — o chifre do Bilu fica de fora da moita, a antena do Teco aparece no muro, a Mimi finge que é flor e a barriga do Nhoque ronca. Refrão-pergunta para a criança apontar: 'cadê o monstrinho? tá aqui? tá ali? achei!'. Ponte = comandos de esconder (tapa os olhos, conta até três, ponta do pé, agacha quieto, segura a risada). Virada: o Zuzu ninguém acha… laranja no meio das abóboras, dormindo e roncando",
+ "dia_a_dia": [
+  "brincar de esconde-esconde",
+  "não espiar quando conta (jogar limpo)",
+  "rir junto quando é achado"
+ ],
+ "curiosidade": "tem bicho que se esconde virando a cor do lugar: é a camuflagem, como o camaleão e o bicho-pau",
+ "ritmo": "pop_infantil",
+ "bpm": 134,
+ "estrutura": "R",
+ "voz": "fofolucos",
+ "cantam": {
+  "verso": "fofolucos",
+  "refrão": "fofolucos",
+  "ponte": "fofolucos (comandos de esconder)"
+ },
+ "cenas": [
+  {
+   "parte": "intro",
+   "ideia": "a Vila Monstrinha; o Gogo tapa o olhão e começa a contar; a turma corre pra se esconder"
+  },
+  {
+   "parte": "verso 1",
+   "ideia": "o Gogo espia pela fresta do olhão ('não vale!'); o Bilu atrás da moita com o chifre de fora; o Teco atrás do muro com a antena aparecendo"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "o Gogo procura (aqui? ali?) e acha um: 'achei! sai daí!' + RAWR; a cada refrão acha um monstrinho diferente"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "comandos: tapa os olhos, conta até três, ponta do pé, se esconde; e mais: agacha quieto, segura a risada, psiu, nem uma piscada"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "a Mimi no canteiro fingindo ser flor; a barriga do Nhoque ronca e entrega; o Zuzu sumiu… estava no meio das abóboras, laranja igual a elas, dormindo e roncando"
+  },
+  {
+   "parte": "final",
+   "ideia": "'e você? achou todo mundo?' · joinha · inscreva-se · tchau da turma com o Zuzu bocejando"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [],
+ "status": "aprovada",
+ "versoes": [
+  "Cadê o Monstrinho_"
+ ],
+ "persona": "fofolucos",
+ "youtube": {
+  "resumo": "CADÊ O MONSTRINHO? 👾🙈 Esconde-esconde na Vila Monstrinha! O Gogo conta (e espia com o olhão!), o chifre do Bilu fica de fora da moita, a antena do Teco aparece no muro e a barriga do Nhoque ronca… Mas e o Zuzu? Ninguém acha! Ajuda a procurar: tá aqui? Tá ali?",
+  "resumo_short": "CADÊ O MONSTRINHO? 👾🙈 Tá aqui? Tá ali? Achei!",
+  "curiosidade": "Tem bicho que se esconde ficando da cor do lugar: é a camuflagem, como o camaleão e o bicho-pau!",
+  "miniatura": "CADÊ O\nMONSTRINHO?",
+  "miniatura_cena": {
+   "fundo": "faixas",
+   "centro": [
+    400,
+    430
+   ],
+   "cores": [
+    [
+     64,
+     200,
+     220
+    ],
+    [
+     255,
+     150,
+     190
+    ],
+    [
+     255,
+     210,
+     63
+    ],
+    [
+     155,
+     79,
+     240
+    ]
+   ],
+   "heroi": {
+    "id": "gogo",
+    "pose": {
+     "expr": "joy",
+     "turn": 0.15,
+     "mouth": "D",
+     "hand_n_x": -135,
+     "hand_n_y": -135,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3
+    }
+   },
+   "par": {
+    "id": "zuzu",
+    "pose": {
+     "turn": -0.2,
+     "lid": 1.0,
+     "smile": 0.3
+    },
+    "tam": 520,
+    "x": 1040,
+    "corte": 120
+   },
+   "frente": [
+    {
+     "id": "abobora",
+     "pose": {
+      "sem_contorno": 1.0
+     },
+     "tam": 300,
+     "x": 1040,
+     "base": 720
+    },
+    {
+     "id": "abobora",
+     "pose": {
+      "sem_contorno": 1.0,
+      "tom": 2
+     },
+     "tam": 220,
+     "x": 820,
+     "base": 720
+    }
+   ]
+  }
+ },
+ "revisao": "23/11/2026: letra nova para 5 a 8 anos (brincadeira interativa, piada em cada esconderijo, virada da camuflagem do Zuzu)",
+ "escolhida": "Cadê o Monstrinho_"
+}

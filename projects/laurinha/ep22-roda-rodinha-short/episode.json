@@ -1,0 +1,1041 @@
+{
+  "schema": "1.1",
+  "id": "ep22-roda-rodinha-short",
+  "title": "Roda, Rodinha! — Short",
+  "logline": "Clipe de \"Roda, Rodinha!\" — a roda que cresce até o elefante entrar e todo mundo cair. Montado do roteiro verso a verso (roteiro.json).",
+  "fps": 30,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "background": "plano_parque",
+  "soundtrack": {
+    "file": "musica/trabalho.wav",
+    "analysis": "analise/song.json",
+    "start": 0.0,
+    "end": 12.5,
+    "fade_out": 0.3,
+    "beat_grid": "full"
+  },
+  "captions": {
+    "lyrics": "analise/letra.json",
+    "style": "palavra_a_palavra"
+  },
+  "overlays": {
+    "logo": true,
+    "channel": [
+      "LAURINHA",
+      "e Luisinho"
+    ]
+  },
+  "cast": {
+    "laurinha": {
+      "character": "laurinha"
+    },
+    "luisinho": {
+      "character": "luisinho"
+    },
+    "s": {
+      "character": "sapo"
+    },
+    "p": {
+      "character": "pato"
+    },
+    "b0": {
+      "character": "grilo"
+    },
+    "b1": {
+      "character": "grilo"
+    },
+    "g": {
+      "character": "grilo"
+    },
+    "t": {
+      "character": "tatu"
+    },
+    "bat": {
+      "character": "bateria"
+    },
+    "e": {
+      "character": "elefante"
+    },
+    "b2": {
+      "character": "tatu"
+    },
+    "vovo": {
+      "character": "vovo"
+    },
+    "tec": {
+      "character": "teclado_inst"
+    },
+    "pl1": {
+      "character": "pato"
+    },
+    "pl2": {
+      "character": "grilo"
+    },
+    "vovozinho": {
+      "character": "vovozinho"
+    },
+    "joinha": {
+      "character": "joinha"
+    },
+    "mamae": {
+      "character": "mamae"
+    },
+    "botao": {
+      "character": "botao_inscrever"
+    }
+  },
+  "approval": {
+    "storyboard": false,
+    "final_render": false
+  },
+  "projeto": "laurinha/ep22-roda-rodinha",
+  "scenes": [
+    {
+      "id": "s01_refrao",
+      "title": "Roda, rodinha!",
+      "duration": 3.033,
+      "description": "Roda, rodinha! / Gira, gira, vai!",
+      "background": "plano_jardim",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.1,
+            "x": 1300.0,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          },
+          {
+            "t": 3.033,
+            "x": 1300.0,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1111.2907191149354,
+            "y": 930,
+            "turn": 0.25,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "dance",
+              "style": "roda",
+              "dur": 98.9
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1488.7092808850646,
+            "y": 930,
+            "turn": -0.25,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "dance",
+              "style": "roda",
+              "dur": 98.9
+            }
+          ]
+        }
+      },
+      "props": {
+        "b0": {
+          "start": {
+            "x": 1111.2907191149354,
+            "y": 930,
+            "z": 2,
+            "depth": 1.015
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.1,
+              "pose": {
+                "pulo": 0.0,
+                "cai": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.55,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 1.0,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 1.45,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 1.9,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 2.35,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            }
+          ]
+        },
+        "b1": {
+          "start": {
+            "x": 1488.7092808850646,
+            "y": 930,
+            "z": 2,
+            "depth": 1.015
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.1,
+              "pose": {
+                "pulo": 0.0,
+                "cai": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.55,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 1.0,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 1.45,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 1.9,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 2.35,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            }
+          ]
+        }
+      },
+      "flash_in": true,
+      "callouts": [
+        {
+          "t": 0.3,
+          "text": "RODA, RODINHA!",
+          "dur": 1.8,
+          "color": "laranja",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.313,
+          "to": 3.013
+        },
+        {
+          "who": "luisinho",
+          "from": 0.313,
+          "to": 3.013
+        }
+      ]
+    },
+    {
+      "id": "s02_refrao",
+      "title": "Roda, rodinha!",
+      "duration": 2.9,
+      "description": "Roda, rodinha! / Quem tá tonto cai!",
+      "background": "plano_salao",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1264.2,
+            "y": 540.0,
+            "zoom": 1.808
+          },
+          {
+            "t": 2.9,
+            "x": 1264.2,
+            "y": 540.0,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 1452.9092808850646,
+            "y": 930,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45,
+            "holding": "baqueta",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1,
+            "holding_f": "baqueta"
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "toca_bateria",
+              "dur": 2.9
+            }
+          ]
+        },
+        "laurinha": {
+          "start": {
+            "x": 1075.4907191149355,
+            "y": 930,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45,
+            "holding": "saxofone",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "toca_sax",
+              "dur": 2.9
+            }
+          ]
+        }
+      },
+      "props": {
+        "bat": {
+          "start": {
+            "x": 1452.9092808850646,
+            "y": 940,
+            "z": 2,
+            "depth": 0.87
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "bumbo": 1.0,
+                "caixa": 0.0,
+                "prato": 1.0
+              },
+              "ease": "out"
+            },
+            {
+              "t": 0.45,
+              "pose": {
+                "bumbo": 0.0,
+                "caixa": 1.0,
+                "prato": 0.0
+              },
+              "ease": "out",
+              "in": 0.42
+            },
+            {
+              "t": 0.9,
+              "pose": {
+                "bumbo": 1.0,
+                "caixa": 0.0,
+                "prato": 0.0
+              },
+              "ease": "out",
+              "in": 0.42
+            },
+            {
+              "t": 1.35,
+              "pose": {
+                "bumbo": 0.0,
+                "caixa": 1.0,
+                "prato": 0.0
+              },
+              "ease": "out",
+              "in": 0.42
+            },
+            {
+              "t": 1.8,
+              "pose": {
+                "bumbo": 1.0,
+                "caixa": 0.0,
+                "prato": 1.0
+              },
+              "ease": "out",
+              "in": 0.42
+            },
+            {
+              "t": 2.25,
+              "pose": {
+                "bumbo": 0.0,
+                "caixa": 1.0,
+                "prato": 0.0
+              },
+              "ease": "out",
+              "in": 0.42
+            }
+          ]
+        },
+        "pl1": {
+          "start": {
+            "x": 1075.4907191149355,
+            "y": 930,
+            "z": 2,
+            "depth": 0.797
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "pulo": 0.0,
+                "cai": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.45,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 0.9,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 1.35,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 1.8,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 2.25,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            }
+          ]
+        },
+        "pl2": {
+          "start": {
+            "x": 1452.9092808850646,
+            "y": 930,
+            "z": 2,
+            "depth": 0.797
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "pulo": 0.0,
+                "cai": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.4,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.37
+            },
+            {
+              "t": 0.8,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.37
+            },
+            {
+              "t": 1.2,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.37
+            },
+            {
+              "t": 1.6,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.37
+            },
+            {
+              "t": 2.0,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.37
+            },
+            {
+              "t": 2.4,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.37
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "callouts": [
+        {
+          "t": 0.3,
+          "text": "GIRA, GIRA!",
+          "dur": 1.8,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "luisinho",
+          "from": 0.2,
+          "to": 2.89
+        },
+        {
+          "who": "laurinha",
+          "from": 0.2,
+          "to": 2.89
+        }
+      ]
+    },
+    {
+      "id": "s03_refrao",
+      "title": "Roda, rodinha!",
+      "duration": 2.9333,
+      "description": "Roda, rodinha! / Gira, gira, vai!",
+      "background": "plano_jardim",
+      "fx": [],
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1300.0,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          },
+          {
+            "t": 2.9333,
+            "x": 1300.0,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1140.0,
+            "y": 930,
+            "turn": 0.25,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "twist",
+              "dur": 98.9
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1460.0,
+            "y": 930,
+            "turn": -0.25,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "twist",
+              "dur": 98.9
+            }
+          ]
+        }
+      },
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.26,
+          "to": 2.923
+        },
+        {
+          "who": "luisinho",
+          "from": 0.26,
+          "to": 2.923
+        }
+      ]
+    },
+    {
+      "id": "s04_refrao",
+      "title": "Roda, rodinha!",
+      "duration": 3.6337,
+      "description": "Roda, rodinha! / Quem tá tonto cai!",
+      "background": "plano_salao",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1264.2,
+            "y": 540.0,
+            "zoom": 1.808
+          },
+          {
+            "t": 3.3,
+            "x": 1264.2,
+            "y": 540.0,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 1452.9092808850646,
+            "y": 930,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45,
+            "holding": "baqueta",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1,
+            "holding_f": "baqueta"
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "toca_bateria",
+              "dur": 3.3
+            }
+          ]
+        },
+        "laurinha": {
+          "start": {
+            "x": 1075.4907191149355,
+            "y": 930,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "toca_teclado",
+              "dur": 3.3
+            }
+          ]
+        }
+      },
+      "props": {
+        "bat": {
+          "start": {
+            "x": 1452.9092808850646,
+            "y": 940,
+            "z": 2,
+            "depth": 0.87
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "bumbo": 1.0,
+                "caixa": 0.0,
+                "prato": 1.0
+              },
+              "ease": "out"
+            },
+            {
+              "t": 0.45,
+              "pose": {
+                "bumbo": 0.0,
+                "caixa": 1.0,
+                "prato": 0.0
+              },
+              "ease": "out",
+              "in": 0.42
+            },
+            {
+              "t": 0.9,
+              "pose": {
+                "bumbo": 1.0,
+                "caixa": 0.0,
+                "prato": 0.0
+              },
+              "ease": "out",
+              "in": 0.42
+            },
+            {
+              "t": 1.35,
+              "pose": {
+                "bumbo": 0.0,
+                "caixa": 1.0,
+                "prato": 0.0
+              },
+              "ease": "out",
+              "in": 0.42
+            },
+            {
+              "t": 1.8,
+              "pose": {
+                "bumbo": 1.0,
+                "caixa": 0.0,
+                "prato": 1.0
+              },
+              "ease": "out",
+              "in": 0.42
+            },
+            {
+              "t": 2.25,
+              "pose": {
+                "bumbo": 0.0,
+                "caixa": 1.0,
+                "prato": 0.0
+              },
+              "ease": "out",
+              "in": 0.42
+            },
+            {
+              "t": 2.7,
+              "pose": {
+                "bumbo": 1.0,
+                "caixa": 0.0,
+                "prato": 0.0
+              },
+              "ease": "out",
+              "in": 0.42
+            }
+          ]
+        },
+        "tec": {
+          "start": {
+            "x": 1075.4907191149355,
+            "y": 940,
+            "z": 2,
+            "depth": 0.899
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tecla": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.26,
+              "pose": {
+                "tecla": 6.6
+              },
+              "ease": "linear",
+              "in": 3.23
+            }
+          ]
+        },
+        "pl1": {
+          "start": {
+            "x": 1075.4907191149355,
+            "y": 930,
+            "z": 2,
+            "depth": 0.797
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "pulo": 0.0,
+                "cai": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.45,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 0.9,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 1.35,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 1.8,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 2.25,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            },
+            {
+              "t": 2.7,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.42
+            }
+          ]
+        },
+        "pl2": {
+          "start": {
+            "x": 1452.9092808850646,
+            "y": 930,
+            "z": 2,
+            "depth": 0.797
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "pulo": 0.0,
+                "cai": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.4,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.37
+            },
+            {
+              "t": 0.8,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.37
+            },
+            {
+              "t": 1.2,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.37
+            },
+            {
+              "t": 1.6,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.37
+            },
+            {
+              "t": 2.0,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.37
+            },
+            {
+              "t": 2.4,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.37
+            },
+            {
+              "t": 2.8,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.37
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "callouts": [
+        {
+          "t": 0.3,
+          "text": "GIRA, GIRA!",
+          "dur": 1.8,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "luisinho",
+          "from": 0.247,
+          "to": 3.29
+        },
+        {
+          "who": "laurinha",
+          "from": 0.247,
+          "to": 3.29
+        }
+      ]
+    }
+  ]
+}

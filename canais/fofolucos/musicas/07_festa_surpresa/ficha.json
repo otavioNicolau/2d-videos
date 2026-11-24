@@ -1,0 +1,152 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Festa Surpresa do Nhoque!",
+ "gancho": "festa surpresa",
+ "palavras_tema": [
+  "festa",
+  "surpresa",
+  "aniversário",
+  "bolo",
+  "balão"
+ ],
+ "tipo": "historia",
+ "tema": "a turma prepara uma FESTA SURPRESA para o aniversário do Nhoque (o comilão) e tudo dá meio errado: a antena do Teco fura o balão (ploc!) e o Bilu, animado, sopra a vela antes da hora. Refrão-segredo: 'festa surpresa! psiu! fala baixinho! todo mundo escondidinho!'. Ponte = comandos (apaga a luz, se esconde no sofá, segura o riso; três, dois, um… pula, abre os braços, SURPRESA!). Virada: a porta abre, todos gritam SURPRESA… mas era o Zuzu trazendo o bolo, que cai sentado no chão; o Nhoque entra atrás, vê a festa, chora de alegria e abraça a turma",
+ "dia_a_dia": [
+  "fazer surpresa para um amigo",
+  "guardar segredo",
+  "comemorar aniversário"
+ ],
+ "curiosidade": "a tradição de soprar velinhas no bolo de aniversário tem mais de 200 anos",
+ "ritmo": "pop_infantil",
+ "bpm": 134,
+ "estrutura": "R",
+ "voz": "fofolucos",
+ "cantam": {
+  "verso": "fofolucos",
+  "refrão": "fofolucos",
+  "ponte": "fofolucos (comandos da surpresa)"
+ },
+ "cenas": [
+  {
+   "parte": "intro",
+   "ideia": "a sala da Vila Monstrinha enfeitada às escondidas; a turma fazendo 'psiu'"
+  },
+  {
+   "parte": "verso 1",
+   "ideia": "aniversário do Nhoque comilão; a turma monta o festão; o Teco enche o balão e a antena fura (ploc!); o Bilu sopra a vela antes da hora"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "todo mundo cochichando 'psiu!' e se escondendo atrás do sofá, da cortina, da mesa"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "comandos: apaga a luz, esconde no sofá, segura o riso; três, dois, um… pula, abre os braços, SURPRESA!"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "a porta abre, todos gritam SURPRESA… era o Zuzu com o bolo, que cai sentado; o Nhoque entra atrás, chora de alegria e abraça a turma"
+  },
+  {
+   "parte": "final",
+   "ideia": "'e você? já fez surpresa?' · joinha · inscreva-se · tchau da turma com o Nhoque de chapeuzinho de festa"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [],
+ "status": "aprovada",
+ "versoes": [
+  "Festa Surpresa do Nhoque!"
+ ],
+ "persona": "fofolucos",
+ "youtube": {
+  "resumo": "FESTA SURPRESA DO NHOQUE! 👾🎂 Hoje é aniversário do Nhoque e a turma da Vila Monstrinha prepara tudo em segredo… mas a antena do Teco fura o balão, o Bilu sopra a vela antes da hora e quem abre a porta primeiro é… o Zuzu com o bolo! Psiu! Fala baixinho e se esconde junto!",
+  "resumo_short": "FESTA SURPRESA! 👾🎂 Psiu! Todo mundo escondidinho!",
+  "curiosidade": "A tradição de soprar velinhas no bolo de aniversário tem mais de 200 anos!",
+  "miniatura": "FESTA\nSURPRESA!",
+  "miniatura_cena": {
+   "fundo": "circulo",
+   "centro": [
+    400,
+    430
+   ],
+   "cores": [
+    [
+     255,
+     106,
+     178
+    ],
+    [
+     64,
+     200,
+     220
+    ],
+    [
+     155,
+     79,
+     240
+    ],
+    [
+     255,
+     240,
+     170
+    ]
+   ],
+   "heroi": {
+    "id": "nhoque",
+    "pose": {
+     "expr": "joy",
+     "turn": 0.15,
+     "mouth": "D",
+     "hand_n_x": -135,
+     "hand_n_y": -135,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3
+    }
+   },
+   "par": {
+    "id": "bilu",
+    "pose": {
+     "expr": "surprised",
+     "turn": -0.2,
+     "mouth": "O"
+    },
+    "tam": 520,
+    "x": 1040,
+    "corte": 120
+   },
+   "objetos": [
+    {
+     "id": "balao",
+     "pose": {
+      "sem_contorno": 1.0,
+      "cor": 2
+     },
+     "tam": 300,
+     "x": 120,
+     "base": 420
+    }
+   ],
+   "frente": [
+    {
+     "id": "bolo_aniversario",
+     "pose": {
+      "sem_contorno": 1.0
+     },
+     "tam": 260,
+     "x": 790,
+     "base": 710
+    }
+   ]
+  }
+ },
+ "revisao": "23/11/2026: letra nova para 5 a 8 anos (história com virada, refrão-segredo, comandos de surpresa)",
+ "escolhida": "Festa Surpresa do Nhoque!"
+}

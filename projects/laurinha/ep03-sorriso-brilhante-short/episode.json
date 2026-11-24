@@ -1,0 +1,679 @@
+{
+  "schema": "1.1",
+  "id": "ep03-sorriso-brilhante-short",
+  "title": "Sorriso Brilhante — Short",
+  "logline": "Clipe de \"Sorriso Brilhante\" — escovar os dentes. Montado do roteiro verso a verso (roteiro.json).",
+  "fps": 30,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "background": "plano_parque",
+  "soundtrack": {
+    "file": "musica/trabalho.wav",
+    "analysis": "analise/song.json",
+    "start": 0.0,
+    "end": 14.713,
+    "fade_out": 0.3,
+    "beat_grid": "full"
+  },
+  "captions": {
+    "lyrics": "analise/letra.json",
+    "style": "palavra_a_palavra"
+  },
+  "overlays": {
+    "logo": true,
+    "channel": [
+      "LAURINHA",
+      "e Luisinho"
+    ]
+  },
+  "cast": {
+    "laurinha": {
+      "character": "laurinha"
+    },
+    "luisinho": {
+      "character": "luisinho"
+    },
+    "cama": {
+      "character": "cama"
+    },
+    "lencol": {
+      "character": "lencol"
+    },
+    "janela": {
+      "character": "janela"
+    },
+    "espelho": {
+      "character": "espelho"
+    },
+    "pasta": {
+      "character": "pasta"
+    },
+    "feijao": {
+      "character": "feijao"
+    },
+    "ampulheta": {
+      "character": "ampulheta"
+    },
+    "agua": {
+      "character": "agua"
+    },
+    "gotinha": {
+      "character": "gotinha"
+    },
+    "mesa": {
+      "character": "mesa"
+    }
+  },
+  "approval": {
+    "storyboard": false,
+    "final_render": false
+  },
+  "projeto": "laurinha/ep03-sorriso-brilhante",
+  "scenes": [
+    {
+      "id": "s01_refrao",
+      "title": "Sorriso brilhante! Tim-tim!",
+      "duration": 3.2597,
+      "description": "Sorriso brilhante! Tim-tim!",
+      "background": "danca_bolinhas_rosa",
+      "camera": {
+        "keys": [
+          {
+            "t": 1.16,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.75
+          },
+          {
+            "t": 3.26,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.75
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 1.26,
+              "do": "sorriso",
+              "dur": 2.0
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "flash_in": true,
+      "callouts": [
+        {
+          "t": 1.26,
+          "text": "SORRISO BRILHANTE!",
+          "dur": 1.8,
+          "color": "rosa",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 1.313,
+          "to": 3.24
+        }
+      ]
+    },
+    {
+      "id": "s02_refrao",
+      "title": "Mostra pra mim! Tim-tim!",
+      "duration": 1.4,
+      "description": "Mostra pra mim! Tim-tim!",
+      "background": "danca_raios_amarelo",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 1.4,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 800.0,
+            "y": 1010,
+            "turn": 0.1,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.25
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "sorriso",
+              "dur": 1.3
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1120.0,
+            "y": 1010,
+            "turn": -0.1,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.25
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.2,
+              "do": "sorriso",
+              "dur": 1.2
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "MOSTRA PRA MIM!",
+          "dur": 1.3,
+          "color": "laranja",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 1.39
+        },
+        {
+          "who": "luisinho",
+          "from": 0.0,
+          "to": 1.39
+        }
+      ]
+    },
+    {
+      "id": "s03_refrao",
+      "title": "Sorriso brilhante! Tim-tim!",
+      "duration": 1.6666,
+      "description": "Sorriso brilhante! Tim-tim!",
+      "background": "danca_bolinhas_azul",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.75
+          },
+          {
+            "t": 1.6666,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.75
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "sorriso",
+              "dur": 1.567
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "TIM-TIM!",
+          "dur": 1.567,
+          "color": "azul",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "luisinho",
+          "from": 0.113,
+          "to": 1.653
+        }
+      ]
+    },
+    {
+      "id": "s04_refrao",
+      "title": "os dois sorrindo (repetição do Suno)",
+      "duration": 2.156,
+      "description": "",
+      "background": "danca_raios_rosa",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 2.156,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 800.0,
+            "y": 1010,
+            "turn": 0.1,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.55,
+            "holding": "escova_pasta",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "escovar",
+              "dur": 4.6
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1120.0,
+            "y": 1010,
+            "turn": -0.1,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.55,
+            "holding": "escova_pasta",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "escovar",
+              "dur": 4.6
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ]
+    },
+    {
+      "id": "s05_refrao",
+      "title": "os dois sorrindo (repetição do Suno)",
+      "duration": 2.444,
+      "description": "",
+      "background": "danca_raios_rosa",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 800.0,
+            "y": 760.0,
+            "zoom": 2.0
+          },
+          {
+            "t": 2.444,
+            "x": 800.0,
+            "y": 760.0,
+            "zoom": 2.08,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 800.0,
+            "y": 1010,
+            "turn": 0.1,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.55,
+            "holding": "escova_pasta",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "escovar",
+              "dur": 2.444
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1120.0,
+            "y": 1010,
+            "turn": -0.1,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.55,
+            "holding": "escova_pasta",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "escovar",
+              "dur": 2.444
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ]
+    },
+    {
+      "id": "s06_refrao",
+      "title": "Dois minutinhos",
+      "duration": 1.7667,
+      "description": "Dois minutinhos",
+      "background": "danca_raios_roxo",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 1.7667,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 800.0,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.4,
+            "holding": "escova_pasta",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "escovar",
+              "dur": 1.767
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1120.0,
+            "y": 1010,
+            "turn": -0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.4,
+            "holding": "escova_pasta",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "escovar",
+              "dur": 1.767
+            }
+          ]
+        }
+      },
+      "props": {
+        "ampulheta": {
+          "start": {
+            "x": 960,
+            "y": 1000,
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "areia": 0.3
+              }
+            },
+            {
+              "t": 1.4,
+              "pose": {
+                "areia": 1.0,
+                "brilho": 1.0
+              },
+              "ease": "out"
+            }
+          ]
+        }
+      },
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.187,
+          "to": 1.757
+        },
+        {
+          "who": "luisinho",
+          "from": 0.187,
+          "to": 1.757
+        }
+      ]
+    },
+    {
+      "id": "s07_refrao",
+      "title": "E tá limpinho!",
+      "duration": 2.02,
+      "description": "E tá limpinho!",
+      "background": "danca_xadrez_rosa",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 2.02,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 800.0,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.55
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "bacana",
+              "dur": 2.333
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1120.0,
+            "y": 1010,
+            "turn": -0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.55
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.2,
+              "do": "bacana",
+              "dur": 2.233
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete",
+        "estrelas"
+      ],
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "LIMPINHO!",
+          "dur": 1.8,
+          "color": "verde",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.14,
+          "to": 2.0
+        },
+        {
+          "who": "luisinho",
+          "from": 0.14,
+          "to": 2.0
+        }
+      ]
+    }
+  ]
+}

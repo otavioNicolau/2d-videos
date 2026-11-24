@@ -1,0 +1,746 @@
+{
+  "schema": "1.1",
+  "id": "ep02-monstrinho-ou-fofinho-short",
+  "projeto": "fofolucos/ep02-monstrinho-ou-fofinho",
+  "title": "Monstrinho ou Fofinho? — Short",
+  "logline": "Clipe de \"Monstrinho ou Fofinho?\" — jogo de cantar junto: 'monstrinho!' = cara brava e RAWR, 'fofinho!' = carinha fofa; quem errar dança sozinho no meio. Virada: o Bilu treina a careta mais feroz no espelho, o espelho 'faz igual' e ele se assusta com ele mesmo. Montado do roteiro verso a verso (roteiro.json).",
+  "fps": 30,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "background": "plano_parque",
+  "soundtrack": {
+    "file": "musica/trabalho.wav",
+    "analysis": "analise/song.json",
+    "start": 0.0,
+    "end": 14.9993,
+    "fade_out": 0.3,
+    "beat_grid": "full"
+  },
+  "captions": {
+    "lyrics": "analise/letra.json",
+    "style": "palavra_a_palavra"
+  },
+  "overlays": {
+    "logo": true,
+    "channel": [
+      "FOFOLUCOS",
+      ""
+    ],
+    "logo_png": "/home/otavio/2d/library/brand/fofolucos/logo.png"
+  },
+  "cast": {
+    "laurinha": {
+      "character": "laurinha"
+    },
+    "luisinho": {
+      "character": "luisinho"
+    },
+    "bilu": {
+      "character": "bilu"
+    },
+    "mimi": {
+      "character": "mimi"
+    },
+    "nv": {
+      "character": "nuvem"
+    },
+    "teco": {
+      "character": "teco"
+    },
+    "zuzu": {
+      "character": "zuzu"
+    },
+    "gogo": {
+      "character": "gogo"
+    },
+    "nhoque": {
+      "character": "nhoque"
+    },
+    "bo": {
+      "character": "bolha"
+    },
+    "bat": {
+      "character": "bateria_show"
+    },
+    "tec": {
+      "character": "teclado_inst"
+    },
+    "lua": {
+      "character": "lua"
+    },
+    "esp": {
+      "character": "espelho_reflexo"
+    },
+    "joinha": {
+      "character": "joinha"
+    },
+    "botao": {
+      "character": "botao_inscrever"
+    }
+  },
+  "approval": {
+    "storyboard": false,
+    "final_render": false
+  },
+  "scenes": [
+    {
+      "id": "s01_refrao",
+      "title": "Monstrinho ou fofinho?",
+      "duration": 2.7333,
+      "description": "Monstrinho ou fofinho? / Monstrinho! Rawr!",
+      "background": "mon_escola",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1300.0,
+            "y": 536.0387215734481,
+            "zoom": 1.808
+          },
+          {
+            "t": 2.7333,
+            "x": 1300.0,
+            "y": 536.0387215734481,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        },
+        "shake": [
+          {
+            "t": 2.13,
+            "dur": 0.35,
+            "amp": 14.0
+          }
+        ]
+      },
+      "characters": {
+        "gogo": {
+          "start": {
+            "x": 1140.0,
+            "y": 930,
+            "turn": 0.25,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 2.13,
+              "do": "rawr",
+              "dur": 0.603
+            }
+          ]
+        },
+        "nhoque": {
+          "start": {
+            "x": 1460.0,
+            "y": 930,
+            "turn": -0.25,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 2.21,
+              "do": "rawr",
+              "dur": 0.523
+            }
+          ]
+        }
+      },
+      "props": {
+        "bo": {
+          "start": {
+            "x": 584.2,
+            "y": 1000,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.435
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tam": 1.0,
+                "y": 1000.0,
+                "balanco": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.67,
+              "pose": {
+                "y": 250.0
+              },
+              "ease": "linear",
+              "in": 2.64
+            },
+            {
+              "t": 2.67,
+              "pose": {
+                "balanco": 2.7
+              },
+              "ease": "linear",
+              "in": 2.64
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "MONSTRINHO OU FOFINHO?",
+          "dur": 1.8,
+          "color": "roxo",
+          "y": 170
+        },
+        {
+          "t": 2.13,
+          "text": "MONSTRINHO! RAWR!",
+          "dur": 0.603,
+          "color": "vermelho",
+          "y": 170
+        }
+      ],
+      "flash_in": true
+    },
+    {
+      "id": "s02_refrao",
+      "title": "Monstrinho ou fofinho?",
+      "duration": 4.1,
+      "description": "Monstrinho ou fofinho? / Fofinho! Ai, que lindinho!",
+      "background": "mon_quarto",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1300.0,
+            "y": 523.9189189189188,
+            "zoom": 1.85
+          },
+          {
+            "t": 4.1,
+            "x": 1300.0,
+            "y": 523.9189189189188,
+            "zoom": 1.85
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "teco": {
+          "start": {
+            "x": 1300.0,
+            "y": 930,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.82,
+              "do": "fofinho",
+              "dur": 3.28
+            }
+          ]
+        }
+      },
+      "fx": [
+        "coracoes"
+      ],
+      "callouts": [
+        {
+          "t": 0.97,
+          "text": "FOFINHO!",
+          "dur": 0.85,
+          "color": "rosa",
+          "y": 170
+        },
+        {
+          "t": 1.87,
+          "text": "AI, QUE LINDINHO!",
+          "dur": 1.8,
+          "color": "rosa",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s03_refrao",
+      "title": "Monstrinho ou fofinho?",
+      "duration": 3.6333,
+      "description": "Monstrinho ou fofinho? / Quem errar dança sozinho!",
+      "background": "mon_parque",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1300.0,
+            "y": 540.0,
+            "zoom": 1.808
+          },
+          {
+            "t": 3.6333,
+            "x": 1300.0,
+            "y": 540.0,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "mimi": {
+          "start": {
+            "x": 1150.0,
+            "y": 970,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "point",
+              "dur": 3.533
+            },
+            {
+              "t": 1.81,
+              "do": "laugh",
+              "dur": 1.823
+            }
+          ]
+        },
+        "nhoque": {
+          "start": {
+            "x": 1450.0,
+            "y": 970,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "dur": 3.633,
+              "style": "twist"
+            }
+          ]
+        },
+        "bilu": {
+          "start": {
+            "x": 1300.0,
+            "y": 730,
+            "turn": -0.3,
+            "expr": "happy",
+            "z": 2,
+            "depth": 1.0875
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.15,
+              "do": "point",
+              "dur": 3.483
+            },
+            {
+              "t": 2.0,
+              "do": "laugh",
+              "dur": 1.633
+            }
+          ]
+        }
+      },
+      "props": {
+        "nv": {
+          "start": {
+            "x": 1013.7,
+            "y": 300,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.464
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cara": 1.0,
+                "x": 1013.7
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.57,
+              "pose": {
+                "x": 1214.1
+              },
+              "ease": "linear",
+              "in": 3.54
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "callouts": [
+        {
+          "t": 1.45,
+          "text": "DANÇA SOZINHO!",
+          "dur": 1.8,
+          "color": "verde",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s04_refrao",
+      "title": "Monstrinho ou fofinho?",
+      "duration": 2.279,
+      "description": "Monstrinho ou fofinho? / Fofolucos! Rawr!",
+      "background": "mon_raios_verde",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 2.279,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "mimi": {
+          "start": {
+            "x": 760.0,
+            "y": 800,
+            "turn": 0.25,
+            "expr": "happy",
+            "z": 2,
+            "depth": 0.85
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "dur": 4.1,
+              "style": "festa"
+            }
+          ]
+        },
+        "zuzu": {
+          "start": {
+            "x": 810.0,
+            "y": 1190,
+            "turn": 0.1,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "dur": 4.1,
+              "style": "festa"
+            }
+          ]
+        },
+        "bilu": {
+          "start": {
+            "x": 1110.0,
+            "y": 1190,
+            "turn": -0.1,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "dur": 4.1,
+              "style": "festa"
+            }
+          ]
+        },
+        "teco": {
+          "start": {
+            "x": 1160.0,
+            "y": 800,
+            "turn": -0.25,
+            "expr": "happy",
+            "z": 2,
+            "depth": 0.85
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "dur": 4.1,
+              "style": "festa"
+            }
+          ]
+        }
+      },
+      "props": {
+        "bo": {
+          "start": {
+            "x": 1300,
+            "y": 1000,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.435
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tam": 1.0,
+                "y": 1000.0,
+                "balanco": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.279,
+              "pose": {
+                "y": 250.0
+              },
+              "ease": "linear",
+              "in": 4.01
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "callouts": []
+    },
+    {
+      "id": "s05_refrao",
+      "title": "Monstrinho ou fofinho?",
+      "duration": 2.2537,
+      "description": "Monstrinho ou fofinho? / Fofolucos! Rawr!",
+      "background": "mon_raios_verde",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 760.0,
+            "y": 760.0,
+            "zoom": 2.0
+          },
+          {
+            "t": 2.254,
+            "x": 760.0,
+            "y": 760.0,
+            "zoom": 2.08,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "mimi": {
+          "start": {
+            "x": 760.0,
+            "y": 800,
+            "turn": 0.25,
+            "expr": "happy",
+            "z": 2,
+            "depth": 0.85
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "dur": 1.821,
+              "style": "festa"
+            },
+            {
+              "t": 0.851,
+              "do": "rawr",
+              "dur": 0.97
+            }
+          ]
+        },
+        "zuzu": {
+          "start": {
+            "x": 810.0,
+            "y": 1190,
+            "turn": 0.1,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "dur": 1.821,
+              "style": "festa"
+            },
+            {
+              "t": 0.911,
+              "do": "rawr",
+              "dur": 0.91
+            }
+          ]
+        },
+        "bilu": {
+          "start": {
+            "x": 1110.0,
+            "y": 1190,
+            "turn": -0.1,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "dur": 1.821,
+              "style": "festa"
+            },
+            {
+              "t": 0.971,
+              "do": "rawr",
+              "dur": 0.85
+            }
+          ]
+        },
+        "teco": {
+          "start": {
+            "x": 1160.0,
+            "y": 800,
+            "turn": -0.25,
+            "expr": "happy",
+            "z": 2,
+            "depth": 0.85
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "dur": 1.821,
+              "style": "festa"
+            },
+            {
+              "t": 1.031,
+              "do": "rawr",
+              "dur": 0.79
+            }
+          ]
+        }
+      },
+      "props": {
+        "bo": {
+          "start": {
+            "x": 1300,
+            "y": 1000,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.435
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tam": 1.0,
+                "y": 1000.0,
+                "balanco": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.761,
+              "pose": {
+                "y": 250.0
+              },
+              "ease": "linear",
+              "in": 4.01
+            },
+            {
+              "t": 1.761,
+              "pose": {
+                "balanco": 4.1
+              },
+              "ease": "linear",
+              "in": 4.01
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "callouts": [
+        {
+          "t": 0.851,
+          "text": "FOFOLUCOS! RAWR!",
+          "dur": 0.97,
+          "color": "roxo",
+          "y": 170
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,759 @@
+{
+  "schema": "1.1",
+  "id": "ep04-tem-crianca-debaixo-da-cama-short",
+  "projeto": "fofolucos/ep04-tem-crianca-debaixo-da-cama",
+  "title": "Tem Criança Debaixo da Cama! — Short",
+  "logline": "Clipe de \"Tem Criança Debaixo da Cama!\" — medo bobo AO CONTRÁRIO: de noite o Bilu ouve 'crec, crec' debaixo da cama e acha que é uma CRIANÇA (os monstrinhos têm medo de criança!). Refrão-pedido de ajuda. Ponte = comandos de coragem (respira fundo, cara de valente, lanterna, levanta o lençol… um, dois, três!). Virada: a turma levanta o lençol e era o Nhoque de pijama comendo biscoito escondido. Montado do roteiro verso a verso (roteiro.json).",
+  "fps": 30,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "background": "plano_parque",
+  "soundtrack": {
+    "file": "musica/trabalho.wav",
+    "analysis": "analise/song.json",
+    "start": 0.0,
+    "end": 29.0333,
+    "fade_out": 0.3,
+    "beat_grid": "full"
+  },
+  "captions": {
+    "lyrics": "analise/letra.json",
+    "style": "palavra_a_palavra"
+  },
+  "overlays": {
+    "logo": true,
+    "channel": [
+      "FOFOLUCOS",
+      ""
+    ],
+    "logo_png": "/home/otavio/2d/library/brand/fofolucos/logo.png"
+  },
+  "cast": {
+    "laurinha": {
+      "character": "laurinha"
+    },
+    "luisinho": {
+      "character": "luisinho"
+    },
+    "bilu": {
+      "character": "bilu"
+    },
+    "cama": {
+      "character": "cama"
+    },
+    "lencol": {
+      "character": "lencol"
+    },
+    "teco": {
+      "character": "teco"
+    },
+    "gogo": {
+      "character": "gogo"
+    },
+    "nhoque": {
+      "character": "nhoque"
+    },
+    "bo": {
+      "character": "bolha"
+    },
+    "zuzu": {
+      "character": "zuzu"
+    },
+    "mimi": {
+      "character": "mimi"
+    },
+    "bat": {
+      "character": "bateria_show"
+    },
+    "tec": {
+      "character": "teclado_inst"
+    },
+    "nv": {
+      "character": "nuvem"
+    },
+    "lt": {
+      "character": "lanterna"
+    },
+    "l1": {
+      "character": "lanterna"
+    },
+    "l2": {
+      "character": "lanterna"
+    },
+    "joinha": {
+      "character": "joinha"
+    },
+    "botao": {
+      "character": "botao_inscrever"
+    }
+  },
+  "approval": {
+    "storyboard": false,
+    "final_render": false
+  },
+  "scenes": [
+    {
+      "id": "s01_refrao",
+      "title": "Tem criança debaixo da cama!",
+      "description": "",
+      "duration": 2.9667,
+      "background": "mon_quarto",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1300,
+            "y": 500,
+            "zoom": 1.95
+          },
+          {
+            "t": 2.9667,
+            "x": 1300,
+            "y": 500,
+            "zoom": 2.05,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "escurece": [
+        0.42,
+        0.42
+      ],
+      "characters": {
+        "bilu": {
+          "start": {
+            "x": 1300,
+            "y": 930,
+            "turn": 0.0,
+            "expr": "scared",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.35,
+              "do": "shock_reaction",
+              "dur": 0.9
+            }
+          ]
+        }
+      },
+      "props": {
+        "cama": {
+          "start": {
+            "x": 1300,
+            "y": 930,
+            "z": 1,
+            "sem_contorno": 1.0,
+            "depth": 1.16
+          },
+          "exposure": 1
+        },
+        "lencol": {
+          "start": {
+            "x": 1300,
+            "y": 930,
+            "z": 5,
+            "sem_contorno": 1.0,
+            "depth": 1.087
+          },
+          "exposure": 1
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "TEM CRIANÇA DEBAIXO DA CAMA!",
+          "dur": 1.8,
+          "color": "roxo",
+          "y": 170
+        }
+      ],
+      "flash_in": true
+    },
+    {
+      "id": "s02_refrao",
+      "title": "Tem criança debaixo da cama!",
+      "description": "",
+      "duration": 4.0,
+      "background": "mon_quarto",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1300,
+            "y": 540,
+            "zoom": 1.95
+          },
+          {
+            "t": 4.0,
+            "x": 1300,
+            "y": 540,
+            "zoom": 2.05,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "escurece": [
+        0.42,
+        0.42
+      ],
+      "characters": {
+        "teco": {
+          "start": {
+            "x": 1170,
+            "y": 930,
+            "turn": 0.3,
+            "expr": "scared",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "treme",
+              "dur": 4.0
+            }
+          ]
+        },
+        "mimi": {
+          "start": {
+            "x": 1430,
+            "y": 930,
+            "turn": -0.3,
+            "expr": "scared",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.05,
+              "do": "dance",
+              "style": "treme",
+              "dur": 4.0
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "AI, AI, AI!",
+          "dur": 1.8,
+          "color": "laranja",
+          "y": 170
+        },
+        {
+          "t": 1.8,
+          "text": "QUEM VAI OLHAR?",
+          "dur": 1.8,
+          "color": "roxo",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s03_refrao",
+      "title": "Tem criança debaixo da cama!",
+      "description": "",
+      "duration": 3.3,
+      "background": "mon_raios_roxo",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 3.3,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.629,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "gogo": {
+          "start": {
+            "x": 960,
+            "y": 1250,
+            "turn": 0.0,
+            "expr": "scared",
+            "z": 3,
+            "depth": 1.75
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.2,
+              "do": "shock_reaction",
+              "dur": 0.8
+            },
+            {
+              "t": 1.3,
+              "do": "jump",
+              "dur": 0.8,
+              "height": 170
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "TEM CRIANÇA DEBAIXO DA CAMA!",
+          "dur": 1.8,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "transition_in": {
+        "type": "zoom",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s04_refrao",
+      "title": "Tem criança debaixo da cama!",
+      "description": "",
+      "duration": 3.8,
+      "background": "mon_brilho_azul",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 3.8,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.629,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "zuzu": {
+          "start": {
+            "x": 960,
+            "y": 1250,
+            "turn": 0.0,
+            "expr": "scared",
+            "z": 3,
+            "depth": 1.9
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.15,
+              "do": "shock_reaction",
+              "dur": 0.9
+            },
+            {
+              "t": 1.4,
+              "do": "apontar_camera",
+              "dur": 2.3
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "MONSTRINHO, VEM ME AJUDAR!",
+          "dur": 2.4,
+          "color": "laranja",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s05_refrao",
+      "title": "Tem criança debaixo da cama!",
+      "description": "",
+      "duration": 3.0,
+      "background": "mon_quarto",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1300,
+            "y": 540,
+            "zoom": 1.808
+          },
+          {
+            "t": 3.0,
+            "x": 1300,
+            "y": 540,
+            "zoom": 1.85,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "escurece": [
+        0.5,
+        0.5
+      ],
+      "characters": {
+        "nhoque": {
+          "start": {
+            "x": 1170,
+            "y": 930,
+            "turn": 0.3,
+            "expr": "scared",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.2,
+              "do": "look_around",
+              "dur": 2.7
+            }
+          ]
+        }
+      },
+      "props": {
+        "cama": {
+          "start": {
+            "x": 1520,
+            "y": 930,
+            "z": 1,
+            "sem_contorno": 1.0,
+            "depth": 1.0
+          },
+          "exposure": 1
+        },
+        "lt": {
+          "start": {
+            "x": 1310,
+            "y": 860,
+            "z": 4,
+            "sem_contorno": 1.0,
+            "depth": 1.0,
+            "liga": 0.0,
+            "dir": 0.03
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.3,
+              "pose": {
+                "liga": 1.0
+              },
+              "ease": "out"
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "TEM CRIANÇA DEBAIXO DA CAMA!",
+          "dur": 1.8,
+          "color": "roxo",
+          "y": 170
+        }
+      ],
+      "transition_in": {
+        "type": "zoom",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s06_refrao",
+      "title": "Tem criança debaixo da cama!",
+      "description": "",
+      "duration": 4.1,
+      "background": "mon_xadrez_verde",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 4.1,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.629,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "mimi": {
+          "start": {
+            "x": 790,
+            "y": 1195,
+            "turn": 0.25,
+            "expr": "scared",
+            "z": 3,
+            "depth": 1.4
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.2,
+              "do": "abraco",
+              "dur": 3.8
+            }
+          ]
+        },
+        "bilu": {
+          "start": {
+            "x": 1130,
+            "y": 1195,
+            "turn": -0.25,
+            "expr": "scared",
+            "z": 3,
+            "depth": 1.4
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.25,
+              "do": "abraco",
+              "dur": 3.7499999999999996
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "AI, AI, AI!",
+          "dur": 1.8,
+          "color": "rosa",
+          "y": 170
+        },
+        {
+          "t": 2.0,
+          "text": "QUEM VAI OLHAR?",
+          "dur": 1.8,
+          "color": "azul",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s07_refrao",
+      "title": "Tem criança debaixo da cama!",
+      "description": "",
+      "duration": 3.0,
+      "background": "mon_raios_laranja",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 3.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.629,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "teco": {
+          "start": {
+            "x": 790,
+            "y": 1195,
+            "turn": 0.25,
+            "expr": "scared",
+            "z": 3,
+            "depth": 1.4
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "treme",
+              "dur": 3.0
+            }
+          ]
+        },
+        "gogo": {
+          "start": {
+            "x": 1130,
+            "y": 1195,
+            "turn": -0.25,
+            "expr": "scared",
+            "z": 3,
+            "depth": 1.4
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.05,
+              "do": "dance",
+              "style": "treme",
+              "dur": 3.0
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "TEM CRIANÇA DEBAIXO DA CAMA!",
+          "dur": 1.8,
+          "color": "roxo",
+          "y": 170
+        }
+      ],
+      "transition_in": {
+        "type": "zoom",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s08_refrao",
+      "title": "Tem criança debaixo da cama!",
+      "description": "",
+      "duration": 4.8666,
+      "background": "mon_quarto",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1300,
+            "y": 540,
+            "zoom": 1.808
+          },
+          {
+            "t": 4.8666,
+            "x": 1300,
+            "y": 540,
+            "zoom": 1.86,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "flash_in": true,
+      "characters": {
+        "bilu": {
+          "start": {
+            "x": 1160,
+            "y": 930,
+            "turn": 0.3,
+            "expr": "determined",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.3,
+              "do": "rawr",
+              "dur": 1.4
+            }
+          ]
+        },
+        "nhoque": {
+          "start": {
+            "x": 1440,
+            "y": 930,
+            "turn": -0.3,
+            "expr": "determined",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.4,
+              "do": "rawr",
+              "dur": 1.4
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "MONSTRINHO, VEM ME AJUDAR!",
+          "dur": 2.0,
+          "color": "verde",
+          "y": 170
+        },
+        {
+          "t": 2.4,
+          "text": "RAWR!",
+          "dur": 1.6,
+          "color": "vermelho",
+          "y": 170
+        }
+      ]
+    }
+  ]
+}

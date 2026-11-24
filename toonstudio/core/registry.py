@@ -25,6 +25,8 @@ from ..characters.flat_muri import FORMIGA_MAE as _FMA
 CHARACTERS["formiga_mae"] = lambda: FlatMuri("formiga_mae", "Mamãe Formiga", _FMA)
 from ..characters.flat_muri import VOVOZINHO as _FVZ
 CHARACTERS["vovozinho"] = lambda: FlatMuri("vovozinho", "Vovô", _FVZ)
+from ..characters.flat_muri import VOVO_CICO as _FVC
+CHARACTERS["vovo_cico"] = lambda: FlatMuri("vovo_cico", "Vovô Ciço", _FVC)
 from ..characters.flat_monstro import BILU as _MBI, TECO as _MTE, GOGO as _MG, MIMI as _MMI, ZUZU as _MZ, NHOQUE as _MNH, FlatMonstro
 for _cid, _nome, _lk in (("bilu", "Bilu", _MBI), ("teco", "Teco", _MTE), ("gogo", "Gogo", _MG), ("mimi", "Mimi", _MMI),
                          ("zuzu", "Zuzu", _MZ), ("nhoque", "Nhoque", _MNH)):        # 2º canal: Fofolucos (monstrinhos)

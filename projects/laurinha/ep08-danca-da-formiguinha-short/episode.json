@@ -1,0 +1,642 @@
+{
+  "schema": "1.1",
+  "id": "ep08-danca-da-formiguinha-short",
+  "title": "Dança da Formiguinha — Short",
+  "logline": "Clipe de \"Dança da Formiguinha\" — dança em fila com a Formiguinha e trabalho em equipe. Montado do roteiro verso a verso (roteiro.json).",
+  "fps": 30,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "background": "plano_parque",
+  "soundtrack": {
+    "file": "musica/trabalho.wav",
+    "analysis": "analise/song.json",
+    "start": 0.0,
+    "end": 14.1067,
+    "fade_out": 0.3,
+    "beat_grid": "full"
+  },
+  "captions": {
+    "lyrics": "analise/letra.json",
+    "style": "palavra_a_palavra"
+  },
+  "overlays": {
+    "logo": true,
+    "channel": [
+      "LAURINHA",
+      "e Luisinho"
+    ]
+  },
+  "cast": {
+    "laurinha": {
+      "character": "laurinha"
+    },
+    "luisinho": {
+      "character": "luisinho"
+    },
+    "b1": {
+      "character": "formiguinha"
+    },
+    "b2": {
+      "character": "formiguinha"
+    },
+    "b3": {
+      "character": "formiguinha"
+    },
+    "formiga_mae": {
+      "character": "formiga_mae"
+    },
+    "formiguinha": {
+      "character": "formiguinha"
+    },
+    "joaninha": {
+      "character": "joaninha"
+    },
+    "folha": {
+      "character": "folha"
+    },
+    "caixa": {
+      "character": "caixa_brinquedos"
+    },
+    "joinha": {
+      "character": "joinha"
+    },
+    "mamae": {
+      "character": "mamae"
+    },
+    "botao": {
+      "character": "botao_inscrever"
+    }
+  },
+  "approval": {
+    "storyboard": false,
+    "final_render": false
+  },
+  "projeto": "laurinha/ep08-danca-da-formiguinha",
+  "scenes": [
+    {
+      "id": "s01_refrao",
+      "title": "Dança da formiguinha! Ê!",
+      "duration": 3.9667,
+      "description": "Dança da formiguinha! Ê! / Marcha, marcha, marcha!",
+      "background": "plano_jardim",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1250.0,
+            "y": 540.0,
+            "zoom": 1.808
+          },
+          {
+            "t": 3.9667,
+            "x": 1250.0,
+            "y": 540.0,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "formiguinha": {
+          "start": {
+            "x": 1250.0,
+            "y": 730,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 2,
+            "folha_cabeca": 1.0,
+            "depth": 0.75
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "marcha",
+              "dur": 3.967
+            }
+          ]
+        },
+        "laurinha": {
+          "start": {
+            "x": 1100.0,
+            "y": 970,
+            "turn": 0.1,
+            "expr": "happy",
+            "z": 3,
+            "folha_cabeca": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "marcha",
+              "dur": 3.967
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1400.0,
+            "y": 970,
+            "turn": -0.1,
+            "expr": "happy",
+            "z": 3,
+            "folha_cabeca": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "marcha",
+              "dur": 3.967
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "flash_in": true,
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "DANÇA DA FORMIGUINHA!",
+          "dur": 1.8,
+          "color": "rosa",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.147,
+          "to": 2.607
+        },
+        {
+          "who": "laurinha",
+          "from": 2.967,
+          "to": 3.957
+        },
+        {
+          "who": "luisinho",
+          "from": 0.147,
+          "to": 2.607
+        },
+        {
+          "who": "luisinho",
+          "from": 2.967,
+          "to": 3.957
+        }
+      ]
+    },
+    {
+      "id": "s02_refrao",
+      "title": "Dança da formiguinha! Ê!",
+      "duration": 3.9667,
+      "description": "Dança da formiguinha! Ê! / Folha na cabeça! Opa!",
+      "background": "danca_raios_amarelo",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 3.9667,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 800.0,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "marcha",
+              "dur": 3.967
+            }
+          ],
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "folha_cabeca": 0.0
+              }
+            },
+            {
+              "t": 1.5,
+              "pose": {
+                "folha_cabeca": 1.0
+              },
+              "ease": "step"
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1120.0,
+            "y": 1010,
+            "turn": -0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "marcha",
+              "dur": 3.967
+            }
+          ],
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "folha_cabeca": 0.0
+              }
+            },
+            {
+              "t": 1.6,
+              "pose": {
+                "folha_cabeca": 1.0
+              },
+              "ease": "step"
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 1.6,
+          "text": "FOLHA NA CABEÇA!",
+          "dur": 1.8,
+          "color": "verde",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.26,
+          "to": 3.957
+        },
+        {
+          "who": "luisinho",
+          "from": 0.26,
+          "to": 3.957
+        }
+      ]
+    },
+    {
+      "id": "s03_refrao",
+      "title": "Pra frente! Pra frente!",
+      "duration": 3.5,
+      "description": "Pra frente! Pra frente! / Pra trás! Pra trás!",
+      "background": "danca_xadrez_vermelho",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 3.5,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "formiguinha": {
+          "start": {
+            "x": 760.0,
+            "y": 800,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 2,
+            "depth": 0.85,
+            "folha_cabeca": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "lado_frente",
+              "dur": 3.5
+            }
+          ]
+        },
+        "laurinha": {
+          "start": {
+            "x": 810.0,
+            "y": 1190,
+            "turn": 0.1,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.0,
+            "folha_cabeca": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "lado_frente",
+              "dur": 3.5
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1110.0,
+            "y": 1190,
+            "turn": -0.1,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.0,
+            "folha_cabeca": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "lado_frente",
+              "dur": 3.5
+            }
+          ]
+        },
+        "joaninha": {
+          "start": {
+            "x": 1160.0,
+            "y": 800,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 2,
+            "depth": 0.85,
+            "folha_cabeca": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "lado_frente",
+              "dur": 3.5
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "PRA FRENTE! PRA TRÁS!",
+          "dur": 1.8,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.053,
+          "to": 3.433
+        },
+        {
+          "who": "luisinho",
+          "from": 0.053,
+          "to": 3.433
+        }
+      ]
+    },
+    {
+      "id": "s04_refrao",
+      "title": "Todo mundo em fila",
+      "duration": 2.6733,
+      "description": "Todo mundo em fila / Ninguém fica pra trás! Ê!",
+      "background": "plano_jardim",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1500.0,
+            "y": 540.0,
+            "zoom": 1.808
+          },
+          {
+            "t": 2.673,
+            "x": 1500.0,
+            "y": 540.0,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "formiguinha": {
+          "start": {
+            "x": 900.0,
+            "y": 730,
+            "turn": 0.6,
+            "expr": "happy",
+            "z": 2,
+            "folha_cabeca": 1.0,
+            "depth": 0.75
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "walk",
+              "to_x": 1500.0
+            }
+          ]
+        },
+        "laurinha": {
+          "start": {
+            "x": 1050.0,
+            "y": 970,
+            "turn": 0.6,
+            "expr": "happy",
+            "z": 3,
+            "folha_cabeca": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "walk",
+              "to_x": 1650.0
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 750.0,
+            "y": 970,
+            "turn": 0.6,
+            "expr": "happy",
+            "z": 3,
+            "folha_cabeca": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "walk",
+              "to_x": 1350.0
+            }
+          ]
+        }
+      },
+      "props": {
+        "b1": {
+          "start": {
+            "x": 1311.2907191149354,
+            "y": 930,
+            "z": 2,
+            "folha_cabeca": 1.0,
+            "turn": 0.6,
+            "depth": 0.55
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "x": 1100
+              }
+            },
+            {
+              "t": 2.673,
+              "pose": {
+                "x": 1900
+              },
+              "ease": "linear"
+            }
+          ]
+        },
+        "b2": {
+          "start": {
+            "x": 1311.2907191149354,
+            "y": 930,
+            "z": 2,
+            "folha_cabeca": 1.0,
+            "turn": 0.6,
+            "depth": 0.55
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "x": 850
+              }
+            },
+            {
+              "t": 2.673,
+              "pose": {
+                "x": 1650
+              },
+              "ease": "linear"
+            }
+          ]
+        },
+        "b3": {
+          "start": {
+            "x": 1311.2907191149354,
+            "y": 930,
+            "z": 2,
+            "folha_cabeca": 1.0,
+            "turn": 0.6,
+            "depth": 0.55
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "x": 600
+              }
+            },
+            {
+              "t": 2.673,
+              "pose": {
+                "x": 1400
+              },
+              "ease": "linear"
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.3,
+          "text": "TODO MUNDO EM FILA!",
+          "dur": 1.8,
+          "color": "laranja",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 2.653
+        },
+        {
+          "who": "luisinho",
+          "from": 0.0,
+          "to": 2.653
+        }
+      ]
+    }
+  ]
+}

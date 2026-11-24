@@ -1,0 +1,172 @@
+{
+  "episode": "ep03-sorriso-brilhante-short",
+  "scenes": {
+    "s01_refrao": {
+      "frames": 98,
+      "performers": {
+        "laurinha": {
+          "drawings": 98,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 97
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s02_refrao": {
+      "frames": 42,
+      "performers": {
+        "laurinha": {
+          "drawings": 42,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 41
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 42,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 41
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s03_refrao": {
+      "frames": 50,
+      "performers": {
+        "luisinho": {
+          "drawings": 50,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 49
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s04_refrao": {
+      "frames": 65,
+      "performers": {
+        "laurinha": {
+          "drawings": 65,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 64
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 65,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 64
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s05_refrao": {
+      "frames": 73,
+      "performers": {
+        "laurinha": {
+          "drawings": 73,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 72
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 73,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 72
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s06_refrao": {
+      "frames": 53,
+      "performers": {
+        "laurinha": {
+          "drawings": 53,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 52
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 53,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 52
+          },
+          "empty_frames": 0
+        },
+        "ampulheta": {
+          "drawings": 53,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 52
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s07_refrao": {
+      "frames": 61,
+      "performers": {
+        "laurinha": {
+          "drawings": 61,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 60
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 61,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 60
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    }
+  },
+  "warnings": [
+    "storyboard ainda não aprovado (approval.storyboard = false): o render sairá como CANDIDATO",
+    "storyboard s01_refrao: pendente",
+    "storyboard s02_refrao: pendente",
+    "storyboard s03_refrao: pendente",
+    "storyboard s04_refrao: pendente",
+    "storyboard s05_refrao: pendente",
+    "storyboard s06_refrao: pendente",
+    "storyboard s07_refrao: sem storyboard"
+  ],
+  "lines": {},
+  "video": "/home/otavio/2d/projects/laurinha/ep03-sorriso-brilhante-short/output/ep03-sorriso-brilhante-short_CANDIDATO.mp4",
+  "contact_sheet": "/home/otavio/2d/projects/laurinha/ep03-sorriso-brilhante-short/output/prancha.png",
+  "approved": false
+}

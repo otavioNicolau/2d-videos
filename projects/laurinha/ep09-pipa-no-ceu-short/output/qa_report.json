@@ -1,0 +1,162 @@
+{
+  "episode": "ep09-pipa-no-ceu-short",
+  "scenes": {
+    "s01_refrao": {
+      "frames": 93,
+      "performers": {
+        "laurinha": {
+          "drawings": 93,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 92
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 93,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 92
+          },
+          "empty_frames": 0
+        },
+        "pipa": {
+          "drawings": 93,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 92
+          },
+          "empty_frames": 0
+        },
+        "vento": {
+          "drawings": 93,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 92
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s02_refrao": {
+      "frames": 118,
+      "performers": {
+        "laurinha": {
+          "drawings": 118,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 117
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 118,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 117
+          },
+          "empty_frames": 0
+        },
+        "pipa": {
+          "drawings": 118,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 117
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s03_refrao": {
+      "frames": 106,
+      "performers": {
+        "laurinha": {
+          "drawings": 106,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 105
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 106,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 105
+          },
+          "empty_frames": 0
+        },
+        "pipa": {
+          "drawings": 106,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 105
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s04_refrao": {
+      "frames": 132,
+      "performers": {
+        "laurinha": {
+          "drawings": 132,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 131
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 132,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 131
+          },
+          "empty_frames": 0
+        },
+        "pipa": {
+          "drawings": 128,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 131
+          },
+          "empty_frames": 0
+        },
+        "vento": {
+          "drawings": 127,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 131
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    }
+  },
+  "warnings": [
+    "s01_refrao/pipa: chave em 6.0s após o fim da cena",
+    "s01_refrao/vento: chave em 6s após o fim da cena",
+    "s02_refrao/pipa: chave em 6.0s após o fim da cena",
+    "s03_refrao/pipa: chave em 3.6s após o fim da cena",
+    "s04_refrao/pipa: chave em 6.0s após o fim da cena",
+    "s04_refrao/vento: chave em 6s após o fim da cena",
+    "storyboard ainda não aprovado (approval.storyboard = false): o render sairá como CANDIDATO",
+    "storyboard s01_refrao: pendente",
+    "storyboard s02_refrao: pendente",
+    "storyboard s03_refrao: pendente",
+    "storyboard s04_refrao: pendente"
+  ],
+  "lines": {},
+  "video": "/home/otavio/2d/projects/laurinha/ep09-pipa-no-ceu-short/output/ep09-pipa-no-ceu-short_CANDIDATO.mp4",
+  "contact_sheet": "/home/otavio/2d/projects/laurinha/ep09-pipa-no-ceu-short/output/prancha.png",
+  "approved": false
+}

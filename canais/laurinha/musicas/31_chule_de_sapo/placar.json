@@ -1,0 +1,31 @@
+{
+ "musica": "31",
+ "titulo": "Chulé de Sapo!",
+ "estilo": "E17",
+ "medidas": {
+  "voz_%": 44.4,
+  "bateria_%": 34.4,
+  "baixo_%": 4.3,
+  "outros_%": 16.9,
+  "largura_voz": 0.088,
+  "batidas_identicas": 0.73,
+  "duracao_s": 151.3,
+  "teclado_eletronico": 0.019,
+  "bateria_banda": 0.025,
+  "percussao": 0.015,
+  "metais": 0.003,
+  "sincope": 0.51,
+  "baixo_sincopado": 0.54
+ },
+ "acertos": "6/12",
+ "nota": 4.9,
+ "obs": "E17 groove próprio 144 BPM (acima da faixa), letra 5–8; baixo baixo 4,4 %",
+ "falhas": [
+  "baixo no som (%) (baixo)",
+  "outros instrumentos (%) (alto)",
+  "largura da voz (0 = uma voz no centro) (alto)",
+  "batida de teclado (loop igual) (baixo)",
+  "teclado/synth reconhecido (baixo)",
+  "batida sincopada (contratempo) — o 'contagiante' (baixo)"
+ ]
+}

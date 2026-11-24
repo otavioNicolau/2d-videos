@@ -1,0 +1,148 @@
+{
+  "episode": "ep07-festa-surpresa-short",
+  "scenes": {
+    "s01_refrao": {
+      "frames": 92,
+      "performers": {
+        "mimi": {
+          "drawings": 92,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 91
+          },
+          "empty_frames": 0
+        },
+        "bilu": {
+          "drawings": 92,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 91
+          },
+          "empty_frames": 0
+        },
+        "bal0": {
+          "drawings": 92,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 91
+          },
+          "empty_frames": 0
+        },
+        "bal1": {
+          "drawings": 92,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 91
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s02_refrao": {
+      "frames": 118,
+      "performers": {
+        "gogo": {
+          "drawings": 118,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 117
+          },
+          "empty_frames": 0
+        },
+        "teco": {
+          "drawings": 118,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 117
+          },
+          "empty_frames": 0
+        },
+        "sofa": {
+          "drawings": 116,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 117
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s03_refrao": {
+      "frames": 105,
+      "performers": {
+        "gogo": {
+          "drawings": 105,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 104
+          },
+          "empty_frames": 0
+        },
+        "mimi": {
+          "drawings": 105,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 104
+          },
+          "empty_frames": 0
+        },
+        "bilu": {
+          "drawings": 105,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 104
+          },
+          "empty_frames": 0
+        },
+        "bo": {
+          "drawings": 105,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 104
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s04_refrao": {
+      "frames": 117,
+      "performers": {
+        "bilu": {
+          "drawings": 117,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 116
+          },
+          "empty_frames": 0
+        },
+        "bo": {
+          "drawings": 117,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 116
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    }
+  },
+  "warnings": [
+    "storyboard ainda não aprovado (approval.storyboard = false): o render sairá como CANDIDATO",
+    "storyboard s01_refrao: pendente",
+    "storyboard s02_refrao: pendente",
+    "storyboard s03_refrao: pendente",
+    "storyboard s04_refrao: pendente"
+  ],
+  "lines": {},
+  "video": "/home/otavio/2d/projects/fofolucos/ep07-festa-surpresa-short/output/ep07-festa-surpresa-short_CANDIDATO.mp4",
+  "contact_sheet": "/home/otavio/2d/projects/fofolucos/ep07-festa-surpresa-short/output/prancha.png",
+  "approved": false
+}

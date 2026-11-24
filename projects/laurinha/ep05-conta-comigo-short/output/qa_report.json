@@ -1,0 +1,186 @@
+{
+  "episode": "ep05-conta-comigo-short",
+  "scenes": {
+    "s01_refrao": {
+      "frames": 88,
+      "performers": {
+        "laurinha": {
+          "drawings": 88,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 87
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 88,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 87
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s02_refrao": {
+      "frames": 124,
+      "performers": {
+        "mao_e": {
+          "drawings": 124,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 123
+          },
+          "empty_frames": 0
+        },
+        "mao_d": {
+          "drawings": 124,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 123
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s03_refrao": {
+      "frames": 50,
+      "performers": {
+        "mao": {
+          "drawings": 50,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 49
+          },
+          "empty_frames": 0
+        },
+        "num": {
+          "drawings": 50,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 49
+          },
+          "empty_frames": 22
+        }
+      },
+      "issues": [
+        "num: 22 quadros vazios (ex.: [1, 2, 3, 4, 5])"
+      ],
+      "frozen_samples": 0
+    },
+    "s04_refrao": {
+      "frames": 50,
+      "performers": {
+        "mao": {
+          "drawings": 50,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 49
+          },
+          "empty_frames": 0
+        },
+        "num": {
+          "drawings": 50,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 49
+          },
+          "empty_frames": 22
+        }
+      },
+      "issues": [
+        "num: 22 quadros vazios (ex.: [1, 2, 3, 4, 5])"
+      ],
+      "frozen_samples": 0
+    },
+    "s05_refrao": {
+      "frames": 50,
+      "performers": {
+        "mao_e": {
+          "drawings": 50,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 49
+          },
+          "empty_frames": 0
+        },
+        "mao_d": {
+          "drawings": 50,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 49
+          },
+          "empty_frames": 0
+        },
+        "num": {
+          "drawings": 50,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 49
+          },
+          "empty_frames": 10
+        }
+      },
+      "issues": [
+        "num: 10 quadros vazios (ex.: [1, 2, 3, 4, 5])"
+      ],
+      "frozen_samples": 0
+    },
+    "s06_refrao": {
+      "frames": 35,
+      "performers": {
+        "formiguinha": {
+          "drawings": 35,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 34
+          },
+          "empty_frames": 0
+        },
+        "laurinha": {
+          "drawings": 35,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 34
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 35,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 34
+          },
+          "empty_frames": 0
+        },
+        "joaninha": {
+          "drawings": 35,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 34
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    }
+  },
+  "warnings": [
+    "storyboard ainda não aprovado (approval.storyboard = false): o render sairá como CANDIDATO",
+    "storyboard s01_refrao: pendente",
+    "storyboard s02_refrao: pendente",
+    "storyboard s03_refrao: pendente",
+    "storyboard s04_refrao: pendente",
+    "storyboard s05_refrao: pendente",
+    "storyboard s06_refrao: pendente"
+  ],
+  "lines": {},
+  "video": "/home/otavio/2d/projects/laurinha/ep05-conta-comigo-short/output/ep05-conta-comigo-short_CANDIDATO.mp4",
+  "contact_sheet": "/home/otavio/2d/projects/laurinha/ep05-conta-comigo-short/output/prancha.png",
+  "approved": false
+}

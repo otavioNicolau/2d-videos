@@ -31,7 +31,7 @@ Já publicadas: 01 Zum Zum, Cheguei!, 02 Bate Palminha, 03 Sorriso Brilhante, 04
 | 27/04/2027 | 29 | Mamãe Querida | Samba infantil | R | Laurinha | **Dia das Mães (09/05/2027)** |
 | 04/05/2027 | 30 | Bi-Bi, Fom-Fom! | Pop infantil | B | Laurinha |  |
 | 11/05/2027 | 31 | Chulé de Sapo! | Forró piseiro | A | Luisinho |  |
-| 18/05/2027 | 32 | Bicho Faz Assim! | Pagodão baiano | B | Laurinha |  |
+| 18/05/2027 | 32 | O Bigodão do Vovô Ciço! | Pagodão baiano | A | Laurinha |  |
 | 25/05/2027 | 33 | Brigadeiro | Latino infantil (reggaeton/suingueira) | R | Laurinha |  |
 | 01/06/2027 | 34 | Pula Pipoca | Forró piseiro | D | Laurinha | **Festa junina** |
 | 08/06/2027 | 35 | Banda da Turminha | Marchinha de carnaval | C | Luisinho |  |

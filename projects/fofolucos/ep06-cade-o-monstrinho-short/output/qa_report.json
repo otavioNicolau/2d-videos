@@ -1,0 +1,156 @@
+{
+  "episode": "ep06-cade-o-monstrinho-short",
+  "scenes": {
+    "s01_refrao": {
+      "frames": 91,
+      "performers": {
+        "gogo": {
+          "drawings": 91,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 90
+          },
+          "empty_frames": 0
+        },
+        "nv": {
+          "drawings": 91,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 90
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s02_refrao": {
+      "frames": 103,
+      "performers": {
+        "mimi": {
+          "drawings": 103,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 102
+          },
+          "empty_frames": 0
+        },
+        "canteiro": {
+          "drawings": 103,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 102
+          },
+          "empty_frames": 0
+        },
+        "nv": {
+          "drawings": 103,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 102
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s03_refrao": {
+      "frames": 104,
+      "performers": {
+        "mimi": {
+          "drawings": 104,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 103
+          },
+          "empty_frames": 0
+        },
+        "bilu": {
+          "drawings": 104,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 103
+          },
+          "empty_frames": 0
+        },
+        "zuzu": {
+          "drawings": 104,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 103
+          },
+          "empty_frames": 0
+        },
+        "bo": {
+          "drawings": 104,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 103
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s04_refrao": {
+      "frames": 78,
+      "performers": {
+        "mimi": {
+          "drawings": 78,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 77
+          },
+          "empty_frames": 0
+        },
+        "bo": {
+          "drawings": 78,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 77
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s05_refrao": {
+      "frames": 79,
+      "performers": {
+        "mimi": {
+          "drawings": 79,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 78
+          },
+          "empty_frames": 0
+        },
+        "bo": {
+          "drawings": 79,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 78
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    }
+  },
+  "warnings": [
+    "storyboard ainda não aprovado (approval.storyboard = false): o render sairá como CANDIDATO",
+    "storyboard s01_refrao: pendente",
+    "storyboard s02_refrao: pendente",
+    "storyboard s03_refrao: pendente",
+    "storyboard s04_refrao: pendente",
+    "storyboard s05_refrao: sem storyboard"
+  ],
+  "lines": {},
+  "video": "/home/otavio/2d/projects/fofolucos/ep06-cade-o-monstrinho-short/output/ep06-cade-o-monstrinho-short_CANDIDATO.mp4",
+  "contact_sheet": "/home/otavio/2d/projects/fofolucos/ep06-cade-o-monstrinho-short/output/prancha.png",
+  "approved": false
+}

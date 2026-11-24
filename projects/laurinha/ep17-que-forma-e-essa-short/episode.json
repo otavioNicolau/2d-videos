@@ -1,0 +1,633 @@
+{
+  "schema": "1.1",
+  "id": "ep17-que-forma-e-essa-short",
+  "title": "Que Forma É Essa? — Short",
+  "logline": "Clipe de \"Que Forma É Essa?\" — as formas escondidas na mesa do lanche. Montado do roteiro verso a verso (roteiro.json).",
+  "fps": 30,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "background": "plano_parque",
+  "soundtrack": {
+    "file": "musica/trabalho.wav",
+    "analysis": "analise/song.json",
+    "start": 0.0,
+    "end": 13.4,
+    "fade_out": 0.3,
+    "beat_grid": "full"
+  },
+  "captions": {
+    "lyrics": "analise/letra.json",
+    "style": "palavra_a_palavra"
+  },
+  "overlays": {
+    "logo": true,
+    "channel": [
+      "LAURINHA",
+      "e Luisinho"
+    ]
+  },
+  "cast": {
+    "laurinha": {
+      "character": "laurinha"
+    },
+    "luisinho": {
+      "character": "luisinho"
+    },
+    "mesa": {
+      "character": "mesa"
+    },
+    "c0": {
+      "character": "comida_forma"
+    },
+    "c1": {
+      "character": "comida_forma"
+    },
+    "c2": {
+      "character": "comida_forma"
+    },
+    "c3": {
+      "character": "comida_forma"
+    },
+    "c4": {
+      "character": "comida_forma"
+    },
+    "pz": {
+      "character": "comida_forma"
+    },
+    "tr": {
+      "character": "comida_forma"
+    },
+    "qj": {
+      "character": "comida_forma"
+    },
+    "ov": {
+      "character": "comida_forma"
+    },
+    "pr": {
+      "character": "comida_forma"
+    },
+    "joinha": {
+      "character": "joinha"
+    },
+    "mamae": {
+      "character": "mamae"
+    },
+    "botao": {
+      "character": "botao_inscrever"
+    }
+  },
+  "approval": {
+    "storyboard": false,
+    "final_render": false
+  },
+  "projeto": "laurinha/ep17-que-forma-e-essa",
+  "scenes": [
+    {
+      "id": "s01_refrao",
+      "title": "Que forma é essa?",
+      "duration": 3.378,
+      "description": "Que forma é essa? / Responde ligeiro! / Que forma é essa? / Quem acertou primeiro?",
+      "background": "plano_cozinha",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.88,
+            "x": 1300.0,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          },
+          {
+            "t": 3.378,
+            "x": 1300.0,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1111.2907191149354,
+            "y": 930,
+            "turn": 0.35,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.88,
+              "do": "pensar",
+              "dur": 4.83
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1488.7092808850646,
+            "y": 930,
+            "turn": -0.35,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.88,
+              "do": "pensar",
+              "dur": 5.03
+            }
+          ]
+        }
+      },
+      "props": {
+        "c1": {
+          "start": {
+            "x": 1300,
+            "y": 930,
+            "z": 2,
+            "tipo": 1,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.88,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 3.378,
+              "pose": {
+                "brilho": 0.0
+              },
+              "in": 4.85
+            }
+          ]
+        }
+      },
+      "flash_in": true,
+      "callouts": [
+        {
+          "t": 1.03,
+          "text": "QUE FORMA É ESSA?",
+          "dur": 1.8,
+          "color": "verde",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 1.16,
+          "to": 3.358
+        },
+        {
+          "who": "luisinho",
+          "from": 1.16,
+          "to": 3.358
+        }
+      ]
+    },
+    {
+      "id": "s02_refrao",
+      "title": "Que forma é essa?",
+      "duration": 3.702,
+      "description": "Que forma é essa? / Responde ligeiro! / Que forma é essa? / Quem acertou primeiro?",
+      "background": "plano_cozinha",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1111.2907191149354,
+            "y": 560.0,
+            "zoom": 2.4
+          },
+          {
+            "t": 3.702,
+            "x": 1111.2907191149354,
+            "y": 560.0,
+            "zoom": 2.496,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1111.2907191149354,
+            "y": 930,
+            "turn": 0.35,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "pensar",
+              "dur": 2.332
+            },
+            {
+              "t": 2.832,
+              "do": "cheguei",
+              "dur": 0.87
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1488.7092808850646,
+            "y": 930,
+            "turn": -0.35,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "pensar",
+              "dur": 2.532
+            },
+            {
+              "t": 3.032,
+              "do": "jump",
+              "dur": 1.0
+            }
+          ]
+        }
+      },
+      "props": {
+        "c1": {
+          "start": {
+            "x": 1300,
+            "y": 930,
+            "z": 2,
+            "tipo": 1,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "pulo": 0.0
+              }
+            },
+            {
+              "t": 2.382,
+              "pose": {
+                "brilho": 0.0
+              },
+              "in": 4.85
+            },
+            {
+              "t": 2.532,
+              "pose": {
+                "boca": 0.8
+              }
+            },
+            {
+              "t": 2.732,
+              "pose": {
+                "brilho": 1.0
+              },
+              "ease": "out",
+              "in": 0.32
+            },
+            {
+              "t": 3.032,
+              "pose": {
+                "boca": 0.0
+              },
+              "in": 0.47
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 2.832,
+          "text": "ACERTOU!",
+          "dur": 0.87,
+          "color": "verde",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 3.682
+        },
+        {
+          "who": "luisinho",
+          "from": 0.0,
+          "to": 3.682
+        }
+      ]
+    },
+    {
+      "id": "s03_refrao",
+      "title": "Que forma é essa?",
+      "duration": 3.31,
+      "description": "Que forma é essa? / Responde ligeiro! / Que forma é essa? / Quem acertou primeiro?",
+      "background": "danca_raios_laranja",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 3.31,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 800.0,
+            "y": 1010,
+            "turn": 0.25,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.15
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "festa",
+              "dur": 4.99
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1120.0,
+            "y": 1010,
+            "turn": -0.25,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.15
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "festa",
+              "dur": 4.99
+            }
+          ]
+        }
+      },
+      "props": {
+        "c2": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "z": 3,
+            "tipo": 2,
+            "depth": 0.8
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear"
+            },
+            {
+              "t": 0.9,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.87
+            },
+            {
+              "t": 1.0,
+              "pose": {
+                "brilho": 1.0
+              }
+            },
+            {
+              "t": 1.8,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.87
+            },
+            {
+              "t": 2.7,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.87
+            },
+            {
+              "t": 3.31,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.87
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.2,
+          "to": 3.29
+        },
+        {
+          "who": "luisinho",
+          "from": 0.2,
+          "to": 3.29
+        }
+      ]
+    },
+    {
+      "id": "s04_refrao",
+      "title": "Que forma é essa?",
+      "duration": 3.01,
+      "description": "Que forma é essa? / Responde ligeiro! / Que forma é essa? / Quem acertou primeiro?",
+      "background": "danca_raios_laranja",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 800.0,
+            "y": 760.0,
+            "zoom": 2.0
+          },
+          {
+            "t": 3.01,
+            "x": 800.0,
+            "y": 760.0,
+            "zoom": 2.08,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 800.0,
+            "y": 1010,
+            "turn": 0.25,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.15
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "festa",
+              "dur": 1.68
+            },
+            {
+              "t": 1.78,
+              "do": "laugh",
+              "dur": 1.51
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1120.0,
+            "y": 1010,
+            "turn": -0.25,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.15
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "festa",
+              "dur": 1.68
+            },
+            {
+              "t": 1.78,
+              "do": "laugh",
+              "dur": 1.51
+            }
+          ]
+        }
+      },
+      "props": {
+        "c2": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "z": 3,
+            "tipo": 2,
+            "depth": 0.8
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.87
+            },
+            {
+              "t": 0.29,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.87
+            },
+            {
+              "t": 1.19,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear",
+              "in": 0.87
+            },
+            {
+              "t": 2.09,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear",
+              "in": 0.87
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 2.99
+        },
+        {
+          "who": "luisinho",
+          "from": 0.0,
+          "to": 2.99
+        }
+      ]
+    }
+  ]
+}

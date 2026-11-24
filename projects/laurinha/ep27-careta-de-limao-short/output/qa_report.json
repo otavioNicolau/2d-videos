@@ -1,0 +1,268 @@
+{
+  "episode": "ep27-careta-de-limao-short",
+  "scenes": {
+    "s01_refrao": {
+      "frames": 83,
+      "performers": {
+        "laurinha": {
+          "drawings": 83,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 82
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 83,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 82
+          },
+          "empty_frames": 0
+        },
+        "l": {
+          "drawings": 83,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 82
+          },
+          "empty_frames": 0
+        },
+        "p": {
+          "drawings": 83,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 82
+          },
+          "empty_frames": 0
+        },
+        "n": {
+          "drawings": 83,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 82
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s02_refrao": {
+      "frames": 67,
+      "performers": {
+        "laurinha": {
+          "drawings": 67,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 66
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 67,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 66
+          },
+          "empty_frames": 0
+        },
+        "l": {
+          "drawings": 67,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 66
+          },
+          "empty_frames": 0
+        },
+        "p": {
+          "drawings": 67,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 66
+          },
+          "empty_frames": 0
+        },
+        "n": {
+          "drawings": 67,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 66
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s03_refrao": {
+      "frames": 133,
+      "performers": {
+        "luisinho": {
+          "drawings": 133,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 132
+          },
+          "empty_frames": 0
+        },
+        "laurinha": {
+          "drawings": 133,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 132
+          },
+          "empty_frames": 0
+        },
+        "bat": {
+          "drawings": 133,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 132
+          },
+          "empty_frames": 0
+        },
+        "l": {
+          "drawings": 133,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 132
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s04_refrao": {
+      "frames": 134,
+      "performers": {
+        "laurinha": {
+          "drawings": 134,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 133
+          },
+          "empty_frames": 0
+        },
+        "formiguinha": {
+          "drawings": 134,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 133
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s05_refrao": {
+      "frames": 67,
+      "performers": {
+        "luisinho": {
+          "drawings": 67,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 66
+          },
+          "empty_frames": 0
+        },
+        "laurinha": {
+          "drawings": 67,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 66
+          },
+          "empty_frames": 0
+        },
+        "bat": {
+          "drawings": 67,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 66
+          },
+          "empty_frames": 0
+        },
+        "tec": {
+          "drawings": 67,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 66
+          },
+          "empty_frames": 0
+        },
+        "l": {
+          "drawings": 67,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 66
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s06_refrao": {
+      "frames": 83,
+      "performers": {
+        "luisinho": {
+          "drawings": 83,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 82
+          },
+          "empty_frames": 0
+        },
+        "laurinha": {
+          "drawings": 83,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 82
+          },
+          "empty_frames": 0
+        },
+        "bat": {
+          "drawings": 83,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 82
+          },
+          "empty_frames": 0
+        },
+        "tec": {
+          "drawings": 83,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 82
+          },
+          "empty_frames": 0
+        },
+        "l": {
+          "drawings": 83,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 82
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    }
+  },
+  "warnings": [
+    "storyboard ainda não aprovado (approval.storyboard = false): o render sairá como CANDIDATO",
+    "storyboard s01_refrao: pendente",
+    "storyboard s02_refrao: pendente",
+    "storyboard s03_refrao: pendente",
+    "storyboard s04_refrao: pendente",
+    "storyboard s05_refrao: sem storyboard",
+    "storyboard s06_refrao: sem storyboard"
+  ],
+  "lines": {},
+  "video": "/home/otavio/2d/projects/laurinha/ep27-careta-de-limao-short/output/ep27-careta-de-limao-short_CANDIDATO.mp4",
+  "contact_sheet": "/home/otavio/2d/projects/laurinha/ep27-careta-de-limao-short/output/prancha.png",
+  "approved": false
+}

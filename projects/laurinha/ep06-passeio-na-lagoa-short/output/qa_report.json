@@ -1,0 +1,132 @@
+{
+  "episode": "ep06-passeio-na-lagoa-short",
+  "scenes": {
+    "s01_refrao": {
+      "frames": 120,
+      "performers": {
+        "vovo": {
+          "drawings": 120,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 119
+          },
+          "empty_frames": 0
+        },
+        "laurinha": {
+          "drawings": 120,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 119
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 120,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 119
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s02_refrao": {
+      "frames": 67,
+      "performers": {
+        "laurinha": {
+          "drawings": 67,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 66
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 67,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 66
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s03_refrao": {
+      "frames": 120,
+      "performers": {
+        "laurinha": {
+          "drawings": 120,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 119
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 120,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 119
+          },
+          "empty_frames": 0
+        },
+        "pato": {
+          "drawings": 120,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 119
+          },
+          "empty_frames": 0
+        },
+        "sapo": {
+          "drawings": 120,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 119
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s04_refrao": {
+      "frames": 109,
+      "performers": {
+        "laurinha": {
+          "drawings": 109,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 108
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 109,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 108
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    }
+  },
+  "warnings": [
+    "storyboard ainda não aprovado (approval.storyboard = false): o render sairá como CANDIDATO",
+    "storyboard s01_refrao: sem storyboard",
+    "storyboard s02_refrao: sem storyboard",
+    "storyboard s03_refrao: sem storyboard",
+    "storyboard s04_refrao: sem storyboard"
+  ],
+  "lines": {},
+  "video": "/home/otavio/2d/projects/laurinha/ep06-passeio-na-lagoa-short/output/ep06-passeio-na-lagoa-short_CANDIDATO.mp4",
+  "contact_sheet": "/home/otavio/2d/projects/laurinha/ep06-passeio-na-lagoa-short/output/prancha.png",
+  "approved": false
+}

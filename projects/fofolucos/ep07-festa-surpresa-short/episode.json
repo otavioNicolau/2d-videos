@@ -1,0 +1,583 @@
+{
+  "schema": "1.1",
+  "id": "ep07-festa-surpresa-short",
+  "projeto": "fofolucos/ep07-festa-surpresa",
+  "title": "Festa Surpresa do Nhoque! — Short",
+  "logline": "Clipe de \"Festa Surpresa do Nhoque!\" — a turma prepara uma FESTA SURPRESA para o aniversário do Nhoque (o comilão) e tudo dá meio errado: a antena do Teco fura o balão (ploc!) e o Bilu, animado, sopra a vela antes da hora. Refrão-segredo: 'festa surpresa! psiu! fala baixinho! todo mundo escondidinho!'. Ponte = comandos (apaga a luz, se esconde no sofá, segura o riso; três, dois, um… pula, abre os braços, SURPRESA!). Virada: a porta abre, todos gritam SURPRESA… mas era o Zuzu trazendo o bolo, que cai sentado no chão; o Nhoque entra atrás, vê a festa, chora de alegria e abraça a turma. Montado do roteiro verso a verso (roteiro.json).",
+  "fps": 30,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "background": "plano_parque",
+  "soundtrack": {
+    "file": "musica/trabalho.wav",
+    "analysis": "analise/song.json",
+    "start": 0.0,
+    "end": 14.3857,
+    "fade_out": 0.3,
+    "beat_grid": "full"
+  },
+  "captions": {
+    "lyrics": "analise/letra.json",
+    "style": "palavra_a_palavra"
+  },
+  "overlays": {
+    "logo": true,
+    "channel": [
+      "FOFOLUCOS",
+      ""
+    ],
+    "logo_png": "/home/otavio/2d/library/brand/fofolucos/logo.png"
+  },
+  "cast": {
+    "laurinha": {
+      "character": "laurinha"
+    },
+    "luisinho": {
+      "character": "luisinho"
+    },
+    "bilu": {
+      "character": "bilu"
+    },
+    "mimi": {
+      "character": "mimi"
+    },
+    "bal0": {
+      "character": "balao"
+    },
+    "bal1": {
+      "character": "balao"
+    },
+    "bal2": {
+      "character": "balao"
+    },
+    "teco": {
+      "character": "teco"
+    },
+    "gogo": {
+      "character": "gogo"
+    },
+    "bo": {
+      "character": "bolha"
+    },
+    "zuzu": {
+      "character": "zuzu"
+    },
+    "bat": {
+      "character": "bateria_show"
+    },
+    "tec": {
+      "character": "teclado_inst"
+    },
+    "nhoque": {
+      "character": "nhoque"
+    },
+    "bolo": {
+      "character": "bolo_aniversario"
+    },
+    "sofa": {
+      "character": "sofa"
+    },
+    "joinha": {
+      "character": "joinha"
+    },
+    "nv": {
+      "character": "nuvem"
+    },
+    "botao": {
+      "character": "botao_inscrever"
+    }
+  },
+  "approval": {
+    "storyboard": false,
+    "final_render": false
+  },
+  "scenes": [
+    {
+      "id": "s01_refrao",
+      "title": "Festa surpresa!",
+      "duration": 3.0667,
+      "description": "Festa surpresa! / Psiu! Fala baixinho!",
+      "background": "mon_festa",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1317.9,
+            "y": 540.0,
+            "zoom": 1.808
+          },
+          {
+            "t": 3.0667,
+            "x": 1317.9,
+            "y": 540.0,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "mimi": {
+          "start": {
+            "x": 771.2907191149355,
+            "y": 930,
+            "turn": 0.45,
+            "expr": "sly",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "sneak",
+              "to_x": 1129.1907191149355,
+              "dur": 2.97
+            }
+          ]
+        },
+        "bilu": {
+          "start": {
+            "x": 1828.7092808850646,
+            "y": 930,
+            "turn": -0.45,
+            "expr": "sly",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "sneak",
+              "to_x": 1506.6092808850647,
+              "dur": 2.97
+            }
+          ]
+        }
+      },
+      "props": {
+        "bal0": {
+          "start": {
+            "x": 1129.1907191149355,
+            "y": 560,
+            "z": 1,
+            "sem_contorno": 1.0,
+            "depth": 1.015
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cor": 0.0,
+                "balanco": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.01,
+              "pose": {
+                "balanco": 1.8
+              },
+              "ease": "linear",
+              "in": 2.98
+            }
+          ]
+        },
+        "bal1": {
+          "start": {
+            "x": 1506.6092808850647,
+            "y": 560,
+            "z": 1,
+            "sem_contorno": 1.0,
+            "depth": 1.015
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cor": 3.0,
+                "balanco": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.01,
+              "pose": {
+                "balanco": 1.8
+              },
+              "ease": "linear",
+              "in": 2.98
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "FESTA SURPRESA!",
+          "dur": 1.38,
+          "color": "rosa",
+          "y": 170
+        },
+        {
+          "t": 1.53,
+          "text": "PSIU! FALA BAIXINHO!",
+          "dur": 1.537,
+          "color": "roxo",
+          "y": 170
+        }
+      ],
+      "flash_in": true
+    },
+    {
+      "id": "s02_refrao",
+      "title": "Festa surpresa!",
+      "duration": 3.9333,
+      "description": "Festa surpresa! / Todo mundo escondidinho!",
+      "background": "mon_festa",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1300.0,
+            "y": 540.0,
+            "zoom": 1.808
+          },
+          {
+            "t": 3.9333,
+            "x": 1300.0,
+            "y": 540.0,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "gogo": {
+          "start": {
+            "x": 1111.2907191149354,
+            "y": 935,
+            "turn": 0.25,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.305
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "estatua",
+              "dur": 3.933
+            }
+          ]
+        },
+        "teco": {
+          "start": {
+            "x": 1488.7092808850646,
+            "y": 935,
+            "turn": -0.25,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.305
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "estatua",
+              "dur": 3.933
+            }
+          ]
+        }
+      },
+      "props": {
+        "sofa": {
+          "start": {
+            "x": 1300.0,
+            "y": 935,
+            "z": 2,
+            "sem_contorno": 1.0,
+            "depth": 0.87
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {},
+              "ease": "step"
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "FESTA SURPRESA!",
+          "dur": 1.8,
+          "color": "rosa",
+          "y": 170
+        },
+        {
+          "t": 1.97,
+          "text": "TODO MUNDO ESCONDIDINHO!",
+          "dur": 1.8,
+          "color": "verde",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s03_refrao",
+      "title": "Festa surpresa!",
+      "duration": 3.5,
+      "description": "Festa surpresa! / Psiu! Fala baixinho!",
+      "background": "mon_xadrez_roxo",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 3.5,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "gogo": {
+          "start": {
+            "x": 810.0,
+            "y": 1190,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "dur": 3.5,
+              "style": "festa"
+            }
+          ]
+        },
+        "mimi": {
+          "start": {
+            "x": 1110.0,
+            "y": 1190,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.05,
+              "do": "dance",
+              "dur": 3.45,
+              "style": "chute"
+            }
+          ]
+        },
+        "bilu": {
+          "start": {
+            "x": 960.0,
+            "y": 800,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 2,
+            "depth": 0.85
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "dance",
+              "dur": 3.4,
+              "style": "festa"
+            }
+          ]
+        }
+      },
+      "props": {
+        "bo": {
+          "start": {
+            "x": 800,
+            "y": 1000,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.435
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tam": 1.0,
+                "y": 1000.0,
+                "balanco": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.44,
+              "pose": {
+                "y": 250.0
+              },
+              "ease": "linear",
+              "in": 3.41
+            },
+            {
+              "t": 3.44,
+              "pose": {
+                "balanco": 3.5
+              },
+              "ease": "linear",
+              "in": 3.41
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "FESTA SURPRESA!",
+          "dur": 1.8,
+          "color": "rosa",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s04_refrao",
+      "title": "Festa surpresa!",
+      "duration": 3.8857,
+      "description": "Festa surpresa! / Todo mundo escondidinho!",
+      "background": "mon_raios_rosa",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 3.467,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "bilu": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.0,
+            "expr": "sly",
+            "z": 3,
+            "depth": 1.958
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "estatua",
+              "dur": 3.467
+            }
+          ]
+        }
+      },
+      "props": {
+        "bo": {
+          "start": {
+            "x": 1300,
+            "y": 1000,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.435
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tam": 1.0,
+                "y": 1000.0,
+                "balanco": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.41,
+              "pose": {
+                "y": 250.0
+              },
+              "ease": "linear",
+              "in": 3.38
+            },
+            {
+              "t": 3.41,
+              "pose": {
+                "balanco": 3.5
+              },
+              "ease": "linear",
+              "in": 3.38
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "callouts": [
+        {
+          "t": 1.74,
+          "text": "PSIU!",
+          "dur": 1.727,
+          "color": "roxo",
+          "y": 170
+        }
+      ]
+    }
+  ]
+}

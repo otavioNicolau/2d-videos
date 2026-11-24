@@ -1,0 +1,180 @@
+{
+  "episode": "ep22-roda-rodinha-short",
+  "scenes": {
+    "s01_refrao": {
+      "frames": 91,
+      "performers": {
+        "laurinha": {
+          "drawings": 91,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 90
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 91,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 90
+          },
+          "empty_frames": 0
+        },
+        "b0": {
+          "drawings": 91,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 90
+          },
+          "empty_frames": 0
+        },
+        "b1": {
+          "drawings": 91,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 90
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s02_refrao": {
+      "frames": 87,
+      "performers": {
+        "luisinho": {
+          "drawings": 87,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 86
+          },
+          "empty_frames": 0
+        },
+        "laurinha": {
+          "drawings": 87,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 86
+          },
+          "empty_frames": 0
+        },
+        "bat": {
+          "drawings": 87,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 86
+          },
+          "empty_frames": 0
+        },
+        "pl1": {
+          "drawings": 87,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 86
+          },
+          "empty_frames": 0
+        },
+        "pl2": {
+          "drawings": 87,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 86
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s03_refrao": {
+      "frames": 88,
+      "performers": {
+        "laurinha": {
+          "drawings": 88,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 87
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 88,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 87
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s04_refrao": {
+      "frames": 109,
+      "performers": {
+        "luisinho": {
+          "drawings": 109,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 108
+          },
+          "empty_frames": 0
+        },
+        "laurinha": {
+          "drawings": 109,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 108
+          },
+          "empty_frames": 0
+        },
+        "bat": {
+          "drawings": 107,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 108
+          },
+          "empty_frames": 0
+        },
+        "tec": {
+          "drawings": 109,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 108
+          },
+          "empty_frames": 0
+        },
+        "pl1": {
+          "drawings": 108,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 108
+          },
+          "empty_frames": 0
+        },
+        "pl2": {
+          "drawings": 109,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 108
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    }
+  },
+  "warnings": [
+    "storyboard ainda não aprovado (approval.storyboard = false): o render sairá como CANDIDATO",
+    "storyboard s01_refrao: pendente",
+    "storyboard s02_refrao: pendente",
+    "storyboard s03_refrao: pendente",
+    "storyboard s04_refrao: pendente"
+  ],
+  "lines": {},
+  "video": "/home/otavio/2d/projects/laurinha/ep22-roda-rodinha-short/output/ep22-roda-rodinha-short_CANDIDATO.mp4",
+  "contact_sheet": "/home/otavio/2d/projects/laurinha/ep22-roda-rodinha-short/output/prancha.png",
+  "approved": false
+}

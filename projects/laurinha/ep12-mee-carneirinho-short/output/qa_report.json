@@ -1,0 +1,188 @@
+{
+  "episode": "ep12-mee-carneirinho-short",
+  "scenes": {
+    "s01_refrao": {
+      "frames": 95,
+      "performers": {
+        "laurinha": {
+          "drawings": 95,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 94
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 95,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 94
+          },
+          "empty_frames": 0
+        },
+        "carneirinho": {
+          "drawings": 95,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 94
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s02_refrao": {
+      "frames": 65,
+      "performers": {
+        "laurinha": {
+          "drawings": 65,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 64
+          },
+          "empty_frames": 0
+        },
+        "carneirinho": {
+          "drawings": 65,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 64
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s03_refrao": {
+      "frames": 52,
+      "performers": {
+        "laurinha": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        },
+        "carneirinho": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s04_refrao": {
+      "frames": 92,
+      "performers": {
+        "laurinha": {
+          "drawings": 92,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 91
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 92,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 91
+          },
+          "empty_frames": 0
+        },
+        "carneirinho": {
+          "drawings": 92,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 91
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s05_refrao": {
+      "frames": 52,
+      "performers": {
+        "laurinha": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        },
+        "carneirinho": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s06_refrao": {
+      "frames": 87,
+      "performers": {
+        "laurinha": {
+          "drawings": 87,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 86
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 87,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 86
+          },
+          "empty_frames": 0
+        },
+        "carneirinho": {
+          "drawings": 87,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 86
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    }
+  },
+  "warnings": [
+    "storyboard ainda não aprovado (approval.storyboard = false): o render sairá como CANDIDATO",
+    "storyboard s01_refrao: pendente",
+    "storyboard s02_refrao: pendente",
+    "storyboard s03_refrao: pendente",
+    "storyboard s04_refrao: pendente",
+    "storyboard s05_refrao: pendente",
+    "storyboard s06_refrao: pendente"
+  ],
+  "lines": {},
+  "video": "/home/otavio/2d/projects/laurinha/ep12-mee-carneirinho-short/output/ep12-mee-carneirinho-short_CANDIDATO.mp4",
+  "contact_sheet": "/home/otavio/2d/projects/laurinha/ep12-mee-carneirinho-short/output/prancha.png",
+  "approved": false
+}

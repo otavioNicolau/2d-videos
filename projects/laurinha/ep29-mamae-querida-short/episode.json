@@ -1,0 +1,401 @@
+{
+  "schema": "1.1",
+  "id": "ep29-mamae-querida-short",
+  "projeto": "laurinha/ep29-mamae-querida",
+  "title": "Mamãe Querida — Short",
+  "logline": "Clipe de \"Mamãe Querida\" — a mamãe e o superpoder de achar tudo e sarar dodói com beijinho. Montado do roteiro verso a verso (roteiro.json).",
+  "fps": 30,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "background": "plano_parque",
+  "soundtrack": {
+    "file": "musica/trabalho.wav",
+    "analysis": "analise/song.json",
+    "start": 0.0,
+    "end": 13.796,
+    "fade_out": 0.3,
+    "beat_grid": "full"
+  },
+  "captions": {
+    "lyrics": "analise/letra.json",
+    "style": "palavra_a_palavra"
+  },
+  "overlays": {
+    "logo": true,
+    "channel": [
+      "LAURINHA",
+      "e Luisinho"
+    ]
+  },
+  "cast": {
+    "laurinha": {
+      "character": "laurinha"
+    },
+    "luisinho": {
+      "character": "luisinho"
+    },
+    "mamae": {
+      "character": "mamae"
+    },
+    "bat": {
+      "character": "bateria_show"
+    },
+    "tec": {
+      "character": "teclado_inst"
+    },
+    "joinha": {
+      "character": "joinha"
+    },
+    "botao": {
+      "character": "botao_inscrever"
+    }
+  },
+  "approval": {
+    "storyboard": false,
+    "final_render": false
+  },
+  "scenes": [
+    {
+      "id": "s01_refrao",
+      "title": "Mamãe querida!",
+      "duration": 4.436,
+      "description": "Mamãe querida! / Te amo, mamãe!",
+      "background": "plano_casa_frente",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.436,
+            "x": 1300.0,
+            "y": 536.0387215734481,
+            "zoom": 1.808
+          },
+          {
+            "t": 4.436,
+            "x": 1300.0,
+            "y": 536.0387215734481,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1300.0,
+            "y": 930,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 2.236,
+              "do": "beijo",
+              "dur": 2.2
+            }
+          ]
+        }
+      },
+      "fx": [
+        "coracoes"
+      ],
+      "callouts": [
+        {
+          "t": 0.536,
+          "text": "MAMÃE QUERIDA!",
+          "dur": 1.8,
+          "color": "rosa",
+          "y": 170
+        },
+        {
+          "t": 2.436,
+          "text": "TE AMO, MAMÃE!",
+          "dur": 1.8,
+          "color": "vermelho",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.736,
+          "to": 4.156
+        }
+      ],
+      "flash_in": true
+    },
+    {
+      "id": "s02_refrao",
+      "title": "Mamãe querida!",
+      "duration": 3.5333,
+      "description": "Mamãe querida! / Vem cá, um abraço, vem!",
+      "background": "plano_jardim",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1300.0,
+            "y": 540.0,
+            "zoom": 1.808
+          },
+          {
+            "t": 3.5333,
+            "x": 1300.0,
+            "y": 540.0,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1140.0,
+            "y": 930,
+            "turn": 0.35,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "wave",
+              "dur": 3.433
+            },
+            {
+              "t": 1.59,
+              "do": "abraco",
+              "dur": 1.943
+            }
+          ]
+        },
+        "mamae": {
+          "start": {
+            "x": 1460.0,
+            "y": 930,
+            "turn": -0.35,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 1.76,
+              "do": "abraco",
+              "dur": 1.773
+            }
+          ]
+        }
+      },
+      "fx": [
+        "coracoes"
+      ],
+      "callouts": [
+        {
+          "t": 1.59,
+          "text": "VEM CÁ, UM ABRAÇO!",
+          "dur": 1.8,
+          "color": "laranja",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 2.86
+        }
+      ]
+    },
+    {
+      "id": "s03_refrao",
+      "title": "Mamãe querida!",
+      "duration": 3.5,
+      "description": "Mamãe querida! / Te amo, mamãe!",
+      "background": "danca_raios_laranja",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 3.5,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "mamae": {
+          "start": {
+            "x": 960.0,
+            "y": 800,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 2,
+            "depth": 0.85
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "dur": 3.5,
+              "style": "festa"
+            }
+          ]
+        },
+        "laurinha": {
+          "start": {
+            "x": 810.0,
+            "y": 1190,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.05,
+              "do": "dance",
+              "dur": 3.45,
+              "style": "palmas"
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1110.0,
+            "y": 1190,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "dance",
+              "dur": 3.4,
+              "style": "festa"
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "MAMÃE QUERIDA!",
+          "dur": 1.8,
+          "color": "rosa",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 3.187
+        },
+        {
+          "who": "luisinho",
+          "from": 0.0,
+          "to": 3.187
+        }
+      ]
+    },
+    {
+      "id": "s04_refrao",
+      "title": "Mamãe querida!",
+      "duration": 2.3267,
+      "description": "Mamãe querida! / Vem cá, um abraço, vem!",
+      "background": "plano_sala",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1300.0,
+            "y": 523.9189189189188,
+            "zoom": 1.85
+          },
+          {
+            "t": 2.327,
+            "x": 1300.0,
+            "y": 523.9189189189188,
+            "zoom": 1.85
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "mamae": {
+          "start": {
+            "x": 1300.0,
+            "y": 930,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.92,
+              "do": "abraco",
+              "dur": 1.713
+            }
+          ]
+        }
+      },
+      "fx": [
+        "coracoes"
+      ],
+      "callouts": [
+        {
+          "t": 1.05,
+          "text": "UM ABRAÇO!",
+          "dur": 1.583,
+          "color": "rosa",
+          "y": 170
+        }
+      ]
+    }
+  ]
+}

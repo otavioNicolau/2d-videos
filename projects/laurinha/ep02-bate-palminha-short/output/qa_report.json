@@ -1,0 +1,159 @@
+{
+  "episode": "ep02-bate-palminha-short",
+  "scenes": {
+    "s01_refrao": {
+      "frames": 67,
+      "performers": {
+        "laurinha": {
+          "drawings": 67,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 66
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s02_refrao": {
+      "frames": 38,
+      "performers": {
+        "luisinho": {
+          "drawings": 38,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 37
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s03_refrao": {
+      "frames": 89,
+      "performers": {
+        "laurinha": {
+          "drawings": 89,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 88
+          },
+          "empty_frames": 0
+        },
+        "joaninha": {
+          "drawings": 89,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 88
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 89,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 88
+          },
+          "empty_frames": 0
+        },
+        "formiguinha": {
+          "drawings": 89,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 88
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s04_refrao": {
+      "frames": 115,
+      "performers": {
+        "laurinha": {
+          "drawings": 115,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 114
+          },
+          "empty_frames": 0
+        },
+        "joaninha": {
+          "drawings": 115,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 114
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 115,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 114
+          },
+          "empty_frames": 0
+        },
+        "formiguinha": {
+          "drawings": 115,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 114
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s05_refrao": {
+      "frames": 102,
+      "performers": {
+        "laurinha": {
+          "drawings": 102,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 101
+          },
+          "empty_frames": 0
+        },
+        "joaninha": {
+          "drawings": 102,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 101
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 102,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 101
+          },
+          "empty_frames": 0
+        },
+        "formiguinha": {
+          "drawings": 102,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 101
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    }
+  },
+  "warnings": [
+    "storyboard ainda não aprovado (approval.storyboard = false): o render sairá como CANDIDATO"
+  ],
+  "lines": {},
+  "video": "/home/otavio/2d/projects/laurinha/ep02-bate-palminha-short/output/ep02-bate-palminha-short_CANDIDATO.mp4",
+  "contact_sheet": "/home/otavio/2d/projects/laurinha/ep02-bate-palminha-short/output/prancha.png",
+  "approved": false
+}

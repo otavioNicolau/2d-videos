@@ -6,13 +6,13 @@
   "sapo",
   "pé",
   "chulé",
-  "lagoa"
+  "meia"
  ],
  "tipo": "animal",
- "tema": "o sapo de pé fedido e a hora de lavar o pé no banho",
+ "tema": "o sapo do chulé que espanta até o gambá: lava o pé, mas calça a meia suja e o chulé volta",
  "dia_a_dia": [
   "lavar o pé no banho",
-  "secar entre os dedinhos"
+  "trocar a meia todo dia"
  ],
  "curiosidade": "o sapo bebe água pela pele, mas o nosso pezinho precisa de sabão no banho",
  "ritmo": "forro_piseiro",
@@ -27,11 +27,11 @@
  "cenas": [
   {
    "parte": "intro",
-   "ideia": "a festa na lagoa; o sapo dançando de botina"
+   "ideia": "o baile do sapo; ele dançando de botina"
   },
   {
    "parte": "verso 1",
-   "ideia": "ele tira a botina: a roseira murcha, a mosca cai tonta, o peixe tapa o nariz"
+   "ideia": "ele tira a bota no salão: a roseira murcha, a mosca cai tonta, o mosquito foge e até o gambá tapa o nariz"
   },
   {
    "parte": "refrão",
@@ -39,11 +39,15 @@
   },
   {
    "parte": "ponte",
-   "ideia": "comandos: tapa o nariz, abana a mão, esfrega o pezinho com água e sabão"
+   "ideia": "comandos: tapa o nariz, abana o ar, pula num pé só e no outro; tira a botina, joga a meia, esfrega com sabão"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "banho caprichado, volta ao baile cheiroso… calça a meia suja do porão e o chulé volta correndo"
   },
   {
    "parte": "final",
-   "ideia": "convite; o sapo de pé limpinho e cheiroso dando tchau"
+   "ideia": "convite; o sapo de meia limpa dando tchau"
   }
  ],
  "duracao_alvo": [
@@ -53,13 +57,99 @@
  "alternativas": [
   "funk_infantil"
  ],
- "status": "letra_revisada",
- "versoes": [],
+ "status": "aprovada",
+ "versoes": [
+  "Chulé de Sapo!"
+ ],
  "youtube": {
-  "resumo": "QUE CHULÉ! 🐸🦶 O sapo dançou a noite inteira e, quando tirou a botina… murchou a roseira, a mosca caiu tonta e o peixe tapou o nariz! Tapa o nariz, abana a mão e lava o pé com água e sabão!",
+  "resumo": "QUE CHULÉ! 🐸🦶 O sapo dançou a noite inteira e, quando tirou a bota no salão… murchou a roseira, a mosca caiu tonta e até o GAMBÁ tapou o nariz! Ele tomou banho caprichado, mas calçou a meia suja… e o chulé voltou correndo! Tapa o nariz, pula num pé só e lava o pé com sabão!",
   "resumo_short": "CHULÉ DE SAPO! 🐸 Eca, que chulé! Lava o pé com a Laurinha e o Luisinho!",
-  "curiosidade": "O sapo bebe água pela pele, mas o nosso pezinho precisa de sabão no banho"
+  "curiosidade": "O sapo bebe água pela pele, mas o nosso pezinho precisa de sabão no banho",
+  "miniatura": "CHULÉ\nDE SAPO!",
+  "miniatura_cena": {
+   "fundo": "raios",
+   "centro": [
+    400,
+    430
+   ],
+   "cores": [
+    [
+     110,
+     210,
+     120
+    ],
+    [
+     255,
+     210,
+     63
+    ],
+    [
+     64,
+     200,
+     220
+    ],
+    [
+     190,
+     240,
+     120
+    ]
+   ],
+   "heroi": {
+    "id": "luisinho",
+    "pose": {
+     "turn": 0.2,
+     "careta": 1.0,
+     "brow_l": 0.7,
+     "brow_r": 0.7,
+     "smile": -0.3,
+     "hand_n_x": -135,
+     "hand_n_y": -135,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3
+    }
+   },
+   "par": {
+    "id": "laurinha",
+    "pose": {
+     "turn": -0.2,
+     "careta": 1.0,
+     "brow_l": 0.7,
+     "brow_r": 0.7,
+     "smile": -0.3
+    },
+    "tam": 520,
+    "x": 1040,
+    "corte": 120
+   },
+   "objetos": [
+    {
+     "id": "nuvem_chule",
+     "pose": {
+      "onda": 0.2
+     },
+     "tam": 300,
+     "x": 140,
+     "base": 360
+    }
+   ],
+   "frente": [
+    {
+     "id": "sapo",
+     "pose": {
+      "croac": 1.0
+     },
+     "tam": 260,
+     "x": 790,
+     "base": 700
+    }
+   ]
+  }
  },
  "persona": "luisinho",
- "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz)"
+ "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz) · 23/11/2026: reescrita para 5 a 8 anos (piada do gambá, mistério resolvido com a meia suja, comandos mais desafiadores, menos diminutivos)",
+ "escolhida": "Chulé de Sapo!"
 }

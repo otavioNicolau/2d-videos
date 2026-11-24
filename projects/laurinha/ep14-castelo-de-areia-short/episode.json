@@ -1,0 +1,889 @@
+{
+  "schema": "1.1",
+  "id": "ep14-castelo-de-areia-short",
+  "title": "Castelo de Areia — Short",
+  "logline": "Clipe de \"Castelo de Areia\" — o castelo de areia tão grande que o siri quis morar nele, e a onda que derruba tudo. Montado do roteiro verso a verso (roteiro.json).",
+  "fps": 30,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "background": "plano_parque",
+  "soundtrack": {
+    "file": "musica/trabalho.wav",
+    "analysis": "analise/song.json",
+    "start": 0.0,
+    "end": 14.829,
+    "fade_out": 0.3,
+    "beat_grid": "full"
+  },
+  "captions": {
+    "lyrics": "analise/letra.json",
+    "style": "palavra_a_palavra"
+  },
+  "overlays": {
+    "logo": true,
+    "channel": [
+      "LAURINHA",
+      "e Luisinho"
+    ]
+  },
+  "cast": {
+    "laurinha": {
+      "character": "laurinha"
+    },
+    "luisinho": {
+      "character": "luisinho"
+    },
+    "castelo": {
+      "character": "castelo_areia"
+    },
+    "balde": {
+      "character": "baldinho"
+    },
+    "siri": {
+      "character": "siri"
+    },
+    "onda": {
+      "character": "onda"
+    },
+    "peixe": {
+      "character": "peixinho"
+    },
+    "joinha": {
+      "character": "joinha"
+    },
+    "mamae": {
+      "character": "mamae"
+    },
+    "botao": {
+      "character": "botao_inscrever"
+    }
+  },
+  "approval": {
+    "storyboard": false,
+    "final_render": false
+  },
+  "projeto": "laurinha/ep14-castelo-de-areia",
+  "scenes": [
+    {
+      "id": "s01_refrao",
+      "title": "Castelo de areia, ê!",
+      "duration": 2.661,
+      "description": "Castelo de areia, ê! / Torre, ponte e bandeira! / Lá vem a onda… chuá! / Derrubou a brincadeira!",
+      "background": "plano_praia",
+      "camera": {
+        "keys": [
+          {
+            "t": 1.0,
+            "x": 1325.0,
+            "y": 540,
+            "zoom": 1.808
+          },
+          {
+            "t": 2.661,
+            "x": 1325.0,
+            "y": 540,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1136.2907191149354,
+            "y": 930,
+            "turn": 0.35,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 1.0,
+              "do": "dance",
+              "style": "festa",
+              "dur": 4.49
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1513.7092808850646,
+            "y": 930,
+            "turn": -0.35,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 1.0,
+              "do": "dance",
+              "style": "lado",
+              "dur": 4.49
+            }
+          ]
+        }
+      },
+      "props": {
+        "castelo": {
+          "start": {
+            "x": 1250,
+            "y": 930,
+            "z": 2,
+            "nivel": 3.0,
+            "derruba": 0.0,
+            "depth": 1.2
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 1.0,
+              "pose": {
+                "nivel": 3.0,
+                "derruba": 0.0
+              }
+            },
+            {
+              "t": 2.661,
+              "pose": {
+                "derruba": 0.0
+              },
+              "in": 4.64
+            }
+          ]
+        },
+        "onda": {
+          "start": {
+            "x": 1513.7092808850646,
+            "y": 960,
+            "z": 2,
+            "altura": 1.0,
+            "quebra": 0.0,
+            "lado": -1,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 1.0,
+              "pose": {
+                "x": 2900
+              }
+            },
+            {
+              "t": 2.661,
+              "pose": {
+                "x": 2900
+              },
+              "in": 3.66
+            }
+          ]
+        }
+      },
+      "flash_in": true,
+      "callouts": [
+        {
+          "t": 1.15,
+          "text": "CASTELO DE AREIA!",
+          "dur": 1.8,
+          "color": "vermelho",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 1.32,
+          "to": 2.641
+        },
+        {
+          "who": "luisinho",
+          "from": 1.32,
+          "to": 2.641
+        }
+      ]
+    },
+    {
+      "id": "s02_refrao",
+      "title": "Castelo de areia, ê!",
+      "duration": 2.439,
+      "description": "Castelo de areia, ê! / Torre, ponte e bandeira! / Lá vem a onda… chuá! / Derrubou a brincadeira!",
+      "background": "plano_praia",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1136.2907191149354,
+            "y": 560.0,
+            "zoom": 2.4
+          },
+          {
+            "t": 2.439,
+            "x": 1136.2907191149354,
+            "y": 560.0,
+            "zoom": 2.496,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1136.2907191149354,
+            "y": 930,
+            "turn": 0.35,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "festa",
+              "dur": 2.829
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1513.7092808850646,
+            "y": 930,
+            "turn": -0.35,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "lado",
+              "dur": 2.829
+            }
+          ]
+        }
+      },
+      "props": {
+        "castelo": {
+          "start": {
+            "x": 1250,
+            "y": 930,
+            "z": 2,
+            "nivel": 3.0,
+            "derruba": 0.0,
+            "depth": 1.2
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "nivel": 3.0,
+                "derruba": 0.0
+              }
+            },
+            {
+              "t": 2.439,
+              "pose": {
+                "derruba": 0.0
+              },
+              "in": 4.64
+            }
+          ]
+        },
+        "onda": {
+          "start": {
+            "x": 1513.7092808850646,
+            "y": 960,
+            "z": 2,
+            "altura": 1.0,
+            "quebra": 0.0,
+            "lado": -1,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "x": 2900
+              }
+            },
+            {
+              "t": 2.029,
+              "pose": {
+                "x": 2900
+              },
+              "in": 3.66
+            },
+            {
+              "t": 2.439,
+              "pose": {
+                "x": 1500,
+                "quebra": 0.2
+              },
+              "ease": "out",
+              "in": 0.97
+            }
+          ]
+        }
+      },
+      "callouts": [],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 2.419
+        },
+        {
+          "who": "luisinho",
+          "from": 0.0,
+          "to": 2.419
+        }
+      ]
+    },
+    {
+      "id": "s03_refrao",
+      "title": "Castelo de areia, ê!",
+      "duration": 2.8333,
+      "description": "Castelo de areia, ê! / Torre, ponte e bandeira! / Lá vem a onda… chuá! / Derrubou a brincadeira!",
+      "background": "plano_praia",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1325.0,
+            "y": 540,
+            "zoom": 1.808
+          },
+          {
+            "t": 2.833,
+            "x": 1325.0,
+            "y": 540,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1136.2907191149354,
+            "y": 930,
+            "turn": 0.35,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "festa",
+              "dur": 0.39
+            },
+            {
+              "t": 0.67,
+              "do": "laugh",
+              "dur": 2.163
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1513.7092808850646,
+            "y": 930,
+            "turn": -0.35,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "lado",
+              "dur": 0.39
+            },
+            {
+              "t": 0.59,
+              "do": "take"
+            },
+            {
+              "t": 0.97,
+              "do": "laugh",
+              "dur": 1.863
+            }
+          ]
+        }
+      },
+      "props": {
+        "castelo": {
+          "start": {
+            "x": 1250,
+            "y": 930,
+            "z": 2,
+            "nivel": 3.0,
+            "derruba": 0.0,
+            "depth": 1.2
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "nivel": 3.0,
+                "derruba": 0.0
+              }
+            },
+            {
+              "t": 0.57,
+              "pose": {
+                "derruba": 0.0
+              },
+              "in": 4.64
+            },
+            {
+              "t": 1.17,
+              "pose": {
+                "derruba": 1.0
+              },
+              "ease": "out",
+              "in": 0.57
+            }
+          ]
+        },
+        "onda": {
+          "start": {
+            "x": 1513.7092808850646,
+            "y": 960,
+            "z": 2,
+            "altura": 1.0,
+            "quebra": 0.0,
+            "lado": -1,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "x": 2900
+              },
+              "in": 3.66
+            },
+            {
+              "t": 0.59,
+              "pose": {
+                "x": 1500,
+                "quebra": 0.2
+              },
+              "ease": "out",
+              "in": 0.97
+            },
+            {
+              "t": 1.29,
+              "pose": {
+                "quebra": 1.0
+              },
+              "ease": "in",
+              "in": 0.67
+            },
+            {
+              "t": 2.39,
+              "pose": {
+                "x": 3100
+              },
+              "ease": "in",
+              "in": 1.77
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.59,
+          "text": "CHUÁ!",
+          "dur": 1.8,
+          "color": "azul",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 2.78
+        },
+        {
+          "who": "luisinho",
+          "from": 0.0,
+          "to": 2.78
+        }
+      ]
+    },
+    {
+      "id": "s04_refrao",
+      "title": "Castelo de areia, ê!",
+      "duration": 3.645,
+      "description": "Castelo de areia, ê! / Torre, ponte e bandeira! / Lá vem a onda… chuá! / Derrubou a brincadeira!",
+      "background": "danca_xadrez_verde",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 3.645,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 800.0,
+            "y": 1010,
+            "turn": 0.25,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.15
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "festa",
+              "dur": 4.9
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1120.0,
+            "y": 1010,
+            "turn": -0.25,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.15
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "festa",
+              "dur": 4.9
+            }
+          ]
+        }
+      },
+      "props": {
+        "castelo": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "z": 2,
+            "nivel": 3.0,
+            "depth": 0.8
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "nivel": 3.0,
+                "derruba": 0.0
+              }
+            },
+            {
+              "t": 3.645,
+              "pose": {
+                "derruba": 0.0
+              },
+              "in": 4.18
+            }
+          ]
+        },
+        "onda": {
+          "start": {
+            "x": 1212.1213979153893,
+            "y": 1040,
+            "z": 4,
+            "altura": 1.0,
+            "quebra": 0.0,
+            "lado": -1,
+            "depth": 0.85
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "x": 2900
+              }
+            },
+            {
+              "t": 3.19,
+              "pose": {
+                "x": 2900
+              },
+              "in": 3.16
+            },
+            {
+              "t": 3.645,
+              "pose": {
+                "x": 1100,
+                "quebra": 0.2
+              },
+              "ease": "out",
+              "in": 0.97
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "callouts": [
+        {
+          "t": 0.15,
+          "text": "TORRE, PONTE E BANDEIRA!",
+          "dur": 1.8,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 3.625
+        },
+        {
+          "who": "luisinho",
+          "from": 0.0,
+          "to": 3.625
+        }
+      ]
+    },
+    {
+      "id": "s05_refrao",
+      "title": "Castelo de areia, ê!",
+      "duration": 3.2507,
+      "description": "Castelo de areia, ê! / Torre, ponte e bandeira! / Lá vem a onda… chuá! / Derrubou a brincadeira!",
+      "background": "danca_xadrez_verde",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 800.0,
+            "y": 760.0,
+            "zoom": 2.0
+          },
+          {
+            "t": 3.251,
+            "x": 800.0,
+            "y": 760.0,
+            "zoom": 2.08,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 800.0,
+            "y": 1010,
+            "turn": 0.25,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.15
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "festa",
+              "dur": 1.255
+            },
+            {
+              "t": 1.355,
+              "do": "laugh",
+              "dur": 1.5
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1120.0,
+            "y": 1010,
+            "turn": -0.25,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.15
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "festa",
+              "dur": 1.255
+            },
+            {
+              "t": 1.455,
+              "do": "laugh",
+              "dur": 1.4
+            }
+          ]
+        }
+      },
+      "props": {
+        "castelo": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "z": 2,
+            "nivel": 3.0,
+            "depth": 0.8
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "nivel": 3.0,
+                "derruba": 0.0
+              }
+            },
+            {
+              "t": 0.565,
+              "pose": {
+                "derruba": 0.0
+              },
+              "in": 4.18
+            },
+            {
+              "t": 1.165,
+              "pose": {
+                "derruba": 1.0
+              },
+              "ease": "out",
+              "in": 0.57
+            }
+          ]
+        },
+        "onda": {
+          "start": {
+            "x": 1212.1213979153893,
+            "y": 1040,
+            "z": 4,
+            "altura": 1.0,
+            "quebra": 0.0,
+            "lado": -1,
+            "depth": 0.85
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "x": 2900
+              },
+              "in": 3.16
+            },
+            {
+              "t": 0.545,
+              "pose": {
+                "x": 1100,
+                "quebra": 0.2
+              },
+              "ease": "out",
+              "in": 0.97
+            },
+            {
+              "t": 1.245,
+              "pose": {
+                "quebra": 1.0
+              },
+              "ease": "in",
+              "in": 0.67
+            },
+            {
+              "t": 2.345,
+              "pose": {
+                "x": 3100
+              },
+              "ease": "in",
+              "in": 1.77
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "callouts": [
+        {
+          "t": 0.545,
+          "text": "CHUÁ!",
+          "dur": 1.8,
+          "color": "azul",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 2.845
+        },
+        {
+          "who": "luisinho",
+          "from": 0.0,
+          "to": 2.845
+        }
+      ]
+    }
+  ]
+}

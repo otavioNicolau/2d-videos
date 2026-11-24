@@ -1,0 +1,663 @@
+{
+  "schema": "1.1",
+  "id": "ep25-polvo-oito-bracos-short",
+  "title": "Polvo de Oito Braços — Short",
+  "logline": "Clipe de \"Polvo de Oito Braços\" — o polvo que faz oito coisas ao mesmo tempo. Montado do roteiro verso a verso (roteiro.json).",
+  "fps": 30,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "background": "plano_parque",
+  "soundtrack": {
+    "file": "musica/trabalho.wav",
+    "analysis": "analise/song.json",
+    "start": 0.0,
+    "end": 15.1453,
+    "fade_out": 0.3,
+    "beat_grid": "full"
+  },
+  "captions": {
+    "lyrics": "analise/letra.json",
+    "style": "palavra_a_palavra"
+  },
+  "overlays": {
+    "logo": true,
+    "channel": [
+      "LAURINHA",
+      "e Luisinho"
+    ]
+  },
+  "cast": {
+    "laurinha": {
+      "character": "laurinha"
+    },
+    "luisinho": {
+      "character": "luisinho"
+    },
+    "p": {
+      "character": "polvo"
+    },
+    "f": {
+      "character": "peixinho"
+    },
+    "b": {
+      "character": "bolha"
+    },
+    "bat": {
+      "character": "bateria_show"
+    },
+    "tec": {
+      "character": "teclado_inst"
+    },
+    "vovo": {
+      "character": "vovo"
+    },
+    "vovozinho": {
+      "character": "vovozinho"
+    },
+    "o": {
+      "character": "onda"
+    },
+    "s": {
+      "character": "siri"
+    },
+    "n": {
+      "character": "numero"
+    },
+    "f2": {
+      "character": "peixinho"
+    },
+    "m": {
+      "character": "mesa"
+    },
+    "t": {
+      "character": "tabuleiro"
+    },
+    "e": {
+      "character": "espelho"
+    },
+    "mamae": {
+      "character": "mamae"
+    },
+    "c": {
+      "character": "caixa_brinquedos"
+    },
+    "joinha": {
+      "character": "joinha"
+    },
+    "botao": {
+      "character": "botao_inscrever"
+    }
+  },
+  "approval": {
+    "storyboard": false,
+    "final_render": false
+  },
+  "projeto": "laurinha/ep25-polvo-oito-bracos",
+  "scenes": [
+    {
+      "id": "s01_refrao",
+      "title": "Oito braços, oito braços!",
+      "duration": 3.5666,
+      "description": "Oito braços, oito braços! / Abraço de polvo, aperta!",
+      "background": "plano_fundo_mar",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1300.0,
+            "y": 540,
+            "zoom": 1.808
+          },
+          {
+            "t": 3.5666,
+            "x": 1300.0,
+            "y": 540,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1111.2907191149354,
+            "y": 930,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "dance",
+              "style": "lado",
+              "dur": 1.61
+            },
+            {
+              "t": 1.78,
+              "do": "abraco",
+              "dur": 1.787
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1488.7092808850646,
+            "y": 930,
+            "turn": -0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "dance",
+              "style": "balanco",
+              "dur": 1.61
+            },
+            {
+              "t": 1.78,
+              "do": "abraco",
+              "dur": 1.787
+            }
+          ]
+        }
+      },
+      "props": {
+        "p": {
+          "start": {
+            "x": 1300.0,
+            "y": 990,
+            "z": 2,
+            "depth": 1.175
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "onda": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.0,
+              "pose": {
+                "tchau": 1.0
+              },
+              "ease": "out"
+            },
+            {
+              "t": 0.0,
+              "pose": {
+                "abraco": 0.0
+              },
+              "ease": "out"
+            },
+            {
+              "t": 1.61,
+              "pose": {
+                "tchau": 0.0
+              },
+              "ease": "out",
+              "in": 1.58
+            },
+            {
+              "t": 1.61,
+              "pose": {
+                "abraco": 0.0
+              },
+              "ease": "out",
+              "in": 1.58
+            },
+            {
+              "t": 1.78,
+              "pose": {
+                "boca": 0.8
+              },
+              "ease": "out"
+            },
+            {
+              "t": 1.96,
+              "pose": {
+                "abraco": 1.0
+              },
+              "ease": "out",
+              "in": 0.32
+            },
+            {
+              "t": 3.52,
+              "pose": {
+                "onda": 2.68
+              },
+              "ease": "linear",
+              "in": 3.49
+            }
+          ]
+        },
+        "b": {
+          "start": {
+            "x": 1111.2907191149354,
+            "y": 900,
+            "z": 0,
+            "depth": 0.507
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "y": 900,
+                "balanco": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.51,
+              "pose": {
+                "y": 150,
+                "balanco": 3.6
+              },
+              "ease": "linear",
+              "in": 3.48
+            }
+          ]
+        }
+      },
+      "fx": [
+        "coracoes"
+      ],
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "OITO BRAÇOS!",
+          "dur": 1.8,
+          "color": "roxo",
+          "y": 170
+        },
+        {
+          "t": 1.78,
+          "text": "APERTA!",
+          "dur": 1.787,
+          "color": "vermelho",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 3.557
+        },
+        {
+          "who": "luisinho",
+          "from": 0.0,
+          "to": 3.557
+        }
+      ],
+      "flash_in": true
+    },
+    {
+      "id": "s02_refrao",
+      "title": "Oito braços, oito braços!",
+      "duration": 3.5667,
+      "description": "Oito braços, oito braços! / Ninguém escapa, que festa!",
+      "background": "plano_praia",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1264.2,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          },
+          {
+            "t": 3.5667,
+            "x": 1264.2,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 1452.9092808850646,
+            "y": 930,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45,
+            "holding": "baqueta_a4",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1,
+            "holding_f": "baqueta_a4"
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "toca_bateria_a4",
+              "dur": 3.567
+            }
+          ]
+        },
+        "laurinha": {
+          "start": {
+            "x": 1075.4907191149355,
+            "y": 930,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45,
+            "holding": "saxofone",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "toca_sax",
+              "dur": 3.567
+            }
+          ]
+        }
+      },
+      "props": {
+        "bat": {
+          "start": {
+            "x": 1452.9092808850646,
+            "y": 940,
+            "z": 2,
+            "depth": 0.87
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "kit_a4",
+              "dur": 3.567
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "callouts": [
+        {
+          "t": 0.3,
+          "text": "OITO BRAÇOS!",
+          "dur": 1.8,
+          "color": "rosa",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "luisinho",
+          "from": 0.267,
+          "to": 3.557
+        },
+        {
+          "who": "laurinha",
+          "from": 0.267,
+          "to": 3.557
+        }
+      ]
+    },
+    {
+      "id": "s03_refrao",
+      "title": "Oito braços, oito braços!",
+      "duration": 3.5667,
+      "description": "Oito braços, oito braços! / Abraço de polvo, aperta!",
+      "background": "plano_fundo_mar",
+      "fx": [
+        "bolhas"
+      ],
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1300.0,
+            "y": 536.0387215734481,
+            "zoom": 1.808
+          },
+          {
+            "t": 3.5667,
+            "x": 1300.0,
+            "y": 536.0387215734481,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1140.0,
+            "y": 930,
+            "turn": 0.25,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "dance",
+              "style": "bracos",
+              "dur": 3.467
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1460.0,
+            "y": 930,
+            "turn": -0.25,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "dance",
+              "style": "festa",
+              "dur": 3.467
+            }
+          ]
+        }
+      },
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.15,
+          "to": 3.557
+        },
+        {
+          "who": "luisinho",
+          "from": 0.15,
+          "to": 3.557
+        }
+      ]
+    },
+    {
+      "id": "s04_refrao",
+      "title": "Oito braços, oito braços!",
+      "duration": 4.4453,
+      "description": "Oito braços, oito braços! / Ninguém escapa, que festa!",
+      "background": "plano_praia",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1264.2,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          },
+          {
+            "t": 3.567,
+            "x": 1264.2,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 1452.9092808850646,
+            "y": 930,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45,
+            "holding": "baqueta_a4",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1,
+            "holding_f": "baqueta_a4"
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "toca_bateria_a4",
+              "dur": 3.567
+            }
+          ]
+        },
+        "laurinha": {
+          "start": {
+            "x": 1075.4907191149355,
+            "y": 930,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "toca_teclado",
+              "dur": 3.567
+            }
+          ]
+        }
+      },
+      "props": {
+        "bat": {
+          "start": {
+            "x": 1452.9092808850646,
+            "y": 940,
+            "z": 2,
+            "depth": 0.87
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "kit_a4",
+              "dur": 3.567
+            }
+          ]
+        },
+        "tec": {
+          "start": {
+            "x": 1075.4907191149355,
+            "y": 940,
+            "z": 2,
+            "depth": 0.899
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tecla": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.527,
+              "pose": {
+                "tecla": 7.1
+              },
+              "ease": "linear",
+              "in": 3.497
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "callouts": [
+        {
+          "t": 0.3,
+          "text": "OITO BRAÇOS!",
+          "dur": 1.8,
+          "color": "rosa",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "luisinho",
+          "from": 0.133,
+          "to": 3.557
+        },
+        {
+          "who": "laurinha",
+          "from": 0.133,
+          "to": 3.557
+        }
+      ]
+    }
+  ]
+}

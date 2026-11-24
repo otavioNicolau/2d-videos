@@ -3738,3 +3738,372 @@ class Trave(_Prop):
 
 
 PROPS.update({"bola_futebol": BolaFutebol, "trave": Trave})
+
+
+# ─── Laurinha 31: chulé de sapo ───
+class Bota(_Prop):
+    """Botina marrom do sapo (Laurinha 31), de perfil: cano, bico arredondado, sola escura e cadarço. `gira` (voltas)
+    roda a bota voando; `cheiro` 0→1 solta as ondinhas verdes do chulé (fase em `onda`). Origem = sola, no chão."""
+
+    def __init__(self):
+        super().__init__("bota", "Botina", (720, 720), (360, 520), 230, {"gira": 0.0, "cheiro": 0.0, "onda": 0.0})
+
+    def paint(self, k, P):
+        k.c.save()
+        k.c.rotate(360 * P["gira"], 0, -110)
+        cou, esc = "#B8743A", "#7A4A22"
+        shape(k, [(-70, -230), (40, -230), (46, -96), (150, -80), (176, -40), (170, -6), (-80, -6), (-84, -120)], cou, line=esc)
+        shape(k, [(-86, -8), (178, -8), (178, 10), (-86, 10)], "#5A3A22", smooth=False)
+        shape(k, [(-74, -232), (44, -232), (46, -206), (-76, -206)], "#8E5426", smooth=False)
+        for j in range(3):
+            y = -180 + j * 34
+            ln(k, [(-10, y), (40, y + 12)], "#FFE7B8", w=LINE * 1.1)
+        shape(k, ellipse_pts(110, -64, 26, 10, -0.2, 12), "#D99A5E", alpha=0.8)
+        k.c.restore()
+        _cheiro(k, P["cheiro"], P["onda"], 0, -240, 3)
+
+
+def _cheiro(k, forca, onda, x, y, n, larg=70):
+    """Ondinhas verdes de chulé subindo de (x, y): `forca` 0→1 (alfa e altura), `onda` fase."""
+    f = max(0.0, min(1.0, forca))
+    if f <= 0.02:
+        return
+    for j in range(n):
+        x0 = x + (j - (n - 1) / 2) * larg
+        pts = []
+        for i in range(14):
+            v = i / 13
+            pts.append((x0 + 22 * math.sin(2 * math.pi * (v * 1.6 + onda + j * 0.3)), y - v * 230 * f))
+        ln(k, pts, "#7BC043", w=LINE * 2.2, alpha=0.85 * f)
+
+
+class NuvemChule(_Prop):
+    """Nuvenzinha verde de CHULÉ (Laurinha 31): bolhas verdes fofas com carinha de 'eca' (olhinhos em X, língua de fora),
+    ondinhas de cheiro saindo; `tam` 0→1 cresce, `onda` fase das ondinhas e do balanço, `cara` 0 sem carinha.
+    Origem = base da nuvem."""
+
+    def __init__(self):
+        super().__init__("nuvem_chule", "Nuvem de chulé", (900, 760), (450, 640), 300, {"tam": 1.0, "onda": 0.0, "cara": 1.0})
+
+    def paint(self, k, P):
+        s = max(0.05, min(1.2, P["tam"]))
+        bal = 10 * math.sin(2 * math.pi * P["onda"])
+        k.c.save()
+        k.c.scale(s, s)
+        for (bx, by, r) in ((-150, -120, 110), (150, -120, 110), (-70, -200, 130), (80, -210, 125), (0, -110, 150)):
+            shape(k, ellipse_pts(bx + bal * 0.5, by, r, r * 0.86, 0, 28), "#A6D96A", line="#6FA83A")
+        for (bx, by, r) in ((-90, -230, 34), (60, -250, 28)):
+            shape(k, ellipse_pts(bx, by, r, r * 0.6, -0.3, 14), "#D4F0A8", alpha=0.8)
+        if P["cara"] > 0.5:
+            for sx in (-1, 1):
+                cx, cy = sx * 52 + bal * 0.5, -150
+                ln(k, [(cx - 16, cy - 16), (cx + 16, cy + 16)], "#3E5E20", w=LINE * 1.4)
+                ln(k, [(cx - 16, cy + 16), (cx + 16, cy - 16)], "#3E5E20", w=LINE * 1.4)
+            shape(k, [(-34, -96), (34, -96), (20, -84), (-20, -84)], "#3E5E20", smooth=False)
+            shape(k, ellipse_pts(10, -76, 16, 18, 0, 14), "#FF8FAE", line="#D8607F")
+        k.c.restore()
+        _cheiro(k, 1.0, P["onda"], 0, -300 * s, 3, larg=110 * s)
+
+
+class Gamba(_Prop):
+    """Gambá sentado (Laurinha 31): corpo preto-azulado, faixa branca da testa até o rabão felpudo, focinho rosado;
+    `tapa` 0→1 a patinha sobe e TAPA O NARIZ (olhos apertados de 'que fedor!'); `rabo` fase do balanço do rabo.
+    Origem = entre as patinhas, no chão."""
+
+    def __init__(self):
+        super().__init__("gamba", "Gambá", (760, 800), (380, 740), 420, {"tapa": 0.0, "rabo": 0.0})
+
+    def paint(self, k, P):
+        pr, esc, br = "#3B3A5A", "#24233A", "#FFFFFF"
+        t = max(0.0, min(1.0, P["tapa"]))
+        ba = 0.12 * math.sin(2 * math.pi * P["rabo"])
+        k.c.save()                                               # rabão atrás, subindo pela direita
+        k.c.rotate(math.degrees(ba), 120, -80)
+        rabo = [(80, -60), (200, -120), (250, -260), (210, -400), (140, -430), (120, -350), (160, -250), (120, -150), (60, -110)]
+        shape(k, rabo, pr, line=esc)
+        ln(k, [(110, -90), (190, -150), (215, -260), (180, -380)], br, w=LINE * 5)
+        k.c.restore()
+        shape(k, ellipse_pts(0, -150, 140, 150, 0, 32), pr, line=esc)            # corpo
+        shape(k, ellipse_pts(0, -110, 80, 90, 0, 24), "#5A5980", line=esc)        # barriga
+        for sx in (-1, 1):                                                         # patinhas de baixo
+            shape(k, ellipse_pts(sx * 60, -10, 40, 22, 0, 16), pr, line=esc)
+        hy = -330
+        for sx in (-1, 1):                                                         # orelhas
+            shape(k, ellipse_pts(sx * 70, hy - 80, 30, 34, sx * 0.3, 16), pr, line=esc)
+            shape(k, ellipse_pts(sx * 70, hy - 78, 16, 20, sx * 0.3, 12), "#F7A8C4")
+        shape(k, ellipse_pts(0, hy, 120, 105, 0, 32), pr, line=esc)               # cabeça
+        shape(k, [(-14, hy - 104), (14, hy - 104), (8, hy - 30), (-8, hy - 30)], br, smooth=True)   # faixa branca
+        shape(k, ellipse_pts(0, hy + 40, 54, 40, 0, 20), "#5A5980", line=esc)     # focinho
+        for sx in (-1, 1):
+            ex, ey = sx * 46, hy - 14
+            if t > 0.3:                                                            # olhos apertados (que fedor!)
+                ln(k, [(ex - 18, ey - 10), (ex + 2 * sx, ey), (ex - 18, ey + 10)] if sx < 0 else
+                   [(ex + 18, ey - 10), (ex - 2, ey), (ex + 18, ey + 10)], "#FFFFFF", w=LINE * 1.3)
+            else:
+                shape(k, ellipse_pts(ex, ey, 20, 24, 0, 16), "#FFFFFF", line=esc)
+                k.dot(ex + 3, ey + 4, 9, _rgba("#111111"))
+            k.shape(ellipse_pts(sx * 82, hy + 30, 16, 10, 0, 12), fill=_rgba("#FF8FB0", 0.7), line=0)
+        shape(k, ellipse_pts(0, hy + 22, 18, 13, 0, 12), "#FF8FB0", line="#D8607F")   # nariz
+        if t > 0.3:
+            shape(k, ellipse_pts(0, hy + 66, 24, 14 + 6 * t, 0, 14), "#7A2E3E", line=esc)
+        else:
+            ln(k, [(-20, hy + 62), (0, hy + 70), (20, hy + 62)], "#FFFFFF", w=LINE)
+        # bracinho direito sobe e tapa o nariz
+        ax, ay = 110, -230
+        px, py = lerp(150, 12, t), lerp(-150, hy + 24, t)
+        shape(k, [(ax - 26, ay), (ax + 26, ay), (px + 22, py + 10), (px - 22, py + 10)], "#4A4970", line=esc)
+        shape(k, ellipse_pts(px, py, 36, 30, 0, 16), "#4A4970", line="#9A99C8")
+        for dx in (-14, 0, 14):
+            k.dot(px + dx, py - 16, 5, _rgba("#F7A8C4"))
+        shape(k, ellipse_pts(-110, -200, 28, 50, 0.3, 16), pr, line=esc)          # bracinho esquerdo
+
+
+class Meia(_Prop):
+    """Meia (Laurinha 31): meia branca com listras coloridas, de pé no chão como se tivesse dormido ali; `suja` 0→1 deixa
+    a meia encardida (manchas marrons, cor mais amarelada) e solta o chulé (ondinhas verdes, fase em `onda`);
+    `cor` 1 listras azuis · 2 vermelhas. Origem = calcanhar no chão."""
+
+    def __init__(self):
+        super().__init__("meia", "Meia", (520, 620), (260, 560), 300, {"suja": 0.0, "onda": 0.0, "cor": 1.0})
+
+    def paint(self, k, P):
+        s = max(0.0, min(1.0, P["suja"]))
+        base = _mix("#FFFFFF", "#E8D9A6", s)
+        lis = "#3C8BF0" if P["cor"] < 1.5 else "#E9545D"
+        pts = [(-60, -300), (40, -300), (40, -110), (150, -70), (170, -30), (150, 0), (-50, 0), (-70, -40)]
+        shape(k, pts, base, line=dark(base))
+        for y in (-280, -250):
+            shape(k, [(-62, y), (42, y), (42, y + 16), (-62, y + 16)], lis, smooth=False)
+        ponta = _mix(lis, "#8A6A3A", s * 0.6)
+        shape(k, [(110, -84), (150, -70), (170, -30), (150, 0), (104, 0)], ponta, line=dark(ponta))
+        shape(k, [(-50, 0), (-70, -40), (-66, -60), (-20, -60), (-14, 0)], ponta, line=dark(ponta))
+        if s > 0.05:
+            for (mx, my, r) in ((-20, -170, 24), (60, -60, 30), (10, -230, 14), (100, -30, 18)):
+                k.shape(ellipse_pts(mx, my, r, r * 0.7, 0.4, 14), fill=_rgba("#9A7A44", 0.55 * s), line=0)
+        _cheiro(k, s, P["onda"], -10, -320, 3, larg=60)
+
+
+def _mix(a: str, b: str, t: float) -> str:
+    ca = [int(a[i:i + 2], 16) for i in (1, 3, 5)]
+    cb = [int(b[i:i + 2], 16) for i in (1, 3, 5)]
+    return "#" + "".join(f"{int(round(x + (y - x) * t)):02X}" for x, y in zip(ca, cb))
+
+
+class Roseira(_Prop):
+    """Roseira num vasinho (Laurinha 31): três rosas vermelhas em caules com folhas; `murcha` 0→1 MURCHA tudo — os caules
+    tombam, as rosas pendem, a cor apaga e pétalas caem. Origem = base do vaso."""
+
+    def __init__(self):
+        super().__init__("roseira", "Roseira", (1000, 820), (500, 760), 460, {"murcha": 0.0})
+
+    def paint(self, k, P):
+        m = max(0.0, min(1.0, P["murcha"]))
+        shape(k, [(-110, -150), (110, -150), (86, 0), (-86, 0)], "#E07A4A", line="#A84E2A", smooth=False)
+        shape(k, [(-122, -170), (122, -170), (122, -140), (-122, -140)], "#F0925F", line="#A84E2A", smooth=False)
+        folha = _mix("#3FAF4A", "#9A8A3A", m)
+        rosa = _mix("#E9384D", "#8A4A5A", m)
+        for j, (dx, h, lado) in enumerate(((-60, 300, -1), (0, 380, 0), (60, 300, 1))):
+            dobra = m * (1.2 if lado else 1.0) * (lado or 1)
+            pts = []
+            for i in range(10):
+                v = i / 9
+                ang = dobra * v * v * 1.3
+                pts.append((dx + math.sin(ang) * h * v * 0.9, -170 - math.cos(ang) * h * v))
+            ln(k, pts, "#2E8B3E", w=LINE * 2.2)
+            fx, fy = pts[4]
+            shape(k, ellipse_pts(fx + 30 * (lado or 1), fy, 34, 16, 0.5 * (lado or 1) + m, 14), folha, line=dark(folha))
+            tx, ty = pts[-1]
+            k.c.save()
+            k.c.rotate(math.degrees(dobra * 1.1), tx, ty)
+            shape(k, ellipse_pts(tx, ty - 30 * (1 - m * 0.4), 52, 46 * (1 - 0.3 * m), 0, 24), rosa, line=dark(rosa))
+            ln(k, [(tx - 26, ty - 34), (tx, ty - 50), (tx + 22, ty - 30), (tx, ty - 16)], dark(rosa), w=LINE)
+            k.c.restore()
+        if m > 0.4:                                                                  # pétalas caindo
+            for j, (px, py) in enumerate(((-160, -60), (150, -100), (-40, -30), (110, -20))):
+                shape(k, ellipse_pts(px, py + 40 * (m - 0.4), 16, 9, 0.6 * j, 10), rosa, line=dark(rosa))
+
+
+PROPS.update({"bota": Bota, "nuvem_chule": NuvemChule, "gamba": Gamba, "meia": Meia, "roseira": Roseira})
+
+
+# ─── Fofolucos 06: esconde-esconde ───
+class Moita(_Prop):
+    """Moita redonda e fofa (Fofolucos 06, esconderijo): bolotas de folhas verdes em dois tons; `balanca` 0→1 sacode
+    (alguém mexeu lá atrás!), `onda` fase. Origem = base, no chão; ~360 de altura × 760 de largura."""
+
+    def __init__(self):
+        super().__init__("moita", "Moita", (1000, 640), (500, 600), 360, {"balanca": 0.0, "onda": 0.0})
+
+    def paint(self, k, P):
+        b = 14 * max(0.0, min(1.0, P["balanca"])) * math.sin(2 * math.pi * P["onda"] * 3)
+        for (bx, by, r, c) in ((-280, -120, 130, "#2F9E52"), (280, -120, 130, "#2F9E52"), (-150, -220, 160, "#36B25C"),
+                               (150, -220, 160, "#36B25C"), (0, -250, 180, "#3DC266"), (-200, -90, 120, "#36B25C"),
+                               (200, -90, 120, "#36B25C"), (0, -110, 170, "#3DC266")):
+            shape(k, ellipse_pts(bx + b * (1 if bx >= 0 else -1), by, r, r * 0.82, 0, 28), c)
+        for (bx, by) in ((-160, -280), (90, -320), (220, -200), (-60, -170)):
+            shape(k, ellipse_pts(bx + b, by, 36, 20, -0.4, 14), "#6EDB8E", alpha=0.7)
+
+
+class Muro(_Prop):
+    """Murinho de tijolos (Fofolucos 06, esconderijo): tijolinhos em tons de pêssego com rejunte claro e beiral em cima;
+    ~1000 de largura × 330 de altura. Origem = meio da base."""
+
+    def __init__(self):
+        super().__init__("muro", "Muro", (1300, 560), (650, 500), 330, {})
+
+    def paint(self, k, P):
+        W2, H = 500.0, 330.0
+        shape(k, [(-W2, 0), (W2, 0), (W2, -H), (-W2, -H)], "#F3D1B8", smooth=False)
+        cores = ("#F2A07B", "#EE9268", "#F5B08E")
+        tw, th = 100.0, 50.0
+        for r in range(int(H // th)):
+            y1 = -r * th - 6
+            off = 0 if r % 2 == 0 else tw / 2
+            x = -W2 - off
+            j = 0
+            while x < W2:
+                x0, x1 = max(-W2 + 4, x + 5), min(W2 - 4, x + tw - 5)
+                if x1 - x0 > 10:
+                    shape(k, [(x0, y1), (x1, y1), (x1, y1 - th + 10), (x0, y1 - th + 10)], cores[(r + j) % 3], smooth=False)
+                x += tw
+                j += 1
+        shape(k, [(-W2 - 20, -H - 4), (W2 + 20, -H - 4), (W2 + 20, -H - 34), (-W2 - 20, -H - 34)], "#E0E6F2", smooth=False)
+
+
+class Canteiro(_Prop):
+    """Canteiro de flores (Fofolucos 06): caixinha de terra com muitas flores coloridas (rosa, amarelas, brancas, lilás)
+    de alturas diferentes; `vento` fase do balanço. ~900 de largura, flores até ~300. Origem = meio da base."""
+
+    def __init__(self):
+        super().__init__("canteiro", "Canteiro de flores", (1200, 620), (600, 560), 320, {"vento": 0.0})
+
+    def paint(self, k, P):
+        cores = ("#FF6AB2", "#FFD23F", "#FFFFFF", "#B98CFF", "#FF8A5C")
+        for j in range(15):
+            x = -420 + j * 60
+            h = 180 + 90 * ((j * 37) % 5) / 4
+            a = 0.08 * math.sin(2 * math.pi * (P["vento"] + j * 0.13))
+            tx, ty = x + math.sin(a) * h, -90 - math.cos(a) * h
+            ln(k, [(x, -90), ((x + tx) / 2, (ty - 90) / 2), (tx, ty)], "#2E9E4A", w=LINE * 1.6)
+            shape(k, ellipse_pts((x + tx) / 2 + 16, (ty - 90) / 2 + 10, 22, 10, 0.5, 12), "#3DC266")
+            c = cores[(j * 3) % 5]
+            for p in range(6):
+                ang = 2 * math.pi * p / 6
+                shape(k, ellipse_pts(tx + 26 * math.cos(ang), ty + 26 * math.sin(ang), 20, 16, ang, 12), c)
+            shape(k, ellipse_pts(tx, ty, 16, 16, 0, 12), "#FFB23F" if c != "#FFD23F" else "#FF8A1F")
+        shape(k, [(-460, -100), (460, -100), (440, 0), (-440, 0)], "#8A5A3A", smooth=False)
+        shape(k, [(-470, -110), (470, -110), (470, -88), (-470, -88)], "#A8714A", smooth=False)
+
+
+class Abobora(_Prop):
+    """Abóbora laranja (Fofolucos 06, o esconderijo do Zuzu): gomos arredondados, cabinho verde com folhinha;
+    `tam` escala, `tom` 0 laranja · 1 laranja-avermelhado · 2 amarelo-alaranjado. Origem = base."""
+
+    def __init__(self):
+        super().__init__("abobora", "Abóbora", (560, 460), (280, 400), 220, {"tam": 1.0, "tom": 0.0})
+
+    def paint(self, k, P):
+        s = max(0.3, P["tam"])
+        cor = ("#FF9A2E", "#F57A28", "#FFB84A")[int(round(max(0, min(2, P["tom"]))))]
+        k.c.save()
+        k.c.scale(s, s)
+        for (bx, r) in ((-110, 90), (110, 90), (-55, 110), (55, 110), (0, 118)):
+            shape(k, ellipse_pts(bx, -110, r, 108, 0, 28), cor if abs(bx) != 55 else _mix(cor, "#FFFFFF", 0.08))
+        shape(k, [(-12, -212), (12, -212), (20, -262), (4, -268)], "#3E8E3A", smooth=False)
+        shape(k, ellipse_pts(40, -236, 36, 16, -0.4, 14), "#4FB84A")
+        shape(k, ellipse_pts(-70, -170, 26, 14, -0.5, 12), "#FFFFFF", alpha=0.35)
+        k.c.restore()
+
+
+PROPS.update({"moita": Moita, "muro": Muro, "canteiro": Canteiro, "abobora": Abobora})
+
+
+# ─── Fofolucos 07: festa surpresa ───
+class Balao(_Prop):
+    """Balão de festa (Fofolucos 07) com fitinha: `cor` 0 rosa · 1 azul · 2 amarelo · 3 lilás · 4 verde; `enche` 0→1 cresce
+    (o Teco enchendo); `estoura` 0→1 = PLOC (estrelinha de pedaços); `balanco` fase. Origem = ponta da fitinha (embaixo)."""
+    CORES = ("#FF6AB2", "#3AA6FF", "#FFD23F", "#B98CFF", "#46D677")
+
+    def __init__(self):
+        super().__init__("balao", "Balão", (420, 760), (210, 700), 520, {"cor": 0.0, "enche": 1.0, "estoura": 0.0, "balanco": 0.0})
+
+    def paint(self, k, P):
+        cor = self.CORES[int(round(max(0, min(4, P["cor"]))))]
+        e = max(0.0, min(1.0, P["enche"]))
+        est = max(0.0, min(1.0, P["estoura"]))
+        b = 0.08 * math.sin(2 * math.pi * P["balanco"])
+        cy = -330 - 80 * e
+        ln(k, [(0, 0), (14 * math.sin(b * 5), -120), (-8, -220), (0, cy + 140 * (0.4 + 0.6 * e))], "#8A6A4A", w=LINE * 0.9)
+        if est < 0.05:
+            rx, ry = 40 + 85 * e, 50 + 105 * e
+            k.c.save()
+            k.c.rotate(math.degrees(b), 0, cy)
+            shape(k, ellipse_pts(0, cy, rx, ry, 0, 36), cor)
+            shape(k, [(-12, cy + ry - 2), (12, cy + ry - 2), (0, cy + ry + 18)], cor, smooth=False)
+            shape(k, ellipse_pts(-rx * 0.38, cy - ry * 0.42, rx * 0.18, ry * 0.12, -0.6, 14), "#FFFFFF", alpha=0.7)
+            k.c.restore()
+        else:                                                    # PLOC: pedacinhos voando + estrelinha
+            for j in range(8):
+                a_ = 2 * math.pi * j / 8
+                d = 60 + 170 * est
+                x, y = math.cos(a_) * d, cy + math.sin(a_) * d
+                shape(k, ellipse_pts(x, y, 22 * (1 - est * 0.5), 10, a_, 10), cor, alpha=1 - est * 0.6)
+            _estrela(k, 0, cy, 70 * (1 - est * 0.3), "#FFF3B0")
+
+
+class BoloAniversario(_Prop):
+    """Bolo de aniversário (Fofolucos 07): dois andares com cobertura escorrendo, granulado e VELA com chama; `vela` 1 acesa ·
+    0 apagada (fumacinha subindo, fase em `fumaca`); `amassa` 0→1 = caiu no chão (achatado, cobertura espalhada).
+    Origem = meio do prato."""
+
+    def __init__(self):
+        super().__init__("bolo_aniversario", "Bolo de aniversário", (720, 760), (360, 700), 470,
+                         {"vela": 1.0, "fumaca": 0.0, "amassa": 0.0})
+
+    def paint(self, k, P):
+        am = max(0.0, min(1.0, P["amassa"]))
+        k.c.save()
+        k.c.scale(1 + 0.35 * am, 1 - 0.45 * am)
+        shape(k, ellipse_pts(0, -6, 270, 34, 0, 32), "#FFFFFF")                                  # prato
+        shape(k, [(-210, -20), (210, -20), (200, -180), (-200, -180)], "#F5B7D0", smooth=False)     # andar de baixo
+        shape(k, [(-140, -180), (140, -180), (130, -300), (-130, -300)], "#B98CFF", smooth=False)   # andar de cima
+        for (x0, x1, y, cor) in ((-210, 210, -180, "#FFFFFF"), (-140, 140, -300, "#FFF4D6")):        # cobertura escorrendo
+            pts = [(x0, y - 10), (x1, y - 10)]
+            for j in range(9, -1, -1):
+                x = x0 + (x1 - x0) * j / 9
+                pts.append((x, y + (30 if j % 2 else 12)))
+            shape(k, pts, cor)
+        for j, (x, y) in enumerate(((-150, -100), (-60, -60), (40, -120), (130, -70), (-90, -240), (20, -220), (90, -260))):
+            shape(k, ellipse_pts(x, y, 12, 5, 0.6 * j, 8), ("#FFD23F", "#3AA6FF", "#46D677", "#FF6AB2")[j % 4])
+        k.c.restore()
+        if am < 0.5:
+            shape(k, [(-12, -300), (12, -300), (12, -400), (-12, -400)], "#3AA6FF", smooth=False)  # vela
+            for y in (-320, -350, -380):
+                ln(k, [(-12, y), (12, y - 10)], "#FFFFFF", w=LINE)
+            if P["vela"] > 0.5:
+                shape(k, [(0, -470), (16, -430), (0, -404), (-16, -430)], "#FFB23F")
+                shape(k, ellipse_pts(0, -426, 7, 14, 0, 10), "#FFF3B0")
+            else:
+                f = P["fumaca"]
+                ln(k, [(0, -404), (10 * math.sin(f * 6), -440), (-8, -480 - 20 * (f % 1)), (6, -520)], "#C9CFE0", w=LINE * 1.4, alpha=0.8)
+
+
+class Sofa(_Prop):
+    """Sofá amarelo (Fofolucos 07, esconderijo da festa surpresa): encosto alto com dois almofadões, braços redondos e
+    pezinhos. ~1000 de largura × 420 de altura. Origem = meio da base."""
+
+    def __init__(self):
+        super().__init__("sofa", "Sofá", (1300, 640), (650, 580), 420, {})
+
+    def paint(self, k, P):
+        am, esc = "#FFD23F", "#F2B705"
+        shape(k, [(-430, -150), (430, -150), (430, -420), (-430, -420)], am, smooth=True)              # encosto
+        for sx in (-1, 1):
+            shape(k, [(sx * 20, -170), (sx * 400, -170), (sx * 400, -390), (sx * 20, -390)], "#FFE066", smooth=True)
+        shape(k, [(-470, 0), (470, 0), (470, -190), (-470, -190)], esc, smooth=False)                   # assento até o chão
+        shape(k, [(-470, 0), (470, 0), (470, -34), (-470, -34)], "#D99E00", smooth=False)               # saia (esconde os pés)
+        for sx in (-1, 1):                                                                               # braços
+            shape(k, ellipse_pts(sx * 470, -150, 70, 150, 0, 24), am)
+
+
+PROPS.update({"balao": Balao, "bolo_aniversario": BoloAniversario, "sofa": Sofa})

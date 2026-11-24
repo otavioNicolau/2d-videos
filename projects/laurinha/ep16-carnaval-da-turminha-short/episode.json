@@ -1,0 +1,881 @@
+{
+  "schema": "1.1",
+  "id": "ep16-carnaval-da-turminha-short",
+  "title": "Carnaval da Turminha — Short",
+  "logline": "Clipe de \"Carnaval da Turminha\" — o bloquinho de Carnaval com as fantasias mais engraçadas. Montado do roteiro verso a verso (roteiro.json).",
+  "fps": 30,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "background": "plano_parque",
+  "soundtrack": {
+    "file": "musica/trabalho.wav",
+    "analysis": "analise/song.json",
+    "start": 0.0,
+    "end": 13.966,
+    "fade_out": 0.3,
+    "beat_grid": "full"
+  },
+  "captions": {
+    "lyrics": "analise/letra.json",
+    "style": "palavra_a_palavra"
+  },
+  "overlays": {
+    "logo": true,
+    "channel": [
+      "LAURINHA",
+      "e Luisinho"
+    ]
+  },
+  "cast": {
+    "laurinha": {
+      "character": "laurinha"
+    },
+    "luisinho": {
+      "character": "luisinho"
+    },
+    "formiguinha": {
+      "character": "formiguinha"
+    },
+    "sapo": {
+      "character": "sapo"
+    },
+    "vovo": {
+      "character": "vovo"
+    },
+    "vovozinho": {
+      "character": "vovozinho"
+    },
+    "joinha": {
+      "character": "joinha"
+    },
+    "mamae": {
+      "character": "mamae"
+    },
+    "botao": {
+      "character": "botao_inscrever"
+    }
+  },
+  "approval": {
+    "storyboard": false,
+    "final_render": false
+  },
+  "projeto": "laurinha/ep16-carnaval-da-turminha",
+  "scenes": [
+    {
+      "id": "s01_refrao",
+      "title": "Carnaval da turminha!",
+      "duration": 3.053,
+      "description": "Carnaval da turminha! / Abre a roda, vem pular! / Carnaval da turminha! / Ninguém fica sem dançar!",
+      "background": "plano_salao",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.04,
+            "x": 1275.0,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          },
+          {
+            "t": 3.053,
+            "x": 1275.0,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "formiguinha": {
+          "start": {
+            "x": 825.0,
+            "y": 730,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 2,
+            "depth": 0.6375,
+            "juba": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.04,
+              "do": "dance",
+              "style": "festa",
+              "dur": 6.0
+            }
+          ]
+        },
+        "vovo": {
+          "start": {
+            "x": 1725.0,
+            "y": 730,
+            "turn": -0.3,
+            "expr": "happy",
+            "z": 2,
+            "depth": 0.675,
+            "tutu": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.04,
+              "do": "dance",
+              "style": "festa",
+              "dur": 6.0
+            }
+          ]
+        },
+        "vovozinho": {
+          "start": {
+            "x": 1425.0,
+            "y": 730,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 2,
+            "depth": 0.675,
+            "tubarao": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.04,
+              "do": "dance",
+              "style": "marcha",
+              "dur": 6.0
+            }
+          ]
+        },
+        "laurinha": {
+          "start": {
+            "x": 1125.0,
+            "y": 970,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "holding": "sombrinha",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.04,
+              "do": "dance",
+              "style": "frevo",
+              "dur": 6.0
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1425.0,
+            "y": 970,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 3,
+            "holding": "sombrinha",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.04,
+              "do": "dance",
+              "style": "frevo",
+              "dur": 6.0
+            }
+          ]
+        }
+      },
+      "props": {
+        "sapo": {
+          "start": {
+            "x": 1125.0,
+            "y": 730,
+            "z": 2,
+            "coroa": 1.0,
+            "depth": 0.6375,
+            "lado": 1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.04,
+              "pose": {
+                "pulo": 0.0
+              }
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "flash_in": true,
+      "callouts": [
+        {
+          "t": 0.19,
+          "text": "CARNAVAL DA TURMINHA!",
+          "dur": 1.8,
+          "color": "laranja",
+          "y": 170
+        },
+        {
+          "t": 1.84,
+          "text": "ABRE A RODA!",
+          "dur": 1.8,
+          "color": "azul",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.1,
+          "to": 3.033
+        },
+        {
+          "who": "luisinho",
+          "from": 0.1,
+          "to": 3.033
+        }
+      ]
+    },
+    {
+      "id": "s02_refrao",
+      "title": "Carnaval da turminha!",
+      "duration": 2.987,
+      "description": "Carnaval da turminha! / Abre a roda, vem pular! / Carnaval da turminha! / Ninguém fica sem dançar!",
+      "background": "plano_salao",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 825.0,
+            "y": 560.0,
+            "zoom": 2.4
+          },
+          {
+            "t": 2.987,
+            "x": 825.0,
+            "y": 560.0,
+            "zoom": 2.496,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "formiguinha": {
+          "start": {
+            "x": 825.0,
+            "y": 730,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 2,
+            "depth": 0.6375,
+            "juba": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "festa",
+              "dur": 2.987
+            }
+          ]
+        },
+        "vovo": {
+          "start": {
+            "x": 1725.0,
+            "y": 730,
+            "turn": -0.3,
+            "expr": "happy",
+            "z": 2,
+            "depth": 0.675,
+            "tutu": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "festa",
+              "dur": 2.987
+            }
+          ]
+        },
+        "vovozinho": {
+          "start": {
+            "x": 1425.0,
+            "y": 730,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 2,
+            "depth": 0.675,
+            "tubarao": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "marcha",
+              "dur": 2.987
+            }
+          ]
+        },
+        "laurinha": {
+          "start": {
+            "x": 1125.0,
+            "y": 970,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "holding": "sombrinha",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "frevo",
+              "dur": 2.987
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1425.0,
+            "y": 970,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 3,
+            "holding": "sombrinha",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "frevo",
+              "dur": 2.987
+            }
+          ]
+        }
+      },
+      "props": {
+        "sapo": {
+          "start": {
+            "x": 1125.0,
+            "y": 730,
+            "z": 2,
+            "coroa": 1.0,
+            "depth": 0.6375,
+            "lado": 1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "pulo": 0.0
+              }
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "callouts": [
+        {
+          "t": 0.0,
+          "text": "ABRE A RODA!",
+          "dur": 1.8,
+          "color": "azul",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 2.967
+        },
+        {
+          "who": "luisinho",
+          "from": 0.0,
+          "to": 2.967
+        }
+      ]
+    },
+    {
+      "id": "s03_refrao",
+      "title": "Carnaval da turminha!",
+      "duration": 2.655,
+      "description": "Carnaval da turminha! / Abre a roda, vem pular! / Carnaval da turminha! / Ninguém fica sem dançar!",
+      "background": "danca_raios_laranja",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 2.655,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 810.0,
+            "y": 1190,
+            "turn": 0.25,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.0,
+            "holding": "sombrinha",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "frevo",
+              "dur": 5.92
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 960.0,
+            "y": 800,
+            "turn": -0.25,
+            "expr": "happy",
+            "z": 2,
+            "depth": 0.85,
+            "holding": "sombrinha",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "frevo",
+              "dur": 5.92
+            }
+          ]
+        }
+      },
+      "props": {
+        "sapo": {
+          "start": {
+            "x": 1110.0,
+            "y": 1190,
+            "z": 3,
+            "coroa": 1.0,
+            "depth": 1.0,
+            "lado": -1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear"
+            },
+            {
+              "t": 0.9,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear"
+            },
+            {
+              "t": 1.8,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear"
+            },
+            {
+              "t": 2.655,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear"
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "callouts": [
+        {
+          "t": 1.6,
+          "text": "NINGUÉM FICA SEM DANÇAR!",
+          "dur": 1.8,
+          "color": "rosa",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.12,
+          "to": 2.635
+        },
+        {
+          "who": "luisinho",
+          "from": 0.12,
+          "to": 2.635
+        }
+      ]
+    },
+    {
+      "id": "s04_refrao",
+      "title": "Carnaval da turminha!",
+      "duration": 2.624,
+      "description": "Carnaval da turminha! / Abre a roda, vem pular! / Carnaval da turminha! / Ninguém fica sem dançar!",
+      "background": "danca_raios_laranja",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 810.0,
+            "y": 760.0,
+            "zoom": 2.0
+          },
+          {
+            "t": 2.624,
+            "x": 810.0,
+            "y": 760.0,
+            "zoom": 2.08,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 810.0,
+            "y": 1190,
+            "turn": 0.25,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.0,
+            "holding": "sombrinha",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "frevo",
+              "dur": 3.265
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 960.0,
+            "y": 800,
+            "turn": -0.25,
+            "expr": "happy",
+            "z": 2,
+            "depth": 0.85,
+            "holding": "sombrinha",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "frevo",
+              "dur": 3.265
+            }
+          ]
+        }
+      },
+      "props": {
+        "sapo": {
+          "start": {
+            "x": 1110.0,
+            "y": 1190,
+            "z": 3,
+            "coroa": 1.0,
+            "depth": 1.0,
+            "lado": -1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear"
+            },
+            {
+              "t": 0.045,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear"
+            },
+            {
+              "t": 0.945,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear"
+            },
+            {
+              "t": 1.845,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear"
+            },
+            {
+              "t": 2.624,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear"
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "callouts": [
+        {
+          "t": 0.0,
+          "text": "NINGUÉM FICA SEM DANÇAR!",
+          "dur": 1.8,
+          "color": "rosa",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 2.604
+        },
+        {
+          "who": "luisinho",
+          "from": 0.0,
+          "to": 2.604
+        }
+      ]
+    },
+    {
+      "id": "s05_refrao",
+      "title": "Carnaval da turminha!",
+      "duration": 2.647,
+      "description": "Carnaval da turminha! / Abre a roda, vem pular! / Carnaval da turminha! / Ninguém fica sem dançar!",
+      "background": "danca_raios_laranja",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 2.254,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 810.0,
+            "y": 1190,
+            "turn": 0.25,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.0,
+            "holding": "sombrinha",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "frevo",
+              "dur": 0.641
+            },
+            {
+              "t": 0.741,
+              "do": "laugh",
+              "dur": 1.513
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 960.0,
+            "y": 800,
+            "turn": -0.25,
+            "expr": "happy",
+            "z": 2,
+            "depth": 0.85,
+            "holding": "sombrinha",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "frevo",
+              "dur": 0.641
+            },
+            {
+              "t": 0.741,
+              "do": "laugh",
+              "dur": 1.513
+            }
+          ]
+        }
+      },
+      "props": {
+        "sapo": {
+          "start": {
+            "x": 1110.0,
+            "y": 1190,
+            "z": 3,
+            "coroa": 1.0,
+            "depth": 1.0,
+            "lado": -1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear"
+            },
+            {
+              "t": 0.121,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "linear"
+            },
+            {
+              "t": 1.021,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "linear"
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "callouts": [],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 2.244
+        },
+        {
+          "who": "luisinho",
+          "from": 0.0,
+          "to": 2.244
+        }
+      ]
+    }
+  ]
+}

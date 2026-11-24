@@ -1,0 +1,792 @@
+{
+  "schema": "1.1",
+  "id": "ep19-conta-vantagem-short",
+  "title": "Conta Vantagem! — Short",
+  "logline": "Clipe de \"Conta Vantagem!\" — a Dona Barata que conta vantagem e corre do chinelo. Montado do roteiro verso a verso (roteiro.json).",
+  "fps": 30,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "background": "plano_parque",
+  "soundtrack": {
+    "file": "musica/trabalho.wav",
+    "analysis": "analise/song.json",
+    "start": 0.0,
+    "end": 12.327,
+    "fade_out": 0.3,
+    "beat_grid": "full"
+  },
+  "captions": {
+    "lyrics": "analise/letra.json",
+    "style": "palavra_a_palavra"
+  },
+  "overlays": {
+    "logo": true,
+    "channel": [
+      "LAURINHA",
+      "e Luisinho"
+    ]
+  },
+  "cast": {
+    "laurinha": {
+      "character": "laurinha"
+    },
+    "luisinho": {
+      "character": "luisinho"
+    },
+    "b": {
+      "character": "barata"
+    },
+    "cast": {
+      "character": "castelo_caixa"
+    },
+    "car": {
+      "character": "carro_carretel"
+    },
+    "ch": {
+      "character": "chinelo"
+    },
+    "formiguinha": {
+      "character": "formiguinha"
+    },
+    "joaninha": {
+      "character": "joaninha"
+    },
+    "gag": {
+      "character": "carro_carretel"
+    },
+    "cx": {
+      "character": "castelo_caixa"
+    },
+    "rola": {
+      "character": "carro_carretel"
+    },
+    "joinha": {
+      "character": "joinha"
+    },
+    "mamae": {
+      "character": "mamae"
+    },
+    "botao": {
+      "character": "botao_inscrever"
+    }
+  },
+  "approval": {
+    "storyboard": false,
+    "final_render": false
+  },
+  "projeto": "laurinha/ep19-conta-vantagem",
+  "scenes": [
+    {
+      "id": "s01_refrao",
+      "title": "Conta vantagem!",
+      "duration": 3.5333,
+      "description": "Conta vantagem! / Ih, é mentirinha!",
+      "background": "plano_jardim",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1142.1,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          },
+          {
+            "t": 3.5333,
+            "x": 1142.1,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 1142.1,
+            "y": 930,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "apontar_camera",
+              "dur": 2.78
+            },
+            {
+              "t": 2.88,
+              "do": "bacana",
+              "dur": 0.653
+            }
+          ]
+        }
+      },
+      "props": {
+        "b": {
+          "start": {
+            "x": 1330.8092808850645,
+            "y": 930,
+            "z": 3,
+            "oculos": 1.0,
+            "depth": 1.305
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "metida": 1.0,
+                "aponta": 0.0,
+                "fala": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.1,
+              "pose": {
+                "fala": 0.8
+              },
+              "in": 0.07
+            },
+            {
+              "t": 0.3,
+              "pose": {
+                "fala": 0.0
+              },
+              "in": 0.17
+            },
+            {
+              "t": 0.45,
+              "pose": {
+                "aponta": 0.0
+              },
+              "in": 0.42
+            },
+            {
+              "t": 0.5,
+              "pose": {
+                "fala": 0.8
+              },
+              "in": 0.17
+            },
+            {
+              "t": 0.7,
+              "pose": {
+                "fala": 0.0
+              },
+              "in": 0.17
+            },
+            {
+              "t": 0.8,
+              "pose": {
+                "aponta": 1.0
+              },
+              "ease": "out",
+              "in": 0.32
+            },
+            {
+              "t": 0.9,
+              "pose": {
+                "fala": 0.8
+              },
+              "in": 0.17
+            },
+            {
+              "t": 1.1,
+              "pose": {
+                "fala": 0.0
+              },
+              "in": 0.17
+            }
+          ]
+        }
+      },
+      "flash_in": true,
+      "sfx": [
+        {
+          "t": 2.23,
+          "id": "pop",
+          "volume_db": -6.0
+        }
+      ],
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "CONTA VANTAGEM!",
+          "dur": 1.8,
+          "color": "verde",
+          "y": 170
+        },
+        {
+          "t": 2.88,
+          "text": "MENTIRINHA!",
+          "dur": 0.653,
+          "color": "verde",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "luisinho",
+          "from": 0.32,
+          "to": 3.523
+        }
+      ]
+    },
+    {
+      "id": "s02_refrao",
+      "title": "Conta vantagem!",
+      "duration": 2.8,
+      "description": "Conta vantagem! / Ha, ha, Baratinha!",
+      "background": "plano_jardim",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1216.5,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          },
+          {
+            "t": 2.8,
+            "x": 1216.5,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "formiguinha": {
+          "start": {
+            "x": 1066.5,
+            "y": 970,
+            "turn": 0.35,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 1.83,
+              "do": "laugh",
+              "dur": 0.97
+            }
+          ]
+        },
+        "joaninha": {
+          "start": {
+            "x": 1216.5,
+            "y": 730,
+            "turn": -0.35,
+            "expr": "happy",
+            "z": 2,
+            "depth": 1.0875
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 2.03,
+              "do": "laugh",
+              "dur": 0.77
+            }
+          ]
+        },
+        "laurinha": {
+          "start": {
+            "x": 1366.5,
+            "y": 970,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "dance",
+              "style": "pezinho",
+              "dur": 2.03
+            },
+            {
+              "t": 2.13,
+              "do": "laugh",
+              "dur": 0.67
+            }
+          ]
+        }
+      },
+      "props": {
+        "b": {
+          "start": {
+            "x": 1300.0,
+            "y": 930,
+            "z": 3,
+            "oculos": 1.0,
+            "depth": 1.232
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "metida": 1.0,
+                "vergonha": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.9299999999999997,
+              "pose": {
+                "metida": 1.0
+              },
+              "in": 1.9
+            },
+            {
+              "t": 2.3299999999999996,
+              "pose": {
+                "metida": 0.0,
+                "vergonha": 1.0,
+                "oculos": 0.0
+              },
+              "ease": "step"
+            }
+          ]
+        },
+        "gag": {
+          "start": {
+            "x": 1405.2092808850646,
+            "y": 930,
+            "z": 2,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "gira": 0.0,
+                "bate": 0.0
+              }
+            },
+            {
+              "t": 1.9799999999999998,
+              "pose": {
+                "gira": 0.0
+              },
+              "in": 1.95
+            },
+            {
+              "t": 2.28,
+              "pose": {
+                "gira": 0.12,
+                "bate": 1.0
+              },
+              "ease": "out",
+              "in": 0.27
+            },
+            {
+              "t": 2.63,
+              "pose": {
+                "gira": 0.0,
+                "bate": 0.0
+              },
+              "in": 0.32
+            }
+          ]
+        }
+      },
+      "sfx": [
+        {
+          "t": 1.46,
+          "id": "whistle_down",
+          "volume_db": -6.0
+        }
+      ],
+      "callouts": [
+        {
+          "t": 2.13,
+          "text": "HA, HA!",
+          "dur": 0.67,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.257,
+          "to": 2.687
+        }
+      ]
+    },
+    {
+      "id": "s03_refrao",
+      "title": "Conta vantagem!",
+      "duration": 2.8,
+      "description": "Conta vantagem! / Ih, é mentirinha!",
+      "background": "plano_jardim",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1070.5,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          },
+          {
+            "t": 2.8,
+            "x": 1070.5,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 1070.5,
+            "y": 930,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "sorriso",
+              "dur": 2.01
+            },
+            {
+              "t": 2.11,
+              "do": "bacana",
+              "dur": 0.69
+            }
+          ]
+        }
+      },
+      "props": {
+        "b": {
+          "start": {
+            "x": 1259.2092808850646,
+            "y": 930,
+            "z": 3,
+            "oculos": 1.0,
+            "depth": 1.305
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "metida": 1.0,
+                "aponta": 0.0,
+                "fala": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.1,
+              "pose": {
+                "fala": 0.8
+              },
+              "in": 0.07
+            },
+            {
+              "t": 0.3,
+              "pose": {
+                "fala": 0.0
+              },
+              "in": 0.17
+            },
+            {
+              "t": 0.45,
+              "pose": {
+                "aponta": 0.0
+              },
+              "in": 0.42
+            },
+            {
+              "t": 0.5,
+              "pose": {
+                "fala": 0.8
+              },
+              "in": 0.17
+            },
+            {
+              "t": 0.7,
+              "pose": {
+                "fala": 0.0
+              },
+              "in": 0.17
+            },
+            {
+              "t": 0.8,
+              "pose": {
+                "aponta": 1.0
+              },
+              "ease": "out",
+              "in": 0.32
+            },
+            {
+              "t": 0.9,
+              "pose": {
+                "fala": 0.8
+              },
+              "in": 0.17
+            },
+            {
+              "t": 1.1,
+              "pose": {
+                "fala": 0.0
+              },
+              "in": 0.17
+            }
+          ]
+        }
+      },
+      "sfx": [
+        {
+          "t": 1.54,
+          "id": "pop",
+          "volume_db": -6.0
+        }
+      ],
+      "callouts": [
+        {
+          "t": 2.11,
+          "text": "MENTIRINHA!",
+          "dur": 0.69,
+          "color": "verde",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "luisinho",
+          "from": 0.187,
+          "to": 2.79
+        }
+      ]
+    },
+    {
+      "id": "s04_refrao",
+      "title": "Conta vantagem!",
+      "duration": 3.1937,
+      "description": "Conta vantagem! / Ha, ha, Baratinha!",
+      "background": "plano_jardim",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1407.3666666666668,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          },
+          {
+            "t": 2.833,
+            "x": 1407.3666666666668,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "formiguinha": {
+          "start": {
+            "x": 1407.3666666666668,
+            "y": 730,
+            "turn": -0.35,
+            "expr": "happy",
+            "z": 2,
+            "depth": 1.0875
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 1.81,
+              "do": "laugh",
+              "dur": 1.023
+            }
+          ]
+        },
+        "joaninha": {
+          "start": {
+            "x": 1257.3666666666668,
+            "y": 970,
+            "turn": 0.35,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 2.01,
+              "do": "laugh",
+              "dur": 0.823
+            }
+          ]
+        },
+        "laurinha": {
+          "start": {
+            "x": 1557.3666666666668,
+            "y": 970,
+            "turn": -0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "dance",
+              "style": "pezinho",
+              "dur": 2.01
+            },
+            {
+              "t": 2.11,
+              "do": "laugh",
+              "dur": 0.723
+            }
+          ]
+        }
+      },
+      "props": {
+        "b": {
+          "start": {
+            "x": 1300.0,
+            "y": 930,
+            "z": 3,
+            "oculos": 1.0,
+            "depth": 1.232
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "metida": 1.0,
+                "vergonha": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.91,
+              "pose": {
+                "metida": 1.0
+              },
+              "in": 1.88
+            },
+            {
+              "t": 2.31,
+              "pose": {
+                "metida": 0.0,
+                "vergonha": 1.0,
+                "oculos": 0.0
+              },
+              "ease": "step"
+            }
+          ]
+        },
+        "gag": {
+          "start": {
+            "x": 1596.0759475517314,
+            "y": 930,
+            "z": 2,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "gira": 0.0,
+                "bate": 0.0
+              }
+            },
+            {
+              "t": 1.96,
+              "pose": {
+                "gira": 0.0
+              },
+              "in": 1.93
+            },
+            {
+              "t": 2.26,
+              "pose": {
+                "gira": 0.12,
+                "bate": 1.0
+              },
+              "ease": "out",
+              "in": 0.27
+            },
+            {
+              "t": 2.61,
+              "pose": {
+                "gira": 0.0,
+                "bate": 0.0
+              },
+              "in": 0.32
+            }
+          ]
+        }
+      },
+      "sfx": [
+        {
+          "t": 1.48,
+          "id": "whistle_down",
+          "volume_db": -6.0
+        }
+      ],
+      "callouts": [
+        {
+          "t": 2.11,
+          "text": "HA, HA!",
+          "dur": 0.723,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.287,
+          "to": 2.347
+        }
+      ]
+    }
+  ]
+}

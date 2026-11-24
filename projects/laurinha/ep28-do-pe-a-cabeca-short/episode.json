@@ -1,0 +1,729 @@
+{
+  "schema": "1.1",
+  "id": "ep28-do-pe-a-cabeca-short",
+  "title": "Do Pé à Cabeça! — Short",
+  "logline": "Clipe de \"Do Pé à Cabeça!\" — tocar as partes do corpo, cada volta mais rápido. Montado do roteiro verso a verso (roteiro.json).",
+  "fps": 30,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "background": "plano_parque",
+  "soundtrack": {
+    "file": "musica/trabalho.wav",
+    "analysis": "analise/song.json",
+    "start": 0.0,
+    "end": 12.7867,
+    "fade_out": 0.3,
+    "beat_grid": "full"
+  },
+  "captions": {
+    "lyrics": "analise/letra.json",
+    "style": "palavra_a_palavra"
+  },
+  "overlays": {
+    "logo": true,
+    "channel": [
+      "LAURINHA",
+      "e Luisinho"
+    ]
+  },
+  "cast": {
+    "laurinha": {
+      "character": "laurinha"
+    },
+    "luisinho": {
+      "character": "luisinho"
+    },
+    "s": {
+      "character": "sol"
+    },
+    "n": {
+      "character": "nuvem"
+    },
+    "m": {
+      "character": "destaque"
+    },
+    "bat": {
+      "character": "bateria_show"
+    },
+    "vovo": {
+      "character": "vovo"
+    },
+    "vovozinho": {
+      "character": "vovozinho"
+    },
+    "mamae": {
+      "character": "mamae"
+    },
+    "c": {
+      "character": "gato"
+    },
+    "tec": {
+      "character": "teclado_inst"
+    },
+    "e": {
+      "character": "espelho"
+    },
+    "cx": {
+      "character": "caixa_brinquedos"
+    },
+    "p": {
+      "character": "pipa"
+    },
+    "nb": {
+      "character": "bolha"
+    },
+    "cm": {
+      "character": "cama"
+    },
+    "joaninha": {
+      "character": "joaninha"
+    },
+    "b": {
+      "character": "bolha"
+    },
+    "m1": {
+      "character": "destaque"
+    },
+    "m2": {
+      "character": "destaque"
+    },
+    "si": {
+      "character": "siri"
+    },
+    "ca": {
+      "character": "castelo_areia"
+    },
+    "formiguinha": {
+      "character": "formiguinha"
+    },
+    "pt": {
+      "character": "pato"
+    },
+    "sp": {
+      "character": "sapo"
+    },
+    "joinha": {
+      "character": "joinha"
+    },
+    "botao": {
+      "character": "botao_inscrever"
+    }
+  },
+  "approval": {
+    "storyboard": false,
+    "final_render": false
+  },
+  "projeto": "laurinha/ep28-do-pe-a-cabeca",
+  "scenes": [
+    {
+      "id": "s01_refrao",
+      "title": "Do pé à cabeça!",
+      "duration": 3.3667,
+      "description": "Do pé à cabeça! / Mexe tudo, ê!",
+      "background": "plano_parque",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1300.0,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          },
+          {
+            "t": 3.3667,
+            "x": 1300.0,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1111.2907191149354,
+            "y": 930,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "festa",
+              "dur": 3.367
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1488.7092808850646,
+            "y": 930,
+            "turn": -0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "dance",
+              "style": "bracos",
+              "dur": 3.267
+            }
+          ]
+        }
+      },
+      "props": {
+        "s": {
+          "start": {
+            "x": 1488.7092808850646,
+            "y": 200,
+            "z": 0,
+            "depth": 0.725
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "giro": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.6,
+              "pose": {
+                "boca": 1.0
+              },
+              "ease": "out"
+            },
+            {
+              "t": 3.31,
+              "pose": {
+                "giro": 0.5
+              },
+              "ease": "linear",
+              "in": 3.28
+            }
+          ]
+        },
+        "nb": {
+          "start": {
+            "x": 1300.0,
+            "y": 900,
+            "z": 0,
+            "depth": 0.435
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "balanco": 0.0,
+                "y": 900.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.31,
+              "pose": {
+                "balanco": 2.0
+              },
+              "ease": "linear",
+              "in": 3.28
+            },
+            {
+              "t": 3.31,
+              "pose": {
+                "y": 300.0
+              },
+              "ease": "linear",
+              "in": 3.28
+            }
+          ]
+        },
+        "p": {
+          "start": {
+            "x": 1488.7092808850646,
+            "y": 520,
+            "z": 0,
+            "depth": 0.58
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "rabiola": 1.0,
+                "balanco": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.31,
+              "pose": {
+                "balanco": 4.044
+              },
+              "ease": "linear",
+              "in": 3.28
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "DO PÉ À CABEÇA!",
+          "dur": 1.8,
+          "color": "roxo",
+          "y": 170
+        },
+        {
+          "t": 1.69,
+          "text": "MEXE TUDO!",
+          "dur": 1.677,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.147,
+          "to": 3.357
+        },
+        {
+          "who": "luisinho",
+          "from": 0.147,
+          "to": 3.357
+        }
+      ],
+      "flash_in": true
+    },
+    {
+      "id": "s02_refrao",
+      "title": "Do pé à cabeça!",
+      "duration": 2.9667,
+      "description": "Do pé à cabeça! / Mais rápido, ê-ê!",
+      "background": "plano_escola",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1264.2,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          },
+          {
+            "t": 2.9667,
+            "x": 1264.2,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 1452.9092808850646,
+            "y": 930,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45,
+            "holding": "baqueta_a4",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1,
+            "holding_f": "baqueta_a4"
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "toca_bateria_a4",
+              "dur": 2.967
+            }
+          ]
+        },
+        "laurinha": {
+          "start": {
+            "x": 1075.4907191149355,
+            "y": 930,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45,
+            "holding": "saxofone",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "toca_sax",
+              "dur": 2.967
+            }
+          ]
+        }
+      },
+      "props": {
+        "bat": {
+          "start": {
+            "x": 1452.9092808850646,
+            "y": 940,
+            "z": 2,
+            "depth": 0.87
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "kit_a4",
+              "dur": 2.967
+            }
+          ]
+        },
+        "s": {
+          "start": {
+            "x": 1452.9092808850646,
+            "y": 200,
+            "z": 0,
+            "depth": 0.725
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "giro": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.6,
+              "pose": {
+                "boca": 1.0
+              },
+              "ease": "out"
+            },
+            {
+              "t": 2.91,
+              "pose": {
+                "giro": 0.5
+              },
+              "ease": "linear",
+              "in": 2.88
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "callouts": [
+        {
+          "t": 0.3,
+          "text": "MAIS RÁPIDO!",
+          "dur": 1.8,
+          "color": "vermelho",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "luisinho",
+          "from": 0.0,
+          "to": 2.72
+        },
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 2.72
+        }
+      ]
+    },
+    {
+      "id": "s03_refrao",
+      "title": "Do pé à cabeça!",
+      "duration": 2.9666,
+      "description": "Do pé à cabeça! / Mexe tudo, ê!",
+      "background": "plano_sala",
+      "fx": [],
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1300.0,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          },
+          {
+            "t": 2.9666,
+            "x": 1300.0,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1140.0,
+            "y": 930,
+            "turn": 0.1,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "twist",
+              "dur": 2.967
+            }
+          ]
+        },
+        "formiguinha": {
+          "start": {
+            "x": 1460.0,
+            "y": 930,
+            "turn": -0.1,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "twist",
+              "dur": 2.967
+            }
+          ]
+        }
+      },
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 2.957
+        }
+      ]
+    },
+    {
+      "id": "s04_refrao",
+      "title": "Do pé à cabeça!",
+      "duration": 3.4867,
+      "description": "Do pé à cabeça! / Mais rápido, ê-ê!",
+      "background": "plano_escola",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1264.2,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          },
+          {
+            "t": 3.367,
+            "x": 1264.2,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 1452.9092808850646,
+            "y": 930,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45,
+            "holding": "baqueta_a4",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1,
+            "holding_f": "baqueta_a4"
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "toca_bateria_a4",
+              "dur": 3.367
+            }
+          ]
+        },
+        "laurinha": {
+          "start": {
+            "x": 1075.4907191149355,
+            "y": 930,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "toca_teclado",
+              "dur": 3.367
+            }
+          ]
+        }
+      },
+      "props": {
+        "bat": {
+          "start": {
+            "x": 1452.9092808850646,
+            "y": 940,
+            "z": 2,
+            "depth": 0.87
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "kit_a4",
+              "dur": 3.367
+            }
+          ]
+        },
+        "tec": {
+          "start": {
+            "x": 1075.4907191149355,
+            "y": 940,
+            "z": 2,
+            "depth": 0.899
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tecla": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.327,
+              "pose": {
+                "tecla": 6.7
+              },
+              "ease": "linear",
+              "in": 3.297
+            }
+          ]
+        },
+        "s": {
+          "start": {
+            "x": 1452.9092808850646,
+            "y": 200,
+            "z": 0,
+            "depth": 0.725
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "giro": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.6,
+              "pose": {
+                "boca": 1.0
+              },
+              "ease": "out"
+            },
+            {
+              "t": 3.31,
+              "pose": {
+                "giro": 0.5
+              },
+              "ease": "linear",
+              "in": 3.28
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "callouts": [
+        {
+          "t": 0.3,
+          "text": "MAIS RÁPIDO!",
+          "dur": 1.8,
+          "color": "vermelho",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "luisinho",
+          "from": 0.0,
+          "to": 3.357
+        },
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 3.357
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1143 @@
+{
+  "schema": "1.1",
+  "id": "ep24-pao-de-queijo-short",
+  "title": "Pão de Queijo — Short",
+  "logline": "Clipe de \"Pão de Queijo\" — o pão de queijo da vovó mineira que estica até a lua. Montado do roteiro verso a verso (roteiro.json).",
+  "fps": 30,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "background": "plano_parque",
+  "soundtrack": {
+    "file": "musica/trabalho.wav",
+    "analysis": "analise/song.json",
+    "start": 0.0,
+    "end": 19.752,
+    "fade_out": 0.3,
+    "beat_grid": "full"
+  },
+  "captions": {
+    "lyrics": "analise/letra.json",
+    "style": "palavra_a_palavra"
+  },
+  "overlays": {
+    "logo": true,
+    "channel": [
+      "LAURINHA",
+      "e Luisinho"
+    ]
+  },
+  "cast": {
+    "laurinha": {
+      "character": "laurinha"
+    },
+    "luisinho": {
+      "character": "luisinho"
+    },
+    "vovo": {
+      "character": "vovo"
+    },
+    "m": {
+      "character": "mesa"
+    },
+    "t": {
+      "character": "tabuleiro"
+    },
+    "g": {
+      "character": "gato"
+    },
+    "p": {
+      "character": "pao_queijo"
+    },
+    "bat": {
+      "character": "bateria_show"
+    },
+    "tec": {
+      "character": "teclado_inst"
+    },
+    "vovozinho": {
+      "character": "vovozinho"
+    },
+    "n": {
+      "character": "nuvem"
+    },
+    "po": {
+      "character": "poste"
+    },
+    "c": {
+      "character": "cometa"
+    },
+    "lua": {
+      "character": "lua"
+    },
+    "p1": {
+      "character": "pao_queijo"
+    },
+    "p2": {
+      "character": "pao_queijo"
+    },
+    "s": {
+      "character": "sol"
+    },
+    "joinha": {
+      "character": "joinha"
+    },
+    "mamae": {
+      "character": "mamae"
+    },
+    "botao": {
+      "character": "botao_inscrever"
+    }
+  },
+  "approval": {
+    "storyboard": false,
+    "final_render": false
+  },
+  "projeto": "laurinha/ep24-pao-de-queijo",
+  "scenes": [
+    {
+      "id": "s01_refrao",
+      "title": "Pão de queijo, uai, uai!",
+      "duration": 2.221,
+      "description": "Pão de queijo, uai, uai! / Estica, estica e não sai!",
+      "background": "plano_cozinha",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1013.7,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          },
+          {
+            "t": 2.221,
+            "x": 1013.7,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 1013.7,
+            "y": 930,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "puxar",
+              "dur": 4.63
+            }
+          ]
+        }
+      },
+      "props": {
+        "p": {
+          "start": {
+            "x": 1202.4092808850646,
+            "y": 930,
+            "z": 3,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "dir": -0.2
+              },
+              "ease": "inout",
+              "in": 0.07
+            },
+            {
+              "t": 2.221,
+              "pose": {
+                "estica": 0.9
+              },
+              "ease": "out",
+              "in": 2.27
+            }
+          ]
+        },
+        "g": {
+          "start": {
+            "x": 1202.4092808850646,
+            "y": 930,
+            "z": 2,
+            "depth": 0.652
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "lado": -1.0,
+                "rabo": 0.0,
+                "miau": 0.0,
+                "assusta": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.33,
+              "pose": {
+                "rabo": 1.0
+              },
+              "ease": "inout",
+              "in": 0.47
+            },
+            {
+              "t": 0.43,
+              "pose": {
+                "miau": 1.0
+              },
+              "ease": "out",
+              "in": 0.57
+            },
+            {
+              "t": 0.83,
+              "pose": {
+                "rabo": 0.0
+              },
+              "ease": "inout",
+              "in": 0.47
+            },
+            {
+              "t": 0.93,
+              "pose": {
+                "miau": 0.0
+              },
+              "ease": "in",
+              "in": 0.47
+            },
+            {
+              "t": 1.33,
+              "pose": {
+                "rabo": 1.0
+              },
+              "ease": "inout",
+              "in": 0.47
+            },
+            {
+              "t": 1.83,
+              "pose": {
+                "rabo": 0.0
+              },
+              "ease": "inout",
+              "in": 0.47
+            },
+            {
+              "t": 2.221,
+              "pose": {
+                "assusta": 1.0
+              },
+              "ease": "back",
+              "in": 2.37
+            }
+          ]
+        }
+      },
+      "flash_in": true,
+      "callouts": [
+        {
+          "t": 0.03,
+          "text": "PÃO DE QUEIJO, UAI!",
+          "dur": 1.8,
+          "color": "rosa",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "luisinho",
+          "from": 0.15,
+          "to": 2.201
+        }
+      ]
+    },
+    {
+      "id": "s02_refrao",
+      "title": "Pão de queijo, uai, uai!",
+      "duration": 2.409,
+      "description": "Pão de queijo, uai, uai! / Estica, estica e não sai!",
+      "background": "plano_cozinha",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1013.7,
+            "y": 560.0,
+            "zoom": 2.4
+          },
+          {
+            "t": 2.409,
+            "x": 1013.7,
+            "y": 560.0,
+            "zoom": 2.496,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 1013.7,
+            "y": 930,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "puxar",
+              "dur": 2.409
+            }
+          ]
+        }
+      },
+      "props": {
+        "p": {
+          "start": {
+            "x": 1202.4092808850646,
+            "y": 930,
+            "z": 3,
+            "depth": 1.16
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "dir": -0.2
+              },
+              "ease": "inout",
+              "in": 0.07
+            },
+            {
+              "t": 0.009,
+              "pose": {
+                "estica": 0.9
+              },
+              "ease": "out",
+              "in": 2.27
+            },
+            {
+              "t": 0.009,
+              "pose": {
+                "dir": 0.2
+              },
+              "ease": "inout",
+              "in": 2.27
+            },
+            {
+              "t": 2.209,
+              "pose": {
+                "dir": -0.1
+              },
+              "ease": "inout",
+              "in": 2.17
+            },
+            {
+              "t": 2.309,
+              "pose": {
+                "onda": 3.0
+              },
+              "ease": "linear",
+              "in": 4.67
+            }
+          ]
+        },
+        "g": {
+          "start": {
+            "x": 1202.4092808850646,
+            "y": 930,
+            "z": 2,
+            "depth": 0.652
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "rabo": 0.0
+              },
+              "ease": "inout",
+              "in": 0.47
+            },
+            {
+              "t": 0.009,
+              "pose": {
+                "assusta": 1.0
+              },
+              "ease": "back",
+              "in": 2.37
+            },
+            {
+              "t": 0.109,
+              "pose": {
+                "rabo": 1.0
+              },
+              "ease": "inout",
+              "in": 0.47
+            },
+            {
+              "t": 0.609,
+              "pose": {
+                "rabo": 0.0
+              },
+              "ease": "inout",
+              "in": 0.47
+            },
+            {
+              "t": 1.109,
+              "pose": {
+                "rabo": 1.0
+              },
+              "ease": "inout",
+              "in": 0.47
+            },
+            {
+              "t": 1.609,
+              "pose": {
+                "rabo": 0.0
+              },
+              "ease": "inout",
+              "in": 0.47
+            },
+            {
+              "t": 2.109,
+              "pose": {
+                "rabo": 1.0
+              },
+              "ease": "inout",
+              "in": 0.47
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.249,
+          "text": "NÃO SAI!",
+          "dur": 1.8,
+          "color": "vermelho",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "luisinho",
+          "from": 0.0,
+          "to": 2.389
+        }
+      ]
+    },
+    {
+      "id": "s03_refrao",
+      "title": "Pão de queijo, uai, uai!",
+      "duration": 2.421,
+      "description": "Pão de queijo, uai, uai! / Mais um, vovó! Vai, vai!",
+      "background": "plano_campo",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1264.2,
+            "y": 540.0,
+            "zoom": 1.808
+          },
+          {
+            "t": 2.421,
+            "x": 1264.2,
+            "y": 540.0,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 1452.9092808850646,
+            "y": 930,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45,
+            "holding": "baqueta_a4",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1,
+            "holding_f": "baqueta_a4"
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "toca_bateria_a4",
+              "dur": 4.833
+            }
+          ]
+        },
+        "laurinha": {
+          "start": {
+            "x": 1075.4907191149355,
+            "y": 930,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45,
+            "holding": "saxofone",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "toca_sax",
+              "dur": 4.833
+            }
+          ]
+        }
+      },
+      "props": {
+        "bat": {
+          "start": {
+            "x": 1452.9092808850646,
+            "y": 940,
+            "z": 2,
+            "depth": 0.87
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "kit_a4",
+              "dur": 4.833
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "callouts": [
+        {
+          "t": 0.3,
+          "text": "UAI, UAI!",
+          "dur": 1.8,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "luisinho",
+          "from": 0.22,
+          "to": 2.401
+        },
+        {
+          "who": "laurinha",
+          "from": 0.22,
+          "to": 2.401
+        }
+      ]
+    },
+    {
+      "id": "s04_refrao",
+      "title": "Pão de queijo, uai, uai!",
+      "duration": 2.4123,
+      "description": "Pão de queijo, uai, uai! / Mais um, vovó! Vai, vai!",
+      "background": "plano_campo",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1075.4907191149355,
+            "y": 560.0,
+            "zoom": 2.4
+          },
+          {
+            "t": 2.412,
+            "x": 1075.4907191149355,
+            "y": 560.0,
+            "zoom": 2.496,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 1452.9092808850646,
+            "y": 930,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45,
+            "holding": "baqueta_a4",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1,
+            "holding_f": "baqueta_a4"
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "toca_bateria_a4",
+              "dur": 2.412
+            }
+          ]
+        },
+        "laurinha": {
+          "start": {
+            "x": 1075.4907191149355,
+            "y": 930,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45,
+            "holding": "saxofone",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "toca_sax",
+              "dur": 2.412
+            }
+          ]
+        }
+      },
+      "props": {
+        "bat": {
+          "start": {
+            "x": 1452.9092808850646,
+            "y": 940,
+            "z": 2,
+            "depth": 0.87
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "kit_a4",
+              "dur": 2.412
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "callouts": [],
+      "sing": [
+        {
+          "who": "luisinho",
+          "from": 0.0,
+          "to": 2.392
+        },
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 2.392
+        }
+      ]
+    },
+    {
+      "id": "s05_refrao",
+      "title": "Pão de queijo, uai, uai!",
+      "duration": 2.418,
+      "description": "Pão de queijo, uai, uai! / Estica, estica e não sai!",
+      "background": "plano_cozinha",
+      "fx": [],
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1300.0,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          },
+          {
+            "t": 2.418,
+            "x": 1300.0,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1140.0,
+            "y": 930,
+            "turn": 0.25,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "dance",
+              "style": "bracos",
+              "dur": 4.733
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1460.0,
+            "y": 930,
+            "turn": -0.25,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "dance",
+              "style": "gingado",
+              "dur": 4.733
+            }
+          ]
+        }
+      },
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.247,
+          "to": 2.398
+        },
+        {
+          "who": "luisinho",
+          "from": 0.247,
+          "to": 2.398
+        }
+      ]
+    },
+    {
+      "id": "s06_refrao",
+      "title": "Pão de queijo, uai, uai!",
+      "duration": 2.4154,
+      "description": "Pão de queijo, uai, uai! / Estica, estica e não sai!",
+      "background": "plano_cozinha",
+      "fx": [],
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1140.0,
+            "y": 560.0,
+            "zoom": 2.4
+          },
+          {
+            "t": 2.415,
+            "x": 1140.0,
+            "y": 560.0,
+            "zoom": 2.496,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1140.0,
+            "y": 930,
+            "turn": 0.25,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "bracos",
+              "dur": 2.415
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1460.0,
+            "y": 930,
+            "turn": -0.25,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "gingado",
+              "dur": 2.415
+            }
+          ]
+        }
+      },
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 2.395
+        },
+        {
+          "who": "luisinho",
+          "from": 0.0,
+          "to": 2.395
+        }
+      ]
+    },
+    {
+      "id": "s07_refrao",
+      "title": "Pão de queijo, uai, uai!",
+      "duration": 2.437,
+      "description": "Pão de queijo, uai, uai! / Mais um, vovó! Vai, vai!",
+      "background": "plano_campo",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1264.2,
+            "y": 540.0,
+            "zoom": 1.808
+          },
+          {
+            "t": 2.437,
+            "x": 1264.2,
+            "y": 540.0,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 1452.9092808850646,
+            "y": 930,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45,
+            "holding": "baqueta_a4",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1,
+            "holding_f": "baqueta_a4"
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "toca_bateria_a4",
+              "dur": 4.867
+            }
+          ]
+        },
+        "laurinha": {
+          "start": {
+            "x": 1075.4907191149355,
+            "y": 930,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "toca_teclado",
+              "dur": 4.867
+            }
+          ]
+        }
+      },
+      "props": {
+        "bat": {
+          "start": {
+            "x": 1452.9092808850646,
+            "y": 940,
+            "z": 2,
+            "depth": 0.87
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "kit_a4",
+              "dur": 4.867
+            }
+          ]
+        },
+        "tec": {
+          "start": {
+            "x": 1075.4907191149355,
+            "y": 940,
+            "z": 2,
+            "depth": 0.899
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tecla": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.437,
+              "pose": {
+                "tecla": 9.7
+              },
+              "ease": "linear",
+              "in": 4.797
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "callouts": [
+        {
+          "t": 0.3,
+          "text": "UAI, UAI!",
+          "dur": 1.8,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "luisinho",
+          "from": 0.233,
+          "to": 2.417
+        },
+        {
+          "who": "laurinha",
+          "from": 0.233,
+          "to": 2.417
+        }
+      ]
+    },
+    {
+      "id": "s08_refrao",
+      "title": "Pão de queijo, uai, uai!",
+      "duration": 3.0183,
+      "description": "Pão de queijo, uai, uai! / Mais um, vovó! Vai, vai!",
+      "background": "plano_campo",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1075.4907191149355,
+            "y": 560.0,
+            "zoom": 2.4
+          },
+          {
+            "t": 3.018,
+            "x": 1075.4907191149355,
+            "y": 560.0,
+            "zoom": 2.496,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 1452.9092808850646,
+            "y": 930,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45,
+            "holding": "baqueta_a4",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1,
+            "holding_f": "baqueta_a4"
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "toca_bateria_a4",
+              "dur": 2.43
+            }
+          ]
+        },
+        "laurinha": {
+          "start": {
+            "x": 1075.4907191149355,
+            "y": 930,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "toca_teclado",
+              "dur": 2.43
+            }
+          ]
+        }
+      },
+      "props": {
+        "bat": {
+          "start": {
+            "x": 1452.9092808850646,
+            "y": 940,
+            "z": 2,
+            "depth": 0.87
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "kit_a4",
+              "dur": 2.43
+            }
+          ]
+        },
+        "tec": {
+          "start": {
+            "x": 1075.4907191149355,
+            "y": 940,
+            "z": 2,
+            "depth": 0.899
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tecla": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.39,
+              "pose": {
+                "tecla": 9.7
+              },
+              "ease": "linear",
+              "in": 4.797
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "callouts": [],
+      "sing": [
+        {
+          "who": "luisinho",
+          "from": 0.0,
+          "to": 2.42
+        },
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 2.42
+        }
+      ]
+    }
+  ]
+}

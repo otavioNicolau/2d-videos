@@ -30,6 +30,8 @@ animação, nota de ouvido e de olho, um ajuste por vez. Aqui só o que é difer
   `estilos.json → canal.bpm_faixa`; vale mais que a faixa do ritmo (o latino da 03 foi a 110, antes da regra).
 
 ## 3. Letra (5 a 8 anos)
+- 23/11/2026: a faixa de 5 a 8 anos passou a valer também para o canal Laurinha e Luisinho (regras comuns em
+  `canais/laurinha/musicas/BIBLIA_MUSICAL.md → Público: 5 a 8 anos`).
 - **NUNCA a palavra "monstro"** (usuário, 21/11): sempre **monstrinho/monstrinhos** — também no título, nos letreiros
   e na descrição do YouTube. O verificador da letra acusa erro (`canal.json → palavras_evitar`, que também barra
   maluco/louco → maluquinho e chifrão/chifrudo → chifrinho).

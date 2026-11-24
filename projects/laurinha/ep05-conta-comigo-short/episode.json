@@ -1,0 +1,873 @@
+{
+  "schema": "1.1",
+  "id": "ep05-conta-comigo-short",
+  "title": "Conta Comigo — Short",
+  "logline": "Clipe de \"Conta Comigo\" — contar de 1 a 10 na rotina. Montado do roteiro verso a verso (roteiro.json).",
+  "fps": 30,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "background": "plano_parque",
+  "soundtrack": {
+    "file": "musica/trabalho.wav",
+    "analysis": "analise/song.json",
+    "start": 0.0,
+    "end": 13.22,
+    "fade_out": 0.3,
+    "beat_grid": "full"
+  },
+  "captions": {
+    "lyrics": "analise/letra.json",
+    "style": "palavra_a_palavra"
+  },
+  "overlays": {
+    "logo": true,
+    "channel": [
+      "LAURINHA",
+      "e Luisinho"
+    ]
+  },
+  "cast": {
+    "laurinha": {
+      "character": "laurinha"
+    },
+    "luisinho": {
+      "character": "luisinho"
+    },
+    "formiguinha": {
+      "character": "formiguinha"
+    },
+    "joaninha": {
+      "character": "joaninha"
+    },
+    "cama": {
+      "character": "cama"
+    },
+    "lencol": {
+      "character": "lencol"
+    },
+    "num": {
+      "character": "numero"
+    },
+    "mesa": {
+      "character": "mesa"
+    },
+    "mao_e": {
+      "character": "mao"
+    },
+    "mao_d": {
+      "character": "mao"
+    },
+    "mao": {
+      "character": "mao"
+    },
+    "bici": {
+      "character": "bicicleta"
+    },
+    "janela": {
+      "character": "janela"
+    },
+    "caixa": {
+      "character": "caixa_brinquedos"
+    },
+    "n1": {
+      "character": "numero"
+    },
+    "n2": {
+      "character": "numero"
+    },
+    "n3": {
+      "character": "numero"
+    },
+    "n4": {
+      "character": "numero"
+    },
+    "n5": {
+      "character": "numero"
+    }
+  },
+  "approval": {
+    "storyboard": false,
+    "final_render": false
+  },
+  "projeto": "laurinha/ep05-conta-comigo",
+  "scenes": [
+    {
+      "id": "s01_refrao",
+      "title": "Conta comigo! Ê!",
+      "duration": 2.9333,
+      "description": "Conta comigo! Ê! / Conta comigo! Ê!",
+      "background": "danca_raios_verde",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 2.9333,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 800.0,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3,
+            "holding": "apito",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "marcha",
+              "dur": 2.933
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1120.0,
+            "y": 1010,
+            "turn": -0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "marcha",
+              "dur": 2.933
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "flash_in": true,
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "CONTA COMIGO!",
+          "dur": 1.8,
+          "color": "verde",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.1,
+          "to": 2.923
+        },
+        {
+          "who": "luisinho",
+          "from": 0.1,
+          "to": 2.923
+        }
+      ]
+    },
+    {
+      "id": "s02_refrao",
+      "title": "Dez dedinhos nas mãos",
+      "duration": 4.1334,
+      "description": "Dez dedinhos nas mãos / Pra gente contar!",
+      "background": "danca_bolinhas_roxo",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 4.1334,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {},
+      "props": {
+        "mao_e": {
+          "start": {
+            "x": 707.8786020846107,
+            "y": 1110,
+            "z": 3,
+            "depth": 1.6
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "dedos": 0.0,
+                "espelho": 1.0,
+                "acende": 0.0
+              }
+            },
+            {
+              "t": 0.4,
+              "pose": {
+                "dedos": 1.0
+              },
+              "ease": "out"
+            },
+            {
+              "t": 0.7,
+              "pose": {
+                "dedos": 2.0
+              },
+              "ease": "out"
+            },
+            {
+              "t": 0.9999999999999999,
+              "pose": {
+                "dedos": 3.0
+              },
+              "ease": "out"
+            },
+            {
+              "t": 1.3,
+              "pose": {
+                "dedos": 4.0
+              },
+              "ease": "out"
+            },
+            {
+              "t": 1.6,
+              "pose": {
+                "dedos": 5.0
+              },
+              "ease": "out"
+            },
+            {
+              "t": 2.6,
+              "pose": {
+                "acende": 1.0
+              },
+              "ease": "out"
+            }
+          ]
+        },
+        "mao_d": {
+          "start": {
+            "x": 1212.1213979153893,
+            "y": 1110,
+            "z": 3,
+            "depth": 1.6
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "dedos": 0.0,
+                "espelho": 0.0,
+                "acende": 0.0
+              }
+            },
+            {
+              "t": 1.9000000000000001,
+              "pose": {
+                "dedos": 1.0
+              },
+              "ease": "out"
+            },
+            {
+              "t": 2.2,
+              "pose": {
+                "dedos": 2.0
+              },
+              "ease": "out"
+            },
+            {
+              "t": 2.5,
+              "pose": {
+                "dedos": 3.0
+              },
+              "ease": "out"
+            },
+            {
+              "t": 2.8,
+              "pose": {
+                "dedos": 4.0
+              },
+              "ease": "out"
+            },
+            {
+              "t": 3.1,
+              "pose": {
+                "dedos": 5.0
+              },
+              "ease": "out"
+            },
+            {
+              "t": 3.2,
+              "pose": {
+                "acende": 1.0
+              },
+              "ease": "out"
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 1.6,
+          "text": "10 DEDINHOS!",
+          "dur": 1.8,
+          "color": "amarelo",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s03_refrao",
+      "title": "Mostra o três! Três!",
+      "duration": 1.6666,
+      "description": "Mostra o três! Três!",
+      "background": "danca_xadrez_vermelho",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 1.6666,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {},
+      "props": {
+        "mao": {
+          "start": {
+            "x": 720,
+            "y": 1110,
+            "z": 3,
+            "depth": 1.75
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "dedos": 0.0,
+                "espelho": 0.0,
+                "acende": 0.0
+              }
+            },
+            {
+              "t": 0.27,
+              "pose": {
+                "dedos": 1.0
+              },
+              "ease": "out"
+            },
+            {
+              "t": 0.49,
+              "pose": {
+                "dedos": 2.0
+              },
+              "ease": "out"
+            },
+            {
+              "t": 0.7100000000000001,
+              "pose": {
+                "dedos": 3.0
+              },
+              "ease": "out"
+            },
+            {
+              "t": 0.9,
+              "pose": {
+                "acende": 1.0
+              },
+              "ease": "out"
+            }
+          ]
+        },
+        "num": {
+          "start": {
+            "x": 1212.1213979153893,
+            "y": 860,
+            "z": 4,
+            "depth": 1.1
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "n": 3,
+                "pop": 0.0
+              }
+            },
+            {
+              "t": 0.7,
+              "pose": {
+                "n": 3,
+                "pop": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.95,
+              "pose": {
+                "pop": 1.0
+              },
+              "ease": "out"
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.8,
+          "text": "TRÊS!",
+          "dur": 0.867,
+          "color": "verde",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s04_refrao",
+      "title": "Mostra o cinco! Cinco!",
+      "duration": 1.6667,
+      "description": "Mostra o cinco! Cinco!",
+      "background": "danca_xadrez_verde",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 1.6667,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {},
+      "props": {
+        "mao": {
+          "start": {
+            "x": 720,
+            "y": 1110,
+            "z": 3,
+            "depth": 1.75
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "dedos": 0.0,
+                "espelho": 0.0,
+                "acende": 0.0
+              }
+            },
+            {
+              "t": 0.19,
+              "pose": {
+                "dedos": 1.0
+              },
+              "ease": "out"
+            },
+            {
+              "t": 0.33,
+              "pose": {
+                "dedos": 2.0
+              },
+              "ease": "out"
+            },
+            {
+              "t": 0.47000000000000003,
+              "pose": {
+                "dedos": 3.0
+              },
+              "ease": "out"
+            },
+            {
+              "t": 0.6100000000000001,
+              "pose": {
+                "dedos": 4.0
+              },
+              "ease": "out"
+            },
+            {
+              "t": 0.7500000000000001,
+              "pose": {
+                "dedos": 5.0
+              },
+              "ease": "out"
+            },
+            {
+              "t": 0.9,
+              "pose": {
+                "acende": 1.0
+              },
+              "ease": "out"
+            }
+          ]
+        },
+        "num": {
+          "start": {
+            "x": 1212.1213979153893,
+            "y": 860,
+            "z": 4,
+            "depth": 1.1
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "n": 5,
+                "pop": 0.0
+              }
+            },
+            {
+              "t": 0.7,
+              "pose": {
+                "n": 5,
+                "pop": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.95,
+              "pose": {
+                "pop": 1.0
+              },
+              "ease": "out"
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.8,
+          "text": "CINCO!",
+          "dur": 0.867,
+          "color": "laranja",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s05_refrao",
+      "title": "Mostra o dez! Dez!",
+      "duration": 1.6667,
+      "description": "Mostra o dez! Dez!",
+      "background": "danca_raios_laranja",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 1.6667,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {},
+      "props": {
+        "mao_e": {
+          "start": {
+            "x": 707.8786020846107,
+            "y": 1110,
+            "z": 3,
+            "depth": 1.6
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "dedos": 5.0,
+                "espelho": 1.0,
+                "acende": 0.0
+              }
+            },
+            {
+              "t": 0.4,
+              "pose": {
+                "acende": 1.0
+              },
+              "ease": "out"
+            }
+          ]
+        },
+        "mao_d": {
+          "start": {
+            "x": 1212.1213979153893,
+            "y": 1110,
+            "z": 3,
+            "depth": 1.6
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "dedos": 5.0,
+                "espelho": 0.0,
+                "acende": 0.0
+              }
+            },
+            {
+              "t": 0.4,
+              "pose": {
+                "acende": 1.0
+              },
+              "ease": "out"
+            }
+          ]
+        },
+        "num": {
+          "start": {
+            "x": 960,
+            "y": 700,
+            "z": 4,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "n": 10,
+                "pop": 0.0
+              }
+            },
+            {
+              "t": 0.3,
+              "pose": {
+                "n": 10,
+                "pop": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.55,
+              "pose": {
+                "pop": 1.0
+              },
+              "ease": "out"
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "callouts": [
+        {
+          "t": 0.8,
+          "text": "DEZ!",
+          "dur": 0.867,
+          "color": "rosa",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s06_refrao",
+      "title": "Conta comigo outra vez! Ê!",
+      "duration": 1.1533,
+      "description": "Conta comigo outra vez! Ê!",
+      "background": "plano_jardim",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1275.0,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          },
+          {
+            "t": 1.153,
+            "x": 1275.0,
+            "y": 543.9612784265519,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "formiguinha": {
+          "start": {
+            "x": 1125.0,
+            "y": 730,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 2,
+            "depth": 0.75
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "pulinho",
+              "dur": 1.267
+            }
+          ]
+        },
+        "laurinha": {
+          "start": {
+            "x": 1125.0,
+            "y": 970,
+            "turn": 0.1,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "pulinho",
+              "dur": 1.267
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1425.0,
+            "y": 970,
+            "turn": -0.1,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "pulinho",
+              "dur": 1.267
+            }
+          ]
+        },
+        "joaninha": {
+          "start": {
+            "x": 1425.0,
+            "y": 730,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 2,
+            "depth": 0.75
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "pulinho",
+              "dur": 1.267
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "callouts": [
+        {
+          "t": 0.4,
+          "text": "OUTRA VEZ!",
+          "dur": 0.867,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 1.133
+        },
+        {
+          "who": "luisinho",
+          "from": 0.0,
+          "to": 1.133
+        }
+      ]
+    }
+  ]
+}

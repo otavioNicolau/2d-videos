@@ -1,0 +1,370 @@
+{
+  "schema": "1.1",
+  "id": "ep11-foguete-pra-lua-short",
+  "title": "Foguete pra Lua — Short",
+  "logline": "Clipe de \"Foguete pra Lua\" — viagem de foguete até a lua. Montado do roteiro verso a verso (roteiro.json).",
+  "fps": 30,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "background": "plano_parque",
+  "soundtrack": {
+    "file": "musica/trabalho.wav",
+    "analysis": "analise/song.json",
+    "start": 0.0,
+    "end": 14.8333,
+    "fade_out": 0.3,
+    "beat_grid": "full"
+  },
+  "captions": {
+    "lyrics": "analise/letra.json",
+    "style": "palavra_a_palavra"
+  },
+  "overlays": {
+    "logo": true,
+    "channel": [
+      "LAURINHA",
+      "e Luisinho"
+    ]
+  },
+  "cast": {
+    "laurinha": {
+      "character": "laurinha"
+    },
+    "luisinho": {
+      "character": "luisinho"
+    },
+    "lua": {
+      "character": "lua"
+    },
+    "fog": {
+      "character": "foguete"
+    },
+    "cometa": {
+      "character": "cometa"
+    },
+    "terra": {
+      "character": "terra"
+    },
+    "sol": {
+      "character": "sol"
+    },
+    "joinha": {
+      "character": "joinha"
+    },
+    "mamae": {
+      "character": "mamae"
+    },
+    "botao": {
+      "character": "botao_inscrever"
+    }
+  },
+  "approval": {
+    "storyboard": false,
+    "final_render": false
+  },
+  "projeto": "laurinha/ep11-foguete-pra-lua",
+  "scenes": [
+    {
+      "id": "s01_refrao",
+      "title": "Três, dois, um… Vruuum!",
+      "duration": 5.4333,
+      "description": "Três, dois, um… Vruuum! / Foguete pra lua! Vruuum! / Foguete pra lua! Vruuum!",
+      "background": "plano_lua",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.808
+          },
+          {
+            "t": 5.4333,
+            "x": 1300,
+            "y": 540.0,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {},
+      "props": {
+        "fog": {
+          "start": {
+            "x": 1300,
+            "y": 930,
+            "z": 2,
+            "fogo": 1.0,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "chama": 0.0,
+                "treme": 1.0
+              }
+            },
+            {
+              "t": 5.0,
+              "pose": {
+                "chama": 14.0
+              },
+              "ease": "linear"
+            },
+            {
+              "t": 0.0,
+              "pose": {
+                "y": 930
+              }
+            },
+            {
+              "t": 3.6,
+              "pose": {
+                "y": -500
+              },
+              "ease": "in"
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "TRÊS, DOIS, UM…",
+          "dur": 1.6,
+          "color": "amarelo",
+          "y": 170
+        },
+        {
+          "t": 2.4,
+          "text": "DE VOLTA PRA CASA!",
+          "dur": 1.8,
+          "color": "azul",
+          "y": 170
+        }
+      ],
+      "flash_in": true
+    },
+    {
+      "id": "s02_refrao",
+      "title": "Cinto apertado,",
+      "duration": 4.3667,
+      "description": "Cinto apertado, / Capacete na cabeça! / Foguete pra lua! Vruuum!",
+      "background": "plano_espaco",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1300.0,
+            "y": 540.0,
+            "zoom": 1.808
+          },
+          {
+            "t": 4.3667,
+            "x": 1300.0,
+            "y": 540.0,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1111.2907191149354,
+            "y": 930,
+            "turn": 0.1,
+            "expr": "happy",
+            "z": 3,
+            "capacete": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "asinhas",
+              "dur": 4.367
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1488.7092808850646,
+            "y": 930,
+            "turn": -0.1,
+            "expr": "happy",
+            "z": 3,
+            "capacete": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "asinhas",
+              "dur": 4.367
+            }
+          ]
+        }
+      },
+      "props": {
+        "cometa": {
+          "start": {
+            "x": 1300,
+            "y": 700,
+            "z": 1,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "x": 200
+              }
+            },
+            {
+              "t": 3.0,
+              "pose": {
+                "x": 2400
+              },
+              "ease": "linear"
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "PLIM!",
+          "dur": 1.8,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 2.7
+        },
+        {
+          "who": "laurinha",
+          "from": 3.1,
+          "to": 4.3
+        },
+        {
+          "who": "luisinho",
+          "from": 0.0,
+          "to": 2.7
+        },
+        {
+          "who": "luisinho",
+          "from": 3.1,
+          "to": 4.3
+        }
+      ]
+    },
+    {
+      "id": "s03_refrao",
+      "title": "Passa a estrela, Plim!",
+      "duration": 5.0333,
+      "description": "Passa a estrela, Plim! / Passa o cometa! / E pousa devagar! Tum!",
+      "background": "plano_jardim",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1900,
+            "y": 540.0,
+            "zoom": 1.808
+          },
+          {
+            "t": 4.733,
+            "x": 1900,
+            "y": 540.0,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {},
+      "props": {
+        "fog": {
+          "start": {
+            "x": 1711.2907191149354,
+            "y": 930,
+            "z": 2,
+            "fogo": 0.6,
+            "depth": 0.9
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "y": 200,
+                "chama": 0.0
+              }
+            },
+            {
+              "t": 2.6,
+              "pose": {
+                "y": 930,
+                "chama": 6.0
+              },
+              "ease": "out"
+            }
+          ]
+        },
+        "lua": {
+          "start": {
+            "x": 1900,
+            "y": 640,
+            "z": 1,
+            "brilho": 0.6,
+            "depth": 0.5,
+            "lado": 1.0
+          },
+          "exposure": 1
+        }
+      },
+      "escurece": [
+        0.35,
+        0.2
+      ],
+      "callouts": [
+        {
+          "t": 1.5,
+          "text": "TUM!",
+          "dur": 1.8,
+          "color": "laranja",
+          "y": 170
+        }
+      ]
+    }
+  ]
+}

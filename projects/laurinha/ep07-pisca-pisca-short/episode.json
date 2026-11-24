@@ -1,0 +1,908 @@
+{
+  "schema": "1.1",
+  "id": "ep07-pisca-pisca-short",
+  "title": "Pisca-Pisca de Natal — Short",
+  "logline": "Clipe de \"Pisca-Pisca de Natal\" — montar a árvore de Natal em família. Montado do roteiro verso a verso (roteiro.json).",
+  "fps": 30,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "background": "plano_parque",
+  "soundtrack": {
+    "file": "musica/trabalho.wav",
+    "analysis": "analise/song.json",
+    "start": 0.0,
+    "end": 23.327,
+    "fade_out": 0.3,
+    "beat_grid": "full"
+  },
+  "captions": {
+    "lyrics": "analise/letra.json",
+    "style": "palavra_a_palavra"
+  },
+  "overlays": {
+    "logo": true,
+    "channel": [
+      "LAURINHA",
+      "e Luisinho"
+    ]
+  },
+  "cast": {
+    "laurinha": {
+      "character": "laurinha"
+    },
+    "luisinho": {
+      "character": "luisinho"
+    },
+    "arvore": {
+      "character": "arvore_natal"
+    },
+    "joaninha": {
+      "character": "joaninha"
+    },
+    "formiguinha": {
+      "character": "formiguinha"
+    },
+    "vent": {
+      "character": "ventilador"
+    },
+    "noel": {
+      "character": "papai_noel"
+    },
+    "vovo": {
+      "character": "vovo"
+    },
+    "mamae": {
+      "character": "mamae"
+    },
+    "joinha": {
+      "character": "joinha"
+    },
+    "botao": {
+      "character": "botao_inscrever"
+    }
+  },
+  "approval": {
+    "storyboard": false,
+    "final_render": false
+  },
+  "projeto": "laurinha/ep07-pisca-pisca",
+  "scenes": [
+    {
+      "id": "s01_refrao",
+      "title": "Pisca, pisca, pisca! Plim!",
+      "duration": 4.1867,
+      "description": "Pisca, pisca, pisca! Plim! / Pisca-pisca de Natal!",
+      "background": "plano_sala",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1300.0,
+            "y": 540.0,
+            "zoom": 1.808
+          },
+          {
+            "t": 4.187,
+            "x": 1300.0,
+            "y": 540.0,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1111.2907191149354,
+            "y": 930,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "pulinho",
+              "dur": 4.187
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1488.7092808850646,
+            "y": 930,
+            "turn": -0.15,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "pulinho",
+              "dur": 4.187
+            }
+          ]
+        }
+      },
+      "props": {
+        "arvore": {
+          "start": {
+            "x": 1300,
+            "y": 930,
+            "z": 1,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "pisca": 0.0
+              }
+            },
+            {
+              "t": 0.137,
+              "pose": {
+                "pisca": 1.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.587,
+              "pose": {
+                "pisca": 2.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.037,
+              "pose": {
+                "pisca": 3.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.487,
+              "pose": {
+                "pisca": 4.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.937,
+              "pose": {
+                "pisca": 5.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.387,
+              "pose": {
+                "pisca": 6.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.837,
+              "pose": {
+                "pisca": 7.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.287,
+              "pose": {
+                "pisca": 8.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.737,
+              "pose": {
+                "pisca": 9.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 4.187,
+              "pose": {
+                "pisca": 10.0
+              },
+              "ease": "step"
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "flash_in": true,
+      "callouts": [
+        {
+          "t": 0.0,
+          "text": "PISCA, PISCA, PISCA!",
+          "dur": 1.8,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.02,
+          "to": 4.167
+        },
+        {
+          "who": "luisinho",
+          "from": 0.02,
+          "to": 4.167
+        }
+      ]
+    },
+    {
+      "id": "s02_refrao",
+      "title": "Acende e apaga",
+      "duration": 2.623,
+      "description": "Acende e apaga / Que festa legal!",
+      "background": "danca_raios_amarelo",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 2.623,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 800.0,
+            "y": 1010,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "palmas",
+              "dur": 5.267
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1120.0,
+            "y": 1010,
+            "turn": -0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "palmas",
+              "dur": 5.267
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "ACENDE E APAGA!",
+          "dur": 1.8,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 2.603
+        },
+        {
+          "who": "luisinho",
+          "from": 0.0,
+          "to": 2.603
+        }
+      ]
+    },
+    {
+      "id": "s03_refrao",
+      "title": "Acende e apaga",
+      "duration": 2.6436,
+      "description": "Acende e apaga / Que festa legal!",
+      "background": "danca_raios_amarelo",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 800.0,
+            "y": 760.0,
+            "zoom": 2.0
+          },
+          {
+            "t": 2.644,
+            "x": 800.0,
+            "y": 760.0,
+            "zoom": 2.08,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 800.0,
+            "y": 1010,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "palmas",
+              "dur": 2.644
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1120.0,
+            "y": 1010,
+            "turn": -0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "palmas",
+              "dur": 2.644
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "callouts": [],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 2.624
+        },
+        {
+          "who": "luisinho",
+          "from": 0.0,
+          "to": 2.624
+        }
+      ]
+    },
+    {
+      "id": "s04_refrao",
+      "title": "Pisca, pisca, pisca! Plim!",
+      "duration": 6.7334,
+      "description": "Pisca, pisca, pisca! Plim! / Pisca-pisca de Natal!",
+      "background": "plano_sala",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1300,
+            "y": 536.0387215734481,
+            "zoom": 1.808
+          },
+          {
+            "t": 6.7334,
+            "x": 1300,
+            "y": 536.0387215734481,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {},
+      "props": {
+        "arvore": {
+          "start": {
+            "x": 1300,
+            "y": 930,
+            "z": 1,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "pisca": 0.0
+              }
+            },
+            {
+              "t": 0.4,
+              "pose": {
+                "pisca": 1.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.8,
+              "pose": {
+                "pisca": 2.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.2,
+              "pose": {
+                "pisca": 3.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.6,
+              "pose": {
+                "pisca": 4.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.0,
+              "pose": {
+                "pisca": 5.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.4,
+              "pose": {
+                "pisca": 6.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.8,
+              "pose": {
+                "pisca": 7.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.2,
+              "pose": {
+                "pisca": 8.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.6,
+              "pose": {
+                "pisca": 9.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 4.0,
+              "pose": {
+                "pisca": 10.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 4.4,
+              "pose": {
+                "pisca": 11.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 4.8,
+              "pose": {
+                "pisca": 12.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 5.2,
+              "pose": {
+                "pisca": 13.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 5.6,
+              "pose": {
+                "pisca": 14.0
+              },
+              "ease": "step"
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "PISCA-PISCA DE NATAL!",
+          "dur": 1.8,
+          "color": "rosa",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s05_refrao",
+      "title": "Mão pra cima, mão pra baixo",
+      "duration": 3.743,
+      "description": "Mão pra cima, mão pra baixo / Que Natal legal! Ê!",
+      "background": "plano_sala",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1300.0,
+            "y": 540.0,
+            "zoom": 1.808
+          },
+          {
+            "t": 3.743,
+            "x": 1300.0,
+            "y": 540.0,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1111.2907191149354,
+            "y": 930,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "bracos",
+              "dur": 7.1
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1488.7092808850646,
+            "y": 930,
+            "turn": -0.15,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "bracos",
+              "dur": 7.1
+            }
+          ]
+        }
+      },
+      "props": {
+        "arvore": {
+          "start": {
+            "x": 1300,
+            "y": 930,
+            "z": 1,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "pisca": 0.0
+              }
+            },
+            {
+              "t": 0.45,
+              "pose": {
+                "pisca": 1.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.9,
+              "pose": {
+                "pisca": 2.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.35,
+              "pose": {
+                "pisca": 3.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.8,
+              "pose": {
+                "pisca": 4.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.25,
+              "pose": {
+                "pisca": 5.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.7,
+              "pose": {
+                "pisca": 6.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.15,
+              "pose": {
+                "pisca": 7.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.6,
+              "pose": {
+                "pisca": 8.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.743,
+              "pose": {
+                "pisca": 9.0
+              },
+              "ease": "step"
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "MÃO PRA CIMA!",
+          "dur": 1.8,
+          "color": "verde",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 3.723
+        },
+        {
+          "who": "luisinho",
+          "from": 0.0,
+          "to": 3.723
+        }
+      ]
+    },
+    {
+      "id": "s06_refrao",
+      "title": "Mão pra cima, mão pra baixo",
+      "duration": 3.3973,
+      "description": "Mão pra cima, mão pra baixo / Que Natal legal! Ê!",
+      "background": "plano_sala",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1111.2907191149354,
+            "y": 560.0,
+            "zoom": 2.4
+          },
+          {
+            "t": 3.397,
+            "x": 1111.2907191149354,
+            "y": 560.0,
+            "zoom": 2.496,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1111.2907191149354,
+            "y": 930,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "bracos",
+              "dur": 3.357
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1488.7092808850646,
+            "y": 930,
+            "turn": -0.15,
+            "expr": "happy",
+            "z": 3
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "bracos",
+              "dur": 3.357
+            }
+          ]
+        }
+      },
+      "props": {
+        "arvore": {
+          "start": {
+            "x": 1300,
+            "y": 930,
+            "z": 1,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "pisca": 8.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.307,
+              "pose": {
+                "pisca": 9.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.757,
+              "pose": {
+                "pisca": 10.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.207,
+              "pose": {
+                "pisca": 11.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.657,
+              "pose": {
+                "pisca": 12.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.107,
+              "pose": {
+                "pisca": 13.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.557,
+              "pose": {
+                "pisca": 14.0
+              },
+              "ease": "step"
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "callouts": [],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 2.17
+        },
+        {
+          "who": "luisinho",
+          "from": 0.0,
+          "to": 2.17
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+ "schema": "avaliacao-1.0",
+ "versoes": {
+  "Festa Surpresa do Nhoque!": {
+   "arquivo": "Festa Surpresa do Nhoque!.wav",
+   "duracao": 154.2,
+   "bpm": 136.0,
+   "bpm_nota": "",
+   "tom": "Sol maior",
+   "voz_inicio": 1.9,
+   "refrao_inicio": 1.5,
+   "cantado": 68,
+   "intervalos": [
+    [
+     10.8,
+     6.6
+    ],
+    [
+     51.1,
+     9.8
+    ],
+    [
+     61.7,
+     3.0
+    ],
+    [
+     107.0,
+     14.6
+    ]
+   ],
+   "fim_depois_da_voz": 4.0,
+   "final": "esmaecendo",
+   "silencio_final": 0.3,
+   "acerto": 85,
+   "nao_reconhecidas": [
+    "psiu",
+    "fofolucos",
+    "rawr",
+    "nhoque",
+    "contar",
+    "enche",
+    "ploc",
+    "bilu",
+    "apagou",
+    "abre",
+    "caiu",
+    "sentado"
+   ],
+   "pontos_a_conferir": []
+  }
+ },
+ "ouvido": {
+  "Festa Surpresa do Nhoque!": {
+   "1 começo chama atenção": null,
+   "5 melodia combina com a letra": null,
+   "6 dá vontade de dançar": null,
+   "7 pronúncia natural": null,
+   "8 tem a cara do canal": null,
+   "9 nenhum trecho cansativo": null
+  }
+ },
+ "escolhida": "Festa Surpresa do Nhoque!"
+}

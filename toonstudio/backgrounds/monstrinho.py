@@ -22,7 +22,7 @@ from .plano import Flat, _surf
 
 W_INT, H = 2600, 1080
 CHAO_Y = 760
-CENAS = ("mon_parque", "mon_vila", "mon_quarto", "mon_palco", "mon_noite", "mon_escola", "mon_cozinha", "mon_abertura", "mon_campinho", "mon_campinho_gol")
+CENAS = ("mon_festa", "mon_parque", "mon_vila", "mon_quarto", "mon_palco", "mon_noite", "mon_escola", "mon_cozinha", "mon_abertura", "mon_campinho", "mon_campinho_gol")
 GRAF_KINDS = ("raios", "xadrez", "brilho")
 CORES = {"roxo": ("#4A158F", "#9B4FF0"), "azul": ("#0A4FC0", "#3AA6FF"), "verde": ("#0B8740", "#46D677"),
          "laranja": ("#E85A08", "#FFA63A"), "rosa": ("#C2166C", "#FF6AB2"), "vermelho": ("#B00D28", "#FF4A5E")}
@@ -412,8 +412,45 @@ def campinho_gol(rng):
     return campinho(rng, gol_x=1565)
 
 
+
+def festa(rng):
+    """Salão de festa (Fofolucos 07, festa surpresa do Nhoque): parede CREME clara (nenhum monstrinho some na frente),
+    bandeirinhas e balõezinhos pintados no alto, faixa de "PARABÉNS" em bolinhas, porta à direita (por onde o Zuzu
+    entra com o bolo) e piso de madeira clara."""
+    s, c = _surf(W_INT, H, ESC_CENA)
+    p = P(c)
+    p.rect(0, 0, W_INT, CHAO_Y, "#FFF4D6")
+    for x in range(0, W_INT, 140):                                                # listrinhas suaves da parede
+        p.rect(x, 0, x + 70, CHAO_Y, "#FFEDC2")
+    cores = ["#FF5CA8", "#FFD23F", "#2ECC9A", "#2E9BFF", "#B78CFF", "#FF8A3D"]
+    for fila, y0 in ((0, 150), (1, 300)):                                         # bandeirinhas em dois varais
+        pts = [(x, y0 + 40 * math.sin(math.pi * (x % 1300) / 1300)) for x in range(0, W_INT + 20, 20)]
+        p.poly(pts + [(W_INT, y0 + 6), (0, y0 + 6)][::-1] if False else pts + [(pts[-1][0], pts[-1][1] + 5)] + [(x, y + 5) for x, y in pts[::-1]], "#C9A06B")
+        for j, x in enumerate(range(40 + fila * 60, W_INT, 120)):
+            y = y0 + 40 * math.sin(math.pi * (x % 1300) / 1300)
+            p.poly([(x - 34, y), (x + 34, y), (x, y + 70)], cores[(j + fila * 2) % 6], smooth=False)
+    for j in range(9):                                                            # faixa de bolinhas (PARABÉNS)
+        p.circ(820 + j * 120, 470, 44, cores[j % 6])
+        p.circ(820 + j * 120, 470, 20, "#FFFFFF", alpha=0.85)
+    for (x, cor) in ((180, "#FF5CA8"), (300, "#2E9BFF"), (2380, "#FFD23F"), (2470, "#B78CFF")):   # cachos de balão na parede
+        p.oval(x, 380, 52, 64, cor)
+        p.poly([(x - 2, 444), (x + 6, 444), (x + 2, 520)], "#C9A06B")
+    p.rect(2040, 230, 2320, CHAO_Y, "#FFFFFF", r=18)                              # porta (à direita)
+    p.rect(2060, 250, 2300, CHAO_Y, "#E9C48C", r=14)
+    p.rect(2080, 270, 2280, 480, "#F2D3A2", r=10)
+    p.rect(2080, 510, 2280, CHAO_Y - 20, "#F2D3A2", r=10)
+    p.circ(2100, 520, 14, "#C98A3A")
+    p.rect(0, CHAO_Y, W_INT, H, "#E8C08F")                                        # piso de madeira clara
+    p.rect(0, CHAO_Y, W_INT, CHAO_Y + 20, "#D6A66C")
+    for y in range(CHAO_Y + 80, H, 80):
+        p.rect(0, y, W_INT, y + 4, "#D9B17E")
+    p.oval(1300, 965, 560, 80, "#FFE7A8")                                         # tapete redondo
+    p.oval(1300, 965, 430, 56, "#FFF3CC")
+    return s, W_INT
+
+
 SCENES = {"mon_parque": parque, "mon_vila": vila, "mon_quarto": quarto, "mon_palco": palco, "mon_noite": noite,
-          "mon_escola": escola, "mon_cozinha": cozinha, "mon_abertura": abertura, "mon_campinho": campinho, "mon_campinho_gol": campinho_gol}
+          "mon_escola": escola, "mon_cozinha": cozinha, "mon_abertura": abertura, "mon_campinho": campinho, "mon_campinho_gol": campinho_gol, "mon_festa": festa}
 
 
 # ───────────────────────── fundos gráficos ─────────────────────────

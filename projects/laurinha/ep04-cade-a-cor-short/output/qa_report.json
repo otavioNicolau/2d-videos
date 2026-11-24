@@ -1,0 +1,118 @@
+{
+  "episode": "ep04-cade-a-cor-short",
+  "scenes": {
+    "s01_refrao": {
+      "frames": 133,
+      "performers": {
+        "laurinha": {
+          "drawings": 133,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 132
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 133,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 132
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s02_refrao": {
+      "frames": 94,
+      "performers": {
+        "laurinha": {
+          "drawings": 94,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 93
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 94,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 93
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s03_refrao": {
+      "frames": 133,
+      "performers": {
+        "laurinha": {
+          "drawings": 133,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 132
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 133,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 132
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s04_refrao": {
+      "frames": 79,
+      "performers": {
+        "laurinha": {
+          "drawings": 79,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 78
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 79,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 78
+          },
+          "empty_frames": 0
+        },
+        "arco": {
+          "drawings": 79,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 78
+          },
+          "empty_frames": 65
+        }
+      },
+      "issues": [
+        "arco: 65 quadros vazios (ex.: [1, 2, 3, 4, 5])"
+      ],
+      "frozen_samples": 0
+    }
+  },
+  "warnings": [
+    "storyboard ainda não aprovado (approval.storyboard = false): o render sairá como CANDIDATO",
+    "storyboard s01_refrao: pendente",
+    "storyboard s02_refrao: pendente",
+    "storyboard s03_refrao: pendente",
+    "storyboard s04_refrao: pendente"
+  ],
+  "lines": {},
+  "video": "/home/otavio/2d/projects/laurinha/ep04-cade-a-cor-short/output/ep04-cade-a-cor-short_CANDIDATO.mp4",
+  "contact_sheet": "/home/otavio/2d/projects/laurinha/ep04-cade-a-cor-short/output/prancha.png",
+  "approved": false
+}

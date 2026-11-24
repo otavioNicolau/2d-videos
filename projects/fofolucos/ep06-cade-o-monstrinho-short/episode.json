@@ -1,0 +1,682 @@
+{
+  "schema": "1.1",
+  "id": "ep06-cade-o-monstrinho-short",
+  "projeto": "fofolucos/ep06-cade-o-monstrinho",
+  "title": "Cadê o Monstrinho? — Short",
+  "logline": "Clipe de \"Cadê o Monstrinho?\" — esconde-esconde na Vila Monstrinha: o Gogo conta (e espia com o olhão!), e cada monstrinho se esconde mal — o chifre do Bilu fica de fora da moita, a antena do Teco aparece no muro, a Mimi finge que é flor e a barriga do Nhoque ronca. Refrão-pergunta para a criança apontar: 'cadê o monstrinho? tá aqui? tá ali? achei!'. Ponte = comandos de esconder (tapa os olhos, conta até três, ponta do pé, agacha quieto, segura a risada). Virada: o Zuzu ninguém acha… laranja no meio das abóboras, dormindo e roncando. Montado do roteiro verso a verso (roteiro.json).",
+  "fps": 30,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "background": "plano_parque",
+  "soundtrack": {
+    "file": "musica/trabalho.wav",
+    "analysis": "analise/song.json",
+    "start": 0.0,
+    "end": 15.184,
+    "fade_out": 0.3,
+    "beat_grid": "full"
+  },
+  "captions": {
+    "lyrics": "analise/letra.json",
+    "style": "palavra_a_palavra"
+  },
+  "overlays": {
+    "logo": true,
+    "channel": [
+      "FOFOLUCOS",
+      ""
+    ],
+    "logo_png": "/home/otavio/2d/library/brand/fofolucos/logo.png"
+  },
+  "cast": {
+    "laurinha": {
+      "character": "laurinha"
+    },
+    "luisinho": {
+      "character": "luisinho"
+    },
+    "gogo": {
+      "character": "gogo"
+    },
+    "bilu": {
+      "character": "bilu"
+    },
+    "mimi": {
+      "character": "mimi"
+    },
+    "nv": {
+      "character": "nuvem"
+    },
+    "bo": {
+      "character": "bolha"
+    },
+    "teco": {
+      "character": "teco"
+    },
+    "nhoque": {
+      "character": "nhoque"
+    },
+    "zuzu": {
+      "character": "zuzu"
+    },
+    "bat": {
+      "character": "bateria_show"
+    },
+    "tec": {
+      "character": "teclado_inst"
+    },
+    "moita": {
+      "character": "moita"
+    },
+    "muro": {
+      "character": "muro"
+    },
+    "canteiro": {
+      "character": "canteiro"
+    },
+    "ab0": {
+      "character": "abobora"
+    },
+    "ab1": {
+      "character": "abobora"
+    },
+    "ab2": {
+      "character": "abobora"
+    },
+    "ab3": {
+      "character": "abobora"
+    },
+    "ab4": {
+      "character": "abobora"
+    },
+    "ab5": {
+      "character": "abobora"
+    },
+    "ab6": {
+      "character": "abobora"
+    },
+    "ab7": {
+      "character": "abobora"
+    },
+    "joinha": {
+      "character": "joinha"
+    },
+    "botao": {
+      "character": "botao_inscrever"
+    }
+  },
+  "approval": {
+    "storyboard": false,
+    "final_render": false
+  },
+  "scenes": [
+    {
+      "id": "s01_refrao",
+      "title": "Cadê o monstrinho?",
+      "duration": 3.0333,
+      "description": "Cadê o monstrinho? / Tá aqui? Tá ali?",
+      "background": "mon_vila",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 655.8,
+            "y": 540.0,
+            "zoom": 1.808
+          },
+          {
+            "t": 3.0333,
+            "x": 655.8,
+            "y": 540.0,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "gogo": {
+          "start": {
+            "x": 655.8,
+            "y": 930,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "look_around",
+              "dur": 3.033
+            }
+          ]
+        }
+      },
+      "props": {
+        "nv": {
+          "start": {
+            "x": 584.2,
+            "y": 300,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.464
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cara": 1.0,
+                "x": 584.2
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.97,
+              "pose": {
+                "x": 784.7
+              },
+              "ease": "linear",
+              "in": 2.94
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "CADÊ O MONSTRINHO?",
+          "dur": 1.36,
+          "color": "roxo",
+          "y": 170
+        },
+        {
+          "t": 1.51,
+          "text": "TÁ AQUI? TÁ ALI?",
+          "dur": 1.523,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "flash_in": true
+    },
+    {
+      "id": "s02_refrao",
+      "title": "Cadê o monstrinho?",
+      "duration": 3.4334,
+      "description": "Cadê o monstrinho? / Achei! Sai daí! Rawr!",
+      "background": "mon_parque",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1300.0,
+            "y": 540.0,
+            "zoom": 1.808
+          },
+          {
+            "t": 3.4334,
+            "x": 1300.0,
+            "y": 540.0,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "mimi": {
+          "start": {
+            "x": 1300.0,
+            "y": 935,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 2,
+            "depth": 1.305
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 2.21,
+              "do": "rawr",
+              "dur": 1.223
+            }
+          ],
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "y": 935.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.11,
+              "pose": {
+                "y": 935.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.36,
+              "pose": {
+                "y": 715.0
+              },
+              "ease": "out",
+              "in": 0.22
+            }
+          ]
+        }
+      },
+      "props": {
+        "canteiro": {
+          "start": {
+            "x": 1300.0,
+            "y": 935,
+            "z": 4,
+            "sem_contorno": 1.0,
+            "depth": 1.812
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "vento": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.37,
+              "pose": {
+                "vento": 2.7
+              },
+              "ease": "linear",
+              "in": 3.34
+            }
+          ]
+        },
+        "nv": {
+          "start": {
+            "x": 1586.3,
+            "y": 300,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.464
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cara": 1.0,
+                "x": 1586.3
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.37,
+              "pose": {
+                "x": 1786.7
+              },
+              "ease": "linear",
+              "in": 3.34
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 2.11,
+          "text": "ACHEI!",
+          "dur": 0.55,
+          "color": "laranja",
+          "y": 170
+        },
+        {
+          "t": 2.71,
+          "text": "SAI DAÍ! RAWR!",
+          "dur": 0.723,
+          "color": "vermelho",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s03_refrao",
+      "title": "Cadê o monstrinho?",
+      "duration": 3.4666,
+      "description": "Cadê o monstrinho? / Tá aqui? Tá ali?",
+      "background": "mon_xadrez_roxo",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 3.4666,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "mimi": {
+          "start": {
+            "x": 810.0,
+            "y": 1190,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "dur": 3.467,
+              "style": "festa"
+            }
+          ]
+        },
+        "bilu": {
+          "start": {
+            "x": 1110.0,
+            "y": 1190,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.05,
+              "do": "dance",
+              "dur": 3.417,
+              "style": "chute"
+            }
+          ]
+        },
+        "zuzu": {
+          "start": {
+            "x": 960.0,
+            "y": 800,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 2,
+            "depth": 0.85
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "dance",
+              "dur": 3.367,
+              "style": "festa"
+            }
+          ]
+        }
+      },
+      "props": {
+        "bo": {
+          "start": {
+            "x": 800,
+            "y": 1000,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.435
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tam": 1.0,
+                "y": 1000.0,
+                "balanco": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.41,
+              "pose": {
+                "y": 250.0
+              },
+              "ease": "linear",
+              "in": 3.38
+            },
+            {
+              "t": 3.41,
+              "pose": {
+                "balanco": 3.5
+              },
+              "ease": "linear",
+              "in": 3.38
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "CADÊ O MONSTRINHO?",
+          "dur": 1.8,
+          "color": "roxo",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s04_refrao",
+      "title": "Cadê o monstrinho?",
+      "duration": 2.604,
+      "description": "Cadê o monstrinho? / Achei! Sai daí! Rawr!",
+      "background": "mon_raios_azul",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 2.604,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "mimi": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.958
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 2.15,
+              "do": "rawr",
+              "dur": 2.617
+            }
+          ]
+        }
+      },
+      "props": {
+        "bo": {
+          "start": {
+            "x": 1300,
+            "y": 1000,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.435
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tam": 1.0,
+                "y": 1000.0,
+                "balanco": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.604,
+              "pose": {
+                "y": 250.0
+              },
+              "ease": "linear",
+              "in": 4.68
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "callouts": []
+    },
+    {
+      "id": "s05_refrao",
+      "title": "Cadê o monstrinho?",
+      "duration": 2.6467,
+      "description": "Cadê o monstrinho? / Achei! Sai daí! Rawr!",
+      "background": "mon_raios_azul",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 960,
+            "y": 760.0,
+            "zoom": 2.0
+          },
+          {
+            "t": 2.647,
+            "x": 960,
+            "y": 760.0,
+            "zoom": 2.08,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "mimi": {
+          "start": {
+            "x": 960,
+            "y": 1010,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.958
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "rawr",
+              "dur": 2.163
+            }
+          ]
+        }
+      },
+      "props": {
+        "bo": {
+          "start": {
+            "x": 1300,
+            "y": 1000,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.435
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tam": 1.0,
+                "y": 1000.0,
+                "balanco": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.106,
+              "pose": {
+                "y": 250.0
+              },
+              "ease": "linear",
+              "in": 4.68
+            },
+            {
+              "t": 2.106,
+              "pose": {
+                "balanco": 4.8
+              },
+              "ease": "linear",
+              "in": 4.68
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "callouts": [
+        {
+          "t": 0.0,
+          "text": "SAI DAÍ! RAWR!",
+          "dur": 1.8,
+          "color": "vermelho",
+          "y": 170
+        }
+      ]
+    }
+  ]
+}

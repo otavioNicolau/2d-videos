@@ -1,0 +1,100 @@
+{
+  "episode": "ep29-mamae-querida-short",
+  "scenes": {
+    "s01_refrao": {
+      "frames": 133,
+      "performers": {
+        "laurinha": {
+          "drawings": 133,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 132
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s02_refrao": {
+      "frames": 106,
+      "performers": {
+        "laurinha": {
+          "drawings": 106,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 105
+          },
+          "empty_frames": 0
+        },
+        "mamae": {
+          "drawings": 106,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 105
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s03_refrao": {
+      "frames": 105,
+      "performers": {
+        "mamae": {
+          "drawings": 105,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 104
+          },
+          "empty_frames": 0
+        },
+        "laurinha": {
+          "drawings": 105,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 104
+          },
+          "empty_frames": 0
+        },
+        "luisinho": {
+          "drawings": 105,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 104
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s04_refrao": {
+      "frames": 70,
+      "performers": {
+        "mamae": {
+          "drawings": 70,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 69
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    }
+  },
+  "warnings": [
+    "storyboard ainda não aprovado (approval.storyboard = false): o render sairá como CANDIDATO",
+    "storyboard s01_refrao: pendente",
+    "storyboard s02_refrao: pendente",
+    "storyboard s03_refrao: pendente",
+    "storyboard s04_refrao: pendente"
+  ],
+  "lines": {},
+  "video": "/home/otavio/2d/projects/laurinha/ep29-mamae-querida-short/output/ep29-mamae-querida-short_CANDIDATO.mp4",
+  "contact_sheet": "/home/otavio/2d/projects/laurinha/ep29-mamae-querida-short/output/prancha.png",
+  "approved": false
+}

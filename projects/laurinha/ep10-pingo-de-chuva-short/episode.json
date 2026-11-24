@@ -1,0 +1,525 @@
+{
+  "schema": "1.1",
+  "id": "ep10-pingo-de-chuva-short",
+  "title": "Pingo de Chuva — Short",
+  "logline": "Clipe de \"Pingo de Chuva\" — dia de chuva e o caminho da água. Montado do roteiro verso a verso (roteiro.json).",
+  "fps": 30,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "background": "plano_parque",
+  "soundtrack": {
+    "file": "musica/trabalho.wav",
+    "analysis": "analise/song.json",
+    "start": 0.0,
+    "end": 11.1667,
+    "fade_out": 0.3,
+    "beat_grid": "full"
+  },
+  "captions": {
+    "lyrics": "analise/letra.json",
+    "style": "palavra_a_palavra"
+  },
+  "overlays": {
+    "logo": true,
+    "channel": [
+      "LAURINHA",
+      "e Luisinho"
+    ]
+  },
+  "cast": {
+    "laurinha": {
+      "character": "laurinha"
+    },
+    "luisinho": {
+      "character": "luisinho"
+    },
+    "nuvem": {
+      "character": "nuvem"
+    },
+    "gota": {
+      "character": "gotinha"
+    },
+    "folha": {
+      "character": "folha"
+    },
+    "poca": {
+      "character": "poca"
+    },
+    "formiguinha": {
+      "character": "formiguinha"
+    },
+    "joaninha": {
+      "character": "joaninha"
+    },
+    "planta": {
+      "character": "plantinha"
+    },
+    "sol": {
+      "character": "sol"
+    },
+    "joinha": {
+      "character": "joinha"
+    },
+    "mamae": {
+      "character": "mamae"
+    },
+    "botao": {
+      "character": "botao_inscrever"
+    }
+  },
+  "approval": {
+    "storyboard": false,
+    "final_render": false
+  },
+  "projeto": "laurinha/ep10-pingo-de-chuva",
+  "scenes": [
+    {
+      "id": "s01_refrao",
+      "title": "Pingo de chuva! Plic!",
+      "duration": 3.1667,
+      "description": "Pingo de chuva! Plic! / Pingo de chuva! Ploc!",
+      "background": "plano_jardim",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1300.0,
+            "y": 540,
+            "zoom": 1.808
+          },
+          {
+            "t": 3.1667,
+            "x": 1300.0,
+            "y": 540,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1140.0,
+            "y": 930,
+            "turn": 0.1,
+            "expr": "happy",
+            "z": 3,
+            "capa": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "pulinho",
+              "dur": 3.167
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1460.0,
+            "y": 930,
+            "turn": -0.1,
+            "expr": "happy",
+            "z": 3,
+            "capa": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "pulinho",
+              "dur": 3.167
+            }
+          ]
+        }
+      },
+      "fx": [
+        {
+          "type": "chuva",
+          "count": 80
+        }
+      ],
+      "flash_in": true,
+      "escurece": [
+        0.12,
+        0.12
+      ],
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "PINGO DE CHUVA!",
+          "dur": 1.8,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.307,
+          "to": 3.127
+        },
+        {
+          "who": "luisinho",
+          "from": 0.307,
+          "to": 3.127
+        }
+      ]
+    },
+    {
+      "id": "s02_refrao",
+      "title": "Pula na poça:",
+      "duration": 2.1,
+      "description": "Pula na poça: / Splash, splash, splash!",
+      "background": "plano_jardim",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1300,
+            "y": 540,
+            "zoom": 1.808
+          },
+          {
+            "t": 2.1,
+            "x": 1300,
+            "y": 540,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 1300,
+            "y": 900,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 2,
+            "capa": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "pulinho",
+              "dur": 2.1
+            }
+          ]
+        }
+      },
+      "props": {
+        "poca": {
+          "start": {
+            "x": 1300,
+            "y": 980,
+            "z": 1,
+            "depth": 1.4
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "splash": 0.0
+              }
+            },
+            {
+              "t": 0.7,
+              "pose": {
+                "splash": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.1,
+              "pose": {
+                "splash": 0.97
+              },
+              "ease": "linear"
+            },
+            {
+              "t": 1.2,
+              "pose": {
+                "splash": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.6,
+              "pose": {
+                "splash": 0.97
+              },
+              "ease": "linear"
+            },
+            {
+              "t": 1.7,
+              "pose": {
+                "splash": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.1,
+              "pose": {
+                "splash": 0.97
+              },
+              "ease": "linear"
+            }
+          ]
+        }
+      },
+      "fx": [
+        {
+          "type": "chuva",
+          "count": 70
+        }
+      ],
+      "escurece": [
+        0.12,
+        0.12
+      ],
+      "callouts": [
+        {
+          "t": 0.6,
+          "text": "SPLASH, SPLASH, SPLASH!",
+          "dur": 1.5,
+          "color": "azul",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "luisinho",
+          "from": 0.14,
+          "to": 2.09
+        }
+      ]
+    },
+    {
+      "id": "s03_refrao",
+      "title": "Pingo de chuva! Plic!",
+      "duration": 3.5333,
+      "description": "Pingo de chuva! Plic! / Pingo de chuva! Ploc!",
+      "background": "padrao_gotas_rosa",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 3.5333,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 800.0,
+            "y": 1010,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3,
+            "capa": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "palmas",
+              "dur": 3.533
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1120.0,
+            "y": 1010,
+            "turn": -0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.3,
+            "capa": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "palmas",
+              "dur": 3.533
+            }
+          ]
+        }
+      },
+      "fx": [
+        {
+          "type": "chuva",
+          "count": 50
+        }
+      ],
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "PLIC! PLOC!",
+          "dur": 1.8,
+          "color": "azul",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.16,
+          "to": 3.48
+        },
+        {
+          "who": "luisinho",
+          "from": 0.16,
+          "to": 3.48
+        }
+      ]
+    },
+    {
+      "id": "s04_refrao",
+      "title": "Abre a sombrinha",
+      "duration": 2.3667,
+      "description": "Abre a sombrinha / E roda, roda, roda!",
+      "background": "plano_jardim",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1300.0,
+            "y": 540,
+            "zoom": 1.808
+          },
+          {
+            "t": 2.367,
+            "x": 1300.0,
+            "y": 540,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1140.0,
+            "y": 930,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "holding": "sombrinha",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1,
+            "capa": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "roda",
+              "dur": 2.467
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 1460.0,
+            "y": 930,
+            "turn": -0.1,
+            "expr": "happy",
+            "z": 3,
+            "holding": "sombrinha",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1,
+            "capa": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "roda",
+              "dur": 2.467
+            }
+          ]
+        }
+      },
+      "fx": [
+        {
+          "type": "chuva",
+          "count": 70
+        }
+      ],
+      "escurece": [
+        0.12,
+        0.12
+      ],
+      "callouts": [
+        {
+          "t": 0.4,
+          "text": "RODA, RODA, RODA!",
+          "dur": 1.8,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.107,
+          "to": 2.347
+        },
+        {
+          "who": "luisinho",
+          "from": 0.107,
+          "to": 2.347
+        }
+      ]
+    }
+  ]
+}
