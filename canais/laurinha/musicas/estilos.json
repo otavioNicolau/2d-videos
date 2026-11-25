@@ -2,7 +2,7 @@
  "schema": "estilos-1.0",
  "nota": "Biblioteca de ritmos do canal (BIBLIA_MUSICAL.md, seção 4). Termos do Style em inglês (o Suno entende melhor). Andamento em BPM: [mínimo, máximo, padrão].",
  "canal": {
-  "sempre": "major key, happy, Brazilian Portuguese, native Brazilian accent",
+  "sempre": "major key, happy, silly cartoon party, Brazilian Portuguese, native Brazilian accent",
   "coro": "",
   "exclude_sempre": [
    "sad",
@@ -47,7 +47,7 @@
   "nota_batida": "18/11/2026: na referência cada batida soa idêntica (semelhança 0,95–0,98: ritmo pronto de teclado arranjador, um loop simples a música inteira); nas nossas 0,66–0,87 (bateria 'tocada', com viradas e percussão variando). Usuário: 'batidas como se fosse bateria, bumbo, algo feito no teclado, pra dar ritmo'.",
   "abertura": "Brazilian arranger keyboard kids song (teclado arranjador), one simple keyboard drum loop",
   "nota_ajustes_14": "18/11/2026 (take v2 da 14): baixo fraco (5,6 % × 11 % da referência) → 'deep bouncy keyboard bass'; voz larga (0,17 × 0,01) → 'dry centered vocal' e Exclude 'vocal reverb, echo'; tirado 'repeated chorus' do Exclude (o bloco repete de propósito); Exclude sem termos repetidos.",
-  "versao": "E17",
+  "versao": "E18",
   "historico": [
    {
     "versao": "E1",
@@ -171,11 +171,12 @@
     "mudanca": "E16 + bateria e contrabaixo mais fortes no começo do Style ('BIG LOUD drum-machine (strong kick and claps) and a deep bouncy bass up front')",
     "motivo": "placar da 29 (nota 4,8): bateria 27 % e baixo 4 % abaixo da referência (38 % e 11 %), teclado 30 %; um ajuste por vez",
     "usado_em": "30 em diante"
-   }
+   },
+   "E18 (24/11/2026, usuário: 'estou gostando mais das letras e groove do Fofolucos do que da Laurinha'): a receita do F5 dos Fofolucos — 'LOTS of keyboard, electric bass and drums' (sai o 'ONLY… nothing else' fechado), groove BOUNCY com stabs de teclado no contratempo, assinatura só na intro/intervalos (toy piano brilhante no lugar do órgão de desenho), faixa 130–140 BPM; a voz continua a da Laurinha/Luisinho."
   ],
   "versao_por_voz": {
-   "laurinha": "E17",
-   "luisinho": "E17"
+   "laurinha": "E18",
+   "luisinho": "E18"
   },
   "nota_sincope": "19/11/2026 (usuário: 'focar nas batidas do som contagiante'): raio-x da bateria (scripts/referencias/batida.py) — referência síncope 0,69 e bumbo reto 0,50; nossas 0,56 e 0,67. A nota de ouvido sobe com a síncope e o baixo fora do tempo (14: 0,39→nota 3 … 18: 0,72 e baixo 0,90→nota 4,6). A 19 v1 (rock com 'punk-rock drumming, driving kick') saiu reta: 0,41.",
   "nota_loop": "19/11/2026 (usuário ouvindo a 19 v2): 'Animadinhos são ritmos e batidas que não mudam muito durante a música; a nossa está ficando ainda estilo banda'. Medido: loop igual referência 0,96 × 19 v1 0,84 × 19 v2 0,75; outros instrumentos 9 % × 20 %. E8: um loop sincopado só, sem virada entre as partes, mesma batida no verso e no refrão, sem solo/quebra.",
@@ -196,8 +197,8 @@
   "nota_sax": "19/11/2026, usuário: 'o Animadinhos usa muito ritmos com saxofone, bateria e teclado'. Medido (18 referências): teclado/piano em 15/18 (nossas 3–4× menos), sintetizador 13/18, bateria em ~metade, saxofone/metais claros em 3/18 (+3 leves) e ZERO nas nossas. E11 = E9 + piano de teclado arranjador na frente + riff de saxofone (som de sax do teclado) respondendo a voz.",
   "trio": {
    "ativo": true,
-   "abertura": "kids song with ONLY keyboard, electric bass and drums: BIG LOUD drum-machine (strong kick and claps) and a deep bouncy bass up front, LOTS of keyboard",
-   "producao": "BRIGHT HIGH-PITCHED keyboard: catchy high piano melody, a short catchy keyboard riff answers EVERY sung line; BIG FUN GROOVY BASS: bouncy funky slap bass hook, loud and clear; BIG PUNCHY ELECTRONIC DRUMS, the same beat all song (no live drummer); nothing else, single dry centered lead vocal",
+   "abertura": "kids song with LOTS of keyboard, electric bass and drums: BIG LOUD drum-machine and a deep bouncy bass up front",
+   "producao": "BRIGHT HIGH-PITCHED keyboard: catchy high piano melody, a short catchy keyboard riff answers EVERY sung line; BIG FUN GROOVY BASS: bouncy funky slap bass hook, loud and clear; BIG PUNCHY ELECTRONIC DRUMS, the same beat all song; bright cartoon toy piano sparkle only in intro and breaks, nothing else, single dry centered lead vocal",
    "peso_style": "ADDICTIVE head-bobbing groove: groovy bass and a punchy drum-machine loop (kick on every beat, claps on 2 and 4), one catchy 2-bar pattern repeated hypnotically all song, keyboard 'pisadinha' chords bouncing on the off-beats, danceable",
    "exclude_extra": [
     "guitar",
@@ -229,21 +230,25 @@
    ],
    "tirar_do_exclude": [],
    "nota": "19/11/2026, usuário: 'quero usar esses 3 instrumentos nas próximas músicas para teste — APENAS ELES' (saxofone, bateria e teclado, como o Animadinhos). · Ajuste do usuário: 'preciso que a bateria seja forte, pra marcar o ritmo, e as pisadinhas do teclado também; o saxofone fica em 3º' → ordem: bateria forte > teclado pisadinha > sax (só abertura, antes do refrão e intervalos). · Nova ordem do usuário (19/11): TECLADO em 1º, BATERIA em 2º, SAX em 3º. · Usuário (19/11): 'reduzir um pouco mais o saxofone e aumentar o teclado com som mais agudo' → sax bem baixo e raro (só abertura/intervalos, fora da abertura da letra), teclado mais alto e agudo. · Usuário (20/11): no Animadinhos cada frase cantada é respondida por um som de teclado bem marcante — 'O Luisinho comprou uma casa! tram tram tramram' — isso deixa a música animada. A partir da 25: Style pede o riff de teclado depois de cada verso e as marcações [Verse]/[Chorus] ganham 'short keyboard riff after each line' (o 'tram tram' não vai na letra para o Suno não cantar). · 20/11 (E13): 26 (reggae) tirou 4,7 — usuário: 'está sem batida viciante'. Medido: 'bateria de banda' 0,046 (o triplo das 21–25, ~0,015) e o loop menos repetido (0,738): o ritmo puxou bateria acústica de banda. A bateria do trio passa a ser o loop ELETRÔNICO do teclado (drum machine, sempre a mesma batida) e 'live drums/acoustic drums' voltam para o Exclude. · 21/11/2026, usuário: 'identifiquei outro instrumento que deixa a música divertida. preciso que coloque na essência dos dois canais: contra baixo, bateria, teclado. muitos deles' → o CONTRABAIXO entra como instrumento principal (baixo elétrico groovado, linha que anda e pula, alto e claro), junto com teclado e bateria eletrônica, os três fortes e na frente; 'bass guitar' saiu do Exclude. · 21/11/2026, usuário: 'pra próximas músicas preciso de GROOVE VICIANTE' → o groove vira o centro do Style: um loop de 2 compassos de baixo + bateria eletrônica (bumbo em todo tempo, palmas no 2 e 4) repetido a música toda, pisadinha do teclado nos contratempos. Fofolucos: tirado 'spooky' (a 02 v1 saiu em tom MENOR e a 108 BPM).",
-   "intervalo": "[Instrumental Break - {s} seconds, bright high keyboard melody, LOTS of keyboard, groovy bass and strong drums]",
+   "intervalo": "[Instrumental Break - {s} seconds, bright high keyboard melody, LOTS of keyboard, groovy bass and strong drums, a short bright toy piano riff]",
    "intro": "[Intro - bright high keyboard melody, groovy bass and strong drums]",
    "resposta_teclado": true
   },
   "groove_proprio": {
    "ativo": true,
    "nome": "groove próprio da Laurinha",
-   "style": "THE LAURINHA GROOVE: ADDICTIVE head-bobbing groove with LOTS of keyboard and BIG drum-machine: syncopated bouncy kick 'boom-ch-boom-chick', snappy snare and claps on the off-beats, bright keyboard chords bouncing on the off-beats and a catchy keyboard riff, groovy bass hopping in the gaps, one catchy 2-bar pattern repeated hypnotically all song, danceable",
-   "curto": "ADDICTIVE kids groove with LOTS of keyboard and big drum-machine, syncopated bouncy kick, groovy bass",
+   "style": "THE LAURINHA GROOVE: ADDICTIVE bouncy groove, syncopated drum-machine kick 'boom-ch-boom-chick', snappy snare and claps on the off-beats, keyboard stabs bouncing on the off-beats, bass hopping in the gaps, one catchy 2-bar pattern repeated hypnotically all song, danceable",
+   "curto": "ADDICTIVE cartoon-party groove with LOTS of keyboard and big drum-machine, syncopated bouncy kick, big groovy bass",
    "bpm": [
     130,
     140
    ],
    "nota": "21/11 (usuário: 'deixe de lado ritmos como samba etc… faça o próprio'): UM groove do canal em todas as músicas (29+), sem nome de gênero no Style; base no que deu nota 4,9 (batida sincopada 'boom-ch-boom-chick' + baixo no contratempo); andamento 130–140 BPM (usuário, 21/11: 'quero 120 a 150' → 'ajuste o bpm 130-140'). Os grooves por ritmo (ritmos.*.peso_style) ficam guardados, sem uso."
-  }
+  },
+  "bpm_faixa": [
+   130,
+   140
+  ]
  },
  "peso": {
   "forte": {

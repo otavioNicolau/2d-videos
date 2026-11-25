@@ -1,0 +1,608 @@
+{
+  "schema": "1.1",
+  "id": "ep33-brigadeiro-short",
+  "projeto": "laurinha/ep33-brigadeiro",
+  "title": "Brigadeiro — Short",
+  "logline": "Clipe de \"Brigadeiro\" — o brigadeiro que sumiu na festa da vovó: a Laurinha vira detetive (lupa, pegadas de chocolate) e descobre o Luisinho, que confessa… e guardou o último pra ela. Montado do roteiro verso a verso (roteiro.json).",
+  "fps": 30,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "background": "plano_parque",
+  "soundtrack": {
+    "file": "musica/trabalho.wav",
+    "analysis": "analise/song.json",
+    "start": 0.0,
+    "end": 15.9373,
+    "fade_out": 0.3,
+    "beat_grid": "full"
+  },
+  "captions": {
+    "lyrics": "analise/letra.json",
+    "style": "palavra_a_palavra"
+  },
+  "overlays": {
+    "logo": true,
+    "channel": [
+      "LAURINHA",
+      "e Luisinho"
+    ]
+  },
+  "cast": {
+    "laurinha": {
+      "character": "laurinha"
+    },
+    "luisinho": {
+      "character": "luisinho"
+    },
+    "vovo": {
+      "character": "vovo"
+    },
+    "mesa": {
+      "character": "mesa"
+    },
+    "bdj": {
+      "character": "bandeja_brigadeiro"
+    },
+    "bat": {
+      "character": "bateria_show"
+    },
+    "tec": {
+      "character": "teclado_inst"
+    },
+    "bal0": {
+      "character": "balao"
+    },
+    "bal1": {
+      "character": "balao"
+    },
+    "vovo_cico": {
+      "character": "vovo_cico"
+    },
+    "bolo": {
+      "character": "bolo_aniversario"
+    },
+    "mamae": {
+      "character": "mamae"
+    },
+    "peg": {
+      "character": "pegadas"
+    },
+    "nv": {
+      "character": "nuvem"
+    },
+    "gato": {
+      "character": "gato"
+    },
+    "joinha": {
+      "character": "joinha"
+    },
+    "botao": {
+      "character": "botao_inscrever"
+    }
+  },
+  "approval": {
+    "storyboard": false,
+    "final_render": false
+  },
+  "scenes": [
+    {
+      "id": "s01_refrao",
+      "title": "Brigadeiro, brigadeiro!",
+      "duration": 3.5333,
+      "description": "Brigadeiro, brigadeiro! / Quem comeu o brigadeiro?",
+      "background": "plano_jardim",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 772.8,
+            "y": 540.0,
+            "zoom": 1.808
+          },
+          {
+            "t": 3.43,
+            "x": 1548.1,
+            "y": 540.0,
+            "zoom": 1.808,
+            "ease": "inout"
+          },
+          {
+            "t": 3.5333,
+            "x": 1548.1,
+            "y": 540.0,
+            "zoom": 1.808,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 772.8,
+            "y": 990,
+            "turn": 0.4,
+            "expr": "determined",
+            "z": 6,
+            "depth": 1.7,
+            "holding": "lupa",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "sneak",
+              "to_x": 1548.1,
+              "dur": 3.43
+            }
+          ]
+        }
+      },
+      "props": {
+        "peg": {
+          "start": {
+            "x": 961.5092808850645,
+            "y": 1000,
+            "z": 2,
+            "depth": 1.02
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "brilho": 0.0,
+                "lado": 1.0,
+                "n": 3.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.47,
+              "pose": {
+                "n": 7.0
+              },
+              "ease": "linear",
+              "in": 3.44
+            }
+          ]
+        },
+        "nv": {
+          "start": {
+            "x": 679.7,
+            "y": 260,
+            "z": 0,
+            "depth": 0.544
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cara": 1.0,
+                "x": 679.7
+              },
+              "ease": "step"
+            },
+            {
+              "t": 3.47,
+              "pose": {
+                "x": 853.4
+              },
+              "ease": "linear",
+              "in": 3.44
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "BRIGADEIRO, BRIGADEIRO!",
+          "dur": 1.8,
+          "color": "laranja",
+          "y": 170
+        },
+        {
+          "t": 2.07,
+          "text": "QUEM COMEU?",
+          "dur": 1.463,
+          "color": "roxo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.053,
+          "to": 3.523
+        }
+      ],
+      "flash_in": true
+    },
+    {
+      "id": "s02_refrao",
+      "title": "Brigadeiro, brigadeiro!",
+      "duration": 3.9667,
+      "description": "Brigadeiro, brigadeiro! / Foi você? Fala primeiro!",
+      "background": "plano_jardim",
+      "fx": [],
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1300,
+            "y": 536.0387215734481,
+            "zoom": 1.808
+          },
+          {
+            "t": 3.9667,
+            "x": 1300,
+            "y": 536.0387215734481,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1300,
+            "y": 930,
+            "turn": 0.3,
+            "expr": "determined",
+            "z": 3,
+            "depth": 1.7,
+            "holding": "lupa",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 2.06,
+              "do": "point",
+              "dur": 1.907
+            }
+          ]
+        }
+      },
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.28,
+          "to": 3.7
+        }
+      ]
+    },
+    {
+      "id": "s03_refrao",
+      "title": "Brigadeiro, brigadeiro!",
+      "duration": 3.1333,
+      "description": "Brigadeiro, brigadeiro! / Quem comeu o brigadeiro?",
+      "background": "danca_raios_azul",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 3.1333,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 810.0,
+            "y": 1190,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "dur": 3.133,
+              "style": "pulinho"
+            }
+          ]
+        },
+        "vovo_cico": {
+          "start": {
+            "x": 1110.0,
+            "y": 1190,
+            "turn": 0.0,
+            "expr": "joy",
+            "z": 3,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.05,
+              "do": "dance",
+              "dur": 3.083,
+              "style": "balanco"
+            }
+          ]
+        },
+        "luisinho": {
+          "start": {
+            "x": 960.0,
+            "y": 800,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 2,
+            "depth": 0.85
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "dance",
+              "dur": 3.033,
+              "style": "pulinho"
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "BRIGADEIRO, BRIGADEIRO!",
+          "dur": 1.8,
+          "color": "laranja",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.203,
+          "to": 3.123
+        },
+        {
+          "who": "luisinho",
+          "from": 0.203,
+          "to": 3.123
+        }
+      ]
+    },
+    {
+      "id": "s04_refrao",
+      "title": "Brigadeiro, brigadeiro!",
+      "duration": 2.657,
+      "description": "Brigadeiro, brigadeiro! / Foi você? Fala primeiro!",
+      "background": "plano_jardim",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1300.0,
+            "y": 523.9189189189188,
+            "zoom": 1.85
+          },
+          {
+            "t": 2.657,
+            "x": 1300.0,
+            "y": 523.9189189189188,
+            "zoom": 1.85
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1300.0,
+            "y": 930,
+            "turn": 0.0,
+            "expr": "sly",
+            "z": 3,
+            "depth": 1.7,
+            "holding": "lupa",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 2.06,
+              "do": "apontar_camera",
+              "dur": 2.807
+            }
+          ]
+        }
+      },
+      "props": {
+        "nv": {
+          "start": {
+            "x": 1796.2,
+            "y": 260,
+            "z": 0,
+            "depth": 0.544
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cara": 1.0,
+                "x": 1796.2
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.657,
+              "pose": {
+                "x": 1969.9
+              },
+              "ease": "linear",
+              "in": 4.78
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 2.06,
+          "text": "FOI VOCÊ? FALA PRIMEIRO!",
+          "dur": 1.8,
+          "color": "roxo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.28,
+          "to": 2.637
+        }
+      ]
+    },
+    {
+      "id": "s05_refrao",
+      "title": "Brigadeiro, brigadeiro!",
+      "duration": 2.647,
+      "description": "Brigadeiro, brigadeiro! / Foi você? Fala primeiro!",
+      "background": "plano_jardim",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1300.0,
+            "y": 560.0,
+            "zoom": 2.4
+          },
+          {
+            "t": 2.647,
+            "x": 1300.0,
+            "y": 560.0,
+            "zoom": 2.496,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1300.0,
+            "y": 930,
+            "turn": 0.0,
+            "expr": "sly",
+            "z": 3,
+            "depth": 1.7,
+            "holding": "lupa",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "apontar_camera",
+              "dur": 2.21
+            }
+          ]
+        }
+      },
+      "props": {
+        "nv": {
+          "start": {
+            "x": 1796.2,
+            "y": 260,
+            "z": 0,
+            "depth": 0.544
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cara": 1.0,
+                "x": 1796.2
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.153,
+              "pose": {
+                "x": 1969.9
+              },
+              "ease": "linear",
+              "in": 4.78
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.0,
+          "text": "FOI VOCÊ? FALA PRIMEIRO!",
+          "dur": 1.8,
+          "color": "roxo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 2.2
+        }
+      ]
+    }
+  ]
+}

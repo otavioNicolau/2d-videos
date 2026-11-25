@@ -92,6 +92,9 @@ def _olho(v, cx: float, r: float, side: int):
     return cx + r * 0.78 * math.sin(a), 0.75 + 0.25 * math.cos(a)
 
 
+ESTILO_PALPEBRA = "classico"  # olho meio fechado: "classico" (o de sempre, sem a faixa branca — escolha do usuário 24/11) | "curva" | "reta" | "meia_lua"
+
+
 class FlatMuri(Character):
     flies = True
 
@@ -108,7 +111,7 @@ class FlatMuri(Character):
                 "foot_f_x": 16.0, "foot_f_y": 0.0, "foot_f_bend": 0.0, "foot_f_rot": 0.0,
                 "mouth": "X", "smile": 0.8, "brow_y": 0.2, "blush": 1.0, "stars": 0.0, "speed": 0.0,
                 "holding": "", "holding_f": "", "wing_phase": 0.0, "bank": 0.0, "dangle": 0.0, "hair_bounce": 0.0,
-                "fly": 0.0, "rot_pivot": 0.55, "bigode": 0.0, "mochila": 0.0, "buzz": 0.0, "suor": 0.0,
+                "fly": 0.0, "rot_pivot": 0.55, "bigode": 0.0, "chocolate": 0.0, "mochila": 0.0, "buzz": 0.0, "suor": 0.0,
                 "despenteado": 0.0, "bafinho": 0.0, "espuma": 0.0, "brilho": 0.0, "cuspe": 0.0, "blusa": 0.0, "juba": 0.0, "tubarao": 0.0, "coroa": 0.0, "tutu": 0.0,
                 "boca_o": 0.0,
             })
@@ -465,6 +468,11 @@ class FlatMuri(Character):
                     brush=Brush(LINE * 1.2, 0.0, _rgba("#9FB3C8"), 0.0), line=LINE * 1.2)
             self._line(k, [(C[0] - r * 0.7, C[1] - r * 0.75), (C[0] - r * 0.35, C[1] - r * 0.98)], "#FFFFFF", w=LINE * 1.6)
             # aro do capacete no pescoço: só a borda de trás (não cobre a boca nem os braços)
+        if P.get("chocolate", 0) > 0.05:      # boca suja de CHOCOLATE (33 Brigadeiro: quem comeu foi o Luisinho)
+            ch = min(1.0, P["chocolate"])
+            for dx, dy, R_ in ((-30, 46, 13), (26, 50, 11), (-6, 60, 9), (40, 38, 7)):
+                q = rot((nx_ + dx, C[1] + dy), ht, C)
+                k.shape(ellipse_pts(q[0], q[1], R_ * ch, R_ * 0.8 * ch, 0.3, 14), fill=_rgba("#6B3A1E"), line=0)
         if P.get("bigode", 0) > 0.5:          # bigodinho de leite
             m = rot((nx_, C[1] + 40), ht, C)
             pts = [(m[0] - 34, m[1] + 4), (m[0] - 20, m[1] - 8), (m[0], m[1] - 4), (m[0] + 20, m[1] - 8), (m[0] + 34, m[1] + 4),
@@ -548,27 +556,75 @@ class FlatMuri(Character):
                     self._line(k, [p0, (p0[0] + fora * 11, p0[1] + 9)], PUPIL, w=LINE * 0.75)
         else:
             lid = P["lid"]
+            fora = -1 if side < 0 else 1                 # canto de fora do olho
             self._shape(k, ellipse_pts(ex, ey, rx, ry, 0, 18), "#FFFFFF", line=line)
-            if lid > 0.05:
-                top = ey - ry + 2 * ry * lid
-                pts = [(ex - rx - 2, ey - ry - 4), (ex + rx + 2, ey - ry - 4), (ex + rx + 2, top), (ex - rx - 2, top)]
+            est = ESTILO_PALPEBRA
+            top = ey - ry + 2 * ry * lid
+            w = rx * math.sqrt(max(0.0, 1 - ((top - ey) / ry) ** 2))
+            sag = 5.0 * min(1.0, lid * 2.2) if est == "curva" else 0.0
+            if lid < 0.8:                                # pupila POR BAIXO da pálpebra (recortada no olho)
+                lx = (P["look_x"] * f * 0.5 + 0.2 * f * s) * rx        # 20/11: pupila acompanha mais o olhar (as duas juntas)
+                ly = P["look_y"] * 0.42 * ry
+                pr = 7.5 * P["pupil"] ** 0.5 * es ** 0.3
+                py = ey + ly + 3
+                if lid > 0.05 and est == "reta":
+                    pr *= 1.15
+                    py = max(py, top + pr + 1.5)         # pupila inteira, encostada logo abaixo da pálpebra
+                elif lid > 0.05 and est == "classico":
+                    py = max(py, top + pr * 0.5)         # a pupila desce com a pálpebra (sempre aparece metade)
+                elif lid > 0.05 and est == "meia_lua":
+                    pr *= 1.35
+                    py = top + pr * 0.35                 # pupila meio escondida pela pálpebra (olhar desconfiado)
                 k.c.save()
                 pth = skia.Path()
                 pth.addOval(skia.Rect(ex - rx, ey - ry, ex + rx, ey + ry))
                 k.c.clipPath(pth, doAntiAlias=True)
-                k.shape(pts, fill=_rgba(L.body), smooth=False, line=0)
+                k.dot(ex + lx, py, pr, PUPIL)
                 k.c.restore()
-                self._line(k, [(ex - rx, top), (ex + rx, top)], line, w=LINE)
-            if lid < 0.8:
-                lx = (P["look_x"] * f * 0.5 + 0.2 * f * s) * rx        # 20/11: pupila acompanha mais o olhar (as duas juntas)
-                ly = P["look_y"] * 0.42 * ry
-                pr = 7.5 * P["pupil"] ** 0.5 * es ** 0.3
-                k.dot(ex + lx, ey + ly + 3, pr, PUPIL)
+            if lid > 0.05 and est == "classico":
+                # 24/11 (usuário): o olho de sempre, mas SEM a faixa branca entre o traço e a pálpebra (o preenchimento
+                # com pincel encolhia e deixava um vão) e sem o traço passar da borda do olho. Pálpebra pintada direto no
+                # canvas (sem encolher), descendo 3 px por baixo do traço; o contorno de cima do olho continua.
+                k.c.save()
+                pth = skia.Path()
+                ins = LINE * 0.45                                          # por dentro do contorno (que fica liso)
+                pth.addOval(skia.Rect(ex - rx + ins, ey - ry + ins, ex + rx - ins, ey + ry - ins))
+                k.c.clipPath(pth, doAntiAlias=True)
+                k.c.drawRect(skia.Rect(ex - rx - 2, ey - ry - 2, ex + rx + 2, top + 3),
+                             skia.Paint(AntiAlias=True, Color4f=skia.Color4f(*_rgba(L.body))))
+                k.c.restore()
+                self._line(k, [(ex - w, top), (ex + w, top)], line, w=LINE)
+            elif lid > 0.05:
+                # 24/11 (usuário: "melhorar o olho quando está meio fechado"): a pálpebra cobre o contorno de cima do
+                # olho, a borda respeita a largura do olho naquela altura, e os cílios nascem NA BORDA da pálpebra.
+                borda = [(ex + u * (w + 1), top + sag * (1 - u * u)) for u in [i / 8 - 1 for i in range(17)]]
+                k.c.save()
+                pth = skia.Path()
+                pth.addOval(skia.Rect(ex - rx - 4, ey - ry - 4, ex + rx + 4, ey + ry + 4))
+                k.c.clipPath(pth, doAntiAlias=True)
+                k.shape([(ex - rx - 6, ey - ry - 8), (ex + rx + 6, ey - ry - 8), (ex + rx + 6, top)] + borda[::-1] + [(ex - rx - 6, top)],
+                        fill=_rgba(L.body), smooth=False, line=0)
+                k.c.restore()
+                if est == "meia_lua":                    # delineado escuro, com a pontinha de fora levantada
+                    ext = [(ex - fora * (w + 2), top), (ex + fora * (w + 3), top), (ex + fora * (w + 10), top - 6)]
+                    self._line(k, ext, PUPIL, w=LINE * 1.35)
+                elif est == "reta":
+                    self._line(k, [(ex - w - 1, top), (ex + w + 1, top)], PUPIL, w=LINE * 1.1)
+                else:
+                    self._line(k, borda, line, w=LINE * 1.05)
             if L.lashes:
-                for j, a in enumerate((-2.2, -1.75, -1.3) if side < 0 else (-0.95, -1.4, -1.85)):
-                    p0 = (ex + math.cos(a) * rx, ey + math.sin(a) * ry)
-                    p1 = (ex + math.cos(a) * (rx + 13), ey + math.sin(a) * (ry + 13))
-                    self._line(k, [p0, p1], PUPIL, w=LINE * 0.75)
+                if lid > 0.05 and est != "classico":     # cílios na borda da pálpebra, no canto de fora
+                    for j, (t, a) in enumerate(((0.3, 0.12), (0.62, 0.5), (0.92, 0.95))):   # espalhados na metade de fora
+                        u = fora * t
+                        p0 = (ex + u * (w + 1), top + sag * (1 - u * u))
+                        n = 11 + 2 * j
+                        p1 = (p0[0] + fora * math.sin(a) * n, p0[1] - math.cos(a) * n)
+                        self._line(k, [p0, p1], PUPIL, w=LINE * 0.75)
+                else:
+                    for j, a in enumerate((-2.2, -1.75, -1.3) if side < 0 else (-0.95, -1.4, -1.85)):
+                        p0 = (ex + math.cos(a) * rx, ey + math.sin(a) * ry)
+                        p1 = (ex + math.cos(a) * (rx + 13), ey + math.sin(a) * (ry + 13))
+                        self._line(k, [p0, p1], PUPIL, w=LINE * 0.75)
         b = P["brow_l"] if side < 0 else P["brow_r"]
         if L.extra.get("sobrancelhona"):            # sobrancelhas GROSSAS do vovô Ciço: cara de bravo (abaixa por dentro),
             alegre = max(0.0, min(1.0, P["brow_y"] * 1.6))   # que some quando ele sorri (brow_y alto = alegre)

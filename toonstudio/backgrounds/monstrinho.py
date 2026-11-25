@@ -5,6 +5,7 @@ confete. Toque próprio do canal: a Vila Monstrinha (casas com chifrinhos e jane
 
 Ids (cenários de verdade, 2600×1080, chão em y≈930):
   mon_parque · mon_vila · mon_quarto · mon_palco · mon_noite · mon_escola · mon_cozinha · mon_campinho · mon_campinho_gol
+  mon_festa · mon_sombras
 Fundos gráficos (ênfase/refrão; câmera no centro 960): mon_raios_<cor> · mon_xadrez_<cor> · mon_brilho_<cor>
 """
 from __future__ import annotations
@@ -22,7 +23,7 @@ from .plano import Flat, _surf
 
 W_INT, H = 2600, 1080
 CHAO_Y = 760
-CENAS = ("mon_festa", "mon_parque", "mon_vila", "mon_quarto", "mon_palco", "mon_noite", "mon_escola", "mon_cozinha", "mon_abertura", "mon_campinho", "mon_campinho_gol")
+CENAS = ("mon_festa", "mon_parque", "mon_vila", "mon_quarto", "mon_palco", "mon_noite", "mon_escola", "mon_cozinha", "mon_abertura", "mon_campinho", "mon_campinho_gol", "mon_sombras")
 GRAF_KINDS = ("raios", "xadrez", "brilho")
 CORES = {"roxo": ("#4A158F", "#9B4FF0"), "azul": ("#0A4FC0", "#3AA6FF"), "verde": ("#0B8740", "#46D677"),
          "laranja": ("#E85A08", "#FFA63A"), "rosa": ("#C2166C", "#FF6AB2"), "vermelho": ("#B00D28", "#FF4A5E")}
@@ -449,8 +450,57 @@ def festa(rng):
     return s, W_INT
 
 
+def sombras(rng):
+    """Sala da Vila Monstrinha À NOITE (Fofolucos 08, "Sombra de Monstrinho!"): parede BEGE-CLARA (iluminada no meio, como
+    se a lanterna batesse ali — é onde as sombras aparecem, x 900–1700), cantos mais escuros de noite, janela com lua à
+    esquerda, baú de brinquedos amarelo e estante à direita, piso de madeira e tapete. Bege não é cor de nenhum monstrinho
+    (azul, roxo, verde, rosa, laranja, coral), então ninguém some na frente da parede."""
+    s, c = _surf(W_INT, H, ESC_CENA)
+    p = P(c)
+    sh = skia.GradientShader.MakeRadial(skia.Point(1300, 420), 1500,
+                                        [skia.Color4f(*_rgba("#FFF3D6")).toColor(), skia.Color4f(*_rgba("#EAD6AE")).toColor(),
+                                         skia.Color4f(*_rgba("#B9A27E")).toColor()], [0.0, 0.45, 1.0])
+    c.drawRect(skia.Rect(0, 0, W_INT, CHAO_Y), skia.Paint(Shader=sh))
+    for x in range(0, W_INT, 160):                                                # bolinhas suaves do papel de parede
+        for y in range(70, CHAO_Y - 120, 160):
+            p.circ(x + (80 if (y // 160) % 2 else 0), y, 9, "#D9C29A", alpha=0.45)
+    p.rect(0, CHAO_Y - 70, W_INT, CHAO_Y, "#C9A77A")                              # rodapé
+    p.rect(150, 170, 560, 560, "#FFFFFF", r=26)                                   # janela com lua e estrelas
+    p.rect(172, 192, 538, 538, "#1E1A5E", r=18)
+    p.circ(430, 290, 62, "#FFE88A")
+    p.circ(458, 272, 54, "#1E1A5E")
+    for x, y in ((230, 250), (300, 430), (470, 470), (260, 350), (380, 220)):
+        p.estrela(x, y, 11, "#FFF6C9")
+    p.rect(343, 192, 367, 538, "#FFFFFF")
+    p.rect(172, 353, 538, 377, "#FFFFFF")
+    for sd in (-1, 1):                                                            # cortininhas azul-petróleo
+        x0 = 150 if sd < 0 else 560
+        p.poly([(x0, 140), (x0 + sd * 110, 140), (x0 + sd * 70, 600), (x0, 600)], "#2E6E8E")
+    p.rect(120, 130, 590, 152, "#8A5A2B", r=8)
+    p.rect(2080, 260, 2480, 560, "#9A6A3A", r=10)                                 # estante com livros
+    for y0 in (280, 420):
+        x = 2100
+        for j, cor in enumerate(("#E9433F", "#FFD23F", "#2E9BFF", "#FF8A3D", "#46D677", "#B98CFF", "#FF6AB2")):
+            w = 34 + (j % 3) * 8
+            p.rect(x, y0 + (j % 2) * 18, x + w, y0 + 120, cor, r=4)
+            x += w + 8
+        p.rect(2080, y0 + 120, 2480, y0 + 136, "#7A4A22")
+    p.rect(2060, 600, 2460, CHAO_Y + 40, "#F2B632", r=22)                         # baú de brinquedos amarelo
+    p.rect(2040, 580, 2480, 640, "#D9962A", r=18)
+    p.estrela(2260, 720, 46, "#FFFFFF")
+    p.rect(0, CHAO_Y, W_INT, H, "#B07A4A")                                        # piso de madeira (à noite)
+    p.rect(0, CHAO_Y, W_INT, CHAO_Y + 20, "#8E5E34")
+    for y in range(CHAO_Y + 80, H, 80):
+        p.rect(0, y, W_INT, y + 4, "#9A6A3E")
+    p.oval(1300, 965, 560, 80, "#E8CFA4")                                         # tapete redondo
+    p.oval(1300, 965, 430, 56, "#F5E3C0")
+    p.grad_v(0, 0, W_INT, 120, "#B9A27E", "#E6D2AA")                              # teto mais escurinho
+    p.rect(0, 112, W_INT, 128, "#C9A77A")                                         # friso
+    return s, W_INT
+
+
 SCENES = {"mon_parque": parque, "mon_vila": vila, "mon_quarto": quarto, "mon_palco": palco, "mon_noite": noite,
-          "mon_escola": escola, "mon_cozinha": cozinha, "mon_abertura": abertura, "mon_campinho": campinho, "mon_campinho_gol": campinho_gol, "mon_festa": festa}
+          "mon_escola": escola, "mon_cozinha": cozinha, "mon_abertura": abertura, "mon_campinho": campinho, "mon_campinho_gol": campinho_gol, "mon_festa": festa, "mon_sombras": sombras}
 
 
 # ───────────────────────── fundos gráficos ─────────────────────────

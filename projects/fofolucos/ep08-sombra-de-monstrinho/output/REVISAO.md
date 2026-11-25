@@ -1,0 +1,139 @@
+# Revisão — Sombra de Monstrinho!
+
+- Vídeo: `ep08-sombra-de-monstrinho.mp4`
+- Prancha: `prancha.png`
+- Aprovação humana (storyboard → render definitivo): **SIM**
+
+## Falas (QA por transcrição cega)
+
+| cena | texto | ouvido | sim. | dur. |
+|---|---|---|---|---|
+
+## Cenas
+
+- **s01_intro** — 104 quadros; bilu: 104 desenhos, sb: 104 desenhos, lant: 104 desenhos
+  - ⚠ sb: 1 quadros vazios (ex.: [1])
+- **s02_intro** — 212 quadros; nhoque: 212 desenhos, lant: 142 desenhos, sb: 212 desenhos
+  - ⚠ sb: 2 quadros vazios (ex.: [1, 2])
+- **s03_intro** — 21 quadros; teco: 21 desenhos, gogo: 21 desenhos, bilu: 21 desenhos, mimi: 21 desenhos, bo: 21 desenhos
+- **s04_intro** — 257 quadros; bilu: 257 desenhos, zuzu: 257 desenhos, teco: 257 desenhos, bat: 255 desenhos, tec: 257 desenhos
+- **s05_verso** — 92 quadros; gogo: 92 desenhos, zuzu: 92 desenhos, gato: 92 desenhos, cometa: 92 desenhos
+- **s06_verso** — 27 quadros; nhoque: 27 desenhos, lant: 27 desenhos
+- **s07_verso** — 67 quadros; mimi: 67 desenhos, gogo: 67 desenhos, sb: 67 desenhos, lant: 67 desenhos
+  - ⚠ sb: 1 quadros vazios (ex.: [1])
+- **s08_verso__p0** — 52 quadros; mimi: 52 desenhos, sb: 52 desenhos
+- **s08_verso__p1** — 52 quadros; gogo: 52 desenhos, sb3: 52 desenhos
+- **s08_verso** — 52 quadros; 
+- **s09_verso** — 53 quadros; bilu: 53 desenhos, sb: 53 desenhos, lant: 53 desenhos
+- **s10_verso** — 53 quadros; bilu: 53 desenhos, sb: 53 desenhos
+- **s11_verso** — 53 quadros; teco: 53 desenhos, sb: 53 desenhos, lant: 53 desenhos
+  - ⚠ sb: 1 quadros vazios (ex.: [1])
+- **s12_verso** — 158 quadros; teco: 85 desenhos, sb: 158 desenhos
+- **s13_refrao** — 106 quadros; bilu: 106 desenhos, sb: 106 desenhos, lant: 104 desenhos
+- **s14_refrao** — 119 quadros; gogo: 119 desenhos, mimi: 119 desenhos, teco: 119 desenhos, bo: 119 desenhos
+- **s15_refrao** — 92 quadros; teco: 92 desenhos, sb: 92 desenhos, lant: 92 desenhos
+- **s16_refrao** — 158 quadros; mimi: 158 desenhos, bo: 158 desenhos
+- **s17_intervalo** — 92 quadros; zuzu: 92 desenhos, mimi: 92 desenhos, sb: 92 desenhos
+- **s18_intervalo__p0** — 50 quadros; teco: 50 desenhos, bo: 50 desenhos
+- **s18_intervalo__p1** — 50 quadros; gogo: 50 desenhos, bo: 50 desenhos
+- **s18_intervalo** — 50 quadros; 
+- **s19_intervalo** — 180 quadros; bilu: 180 desenhos, zuzu: 180 desenhos, gogo: 180 desenhos, bat: 178 desenhos, tec: 180 desenhos
+- **s20_intervalo** — 48 quadros; teco: 48 desenhos, mimi: 48 desenhos, sb: 48 desenhos, lant: 48 desenhos
+- **s21_ponte** — 65 quadros; nhoque: 65 desenhos, lant: 65 desenhos
+- **s22_ponte__p0** — 40 quadros; nhoque: 40 desenhos, lant: 40 desenhos, sb: 40 desenhos
+- **s22_ponte__p1** — 40 quadros; teco: 40 desenhos, lant: 40 desenhos, sb3: 40 desenhos
+- **s22_ponte** — 40 quadros; 
+- **s23_ponte** — 52 quadros; gogo: 52 desenhos, sb: 52 desenhos, lant: 52 desenhos
+- **s24_ponte** — 53 quadros; gogo: 30 desenhos, sb: 53 desenhos
+- **s25_ponte** — 52 quadros; teco: 52 desenhos, bo: 52 desenhos
+- **s26_ponte** — 40 quadros; mimi: 40 desenhos, sb: 40 desenhos
+- **s27_ponte** — 118 quadros; mimi: 118 desenhos, sb: 118 desenhos, lant: 116 desenhos
+- **s28_verso** — 53 quadros; bilu: 53 desenhos, teco: 53 desenhos, sb2: 53 desenhos, lant: 53 desenhos
+  - ⚠ sb2: 2 quadros vazios (ex.: [1, 2])
+- **s29_verso** — 52 quadros; bilu: 52 desenhos, teco: 52 desenhos, sb2: 52 desenhos
+- **s30_verso** — 52 quadros; bilu: 52 desenhos, teco: 52 desenhos, gogo: 52 desenhos, sb2: 52 desenhos
+- **s31_verso__p0** — 52 quadros; gogo: 52 desenhos, sb2: 52 desenhos
+- **s31_verso__p1** — 52 quadros; teco: 52 desenhos, sb2: 52 desenhos
+- **s31_verso** — 52 quadros; 
+- **s32_verso** — 53 quadros; mimi: 53 desenhos, sb2: 53 desenhos, lant: 53 desenhos
+- **s33_verso** — 53 quadros; mimi: 53 desenhos, lant: 53 desenhos, form: 53 desenhos
+- **s34_verso** — 51 quadros; lant: 51 desenhos, form: 51 desenhos
+- **s35_verso** — 158 quadros; mimi: 85 desenhos, bilu: 123 desenhos, sb2: 158 desenhos, lant: 135 desenhos, form: 158 desenhos
+- **s36_refrao** — 104 quadros; nhoque: 104 desenhos, sb: 104 desenhos, lant: 104 desenhos
+- **s37_refrao** — 117 quadros; bilu: 117 desenhos, mimi: 117 desenhos, zuzu: 117 desenhos, bo: 117 desenhos
+- **s38_refrao** — 92 quadros; mimi: 92 desenhos, sb: 92 desenhos, lant: 92 desenhos
+- **s39_refrao__p0** — 117 quadros; zuzu: 117 desenhos
+- **s39_refrao__p1** — 117 quadros; nhoque: 117 desenhos
+- **s39_refrao** — 117 quadros; 
+- **s40_intervalo** — 242 quadros; bilu: 242 desenhos, zuzu: 220 desenhos, nhoque: 242 desenhos, bat: 242 desenhos, tec: 242 desenhos
+- **s41_intervalo** — 241 quadros; bilu: 238 desenhos, gogo: 237 desenhos, sb: 241 desenhos, sb3: 241 desenhos, lant: 140 desenhos
+- **s42_refrao** — 79 quadros; gogo: 79 desenhos, sb: 79 desenhos, lant: 79 desenhos
+- **s43_refrao** — 130 quadros; gogo: 130 desenhos, mimi: 130 desenhos, nhoque: 130 desenhos, bo: 130 desenhos
+- **s44_refrao** — 78 quadros; bilu: 78 desenhos, sb: 78 desenhos, lant: 78 desenhos, form: 78 desenhos, sb2: 78 desenhos
+- **s45_refrao** — 91 quadros; bilu: 91 desenhos
+- **s46_final** — 77 quadros; teco: 77 desenhos, nhoque: 77 desenhos, lant: 77 desenhos, sb: 77 desenhos, sb3: 77 desenhos
+- **s47_final** — 131 quadros; mimi: 131 desenhos, sb: 131 desenhos
+- **s48_final** — 52 quadros; zuzu: 52 desenhos, joinha: 52 desenhos, bo: 52 desenhos
+  - ⚠ joinha: 1 quadros vazios (ex.: [1])
+- **s49_final** — 65 quadros; bilu: 65 desenhos, mimi: 65 desenhos, nv: 65 desenhos
+- **s50_final** — 84 quadros; gogo: 84 desenhos, botao: 84 desenhos, bo: 84 desenhos
+  - ⚠ botao: 1 quadros vazios (ex.: [1])
+- **s51_final** — 150 quadros; gogo: 150 desenhos, sb: 150 desenhos, lant: 139 desenhos
+- **s52_final** — 90 quadros; teco: 90 desenhos, gogo: 90 desenhos, mimi: 90 desenhos, zuzu: 90 desenhos, bilu: 90 desenhos, nhoque: 90 desenhos, nv: 90 desenhos
+- **s53_final** — 125 quadros; bilu: 125 desenhos, sb: 125 desenhos, lant: 123 desenhos
+
+## Avisos
+
+- storyboard s01_intro: pendente
+- storyboard s02_intro: pendente
+- storyboard s03_intro: pendente
+- storyboard s04_intro: pendente
+- storyboard s05_verso: pendente
+- storyboard s06_verso: pendente
+- storyboard s07_verso: pendente
+- storyboard s08_verso: pendente
+- storyboard s09_verso: pendente
+- storyboard s10_verso: pendente
+- storyboard s11_verso: pendente
+- storyboard s12_verso: pendente
+- storyboard s13_refrao: pendente
+- storyboard s14_refrao: pendente
+- storyboard s15_refrao: pendente
+- storyboard s16_refrao: pendente
+- storyboard s17_intervalo: pendente
+- storyboard s18_intervalo: pendente
+- storyboard s19_intervalo: pendente
+- storyboard s20_intervalo: pendente
+- storyboard s21_ponte: pendente
+- storyboard s22_ponte: pendente
+- storyboard s23_ponte: pendente
+- storyboard s24_ponte: pendente
+- storyboard s25_ponte: pendente
+- storyboard s26_ponte: pendente
+- storyboard s27_ponte: pendente
+- storyboard s28_verso: pendente
+- storyboard s29_verso: pendente
+- storyboard s30_verso: pendente
+- storyboard s31_verso: pendente
+- storyboard s32_verso: pendente
+- storyboard s33_verso: pendente
+- storyboard s34_verso: pendente
+- storyboard s35_verso: pendente
+- storyboard s36_refrao: pendente
+- storyboard s37_refrao: pendente
+- storyboard s38_refrao: pendente
+- storyboard s39_refrao: pendente
+- storyboard s40_intervalo: pendente
+- storyboard s41_intervalo: pendente
+- storyboard s42_refrao: pendente
+- storyboard s43_refrao: pendente
+- storyboard s44_refrao: pendente
+- storyboard s45_refrao: pendente
+- storyboard s46_final: pendente
+- storyboard s47_final: pendente
+- storyboard s48_final: pendente
+- storyboard s49_final: pendente
+- storyboard s50_final: pendente
+- storyboard s51_final: pendente
+- storyboard s52_final: pendente
+- storyboard s53_final: pendente

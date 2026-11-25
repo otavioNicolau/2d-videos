@@ -1,0 +1,1949 @@
+{
+  "episode": "ep08-sombra-de-monstrinho",
+  "scenes": {
+    "s01_intro": {
+      "frames": 104,
+      "performers": {
+        "bilu": {
+          "drawings": 104,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 103
+          },
+          "empty_frames": 0
+        },
+        "sb": {
+          "drawings": 104,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 103
+          },
+          "empty_frames": 1
+        },
+        "lant": {
+          "drawings": 104,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 103
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [
+        "sb: 1 quadros vazios (ex.: [1])"
+      ],
+      "frozen_samples": 0
+    },
+    "s02_intro": {
+      "frames": 212,
+      "performers": {
+        "nhoque": {
+          "drawings": 212,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 211
+          },
+          "empty_frames": 0
+        },
+        "lant": {
+          "drawings": 142,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 211
+          },
+          "empty_frames": 0
+        },
+        "sb": {
+          "drawings": 212,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 211
+          },
+          "empty_frames": 2
+        }
+      },
+      "issues": [
+        "sb: 2 quadros vazios (ex.: [1, 2])"
+      ],
+      "frozen_samples": 0
+    },
+    "s03_intro": {
+      "frames": 21,
+      "performers": {
+        "teco": {
+          "drawings": 21,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 20
+          },
+          "empty_frames": 0
+        },
+        "gogo": {
+          "drawings": 21,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 20
+          },
+          "empty_frames": 0
+        },
+        "bilu": {
+          "drawings": 21,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 20
+          },
+          "empty_frames": 0
+        },
+        "mimi": {
+          "drawings": 21,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 20
+          },
+          "empty_frames": 0
+        },
+        "bo": {
+          "drawings": 21,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 20
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s04_intro": {
+      "frames": 257,
+      "performers": {
+        "bilu": {
+          "drawings": 257,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 256
+          },
+          "empty_frames": 0
+        },
+        "zuzu": {
+          "drawings": 257,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 256
+          },
+          "empty_frames": 0
+        },
+        "teco": {
+          "drawings": 257,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 256
+          },
+          "empty_frames": 0
+        },
+        "bat": {
+          "drawings": 255,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 256
+          },
+          "empty_frames": 0
+        },
+        "tec": {
+          "drawings": 257,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 256
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s05_verso": {
+      "frames": 92,
+      "performers": {
+        "gogo": {
+          "drawings": 92,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 91
+          },
+          "empty_frames": 0
+        },
+        "zuzu": {
+          "drawings": 92,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 91
+          },
+          "empty_frames": 0
+        },
+        "gato": {
+          "drawings": 92,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 91
+          },
+          "empty_frames": 0
+        },
+        "cometa": {
+          "drawings": 92,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 91
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s06_verso": {
+      "frames": 27,
+      "performers": {
+        "nhoque": {
+          "drawings": 27,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 26
+          },
+          "empty_frames": 0
+        },
+        "lant": {
+          "drawings": 27,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 26
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s07_verso": {
+      "frames": 67,
+      "performers": {
+        "mimi": {
+          "drawings": 67,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 66
+          },
+          "empty_frames": 0
+        },
+        "gogo": {
+          "drawings": 67,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 66
+          },
+          "empty_frames": 0
+        },
+        "sb": {
+          "drawings": 67,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 66
+          },
+          "empty_frames": 1
+        },
+        "lant": {
+          "drawings": 67,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 66
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [
+        "sb: 1 quadros vazios (ex.: [1])"
+      ],
+      "frozen_samples": 0
+    },
+    "s08_verso__p0": {
+      "frames": 52,
+      "performers": {
+        "mimi": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        },
+        "sb": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s08_verso__p1": {
+      "frames": 52,
+      "performers": {
+        "gogo": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        },
+        "sb3": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s08_verso": {
+      "frames": 52,
+      "panels": 2,
+      "issues": []
+    },
+    "s09_verso": {
+      "frames": 53,
+      "performers": {
+        "bilu": {
+          "drawings": 53,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 52
+          },
+          "empty_frames": 0
+        },
+        "sb": {
+          "drawings": 53,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 52
+          },
+          "empty_frames": 0
+        },
+        "lant": {
+          "drawings": 53,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 52
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s10_verso": {
+      "frames": 53,
+      "performers": {
+        "bilu": {
+          "drawings": 53,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 52
+          },
+          "empty_frames": 0
+        },
+        "sb": {
+          "drawings": 53,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 52
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s11_verso": {
+      "frames": 53,
+      "performers": {
+        "teco": {
+          "drawings": 53,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 52
+          },
+          "empty_frames": 0
+        },
+        "sb": {
+          "drawings": 53,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 52
+          },
+          "empty_frames": 1
+        },
+        "lant": {
+          "drawings": 53,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 52
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [
+        "sb: 1 quadros vazios (ex.: [1])"
+      ],
+      "frozen_samples": 0
+    },
+    "s12_verso": {
+      "frames": 158,
+      "performers": {
+        "teco": {
+          "drawings": 85,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 84
+          },
+          "empty_frames": 0
+        },
+        "sb": {
+          "drawings": 158,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 157
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s13_refrao": {
+      "frames": 106,
+      "performers": {
+        "bilu": {
+          "drawings": 106,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 105
+          },
+          "empty_frames": 0
+        },
+        "sb": {
+          "drawings": 106,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 105
+          },
+          "empty_frames": 0
+        },
+        "lant": {
+          "drawings": 104,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 105
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s14_refrao": {
+      "frames": 119,
+      "performers": {
+        "gogo": {
+          "drawings": 119,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 118
+          },
+          "empty_frames": 0
+        },
+        "mimi": {
+          "drawings": 119,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 118
+          },
+          "empty_frames": 0
+        },
+        "teco": {
+          "drawings": 119,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 118
+          },
+          "empty_frames": 0
+        },
+        "bo": {
+          "drawings": 119,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 118
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s15_refrao": {
+      "frames": 92,
+      "performers": {
+        "teco": {
+          "drawings": 92,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 91
+          },
+          "empty_frames": 0
+        },
+        "sb": {
+          "drawings": 92,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 91
+          },
+          "empty_frames": 0
+        },
+        "lant": {
+          "drawings": 92,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 91
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s16_refrao": {
+      "frames": 158,
+      "performers": {
+        "mimi": {
+          "drawings": 158,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 157
+          },
+          "empty_frames": 0
+        },
+        "bo": {
+          "drawings": 158,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 157
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s17_intervalo": {
+      "frames": 92,
+      "performers": {
+        "zuzu": {
+          "drawings": 92,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 91
+          },
+          "empty_frames": 0
+        },
+        "mimi": {
+          "drawings": 92,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 91
+          },
+          "empty_frames": 0
+        },
+        "sb": {
+          "drawings": 92,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 91
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s18_intervalo__p0": {
+      "frames": 50,
+      "performers": {
+        "teco": {
+          "drawings": 50,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 49
+          },
+          "empty_frames": 0
+        },
+        "bo": {
+          "drawings": 50,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 49
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s18_intervalo__p1": {
+      "frames": 50,
+      "performers": {
+        "gogo": {
+          "drawings": 50,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 49
+          },
+          "empty_frames": 0
+        },
+        "bo": {
+          "drawings": 50,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 49
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s18_intervalo": {
+      "frames": 50,
+      "panels": 2,
+      "issues": []
+    },
+    "s19_intervalo": {
+      "frames": 180,
+      "performers": {
+        "bilu": {
+          "drawings": 180,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 179
+          },
+          "empty_frames": 0
+        },
+        "zuzu": {
+          "drawings": 180,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 179
+          },
+          "empty_frames": 0
+        },
+        "gogo": {
+          "drawings": 180,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 179
+          },
+          "empty_frames": 0
+        },
+        "bat": {
+          "drawings": 178,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 179
+          },
+          "empty_frames": 0
+        },
+        "tec": {
+          "drawings": 180,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 179
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s20_intervalo": {
+      "frames": 48,
+      "performers": {
+        "teco": {
+          "drawings": 48,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 47
+          },
+          "empty_frames": 0
+        },
+        "mimi": {
+          "drawings": 48,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 47
+          },
+          "empty_frames": 0
+        },
+        "sb": {
+          "drawings": 48,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 47
+          },
+          "empty_frames": 0
+        },
+        "lant": {
+          "drawings": 48,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 47
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s21_ponte": {
+      "frames": 65,
+      "performers": {
+        "nhoque": {
+          "drawings": 65,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 64
+          },
+          "empty_frames": 0
+        },
+        "lant": {
+          "drawings": 65,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 64
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s22_ponte__p0": {
+      "frames": 40,
+      "performers": {
+        "nhoque": {
+          "drawings": 40,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 39
+          },
+          "empty_frames": 0
+        },
+        "lant": {
+          "drawings": 40,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 39
+          },
+          "empty_frames": 0
+        },
+        "sb": {
+          "drawings": 40,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 39
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s22_ponte__p1": {
+      "frames": 40,
+      "performers": {
+        "teco": {
+          "drawings": 40,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 39
+          },
+          "empty_frames": 0
+        },
+        "lant": {
+          "drawings": 40,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 39
+          },
+          "empty_frames": 0
+        },
+        "sb3": {
+          "drawings": 40,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 39
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s22_ponte": {
+      "frames": 40,
+      "panels": 2,
+      "issues": []
+    },
+    "s23_ponte": {
+      "frames": 52,
+      "performers": {
+        "gogo": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        },
+        "sb": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        },
+        "lant": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s24_ponte": {
+      "frames": 53,
+      "performers": {
+        "gogo": {
+          "drawings": 30,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 29
+          },
+          "empty_frames": 0
+        },
+        "sb": {
+          "drawings": 53,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 52
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s25_ponte": {
+      "frames": 52,
+      "performers": {
+        "teco": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        },
+        "bo": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s26_ponte": {
+      "frames": 40,
+      "performers": {
+        "mimi": {
+          "drawings": 40,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 39
+          },
+          "empty_frames": 0
+        },
+        "sb": {
+          "drawings": 40,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 39
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s27_ponte": {
+      "frames": 118,
+      "performers": {
+        "mimi": {
+          "drawings": 118,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 117
+          },
+          "empty_frames": 0
+        },
+        "sb": {
+          "drawings": 118,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 117
+          },
+          "empty_frames": 0
+        },
+        "lant": {
+          "drawings": 116,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 117
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s28_verso": {
+      "frames": 53,
+      "performers": {
+        "bilu": {
+          "drawings": 53,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 52
+          },
+          "empty_frames": 0
+        },
+        "teco": {
+          "drawings": 53,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 52
+          },
+          "empty_frames": 0
+        },
+        "sb2": {
+          "drawings": 53,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 52
+          },
+          "empty_frames": 2
+        },
+        "lant": {
+          "drawings": 53,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 52
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [
+        "sb2: 2 quadros vazios (ex.: [1, 2])"
+      ],
+      "frozen_samples": 0
+    },
+    "s29_verso": {
+      "frames": 52,
+      "performers": {
+        "bilu": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        },
+        "teco": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        },
+        "sb2": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s30_verso": {
+      "frames": 52,
+      "performers": {
+        "bilu": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        },
+        "teco": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        },
+        "gogo": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        },
+        "sb2": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s31_verso__p0": {
+      "frames": 52,
+      "performers": {
+        "gogo": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        },
+        "sb2": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s31_verso__p1": {
+      "frames": 52,
+      "performers": {
+        "teco": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        },
+        "sb2": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s31_verso": {
+      "frames": 52,
+      "panels": 2,
+      "issues": []
+    },
+    "s32_verso": {
+      "frames": 53,
+      "performers": {
+        "mimi": {
+          "drawings": 53,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 52
+          },
+          "empty_frames": 0
+        },
+        "sb2": {
+          "drawings": 53,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 52
+          },
+          "empty_frames": 0
+        },
+        "lant": {
+          "drawings": 53,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 52
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s33_verso": {
+      "frames": 53,
+      "performers": {
+        "mimi": {
+          "drawings": 53,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 52
+          },
+          "empty_frames": 0
+        },
+        "lant": {
+          "drawings": 53,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 52
+          },
+          "empty_frames": 0
+        },
+        "form": {
+          "drawings": 53,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 52
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s34_verso": {
+      "frames": 51,
+      "performers": {
+        "lant": {
+          "drawings": 51,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 50
+          },
+          "empty_frames": 0
+        },
+        "form": {
+          "drawings": 51,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 50
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s35_verso": {
+      "frames": 158,
+      "performers": {
+        "mimi": {
+          "drawings": 85,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 84
+          },
+          "empty_frames": 0
+        },
+        "bilu": {
+          "drawings": 123,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 122
+          },
+          "empty_frames": 0
+        },
+        "sb2": {
+          "drawings": 158,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 157
+          },
+          "empty_frames": 0
+        },
+        "lant": {
+          "drawings": 135,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 157
+          },
+          "empty_frames": 0
+        },
+        "form": {
+          "drawings": 158,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 157
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s36_refrao": {
+      "frames": 104,
+      "performers": {
+        "nhoque": {
+          "drawings": 104,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 103
+          },
+          "empty_frames": 0
+        },
+        "sb": {
+          "drawings": 104,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 103
+          },
+          "empty_frames": 0
+        },
+        "lant": {
+          "drawings": 104,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 103
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s37_refrao": {
+      "frames": 117,
+      "performers": {
+        "bilu": {
+          "drawings": 117,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 116
+          },
+          "empty_frames": 0
+        },
+        "mimi": {
+          "drawings": 117,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 116
+          },
+          "empty_frames": 0
+        },
+        "zuzu": {
+          "drawings": 117,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 116
+          },
+          "empty_frames": 0
+        },
+        "bo": {
+          "drawings": 117,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 116
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s38_refrao": {
+      "frames": 92,
+      "performers": {
+        "mimi": {
+          "drawings": 92,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 91
+          },
+          "empty_frames": 0
+        },
+        "sb": {
+          "drawings": 92,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 91
+          },
+          "empty_frames": 0
+        },
+        "lant": {
+          "drawings": 92,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 91
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s39_refrao__p0": {
+      "frames": 117,
+      "performers": {
+        "zuzu": {
+          "drawings": 117,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 116
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s39_refrao__p1": {
+      "frames": 117,
+      "performers": {
+        "nhoque": {
+          "drawings": 117,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 116
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s39_refrao": {
+      "frames": 117,
+      "panels": 2,
+      "issues": []
+    },
+    "s40_intervalo": {
+      "frames": 242,
+      "performers": {
+        "bilu": {
+          "drawings": 242,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 241
+          },
+          "empty_frames": 0
+        },
+        "zuzu": {
+          "drawings": 220,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 241
+          },
+          "empty_frames": 0
+        },
+        "nhoque": {
+          "drawings": 242,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 241
+          },
+          "empty_frames": 0
+        },
+        "bat": {
+          "drawings": 242,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 241
+          },
+          "empty_frames": 0
+        },
+        "tec": {
+          "drawings": 242,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 241
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s41_intervalo": {
+      "frames": 241,
+      "performers": {
+        "bilu": {
+          "drawings": 238,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 240
+          },
+          "empty_frames": 0
+        },
+        "gogo": {
+          "drawings": 237,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 240
+          },
+          "empty_frames": 0
+        },
+        "sb": {
+          "drawings": 241,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 240
+          },
+          "empty_frames": 0
+        },
+        "sb3": {
+          "drawings": 241,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 240
+          },
+          "empty_frames": 0
+        },
+        "lant": {
+          "drawings": 140,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 240
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s42_refrao": {
+      "frames": 79,
+      "performers": {
+        "gogo": {
+          "drawings": 79,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 78
+          },
+          "empty_frames": 0
+        },
+        "sb": {
+          "drawings": 79,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 78
+          },
+          "empty_frames": 0
+        },
+        "lant": {
+          "drawings": 79,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 78
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s43_refrao": {
+      "frames": 130,
+      "performers": {
+        "gogo": {
+          "drawings": 130,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 129
+          },
+          "empty_frames": 0
+        },
+        "mimi": {
+          "drawings": 130,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 129
+          },
+          "empty_frames": 0
+        },
+        "nhoque": {
+          "drawings": 130,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 129
+          },
+          "empty_frames": 0
+        },
+        "bo": {
+          "drawings": 130,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 129
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s44_refrao": {
+      "frames": 78,
+      "performers": {
+        "bilu": {
+          "drawings": 78,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 77
+          },
+          "empty_frames": 0
+        },
+        "sb": {
+          "drawings": 78,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 77
+          },
+          "empty_frames": 0
+        },
+        "lant": {
+          "drawings": 78,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 77
+          },
+          "empty_frames": 0
+        },
+        "form": {
+          "drawings": 78,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 77
+          },
+          "empty_frames": 0
+        },
+        "sb2": {
+          "drawings": 78,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 77
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s45_refrao": {
+      "frames": 91,
+      "performers": {
+        "bilu": {
+          "drawings": 91,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 90
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s46_final": {
+      "frames": 77,
+      "performers": {
+        "teco": {
+          "drawings": 77,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 76
+          },
+          "empty_frames": 0
+        },
+        "nhoque": {
+          "drawings": 77,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 76
+          },
+          "empty_frames": 0
+        },
+        "lant": {
+          "drawings": 77,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 76
+          },
+          "empty_frames": 0
+        },
+        "sb": {
+          "drawings": 77,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 76
+          },
+          "empty_frames": 0
+        },
+        "sb3": {
+          "drawings": 77,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 76
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s47_final": {
+      "frames": 131,
+      "performers": {
+        "mimi": {
+          "drawings": 131,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 130
+          },
+          "empty_frames": 0
+        },
+        "sb": {
+          "drawings": 131,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 130
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s48_final": {
+      "frames": 52,
+      "performers": {
+        "zuzu": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        },
+        "joinha": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 1
+        },
+        "bo": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [
+        "joinha: 1 quadros vazios (ex.: [1])"
+      ],
+      "frozen_samples": 0
+    },
+    "s49_final": {
+      "frames": 65,
+      "performers": {
+        "bilu": {
+          "drawings": 65,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 64
+          },
+          "empty_frames": 0
+        },
+        "mimi": {
+          "drawings": 65,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 64
+          },
+          "empty_frames": 0
+        },
+        "nv": {
+          "drawings": 65,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 64
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s50_final": {
+      "frames": 84,
+      "performers": {
+        "gogo": {
+          "drawings": 84,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 83
+          },
+          "empty_frames": 0
+        },
+        "botao": {
+          "drawings": 84,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 83
+          },
+          "empty_frames": 1
+        },
+        "bo": {
+          "drawings": 84,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 83
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [
+        "botao: 1 quadros vazios (ex.: [1])"
+      ],
+      "frozen_samples": 0
+    },
+    "s51_final": {
+      "frames": 150,
+      "performers": {
+        "gogo": {
+          "drawings": 150,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 149
+          },
+          "empty_frames": 0
+        },
+        "sb": {
+          "drawings": 150,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 149
+          },
+          "empty_frames": 0
+        },
+        "lant": {
+          "drawings": 139,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 149
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s52_final": {
+      "frames": 90,
+      "performers": {
+        "teco": {
+          "drawings": 90,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 89
+          },
+          "empty_frames": 0
+        },
+        "gogo": {
+          "drawings": 90,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 89
+          },
+          "empty_frames": 0
+        },
+        "mimi": {
+          "drawings": 90,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 89
+          },
+          "empty_frames": 0
+        },
+        "zuzu": {
+          "drawings": 90,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 89
+          },
+          "empty_frames": 0
+        },
+        "bilu": {
+          "drawings": 90,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 89
+          },
+          "empty_frames": 0
+        },
+        "nhoque": {
+          "drawings": 90,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 89
+          },
+          "empty_frames": 0
+        },
+        "nv": {
+          "drawings": 90,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 89
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s53_final": {
+      "frames": 125,
+      "performers": {
+        "bilu": {
+          "drawings": 125,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 124
+          },
+          "empty_frames": 0
+        },
+        "sb": {
+          "drawings": 125,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 124
+          },
+          "empty_frames": 0
+        },
+        "lant": {
+          "drawings": 123,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 124
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    }
+  },
+  "warnings": [
+    "storyboard s01_intro: pendente",
+    "storyboard s02_intro: pendente",
+    "storyboard s03_intro: pendente",
+    "storyboard s04_intro: pendente",
+    "storyboard s05_verso: pendente",
+    "storyboard s06_verso: pendente",
+    "storyboard s07_verso: pendente",
+    "storyboard s08_verso: pendente",
+    "storyboard s09_verso: pendente",
+    "storyboard s10_verso: pendente",
+    "storyboard s11_verso: pendente",
+    "storyboard s12_verso: pendente",
+    "storyboard s13_refrao: pendente",
+    "storyboard s14_refrao: pendente",
+    "storyboard s15_refrao: pendente",
+    "storyboard s16_refrao: pendente",
+    "storyboard s17_intervalo: pendente",
+    "storyboard s18_intervalo: pendente",
+    "storyboard s19_intervalo: pendente",
+    "storyboard s20_intervalo: pendente",
+    "storyboard s21_ponte: pendente",
+    "storyboard s22_ponte: pendente",
+    "storyboard s23_ponte: pendente",
+    "storyboard s24_ponte: pendente",
+    "storyboard s25_ponte: pendente",
+    "storyboard s26_ponte: pendente",
+    "storyboard s27_ponte: pendente",
+    "storyboard s28_verso: pendente",
+    "storyboard s29_verso: pendente",
+    "storyboard s30_verso: pendente",
+    "storyboard s31_verso: pendente",
+    "storyboard s32_verso: pendente",
+    "storyboard s33_verso: pendente",
+    "storyboard s34_verso: pendente",
+    "storyboard s35_verso: pendente",
+    "storyboard s36_refrao: pendente",
+    "storyboard s37_refrao: pendente",
+    "storyboard s38_refrao: pendente",
+    "storyboard s39_refrao: pendente",
+    "storyboard s40_intervalo: pendente",
+    "storyboard s41_intervalo: pendente",
+    "storyboard s42_refrao: pendente",
+    "storyboard s43_refrao: pendente",
+    "storyboard s44_refrao: pendente",
+    "storyboard s45_refrao: pendente",
+    "storyboard s46_final: pendente",
+    "storyboard s47_final: pendente",
+    "storyboard s48_final: pendente",
+    "storyboard s49_final: pendente",
+    "storyboard s50_final: pendente",
+    "storyboard s51_final: pendente",
+    "storyboard s52_final: pendente",
+    "storyboard s53_final: pendente"
+  ],
+  "lines": {},
+  "video": "/home/otavio/2d/projects/fofolucos/ep08-sombra-de-monstrinho/output/ep08-sombra-de-monstrinho.mp4",
+  "contact_sheet": "/home/otavio/2d/projects/fofolucos/ep08-sombra-de-monstrinho/output/prancha.png",
+  "approved": true
+}

@@ -414,5 +414,131 @@
   },
   "acertos": "10/10",
   "piorou": []
+ },
+ {
+  "musica": "29",
+  "titulo": "Mamãe Querida",
+  "medidas": {
+   "planos": 50,
+   "cenarios_reais": 5,
+   "pct_fundo_danca": 24,
+   "tipos_acao": 20,
+   "pct_camera": 100,
+   "tipos_objeto": 5,
+   "objetos_animados_pl": 0.16,
+   "coadjuvantes": 1,
+   "pct_arranjo_repetido": 6,
+   "sons_pl": 0.0,
+   "telas_divididas": 0
+  },
+  "acertos": "6/10",
+  "piorou": [
+   "planos (cortes): 50 (média das 3 anteriores: 55.33)",
+   "cenários de verdade (fora o fundo de dança): 5 (média das 3 anteriores: 11.33)",
+   "% de planos em fundo de dança: 24 (média das 3 anteriores: 7)",
+   "tipos de ação diferentes: 20 (média das 3 anteriores: 33)",
+   "tipos de objeto/bicho em cena: 5 (média das 3 anteriores: 21.67)",
+   "objetos animados por plano: 0.16 (média das 3 anteriores: 1.76)",
+   "coadjuvantes (fora Laurinha e Luisinho): 1 (média das 3 anteriores: 4.33)",
+   "% de planos com a mesma arrumação do anterior: 6 (média das 3 anteriores: 0)",
+   "telas divididas (dois lugares ao mesmo tempo): 0 (média das 3 anteriores: 7)"
+  ]
+ },
+ {
+  "musica": "30",
+  "titulo": "Bi-Bi, Fom-Fom!",
+  "medidas": {
+   "planos": 51,
+   "cenarios_reais": 3,
+   "pct_fundo_danca": 25,
+   "tipos_acao": 15,
+   "pct_camera": 100,
+   "tipos_objeto": 10,
+   "objetos_animados_pl": 1.16,
+   "coadjuvantes": 1,
+   "pct_arranjo_repetido": 2,
+   "sons_pl": 0.0,
+   "telas_divididas": 0
+  },
+  "acertos": "6/10",
+  "piorou": [
+   "planos (cortes): 51 (média das 3 anteriores: 53.33)",
+   "cenários de verdade (fora o fundo de dança): 3 (média das 3 anteriores: 9.33)",
+   "% de planos em fundo de dança: 25 (média das 3 anteriores: 12.67)",
+   "tipos de ação diferentes: 15 (média das 3 anteriores: 28.67)",
+   "tipos de objeto/bicho em cena: 10 (média das 3 anteriores: 16.33)",
+   "objetos animados por plano: 1.16 (média das 3 anteriores: 1.26)",
+   "coadjuvantes (fora Laurinha e Luisinho): 1 (média das 3 anteriores: 3.67)",
+   "telas divididas (dois lugares ao mesmo tempo): 0 (média das 3 anteriores: 4.67)"
+  ]
+ },
+ {
+  "musica": "31",
+  "titulo": "Chulé de Sapo!",
+  "medidas": {
+   "planos": 50,
+   "cenarios_reais": 5,
+   "pct_fundo_danca": 34,
+   "tipos_acao": 13,
+   "pct_camera": 100,
+   "tipos_objeto": 14,
+   "objetos_animados_pl": 1.14,
+   "coadjuvantes": 1,
+   "pct_arranjo_repetido": 0,
+   "sons_pl": 0.0,
+   "telas_divididas": 0
+  },
+  "acertos": "6/10",
+  "piorou": [
+   "planos (cortes): 50 (média das 3 anteriores: 52.33)",
+   "cenários de verdade (fora o fundo de dança): 5 (média das 3 anteriores: 7)",
+   "% de planos em fundo de dança: 34 (média das 3 anteriores: 18.67)",
+   "tipos de ação diferentes: 13 (média das 3 anteriores: 22.67)",
+   "coadjuvantes (fora Laurinha e Luisinho): 1 (média das 3 anteriores: 2.33)",
+   "telas divididas (dois lugares ao mesmo tempo): 0 (média das 3 anteriores: 2.33)"
+  ]
+ },
+ {
+  "musica": "32",
+  "titulo": "O Bigodão do Vovô Ciço!",
+  "medidas": {
+   "planos": 51,
+   "cenarios_reais": 3,
+   "pct_fundo_danca": 24,
+   "tipos_acao": 18,
+   "pct_camera": 100,
+   "tipos_objeto": 7,
+   "objetos_animados_pl": 0.18,
+   "coadjuvantes": 2,
+   "pct_arranjo_repetido": 4,
+   "sons_pl": 0.0,
+   "telas_divididas": 0
+  },
+  "acertos": "6/10",
+  "piorou": [
+   "cenários de verdade (fora o fundo de dança): 3 (média das 3 anteriores: 4.33)",
+   "tipos de objeto/bicho em cena: 7 (média das 3 anteriores: 9.67)",
+   "objetos animados por plano: 0.18 (média das 3 anteriores: 0.82)",
+   "% de planos com a mesma arrumação do anterior: 4 (média das 3 anteriores: 2.67)"
+  ]
+ },
+ {
+  "musica": "33",
+  "titulo": "Brigadeiro",
+  "medidas": {
+   "planos": 52,
+   "cenarios_reais": 6,
+   "pct_fundo_danca": 13,
+   "tipos_acao": 30,
+   "pct_camera": 100,
+   "tipos_objeto": 14,
+   "objetos_animados_pl": 1.67,
+   "coadjuvantes": 3,
+   "pct_arranjo_repetido": 2,
+   "sons_pl": 0.0,
+   "telas_divididas": 5
+  },
+  "acertos": "10/10",
+  "piorou": []
  }
 ]

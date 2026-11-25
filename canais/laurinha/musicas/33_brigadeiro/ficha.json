@@ -1,68 +1,153 @@
 {
- "schema": "musica-1.0",
- "titulo": "Brigadeiro",
- "gancho": "brigadeiro",
- "palavras_tema": [
-  "brigadeiro",
-  "festa",
-  "parabéns",
-  "quem comeu"
- ],
- "tipo": "comida",
- "tema": "o brigadeiro que sumiu da festa: quem comeu?",
- "dia_a_dia": [
-  "festa de aniversário",
-  "confessar e dividir"
- ],
- "curiosidade": "o brigadeiro foi inventado aqui no Brasil",
- "ritmo": "latino_infantil",
- "bpm": 130,
- "estrutura": "R",
- "voz": "laurinha",
- "cenas": [
-  {
-   "parte": "intro",
-   "ideia": "festa de aniversário: balões, chapéus e o prato cheio de brigadeiro"
+  "schema": "musica-1.0",
+  "titulo": "Brigadeiro",
+  "gancho": "brigadeiro",
+  "palavras_tema": [
+    "brigadeiro",
+    "festa",
+    "parabéns",
+    "quem comeu"
+  ],
+  "tipo": "comida",
+  "tema": "o brigadeiro que sumiu na festa da vovó: a Laurinha vira detetive (lupa, pegadas de chocolate) e descobre o Luisinho, que confessa… e guardou o último pra ela",
+  "dia_a_dia": [
+    "festa de aniversário",
+    "confessar e dividir"
+  ],
+  "curiosidade": "o brigadeiro foi inventado aqui no Brasil",
+  "ritmo": "latino_infantil",
+  "bpm": 130,
+  "estrutura": "R",
+  "voz": "laurinha",
+  "cenas": [
+    {
+      "parte": "intro",
+      "ideia": "festa de aniversário: balões, chapéus e o prato cheio de brigadeiro"
+    },
+    {
+      "parte": "verso 1",
+      "ideia": "na hora do parabéns, o prato está vazio! cara de susto geral"
+    },
+    {
+      "parte": "refrão",
+      "ideia": "a Laurinha detetive com lupa pergunta para cada um (e para quem assiste)"
+    },
+    {
+      "parte": "ponte",
+      "ideia": "comandos de detetive: pega a lupa, procura pelo chão, olha embaixo da mesa — pegadas de chocolate! segue a pegada na ponta do pé, psiu… achei!"
+    },
+    {
+      "parte": "final",
+      "ideia": "convite; o Luisinho ri com a boca de chocolate e oferece o último brigadeiro"
+    }
+  ],
+  "duracao_alvo": [
+    140,
+    170
+  ],
+  "alternativas": [
+    "pagodao"
+  ],
+  "status": "aprovada",
+  "versoes": [
+    "Brigadeiro"
+  ],
+  "youtube": {
+    "resumo": "BRIGADEIRO! 🍫🔍 Na festa da vovó, na hora do parabéns… a bandeja está vazia! Quem comeu o brigadeiro? A Laurinha pega a lupa e vira detetive: pegadas de chocolate no chão! Segue a pegada na ponta do pé e descobre junto!",
+    "resumo_short": "BRIGADEIRO! 🍫 Quem comeu? Descubra com a Laurinha!",
+    "curiosidade": "",
+    "miniatura": "BRIGADEIRO!\nQUEM COMEU?",
+    "miniatura_cena": {
+      "fundo": "aneis",
+      "centro": [
+        400,
+        430
+      ],
+      "cores": [
+        [
+          255,
+          150,
+          190
+        ],
+        [
+          255,
+          240,
+          200
+        ],
+        [
+          190,
+          150,
+          255
+        ],
+        [
+          150,
+          230,
+          205
+        ]
+      ],
+      "heroi": {
+        "id": "laurinha",
+        "pose": {
+          "expr": "determined",
+          "turn": 0.2,
+          "holding": "lupa",
+          "hand_n_x": -110,
+          "hand_n_y": -60,
+          "hand_n_bend": 0.5,
+          "paw_n": 1
+        }
+      },
+      "par": {
+        "id": "luisinho",
+        "pose": {
+          "expr": "sly",
+          "turn": -0.2,
+          "chocolate": 1.0,
+          "holding": "brigadeiro",
+          "hand_n_x": -110,
+          "hand_n_y": 20,
+          "hand_n_bend": 0.5,
+          "paw_n": 1
+        },
+        "tam": 560,
+        "x": 1060,
+        "corte": 120
+      },
+      "objetos": [
+        {
+          "id": "bandeja_brigadeiro",
+          "pose": {
+            "quantos": 12,
+            "brilho": 1.0
+          },
+          "tam": 330,
+          "x": 770,
+          "base": 560
+        }
+      ],
+      "frente": [
+        {
+          "id": "pegadas",
+          "pose": {
+            "n": 7,
+            "brilho": 0.6
+          },
+          "tam": 420,
+          "x": 800,
+          "base": 700
+        }
+      ]
+    }
   },
-  {
-   "parte": "verso 1",
-   "ideia": "na hora do parabéns, o prato está vazio! cara de susto geral"
+  "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz) · 23/11/2026: reescrita para 5 a 8 anos · 24/11/2026: ponte virou jogo de detetive (comandos), festa da vovó, convite 'Divide o seu?'",
+  "persona": "laurinha",
+  "playlists": [
+    "Músicas Infantis da Laurinha e do Luisinho 🐝"
+  ],
+  "cantam": {
+    "verso": "laurinha",
+    "refrão": "laurinha",
+    "ponte": "laurinha (pergunta para quem assiste)"
   },
-  {
-   "parte": "refrão",
-   "ideia": "a Laurinha detetive com lupa pergunta para cada um (e para quem assiste)"
-  },
-  {
-   "parte": "ponte",
-   "ideia": "o sapo? não. a formiga? não. o Luisinho? sim! nariz e bochecha sujos de chocolate"
-  },
-  {
-   "parte": "final",
-   "ideia": "convite; o Luisinho ri com a boca de chocolate e oferece o último brigadeiro"
-  }
- ],
- "duracao_alvo": [
-  140,
-  170
- ],
- "alternativas": [
-  "pagodao"
- ],
- "status": "letra_revisada",
- "versoes": [],
- "youtube": {
-  "resumo": "BRIGADEIRO! 🍫 Hoje é festa, tem balão e chapéu… mas na hora do parabéns a bandeja está vazia! Quem comeu o brigadeiro? Foi o cachorro? Não! Foi a formiga? Não! Tem uma pista no chão: chocolate no pé do Luisinho! Será que ele vai confessar?",
-  "resumo_short": "BRIGADEIRO! 🍫 Quem comeu? Descubra com a Laurinha!",
-  "curiosidade": ""
- },
- "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz) · 23/11/2026: reescrita para 5 a 8 anos",
- "persona": "laurinha",
- "playlists": [
-  "Músicas Infantis da Laurinha e do Luisinho 🐝"
- ],
- "cantam": {
-  "verso": "laurinha",
-  "refrão": "laurinha",
-  "ponte": "laurinha (pergunta para quem assiste)"
- }
+  "escolhida": "Brigadeiro"
 }

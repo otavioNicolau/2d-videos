@@ -1,0 +1,165 @@
+{
+  "schema": "musica-1.0",
+  "titulo": "Sombra de Monstrinho!",
+  "gancho": "sombra de monstrinho",
+  "palavras_tema": [
+    "sombra",
+    "lanterna",
+    "parede",
+    "mão",
+    "noite"
+  ],
+  "tipo": "brincadeira",
+  "tema": "de noite na Vila Monstrinha a turma brinca de SOMBRA com a lanterna: o chifrinho do Bilu vira sombra de dragão, as antenas do Teco viram um coelho. Refrão-desafio: 'sombra de monstrinho! grandona no paredão! rawr! faz com a mão!' (a criança faz junto). Ponte = comandos de sombra com as mãos (jacaré valente, borboleta voando). Virada (medo bobo): aparece uma sombra GIGANTE e assustadora, todo mundo pula de susto… a Mimi chega perto e descobre o culpado: uma formiguinha bem na frente da lanterna",
+  "dia_a_dia": [
+    "brincar de sombra com a lanterna (com um adulto)",
+    "perder o medo do escuro",
+    "quanto mais perto da luz, maior a sombra"
+  ],
+  "curiosidade": "quanto mais perto da luz um objeto fica, maior é a sombra dele na parede",
+  "ritmo": "pop_infantil",
+  "bpm": 134,
+  "estrutura": "R",
+  "voz": "fofolucos",
+  "cantam": {
+    "verso": "fofolucos",
+    "refrão": "fofolucos",
+    "ponte": "fofolucos (comandos de sombra com as mãos)"
+  },
+  "cenas": [
+    {
+      "parte": "intro",
+      "ideia": "a Vila Monstrinha de noite; a lanterna acende e uma sombra de RAWR aparece na parede"
+    },
+    {
+      "parte": "verso 1",
+      "ideia": "sombra de bichão na parede: 'quem é?'; era o Bilu fazendo dragão com o chifrinho; o Teco faz um coelho com as antenas"
+    },
+    {
+      "parte": "refrão",
+      "ideia": "sombras grandonas dançando na parede (cada monstrinho faz a sua) e RAWR; muda quem faz a sombra a cada refrão"
+    },
+    {
+      "parte": "ponte",
+      "ideia": "comandos: acende a lanterna, mão na frente, abre e fecha = jacaré; cruza os dedões, bate as mãos = borboleta voando"
+    },
+    {
+      "parte": "verso 2",
+      "ideia": "uma sombra GIGANTE e assustadora; todo mundo pula de susto; a Mimi chega perto e acha o culpado: uma formiguinha na frente da lanterna"
+    },
+    {
+      "parte": "final",
+      "ideia": "'e você? faz sombra com a mão?' · joinha · inscreva-se · tchau da turma com a formiguinha"
+    }
+  ],
+  "duracao_alvo": [
+    140,
+    170
+  ],
+  "alternativas": [],
+  "status": "aprovada",
+  "versoes": [
+    "Sombra de Monstrinho!"
+  ],
+  "persona": "fofolucos",
+  "youtube": {
+    "resumo": "SOMBRA DE MONSTRINHO! 👾🔦 De noite na Vila Monstrinha a turma brinca de sombra: o chifrinho do Bilu vira um dragão, as antenas do Teco viram um coelho… Mas aí aparece uma sombra GIGANTE na parede! Quem será? Faz sombra com a mão junto!",
+    "resumo_short": "SOMBRA DE MONSTRINHO! 👾🔦 Rawr! Faz com a mão!",
+    "curiosidade": "Quanto mais perto da luz um objeto fica, maior é a sombra dele na parede!",
+    "miniatura": "SOMBRA DE\nMONSTRINHO!",
+    "miniatura_cena": {
+      "fundo": "aneis",
+      "centro": [
+        400,
+        430
+      ],
+      "cores": [
+        [
+          255,
+          243,
+          200
+        ],
+        [
+          190,
+          150,
+          255
+        ],
+        [
+          255,
+          170,
+          70
+        ],
+        [
+          150,
+          230,
+          205
+        ]
+      ],
+      "heroi": {
+        "id": "mimi",
+        "pose": {
+          "expr": "joy",
+          "turn": 0.15,
+          "mouth": "D",
+          "hand_n_x": -135,
+          "hand_n_y": -135,
+          "hand_n_bend": 0.5,
+          "paw_n": 3,
+          "hand_f_x": 135,
+          "hand_f_y": -135,
+          "hand_f_bend": -0.5,
+          "paw_f": 3
+        }
+      },
+      "par": {
+        "id": "bilu",
+        "pose": {
+          "expr": "surprised",
+          "turn": -0.2,
+          "mouth": "O"
+        },
+        "tam": 520,
+        "x": 1040,
+        "corte": 120
+      },
+      "objetos": [
+        {
+          "id": "sombra",
+          "pose": {
+            "forma": 0,
+            "boca": 1.0,
+            "escuro": 0.85
+          },
+          "tam": 380,
+          "x": 760,
+          "base": 630
+        }
+      ],
+      "frente": [
+        {
+          "id": "lanterna",
+          "pose": {
+            "sem_contorno": 1.0,
+            "liga": 1.0,
+            "dir": -0.1
+          },
+          "tam": 240,
+          "x": 560,
+          "base": 715
+        },
+        {
+          "id": "formiga",
+          "pose": {
+            "sem_contorno": 1.0,
+            "aceno": 0.4
+          },
+          "tam": 140,
+          "x": 790,
+          "base": 712
+        }
+      ]
+    }
+  },
+  "revisao": "24/11/2026: letra nova para 5 a 8 anos (brincadeira interativa de sombra com a mão, medo bobo, virada da formiguinha)",
+  "escolhida": "Sombra de Monstrinho!"
+}

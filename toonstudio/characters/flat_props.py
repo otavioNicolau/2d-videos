@@ -63,7 +63,7 @@ def ln(k: Ink, pts, col: str, w: float = LINE, alpha: float = 1.0):
 ITEMS = ("copo_leite", "copo_vazio", "banana", "banana_mordida", "pente", "garrafinha", "carrinho", "sombrinha", "escova",
          "suco", "fatia_bolo", "fatia_grande", "escova_pasta", "escova_guitarra", "apito", "sapato", "estrela_natal", "sorvete",
          "baqueta", "saxofone", "pao_queijo", "pao_queijo_mordido", "baqueta_a4", "limao", "limao_mordido", "limonada",
-         "biscoito", "biscoito_mordido")
+         "biscoito", "biscoito_mordido", "lupa", "brigadeiro", "brigadeiro_mordido")
 
 
 ITEM_SCALE = 1.6
@@ -102,6 +102,27 @@ def draw_item(k: Ink, name: str, H: tuple[float, float], f: float = 1.0, ang: fl
             shape(k, ellipse_pts(x, y, r, r * 0.95, 0, 28), "#D9A15B", line="#A8713A")
         for dx, dy in ((-0.4, -0.3), (0.2, -0.45), (0.35, 0.2), (-0.2, 0.35), (-0.05, -0.02)):
             shape(k, ellipse_pts(x + dx * r, y + dy * r, r * 0.13, r * 0.11, 0, 10), "#5B3A22", line=None)
+    elif name == "lupa":                                               # lupa de detetive (33 Brigadeiro)
+        box(k, *q(-7, -20), *q(7, 26), "#8A5A36", r=6)
+        cx, cy = q(0, -52)
+        shape(k, ellipse_pts(cx, cy, 34 * S, 34 * S, 0, 32), "#FFC93C", line="#C98A1E")
+        shape(k, ellipse_pts(cx, cy, 25 * S, 25 * S, 0, 32), "#CFEFFF", line="#9FC8E0", alpha=0.95)
+        shape(k, ellipse_pts(cx - 9 * S, cy - 9 * S, 7 * S, 4 * S, -0.7, 12), "#FFFFFF", line=None, alpha=0.9)
+    elif name in ("brigadeiro", "brigadeiro_mordido"):                 # docinho de chocolate com granulado
+        x, y = q(0, -30)
+        r = 17 * S
+        if name == "brigadeiro_mordido":
+            pts = [(x + r * math.cos(t / 30 * 2 * math.pi), y + r * math.sin(t / 30 * 2 * math.pi)) for t in range(30)]
+            pts = [p_ for p_ in pts if math.hypot(p_[0] - (x + r * 0.7), p_[1] - (y - r * 0.6)) > r * 0.55]
+            shape(k, pts, "#6B3A1E", line="#3E2010")
+        else:
+            shape(k, ellipse_pts(x, y + r * 0.75, r * 1.25, r * 0.45, 0, 20), "#8A5A36", line="#5E3A1E")     # forminha
+            shape(k, ellipse_pts(x, y, r, r, 0, 24), "#6B3A1E", line="#3E2010")
+        for j in range(9):
+            a_ = j * 2.39
+            rr = r * 0.62 * math.sqrt((j + 0.5) / 9)
+            px, py = x + rr * math.cos(a_), y + rr * math.sin(a_)
+            ln(k, [(px - 3, py), (px + 3, py + 1)], ("#FFE14D", "#FF6FB1", "#7FE3FF", "#FFFFFF")[j % 4], w=LINE * 0.9)
     elif name == "pente":
         box(k, *q(-10, -70), *q(10, 10), PAL["pente"], r=6) if f > 0 else box(k, *q(10, -70), *q(-10, 10), PAL["pente"], r=6)
         for j in range(6):
@@ -4107,3 +4128,258 @@ class Sofa(_Prop):
 
 
 PROPS.update({"balao": Balao, "bolo_aniversario": BoloAniversario, "sofa": Sofa})
+
+
+def _cor4(hexcor: str, a: float = 1.0):
+    return skia.Color4f(*_rgba(hexcor, a))
+
+
+class Sombra(_Prop):
+    """SOMBRA NA PAREDE (Fofolucos 08, "Sombra de Monstrinho!"): silhueta escura e macia (camada única, borda borrada, sem
+    contorno) feita "com a mão" na luz da lanterna — o antebraço sobe da parte de baixo, como no teatro de sombras.
+    `forma`: 0 dragão (chifres, asa, rabo; `boca` abre a bocarra) · 1 coelho (orelhonas; `orelha` mexe uma orelha) ·
+    2 jacaré (bocão comprido com dentes; `boca` 0→1 abre) · 3 borboleta (duas mãos cruzadas; `asas` = fase da batida) ·
+    4 FORMIGA GIGANTE (a sombra assustadora da virada; `anda` = fase das perninhas). `liga` 0→1 a sombra aparece (luz
+    acendendo), `treme` fase do balancinho, `escuro` opacidade (0,8), `tam` escala (a sombra CRESCE). Origem = meio de baixo (o pulso)."""
+
+    def __init__(self):
+        super().__init__("sombra", "Sombra na parede", (1300, 1000), (650, 900), 820,
+                         {"forma": 0.0, "boca": 0.0, "orelha": 0.0, "asas": 0.0, "anda": 0.0, "liga": 1.0, "treme": 0.0,
+                          "escuro": 0.8, "tam": 1.0})
+
+    @staticmethod
+    def _oval(c, x, y, rx, ry, ang=0.0, paint=None):
+        c.save()
+        c.translate(x, y)
+        c.rotate(math.degrees(ang))
+        c.drawOval(skia.Rect(-rx, -ry, rx, ry), paint)
+        c.restore()
+
+    @staticmethod
+    def _poly(c, pts, paint):
+        p = skia.Path()
+        p.addPoly([skia.Point(*q) for q in pts], True)
+        c.drawPath(p, paint)
+
+    @staticmethod
+    def _tubo(c, p0, p1, w, paint):
+        q = skia.Paint(paint)
+        q.setStyle(skia.Paint.kStroke_Style)
+        q.setStrokeWidth(w)
+        q.setStrokeCap(skia.Paint.kRound_Cap)
+        c.drawLine(*p0, *p1, q)
+
+    def paint(self, k, P):
+        lg = max(0.0, min(1.0, P["liga"]))
+        if lg < 0.02:
+            return
+        c = k.c
+        forma = int(round(max(0, min(4, P["forma"]))))
+        tr = math.sin(2 * math.pi * P["treme"])
+        cor = "#2B2140"
+        f = skia.Paint(AntiAlias=True, Color4f=_cor4(cor))
+        buraco = skia.Paint(AntiAlias=True, BlendMode=skia.BlendMode.kClear)
+        lay = skia.Paint(Alphaf=max(0.0, min(1.0, P["escuro"])) * lg, ImageFilter=skia.ImageFilters.Blur(5.0, 5.0))
+        c.saveLayer(None, lay)
+        c.rotate(2.0 * tr, 0, 0)
+        c.scale(max(0.05, P["tam"]), max(0.05, P["tam"]))
+        O, Pl, T = self._oval, self._poly, self._tubo
+        if forma == 0:                                                  # DRAGÃO
+            bo = max(0.0, min(1.0, P["boca"]))
+            T(c, (-40, 40), (40, -330), 150, f)                                     # antebraço/pescoço
+            O(c, -40, -330, 230, 150, -0.15, f)                                     # corpo
+            T(c, (80, -380), (230, -560), 120, f)                                   # pescoço
+            O(c, 300, -590, 125, 78, 0.1, f)                                        # cabeça
+            Pl(c, [(330, -640), (520, -610), (510, -575), (330, -560)], f)          # focinho de cima
+            c.save(); c.rotate(math.degrees(0.45 * bo), 330, -560)
+            Pl(c, [(320, -575), (490, -555), (470, -515), (320, -520)], f)          # queixo (abre)
+            c.restore()
+            for dx in (250, 320):                                                   # chifres
+                Pl(c, [(dx - 30, -650), (dx + 10, -650), (dx - 60, -780)], f)
+            Pl(c, [(-80, -440), (-330, -800), (-250, -640), (-170, -780), (-120, -630), (-20, -800), (40, -450)], f)  # asa
+            Pl(c, [(-230, -360), (-500, -150), (-540, -190), (-460, -140), (-250, -260)], f)   # rabo (cabe no quadro do nível)
+            Pl(c, [(-540, -190), (-580, -110), (-480, -150)], f)
+            for x in (-160, 60):                                                    # perninhas
+                T(c, (x, -230), (x + 20, -140), 70, f)
+            O(c, 300, -615, 16, 16, 0, buraco)                                      # olho (furo de luz)
+        elif forma == 1:                                                # COELHO
+            ore = 0.35 * math.sin(2 * math.pi * P["orelha"])
+            T(c, (0, 60), (0, -220), 170, f)
+            O(c, 0, -320, 170, 150, 0, f)
+            O(c, 130, -280, 80, 60, 0.2, f)                                         # focinho
+            c.save(); c.rotate(math.degrees(-0.12), -50, -430)
+            O(c, -60, -620, 52, 190, 0, f)
+            c.restore()
+            c.save(); c.rotate(math.degrees(0.15 + ore), 50, -430)
+            O(c, 60, -620, 52, 190, 0, f)
+            c.restore()
+            O(c, 60, -360, 18, 22, 0, buraco)
+        elif forma == 2:                                                # JACARÉ
+            bo = max(0.0, min(1.0, P["boca"]))
+            T(c, (-420, 60), (-200, -360), 170, f)
+            yu = lambda x: -360 - 40 * (x + 240) / 680                              # beira de baixo do bocão de cima
+            Pl(c, [(-260, -470), (420, -440), (440, yu(440)), (-240, yu(-240))], f)   # bocão de cima
+            O(c, -110, -480, 60, 50, 0, f)                                          # olhão
+            for j in range(9):                                                      # dentes de cima
+                x = -160 + j * 62
+                Pl(c, [(x, yu(x) - 2), (x + 36, yu(x + 36) - 2), (x + 18, yu(x + 18) + 38)], f)
+            c.save(); c.rotate(math.degrees(0.42 * bo), -220, -380)
+            Pl(c, [(-260, yu(-260) - 6), (400, yu(400) - 6), (410, yu(410) + 44), (-250, -280)], f)   # bocão de baixo
+            for j in range(9):
+                x = -150 + j * 62
+                Pl(c, [(x, yu(x) + 6), (x + 36, yu(x + 36) + 6), (x + 18, yu(x + 18) - 34)], f)
+            c.restore()
+            O(c, -100, -488, 18, 18, 0, buraco)
+        elif forma == 3:                                                # BORBOLETA (mãos cruzadas)
+            ab = 0.3 + 0.7 * abs(math.cos(math.pi * P["asas"]))
+            T(c, (-200, 60), (0, -380), 110, f)
+            T(c, (200, 60), (0, -380), 110, f)
+            O(c, 0, -420, 30, 170, 0, f)                                            # corpinho
+            for sx in (-1, 1):
+                O(c, sx * 190 * ab, -520, 190 * ab, 140, sx * 0.25, f)               # asas de cima
+                O(c, sx * 130 * ab, -330, 120 * ab, 100, -sx * 0.3, f)               # asas de baixo
+                T(c, (sx * 10, -580), (sx * 70, -720), 22, f)                        # anteninhas
+                O(c, sx * 78, -728, 22, 22, 0, f)
+                O(c, sx * 190 * ab, -530, 34 * ab, 30, 0, buraco)                    # furinho nas asas
+        else:                                                           # FORMIGA GIGANTE (sombra da formiguinha)
+            ph = 2 * math.pi * P["anda"]
+            O(c, -230, -330, 200, 150, -0.2, f)                                     # bundão
+            O(c, 40, -330, 95, 70, 0, f)                                            # tórax
+            O(c, 260, -370, 120, 110, 0, f)                                         # cabeção
+            for j, x in enumerate((-30, 50, 130)):                                  # 6 perninhas (andando)
+                for sd in (0, 1):
+                    d = 40 * math.sin(ph + j * 2.1 + sd * math.pi)
+                    joelho = (x + (-60 if sd else 60) + d, -200)
+                    T(c, (x, -300), joelho, 36, f)
+                    T(c, joelho, (joelho[0] + (-30 if sd else 40) + d, -40 - max(0.0, 30 * math.cos(ph + j * 2.1 + sd * math.pi))), 30, f)
+            for sd in (0, 1):                                                       # antenas
+                a0 = (300 + sd * 40, -460)
+                a1 = (360 + sd * 80, -640 + sd * 30)
+                T(c, a0, a1, 28, f)
+                T(c, a1, (460 + sd * 90, -680 + sd * 40), 26, f)
+            Pl(c, [(360, -320), (450, -300), (380, -270)], f)                       # pinça
+            O(c, 300, -400, 26, 26, 0, buraco)
+        c.restore()
+
+
+class Formiga(_Prop):
+    """A FORMIGUINHA da virada da Fofolucos 08 ("era uma formiguinha na frente do lanternão!"): fofinha, vermelho-tijolo,
+    chapada sem contorno, olhões, bochechinha rosa, anteninhas com bolinha e 6 perninhas. `aceno` 0→1 acena com a
+    perninha da frente, `anda` fase das perninhas, `pulo` 0→1, `lado` 1 olha p/ direita · −1 p/ esquerda, `susto` 0→1
+    (olhão, boca em O). Origem = entre os pezinhos."""
+
+    def __init__(self):
+        super().__init__("formiga", "Formiguinha", (600, 600), (300, 560), 260,
+                         {"aceno": 0.0, "anda": 0.0, "pulo": 0.0, "lado": 1.0, "susto": 0.0})
+
+    def paint(self, k, P):
+        c01 = lambda v: max(0.0, min(1.0, v))
+        sx = 1.0 if P["lado"] >= 0 else -1.0
+        ac, su = c01(P["aceno"]), c01(P["susto"])
+        ph = 2 * math.pi * P["anda"]
+        y0 = -120 * math.sin(math.pi * c01(P["pulo"]))
+        CO, CO2, CO3 = "#D2462E", "#A8301C", "#FF7A5C"
+
+        def X(x, y):
+            return (x * sx, y + y0)
+
+        def ov(x, y, rx, ry, cor, a=0.0, al=1.0):
+            q = X(x, y)
+            shape(k, ellipse_pts(q[0], q[1], rx, ry, a * sx, 24), cor, alpha=al)
+
+        for j, x in enumerate((-40, 0, 40)):                                       # perninhas
+            for sd in (-1, 1):
+                if j == 2 and sd > 0 and ac > 0.05:
+                    continue
+                d = 10 * math.sin(ph + j * 2.1 + (sd > 0) * math.pi)
+                _capsula(k, X(x, -70), X(x + sd * 16 + d, -2), 7, CO2, CO2)
+        ov(-95, -88, 62, 50, CO2)                                                    # bumbum
+        ov(-90, -96, 52, 40, CO)
+        ov(-100, -112, 16, 10, CO3, al=0.8)
+        ov(0, -86, 34, 30, CO)                                                       # tórax
+        if ac > 0.05:                                                                # acena com a perninha da frente
+            w = math.sin(2 * math.pi * 3 * ac)
+            _capsula(k, X(30, -96), X(78 + 10 * w, -170 - 20 * ac), 8, CO, CO)
+            ov(80 + 10 * w, -176 - 20 * ac, 13, 13, CO)
+        ov(78, -150, 66, 60, CO)                                                     # cabeção
+        for sd in (-1, 1):                                                           # anteninhas
+            a0, a1 = X(62 + sd * 22, -200), X(70 + sd * 46, -268)
+            _capsula(k, a0, a1, 5, CO2, CO2)
+            shape(k, ellipse_pts(a1[0], a1[1], 13, 13, 0, 16), CO2)
+        r = 20 + 6 * su
+        for ex in (62, 112):                                                         # olhões
+            ov(ex, -160, r, r * 1.1, "#FFFFFF")
+            ov(ex + 4, -156 + 2 * su, 11 - 3 * su, 12 - 3 * su, "#2A1630")
+            ov(ex + 8, -162, 4, 4, "#FFFFFF")
+        ov(46, -126, 13, 8, "#FF8FB8", al=0.85)                                      # bochechas
+        ov(128, -126, 11, 7, "#FF8FB8", al=0.85)
+        if su > 0.5:
+            ov(88, -116, 11, 14, "#5A1020")
+        else:
+            q0, q1, q2 = X(72, -122), X(88, -110), X(104, -122)
+            ln(k, [q0, q1, q2], "#5A1020", w=LINE * 0.9)
+
+
+PROPS.update({"sombra": Sombra, "formiga": Formiga})
+
+
+class BandejaBrigadeiro(_Prop):
+    """Bandeja de docinhos da festa da vovó (33 Brigadeiro): bandeja prateada com forminhas e BRIGADEIROS com granulado
+    colorido. `quantos` 0–12 docinhos na bandeja (12 = cheia; 0 = VAZIA, só as forminhas), `brilho` 0→1 estrelinhas
+    (parece vir do céu!), `treme` fase (a bandeja balança). Origem = meio de baixo da bandeja."""
+
+    def __init__(self):
+        super().__init__("bandeja_brigadeiro", "Bandeja de brigadeiro", (900, 500), (450, 440), 260,
+                         {"quantos": 12.0, "brilho": 0.0, "treme": 0.0})
+
+    def paint(self, k, P):
+        rot_ = 0.04 * math.sin(2 * math.pi * P["treme"])
+        k.c.save()
+        k.c.rotate(math.degrees(rot_), 0, -20)
+        shape(k, ellipse_pts(0, -22, 330, 70, 0, 48), "#C9D3DC", line="#8A97A3")              # bandeja
+        shape(k, ellipse_pts(0, -34, 290, 52, 0, 48), "#E9EEF2", line="#B7C2CC")
+        n = int(round(max(0, min(12, P["quantos"]))))
+        pos = [(-210 + 84 * (j % 6), -58 + 34 * (j // 6) - (0 if j % 6 in (0, 5) else 6)) for j in range(12)]
+        pos = sorted(pos, key=lambda p_: p_[1])
+        cores = ("#FFE14D", "#FF6FB1", "#7FE3FF", "#FFFFFF")
+        for j, (x, y) in enumerate(pos):
+            shape(k, ellipse_pts(x, y + 14, 36, 14, 0, 18), "#8A5A36", line="#5E3A1E")          # forminha
+            if j < n:
+                shape(k, ellipse_pts(x, y - 8, 30, 28, 0, 24), "#6B3A1E", line="#3E2010")
+                for i in range(6):
+                    a_ = i * 2.39 + j
+                    rr = 18 * math.sqrt((i + 0.5) / 6)
+                    px, py = x + rr * math.cos(a_), y - 10 + rr * math.sin(a_) * 0.9
+                    ln(k, [(px - 4, py), (px + 4, py + 1)], cores[(i + j) % 4], w=LINE * 0.9)
+        k.c.restore()
+        b = max(0.0, min(1.0, P["brilho"]))
+        if b > 0.05:
+            for x, y, r in ((-250, -150, 26), (40, -190, 32), (270, -140, 22)):
+                _estrela(k, x, y, r * b, "#FFF3B0")
+
+
+class Pegadas(_Prop):
+    """Trilha de PEGADAS DE CHOCOLATE no chão (33 Brigadeiro): pezinhos marrons alternados (esquerdo/direito) indo
+    para a direita; `n` 0–7 quantas aparecem (a trilha "acende" uma por uma), `lado` 1 → para a direita, −1 ← esquerda,
+    `brilho` 0→1 contorno amarelo de destaque (a lupa achou!). Origem = primeira pegada."""
+
+    def __init__(self):
+        super().__init__("pegadas", "Pegadas de chocolate", (1300, 400), (650, 300), 80, {"n": 7.0, "lado": 1.0, "brilho": 0.0})
+
+    def paint(self, k, P):
+        sx = 1.0 if P["lado"] >= 0 else -1.0
+        n = max(0.0, min(7.0, P["n"]))
+        b = max(0.0, min(1.0, P["brilho"]))
+        for j in range(7):
+            if j >= n:
+                break
+            a = min(1.0, n - j)
+            x, y = sx * (-540 + j * 170), (-18 if j % 2 else 18)
+            if b > 0.05:
+                shape(k, ellipse_pts(x, y, 60, 30, 0, 24), "#FFE14D", line=None, alpha=0.6 * b)
+            shape(k, ellipse_pts(x, y, 40, 17, 0, 20), "#6B3A1E", line=None, alpha=0.9 * a)                 # sola
+            for i, (dx, dy, r) in enumerate(((46, -14, 8), (50, -2, 7), (48, 10, 6.5), (42, 19, 5.5))):     # dedinhos
+                shape(k, ellipse_pts(x + sx * dx, y + dy, r, r * 0.85, 0, 10), "#6B3A1E", line=None, alpha=0.9 * a)
+
+
+PROPS.update({"bandeja_brigadeiro": BandejaBrigadeiro, "pegadas": Pegadas})

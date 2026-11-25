@@ -1,0 +1,729 @@
+{
+  "schema": "1.1",
+  "id": "ep08-sombra-de-monstrinho-short",
+  "projeto": "fofolucos/ep08-sombra-de-monstrinho",
+  "title": "Sombra de Monstrinho! — Short",
+  "logline": "Clipe de \"Sombra de Monstrinho!\" — de noite na Vila Monstrinha a turma brinca de SOMBRA com a lanterna: o chifrinho do Bilu vira sombra de dragão, as antenas do Teco viram um coelho. Refrão-desafio: 'sombra de monstrinho! grandona no paredão! rawr! faz com a mão!' (a criança faz junto). Ponte = comandos de sombra com as mãos (jacaré valente, borboleta voando). Virada (medo bobo): aparece uma sombra GIGANTE e assustadora, todo mundo pula de susto… a Mimi chega perto e descobre o culpado: uma formiguinha bem na frente da lanterna. Montado do roteiro verso a verso (roteiro.json).",
+  "fps": 30,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "background": "plano_parque",
+  "soundtrack": {
+    "file": "musica/trabalho.wav",
+    "analysis": "analise/song.json",
+    "start": 0.0,
+    "end": 13.885,
+    "fade_out": 0.3,
+    "beat_grid": "full"
+  },
+  "captions": {
+    "lyrics": "analise/letra.json",
+    "style": "palavra_a_palavra"
+  },
+  "overlays": {
+    "logo": true,
+    "channel": [
+      "FOFOLUCOS",
+      ""
+    ],
+    "logo_png": "/home/otavio/2d/library/brand/fofolucos/logo.png"
+  },
+  "cast": {
+    "laurinha": {
+      "character": "laurinha"
+    },
+    "luisinho": {
+      "character": "luisinho"
+    },
+    "bilu": {
+      "character": "bilu"
+    },
+    "sb": {
+      "character": "sombra"
+    },
+    "lant": {
+      "character": "lanterna"
+    },
+    "nhoque": {
+      "character": "nhoque"
+    },
+    "teco": {
+      "character": "teco"
+    },
+    "gogo": {
+      "character": "gogo"
+    },
+    "mimi": {
+      "character": "mimi"
+    },
+    "bo": {
+      "character": "bolha"
+    },
+    "zuzu": {
+      "character": "zuzu"
+    },
+    "bat": {
+      "character": "bateria_show"
+    },
+    "tec": {
+      "character": "teclado_inst"
+    },
+    "gato": {
+      "character": "gato"
+    },
+    "cometa": {
+      "character": "cometa"
+    },
+    "sb3": {
+      "character": "sombra"
+    },
+    "sb2": {
+      "character": "sombra"
+    },
+    "form": {
+      "character": "formiga"
+    },
+    "joinha": {
+      "character": "joinha"
+    },
+    "nv": {
+      "character": "nuvem"
+    },
+    "botao": {
+      "character": "botao_inscrever"
+    }
+  },
+  "approval": {
+    "storyboard": false,
+    "final_render": false
+  },
+  "scenes": [
+    {
+      "id": "s01_refrao",
+      "title": "Sombra de monstrinho!",
+      "duration": 3.058,
+      "description": "Sombra de monstrinho! / Grandona no paredão!",
+      "background": "mon_sombras",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.425,
+            "x": 1049.5,
+            "y": 540.0,
+            "zoom": 1.808
+          },
+          {
+            "t": 3.058,
+            "x": 1049.5,
+            "y": 540.0,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "gogo": {
+          "start": {
+            "x": 1049.5,
+            "y": 930,
+            "turn": 0.4,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 1.675,
+              "do": "rawr",
+              "dur": 1.383
+            }
+          ]
+        }
+      },
+      "props": {
+        "sb": {
+          "start": {
+            "x": 1238.2092808850646,
+            "y": 740,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.593
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.425,
+              "pose": {
+                "forma": 0.0,
+                "liga": 1.0,
+                "treme": 0.0,
+                "x": 1514.7,
+                "tam": 0.682
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.525,
+              "pose": {
+                "boca": 1.0
+              },
+              "ease": "out"
+            },
+            {
+              "t": 0.975,
+              "pose": {
+                "boca": 0.0
+              },
+              "ease": "out",
+              "in": 0.42
+            },
+            {
+              "t": 1.425,
+              "pose": {
+                "boca": 1.0
+              },
+              "ease": "out",
+              "in": 0.42
+            },
+            {
+              "t": 1.675,
+              "pose": {
+                "tam": 1.0
+              },
+              "ease": "back",
+              "in": 1.22
+            },
+            {
+              "t": 1.875,
+              "pose": {
+                "boca": 0.0
+              },
+              "ease": "out",
+              "in": 0.42
+            },
+            {
+              "t": 2.325,
+              "pose": {
+                "boca": 1.0
+              },
+              "ease": "out",
+              "in": 0.42
+            },
+            {
+              "t": 2.775,
+              "pose": {
+                "boca": 0.0
+              },
+              "ease": "out",
+              "in": 0.42
+            },
+            {
+              "t": 2.995,
+              "pose": {
+                "treme": 1.31
+              },
+              "ease": "linear",
+              "in": 2.54
+            },
+            {
+              "t": 2.995,
+              "pose": {
+                "x": 1514.7
+              },
+              "ease": "linear",
+              "in": 2.54
+            }
+          ]
+        },
+        "lant": {
+          "start": {
+            "x": 860.7907191149354,
+            "y": 960,
+            "z": 1,
+            "sem_contorno": 1.0,
+            "depth": 0.652
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.425,
+              "pose": {
+                "liga": 1.0,
+                "dir": -0.1
+              },
+              "ease": "step"
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "callouts": [
+        {
+          "t": 0.525,
+          "text": "SOMBRA DE MONSTRINHO!",
+          "dur": 1.1,
+          "color": "roxo",
+          "y": 170
+        },
+        {
+          "t": 1.675,
+          "text": "GRANDONA NO PAREDÃO!",
+          "dur": 1.383,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "flash_in": true
+    },
+    {
+      "id": "s02_refrao",
+      "title": "Sombra de monstrinho!",
+      "duration": 4.3333,
+      "description": "Sombra de monstrinho! / Rawr! Faz com a mão!",
+      "background": "mon_xadrez_azul",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 4.3333,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "gogo": {
+          "start": {
+            "x": 810.0,
+            "y": 1190,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "dur": 4.333,
+              "style": "festa"
+            },
+            {
+              "t": 2.17,
+              "do": "rawr",
+              "dur": 2.163
+            }
+          ]
+        },
+        "mimi": {
+          "start": {
+            "x": 1110.0,
+            "y": 1190,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.05,
+              "do": "dance",
+              "dur": 4.283,
+              "style": "festa"
+            },
+            {
+              "t": 2.22,
+              "do": "rawr",
+              "dur": 2.113
+            }
+          ]
+        },
+        "nhoque": {
+          "start": {
+            "x": 960.0,
+            "y": 800,
+            "turn": -0.2,
+            "expr": "happy",
+            "z": 2,
+            "depth": 0.85
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "dance",
+              "dur": 4.233,
+              "style": "festa"
+            },
+            {
+              "t": 2.27,
+              "do": "rawr",
+              "dur": 2.063
+            }
+          ]
+        }
+      },
+      "props": {
+        "bo": {
+          "start": {
+            "x": 1650,
+            "y": 1000,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.435
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "tam": 1.0,
+                "y": 1000.0,
+                "balanco": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 4.27,
+              "pose": {
+                "y": 250.0
+              },
+              "ease": "linear",
+              "in": 4.24
+            },
+            {
+              "t": 4.27,
+              "pose": {
+                "balanco": 4.3
+              },
+              "ease": "linear",
+              "in": 4.24
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "SOMBRA DE MONSTRINHO!",
+          "dur": 1.8,
+          "color": "roxo",
+          "y": 170
+        },
+        {
+          "t": 2.17,
+          "text": "RAWR! FAZ COM A MÃO!",
+          "dur": 1.8,
+          "color": "vermelho",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s03_refrao",
+      "title": "Sombra de monstrinho!",
+      "duration": 2.6,
+      "description": "Sombra de monstrinho! / Grandona no paredão!",
+      "background": "mon_sombras",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1049.5,
+            "y": 540.0,
+            "zoom": 1.808
+          },
+          {
+            "t": 2.6,
+            "x": 1049.5,
+            "y": 540.0,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "bilu": {
+          "start": {
+            "x": 1049.5,
+            "y": 930,
+            "turn": 0.4,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 1.25,
+              "do": "rawr",
+              "dur": 1.35
+            }
+          ]
+        }
+      },
+      "props": {
+        "sb": {
+          "start": {
+            "x": 1238.2092808850646,
+            "y": 740,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.593
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "forma": 1.0,
+                "liga": 1.0,
+                "treme": 0.0,
+                "orelha": 0.0,
+                "x": 1514.7,
+                "tam": 0.682
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.25,
+              "pose": {
+                "tam": 1.0
+              },
+              "ease": "back",
+              "in": 1.22
+            },
+            {
+              "t": 2.54,
+              "pose": {
+                "treme": 1.3
+              },
+              "ease": "linear",
+              "in": 2.51
+            },
+            {
+              "t": 2.54,
+              "pose": {
+                "orelha": 3.0
+              },
+              "ease": "linear",
+              "in": 2.51
+            },
+            {
+              "t": 2.54,
+              "pose": {
+                "x": 1514.7
+              },
+              "ease": "linear",
+              "in": 2.51
+            }
+          ]
+        },
+        "lant": {
+          "start": {
+            "x": 860.7907191149354,
+            "y": 960,
+            "z": 1,
+            "sem_contorno": 1.0,
+            "depth": 0.652
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "liga": 1.0,
+                "dir": -0.1
+              },
+              "ease": "step"
+            }
+          ]
+        },
+        "form": {
+          "start": {
+            "x": 860.7907191149354,
+            "y": 862,
+            "z": 6,
+            "sem_contorno": 1.0,
+            "depth": 0.507
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "lado": 1.0,
+                "aceno": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.54,
+              "pose": {
+                "aceno": 1.0
+              },
+              "ease": "linear",
+              "in": 2.51
+            }
+          ]
+        },
+        "sb2": {
+          "start": {
+            "x": 1238.2092808850646,
+            "y": 740,
+            "z": 0,
+            "sem_contorno": 1.0,
+            "depth": 0.377
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "forma": 4.0,
+                "liga": 1.0,
+                "treme": 0.0,
+                "anda": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.54,
+              "pose": {
+                "treme": 1.3
+              },
+              "ease": "linear",
+              "in": 2.51
+            },
+            {
+              "t": 2.54,
+              "pose": {
+                "anda": 4.16
+              },
+              "ease": "linear",
+              "in": 2.51
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "callouts": [
+        {
+          "t": 0.1,
+          "text": "SOMBRA DE MONSTRINHO!",
+          "dur": 1.1,
+          "color": "azul",
+          "y": 170
+        },
+        {
+          "t": 1.25,
+          "text": "GRANDONA NO PAREDÃO!",
+          "dur": 1.35,
+          "color": "amarelo",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s04_refrao",
+      "title": "Sombra de monstrinho!",
+      "duration": 3.8937,
+      "description": "Sombra de monstrinho! / Rawr! Faz com a mão!",
+      "background": "mon_cozinha",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1300.0,
+            "y": 536.0387215734481,
+            "zoom": 1.808
+          },
+          {
+            "t": 3.033,
+            "x": 1300.0,
+            "y": 536.0387215734481,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "bilu": {
+          "start": {
+            "x": 1300.0,
+            "y": 930,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "dur": 3.033,
+              "style": "cabeca"
+            },
+            {
+              "t": 1.51,
+              "do": "rawr",
+              "dur": 1.523
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "callouts": [
+        {
+          "t": 1.51,
+          "text": "RAWR!",
+          "dur": 1.523,
+          "color": "vermelho",
+          "y": 170
+        }
+      ]
+    }
+  ]
+}

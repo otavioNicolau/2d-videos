@@ -896,5 +896,35 @@
    "batida de teclado (loop igual) (baixo)",
    "batida sincopada (contratempo) — o 'contagiante' (baixo)"
   ]
+ },
+ {
+  "musica": "33",
+  "titulo": "Brigadeiro",
+  "estilo": "E18",
+  "medidas": {
+   "voz_%": 38.5,
+   "bateria_%": 45.2,
+   "baixo_%": 5.4,
+   "outros_%": 10.9,
+   "largura_voz": 0.082,
+   "batidas_identicas": 0.747,
+   "duracao_s": 142.4,
+   "teclado_eletronico": 0.02,
+   "bateria_banda": 0.023,
+   "percussao": 0.017,
+   "metais": 0.002,
+   "sincope": 0.54,
+   "baixo_sincopado": 0.63
+  },
+  "acertos": "7/12",
+  "nota": 5.0,
+  "obs": "E18 (receita do Fofolucos) 136 BPM: nota máxima do usuário; baixo 5,4 % baixo e final esmaecendo, mesmo assim 5 de ouvido; refrões bem alinhados (áudio intacto)",
+  "falhas": [
+   "baixo no som (%) (baixo)",
+   "largura da voz (0 = uma voz no centro) (alto)",
+   "batida de teclado (loop igual) (baixo)",
+   "teclado/synth reconhecido (baixo)",
+   "batida sincopada (contratempo) — o 'contagiante' (baixo)"
+  ]
  }
 ]
