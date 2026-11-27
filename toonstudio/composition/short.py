@@ -98,9 +98,37 @@ def _fileiras(ws: list[str], chars: dict, centro: float | None = None) -> tuple[
     return sorted(frente, key=key), sorted(resto, key=key)
 
 
-def _verticaliza(sc: dict, bgw: dict) -> dict:
-    """Adapta um plano 16:9 ao quadro vertical (1080 de largura: cabem 2 personagens lado a lado)."""
+INTERACAO = {"abraco", "beijo", "puxar"}                   # ações que só fazem sentido com os dois juntos
+
+
+def _solo_da_dupla(sc: dict, vez: int) -> str | None:
+    """26/11 (usuário): no Short da Laurinha, evitar Laurinha E Luisinho no mesmo quadro — só se for preciso
+    (interação entre os dois). Fica quem canta sozinho no plano; cantando os dois (ou ninguém), alterna."""
+    us = [sc, *sc.get("panels", [])]
+    chars = {w: c for u in us for w, c in u.get("characters", {}).items()}
+    if not set(FRENTE) <= set(chars):
+        return None
+    if any(a.get("do") in INTERACAO for w in FRENTE for a in chars[w].get("actions", [])):
+        return None
+    cantam = {x.get("who") for u in us for x in u.get("sing", [])} & set(FRENTE)
+    return next(iter(cantam)) if len(cantam) == 1 else FRENTE[vez % 2]
+
+
+def _verticaliza(sc: dict, bgw: dict, solo: str | None = None) -> dict:
+    """Adapta um plano 16:9 ao quadro vertical (1080 de largura: cabem 2 personagens lado a lado).
+    `solo`: da dupla do canal, só esse fica no quadro (o outro sai do plano)."""
     sc = copy.deepcopy(sc)
+    if solo:
+        outro = FRENTE[1] if solo == FRENTE[0] else FRENTE[0]
+        if sc.get("panels"):                               # tela dividida: fica só o painel de quem está no quadro
+            p = next((p for p in sc["panels"] if solo in p.get("characters", {})), sc["panels"][0])
+            sc.pop("panels"); sc.pop("layout", None)
+            for k in ("characters", "background", "camera", "fx", "sing", "props"):
+                if k in p:
+                    sc[k] = p[k]
+        sc.get("characters", {}).pop(outro, None)
+        if sc.get("sing"):
+            sc["sing"] = [x for x in sc["sing"] if x.get("who") != outro]
     if sc.get("panels"):                                   # tela dividida → os dois juntos num plano só
         p0, p1 = sc["panels"]
         chars = {**p0["characters"], **p1["characters"]}
@@ -134,6 +162,19 @@ def _verticaliza(sc: dict, bgw: dict) -> dict:
     vis = W / zmin                                         # largura visível do cenário no quadro vertical
     keys = sc["camera"]["keys"]
     alvo: list[tuple[float, float]] | None = None          # (t, x) da câmera; None = mantém
+    # 26/11 (usuário: "o 17 ficou bugado a posição"): SAÍDA de cena (voa/anda para fora do cenário) não cabe no
+    # quadro vertical — o _move centraliza o FIM do trajeto, e a dupla ficava fora do quadro o plano inteiro
+    # (e nos pedaços seguintes do mesmo plano). No Short a saída vira "fica dançando no lugar".
+    # Saída = o trajeto TERMINA fora do que a câmera do clipe mostrava (quem ENTRA andando termina dentro: fica).
+    k0 = sc["camera"]["keys"][0]
+    meia = 960.0 / float(k0.get("zoom", 1.0) or 1.0)
+    vx0, vx1 = float(k0.get("x", 960)) - meia, float(k0.get("x", 960)) + meia
+    for c in chars.values():
+        if c.get("actions"):
+            c["actions"] = [a for a in c["actions"]
+                            if not (a.get("do") in ("fly", "walk") and "to_x" in a
+                                    and (not -100 <= float(a["to_x"]) <= width + 100
+                                         or (len(chars) >= 2 and not vx0 - 50 <= float(a["to_x"]) <= vx1 + 50)))]
     ws = sorted(chars, key=lambda w: _final_x(chars[w]))
     if graphic:
         if len(ws) >= 3:                                   # foto de grupo: dupla na frente, convidados atrás e acima
@@ -157,6 +198,19 @@ def _verticaliza(sc: dict, bgw: dict) -> dict:
         m = vis / 2 - 90                                   # objetos de cena para dentro do quadro
         for pr in props.values():
             pr["start"]["x"] = max(960 - m, min(960 + m, pr["start"]["x"]))
+        # 26/11 (usuário, Short 17: "melhore esses takes")
+        outros = [k for k in props if k not in ("joinha", "botao")]
+        if len(ws) == 1 and len(outros) == 1 and -400 < chars[ws[0]]["start"]["x"] < 2300:
+            _move(chars[ws[0]], 960, 1150)                 # personagem embaixo, objeto ACIMA da cabeça (não cobre o corpo)
+            props[outros[0]]["start"].update({"x": 960, "y": 560, "z": 4})
+        elif not chars and len(outros) >= 2:               # só objetos: maiores, no meio, sem um cobrir o outro
+            filas = [outros[:3], outros[3:6]] if len(outros) > 3 else [outros]
+            ys = [960] if len(filas) == 1 else [790, 1150]
+            for fy, fila in zip(ys, filas):
+                for k, nome in enumerate(fila):
+                    st = props[nome]["start"]
+                    st.update({"x": 960 + (k - (len(fila) - 1) / 2) * 215, "y": fy,
+                               "depth": max(float(st.get("depth", 0.55)), 0.75)})
         alvo = [(0.0, 960.0)]
     elif props and not chars:                             # só objetos: câmera no PRINCIPAL (o 1º do plano: o sapo…)
         alvo = [(0.0, next(iter(props.values()))["start"]["x"])]
@@ -200,6 +254,21 @@ def _verticaliza(sc: dict, bgw: dict) -> dict:
                 _move(chars[w], ax + (k - 0.5) * 2 * min(m, 230), None, None, 3)
             for pr in props.values():
                 pr["start"]["z"] = min(int(pr["start"].get("z", 1)), 2)
+        # 26/11 (usuário, Short 17: "a forma fica fora da tela"): personagem SOZINHO no centro + objeto grande ao lado
+        # = objeto cortado na borda e por cima do personagem. Agora os dois ficam lado a lado DENTRO do quadro.
+        meia = W / 2 / max(zmin, float(keys[0].get("zoom", zmin)))
+        perto = [pr for pr in props.values() if abs(pr["start"]["x"] - ax) < 250]
+        if len(ws) == 1 and len(alvo) == 1 and len(perto) == 1 and meia >= 260:
+            # usuário (Short 17): "deixar o personagem abaixo e a forma acima da cabeça" (como o joinha)
+            pr = perto[0]
+            c = chars[ws[0]]
+            _move(c, ax, float(c["start"]["y"]) + 60)
+            pr["start"].update({"x": ax, "y": float(c["start"]["y"]) - 520, "z": 4})
+        elif meia < 260:                                   # CLOSE: objeto que ficaria cortado na borda sai do quadro
+            for k, pr in props.items():
+                dx = pr["start"]["x"] - ax
+                if not k.startswith("mesa") and meia - 120 < abs(dx) < meia + 150:
+                    pr["start"]["x"] = ax + math.copysign(meia + 300, dx)
     if alvo is not None:
         base = dict(keys[0])
         keys = []
@@ -326,7 +395,8 @@ def _vale(env: np.ndarray, passo: float, t0: float, t1: float) -> float:
     return (i0 + int(np.argmin(env[i0:i1]))) * passo if i1 > i0 else t0
 
 
-def _bordas_no_silencio(novas: list[dict], exatos: list, mapa: list, song: dict, vocais: Path, letra: dict) -> None:
+def _bordas_no_silencio(novas: list[dict], exatos: list, mapa: list, song: dict, vocais: Path, letra: dict,
+                        apos_voz: float | None = None, so_inicio: bool = False) -> None:
     """Começo e fim do Short no SILÊNCIO entre as frases, pela energia da voz isolada (usuário 24/11: "veja se tem
     outros… com áudio cortado"): começa na batida em silêncio logo antes da 1ª palavra do refrão e termina na batida
     em silêncio depois da última nota — nunca com um pedaço da frase vizinha. Os planos das pontas esticam/encolhem."""
@@ -353,10 +423,15 @@ def _bordas_no_silencio(novas: list[dict], exatos: list, mapa: list, song: dict,
             mapa[0] = (novo_a, mapa[0][1], 0.0)
             for i in range(1, len(mapa)):
                 mapa[i] = (mapa[i][0], mapa[i][1], mapa[i][2] + delta)
+    if so_inicio:
+        return
     # ── fim: silêncio (≥ 0,18 s) mais perto do limite do trecho, entre a última nota e a próxima frase
     t0u, t1u = exatos[-1]
     grade = [t1u - 0.8 + k * passo for k in range(int(2.0 / passo))]
     livres = [t for t in grade if t > t0u + 3 and _quieto(env, passo, ref, t - 0.1, t + 0.04)]
+    if apos_voz is not None:                                   # modo --ate: só o silêncio DEPOIS da última frase inteira
+        depois = [t for t in livres if t >= apos_voz - 0.1 and _quieto(env, passo, ref, t - 0.1, t + 0.3)]   # silêncio de verdade (≥ 0,3 s)
+        livres = depois or livres
     if livres:
         alvo = min(livres, key=lambda t: abs(t - t1u))
         ini_gap = alvo
@@ -385,6 +460,85 @@ def _bordas_no_silencio(novas: list[dict], exatos: list, mapa: list, song: dict,
     _desloca(novas[-1], 0.0, fim_short - soma)
     exatos[-1] = (t0u, novo)
     mapa[-1] = (t0u, novo, mapa[-1][2])
+
+
+def _corta_fim(novas: list[dict], exatos: list, mapa: list, novo: float) -> None:
+    """Termina o Short no instante `novo` (tempo da música): planos depois dele saem, o último encolhe."""
+    t0u, t1u = exatos[-1]
+    if abs(novo - t1u) < 1 / 30:
+        return
+    fim_short = mapa[-1][2] + (novo - t0u)
+    acc, keep = 0.0, []
+    for s in novas:
+        if acc >= fim_short - 0.4 and keep:
+            break
+        keep.append(s)
+        acc += s["duration"]
+    novas[:] = keep
+    soma = sum(s["duration"] for s in novas[:-1])
+    _desloca(novas[-1], 0.0, fim_short - soma)
+    exatos[-1] = (t0u, novo)
+    mapa[-1] = (t0u, novo, mapa[-1][2])
+
+
+def _fim_da_musica(trabalho: Path, ate: float) -> float:
+    """Onde o SOM acaba (a música termina com batida seca e às vezes silêncio no fim do take): última janela com
+    energia da mixagem acima de 6 % da referência + 0,35 s de respiro (o eco da última batida)."""
+    env, passo, ref = _envelope(trabalho)
+    i1 = min(len(env), int(ate / passo))
+    ativos = np.nonzero(env[:i1] > 0.06 * ref)[0]
+    return round(min(ate, (int(ativos[-1]) + 1) * passo + 0.35), 3) if len(ativos) else ate
+
+
+def _ajusta_vertical(novas: list[dict], cast: dict, laurinha: bool) -> None:
+    """Ajustes do quadro vertical aprovados pelo usuário (25/11, Shorts da 08 e da 33):
+    • botão INSCREVA-SE e JOINHA ACIMA da cabeça, com o personagem no centro (lado a lado cortavam na borda);
+    • SOMBRA NA PAREDE (Fofolucos) no alto e o monstrinho embaixo, a lanterna ao lado (uma sombra por plano)."""
+    idd = lambda k: (cast.get(k) or {}).get("character", k)
+    for sc in novas:
+        props = sc.get("props") or {}
+        chars = sc.get("characters") or {}
+        cx = float(sc["camera"]["keys"][0]["x"])
+        tipos = {k: idd(k) for k in props}
+        if "botao_inscrever" in tipos.values() or "joinha" in tipos.values():
+            # 26/11 (Short 18): o robô ficava na frente do personagem e o close cortava o botão no topo
+            for k, t in list(tipos.items()):
+                if t not in ("botao_inscrever", "joinha") and k not in ("bo", "nv"):
+                    props.pop(k, None)
+                    tipos.pop(k)
+            if sc["background"].startswith(GRAPHIC):
+                k0 = sc["camera"]["keys"][0]
+                sc["camera"]["keys"] = [{**k0, "t": 0.0, "x": 960, "y": 620, "zoom": 1.579},
+                                        {**k0, "t": float(sc["duration"]), "x": 960, "y": 620, "zoom": 1.579}]
+                cx = 960.0
+            for k, t in tipos.items():
+                if t == "botao_inscrever":
+                    props[k]["start"].update({"x": cx, "y": 300, "depth": 0.9, "z": 4})
+                elif t == "joinha":
+                    props[k]["start"].update({"x": cx, "y": 300 if laurinha else 360, "depth": 0.7 if laurinha else 0.8, "z": 4})
+            if "joinha" in tipos.values():
+                for c in chars.values():
+                    c["start"].update({"x": cx, "y": 1170 if laurinha else 1090})
+            else:
+                for c in chars.values():
+                    c["start"]["x"] = cx
+        sombras = [k for k, t in tipos.items() if t == "sombra"]
+        if sombras:
+            for k in sombras[1:]:
+                props.pop(k)
+            props[sombras[0]]["start"].update({"x": cx + 20, "y": 560, "depth": 0.5})
+            for k, t in tipos.items():
+                if t == "lanterna":
+                    props[k]["start"].update({"x": cx + 170, "y": 1075, "depth": 0.5})
+                elif t == "formiga":
+                    props[k]["start"].update({"x": cx + 150, "y": 1000, "depth": 0.45})
+            for k in [sombras[0]] + [k for k, t in tipos.items() if t in ("lanterna", "formiga")]:
+                for key in (props.get(k) or {}).get("keys", []):
+                    for c in ("x", "y", "depth"):
+                        key.get("pose", key).pop(c, None)
+            if chars:
+                w0 = next(iter(chars))
+                chars[w0]["start"].update({"x": cx - 40, "y": 1050, "depth": 1.05})
 
 
 def _divide_longos(novas: list[dict], bgw: dict, beats: list[float], max_dur: float = 4.5) -> list[dict]:
@@ -418,13 +572,21 @@ def _divide_longos(novas: list[dict], bgw: dict, beats: list[float], max_dur: fl
             p.pop("flash_in", None) if k else None
             p.pop("transition_in", None) if k else None
             _desloca(p, -a, b - a)
-            if k % 2 == 1:                                  # close no personagem da vez
-                w = ordem[(k // 2) % len(ordem)]
+            w = ordem[(k // 2) % len(ordem)] if ordem else None
+            pula = w and any(a.get("do") in ("jump", "fly") for a in p.get("characters", {}).get(w, {}).get("actions", []))
+            cta = any(n.startswith(("botao", "joinha")) for n in (p.get("props") or {}))   # botão/joinha: sempre aberto
+            if k % 2 == 1 and w and not pula and not cta:   # close no personagem da vez (quem pula: quadro aberto)
                 cx = _final_x(sc["characters"][w])
                 z = 2.0 if graphic else 2.4
                 half_w = W / 2 / z
                 cx = max(half_w + 5, min(width - half_w - 5, cx))
-                y = 760.0 if graphic else 560.0
+                cy = min((float(c["start"]["y"]) for c in sc["characters"].values()), default=1010.0)
+                acima = any(float(pr["start"].get("y", 1e4)) < cy - 400 for pr in (sc.get("props") or {}).values())
+                y = (650.0 if acima else 760.0) if graphic else 560.0     # objeto acima da cabeça: o close sobe junto
+                for nome, pr in (p.get("props") or {}).items():          # 26/11 (Short 18): robô cortado na borda do close
+                    dx = float(pr["start"]["x"]) - cx
+                    if not nome.startswith("mesa") and half_w - 120 < abs(dx) < half_w + 150:
+                        pr["start"]["x"] = cx + math.copysign(half_w + 300, dx)
                 p["camera"]["keys"] = [{**p["camera"]["keys"][0], "t": 0.0, "x": cx, "y": y, "zoom": z},
                                        {**p["camera"]["keys"][0], "t": round(b - a, 3), "x": cx, "y": y, "zoom": round(z * 1.04, 3),
                                         "ease": "inout"}]
@@ -477,8 +639,54 @@ def _fim_no_ritmo(novas: list[dict], exatos: list[tuple[float, float]], mapa: li
     mapa[-1] = (t0u, novo, mapa[-1][2])
 
 
-def criar_short(src_project: str, partes: list[list[str]]) -> Path:
-    """partes: cada item é uma lista de blocos CONTÍGUOS (ex.: [["refrao#1"], ["verso#1", "refrao#1"]])."""
+def _coreografia_b(novas: list[dict], cast: dict) -> None:
+    """26/11 (teste A×B aprovado: "O TESTE FICOU BOM"): movimento da Laurinha no jeito dos Fofolucos — menos sobe-e-desce,
+    danças largas e repetidas, pose de assinatura "zum!" (prepara, faz, SEGURA). Só nas muriçocas (quem tem asas):
+    • dança "pulinho" → "festa" / "cabeca" (alternando entre os planos);
+    • 2+ pulos no plano → o último vira "zum!";
+    • plano de dança única longa (≥ 2,6 s) → dança encurta e fecha com "zum!" (um plano sim, outro não)."""
+    from ..core.registry import character
+    def muri(w):
+        try:
+            return bool(getattr(character(cast.get(w, {}).get("character", w)), "flies", False))
+        except Exception:
+            return False
+    vez, fecha = 0, 0
+    for sc in novas:
+        d = float(sc["duration"])
+        for w, c in sc.get("characters", {}).items():
+            acts = c.get("actions", [])
+            if not acts or not muri(w):
+                continue
+            mudou_danca = False
+            for a in acts:
+                if a.get("do") == "dance" and a.get("style") == "pulinho":
+                    a["style"] = ("festa", "cabeca")[vez % 2]
+                    mudou_danca = True
+            if mudou_danca:
+                vez += 1
+            pulos = [a for a in acts if a.get("do") == "jump"]
+            if len(pulos) >= 2:
+                ult = pulos[-1]
+                t0 = float(ult.get("t", 0.0))
+                acts[acts.index(ult)] = {"do": "zum", "t": t0, "dur": round(max(0.8, min(1.6, d - t0 - 0.05)), 3)}
+            elif len(acts) == 1 and acts[0].get("do") == "dance":
+                a = acts[0]
+                t0 = float(a.get("t", 0.0))
+                dd = min(float(a.get("dur", d)), d - t0)          # o plano pode ter sido cortado
+                if dd >= 2.6:
+                    if fecha % 2 == 0:
+                        a["dur"] = round(dd - 1.3, 3)
+                        acts.append({"do": "zum", "t": round(t0 + dd - 1.3, 3), "dur": 1.3})
+                    fecha += 1
+
+
+def criar_short(src_project: str, partes: list[list[str]], ate: float | str | None = None) -> Path:
+    """partes: cada item é uma lista de blocos CONTÍGUOS (ex.: [["refrao#1"], ["verso#1", "refrao#1"]]).
+    `ate` (usuário 25/11: "pegar os ±30 s a partir do refrão para continuar a música"): começa na 1ª parte e SEGUE a
+    música, terminando no limite de plano mais tardio que caiba em `ate` − 1 s e não caia no meio de uma frase.
+    `ate="fim"` (usuário 26/11: "deixa acabar a música"): começa na 1ª parte e vai ATÉ O FIM da música (corta só o
+    silêncio depois da última batida); sem o limite de 30 s (o YouTube aceita Shorts de até 3 min)."""
     from ..backgrounds import registry
     from .clip_draft import blocos
     sdir = PROJECTS / src_project
@@ -496,6 +704,21 @@ def criar_short(src_project: str, partes: list[list[str]]) -> Path:
             trechos.append((por_nome[grupo[0]]["s"], por_nome[grupo[-1]]["e"]))
         except KeyError as e:
             raise StudioError(f"parte {e} não existe; partes: {list(por_nome)}")
+    ate_fim = isinstance(ate, str) and ate.lower() == "fim"
+    if ate_fim:
+        trechos = [(trechos[0][0], round(sum(s["duration"] for s in ep["scenes"]), 4))]
+    elif ate:
+        t0 = trechos[0][0]
+        fins, t = [], 0.0
+        for s in ep["scenes"]:
+            t += s["duration"]
+            fins.append(round(t, 4))
+        dentro = lambda b: any(float(l["s"]) + 0.05 < b < float(l["e"]) - 0.05 for l in letra["lines"])
+        cands = [b for b in fins if t0 + 8 < b <= t0 + ate - 1.0 and not dentro(b)]
+        if not cands:
+            raise StudioError(f"nenhum fim de plano entre frases cabe em {ate:.0f}s a partir de {partes[0][0]}")
+        trechos = [(t0, max(cands))]
+        ult_voz = max([float(l["e"]) for l in letra["lines"] if t0 <= float(l["s"]) < max(cands)] or [max(cands)])
     # planos do clipe dentro de cada trecho (os limites dos planos coincidem com os das partes)
     t, faixas = 0.0, []
     for s in ep["scenes"]:
@@ -504,6 +727,8 @@ def criar_short(src_project: str, partes: list[list[str]]) -> Path:
     bgw = {}
     novas, tl, mapa = [], 0.0, []                          # mapa: (t0 origem, t1 origem, t0 no short)
     exatos = []
+    laurinha = src_project.startswith("laurinha/")
+    vez = 0                                                # alternância Laurinha/Luisinho nos planos da dupla
     for (t0, t1) in trechos:
         tol = 0.05                                         # planos começam em quadros inteiros (1/30 s)
         sel_f = [(a, b, s) for a, b, s in faixas if a >= t0 - tol and b <= t1 + tol]
@@ -518,7 +743,10 @@ def criar_short(src_project: str, partes: list[list[str]]) -> Path:
                 b = u.get("background")
                 if b and b not in bgw:
                     bgw[b] = registry.ensure(b)
-            v = _verticaliza(s, bgw)
+            solo = _solo_da_dupla(s, vez) if laurinha else None
+            if solo:
+                vez = FRENTE.index(solo) + 1                   # o próximo plano da dupla vai para o outro
+            v = _verticaliza(s, bgw, solo)
             v["id"] = f"s{len(novas) + 1:02d}" + v["id"][3:]
             if not novas:
                 v.pop("transition_in", None)
@@ -527,7 +755,13 @@ def criar_short(src_project: str, partes: list[list[str]]) -> Path:
                 v["transition_in"] = {"type": "zoom", "dur": 0.4}
             novas.append(v)
         tl += t1 - t0
-    _bordas_no_silencio(novas, exatos, mapa, song, _arquivo(sdir, song["files"]["vocals"]), letra)
+    _bordas_no_silencio(novas, exatos, mapa, song, _arquivo(sdir, song["files"]["vocals"]), letra,
+                        apos_voz=ult_voz if (ate and not ate_fim) else None, so_inicio=ate_fim)
+    if ate_fim:
+        _corta_fim(novas, exatos, mapa, _fim_da_musica(_arquivo(sdir, song["files"]["work"]), exatos[-1][1]))
+    _ajusta_vertical(novas, ep.get("cast", {}), laurinha)
+    if laurinha:
+        _coreografia_b(novas, ep.get("cast", {}))
     did = f"{src_project}-short"
     ddir = PROJECTS / did
     (ddir / "musica").mkdir(parents=True, exist_ok=True)
@@ -553,7 +787,7 @@ def criar_short(src_project: str, partes: list[list[str]]) -> Path:
                                          for w in l["words"]]})
     novas[:] = _divide_longos(novas, bgw, beats)
     total = round(sum(s["duration"] for s in novas), 4)
-    if total > 30.05:                                      # usuário, 23/11: Shorts de no máximo 30 s
+    if total > (180.0 if ate_fim else 30.05):             # 23/11: Shorts ≤ 30 s; 26/11 ("deixa acabar a música"): até o fim
         raise StudioError(f"o Short ficou com {total:.1f}s (máximo 30 s): escolha partes menores")
     song2 = {"schema": "song-1.0", "files": {"work": str(ddir / "musica" / "trabalho.wav"),
                                               "vocals": str(ddir / "analise" / "vocals.wav")},

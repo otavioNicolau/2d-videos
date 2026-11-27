@@ -227,7 +227,7 @@ def publicar_short(project: str, musica: Path, copiar: bool = True) -> Path:
             "OBS.: canal para crianças — comentários ficam desativados pelo YouTube."]
     (out / f"{slug}.descricao.txt").write_text("\n".join(desc) + "\n", encoding="utf-8")
     (out / f"{slug}.youtube.txt").write_text("\n".join([
-        "Configurações do envio (Short):", "- Formato: vertical 1080×1920, no máximo 30 s", "- Público: SIM, é conteúdo para crianças",
+        "Configurações do envio (Short):", "- Formato: vertical 1080×1920, até 3 min (do último refrão até o fim da música)", "- Público: SIM, é conteúdo para crianças",
         "- Categoria: Música", "- Idioma do vídeo: Português (Brasil)",
         "- Miniatura: o YouTube usa um quadro do vídeo (escolha um do refrão, com a turma animada)"]) + "\n", encoding="utf-8")
     if copiar:
@@ -236,5 +236,9 @@ def publicar_short(project: str, musica: Path, copiar: bool = True) -> Path:
         dest.mkdir(parents=True, exist_ok=True)
         for p in out.iterdir():
             shutil.copy2(p, dest / p.name)
+        for p in dest.glob("storyboard*.png"):             # pasta do Windows só com o que vai para o YouTube
+            p.unlink()
+        _limpar()                                          # 26/11: o Short também limpa (antes só o vídeo longo)
         return dest
+    _limpar()
     return out

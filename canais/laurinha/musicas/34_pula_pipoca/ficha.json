@@ -1,20 +1,22 @@
 {
  "schema": "musica-1.0",
- "titulo": "Pula Pipoca",
- "gancho": "pula pipoca",
+ "titulo": "Pula Pipoca!",
+ "gancho": "pula, pula, pipoca",
  "palavras_tema": [
   "pipoca",
   "milho",
-  "festa junina",
-  "panela"
+  "panela",
+  "ploc",
+  "bigodão"
  ],
  "tipo": "danca",
- "tema": "a pipoca que pula na festa junina",
+ "tema": "na festa de São João o vovô Ciço faz pipoca no panelão; a Laurinha e o Luisinho ficam pertinho escutando o barulhinho. Refrão-desafio: 'pula, pula, pipoca! ploc, ploc, no panelão! zum, zum! pula do chão!' (a criança pula junto). Ponte = comandos de pipoca (agacha igual milho, treme, pula, num pé só, roda e ploc). Virada: de repente a panela fica em silêncio, o Luisinho chega perto ('cadê? não estourou?'), o vovô levanta a tampa… PLOC! a última pipoca pula no bigodão do vovô Ciço",
  "dia_a_dia": [
-  "festa junina",
-  "fazer pipoca com um adulto"
+  "festa junina com a família",
+  "pipoca se faz com um adulto (o fogão é quente)",
+  "esperar a pipoca estourar"
  ],
- "curiosidade": "o milho tem aguinha dentro: esquenta, vira vapor e estoura em pipoca",
+ "curiosidade": "a pipoca estoura porque a água dentro do grão de milho vira vapor quando esquenta e faz o grão explodir: ploc!",
  "ritmo": "forro_piseiro",
  "bpm": 140,
  "estrutura": "D",
@@ -22,28 +24,32 @@
  "cantam": {
   "verso": "laurinha",
   "refrão": "laurinha",
-  "ponte": "laurinha (comandos)"
+  "ponte": "laurinha (comandos de pipoca para quem assiste)"
  },
  "cenas": [
   {
    "parte": "intro",
-   "ideia": "a festa junina: bandeirinhas e a panela no fogão (com um adulto)"
+   "ideia": "festa de São João: o vovô Ciço põe o milho no panelão; pipocas pulando"
   },
   {
    "parte": "verso 1",
-   "ideia": "as pipocas pulam: no chapéu do vovô, até a lua"
+   "ideia": "o vovô Ciço chega com a panela ('quem quer pipoca?'); a Laurinha e o Luisinho bem pertinho escutando o barulhinho"
   },
   {
    "parte": "refrão",
-   "ideia": "todo mundo pula como pipoca a cada 'ploc'"
+   "ideia": "todo mundo pula igual pipoca; pipocas saltando do panelão; zum, zum! pula do chão"
   },
   {
    "parte": "ponte",
-   "ideia": "comandos: agacha como milhinho, treme… e pula!"
+   "ideia": "comandos: agacha igual milho, esquentou, treme, pula e ploc; pula alto, num pé só, roda e ploc no chapéu da vovó"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "a panela fica em silêncio; o Luisinho chega perto ('cadê?'); o vovô levanta a tampa… PLOC! a última pipoca pula no bigodão do vovô Ciço"
   },
   {
    "parte": "final",
-   "ideia": "convite; o balde de pipoca e todos dando tchau"
+   "ideia": "'e você? pula igual pipoca?' · joinha · inscreva-se · tchau com o vovô de pipoca no bigodão"
   }
  ],
  "duracao_alvo": [
@@ -53,14 +59,108 @@
  "alternativas": [
   "forro_pe_de_serra"
  ],
- "status": "letra_revisada",
- "versoes": [],
+ "status": "aprovada",
+ "versoes": [
+  "Pula Pipoca!"
+ ],
  "youtube": {
-  "resumo": "PULA PIPOCA! 🍿 Na festa de São João, o milho na panela fez ploc, ploc… uma pipoca caiu no chapéu do vovô, outra foi pra lua! Agacha igual milho, treme, treme… pula! E agora num pé só!",
-  "resumo_short": "PULA PIPOCA! 🍿 Agacha, esquenta e pula com a Laurinha e o Luisinho!",
-  "curiosidade": "O milho tem aguinha dentro: esquenta, vira vapor e estoura em pipoca"
+  "resumo": "PULA, PULA, PIPOCA! 🍿🐝 Na festa de São João o vovô Ciço faz pipoca no panelão… ploc, ploc! A Laurinha e o Luisinho pulam junto! Mas de repente a panela fica em silêncio… cadê a última pipoca? Pula junto com a turminha!",
+  "resumo_short": "PULA, PULA, PIPOCA! 🍿 Ploc, ploc, no panelão!",
+  "curiosidade": "A pipoca estoura porque a água dentro do grão de milho vira vapor quando esquenta: ploc!",
+  "miniatura": "PULA, PULA,\nPIPOCA!",
+  "miniatura_cena": {
+   "fundo": "faixas",
+   "centro": [
+    400,
+    430
+   ],
+   "cores": [
+    [
+     255,
+     170,
+     90
+    ],
+    [
+     190,
+     150,
+     255
+    ],
+    [
+     255,
+     214,
+     90
+    ],
+    [
+     150,
+     230,
+     205
+    ]
+   ],
+   "heroi": {
+    "id": "laurinha",
+    "pose": {
+     "expr": "joy",
+     "turn": 0.2,
+     "mouth": "D",
+     "hand_n_x": -135,
+     "hand_n_y": -135,
+     "hand_n_bend": 0.5,
+     "paw_n": 3,
+     "hand_f_x": 135,
+     "hand_f_y": -135,
+     "hand_f_bend": -0.5,
+     "paw_f": 3
+    }
+   },
+   "par": {
+    "id": "vovo_cico",
+    "pose": {
+     "expr": "joy",
+     "turn": -0.2,
+     "mouth": "D"
+    },
+    "tam": 540,
+    "x": 1060,
+    "corte": 120
+   },
+   "objetos": [
+    {
+     "id": "panelao",
+     "pose": {
+      "ploc": 0.35,
+      "tampa": 0.0,
+      "chama": 0.2
+     },
+     "tam": 330,
+     "x": 790,
+     "base": 640
+    }
+   ],
+   "frente": [
+    {
+     "id": "pipoca",
+     "pose": {
+      "cara": 1.0
+     },
+     "tam": 95,
+     "x": 1030,
+     "base": 605
+    },
+    {
+     "id": "pipoca",
+     "pose": {
+      "cara": 0.0,
+      "gira": 0.3
+     },
+     "tam": 80,
+     "x": 620,
+     "base": 300
+    }
+   ]
+  }
  },
  "data_comemorativa": "Festa junina (junho)",
  "persona": "laurinha",
- "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz) · 23/11/2026: reescrita para 5 a 8 anos"
+ "revisao": "18/11/2026: jeito da referência · 23/11/2026: reescrita para 5 a 8 anos · 25/11/2026: receita das letras do Fofolucos (história com virada no 2º verso, refrão-desafio, vovô Ciço)",
+ "escolhida": "Pula Pipoca!"
 }

@@ -578,7 +578,7 @@ def _plano_scene(p: dict, occ: int, dur: float, plines: list, t0: float, cantam_
 
 def roteiro_bloco(b: dict, planos_spec: list, occ: int, lines: list, beats: list, cast: dict, first_sid: int) -> list[dict]:
     """Planos de um bloco a partir do roteiro: cada plano consome N versos; corte na batida antes do 1º verso do plano."""
-    blines = [l for l in lines if b["s"] - 0.05 <= l["s"] < b["e"] - 0.05]
+    blines = [l for l in lines if b["s"] - 0.15 <= l["s"] < b["e"] - 0.15]   # 25/11: igual ao _comum.Roteiro (frase colada no limite)
     starts, li, t = [], 0, b["s"]
     for k, p in enumerate(planos_spec):
         n = int(p.get("linhas", 1 if "seg" not in p else 0))

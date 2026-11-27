@@ -1,0 +1,463 @@
+{
+  "episode": "ep08-sombra-de-monstrinho-short",
+  "scenes": {
+    "s01_refrao": {
+      "frames": 92,
+      "performers": {
+        "gogo": {
+          "drawings": 92,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 91
+          },
+          "empty_frames": 0
+        },
+        "sb": {
+          "drawings": 92,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 91
+          },
+          "empty_frames": 0
+        },
+        "lant": {
+          "drawings": 92,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 91
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s02_refrao": {
+      "frames": 130,
+      "performers": {
+        "gogo": {
+          "drawings": 130,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 129
+          },
+          "empty_frames": 0
+        },
+        "mimi": {
+          "drawings": 130,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 129
+          },
+          "empty_frames": 0
+        },
+        "nhoque": {
+          "drawings": 130,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 129
+          },
+          "empty_frames": 0
+        },
+        "bo": {
+          "drawings": 130,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 129
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s03_refrao": {
+      "frames": 78,
+      "performers": {
+        "bilu": {
+          "drawings": 78,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 77
+          },
+          "empty_frames": 0
+        },
+        "sb": {
+          "drawings": 78,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 77
+          },
+          "empty_frames": 0
+        },
+        "lant": {
+          "drawings": 78,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 77
+          },
+          "empty_frames": 0
+        },
+        "form": {
+          "drawings": 78,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 77
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s04_refrao": {
+      "frames": 91,
+      "performers": {
+        "bilu": {
+          "drawings": 91,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 90
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s05_final": {
+      "frames": 77,
+      "performers": {
+        "teco": {
+          "drawings": 77,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 76
+          },
+          "empty_frames": 0
+        },
+        "nhoque": {
+          "drawings": 77,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 76
+          },
+          "empty_frames": 0
+        },
+        "lant": {
+          "drawings": 77,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 76
+          },
+          "empty_frames": 0
+        },
+        "sb": {
+          "drawings": 77,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 76
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s06_final": {
+      "frames": 131,
+      "performers": {
+        "mimi": {
+          "drawings": 131,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 130
+          },
+          "empty_frames": 0
+        },
+        "sb": {
+          "drawings": 131,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 130
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s07_final": {
+      "frames": 52,
+      "performers": {
+        "zuzu": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        },
+        "joinha": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 1
+        },
+        "bo": {
+          "drawings": 52,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 51
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [
+        "joinha: 1 quadros vazios (ex.: [1])"
+      ],
+      "frozen_samples": 0
+    },
+    "s08_final": {
+      "frames": 65,
+      "performers": {
+        "bilu": {
+          "drawings": 65,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 64
+          },
+          "empty_frames": 0
+        },
+        "mimi": {
+          "drawings": 65,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 64
+          },
+          "empty_frames": 0
+        },
+        "nv": {
+          "drawings": 65,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 64
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s09_final": {
+      "frames": 84,
+      "performers": {
+        "gogo": {
+          "drawings": 84,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 83
+          },
+          "empty_frames": 0
+        },
+        "botao": {
+          "drawings": 84,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 83
+          },
+          "empty_frames": 1
+        },
+        "bo": {
+          "drawings": 84,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 83
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [
+        "botao: 1 quadros vazios (ex.: [1])"
+      ],
+      "frozen_samples": 0
+    },
+    "s10_final": {
+      "frames": 73,
+      "performers": {
+        "gogo": {
+          "drawings": 73,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 72
+          },
+          "empty_frames": 0
+        },
+        "sb": {
+          "drawings": 73,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 72
+          },
+          "empty_frames": 0
+        },
+        "lant": {
+          "drawings": 73,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 72
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s11_final": {
+      "frames": 77,
+      "performers": {
+        "gogo": {
+          "drawings": 77,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 76
+          },
+          "empty_frames": 0
+        },
+        "sb": {
+          "drawings": 77,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 76
+          },
+          "empty_frames": 0
+        },
+        "lant": {
+          "drawings": 77,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 76
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s12_final": {
+      "frames": 90,
+      "performers": {
+        "teco": {
+          "drawings": 90,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 89
+          },
+          "empty_frames": 0
+        },
+        "gogo": {
+          "drawings": 90,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 89
+          },
+          "empty_frames": 0
+        },
+        "mimi": {
+          "drawings": 90,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 89
+          },
+          "empty_frames": 0
+        },
+        "zuzu": {
+          "drawings": 90,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 89
+          },
+          "empty_frames": 0
+        },
+        "bilu": {
+          "drawings": 90,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 89
+          },
+          "empty_frames": 0
+        },
+        "nhoque": {
+          "drawings": 90,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 89
+          },
+          "empty_frames": 0
+        },
+        "nv": {
+          "drawings": 90,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 89
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s13_final": {
+      "frames": 125,
+      "performers": {
+        "bilu": {
+          "drawings": 125,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 124
+          },
+          "empty_frames": 0
+        },
+        "sb": {
+          "drawings": 125,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 124
+          },
+          "empty_frames": 0
+        },
+        "lant": {
+          "drawings": 124,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 124
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    }
+  },
+  "warnings": [
+    "storyboard s01_refrao: pendente",
+    "storyboard s02_refrao: pendente",
+    "storyboard s03_refrao: pendente",
+    "storyboard s04_refrao: pendente",
+    "storyboard s05_final: pendente",
+    "storyboard s06_final: pendente",
+    "storyboard s07_final: pendente",
+    "storyboard s08_final: pendente",
+    "storyboard s09_final: pendente",
+    "storyboard s10_final: pendente",
+    "storyboard s11_final: pendente",
+    "storyboard s12_final: pendente",
+    "storyboard s13_final: pendente"
+  ],
+  "lines": {},
+  "video": "/home/otavio/2d/projects/fofolucos/ep08-sombra-de-monstrinho-short/output/ep08-sombra-de-monstrinho-short.mp4",
+  "contact_sheet": "/home/otavio/2d/projects/fofolucos/ep08-sombra-de-monstrinho-short/output/prancha.png",
+  "approved": true
+}

@@ -49,12 +49,13 @@ class Roteiro:
         self.lines = json.loads((self.proj / "analise" / "letra.json").read_text(encoding="utf-8"))["lines"]
         self.beats = self.song["beats"]
         self.canta = canta
+        self.canal = id_do_projeto(projeto)
         self.estilos = itertools.cycle(["chute", "joelho", "sapinho", "cintura", "pezinho", "marcha", "lado", "balanco",
                                         "bracos", "gingado", "palmas", "festa"])
         self.info, occ = {}, {}
         for b in blocos(self.song):
             occ[b["tipo"]] = occ.get(b["tipo"], 0) + 1
-            self.info[f"{b['tipo']}#{occ[b['tipo']]}"] = (b, [l for l in self.lines if b["s"] - 0.05 <= l["s"] < b["e"] - 0.05])
+            self.info[f"{b['tipo']}#{occ[b['tipo']]}"] = (b, [l for l in self.lines if b["s"] - 0.15 <= l["s"] < b["e"] - 0.15])   # 25/11: frase colada no limite (batida) cai na parte certa
         self.partes: dict = {}
 
     # ── tempos ──
@@ -131,7 +132,11 @@ class Roteiro:
             out.append(k)
         return out
 
-    def salvar(self, nota: str, escala: float = 1.45):
+    ESCALA_PADRAO = {"laurinha": 1.7}       # 25/11: o usuário aprovou a turma da Laurinha maior na tela (33); Fofolucos 1,45
+
+    def salvar(self, nota: str, escala: float | None = None):
+        if escala is None:
+            escala = self.ESCALA_PADRAO.get(self.canal, 1.45)
         for chave, planos in self.partes.items():
             k_info = chave if chave in self.info else f"{chave}#1"
             for p, (t0, t1, _) in zip(planos, self.tempos(k_info, planos)):

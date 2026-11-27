@@ -64,6 +64,10 @@ def _limpar_pasta(manter: int, simular: bool, root: Path) -> list[tuple[str, int
         if d.name in rodando or rel in rodando:
             feito.append((d.name, 0, "mantido: renderizando agora"))
             continue
+        import time
+        if time.time() - b.stat().st_mtime < 6 * 3600:     # 26/11: build mexido nas últimas 6 h (refação em andamento) fica
+            feito.append((d.name, 0, "mantido: usado nas últimas 6 h"))
+            continue
         if m and not _tem_mp4_final(d):
             feito.append((d.name, 0, "mantido: ainda sem MP4 final"))
             continue

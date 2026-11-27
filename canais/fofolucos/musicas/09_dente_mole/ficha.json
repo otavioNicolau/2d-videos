@@ -1,0 +1,151 @@
+{
+ "schema": "musica-1.0",
+ "titulo": "Dente Mole de Monstrinho!",
+ "gancho": "dente mole de monstrinho",
+ "palavras_tema": [
+  "dente",
+  "mole",
+  "balança",
+  "maçã",
+  "sorriso"
+ ],
+ "tipo": "historia",
+ "tema": "o Nhoque, o comilão, está com um DENTE MOLE e não consegue morder o pãozinho. Refrão-desafio: 'dente mole de monstrinho! balança pra lá e pra cá! rawr! será que vai cair já?' (a criança balança junto). Ponte = comandos de cuidado com o dente (abre a boca, balança com a língua devagar, escova bem, sorriso brilhante, nada de puxar com força). Virada: no lanche ele morde uma maçã — NHAC! — o dente some, todo mundo procura pela casa… e o dente estava grudadinho na maçã",
+ "dia_a_dia": [
+  "o dente de leite fica mole e cai sozinho (não puxar com força)",
+  "escovar bem os dentes",
+  "sorriso com janelinha"
+ ],
+ "curiosidade": "as crianças têm 20 dentes de leite, e eles começam a cair por volta dos 6 anos para os dentes novos nascerem",
+ "ritmo": "pop_infantil",
+ "bpm": 136,
+ "estrutura": "R",
+ "voz": "fofolucos",
+ "cantam": {
+  "verso": "fofolucos",
+  "refrão": "fofolucos",
+  "ponte": "fofolucos (comandos de cuidado com o dente)"
+ },
+ "cenas": [
+  {
+   "parte": "intro",
+   "ideia": "close do Nhoque mostrando o dente mole que balança; RAWR da turma"
+  },
+  {
+   "parte": "verso 1",
+   "ideia": "na mesa da Vila o Nhoque morde o pãozinho, 'ai!'; o dente molinho vai pra lá e pra cá; a turma chega para ajudar"
+  },
+  {
+   "parte": "refrão",
+   "ideia": "todo mundo balança junto (a cabeça, o corpo, o dente do Nhoque); 'será que vai cair já?' com suspense; muda quem dança a cada refrão"
+  },
+  {
+   "parte": "ponte",
+   "ideia": "comandos: abre a boca grandona, mostra o dente, balança com a língua devagar; escova os dentes, sorriso brilhante, nada de puxar com força"
+  },
+  {
+   "parte": "verso 2",
+   "ideia": "no lanche, a maçã; NHAC! o dente some; a turma procura pela casa, debaixo da mesa; o dente estava grudadinho na maçã — o Nhoque sorri com a janelinha"
+  },
+  {
+   "parte": "final",
+   "ideia": "'e você? tem dente mole?' · joinha · inscreva-se · tchau da turma, o Nhoque sorrindo com a janelinha"
+  }
+ ],
+ "duracao_alvo": [
+  140,
+  170
+ ],
+ "alternativas": [],
+ "status": "aprovada",
+ "versoes": [
+  "Dente Mole de Monstrinho!"
+ ],
+ "persona": "fofolucos",
+ "youtube": {
+  "resumo": "DENTE MOLE DE MONSTRINHO! 👾🦷 O Nhoque, o comilão, está com um dente mole e não consegue comer o pãozinho! A turma ajuda a balançar com cuidado… será que vai cair já? Balança junto com os Fofolucos!",
+  "resumo_short": "DENTE MOLE DE MONSTRINHO! 👾🦷 Será que vai cair já?",
+  "curiosidade": "As crianças têm 20 dentes de leite, e eles começam a cair por volta dos 6 anos para os dentes novos nascerem!",
+  "miniatura": "DENTE MOLE DE\nMONSTRINHO!",
+  "miniatura_cena": {
+   "fundo": "raios",
+   "centro": [
+    400,
+    430
+   ],
+   "cores": [
+    [
+     120,
+     200,
+     255
+    ],
+    [
+     255,
+     243,
+     200
+    ],
+    [
+     150,
+     230,
+     205
+    ],
+    [
+     190,
+     150,
+     255
+    ]
+   ],
+   "heroi": {
+    "id": "nhoque",
+    "pose": {
+     "expr": "surprised",
+     "turn": 0.15,
+     "mouth": "O",
+     "hand_n_x": -120,
+     "hand_n_y": -150,
+     "hand_n_bend": 0.5,
+     "paw_n": 3
+    }
+   },
+   "par": {
+    "id": "mimi",
+    "pose": {
+     "expr": "joy",
+     "turn": -0.2,
+     "mouth": "D"
+    },
+    "tam": 500,
+    "x": 1080,
+    "corte": 120
+   },
+   "objetos": [
+    {
+     "id": "dente",
+     "pose": {
+      "sorri": 0.0,
+      "balanca": 0.25,
+      "gengiva": 0.0
+     },
+     "tam": 300,
+     "x": 770,
+     "base": 560
+    }
+   ],
+   "frente": [
+    {
+     "id": "maca",
+     "pose": {
+      "mordida": 1.0,
+      "dente": 1.0,
+      "brilho": 1.0
+     },
+     "tam": 230,
+     "x": 640,
+     "base": 715
+    }
+   ]
+  }
+ },
+ "revisao": "25/11/2026: letra nova para 5 a 8 anos (dente mole, cuidado com os dentes, virada da maçã)",
+ "escolhida": "Dente Mole de Monstrinho!"
+}

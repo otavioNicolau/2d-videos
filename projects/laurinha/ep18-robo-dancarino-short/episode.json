@@ -13,7 +13,7 @@
     "file": "musica/trabalho.wav",
     "analysis": "analise/song.json",
     "start": 0.0,
-    "end": 22.125,
+    "end": 39.793,
     "fade_out": 0.3,
     "beat_grid": "full"
   },
@@ -49,8 +49,10 @@
     }
   },
   "approval": {
-    "storyboard": false,
-    "final_render": false
+    "storyboard": true,
+    "final_render": false,
+    "approved_by": "Otavio",
+    "notes": "Short 18 com roteiro próprio (oficina, robô trava/volta) aprovado pelo usuário em 26/11"
   },
   "projeto": "laurinha/ep18-robo-dancarino",
   "scenes": [
@@ -63,16 +65,17 @@
       "camera": {
         "keys": [
           {
-            "t": 0.76,
-            "x": 1300.0,
-            "y": 543.9612784265519,
+            "t": 0,
+            "x": 1000.0,
+            "y": 544.0,
             "zoom": 1.808
           },
           {
             "t": 3.363,
-            "x": 1300.0,
-            "y": 543.9612784265519,
-            "zoom": 1.808
+            "x": 1000.0,
+            "y": 544.0,
+            "zoom": 1.95,
+            "ease": "inout"
           }
         ],
         "beat": {
@@ -83,10 +86,10 @@
         }
       },
       "characters": {
-        "laurinha": {
+        "luisinho": {
           "start": {
-            "x": 1150.0,
-            "y": 970,
+            "x": 880,
+            "y": 930,
             "turn": 0.35,
             "expr": "happy",
             "z": 3,
@@ -95,29 +98,15 @@
           "exposure": 1,
           "actions": [
             {
-              "t": 0.76,
-              "do": "dance",
-              "style": "marcha",
-              "dur": 4.08
-            }
-          ]
-        },
-        "luisinho": {
-          "start": {
-            "x": 1300.0,
-            "y": 730,
-            "turn": -0.35,
-            "expr": "happy",
-            "z": 2,
-            "depth": 0.75
-          },
-          "exposure": 1,
-          "actions": [
+              "do": "point",
+              "t": 0.3,
+              "dur": 0.9
+            },
             {
-              "t": 0.76,
               "do": "dance",
-              "style": "bracos",
-              "dur": 4.08
+              "t": 1.3,
+              "dur": 2.063,
+              "style": "festa"
             }
           ]
         }
@@ -125,8 +114,8 @@
       "props": {
         "robo": {
           "start": {
-            "x": 1450.0,
-            "y": 970,
+            "x": 1130.0,
+            "y": 930,
             "z": 3,
             "depth": 0.9,
             "lado": -1.0
@@ -134,15 +123,38 @@
           "exposure": 1,
           "keys": [
             {
-              "t": 0.76,
+              "t": 0.0,
               "pose": {
-                "trava": 0.0,
-                "pulo": 0.0
+                "luz": 0.0,
+                "botao": 0.0,
+                "murcha": 0.5
               },
               "ease": "step"
             },
             {
-              "t": 0.76,
+              "t": 0.75,
+              "pose": {
+                "botao": 1.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.8,
+              "pose": {
+                "luz": 0.0,
+                "murcha": 0.5
+              }
+            },
+            {
+              "t": 1.15,
+              "pose": {
+                "luz": 1.0,
+                "murcha": 0.0
+              },
+              "ease": "back"
+            },
+            {
+              "t": 1.2,
               "pose": {
                 "danca": 0.0
               },
@@ -151,9 +163,9 @@
             {
               "t": 3.363,
               "pose": {
-                "trava": 0.0
+                "danca": 1.622
               },
-              "in": 4.0
+              "ease": "linear"
             }
           ]
         }
@@ -170,16 +182,12 @@
       ],
       "sing": [
         {
-          "who": "laurinha",
-          "from": 1.693,
-          "to": 3.343
-        },
-        {
           "who": "luisinho",
           "from": 1.693,
           "to": 3.343
         }
-      ]
+      ],
+      "fx": []
     },
     {
       "id": "s02_refrao",
@@ -190,16 +198,16 @@
       "camera": {
         "keys": [
           {
-            "t": 0.0,
-            "x": 1150.0,
-            "y": 560.0,
-            "zoom": 2.4
+            "t": 0,
+            "x": 1150,
+            "y": 600,
+            "zoom": 2.2
           },
           {
             "t": 3.23,
-            "x": 1150.0,
-            "y": 560.0,
-            "zoom": 2.496,
+            "x": 1150,
+            "y": 600,
+            "zoom": 2.35,
             "ease": "inout"
           }
         ],
@@ -210,63 +218,12 @@
           "bounce": 0
         }
       },
-      "characters": {
-        "laurinha": {
-          "start": {
-            "x": 1150.0,
-            "y": 970,
-            "turn": 0.35,
-            "expr": "happy",
-            "z": 3,
-            "depth": 1.0
-          },
-          "exposure": 1,
-          "actions": [
-            {
-              "t": 0.0,
-              "do": "dance",
-              "style": "marcha",
-              "dur": 1.477
-            },
-            {
-              "t": 1.577,
-              "do": "estatua",
-              "pose": "perna",
-              "dur": 1.653
-            }
-          ]
-        },
-        "luisinho": {
-          "start": {
-            "x": 1300.0,
-            "y": 730,
-            "turn": -0.35,
-            "expr": "happy",
-            "z": 2,
-            "depth": 0.75
-          },
-          "exposure": 1,
-          "actions": [
-            {
-              "t": 0.0,
-              "do": "dance",
-              "style": "bracos",
-              "dur": 1.477
-            },
-            {
-              "t": 1.577,
-              "do": "estatua",
-              "pose": "bracos",
-              "dur": 1.653
-            }
-          ]
-        }
-      },
+      "characters": {},
       "props": {
         "robo": {
           "start": {
-            "x": 1450.0,
-            "y": 970,
+            "x": 1150,
+            "y": 930,
             "z": 3,
             "depth": 0.9,
             "lado": -1.0
@@ -276,16 +233,22 @@
             {
               "t": 0.0,
               "pose": {
-                "danca": 0.0
+                "danca": 0.9
               },
               "ease": "step"
+            },
+            {
+              "t": 1.477,
+              "pose": {
+                "danca": 2.008
+              },
+              "ease": "linear"
             },
             {
               "t": 1.427,
               "pose": {
                 "trava": 0.0
-              },
-              "in": 4.0
+              }
             },
             {
               "t": 1.557,
@@ -293,14 +256,6 @@
                 "trava": 1.0
               },
               "ease": "step"
-            },
-            {
-              "t": 3.19,
-              "pose": {
-                "danca": 4.375
-              },
-              "ease": "linear",
-              "in": 5.763
             }
           ]
         }
@@ -314,155 +269,28 @@
           "y": 170
         }
       ],
-      "sing": [
-        {
-          "who": "laurinha",
-          "from": 0.0,
-          "to": 3.21
-        },
-        {
-          "who": "luisinho",
-          "from": 0.0,
-          "to": 3.21
-        }
-      ]
+      "sing": [],
+      "fx": []
     },
     {
       "id": "s03_refrao",
       "title": "Robô dançarino!",
       "duration": 2.598,
       "description": "Robô dançarino! / Bip, bop, voltou!",
-      "background": "danca_raios_roxo",
+      "background": "plano_oficina",
       "camera": {
         "keys": [
           {
-            "t": 0.0,
-            "x": 960,
-            "y": 620,
-            "zoom": 1.579
+            "t": 0,
+            "x": 1000.0,
+            "y": 544.0,
+            "zoom": 1.808
           },
           {
             "t": 2.598,
-            "x": 960,
-            "y": 620,
-            "zoom": 1.579
-          }
-        ],
-        "beat": {
-          "pulse": 0.0,
-          "bar_zoom": 0.04,
-          "sway": 6,
-          "bounce": 0
-        }
-      },
-      "characters": {
-        "laurinha": {
-          "start": {
-            "x": 810.0,
-            "y": 1190,
-            "turn": 0.35,
-            "expr": "happy",
-            "z": 3,
-            "depth": 1.0
-          },
-          "exposure": 1,
-          "actions": [
-            {
-              "t": 0.0,
-              "do": "estatua",
-              "pose": "perna",
-              "dur": 3.35
-            }
-          ]
-        },
-        "luisinho": {
-          "start": {
-            "x": 960.0,
-            "y": 800,
-            "turn": -0.35,
-            "expr": "happy",
-            "z": 2,
-            "depth": 0.85
-          },
-          "exposure": 1,
-          "actions": [
-            {
-              "t": 0.0,
-              "do": "estatua",
-              "pose": "bracos",
-              "dur": 3.35
-            }
-          ]
-        }
-      },
-      "props": {
-        "robo": {
-          "start": {
-            "x": 1110.0,
-            "y": 1190,
-            "z": 3,
-            "depth": 1.0,
-            "lado": -1.0
-          },
-          "exposure": 1,
-          "keys": [
-            {
-              "t": 0.0,
-              "pose": {
-                "trava": 1.0
-              },
-              "ease": "step"
-            },
-            {
-              "t": 0.0,
-              "pose": {
-                "danca": 0.0
-              },
-              "ease": "step"
-            },
-            {
-              "t": 2.598,
-              "pose": {
-                "trava": 1.0
-              },
-              "in": 3.3
-            }
-          ]
-        }
-      },
-      "callouts": [],
-      "sing": [
-        {
-          "who": "laurinha",
-          "from": 0.4,
-          "to": 2.578
-        },
-        {
-          "who": "luisinho",
-          "from": 0.4,
-          "to": 2.578
-        }
-      ]
-    },
-    {
-      "id": "s04_refrao",
-      "title": "Robô dançarino!",
-      "duration": 2.602,
-      "description": "Robô dançarino! / Bip, bop, voltou!",
-      "background": "danca_raios_roxo",
-      "camera": {
-        "keys": [
-          {
-            "t": 0.0,
-            "x": 810.0,
-            "y": 760.0,
-            "zoom": 2.0
-          },
-          {
-            "t": 2.602,
-            "x": 810.0,
-            "y": 760.0,
-            "zoom": 2.08,
+            "x": 1000.0,
+            "y": 544.0,
+            "zoom": 1.808,
             "ease": "inout"
           }
         ],
@@ -476,8 +304,8 @@
       "characters": {
         "laurinha": {
           "start": {
-            "x": 810.0,
-            "y": 1190,
+            "x": 880,
+            "y": 930,
             "turn": 0.35,
             "expr": "happy",
             "z": 3,
@@ -486,51 +314,14 @@
           "exposure": 1,
           "actions": [
             {
-              "t": 0.0,
-              "do": "estatua",
-              "pose": "perna",
-              "dur": 0.752
-            },
-            {
-              "t": 0.852,
-              "do": "jump",
+              "do": "shock_reaction",
+              "t": 0.1,
               "dur": 0.9
             },
             {
-              "t": 1.852,
-              "do": "dance",
-              "style": "bracos",
-              "dur": 0.75
-            }
-          ]
-        },
-        "luisinho": {
-          "start": {
-            "x": 960.0,
-            "y": 800,
-            "turn": -0.35,
-            "expr": "happy",
-            "z": 2,
-            "depth": 0.85
-          },
-          "exposure": 1,
-          "actions": [
-            {
-              "t": 0.0,
               "do": "estatua",
-              "pose": "bracos",
-              "dur": 0.752
-            },
-            {
-              "t": 0.852,
-              "do": "jump",
-              "dur": 0.9
-            },
-            {
-              "t": 1.852,
-              "do": "dance",
-              "style": "bracos",
-              "dur": 0.75
+              "t": 1.1,
+              "dur": 1.448
             }
           ]
         }
@@ -538,10 +329,10 @@
       "props": {
         "robo": {
           "start": {
-            "x": 1110.0,
-            "y": 1190,
+            "x": 1130.0,
+            "y": 930,
             "z": 3,
-            "depth": 1.0,
+            "depth": 0.9,
             "lado": -1.0
           },
           "exposure": 1,
@@ -549,45 +340,134 @@
             {
               "t": 0.0,
               "pose": {
-                "danca": 0.0
+                "trava": 1.0
+              },
+              "ease": "step"
+            }
+          ]
+        }
+      },
+      "callouts": [],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.4,
+          "to": 2.578
+        }
+      ],
+      "fx": []
+    },
+    {
+      "id": "s04_refrao",
+      "title": "Robô dançarino!",
+      "duration": 2.602,
+      "description": "Robô dançarino! / Bip, bop, voltou!",
+      "background": "plano_oficina",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1000.0,
+            "y": 544.0,
+            "zoom": 1.808
+          },
+          {
+            "t": 2.602,
+            "x": 1000.0,
+            "y": 544.0,
+            "zoom": 1.9,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 880,
+            "y": 930,
+            "turn": 0.35,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "point",
+              "t": 0.2,
+              "dur": 0.8
+            },
+            {
+              "do": "zum",
+              "t": 0.899,
+              "dur": 1.3
+            }
+          ]
+        }
+      },
+      "props": {
+        "robo": {
+          "start": {
+            "x": 1130.0,
+            "y": 930,
+            "z": 3,
+            "depth": 0.9,
+            "lado": -1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "trava": 1.0
               },
               "ease": "step"
             },
             {
-              "t": 0.732,
+              "t": 0.729,
               "pose": {
                 "trava": 1.0
-              },
-              "in": 3.3
+              }
             },
             {
-              "t": 0.832,
+              "t": 0.829,
               "pose": {
                 "trava": 0.0
               },
               "ease": "step"
             },
             {
-              "t": 0.852,
+              "t": 0.849,
               "pose": {
                 "pulo": 0.0
               }
             },
             {
-              "t": 1.302,
+              "t": 1.299,
               "pose": {
                 "pulo": 1.0
               },
-              "ease": "linear",
-              "in": 0.42
+              "ease": "linear"
             },
             {
-              "t": 2.562,
+              "t": 1.349,
               "pose": {
-                "danca": 3.9
+                "danca": 2.0
               },
-              "ease": "linear",
-              "in": 5.13
+              "ease": "step"
+            },
+            {
+              "t": 2.602,
+              "pose": {
+                "danca": 2.94
+              },
+              "ease": "linear"
             }
           ]
         }
@@ -603,16 +483,12 @@
       ],
       "sing": [
         {
-          "who": "laurinha",
-          "from": 0.0,
-          "to": 2.552
-        },
-        {
           "who": "luisinho",
           "from": 0.0,
           "to": 2.552
         }
-      ]
+      ],
+      "fx": []
     },
     {
       "id": "s05_refrao",
@@ -623,134 +499,16 @@
       "camera": {
         "keys": [
           {
-            "t": 0.0,
-            "x": 1300.0,
-            "y": 543.9612784265519,
+            "t": 0,
+            "x": 960.0,
+            "y": 544.0,
             "zoom": 1.808
           },
           {
             "t": 2.599,
-            "x": 1300.0,
-            "y": 543.9612784265519,
-            "zoom": 1.808
-          }
-        ],
-        "beat": {
-          "pulse": 0.0,
-          "bar_zoom": 0.04,
-          "sway": 6,
-          "bounce": 0
-        }
-      },
-      "characters": {
-        "laurinha": {
-          "start": {
-            "x": 1150.0,
-            "y": 970,
-            "turn": 0.35,
-            "expr": "happy",
-            "z": 3,
-            "depth": 1.0
-          },
-          "exposure": 1,
-          "actions": [
-            {
-              "t": 0.0,
-              "do": "dance",
-              "style": "marcha",
-              "dur": 3.55
-            }
-          ]
-        },
-        "luisinho": {
-          "start": {
-            "x": 1300.0,
-            "y": 730,
-            "turn": -0.35,
-            "expr": "happy",
-            "z": 2,
-            "depth": 0.75
-          },
-          "exposure": 1,
-          "actions": [
-            {
-              "t": 0.0,
-              "do": "dance",
-              "style": "bracos",
-              "dur": 3.55
-            }
-          ]
-        }
-      },
-      "props": {
-        "robo": {
-          "start": {
-            "x": 1450.0,
-            "y": 970,
-            "z": 3,
-            "depth": 0.9,
-            "lado": -1.0
-          },
-          "exposure": 1,
-          "keys": [
-            {
-              "t": 0.0,
-              "pose": {
-                "trava": 0.0,
-                "pulo": 0.0
-              },
-              "ease": "step"
-            },
-            {
-              "t": 0.0,
-              "pose": {
-                "danca": 0.0
-              },
-              "ease": "step"
-            },
-            {
-              "t": 2.599,
-              "pose": {
-                "trava": 0.0
-              },
-              "in": 3.47
-            }
-          ]
-        }
-      },
-      "callouts": [],
-      "sing": [
-        {
-          "who": "laurinha",
-          "from": 0.1,
-          "to": 2.579
-        },
-        {
-          "who": "luisinho",
-          "from": 0.1,
-          "to": 2.579
-        }
-      ]
-    },
-    {
-      "id": "s06_refrao",
-      "title": "Robô dançarino!",
-      "duration": 2.601,
-      "description": "Robô dançarino! / Bip, bop, travou!",
-      "background": "plano_oficina",
-      "camera": {
-        "keys": [
-          {
-            "t": 0.0,
-            "x": 1150.0,
-            "y": 560.0,
-            "zoom": 2.4
-          },
-          {
-            "t": 2.601,
-            "x": 1150.0,
-            "y": 560.0,
-            "zoom": 2.496,
+            "x": 1040.0,
+            "y": 544.0,
+            "zoom": 1.808,
             "ease": "inout"
           }
         ],
@@ -764,8 +522,8 @@
       "characters": {
         "laurinha": {
           "start": {
-            "x": 1150.0,
-            "y": 970,
+            "x": 880,
+            "y": 930,
             "turn": 0.35,
             "expr": "happy",
             "z": 3,
@@ -774,41 +532,10 @@
           "exposure": 1,
           "actions": [
             {
-              "t": 0.0,
               "do": "dance",
-              "style": "marcha",
-              "dur": 0.951
-            },
-            {
-              "t": 1.051,
-              "do": "estatua",
-              "pose": "perna",
-              "dur": 1.55
-            }
-          ]
-        },
-        "luisinho": {
-          "start": {
-            "x": 1300.0,
-            "y": 730,
-            "turn": -0.35,
-            "expr": "happy",
-            "z": 2,
-            "depth": 0.75
-          },
-          "exposure": 1,
-          "actions": [
-            {
               "t": 0.0,
-              "do": "dance",
-              "style": "bracos",
-              "dur": 0.951
-            },
-            {
-              "t": 1.051,
-              "do": "estatua",
-              "pose": "bracos",
-              "dur": 1.55
+              "dur": 2.599,
+              "style": "marcha"
             }
           ]
         }
@@ -816,8 +543,8 @@
       "props": {
         "robo": {
           "start": {
-            "x": 1450.0,
-            "y": 970,
+            "x": 1130.0,
+            "y": 930,
             "z": 3,
             "depth": 0.9,
             "lado": -1.0
@@ -827,31 +554,122 @@
             {
               "t": 0.0,
               "pose": {
-                "danca": 0.0
+                "danca": 3.0
               },
               "ease": "step"
             },
             {
-              "t": 0.901,
+              "t": 2.599,
               "pose": {
-                "trava": 0.0
+                "danca": 4.949
               },
-              "in": 3.47
+              "ease": "linear"
+            }
+          ]
+        }
+      },
+      "callouts": [],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.1,
+          "to": 2.579
+        }
+      ],
+      "fx": []
+    },
+    {
+      "id": "s06_refrao",
+      "title": "Robô dançarino!",
+      "duration": 2.601,
+      "description": "Robô dançarino! / Bip, bop, travou!",
+      "background": "plano_oficina",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1000.0,
+            "y": 544.0,
+            "zoom": 1.808
+          },
+          {
+            "t": 2.601,
+            "x": 1000.0,
+            "y": 544.0,
+            "zoom": 1.95,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 880,
+            "y": 930,
+            "turn": 0.35,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "dance",
+              "t": 0.0,
+              "dur": 0.948,
+              "style": "cabeca"
             },
             {
-              "t": 1.031,
+              "do": "estatua",
+              "t": 0.998,
+              "dur": 1.553
+            }
+          ]
+        }
+      },
+      "props": {
+        "robo": {
+          "start": {
+            "x": 1130.0,
+            "y": 930,
+            "z": 3,
+            "depth": 0.9,
+            "lado": -1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "danca": 5.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.948,
+              "pose": {
+                "danca": 5.711
+              },
+              "ease": "linear"
+            },
+            {
+              "t": 0.898,
+              "pose": {
+                "trava": 0.0
+              }
+            },
+            {
+              "t": 1.028,
               "pose": {
                 "trava": 1.0
               },
               "ease": "step"
-            },
-            {
-              "t": 2.561,
-              "pose": {
-                "danca": 3.9
-              },
-              "ease": "linear",
-              "in": 5.13
             }
           ]
         }
@@ -867,36 +685,33 @@
       ],
       "sing": [
         {
-          "who": "laurinha",
-          "from": 0.0,
-          "to": 2.451
-        },
-        {
           "who": "luisinho",
           "from": 0.0,
           "to": 2.451
         }
-      ]
+      ],
+      "fx": []
     },
     {
       "id": "s07_refrao",
       "title": "Robô dançarino!",
       "duration": 2.601,
       "description": "Robô dançarino! / Bip, bop, voltou!",
-      "background": "danca_bolinhas_amarelo",
+      "background": "plano_oficina",
       "camera": {
         "keys": [
           {
-            "t": 0.0,
-            "x": 960,
-            "y": 620,
-            "zoom": 1.579
+            "t": 0,
+            "x": 1000.0,
+            "y": 600,
+            "zoom": 2.3
           },
           {
             "t": 2.601,
-            "x": 960,
-            "y": 620,
-            "zoom": 1.579
+            "x": 1000.0,
+            "y": 600,
+            "zoom": 2.45,
+            "ease": "inout"
           }
         ],
         "beat": {
@@ -906,53 +721,14 @@
           "bounce": 0
         }
       },
-      "characters": {
-        "laurinha": {
-          "start": {
-            "x": 810.0,
-            "y": 1190,
-            "turn": 0.35,
-            "expr": "happy",
-            "z": 3,
-            "depth": 1.0
-          },
-          "exposure": 1,
-          "actions": [
-            {
-              "t": 0.0,
-              "do": "estatua",
-              "pose": "perna",
-              "dur": 3.45
-            }
-          ]
-        },
-        "luisinho": {
-          "start": {
-            "x": 960.0,
-            "y": 800,
-            "turn": -0.35,
-            "expr": "happy",
-            "z": 2,
-            "depth": 0.85
-          },
-          "exposure": 1,
-          "actions": [
-            {
-              "t": 0.0,
-              "do": "estatua",
-              "pose": "bracos",
-              "dur": 3.45
-            }
-          ]
-        }
-      },
+      "characters": {},
       "props": {
         "robo": {
           "start": {
-            "x": 1110.0,
-            "y": 1190,
+            "x": 1000.0,
+            "y": 930,
             "z": 3,
-            "depth": 1.0,
+            "depth": 0.9,
             "lado": -1.0
           },
           "exposure": 1,
@@ -960,63 +736,79 @@
             {
               "t": 0.0,
               "pose": {
-                "trava": 1.0
+                "trava": 1.0,
+                "cabeca": 0.0,
+                "luz": 1.0
               },
               "ease": "step"
             },
             {
-              "t": 0.0,
+              "t": 0.4,
               "pose": {
-                "danca": 0.0
+                "cabeca": 0.0
+              }
+            },
+            {
+              "t": 1.6,
+              "pose": {
+                "cabeca": 1.0
+              },
+              "ease": "inout"
+            },
+            {
+              "t": 1.8,
+              "pose": {
+                "luz": 0.0
               },
               "ease": "step"
             },
             {
-              "t": 2.601,
+              "t": 2.0,
               "pose": {
-                "trava": 1.0
+                "luz": 1.0
               },
-              "in": 3.4
+              "ease": "step"
+            },
+            {
+              "t": 2.2,
+              "pose": {
+                "luz": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.4,
+              "pose": {
+                "luz": 1.0
+              },
+              "ease": "step"
             }
           ]
         }
       },
-      "fx": [
-        "confete"
-      ],
+      "fx": [],
       "callouts": [],
-      "sing": [
-        {
-          "who": "laurinha",
-          "from": 0.0,
-          "to": 2.581
-        },
-        {
-          "who": "luisinho",
-          "from": 0.0,
-          "to": 2.581
-        }
-      ]
+      "sing": []
     },
     {
       "id": "s08_refrao",
       "title": "Robô dançarino!",
-      "duration": 2.531,
+      "duration": 1.9657,
       "description": "Robô dançarino! / Bip, bop, voltou!",
-      "background": "danca_bolinhas_amarelo",
+      "background": "plano_oficina",
       "camera": {
         "keys": [
           {
-            "t": 0.0,
-            "x": 810.0,
-            "y": 760.0,
-            "zoom": 2.0
+            "t": 0,
+            "x": 1000.0,
+            "y": 544.0,
+            "zoom": 1.808
           },
           {
-            "t": 2.531,
-            "x": 810.0,
-            "y": 760.0,
-            "zoom": 2.08,
+            "t": 1.966,
+            "x": 1000.0,
+            "y": 544.0,
+            "zoom": 1.9,
             "ease": "inout"
           }
         ],
@@ -1030,8 +822,8 @@
       "characters": {
         "laurinha": {
           "start": {
-            "x": 810.0,
-            "y": 1190,
+            "x": 880,
+            "y": 930,
             "turn": 0.35,
             "expr": "happy",
             "z": 3,
@@ -1040,51 +832,9 @@
           "exposure": 1,
           "actions": [
             {
-              "t": 0.0,
-              "do": "estatua",
-              "pose": "perna",
-              "dur": 0.849
-            },
-            {
-              "t": 0.949,
-              "do": "jump",
-              "dur": 0.52
-            },
-            {
-              "t": 1.519,
-              "do": "dance",
-              "style": "festa",
-              "dur": 0.447
-            }
-          ]
-        },
-        "luisinho": {
-          "start": {
-            "x": 960.0,
-            "y": 800,
-            "turn": -0.35,
-            "expr": "happy",
-            "z": 2,
-            "depth": 0.85
-          },
-          "exposure": 1,
-          "actions": [
-            {
-              "t": 0.0,
-              "do": "estatua",
-              "pose": "bracos",
-              "dur": 0.849
-            },
-            {
-              "t": 0.949,
-              "do": "jump",
-              "dur": 0.52
-            },
-            {
-              "t": 1.519,
-              "do": "dance",
-              "style": "festa",
-              "dur": 0.447
+              "do": "zum",
+              "t": 0.746,
+              "dur": 1.07
             }
           ]
         }
@@ -1092,10 +842,10 @@
       "props": {
         "robo": {
           "start": {
-            "x": 1110.0,
-            "y": 1190,
+            "x": 1130.0,
+            "y": 930,
             "z": 3,
-            "depth": 1.0,
+            "depth": 0.9,
             "lado": -1.0
           },
           "exposure": 1,
@@ -1103,52 +853,57 @@
             {
               "t": 0.0,
               "pose": {
-                "danca": 0.0
+                "trava": 1.0,
+                "braco": 0.0,
+                "perna": 0.0
               },
               "ease": "step"
             },
             {
-              "t": 0.829,
+              "t": 0.826,
               "pose": {
                 "trava": 1.0
-              },
-              "in": 3.4
+              }
             },
             {
-              "t": 0.929,
+              "t": 0.926,
               "pose": {
                 "trava": 0.0
               },
               "ease": "step"
             },
             {
-              "t": 0.949,
+              "t": 0.946,
               "pose": {
                 "pulo": 0.0
               }
             },
             {
-              "t": 1.399,
+              "t": 1.396,
               "pose": {
                 "pulo": 1.0
               },
-              "ease": "linear",
-              "in": 0.42
+              "ease": "linear"
             },
             {
-              "t": 1.926,
+              "t": 1.446,
               "pose": {
-                "danca": 3.425
+                "braco": 0.0,
+                "perna": 0.0
+              }
+            },
+            {
+              "t": 1.846,
+              "pose": {
+                "braco": 1.0,
+                "perna": 1.0
               },
-              "ease": "linear",
-              "in": 4.497
+              "ease": "back"
             }
           ]
         }
       },
-      "fx": [
-        "confete"
-      ],
+      "fx": [],
       "callouts": [
         {
           "t": 0.949,
@@ -1170,13 +925,768 @@
           "who": "laurinha",
           "from": 0.0,
           "to": 1.549
+        }
+      ]
+    },
+    {
+      "id": "s09_final",
+      "title": "Gostou do robô?",
+      "duration": 2.5,
+      "description": "Gostou do robô?",
+      "background": "plano_oficina",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1000.0,
+            "y": 600,
+            "zoom": 2.2
+          },
+          {
+            "t": 2.5,
+            "x": 1000.0,
+            "y": 600,
+            "zoom": 2.4,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 1000.0,
+            "y": 930,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "apontar_camera",
+              "t": 0.15,
+              "dur": 2.3
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.3,
+          "text": "GOSTOU DO ROBÔ?",
+          "dur": 1.8,
+          "color": "azul",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "luisinho",
+          "from": 0.433,
+          "to": 2.49
+        }
+      ],
+      "transition_in": {
+        "type": "deslizar_esq",
+        "dur": 0.4
+      },
+      "props": {},
+      "fx": []
+    },
+    {
+      "id": "s10_final",
+      "title": "Dá um joinha!",
+      "duration": 1.9666,
+      "description": "Dá um joinha!",
+      "background": "plano_oficina",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1000.0,
+            "y": 544.0,
+            "zoom": 1.808
+          },
+          {
+            "t": 1.967,
+            "x": 1000.0,
+            "y": 544.0,
+            "zoom": 1.808,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1000.0,
+            "y": 990,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "bacana",
+              "t": 0.2,
+              "dur": 1.717
+            }
+          ]
+        }
+      },
+      "props": {
+        "joinha": {
+          "start": {
+            "x": 1000.0,
+            "y": 330,
+            "z": 4,
+            "depth": 0.6
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "escala": 0.0
+              }
+            },
+            {
+              "t": 0.4,
+              "pose": {
+                "escala": 1.0
+              },
+              "ease": "back"
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "callouts": [],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.333,
+          "to": 1.957
+        }
+      ]
+    },
+    {
+      "id": "s11_final",
+      "title": "Chama o papai e a mamãe",
+      "duration": 1.9667,
+      "description": "Chama o papai e a mamãe",
+      "background": "plano_oficina",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1000.0,
+            "y": 544.0,
+            "zoom": 1.808
+          },
+          {
+            "t": 1.967,
+            "x": 1000.0,
+            "y": 544.0,
+            "zoom": 1.808,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 880,
+            "y": 930,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "point",
+              "t": 0.3,
+              "dur": 1.617
+            }
+          ]
         },
+        "mamae": {
+          "start": {
+            "x": 1380,
+            "y": 930,
+            "turn": -0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "walk",
+              "t": 0.0,
+              "dur": 0.8,
+              "to_x": 1150
+            },
+            {
+              "do": "wave",
+              "t": 0.85,
+              "dur": 1.067
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.3,
+          "text": "CHAMA O PAPAI E A MAMÃE!",
+          "dur": 1.667,
+          "color": "verde",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "luisinho",
+          "from": 0.367,
+          "to": 1.957
+        }
+      ],
+      "props": {},
+      "fx": []
+    },
+    {
+      "id": "s12_final",
+      "title": "Pra se inscrever no canal! Zum, zum!",
+      "duration": 2.584,
+      "description": "Pra se inscrever no canal! Zum, zum!",
+      "background": "plano_oficina",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1000.0,
+            "y": 544.0,
+            "zoom": 1.808
+          },
+          {
+            "t": 2.584,
+            "x": 1000.0,
+            "y": 544.0,
+            "zoom": 1.808,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 880,
+            "y": 960,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "point",
+              "t": 0.2,
+              "dur": 2.334
+            }
+          ]
+        }
+      },
+      "props": {
+        "robo": {
+          "start": {
+            "x": 1150,
+            "y": 960,
+            "z": 3,
+            "depth": 0.9,
+            "lado": -1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "braco": 0.0,
+                "botao": 0.0
+              }
+            },
+            {
+              "t": 0.9,
+              "pose": {
+                "braco": 1.0
+              },
+              "ease": "out"
+            },
+            {
+              "t": 1.45,
+              "pose": {
+                "botao": 1.0
+              },
+              "ease": "step"
+            }
+          ]
+        },
+        "botao": {
+          "start": {
+            "x": 1000.0,
+            "y": 300,
+            "z": 4,
+            "depth": 0.55
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "escala": 0.0,
+                "aperta": 0.0
+              }
+            },
+            {
+              "t": 0.4,
+              "pose": {
+                "escala": 1.0
+              },
+              "ease": "back"
+            },
+            {
+              "t": 1.5,
+              "pose": {
+                "aperta": 1.0
+              },
+              "ease": "out"
+            },
+            {
+              "t": 1.8,
+              "pose": {
+                "aperta": 0.0
+              },
+              "ease": "in"
+            }
+          ]
+        }
+      },
+      "fx": [
+        "coracoes"
+      ],
+      "callouts": [],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.4,
+          "to": 2.564
+        }
+      ]
+    },
+    {
+      "id": "s13_final",
+      "title": "Pra se inscrever no canal! Zum, zum!",
+      "duration": 2.616,
+      "description": "Pra se inscrever no canal! Zum, zum!",
+      "background": "plano_oficina",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1000.0,
+            "y": 544.0,
+            "zoom": 1.808
+          },
+          {
+            "t": 2.616,
+            "x": 1000.0,
+            "y": 544.0,
+            "zoom": 1.9,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 1000.0,
+            "y": 990,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "point",
+              "t": 0.1,
+              "dur": 0.943
+            },
+            {
+              "do": "zum",
+              "t": 1.143,
+              "dur": 1.373
+            }
+          ]
+        }
+      },
+      "props": {
+        "botao": {
+          "start": {
+            "x": 1000.0,
+            "y": 300,
+            "z": 4,
+            "depth": 0.55
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "aperta": 0.0
+              }
+            },
+            {
+              "t": 1.243,
+              "pose": {
+                "aperta": 1.0
+              },
+              "ease": "out"
+            },
+            {
+              "t": 1.543,
+              "pose": {
+                "aperta": 0.0
+              },
+              "ease": "in"
+            },
+            {
+              "t": 1.933,
+              "pose": {
+                "aperta": 1.0
+              },
+              "ease": "out"
+            },
+            {
+              "t": 2.233,
+              "pose": {
+                "aperta": 0.0
+              },
+              "ease": "in"
+            }
+          ]
+        }
+      },
+      "fx": [
+        "coracoes"
+      ],
+      "callouts": [],
+      "sing": [
         {
           "who": "luisinho",
           "from": 0.0,
-          "to": 1.549
+          "to": 2.596
         }
       ]
+    },
+    {
+      "id": "s14_final",
+      "title": "Robô dançarino! Tchau! Bip!",
+      "duration": 3.235,
+      "description": "Robô dançarino! Tchau! Bip!",
+      "background": "plano_oficina",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1000.0,
+            "y": 544.0,
+            "zoom": 1.808
+          },
+          {
+            "t": 3.235,
+            "x": 1000.0,
+            "y": 544.0,
+            "zoom": 1.808,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 880,
+            "y": 930,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "dance",
+              "t": 0.0,
+              "dur": 1.797,
+              "style": "festa"
+            },
+            {
+              "do": "wave",
+              "t": 1.897,
+              "dur": 1.288
+            }
+          ]
+        }
+      },
+      "props": {
+        "robo": {
+          "start": {
+            "x": 1130.0,
+            "y": 930,
+            "z": 3,
+            "depth": 0.9,
+            "lado": -1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "danca": 6.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.897,
+              "pose": {
+                "danca": 7.423
+              },
+              "ease": "linear"
+            },
+            {
+              "t": 1.897,
+              "pose": {
+                "braco": 0.0
+              }
+            },
+            {
+              "t": 2.197,
+              "pose": {
+                "braco": 1.0
+              },
+              "ease": "out"
+            },
+            {
+              "t": 2.497,
+              "pose": {
+                "braco": 0.6
+              }
+            },
+            {
+              "t": 2.697,
+              "pose": {
+                "boca": 0.0
+              }
+            },
+            {
+              "t": 2.847,
+              "pose": {
+                "boca": 1.0
+              },
+              "ease": "out"
+            },
+            {
+              "t": 3.247,
+              "pose": {
+                "boca": 0.0
+              }
+            },
+            {
+              "t": 3.347,
+              "pose": {
+                "braco": 1.0
+              }
+            }
+          ]
+        }
+      },
+      "fx": [],
+      "callouts": [
+        {
+          "t": 1.0,
+          "text": "TCHAU!",
+          "dur": 1.8,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.2,
+          "to": 3.215
+        }
+      ],
+      "transition_in": {
+        "type": "zoom",
+        "dur": 0.4
+      },
+      "transition_out": "fade"
+    },
+    {
+      "id": "s15_final",
+      "title": "Robô dançarino! Tchau! Bip!",
+      "duration": 3.365,
+      "description": "Robô dançarino! Tchau! Bip!",
+      "background": "plano_oficina",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1000.0,
+            "y": 544.0,
+            "zoom": 1.808
+          },
+          {
+            "t": 3.365,
+            "x": 1015.0,
+            "y": 544.0,
+            "zoom": 1.95,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 880,
+            "y": 930,
+            "turn": 0.35,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "dance",
+              "t": 0.0,
+              "dur": 1.0,
+              "style": "festa"
+            },
+            {
+              "do": "laugh",
+              "t": 1.4,
+              "dur": 1.915
+            }
+          ]
+        }
+      },
+      "props": {
+        "robo": {
+          "start": {
+            "x": 1130.0,
+            "y": 930,
+            "z": 3,
+            "depth": 0.9,
+            "lado": -1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "danca": 7.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.8,
+              "pose": {
+                "danca": 7.6
+              },
+              "ease": "linear"
+            },
+            {
+              "t": 0.8,
+              "pose": {
+                "pilha": 1.0,
+                "murcha": 0.0,
+                "luz": 1.0
+              }
+            },
+            {
+              "t": 1.6,
+              "pose": {
+                "pilha": 0.0
+              },
+              "ease": "inout"
+            },
+            {
+              "t": 2.3,
+              "pose": {
+                "murcha": 1.0,
+                "luz": 0.0
+              },
+              "ease": "out"
+            }
+          ]
+        }
+      },
+      "fx": [],
+      "callouts": [],
+      "sing": [],
+      "transition_out": "fade"
     }
   ]
 }

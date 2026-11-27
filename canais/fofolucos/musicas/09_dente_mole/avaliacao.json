@@ -1,0 +1,54 @@
+{
+ "schema": "avaliacao-1.0",
+ "versoes": {
+  "Dente Mole de Monstrinho!": {
+   "arquivo": "Dente Mole de Monstrinho!.wav",
+   "duracao": 144.0,
+   "bpm": 136.0,
+   "bpm_nota": "",
+   "tom": "Dó maior",
+   "voz_inicio": 0.6,
+   "refrao_inicio": 0.0,
+   "cantado": 74,
+   "intervalos": [
+    [
+     43.4,
+     6.4
+    ],
+    [
+     65.0,
+     2.6
+    ],
+    [
+     95.0,
+     14.0
+    ]
+   ],
+   "fim_depois_da_voz": 4.1,
+   "final": "corte seco",
+   "silencio_final": 0.5,
+   "acerto": 90,
+   "nao_reconhecidas": [
+    "rawr",
+    "fofolucos",
+    "abre",
+    "devagar",
+    "mais",
+    "nhac",
+    "debaixo"
+   ],
+   "pontos_a_conferir": []
+  }
+ },
+ "ouvido": {
+  "Dente Mole de Monstrinho!": {
+   "1 começo chama atenção": null,
+   "5 melodia combina com a letra": null,
+   "6 dá vontade de dançar": null,
+   "7 pronúncia natural": null,
+   "8 tem a cara do canal": null,
+   "9 nenhum trecho cansativo": null
+  }
+ },
+ "escolhida": "Dente Mole de Monstrinho!"
+}

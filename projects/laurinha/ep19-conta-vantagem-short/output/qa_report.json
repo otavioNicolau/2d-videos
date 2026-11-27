@@ -2,21 +2,21 @@
   "episode": "ep19-conta-vantagem-short",
   "scenes": {
     "s01_refrao": {
-      "frames": 106,
+      "frames": 116,
       "performers": {
-        "luisinho": {
-          "drawings": 106,
+        "cast": {
+          "drawings": 116,
           "hidden_frames": [],
           "exposure": {
-            "1s": 105
+            "1s": 115
           },
           "empty_frames": 0
         },
         "b": {
-          "drawings": 106,
+          "drawings": 116,
           "hidden_frames": [],
           "exposure": {
-            "1s": 105
+            "1s": 115
           },
           "empty_frames": 0
         }
@@ -25,45 +25,13 @@
       "frozen_samples": 0
     },
     "s02_refrao": {
-      "frames": 84,
+      "frames": 94,
       "performers": {
-        "formiguinha": {
-          "drawings": 71,
-          "hidden_frames": [],
-          "exposure": {
-            "1s": 70
-          },
-          "empty_frames": 0
-        },
-        "joaninha": {
-          "drawings": 73,
-          "hidden_frames": [],
-          "exposure": {
-            "1s": 72
-          },
-          "empty_frames": 0
-        },
         "laurinha": {
-          "drawings": 74,
+          "drawings": 69,
           "hidden_frames": [],
           "exposure": {
-            "1s": 73
-          },
-          "empty_frames": 0
-        },
-        "b": {
-          "drawings": 84,
-          "hidden_frames": [],
-          "exposure": {
-            "1s": 83
-          },
-          "empty_frames": 0
-        },
-        "gag": {
-          "drawings": 84,
-          "hidden_frames": [],
-          "exposure": {
-            "1s": 83
+            "1s": 68
           },
           "empty_frames": 0
         }
@@ -74,7 +42,7 @@
     "s03_refrao": {
       "frames": 84,
       "performers": {
-        "luisinho": {
+        "car": {
           "drawings": 84,
           "hidden_frames": [],
           "exposure": {
@@ -95,33 +63,189 @@
       "frozen_samples": 0
     },
     "s04_refrao": {
-      "frames": 96,
+      "frames": 74,
       "performers": {
-        "formiguinha": {
-          "drawings": 76,
+        "luisinho": {
+          "drawings": 56,
           "hidden_frames": [],
           "exposure": {
-            "1s": 75
+            "1s": 55
           },
           "empty_frames": 0
         },
         "joaninha": {
+          "drawings": 56,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 55
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s05_intervalo": {
+      "frames": 123,
+      "performers": {
+        "b": {
+          "drawings": 123,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 122
+          },
+          "empty_frames": 0
+        },
+        "ch": {
+          "drawings": 123,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 122
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s06_intervalo": {
+      "frames": 122,
+      "performers": {
+        "laurinha": {
+          "drawings": 122,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 121
+          },
+          "empty_frames": 0
+        },
+        "formiguinha": {
+          "drawings": 122,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 121
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s07_intervalo": {
+      "frames": 123,
+      "performers": {
+        "luisinho": {
+          "drawings": 123,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 122
+          },
+          "empty_frames": 0
+        },
+        "b": {
+          "drawings": 123,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 122
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s08_final": {
+      "frames": 79,
+      "performers": {
+        "b": {
           "drawings": 79,
           "hidden_frames": [],
           "exposure": {
             "1s": 78
           },
           "empty_frames": 0
-        },
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s09_final": {
+      "frames": 63,
+      "performers": {
         "laurinha": {
-          "drawings": 80,
+          "drawings": 63,
           "hidden_frames": [],
           "exposure": {
-            "1s": 79
+            "1s": 62
           },
           "empty_frames": 0
         },
+        "joinha": {
+          "drawings": 63,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 62
+          },
+          "empty_frames": 5
+        }
+      },
+      "issues": [
+        "joinha: 5 quadros vazios (ex.: [1, 2, 3, 4, 5])"
+      ],
+      "frozen_samples": 0
+    },
+    "s10_final": {
+      "frames": 60,
+      "performers": {
+        "luisinho": {
+          "drawings": 60,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 59
+          },
+          "empty_frames": 0
+        },
+        "mamae": {
+          "drawings": 60,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 59
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s11_final": {
+      "frames": 92,
+      "performers": {
         "b": {
+          "drawings": 92,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 91
+          },
+          "empty_frames": 0
+        },
+        "botao": {
+          "drawings": 92,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 91
+          },
+          "empty_frames": 5
+        }
+      },
+      "issues": [
+        "botao: 5 quadros vazios (ex.: [1, 2, 3, 4, 5])"
+      ],
+      "frozen_samples": 0
+    },
+    "s12_final": {
+      "frames": 96,
+      "performers": {
+        "luisinho": {
           "drawings": 96,
           "hidden_frames": [],
           "exposure": {
@@ -129,7 +253,7 @@
           },
           "empty_frames": 0
         },
-        "gag": {
+        "botao": {
           "drawings": 96,
           "hidden_frames": [],
           "exposure": {
@@ -140,17 +264,83 @@
       },
       "issues": [],
       "frozen_samples": 0
+    },
+    "s13_final": {
+      "frames": 83,
+      "performers": {
+        "laurinha": {
+          "drawings": 55,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 54
+          },
+          "empty_frames": 0
+        },
+        "cx": {
+          "drawings": 83,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 82
+          },
+          "empty_frames": 0
+        },
+        "b": {
+          "drawings": 83,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 82
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s14_final": {
+      "frames": 84,
+      "performers": {
+        "luisinho": {
+          "drawings": 84,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 83
+          },
+          "empty_frames": 0
+        },
+        "b": {
+          "drawings": 84,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 83
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
     }
   },
   "warnings": [
-    "storyboard ainda não aprovado (approval.storyboard = false): o render sairá como CANDIDATO",
+    "s13_final/b: chave em 2.797s após o fim da cena",
+    "s13_final/b: chave em 3.097s após o fim da cena",
+    "s13_final/b: chave em 3.397s após o fim da cena",
     "storyboard s01_refrao: pendente",
     "storyboard s02_refrao: pendente",
     "storyboard s03_refrao: pendente",
-    "storyboard s04_refrao: pendente"
+    "storyboard s04_refrao: pendente",
+    "storyboard s05_intervalo: pendente",
+    "storyboard s06_intervalo: pendente",
+    "storyboard s07_intervalo: pendente",
+    "storyboard s08_final: pendente",
+    "storyboard s09_final: pendente",
+    "storyboard s10_final: pendente",
+    "storyboard s11_final: pendente",
+    "storyboard s12_final: pendente",
+    "storyboard s13_final: pendente",
+    "storyboard s14_final: pendente"
   ],
   "lines": {},
-  "video": "/home/otavio/2d/projects/laurinha/ep19-conta-vantagem-short/output/ep19-conta-vantagem-short_CANDIDATO.mp4",
+  "video": "/home/otavio/2d/projects/laurinha/ep19-conta-vantagem-short/output/ep19-conta-vantagem-short.mp4",
   "contact_sheet": "/home/otavio/2d/projects/laurinha/ep19-conta-vantagem-short/output/prancha.png",
-  "approved": false
+  "approved": true
 }

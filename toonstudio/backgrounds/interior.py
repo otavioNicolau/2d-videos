@@ -6,6 +6,7 @@ Ids:
   plano_casa_frente                       fachada da casa com porta em arco, janelas com floreira (despedida na porta)
   plano_escola                            prédio da escola com placa ESCOLA, bandeirinha, caminho
   plano_ceu                               céu da manhã com nuvens (sol-personagem e voos)
+  plano_arraial                           arraial de São João no fim da tarde (bandeirinhas, barraquinhas)
   padrao_<motivo>_<cor>                   fundo de desenhos repetidos que ilustra a palavra cantada (rola sem emenda)
                                           motivos: bananas, leite, lacos, estrelas, coracoes · cores: as de dance.COLORS
 Objetos que se mexem (janela, cama, mesa…) NÃO estão aqui: são props (characters/flat_props.py).
@@ -728,9 +729,64 @@ def oficina(rng) -> tuple[skia.Surface, int]:
     return s, w
 
 
+def arraial(rng) -> tuple[skia.Surface, int]:
+    """ARRAIAL de São João no fim da tarde (Laurinha 34 "Pula Pipoca!"): céu lilás com faixa laranja do pôr do sol e
+    estrelinhas, varais de BANDEIRINHAS coloridas, barraquinhas de madeira com toldo listrado (a da PIPOCA à esquerda,
+    a do MILHO à direita), chão de terra batida com tufos de grama. A FOGUEIRA e o PANELÃO são objetos (props) — mexem."""
+    w = W_INT
+    s, c = _surf(w, H, ESC_CENA)
+    F = Flat(c)
+    c.drawRect(skia.Rect(0, 0, w, H), skia.Paint(Color4f=skia.Color4f(*_rgba("#7A5CD6"))))
+    F.shape([(-20, 360), (w + 20, 360), (w + 20, FLOOR_Y + 20), (-20, FLOOR_Y + 20)], "#FF9E6B", smooth=False)   # pôr do sol
+    F.shape([(-20, 300), (w + 20, 300), (w + 20, 362), (-20, 362)], "#C98AE6", smooth=False)
+    F.oval(1300, FLOOR_Y - 120, 150, 150, "#FFD23F")                              # o sol se pondo
+    F.shape([(-20, FLOOR_Y + 20)] + [(x, FLOOR_Y - 150 - 60 * math.sin(x / 300)) for x in range(0, w + 60, 60)] + [(w + 20, FLOOR_Y + 20)],
+            "#6DB873")                                                           # morrinhos ao longe (verdes: a Laurinha é rosa)
+    for (x, hh, cor) in ((620, 120, "#B9659A"), (760, 150, "#A8578C"), (1700, 140, "#B9659A"), (1860, 110, "#A8578C")):   # casinhas
+        F.shape([(x - 60, FLOOR_Y - 80), (x + 60, FLOOR_Y - 80), (x + 60, FLOOR_Y - 80 - hh), (x - 60, FLOOR_Y - 80 - hh)], cor, smooth=False)
+        F.shape([(x - 74, FLOOR_Y - 80 - hh), (x, FLOOR_Y - 140 - hh), (x + 74, FLOOR_Y - 80 - hh)], "#8E3F74", smooth=False)
+        F.shape([(x - 18, FLOOR_Y - 120 - hh + 60), (x + 18, FLOOR_Y - 120 - hh + 60), (x + 18, FLOOR_Y - 84 - hh + 60),
+                 (x - 18, FLOOR_Y - 84 - hh + 60)], "#FFE066", smooth=False)
+    F.shape([(1040, 300), (1052, 300), (1052, FLOOR_Y + 10), (1040, FLOOR_Y + 10)], "#8A5A2B", smooth=False)   # mastro de São João
+    F.shape([(1052, 300), (1180, 330), (1052, 380)], "#3C8BF0", smooth=False)
+    for _ in range(26):                                                          # estrelinhas
+        x, y = float(rng.uniform(0, w)), float(rng.uniform(30, 270))
+        r = float(rng.uniform(6, 12))
+        pts = [(x + math.cos(i * math.pi / 5 - math.pi / 2) * (r if i % 2 == 0 else r * 0.45),
+                y + math.sin(i * math.pi / 5 - math.pi / 2) * (r if i % 2 == 0 else r * 0.45)) for i in range(10)]
+        F.shape(pts, "#FFF3B0", smooth=False)
+    cores = ("#FF5C5C", "#FFD23F", "#2DBE5A", "#3C8BF0", "#FF8A1F", "#FF7FBF")
+    for fila, (y0, curva) in enumerate(((90, 70), (200, 60))):                   # varais de bandeirinhas
+        pts = [(x, y0 + curva * math.sin(math.pi * (x % 1300) / 1300)) for x in range(-20, w + 40, 20)]
+        for (x0, y0_), (x1, y1_) in zip(pts, pts[1:]):
+            F.shape([(x0, y0_), (x1, y1_), (x1, y1_ + 5), (x0, y0_ + 5)], "#8A5A2B", smooth=False)
+        for j, x in enumerate(range(40 + fila * 55, w, 110)):
+            y = y0 + curva * math.sin(math.pi * (x % 1300) / 1300)
+            F.shape([(x - 30, y), (x + 30, y), (x + 30, y + 58), (x, y + 42), (x - 30, y + 58)], cores[(j + fila * 3) % len(cores)], smooth=False)
+    for (x0, titulo, t1, t2) in ((90, "PIPOCA", "#FF5C5C", "#FFFFFF"), (2060, "MILHO", "#FFD23F", "#2DBE5A")):   # barraquinhas
+        x1 = x0 + 450
+        for xp in (x0 + 20, x1 - 20):
+            F.shape([(xp - 14, 420), (xp + 14, 420), (xp + 14, FLOOR_Y + 10), (xp - 14, FLOOR_Y + 10)], "#A8702E", smooth=False)
+        for k in range(6):                                                       # toldo listrado
+            xa, xb = x0 + k * 75, x0 + (k + 1) * 75
+            F.shape([(xa, 340), (xb, 340), (xb, 430), (xa, 430)], t1 if k % 2 == 0 else t2, smooth=False)
+        for k in range(6):
+            cx_ = x0 + k * 75 + 37
+            F.oval(cx_, 430, 38, 18, t1 if k % 2 == 0 else t2)
+        F.shape([(x0 + 40, 600), (x1 - 40, 600), (x1 - 40, FLOOR_Y + 10), (x0 + 40, FLOOR_Y + 10)], "#C98A3A", smooth=False)   # balcão
+        F.shape([(x0 + 40, 590), (x1 - 40, 590), (x1 - 40, 615), (x0 + 40, 615)], "#E0A55A", smooth=False)
+        F.shape([(x0 + 90, 470), (x1 - 90, 470), (x1 - 90, 545), (x0 + 90, 545)], "#FFFFFF", smooth=False)
+        _text(c, titulo, x0 + 225, 532, 58, "#C8333A" if titulo == "PIPOCA" else "#2E8B3A")
+    F.shape([(-20, FLOOR_Y), (w + 20, FLOOR_Y), (w + 20, H + 20), (-20, H + 20)], "#D9A066", smooth=False)   # terra batida
+    F.shape([(-20, FLOOR_Y), (w + 20, FLOOR_Y), (w + 20, FLOOR_Y + 26), (-20, FLOOR_Y + 26)], "#7BD36A", smooth=False)
+    for x in range(40, w, 110):
+        F.grass_ticks(x + (x * 7) % 40, FLOOR_Y + 70 + (x * 13) % 200)
+    return s, w
+
+
 SCENES = {"plano_banheiro": banheiro, "plano_quarto_rosa": lambda rng: quarto("rosa", rng), "plano_quarto_azul": lambda rng: quarto("azul", rng),
           "plano_cozinha": cozinha, "plano_casa_frente": casa_frente, "plano_rua": rua, "plano_escola": escola, "plano_ceu": ceu,
-          "plano_jardim": jardim, "plano_lagoa": lagoa, "plano_sala": sala, "plano_espaco": espaco, "plano_lua": lua_chao, "plano_campo": campo, "plano_gelo": gelo, "plano_mar_gelado": mar_gelado, "plano_praia": praia, "plano_fundo_mar": fundo_mar, "plano_salao": salao, "plano_oficina": oficina}
+          "plano_jardim": jardim, "plano_lagoa": lagoa, "plano_sala": sala, "plano_espaco": espaco, "plano_lua": lua_chao, "plano_campo": campo, "plano_gelo": gelo, "plano_mar_gelado": mar_gelado, "plano_praia": praia, "plano_fundo_mar": fundo_mar, "plano_salao": salao, "plano_oficina": oficina, "plano_arraial": arraial}
 
 
 # 21/11: cenários da Laurinha desenhados a 2,2x (antes 1,5x fixo em cada cena) — os closes ficam nítidos, como no Fofolucos

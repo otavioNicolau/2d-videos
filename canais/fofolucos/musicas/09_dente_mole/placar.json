@@ -1,0 +1,28 @@
+{
+ "musica": "09",
+ "titulo": "Dente Mole de Monstrinho!",
+ "estilo": "F5",
+ "medidas": {
+  "voz_%": 44.8,
+  "bateria_%": 36.6,
+  "baixo_%": 11.6,
+  "outros_%": 7.0,
+  "largura_voz": 0.06,
+  "batidas_identicas": 0.718,
+  "duracao_s": 144.0,
+  "teclado_eletronico": 0.011,
+  "bateria_banda": 0.011,
+  "percussao": 0.007,
+  "metais": 0.001,
+  "sincope": 0.59,
+  "baixo_sincopado": 0.75
+ },
+ "acertos": "9/12",
+ "nota": 4.9,
+ "obs": "F5 136 BPM: nota 4,9 do usuário; mixagem no alvo (voz 45 %, baixo 11 %); teclado em loop e contratempo um pouco baixos; Suno acrescentou 'Fofolucos! Rawr!' depois do 1º refrão (fica no intervalo)",
+ "falhas": [
+  "batida de teclado (loop igual) (baixo)",
+  "teclado/synth reconhecido (baixo)",
+  "batida sincopada (contratempo) — o 'contagiante' (baixo)"
+ ]
+}

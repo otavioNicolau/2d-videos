@@ -395,10 +395,13 @@ class Mesa(_Prop):
     """Mesa com toalha (fica NA FRENTE do personagem; esconde as pernas)."""
 
     def __init__(self):
-        super().__init__("mesa", "Mesa", (900, 360), (450, 330), 260, {})
+        super().__init__("mesa", "Mesa", (900, 360), (450, 330), 260, {"tom": 0.0})
+
+    TONS = (None, "#FFC93C", "#B98CFF")       # `tom` 0 vermelho (padrão) · 1 amarelo (Fofolucos 09: o Nhoque coral some no vermelho) · 2 lilás
 
     def paint(self, k, P):
-        cor = P.get("cor", PAL["mesa"])
+        t = int(round(max(0, min(len(self.TONS) - 1, P.get("tom", 0.0)))))
+        cor = P.get("cor", self.TONS[t] or PAL["mesa"])
         for x in (-250, 250):
             box(k, x - 16, -200, x + 16, 0, PAL["madeira"], r=6)
         box(k, -320, -240, 320, -190, PAL["toalha"], line="#C9D6E0", r=10)
@@ -4383,3 +4386,208 @@ class Pegadas(_Prop):
 
 
 PROPS.update({"bandeja_brigadeiro": BandejaBrigadeiro, "pegadas": Pegadas})
+
+
+class DenteMole(_Prop):
+    """O DENTE MOLE do Nhoque (Fofolucos 09) em tamanho grande, com carinha (como um personagem): dentão de leite branco
+    com brilho, na gengiva rosa. `balanca` = fase do balanço (pra lá e pra cá), `forca` 0→1 o quanto balança, `cai` 0→1 solta
+    da gengiva e cai girando, `sorri` 0→1 (boquinha feliz; 0 = carinha de "ai!"), `susto` olhinhos arregalados,
+    `gengiva` 1 mostra a gengiva, `brilho` estrelinha. Origem = meio de baixo da gengiva."""
+
+    def __init__(self):
+        super().__init__("dente", "Dente mole", (700, 820), (350, 760), 480,
+                         {"balanca": 0.0, "forca": 1.0, "cai": 0.0, "sorri": 1.0, "susto": 0.0, "gengiva": 1.0, "brilho": 0.0})
+
+    def paint(self, k, P):
+        c01 = lambda v: max(0.0, min(1.0, v))
+        fo, cai, so, su = c01(P["forca"]), c01(P["cai"]), c01(P["sorri"]), c01(P["susto"])
+        ang = 0.22 * fo * math.sin(2 * math.pi * P["balanca"]) * (1 - cai) + 1.6 * cai
+        dy = 300 * cai * cai
+        if P["gengiva"] > 0.5:                                         # gengiva rosa (fica no lugar)
+            shape(k, ellipse_pts(0, -40, 250, 70, 0, 36), "#FF8FA8")
+            shape(k, ellipse_pts(0, -60, 210, 40, 0, 30), "#FFB3C4")
+        k.c.save()
+        k.c.translate(0, -60 + dy)
+        k.c.rotate(math.degrees(ang))
+        pts = [(-130, 0), (-150, -120), (-140, -300), (-90, -360), (0, -372), (90, -360), (140, -300), (150, -120), (130, 0),
+               (60, 30), (0, 10), (-60, 30)]
+        shape(k, pts, "#FFFFFF", line="#C9D6E0")                       # o dentão
+        shape(k, [(-120, -40), (-128, -120), (-118, -280), (-96, -320), (-90, -300), (-104, -120)], "#E9F0F6", line=None)
+        shape(k, ellipse_pts(70, -300, 26, 14, -0.6, 14), "#FFFFFF", line=None)
+        r = 22 + 8 * su                                                 # carinha
+        for ex in (-50, 50):
+            shape(k, ellipse_pts(ex, -200, r * 0.8, r, 0, 18), "#2A1630")
+            shape(k, ellipse_pts(ex + 6, -208, 7, 7, 0, 10), "#FFFFFF")
+        for ex in (-85, 85):
+            shape(k, ellipse_pts(ex, -150, 20, 12, 0, 14), "#FF9AB5", alpha=0.85)
+        if su > 0.5:
+            shape(k, ellipse_pts(0, -128, 18, 22, 0, 16), "#5A1020")
+        elif so > 0.5:
+            shape(k, [(-34, -140), (34, -140), (24, -112), (0, -104), (-24, -112)], "#5A1020", smooth=True)
+        else:
+            ln(k, [(-30, -120), (0, -134), (30, -120)], "#5A1020", w=LINE * 1.1)     # "ai!"
+        k.c.restore()
+        if fo > 0.3 and cai < 0.05:                                     # risquinhos de movimento
+            for sd in (-1, 1):
+                for j in range(2):
+                    x = sd * (190 + j * 30)
+                    ln(k, [(x, -300 + j * 40), (x + sd * 10, -240 + j * 40)], "#8A97A3", w=LINE * 0.8)
+        b = c01(P["brilho"])
+        if b > 0.05:
+            _estrela(k, 150, -380, 46 * b, "#FFF3B0")
+
+
+class Maca(_Prop):
+    """MAÇÃ do lanche (Fofolucos 09): vermelha com folhinha e brilho. `mordida` 0→1 a mordidona (NHAC) do lado direito,
+    `dente` 0→1 o dentinho grudado na mordida (a virada), `brilho` estrelinha, `rola` fase (balancinho). Origem = base."""
+
+    def __init__(self):
+        super().__init__("maca", "Maçã", (600, 640), (300, 600), 300, {"mordida": 0.0, "dente": 0.0, "brilho": 0.0, "rola": 0.0})
+
+    def paint(self, k, P):
+        c01 = lambda v: max(0.0, min(1.0, v))
+        mo, de = c01(P["mordida"]), c01(P["dente"])
+        k.c.save()
+        k.c.rotate(4 * math.sin(2 * math.pi * P["rola"]), 0, -130)
+        pts = [(math.cos(t) * 150 * (1 + 0.06 * math.cos(2 * t)), -150 + math.sin(t) * 140 - (18 if math.sin(t) < -0.85 else 0))
+               for t in [i * 2 * math.pi / 40 for i in range(40)]]
+        inteira = list(pts)
+        if mo > 0.05:                                                   # mordida: arco de dentes no lado direito
+            cx, cy, rr = 150, -170, 95 * mo
+            pts = [q for q in pts if math.hypot(q[0] - cx, q[1] - cy) > rr]
+        shape(k, pts, "#E9433F", line="#A82A26")
+        if mo > 0.05:
+            cx, cy, rr = 150, -170, 95 * mo
+            k.c.save()                                                  # miolo recortado pelo formato da maçã inteira
+            pth = skia.Path()
+            pth.addPoly([skia.Point(*q) for q in inteira], True)
+            k.c.clipPath(pth, doAntiAlias=True)
+            shape(k, ellipse_pts(cx - rr * 0.1, cy, rr * 0.9, rr, 0, 24), "#F7D98B", line=None)   # miolo (mais escuro: o dente branco aparece)
+            k.c.restore()
+            if de > 0.05:                                               # o dentinho grudado! (grande o bastante para ver)
+                q = (cx - rr * 0.5, cy)
+                g = 1.7 * de
+                dente = [(q[0] - 16 * g, q[1] + 22 * g), (q[0] - 18 * g, q[1] - 14 * g), (q[0], q[1] - 26 * g),
+                         (q[0] + 18 * g, q[1] - 14 * g), (q[0] + 16 * g, q[1] + 22 * g)]
+                shape(k, [(x + 5, y + 5) for x, y in dente], "#9FB3C8", line=None)          # sombrinha (sem contorno no canal)
+                shape(k, dente, "#FFFFFF", line="#C9D6E0")
+                _estrela(k, q[0] + 46, q[1] - 56, 30 * de, "#FFF3B0")
+        shape(k, ellipse_pts(-70, -220, 30, 16, -0.5, 14), "#FF8A84", line=None, alpha=0.8)    # brilho
+        k.c.restore()
+        _capsula(k, (0, -270), (8, -320), 8, "#7A4A22", "#5E3014")      # cabinho
+        shape(k, [(10, -300), (70, -340), (110, -318), (60, -290)], "#46D677", line="#2F9E3A")   # folhinha
+        b = c01(P["brilho"])
+        if b > 0.05:
+            _estrela(k, -140, -300, 34 * b, "#FFF3B0")
+
+
+PROPS.update({"dente": DenteMole, "maca": Maca})
+
+
+class Panelao(_Prop):
+    """PANELÃO de pipoca do vovô Ciço (Laurinha 34 "Pula Pipoca!"): panela grande de alumínio com alças, TAMPA e foguinho
+    embaixo. `tampa` 0 fechada → 1 levantada (o vovô olha dentro), `ploc` fase das pipocas que pulam pra fora (0 = nenhuma),
+    `cheio` 0→1 pipoca aparecendo na boca da panela, `fogo` 1 chamas embaixo (fase em `chama`), `treme` fase do tremor
+    (o milho esquentando). Origem = meio de baixo (o fogareiro)."""
+
+    def __init__(self):
+        super().__init__("panelao", "Panelão de pipoca", (1000, 900), (500, 840), 420,
+                         {"tampa": 0.0, "ploc": 0.0, "cheio": 0.0, "fogo": 1.0, "chama": 0.0, "treme": 0.0})
+
+    def paint(self, k, P):
+        c01 = lambda v: max(0.0, min(1.0, v))
+        tm = 6 * math.sin(2 * math.pi * P["treme"] * 3)
+        if P["fogo"] > 0.5:                                             # fogareiro + chamas
+            box(k, -170, -60, 170, 0, "#6B6B78", line="#3E3E48", r=10)
+            ph = 2 * math.pi * P["chama"]
+            for j, x in enumerate((-90, -30, 30, 90)):
+                h = 70 + 18 * math.sin(ph * 3 + j * 1.7)
+                shape(k, [(x - 26, -60), (x, -60 - h), (x + 26, -60)], "#FF8A1F", line="#E0561A")
+                shape(k, [(x - 13, -60), (x, -60 - h * 0.55), (x + 13, -60)], "#FFD23F", line=None)
+        k.c.save()
+        k.c.translate(tm, 0)
+        for sd in (-1, 1):                                              # alças
+            _capsula(k, (sd * 230, -230), (sd * 280, -230), 18, "#9AA6B2", "#5E6A76")
+        shape(k, [(-220, -300), (220, -300), (200, -70), (-200, -70)], "#C9D3DC", line="#6E7A86", smooth=False)   # corpo
+        shape(k, [(-200, -290), (-150, -290), (-140, -80), (-180, -80)], "#E9EEF2", line=None, smooth=False)        # brilho
+        ch = c01(P["cheio"])
+        if ch > 0.02:                                                   # pipoca aparecendo na boca
+            for j in range(9):
+                x = -180 + j * 45
+                _pipoca(k, x, -300 - 18 * ch - (j % 2) * 14 * ch, 26 + 6 * (j % 3), j)
+        ta = c01(P["tampa"])
+        ang, dy = -0.5 * ta, -160 * ta
+        k.c.save()
+        k.c.translate(-200 * ta, dy)
+        k.c.rotate(math.degrees(ang), 220, -300)
+        shape(k, ellipse_pts(0, -306, 232, 30, 0, 32), "#B7C2CC", line="#6E7A86")   # tampa
+        shape(k, ellipse_pts(0, -340, 40, 18, 0, 18), "#3E3E48", line="#22222A")    # pegador
+        k.c.restore()
+        k.c.restore()
+        f = P["ploc"]
+        if f > 0.01:                                                    # pipocas pulando pra fora (em arcos)
+            for j in range(6):
+                u = (f * 1.3 + j / 6) % 1.0
+                sx = (-1 if j % 2 else 1) * (60 + 40 * j)
+                x = sx * u
+                y = -330 - 380 * math.sin(math.pi * u) + 80 * u
+                _pipoca(k, x, y, 30, j)
+
+
+def _pipoca(k, x, y, r, semente=0, miolo=True):
+    """uma pipoca estourada: nuvenzinha branca-creme de 4 bolinhas com o miolo amarelinho (sem miolo quando tem carinha)."""
+    for i, (dx, dy, rr) in enumerate(((-0.45, 0.1, 0.62), (0.45, 0.05, 0.6), (0.0, -0.45, 0.66), (0.0, 0.35, 0.58))):
+        a = (semente * 1.3) % 6.28
+        rx = dx * math.cos(a) - dy * math.sin(a)
+        ry = dx * math.sin(a) + dy * math.cos(a)
+        shape(k, ellipse_pts(x + rx * r, y + ry * r, rr * r, rr * r, 0, 14), "#FFF8E1", line="#D9C49A")
+    if miolo:
+        shape(k, ellipse_pts(x + 0.1 * r, y + 0.1 * r, 0.25 * r, 0.2 * r, 0, 10), "#FFD86B", line=None)
+
+
+class Pipoca(_Prop):
+    """Uma PIPOCA grande (closes, e a que pula no bigodão do vovô): `tam` escala, `gira` volta em torno de si,
+    `pulo` 0→1 arco para cima, `cara` 1 com olhinhos e sorriso. Origem = embaixo da pipoca."""
+
+    def __init__(self):
+        super().__init__("pipoca", "Pipoca", (400, 500), (200, 440), 120, {"tam": 1.0, "gira": 0.0, "pulo": 0.0, "cara": 0.0})
+
+    def paint(self, k, P):
+        t = max(0.05, P["tam"])
+        y = -60 * t - 200 * math.sin(math.pi * max(0.0, min(1.0, P["pulo"])))
+        k.c.save()
+        k.c.translate(0, y)
+        k.c.rotate(360 * P["gira"])
+        _pipoca(k, 0, 0, 60 * t, 1, miolo=P["cara"] <= 0.5)
+        if P["cara"] > 0.5:
+            for ex in (-18, 18):
+                shape(k, ellipse_pts(ex * t, -6 * t, 6 * t, 8 * t, 0, 10), "#2A1630", line=None)
+            ln(k, [(-12 * t, 10 * t), (0, 18 * t), (12 * t, 10 * t)], "#5A1020", w=LINE * 0.8)
+        k.c.restore()
+
+
+class Fogueira(_Prop):
+    """FOGUEIRA de São João: lenha cruzada e chamas que dançam (`chama` = fase), faisquinhas. Origem = base."""
+
+    def __init__(self):
+        super().__init__("fogueira", "Fogueira", (700, 800), (350, 740), 420, {"chama": 0.0})
+
+    def paint(self, k, P):
+        ph = 2 * math.pi * P["chama"]
+        for a in (-0.35, 0.35, 0.0):                                    # lenha
+            k.c.save()
+            k.c.rotate(math.degrees(a), 0, -40)
+            box(k, -170, -70, 170, -20, "#8A5A2B", line="#5E3A1E", r=18)
+            k.c.restore()
+        for j, (x, h, w) in enumerate(((-80, 230, 70), (0, 330, 90), (80, 250, 70))):
+            hh = h + 30 * math.sin(ph * 2 + j * 1.9)
+            shape(k, [(x - w, -60), (x - w * 0.5, -60 - hh * 0.6), (x, -60 - hh), (x + w * 0.5, -60 - hh * 0.6), (x + w, -60)], "#FF5C1F", line="#D9381A")
+            shape(k, [(x - w * 0.55, -60), (x, -60 - hh * 0.62), (x + w * 0.55, -60)], "#FFB21F", line=None)
+            shape(k, [(x - w * 0.25, -60), (x, -60 - hh * 0.32), (x + w * 0.25, -60)], "#FFF06B", line=None)
+        for j in range(5):                                              # faíscas
+            u = (P["chama"] * 1.5 + j / 5) % 1.0
+            x = (j - 2) * 50 + 20 * math.sin(ph + j)
+            shape(k, ellipse_pts(x, -380 - 260 * u, 8 * (1 - u) + 2, 8 * (1 - u) + 2, 0, 8), "#FFD23F", line=None, alpha=1 - u)
+
+
+PROPS.update({"panelao": Panelao, "pipoca": Pipoca, "fogueira": Fogueira})

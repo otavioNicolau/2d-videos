@@ -13,7 +13,7 @@
     "file": "musica/trabalho.wav",
     "analysis": "analise/song.json",
     "start": 0.0,
-    "end": 13.0,
+    "end": 37.127,
     "fade_out": 0.3,
     "beat_grid": "full"
   },
@@ -71,20 +71,21 @@
       "title": "Dino pisa forte!",
       "duration": 3.1937,
       "description": "Dino pisa forte! / Tum, tum, tremeu!",
-      "background": "plano_salao",
+      "background": "plano_rua",
       "camera": {
         "keys": [
           {
-            "t": 0.0,
-            "x": 1550.5333333333335,
-            "y": 543.9612784265519,
+            "t": 0,
+            "x": 1300.0,
+            "y": 544.0,
             "zoom": 1.808
           },
           {
             "t": 3.194,
-            "x": 1550.5333333333335,
-            "y": 543.9612784265519,
-            "zoom": 1.808
+            "x": 1300.0,
+            "y": 544.0,
+            "zoom": 1.9,
+            "ease": "inout"
           }
         ],
         "beat": {
@@ -106,63 +107,15 @@
           }
         ]
       },
-      "characters": {
-        "laurinha": {
-          "start": {
-            "x": 1400.5333333333335,
-            "y": 970,
-            "turn": 0.35,
-            "expr": "happy",
-            "z": 3,
-            "depth": 1.45
-          },
-          "exposure": 1,
-          "actions": [
-            {
-              "t": 0.0,
-              "do": "dance",
-              "style": "pezinho",
-              "dur": 2.1
-            },
-            {
-              "t": 2.2,
-              "do": "jump",
-              "dur": 0.8
-            }
-          ]
-        },
-        "luisinho": {
-          "start": {
-            "x": 1700.5333333333335,
-            "y": 970,
-            "turn": -0.35,
-            "expr": "happy",
-            "z": 3,
-            "depth": 1.45
-          },
-          "exposure": 1,
-          "actions": [
-            {
-              "t": 0.0,
-              "do": "dance",
-              "style": "marcha",
-              "dur": 2.15
-            },
-            {
-              "t": 2.25,
-              "do": "jump",
-              "dur": 0.8
-            }
-          ]
-        }
-      },
+      "characters": {},
       "props": {
         "d": {
           "start": {
-            "x": 1361.824052448269,
-            "y": 930,
+            "x": 1300.0,
+            "y": 960,
             "z": 2,
-            "depth": 0.986
+            "depth": 0.8,
+            "lado": 1.0
           },
           "exposure": 1,
           "keys": [
@@ -177,7 +130,51 @@
               "ease": "step"
             },
             {
-              "t": 1.35,
+              "t": 0.23,
+              "pose": {
+                "pisa": 0.0,
+                "pe": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.59,
+              "pose": {
+                "pisa": 1.0
+              },
+              "ease": "linear"
+            },
+            {
+              "t": 0.63,
+              "pose": {
+                "pisa": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.63,
+              "pose": {
+                "pisa": 0.0,
+                "pe": 1.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.99,
+              "pose": {
+                "pisa": 1.0
+              },
+              "ease": "linear"
+            },
+            {
+              "t": 1.03,
+              "pose": {
+                "pisa": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.37,
               "pose": {
                 "pisa": 0.0,
                 "pe": 0.0
@@ -189,21 +186,20 @@
               "pose": {
                 "pisa": 1.0
               },
-              "ease": "linear",
-              "in": 0.34
+              "ease": "linear"
             },
             {
               "t": 1.77,
               "pose": {
-                "pisa": 0.0,
-                "pe": 1.0
+                "pisa": 0.0
               },
               "ease": "step"
             },
             {
-              "t": 2.01,
+              "t": 1.79,
               "pose": {
-                "pisa": 0.0
+                "pisa": 0.0,
+                "pe": 1.0
               },
               "ease": "step"
             },
@@ -212,88 +208,34 @@
               "pose": {
                 "pisa": 1.0
               },
-              "ease": "linear",
-              "in": 0.34
+              "ease": "linear"
             },
             {
-              "t": 2.43,
+              "t": 2.19,
               "pose": {
                 "pisa": 0.0
               },
               "ease": "step"
-            }
-          ]
-        },
-        "gato": {
-          "start": {
-            "x": 1550.5333333333335,
-            "y": 730,
-            "z": 2,
-            "depth": 0.6525,
-            "lado": 1.0
-          },
-          "exposure": 1,
-          "keys": [
-            {
-              "t": 0.0,
-              "pose": {
-                "y": 930,
-                "assusta": 0.0,
-                "rabo": 0.0
-              },
-              "ease": "step"
             },
             {
-              "t": 1.71,
+              "t": 2.42,
               "pose": {
-                "y": 930,
-                "assusta": 0.0
-              },
-              "in": 1.72
+                "ruge": 0.0
+              }
             },
             {
-              "t": 1.98,
+              "t": 2.62,
               "pose": {
-                "y": 770,
-                "assusta": 1.0
+                "ruge": 1.0
               },
-              "ease": "out",
-              "in": 0.24
+              "ease": "out"
             },
             {
-              "t": 2.13,
+              "t": 3.07,
               "pose": {
-                "y": 930,
-                "assusta": 0.0
+                "ruge": 0.0
               },
-              "in": 0.12
-            },
-            {
-              "t": 2.28,
-              "pose": {
-                "y": 930,
-                "assusta": 0.3
-              },
-              "ease": "in",
-              "in": 0.12
-            },
-            {
-              "t": 2.4,
-              "pose": {
-                "y": 770,
-                "assusta": 1.0
-              },
-              "ease": "out",
-              "in": 0.09
-            },
-            {
-              "t": 2.7,
-              "pose": {
-                "y": 930,
-                "assusta": 0.3
-              },
-              "ease": "in",
-              "in": 0.27
+              "ease": "in"
             }
           ]
         }
@@ -301,199 +243,36 @@
       "flash_in": true,
       "callouts": [
         {
-          "t": 0.06,
-          "text": "DINO PISA FORTE!",
-          "dur": 1.8,
-          "color": "rosa",
-          "y": 170
-        },
-        {
           "t": 1.73,
           "text": "TUM, TUM!",
-          "dur": 1.463,
+          "dur": 1.4,
           "color": "laranja",
-          "y": 170
-        },
-        {
-          "t": 2.65,
-          "text": "TREMEU!",
-          "dur": 0.6,
-          "color": "vermelho",
           "y": 170
         }
       ],
-      "sing": [
-        {
-          "who": "laurinha",
-          "from": 0.207,
-          "to": 3.067
-        },
-        {
-          "who": "luisinho",
-          "from": 0.207,
-          "to": 3.067
-        }
-      ]
+      "sing": [],
+      "fx": []
     },
     {
       "id": "s02_refrao",
       "title": "Dino pisa forte!",
       "duration": 3.2333,
       "description": "Dino pisa forte! / Quem pulou? Fui eu!",
-      "background": "plano_salao",
+      "background": "plano_sala",
       "camera": {
         "keys": [
           {
-            "t": 0.0,
-            "x": 1332.6,
-            "y": 543.9612784265519,
+            "t": 0,
+            "x": 1300.0,
+            "y": 544.0,
             "zoom": 1.808
           },
           {
-            "t": 3.2333,
-            "x": 1332.6,
-            "y": 543.9612784265519,
-            "zoom": 1.808
-          }
-        ],
-        "beat": {
-          "pulse": 0.0,
-          "bar_zoom": 0.04,
-          "sway": 6,
-          "bounce": 0
-        }
-      },
-      "characters": {
-        "luisinho": {
-          "start": {
-            "x": 1143.8907191149353,
-            "y": 930,
-            "turn": 0.0,
-            "expr": "happy",
-            "z": 3,
-            "depth": 1.45
-          },
-          "exposure": 1,
-          "actions": [
-            {
-              "t": 0.1,
-              "do": "pensar",
-              "dur": 1.73
-            },
-            {
-              "t": 2.13,
-              "do": "jump",
-              "dur": 0.8
-            }
-          ]
-        },
-        "laurinha": {
-          "start": {
-            "x": 1521.3092808850645,
-            "y": 930,
-            "turn": -0.35,
-            "expr": "happy",
-            "z": 3,
-            "depth": 1.45
-          },
-          "exposure": 1,
-          "actions": [
-            {
-              "t": 0.1,
-              "do": "dance",
-              "style": "lado",
-              "dur": 2.13
-            },
-            {
-              "t": 2.23,
-              "do": "laugh",
-              "dur": 1.003
-            }
-          ]
-        }
-      },
-      "props": {
-        "d": {
-          "start": {
-            "x": 1350.5,
-            "y": 930,
-            "z": 1,
-            "depth": 0.739
-          },
-          "exposure": 1,
-          "keys": [
-            {
-              "t": 0.0,
-              "pose": {
-                "pisa": 0.0,
-                "levinho": 0.0,
-                "ruge": 0.0,
-                "tchau": 0.0
-              },
-              "ease": "step"
-            },
-            {
-              "t": 0.0,
-              "pose": {
-                "danca": 0.0
-              },
-              "ease": "step"
-            },
-            {
-              "t": 3.193,
-              "pose": {
-                "danca": 2.59
-              },
-              "ease": "linear",
-              "in": 3.163
-            }
-          ]
-        }
-      },
-      "fx": [
-        "confete"
-      ],
-      "callouts": [
-        {
-          "t": 2.23,
-          "text": "FUI EU!",
-          "dur": 1.003,
-          "color": "azul",
-          "y": 170
-        }
-      ],
-      "sing": [
-        {
-          "who": "luisinho",
-          "from": 0.113,
-          "to": 3.073
-        },
-        {
-          "who": "laurinha",
-          "from": 0.113,
-          "to": 3.073
-        }
-      ]
-    },
-    {
-      "id": "s03_refrao",
-      "title": "Dino pisa forte!",
-      "duration": 2.8,
-      "description": "Dino pisa forte! / Tum, tum, tremeu!",
-      "background": "plano_salao",
-      "camera": {
-        "keys": [
-          {
-            "t": 0.0,
-            "x": 1610.1666666666667,
-            "y": 543.9612784265519,
-            "zoom": 1.808
-          },
-          {
-            "t": 2.8,
-            "x": 1610.1666666666667,
-            "y": 543.9612784265519,
-            "zoom": 1.808
+            "t": 3.233,
+            "x": 1300.0,
+            "y": 544.0,
+            "zoom": 1.9,
+            "ease": "inout"
           }
         ],
         "beat": {
@@ -504,63 +283,33 @@
         },
         "shake": [
           {
-            "t": 1.78,
+            "t": 0.596,
             "dur": 0.35,
-            "amp": 14.0
-          },
-          {
-            "t": 2.14,
-            "dur": 0.35,
-            "amp": 14.0
+            "amp": 10
           }
         ]
       },
       "characters": {
-        "laurinha": {
-          "start": {
-            "x": 1460.1666666666667,
-            "y": 970,
-            "turn": 0.35,
-            "expr": "happy",
-            "z": 3,
-            "depth": 1.45
-          },
-          "exposure": 1,
-          "actions": [
-            {
-              "t": 0.0,
-              "do": "dance",
-              "style": "balanco",
-              "dur": 2.09
-            },
-            {
-              "t": 2.19,
-              "do": "jump",
-              "dur": 0.8
-            }
-          ]
-        },
         "luisinho": {
           "start": {
-            "x": 1760.1666666666667,
-            "y": 970,
-            "turn": -0.35,
+            "x": 1150.0,
+            "y": 990,
+            "turn": 0.3,
             "expr": "happy",
             "z": 3,
-            "depth": 1.45
+            "depth": 1.0
           },
           "exposure": 1,
           "actions": [
             {
-              "t": 0.0,
-              "do": "dance",
-              "style": "bracos",
-              "dur": 2.14
+              "do": "jump",
+              "t": 1.456,
+              "dur": 0.6
             },
             {
-              "t": 2.24,
-              "do": "jump",
-              "dur": 0.8
+              "do": "zum",
+              "t": 2.136,
+              "dur": 1.047
             }
           ]
         }
@@ -568,10 +317,11 @@
       "props": {
         "d": {
           "start": {
-            "x": 1514.7,
-            "y": 930,
+            "x": 1405.0,
+            "y": 900,
             "z": 2,
-            "depth": 0.986
+            "depth": 0.54,
+            "lado": -1.0
           },
           "exposure": 1,
           "keys": [
@@ -586,7 +336,7 @@
               "ease": "step"
             },
             {
-              "t": 1.4,
+              "t": 0.236,
               "pose": {
                 "pisa": 0.0,
                 "pe": 0.0
@@ -594,115 +344,171 @@
               "ease": "step"
             },
             {
-              "t": 1.76,
-              "pose": {
-                "pisa": 0.0,
-                "pe": 1.0
-              },
-              "ease": "step"
-            },
-            {
-              "t": 1.78,
+              "t": 0.596,
               "pose": {
                 "pisa": 1.0
               },
-              "ease": "linear",
-              "in": 0.34
+              "ease": "linear"
             },
             {
-              "t": 2.06,
-              "pose": {
-                "pisa": 0.0
-              },
-              "ease": "step"
-            },
-            {
-              "t": 2.14,
-              "pose": {
-                "pisa": 1.0
-              },
-              "ease": "linear",
-              "in": 0.34
-            },
-            {
-              "t": 2.42,
+              "t": 0.636,
               "pose": {
                 "pisa": 0.0
               },
               "ease": "step"
             }
           ]
+        }
+      },
+      "fx": [],
+      "callouts": [
+        {
+          "t": 2.14,
+          "text": "FUI EU!",
+          "dur": 1.4,
+          "color": "azul",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "luisinho",
+          "from": 0.113,
+          "to": 3.073
+        }
+      ]
+    },
+    {
+      "id": "s03_refrao",
+      "title": "Dino pisa forte!",
+      "duration": 2.8,
+      "description": "Dino pisa forte! / Tum, tum, tremeu!",
+      "background": "plano_sala",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300.0,
+            "y": 544.0,
+            "zoom": 1.808
+          },
+          {
+            "t": 2.8,
+            "x": 1300.0,
+            "y": 544.0,
+            "zoom": 1.808,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
         },
+        "shake": [
+          {
+            "t": 1.783,
+            "dur": 0.35,
+            "amp": 14.0
+          },
+          {
+            "t": 2.143,
+            "dur": 0.35,
+            "amp": 14.0
+          }
+        ]
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1150.0,
+            "y": 990,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "look_around",
+              "t": 0.1,
+              "dur": 1.583
+            },
+            {
+              "do": "shock_reaction",
+              "t": 1.783,
+              "dur": 0.967
+            }
+          ]
+        }
+      },
+      "props": {
         "gato": {
           "start": {
-            "x": 1610.1666666666667,
-            "y": 730,
-            "z": 2,
-            "depth": 0.6525,
-            "lado": 1.0
+            "x": 1440.0,
+            "y": 960,
+            "z": 3,
+            "depth": 0.8,
+            "lado": -1.0
           },
           "exposure": 1,
           "keys": [
             {
               "t": 0.0,
               "pose": {
-                "y": 930,
+                "y": 960,
                 "assusta": 0.0,
                 "rabo": 0.0
               },
               "ease": "step"
             },
             {
-              "t": 1.76,
+              "t": 1.763,
               "pose": {
-                "y": 930,
+                "y": 960,
                 "assusta": 0.0
-              },
-              "in": 1.73
+              }
             },
             {
-              "t": 2.03,
+              "t": 2.003,
               "pose": {
-                "y": 770,
+                "y": 790,
                 "assusta": 1.0
               },
-              "ease": "out",
-              "in": 0.24
+              "ease": "out"
             },
             {
-              "t": 2.12,
+              "t": 2.233,
               "pose": {
-                "y": 930,
+                "y": 960,
                 "assusta": 0.0
               },
-              "in": 0.06
+              "ease": "in"
             },
             {
-              "t": 2.33,
+              "t": 2.123,
               "pose": {
-                "y": 930,
-                "assusta": 0.3
-              },
-              "ease": "in",
-              "in": 0.18
+                "y": 960,
+                "assusta": 0.0
+              }
             },
             {
-              "t": 2.39,
+              "t": 2.363,
               "pose": {
-                "y": 770,
+                "y": 790,
                 "assusta": 1.0
               },
-              "ease": "out",
-              "in": 0.03
+              "ease": "out"
             },
             {
-              "t": 2.69,
+              "t": 2.593,
               "pose": {
-                "y": 930,
-                "assusta": 0.3
+                "y": 960,
+                "assusta": 0.0
               },
-              "ease": "in",
-              "in": 0.27
+              "ease": "in"
             }
           ]
         }
@@ -710,16 +516,9 @@
       "callouts": [
         {
           "t": 1.78,
-          "text": "TUM, TUM!",
-          "dur": 1.02,
-          "color": "laranja",
-          "y": 170
-        },
-        {
-          "t": 2.64,
           "text": "TREMEU!",
-          "dur": 0.6,
-          "color": "vermelho",
+          "dur": 1.4,
+          "color": "laranja",
           "y": 170
         }
       ],
@@ -728,33 +527,155 @@
           "who": "laurinha",
           "from": 0.16,
           "to": 2.79
-        },
-        {
-          "who": "luisinho",
-          "from": 0.16,
-          "to": 2.79
         }
-      ]
+      ],
+      "fx": []
     },
     {
       "id": "s04_refrao",
       "title": "Dino pisa forte!",
-      "duration": 3.773,
+      "duration": 3.6333,
       "description": "Dino pisa forte! / Quem pulou? Fui eu!",
-      "background": "plano_salao",
+      "background": "plano_jardim",
       "camera": {
         "keys": [
           {
-            "t": 0.0,
-            "x": 1332.6,
-            "y": 543.9612784265519,
+            "t": 0,
+            "x": 1300.0,
+            "y": 544.0,
             "zoom": 1.808
           },
           {
             "t": 3.633,
-            "x": 1332.6,
-            "y": 543.9612784265519,
+            "x": 1300.0,
+            "y": 544.0,
+            "zoom": 1.9,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        },
+        "shake": [
+          {
+            "t": 1.023,
+            "dur": 0.35,
+            "amp": 10
+          }
+        ]
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1150.0,
+            "y": 990,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "jump",
+              "t": 1.883,
+              "dur": 0.6
+            },
+            {
+              "do": "cheguei",
+              "t": 2.783,
+              "dur": 0.8
+            }
+          ]
+        }
+      },
+      "props": {
+        "d": {
+          "start": {
+            "x": 1405.0,
+            "y": 900,
+            "z": 2,
+            "depth": 0.54,
+            "lado": -1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "pisa": 0.0,
+                "levinho": 0.0,
+                "ruge": 0.0,
+                "tchau": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.663,
+              "pose": {
+                "pisa": 0.0,
+                "pe": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.023,
+              "pose": {
+                "pisa": 1.0
+              },
+              "ease": "linear"
+            },
+            {
+              "t": 1.063,
+              "pose": {
+                "pisa": 0.0
+              },
+              "ease": "step"
+            }
+          ]
+        }
+      },
+      "fx": [],
+      "callouts": [
+        {
+          "t": 2.58,
+          "text": "FUI EU!",
+          "dur": 1.4,
+          "color": "rosa",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.32,
+          "to": 3.623
+        }
+      ]
+    },
+    {
+      "id": "s05_intervalo",
+      "title": "festa",
+      "duration": 4.0334,
+      "description": "",
+      "background": "plano_salao",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1270.0,
+            "y": 544.0,
             "zoom": 1.808
+          },
+          {
+            "t": 4.033,
+            "x": 1330.0,
+            "y": 544.0,
+            "zoom": 1.808,
+            "ease": "inout"
           }
         ],
         "beat": {
@@ -767,48 +688,25 @@
       "characters": {
         "luisinho": {
           "start": {
-            "x": 1143.8907191149353,
-            "y": 930,
-            "turn": 0.0,
+            "x": 1150.0,
+            "y": 990,
+            "turn": 0.3,
             "expr": "happy",
             "z": 3,
-            "depth": 1.45
+            "depth": 1.0
           },
           "exposure": 1,
           "actions": [
             {
-              "t": 0.1,
-              "do": "pensar",
-              "dur": 2.18
-            },
-            {
-              "t": 2.58,
-              "do": "jump",
-              "dur": 0.8
-            }
-          ]
-        },
-        "laurinha": {
-          "start": {
-            "x": 1521.3092808850645,
-            "y": 930,
-            "turn": -0.35,
-            "expr": "happy",
-            "z": 3,
-            "depth": 1.45
-          },
-          "exposure": 1,
-          "actions": [
-            {
-              "t": 0.1,
               "do": "dance",
-              "style": "gingado",
-              "dur": 2.58
+              "t": 0.0,
+              "dur": 2.733,
+              "style": "festa"
             },
             {
-              "t": 2.68,
-              "do": "laugh",
-              "dur": 0.953
+              "do": "zum",
+              "t": 2.733,
+              "dur": 1.25
             }
           ]
         }
@@ -816,10 +714,11 @@
       "props": {
         "d": {
           "start": {
-            "x": 1350.5,
-            "y": 930,
-            "z": 1,
-            "depth": 0.739
+            "x": 1405.0,
+            "y": 900,
+            "z": 2,
+            "depth": 0.54,
+            "lado": -1.0
           },
           "exposure": 1,
           "keys": [
@@ -841,12 +740,11 @@
               "ease": "step"
             },
             {
-              "t": 3.593,
+              "t": 4.033,
               "pose": {
-                "danca": 2.91
+                "danca": 3.2267200000000003
               },
-              "ease": "linear",
-              "in": 3.563
+              "ease": "linear"
             }
           ]
         }
@@ -854,27 +752,832 @@
       "fx": [
         "confete"
       ],
+      "transition_in": {
+        "type": "cortina",
+        "dur": 0.4
+      },
+      "callouts": [],
+      "sing": []
+    },
+    {
+      "id": "s06_intervalo",
+      "title": "festa",
+      "duration": 4.0,
+      "description": "",
+      "background": "plano_sala",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300.0,
+            "y": 544.0,
+            "zoom": 1.808
+          },
+          {
+            "t": 4.0,
+            "x": 1300.0,
+            "y": 544.0,
+            "zoom": 1.808,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1070.0,
+            "y": 990,
+            "turn": 0.35,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "sneak",
+              "t": 0.1,
+              "dur": 3.8,
+              "to_x": 1160.0
+            }
+          ]
+        }
+      },
+      "props": {
+        "d": {
+          "start": {
+            "x": 1405.0,
+            "y": 900,
+            "z": 2,
+            "depth": 0.54,
+            "lado": -1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "pisa": 0.0,
+                "levinho": 0.0,
+                "ruge": 0.0,
+                "tchau": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.1,
+              "pose": {
+                "levinho": 0.0
+              }
+            },
+            {
+              "t": 0.5,
+              "pose": {
+                "levinho": 1.0
+              },
+              "ease": "inout"
+            }
+          ]
+        }
+      },
+      "fx": [],
       "callouts": [
         {
-          "t": 2.68,
-          "text": "FUI EU!",
-          "dur": 0.953,
-          "color": "azul",
+          "t": 0.3,
+          "text": "PSIU…",
+          "dur": 1.4,
+          "color": "verde",
+          "y": 170
+        }
+      ],
+      "sing": []
+    },
+    {
+      "id": "s07_intervalo",
+      "title": "festa",
+      "duration": 4.0333,
+      "description": "",
+      "background": "plano_jardim",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300.0,
+            "y": 544.0,
+            "zoom": 1.808
+          },
+          {
+            "t": 4.033,
+            "x": 1300.0,
+            "y": 544.0,
+            "zoom": 1.808,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        },
+        "shake": [
+          {
+            "t": 1.6,
+            "dur": 0.35,
+            "amp": 26
+          }
+        ]
+      },
+      "characters": {
+        "vovo": {
+          "start": {
+            "x": 1150.0,
+            "y": 990,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "jump",
+              "t": 1.5,
+              "dur": 0.6
+            },
+            {
+              "do": "shake_fist",
+              "t": 2.4,
+              "dur": 1.583
+            }
+          ]
+        }
+      },
+      "props": {
+        "d": {
+          "start": {
+            "x": 1405.0,
+            "y": 900,
+            "z": 2,
+            "depth": 0.54,
+            "lado": -1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "pisa": 0.0,
+                "levinho": 0.0,
+                "ruge": 0.0,
+                "tchau": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.24,
+              "pose": {
+                "pisa": 0.0,
+                "pe": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.6,
+              "pose": {
+                "pisa": 1.0
+              },
+              "ease": "linear"
+            },
+            {
+              "t": 1.64,
+              "pose": {
+                "pisa": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.5,
+              "pose": {
+                "levinho": 0.0
+              }
+            },
+            {
+              "t": 2.9,
+              "pose": {
+                "levinho": 1.0
+              },
+              "ease": "inout"
+            }
+          ]
+        }
+      },
+      "fx": [],
+      "callouts": [
+        {
+          "t": 1.6,
+          "text": "PISA FORTE!",
+          "dur": 1.4,
+          "color": "laranja",
+          "y": 170
+        }
+      ],
+      "sing": []
+    },
+    {
+      "id": "s08_final",
+      "title": "Gostou do dino?",
+      "duration": 2.0,
+      "description": "Gostou do dino?",
+      "background": "plano_sala",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300.0,
+            "y": 520,
+            "zoom": 2.0
+          },
+          {
+            "t": 2.0,
+            "x": 1300.0,
+            "y": 520,
+            "zoom": 2.15,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {},
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "GOSTOU?",
+          "dur": 1.4,
+          "color": "rosa",
+          "y": 170
+        }
+      ],
+      "sing": [],
+      "transition_in": {
+        "type": "deslizar_dir",
+        "dur": 0.4
+      },
+      "props": {
+        "d": {
+          "start": {
+            "x": 1300.0,
+            "y": 1000,
+            "z": 2,
+            "depth": 0.75,
+            "lado": 1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "pisa": 0.0,
+                "levinho": 0.0,
+                "ruge": 0.0,
+                "tchau": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.3,
+              "pose": {
+                "ruge": 0.0
+              }
+            },
+            {
+              "t": 0.55,
+              "pose": {
+                "ruge": 1.0
+              },
+              "ease": "out"
+            },
+            {
+              "t": 1.2,
+              "pose": {
+                "ruge": 1.0
+              }
+            },
+            {
+              "t": 1.5,
+              "pose": {
+                "ruge": 0.0
+              },
+              "ease": "in"
+            },
+            {
+              "t": 1.6,
+              "pose": {
+                "tchau": 0.0
+              }
+            },
+            {
+              "t": 1.9,
+              "pose": {
+                "tchau": 1.0
+              },
+              "ease": "out"
+            }
+          ]
+        }
+      },
+      "fx": []
+    },
+    {
+      "id": "s09_final",
+      "title": "Dá um joinha!",
+      "duration": 1.2,
+      "description": "Dá um joinha!",
+      "background": "plano_sala",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300.0,
+            "y": 544.0,
+            "zoom": 1.808
+          },
+          {
+            "t": 1.2,
+            "x": 1300.0,
+            "y": 544.0,
+            "zoom": 1.808,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1300.0,
+            "y": 990,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "bacana",
+              "t": 0.1,
+              "dur": 1.05
+            }
+          ]
+        }
+      },
+      "props": {
+        "joinha": {
+          "start": {
+            "x": 1300.0,
+            "y": 330,
+            "z": 4,
+            "depth": 0.6
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "escala": 0.0
+              }
+            },
+            {
+              "t": 0.3,
+              "pose": {
+                "escala": 1.0
+              },
+              "ease": "back"
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "callouts": [],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.14,
+          "to": 1.18
+        }
+      ]
+    },
+    {
+      "id": "s10_final",
+      "title": "Chama o papai e a mamãe",
+      "duration": 2.0,
+      "description": "Chama o papai e a mamãe",
+      "background": "plano_casa_frente",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300.0,
+            "y": 544.0,
+            "zoom": 1.808
+          },
+          {
+            "t": 2.0,
+            "x": 1300.0,
+            "y": 544.0,
+            "zoom": 1.808,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 1180.0,
+            "y": 930,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "point",
+              "t": 0.3,
+              "dur": 1.65
+            }
+          ]
+        },
+        "mamae": {
+          "start": {
+            "x": 1680.0,
+            "y": 930,
+            "turn": -0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "walk",
+              "t": 0.0,
+              "dur": 0.8,
+              "to_x": 1450.0
+            },
+            {
+              "do": "wave",
+              "t": 0.85,
+              "dur": 1.1
+            }
+          ]
+        }
+      },
+      "props": {},
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "CHAMA O PAPAI E A MAMÃE!",
+          "dur": 1.4,
+          "color": "verde",
           "y": 170
         }
       ],
       "sing": [
         {
           "who": "luisinho",
-          "from": 0.32,
-          "to": 3.623
-        },
+          "from": 0.28,
+          "to": 1.99
+        }
+      ],
+      "fx": []
+    },
+    {
+      "id": "s11_final",
+      "title": "Pra se inscrever no canal! Zum, zum!",
+      "duration": 3.6,
+      "description": "Pra se inscrever no canal! Zum, zum!",
+      "background": "plano_sala",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300.0,
+            "y": 544.0,
+            "zoom": 1.808
+          },
+          {
+            "t": 3.6,
+            "x": 1300.0,
+            "y": 544.0,
+            "zoom": 1.9,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 1300.0,
+            "y": 990,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "point",
+              "t": 0.2,
+              "dur": 1.973
+            },
+            {
+              "do": "zum",
+              "t": 2.223,
+              "dur": 1.327
+            }
+          ]
+        }
+      },
+      "props": {
+        "botao": {
+          "start": {
+            "x": 1300.0,
+            "y": 300,
+            "z": 4,
+            "depth": 0.55
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "escala": 0.0,
+                "aperta": 0.0
+              }
+            },
+            {
+              "t": 0.4,
+              "pose": {
+                "escala": 1.0
+              },
+              "ease": "back"
+            },
+            {
+              "t": 1.143,
+              "pose": {
+                "aperta": 1.0
+              },
+              "ease": "out"
+            },
+            {
+              "t": 1.443,
+              "pose": {
+                "aperta": 0.0
+              },
+              "ease": "in"
+            },
+            {
+              "t": 2.323,
+              "pose": {
+                "aperta": 1.0
+              },
+              "ease": "out"
+            },
+            {
+              "t": 2.623,
+              "pose": {
+                "aperta": 0.0
+              },
+              "ease": "in"
+            },
+            {
+              "t": 3.003,
+              "pose": {
+                "aperta": 1.0
+              },
+              "ease": "out"
+            },
+            {
+              "t": 3.303,
+              "pose": {
+                "aperta": 0.0
+              },
+              "ease": "in"
+            }
+          ]
+        }
+      },
+      "fx": [
+        "coracoes"
+      ],
+      "callouts": [],
+      "sing": [
         {
-          "who": "laurinha",
-          "from": 0.32,
-          "to": 3.623
+          "who": "luisinho",
+          "from": 0.12,
+          "to": 3.34
         }
       ]
+    },
+    {
+      "id": "s12_final",
+      "title": "Dino pisa forte! Tchau! Tum!",
+      "duration": 3.4,
+      "description": "Dino pisa forte! Tchau! Tum!",
+      "background": "plano_casa_frente",
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "x": 1300.0,
+            "y": 544.0,
+            "zoom": 1.808
+          },
+          {
+            "t": 3.4,
+            "x": 1300.0,
+            "y": 544.0,
+            "zoom": 1.808,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        },
+        "shake": [
+          {
+            "t": 1.743,
+            "dur": 0.35,
+            "amp": 22
+          }
+        ]
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1150.0,
+            "y": 990,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.0
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "do": "dance",
+              "t": 0.0,
+              "dur": 1.463,
+              "style": "cabeca"
+            },
+            {
+              "do": "wave",
+              "t": 1.563,
+              "dur": 1.787
+            }
+          ]
+        }
+      },
+      "props": {
+        "d": {
+          "start": {
+            "x": 1405.0,
+            "y": 900,
+            "z": 2,
+            "depth": 0.54,
+            "lado": -1.0
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "pisa": 0.0,
+                "levinho": 0.0,
+                "ruge": 0.0,
+                "tchau": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.223,
+              "pose": {
+                "pisa": 0.0,
+                "pe": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.583,
+              "pose": {
+                "pisa": 1.0
+              },
+              "ease": "linear"
+            },
+            {
+              "t": 0.623,
+              "pose": {
+                "pisa": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.383,
+              "pose": {
+                "pisa": 0.0,
+                "pe": 1.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.743,
+              "pose": {
+                "pisa": 1.0
+              },
+              "ease": "linear"
+            },
+            {
+              "t": 1.783,
+              "pose": {
+                "pisa": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.463,
+              "pose": {
+                "tchau": 0.0
+              }
+            },
+            {
+              "t": 1.763,
+              "pose": {
+                "tchau": 1.0
+              },
+              "ease": "out"
+            }
+          ]
+        }
+      },
+      "fx": [],
+      "callouts": [
+        {
+          "t": 1.56,
+          "text": "TCHAU!",
+          "dur": 1.4,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.22,
+          "to": 2.25
+        }
+      ],
+      "transition_in": {
+        "type": "circulo",
+        "dur": 0.4
+      },
+      "transition_out": "fade"
     }
   ]
 }

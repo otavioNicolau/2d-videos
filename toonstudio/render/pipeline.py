@@ -31,6 +31,41 @@ LEVEL_ANCHOR = (650, 900)
 CODE_HASH_PATHS = [ROOT / "toonstudio" / "characters", ROOT / "toonstudio" / "animation", ROOT / "toonstudio" / "drawing"]
 
 
+def _palavras_do_texto(ln: dict) -> list[dict]:
+    """Legenda palavra a palavra com as palavras do TEXTO da letra (o que foi escrito) e só os TEMPOS do reconhecimento
+    (usuário 25/11: a legenda mostrava "LUCAS! SOMBRA", "SIU!", "ESCANDIDINHO" — palavras do Whisper, sobras da linha
+    vizinha). Cada palavra do texto pega o tempo da palavra reconhecida correspondente; as sem par são interpoladas."""
+    import difflib
+    import re
+    norm = lambda t: re.sub(r"[^\wà-úÀ-Ú]", "", t.lower())
+    toks = [t for t in ln.get("text", "").split() if norm(t)]
+    ws = [w for w in ln.get("words", []) if norm(w["w"])]
+    if not toks:
+        return ws
+    if [norm(t) for t in toks] == [norm(w["w"]) for w in ws]:
+        return [{**w, "w": t} for t, w in zip(toks, ws)]
+    s0, s1 = float(ln["s"]), float(ln["e"])
+    ws = [w for w in ws if s0 - 0.3 <= float(w["s"]) <= s1 + 0.1] or ws
+    sm = difflib.SequenceMatcher(None, [norm(t) for t in toks], [norm(w["w"]) for w in ws], autojunk=False)
+    tempo: dict[int, tuple[float, float]] = {}
+    for tag, i1, i2, j1, j2 in sm.get_opcodes():
+        if tag in ("equal", "replace") and (i2 - i1) == (j2 - j1):        # par a par (inclui grafia diferente: Siu/Psiu)
+            for k in range(i2 - i1):
+                tempo[i1 + k] = (float(ws[j1 + k]["s"]), float(ws[j1 + k]["e"]))
+    for k in range(len(toks)):                                              # sem par: entre os vizinhos com tempo
+        if k in tempo:
+            continue
+        ant = max([i for i in tempo if i < k], default=None)
+        pos = min([i for i in tempo if i > k], default=None)
+        a = tempo[ant][1] if ant is not None else s0
+        b = tempo[pos][0] if pos is not None else s1
+        livres = [i for i in range(k, (pos if pos is not None else len(toks)))]
+        passo = max(0.05, (b - a) / max(1, len(livres)))
+        for j, i in enumerate(livres):
+            tempo[i] = (round(a + j * passo, 3), round(a + (j + 1) * passo, 3))
+    return [{"w": t, "s": tempo[k][0], "e": tempo[k][1]} for k, t in enumerate(toks)]
+
+
 def log(msg: str) -> None:
     print(time.strftime("%H:%M:%S"), msg, flush=True)
 
@@ -530,7 +565,7 @@ class Episode:
         if cap and st:
             data = json.loads((self.dir / cap["lyrics"]).read_text(encoding="utf-8"))
             for ln in data["lines"]:
-                ws = [{"w": w["w"], "s": w["s"] - st["start"], "e": w["e"] - st["start"]} for w in ln["words"]]
+                ws = [{"w": w["w"], "s": w["s"] - st["start"], "e": w["e"] - st["start"]} for w in _palavras_do_texto(ln)]
                 if ws and ws[-1]["e"] > 0 and ws[0]["s"] < total:
                     lines.append({"s": ws[0]["s"], "e": ln["e"] - st["start"], "words": ws})
         if not (lines or ov.get("card") or ov.get("footer") or ov.get("logo") or any(s.get("callouts") for s in self.ep["scenes"])):

@@ -1,0 +1,53 @@
+{
+ "schema": "avaliacao-1.0",
+ "versoes": {
+  "Pula Pipoca!": {
+   "arquivo": "Pula Pipoca!.wav",
+   "duracao": 149.6,
+   "bpm": 143.6,
+   "bpm_nota": "",
+   "tom": "Ré maior",
+   "voz_inicio": 1.9,
+   "refrao_inicio": 1.5,
+   "cantado": 69,
+   "intervalos": [
+    [
+     48.3,
+     13.3
+    ],
+    [
+     103.0,
+     14.8
+    ]
+   ],
+   "fim_depois_da_voz": 4.0,
+   "final": "esmaecendo",
+   "silencio_final": 0.0,
+   "acerto": 47,
+   "nao_reconhecidas": [
+    "ploc",
+    "luisinho",
+    "cico",
+    "pertinho",
+    "agacha",
+    "pipocou",
+    "pulou"
+   ],
+   "pontos_a_conferir": [
+    "andamento 144 fora da faixa (130–140) do groove próprio da Laurinha",
+    "só 47% da letra reconhecida — ouvir a pronúncia"
+   ]
+  }
+ },
+ "ouvido": {
+  "Pula Pipoca!": {
+   "1 começo chama atenção": null,
+   "5 melodia combina com a letra": null,
+   "6 dá vontade de dançar": null,
+   "7 pronúncia natural": null,
+   "8 tem a cara do canal": null,
+   "9 nenhum trecho cansativo": null
+  }
+ },
+ "escolhida": "Pula Pipoca!"
+}

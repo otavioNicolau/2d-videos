@@ -475,3 +475,20 @@ def bafo(char, st, a):
                               (0.3, {"bafinho": 0.02}, "step"),
                               (min(d, 1.3), {"bafinho": 0.97}, "out"),
                               (d, {"mouth": "X", "jaw": 0.0, "lid": 0.0, "bafinho": 0.98, **REST}, "inout")], dur=d, ex=1)
+
+
+@action("zum", "acting", "\"ZUM!\" da Laurinha e do Luisinho (pose de assinatura, como o RAWR dos Fofolucos): agacha um "
+        "tiquinho (preparação), abre os bracinhos em V para o alto com as ASINHAS zumbindo, segura a pose sorrindo e "
+        "volta macio.", {"dur": "s"})
+def zum(char, st, a):
+    d = _d(a, 1.4)
+    v = {"hand_n_x": -135, "hand_n_y": -125, "hand_n_bend": 0.45, "paw_n": 3, "hand_f_x": 135, "hand_f_y": -125,
+         "hand_f_bend": -0.45, "paw_f": 3}
+    keys = [(0.0, {}, "step"),
+            (0.2, {"body_y": 16, "squash": 0.92, "hand_n_x": -60, "hand_n_y": 50, "hand_f_x": 60, "hand_f_y": 50,
+                   "lid": 0.3}, "inout"),                                  # preparação
+            (0.4, {**v, "body_y": -14, "squash": 1.07, "buzz": 1.0, "mouth": "D", "jaw": 0.35, **expression("joy"),
+                   "head_tilt": 0.06}, "back"),                            # pose grande
+            (max(0.5, d - 0.35), {"body_y": -10, "squash": 1.03, "head_tilt": -0.04}, "inout"),   # segura
+            (d, {"body_y": 0, "squash": 1.0, "buzz": 0.0, "jaw": 0.0, "mouth": "X", "head_tilt": 0.0}, "inout")]
+    return ActionResult(keys=keys, dur=d, ex=1)

@@ -5,7 +5,7 @@ confete. Toque próprio do canal: a Vila Monstrinha (casas com chifrinhos e jane
 
 Ids (cenários de verdade, 2600×1080, chão em y≈930):
   mon_parque · mon_vila · mon_quarto · mon_palco · mon_noite · mon_escola · mon_cozinha · mon_campinho · mon_campinho_gol
-  mon_festa · mon_sombras
+  mon_festa · mon_sombras · mon_jantar
 Fundos gráficos (ênfase/refrão; câmera no centro 960): mon_raios_<cor> · mon_xadrez_<cor> · mon_brilho_<cor>
 """
 from __future__ import annotations
@@ -23,7 +23,7 @@ from .plano import Flat, _surf
 
 W_INT, H = 2600, 1080
 CHAO_Y = 760
-CENAS = ("mon_festa", "mon_parque", "mon_vila", "mon_quarto", "mon_palco", "mon_noite", "mon_escola", "mon_cozinha", "mon_abertura", "mon_campinho", "mon_campinho_gol", "mon_sombras")
+CENAS = ("mon_festa", "mon_parque", "mon_vila", "mon_quarto", "mon_palco", "mon_noite", "mon_escola", "mon_cozinha", "mon_abertura", "mon_campinho", "mon_campinho_gol", "mon_sombras", "mon_jantar")
 GRAF_KINDS = ("raios", "xadrez", "brilho")
 CORES = {"roxo": ("#4A158F", "#9B4FF0"), "azul": ("#0A4FC0", "#3AA6FF"), "verde": ("#0B8740", "#46D677"),
          "laranja": ("#E85A08", "#FFA63A"), "rosa": ("#C2166C", "#FF6AB2"), "vermelho": ("#B00D28", "#FF4A5E")}
@@ -499,8 +499,59 @@ def sombras(rng):
     return s, W_INT
 
 
+def jantar(rng):
+    """Sala de jantar da Vila Monstrinha DE DIA (Fofolucos 09, "Dente Mole de Monstrinho!"): parede creme-amarelinha com
+    listras suaves (nenhum monstrinho some — o Nhoque coral sumia na cozinha salmão), janela com sol à esquerda, quadrinhos
+    de monstrinho, lustre no meio, aparador à direita com a FRUTEIRA de maçãs, rodapé verde-claro e piso de madeira. A
+    MESA é objeto (`mesa`), posta no meio pelo roteiro."""
+    s, c = _surf(W_INT, H, ESC_CENA)
+    p = P(c)
+    p.rect(0, 0, W_INT, CHAO_Y, "#FFF4C9")
+    for x in range(0, W_INT, 130):                                                # listras suaves
+        p.rect(x, 0, x + 65, CHAO_Y, "#FFEDB0")
+    p.rect(0, CHAO_Y - 200, W_INT, CHAO_Y, "#BFE9D2")                              # lambri verde-claro
+    p.rect(0, CHAO_Y - 214, W_INT, CHAO_Y - 196, "#FFFFFF")
+    for x in range(40, W_INT, 110):
+        p.rect(x, CHAO_Y - 180, x + 80, CHAO_Y - 20, "#AEDFC4", r=10)
+    p.rect(140, 160, 560, 540, "#FFFFFF", r=24)                                   # janela de dia com sol
+    p.rect(162, 182, 538, 518, "#8FD3FF", r=16)
+    p.circ(440, 280, 58, "#FFD23F")
+    for x, y, s_ in ((260, 420, 0.55), (420, 450, 0.45)):
+        p.nuvem(x, y, s_)
+    p.rect(339, 182, 361, 518, "#FFFFFF")
+    p.rect(162, 339, 538, 361, "#FFFFFF")
+    for (x, y, cor, cara) in ((820, 220, "#B98CFF", "#7B4BE0"), (1780, 240, "#7FD8C8", "#2ECC9A")):   # quadrinhos
+        p.rect(x - 110, y - 90, x + 110, y + 90, "#C98A3A", r=12)
+        p.rect(x - 92, y - 72, x + 92, y + 72, "#FFFFFF", r=8)
+        p.circ(x, y + 6, 46, cor)
+        p.circ(x, y, 18, "#FFFFFF")
+        p.circ(x + 4, y + 2, 8, "#2A1630")
+        p.poly([(x - 30, y - 34), (x - 18, y - 70), (x - 6, y - 38)], cara, smooth=False)
+        p.poly([(x + 6, y - 38), (x + 18, y - 70), (x + 30, y - 34)], cara, smooth=False)
+    p.rect(1296, 0, 1304, 150, "#8A5A2B")                                         # lustre
+    p.poly([(1200, 230), (1400, 230), (1350, 150), (1250, 150)], "#FF8A3D", smooth=False)
+    p.circ(1300, 236, 22, "#FFF6A8")
+    p.rect(2020, 470, 2480, CHAO_Y + 30, "#C98A3A", r=16)                          # aparador
+    p.rect(2000, 450, 2500, 490, "#A8702E", r=12)
+    for x in (2080, 2290):
+        p.rect(x, 520, x + 170, CHAO_Y - 10, "#D9A24E", r=10)
+        p.circ(x + 150, 640, 9, "#7A4A22")
+    p.oval(2250, 440, 150, 34, "#FFFFFF")                                          # fruteira com maçãs
+    for (x, y, cor) in ((2170, 400, "#E9433F"), (2250, 385, "#46D677"), (2330, 400, "#E9433F"), (2210, 360, "#FFD23F"), (2290, 362, "#E9433F")):
+        p.circ(x, y, 40, cor)
+        p.rect(x - 3, y - 54, x + 3, y - 36, "#7A4A22")
+    p.oval(2250, 450, 160, 26, "#F2F2F7")
+    p.rect(0, CHAO_Y, W_INT, H, "#D9A066")                                        # piso de madeira
+    p.rect(0, CHAO_Y, W_INT, CHAO_Y + 18, "#B97F45")
+    for y in range(CHAO_Y + 80, H, 80):
+        p.rect(0, y, W_INT, y + 4, "#C48B52")
+    p.oval(1300, 975, 620, 82, "#7FC8F8")                                         # tapete azul-claro
+    p.oval(1300, 975, 480, 58, "#A8DBFF")
+    return s, W_INT
+
+
 SCENES = {"mon_parque": parque, "mon_vila": vila, "mon_quarto": quarto, "mon_palco": palco, "mon_noite": noite,
-          "mon_escola": escola, "mon_cozinha": cozinha, "mon_abertura": abertura, "mon_campinho": campinho, "mon_campinho_gol": campinho_gol, "mon_festa": festa, "mon_sombras": sombras}
+          "mon_escola": escola, "mon_cozinha": cozinha, "mon_abertura": abertura, "mon_campinho": campinho, "mon_campinho_gol": campinho_gol, "mon_festa": festa, "mon_sombras": sombras, "mon_jantar": jantar}
 
 
 # ───────────────────────── fundos gráficos ─────────────────────────

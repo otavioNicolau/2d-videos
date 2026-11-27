@@ -13,7 +13,7 @@
     "file": "musica/trabalho.wav",
     "analysis": "analise/song.json",
     "start": 0.0,
-    "end": 18.8987,
+    "end": 41.6,
     "fade_out": 0.3,
     "beat_grid": "full"
   },
@@ -100,8 +100,10 @@
     }
   },
   "approval": {
-    "storyboard": false,
-    "final_render": false
+    "storyboard": true,
+    "final_render": false,
+    "approved_by": "Otavio",
+    "notes": "storyboard do Short (último refrão até o fim; 1 da dupla por plano) aprovado pelo usuário em 26/11"
   },
   "projeto": "laurinha/ep27-careta-de-limao",
   "scenes": [
@@ -115,13 +117,13 @@
         "keys": [
           {
             "t": 0.0,
-            "x": 1282.1,
+            "x": 727.4,
             "y": 543.9612784265519,
             "zoom": 1.808
           },
           {
             "t": 2.762,
-            "x": 1282.1,
+            "x": 727.4,
             "y": 543.9612784265519,
             "zoom": 1.808
           }
@@ -136,7 +138,7 @@
       "characters": {
         "laurinha": {
           "start": {
-            "x": 1093.3907191149353,
+            "x": 727.4,
             "y": 930,
             "turn": 0.3,
             "expr": "happy",
@@ -152,33 +154,14 @@
               "item": "limao"
             }
           ]
-        },
-        "luisinho": {
-          "start": {
-            "x": 1470.8092808850645,
-            "y": 930,
-            "turn": -0.3,
-            "expr": "happy",
-            "z": 3,
-            "depth": 1.45
-          },
-          "exposure": 1,
-          "actions": [
-            {
-              "t": 2.25,
-              "do": "careta",
-              "dur": 2.75,
-              "item": "limao"
-            }
-          ]
         }
       },
       "props": {
         "l": {
           "start": {
-            "x": 1300.0,
+            "x": 916.1092808850645,
             "y": 1010,
-            "z": 2,
+            "z": 4,
             "depth": 0.87
           },
           "exposure": 1,
@@ -229,7 +212,7 @@
         },
         "p": {
           "start": {
-            "x": 1470.8092808850645,
+            "x": 916.1092808850645,
             "y": 520,
             "z": 0,
             "depth": 0.58
@@ -256,7 +239,7 @@
         },
         "n": {
           "start": {
-            "x": 1093.3907191149353,
+            "x": 620.0,
             "y": 430,
             "z": 0,
             "depth": 0.507
@@ -298,11 +281,6 @@
           "who": "laurinha",
           "from": 0.047,
           "to": 2.742
-        },
-        {
-          "who": "luisinho",
-          "from": 0.047,
-          "to": 2.742
         }
       ],
       "flash_in": true
@@ -317,13 +295,13 @@
         "keys": [
           {
             "t": 0.0,
-            "x": 1093.3907191149353,
+            "x": 727.4,
             "y": 560.0,
             "zoom": 2.4
           },
           {
             "t": 2.238,
-            "x": 1093.3907191149353,
+            "x": 727.4,
             "y": 560.0,
             "zoom": 2.496,
             "ease": "inout"
@@ -339,28 +317,9 @@
       "characters": {
         "laurinha": {
           "start": {
-            "x": 1093.3907191149353,
+            "x": 727.4,
             "y": 930,
             "turn": 0.3,
-            "expr": "happy",
-            "z": 3,
-            "depth": 1.45
-          },
-          "exposure": 1,
-          "actions": [
-            {
-              "t": 0.0,
-              "do": "careta",
-              "dur": 2.238,
-              "item": "limao"
-            }
-          ]
-        },
-        "luisinho": {
-          "start": {
-            "x": 1470.8092808850645,
-            "y": 930,
-            "turn": -0.3,
             "expr": "happy",
             "z": 3,
             "depth": 1.45
@@ -379,9 +338,9 @@
       "props": {
         "l": {
           "start": {
-            "x": 1300.0,
+            "x": 916.1092808850645,
             "y": 1010,
-            "z": 2,
+            "z": 4,
             "depth": 0.87
           },
           "exposure": 1,
@@ -406,7 +365,7 @@
         },
         "p": {
           "start": {
-            "x": 1470.8092808850645,
+            "x": 916.1092808850645,
             "y": 520,
             "z": 0,
             "depth": 0.58
@@ -433,7 +392,7 @@
         },
         "n": {
           "start": {
-            "x": 1093.3907191149353,
+            "x": 620.0,
             "y": 430,
             "z": 0,
             "depth": 0.507
@@ -475,11 +434,6 @@
           "who": "laurinha",
           "from": 0.0,
           "to": 2.165
-        },
-        {
-          "who": "luisinho",
-          "from": 0.0,
-          "to": 2.165
         }
       ]
     },
@@ -493,13 +447,13 @@
         "keys": [
           {
             "t": 0.0,
-            "x": 1264.2,
+            "x": 1586.3,
             "y": 543.9612784265519,
             "zoom": 1.808
           },
           {
             "t": 4.4334,
-            "x": 1264.2,
+            "x": 1586.3,
             "y": 543.9612784265519,
             "zoom": 1.808
           }
@@ -514,7 +468,7 @@
       "characters": {
         "luisinho": {
           "start": {
-            "x": 1452.9092808850646,
+            "x": 1586.3,
             "y": 930,
             "turn": -0.2,
             "expr": "happy",
@@ -536,38 +490,14 @@
               "dur": 4.433
             }
           ]
-        },
-        "laurinha": {
-          "start": {
-            "x": 1075.4907191149355,
-            "y": 930,
-            "turn": 0.3,
-            "expr": "happy",
-            "z": 3,
-            "depth": 1.45,
-            "holding": "saxofone",
-            "hand_n_x": -110,
-            "hand_n_y": 20,
-            "hand_n_bend": 0.5,
-            "paw_n": 1
-          },
-          "exposure": 1,
-          "actions": [
-            {
-              "t": 0.0,
-              "do": "dance",
-              "style": "toca_sax",
-              "dur": 4.433
-            }
-          ]
         }
       },
       "props": {
         "bat": {
           "start": {
-            "x": 1452.9092808850646,
+            "x": 1586.3,
             "y": 940,
-            "z": 2,
+            "z": 4,
             "depth": 0.87
           },
           "exposure": 1,
@@ -582,9 +512,9 @@
         },
         "l": {
           "start": {
-            "x": 1452.9092808850646,
+            "x": 1775.0092808850645,
             "y": 960,
-            "z": 2,
+            "z": 4,
             "depth": 0.58
           },
           "exposure": 1,
@@ -649,11 +579,6 @@
       "sing": [
         {
           "who": "luisinho",
-          "from": 0.0,
-          "to": 4.387
-        },
-        {
-          "who": "laurinha",
           "from": 0.0,
           "to": 4.387
         }
@@ -737,20 +662,20 @@
     {
       "id": "s05_refrao",
       "title": "Careta de limão!",
-      "duration": 2.236,
+      "duration": 4.4667,
       "description": "Careta de limão! / Mostra a careta, vizinho!",
       "background": "plano_jardim",
       "camera": {
         "keys": [
           {
             "t": 0.0,
-            "x": 1264.2,
+            "x": 942.1,
             "y": 543.9612784265519,
             "zoom": 1.808
           },
           {
-            "t": 2.236,
-            "x": 1264.2,
+            "t": 4.4667,
+            "x": 942.1,
             "y": 543.9612784265519,
             "zoom": 1.808
           }
@@ -763,34 +688,9 @@
         }
       },
       "characters": {
-        "luisinho": {
-          "start": {
-            "x": 1452.9092808850646,
-            "y": 930,
-            "turn": -0.2,
-            "expr": "happy",
-            "z": 3,
-            "depth": 1.45,
-            "holding": "baqueta_a4",
-            "hand_n_x": -110,
-            "hand_n_y": 20,
-            "hand_n_bend": 0.5,
-            "paw_n": 1,
-            "holding_f": "baqueta_a4"
-          },
-          "exposure": 1,
-          "actions": [
-            {
-              "t": 0.0,
-              "do": "dance",
-              "style": "toca_bateria_a4",
-              "dur": 4.467
-            }
-          ]
-        },
         "laurinha": {
           "start": {
-            "x": 1075.4907191149355,
+            "x": 942.1,
             "y": 930,
             "turn": 0.2,
             "expr": "happy",
@@ -811,9 +711,9 @@
       "props": {
         "bat": {
           "start": {
-            "x": 1452.9092808850646,
+            "x": 1130.8092808850647,
             "y": 940,
-            "z": 2,
+            "z": 4,
             "depth": 0.87
           },
           "exposure": 1,
@@ -828,9 +728,9 @@
         },
         "tec": {
           "start": {
-            "x": 1075.4907191149355,
+            "x": 942.1,
             "y": 940,
-            "z": 2,
+            "z": 4,
             "depth": 0.899
           },
           "exposure": 1,
@@ -843,7 +743,7 @@
               "ease": "step"
             },
             {
-              "t": 2.236,
+              "t": 4.427,
               "pose": {
                 "tecla": 8.9
               },
@@ -854,9 +754,9 @@
         },
         "l": {
           "start": {
-            "x": 1075.4907191149355,
+            "x": 753.3907191149355,
             "y": 960,
-            "z": 2,
+            "z": 4,
             "depth": 0.58
           },
           "exposure": 1,
@@ -896,7 +796,7 @@
               "in": 2.2
             },
             {
-              "t": 2.236,
+              "t": 4.41,
               "pose": {
                 "fase": 4.47
               },
@@ -920,37 +820,31 @@
       ],
       "sing": [
         {
-          "who": "luisinho",
-          "from": 0.0,
-          "to": 2.216
-        },
-        {
           "who": "laurinha",
           "from": 0.0,
-          "to": 2.216
+          "to": 4.387
         }
       ]
     },
     {
-      "id": "s06_refrao",
-      "title": "Careta de limão!",
-      "duration": 2.7627,
-      "description": "Careta de limão! / Mostra a careta, vizinho!",
+      "id": "s06_intervalo",
+      "title": "a banda (sax)",
+      "duration": 2.7667,
+      "description": "",
       "background": "plano_jardim",
       "camera": {
         "keys": [
           {
             "t": 0.0,
-            "x": 1075.4907191149355,
-            "y": 560.0,
-            "zoom": 2.4
+            "x": 1600.5,
+            "y": 543.9612784265519,
+            "zoom": 1.808
           },
           {
-            "t": 2.763,
-            "x": 1075.4907191149355,
-            "y": 560.0,
-            "zoom": 2.496,
-            "ease": "inout"
+            "t": 2.7667,
+            "x": 1600.5,
+            "y": 543.9612784265519,
+            "zoom": 1.808
           }
         ],
         "beat": {
@@ -963,7 +857,7 @@
       "characters": {
         "luisinho": {
           "start": {
-            "x": 1452.9092808850646,
+            "x": 1600.5,
             "y": 930,
             "turn": -0.2,
             "expr": "happy",
@@ -982,13 +876,539 @@
               "t": 0.0,
               "do": "dance",
               "style": "toca_bateria_a4",
-              "dur": 2.231
+              "dur": 2.767
+            }
+          ]
+        }
+      },
+      "props": {
+        "bat": {
+          "start": {
+            "x": 1600.5,
+            "y": 940,
+            "z": 4,
+            "depth": 0.87
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "dance",
+              "style": "kit_a4",
+              "dur": 2.767
             }
           ]
         },
+        "a": {
+          "start": {
+            "x": 1789.2092808850646,
+            "y": 960,
+            "z": 0,
+            "depth": 0.815
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "quantos": 1.0,
+                "cai": 0.0,
+                "balanco": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.7,
+              "pose": {
+                "balanco": 1.38
+              },
+              "ease": "linear",
+              "in": 2.67
+            }
+          ]
+        }
+      },
+      "fx": [
+        "confete"
+      ],
+      "transition_in": {
+        "type": "circulo",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s07_intervalo",
+      "title": "o limão dança",
+      "duration": 2.7666,
+      "description": "",
+      "background": "plano_cozinha",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 691.6,
+            "y": 540.0,
+            "zoom": 1.808
+          },
+          {
+            "t": 2.7666,
+            "x": 691.6,
+            "y": 540.0,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
         "laurinha": {
           "start": {
-            "x": 1075.4907191149355,
+            "x": 691.6,
+            "y": 930,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "dance",
+              "style": "pulinho",
+              "dur": 2.667
+            }
+          ]
+        }
+      },
+      "props": {
+        "l": {
+          "start": {
+            "x": 880.3092808850646,
+            "y": 1000,
+            "z": 4,
+            "depth": 0.797
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "boca": 0.4,
+                "careta": 0.0,
+                "pulo": 0.0,
+                "fase": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.3,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "out",
+              "in": 0.27
+            },
+            {
+              "t": 0.6,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "out",
+              "in": 0.27
+            },
+            {
+              "t": 0.9,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "out",
+              "in": 0.27
+            },
+            {
+              "t": 1.2,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "out",
+              "in": 0.27
+            },
+            {
+              "t": 1.5,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "out",
+              "in": 0.27
+            },
+            {
+              "t": 1.8,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "out",
+              "in": 0.27
+            },
+            {
+              "t": 2.1,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "out",
+              "in": 0.27
+            },
+            {
+              "t": 2.4,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "out",
+              "in": 0.27
+            },
+            {
+              "t": 2.71,
+              "pose": {
+                "fase": 2.766999999999987
+              },
+              "ease": "linear",
+              "in": 2.68
+            }
+          ]
+        },
+        "c": {
+          "start": {
+            "x": 880.3092808850646,
+            "y": 1010,
+            "z": 4,
+            "depth": 0.652
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "lado": 1.0,
+                "rabo": 0.0,
+                "miau": 0.0,
+                "assusta": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.4,
+              "pose": {
+                "rabo": 1.0
+              },
+              "ease": "inout",
+              "in": 0.37
+            },
+            {
+              "t": 0.5,
+              "pose": {
+                "miau": 1.0
+              },
+              "ease": "out",
+              "in": 0.47
+            },
+            {
+              "t": 0.8,
+              "pose": {
+                "rabo": 0.0
+              },
+              "ease": "inout",
+              "in": 0.37
+            },
+            {
+              "t": 0.95,
+              "pose": {
+                "miau": 0.0
+              },
+              "ease": "in",
+              "in": 0.42
+            },
+            {
+              "t": 1.2,
+              "pose": {
+                "rabo": 1.0
+              },
+              "ease": "inout",
+              "in": 0.37
+            },
+            {
+              "t": 1.6,
+              "pose": {
+                "rabo": 0.0
+              },
+              "ease": "inout",
+              "in": 0.37
+            },
+            {
+              "t": 2.0,
+              "pose": {
+                "rabo": 1.0
+              },
+              "ease": "inout",
+              "in": 0.37
+            },
+            {
+              "t": 2.0,
+              "pose": {
+                "miau": 1.0
+              },
+              "ease": "out",
+              "in": 1.02
+            },
+            {
+              "t": 2.45,
+              "pose": {
+                "miau": 0.0
+              },
+              "ease": "in",
+              "in": 0.42
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "s08_final",
+      "title": "Gostou da careta?",
+      "duration": 2.2334,
+      "description": "Gostou da careta?",
+      "background": "plano_jardim",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1300.0,
+            "y": 536.0387215734481,
+            "zoom": 1.808
+          },
+          {
+            "t": 2.2334,
+            "x": 1300.0,
+            "y": 536.0387215734481,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1300.0,
+            "y": 930,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "apontar_camera",
+              "dur": 2.133
+            }
+          ]
+        }
+      },
+      "props": {
+        "l": {
+          "start": {
+            "x": 1488.7092808850646,
+            "y": 900,
+            "z": 4,
+            "depth": 0.58
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "boca": 0.4,
+                "careta": 0.0,
+                "pulo": 0.0,
+                "fase": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 0.6,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "out",
+              "in": 0.57
+            },
+            {
+              "t": 0.9,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "out",
+              "in": 0.27
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.3,
+          "text": "GOSTOU DA CARETA?",
+          "dur": 1.8,
+          "color": "azul",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 2.223
+        }
+      ],
+      "transition_in": {
+        "type": "circulo",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s09_final",
+      "title": "Dá um joinha!",
+      "duration": 2.2,
+      "description": "Dá um joinha!",
+      "background": "danca_bolinhas_amarelo",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 2.2,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 960.0,
+            "y": 1170,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.885
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.2,
+              "do": "bacana",
+              "dur": 2.0
+            }
+          ]
+        }
+      },
+      "props": {
+        "joinha": {
+          "start": {
+            "x": 960.0,
+            "y": 300,
+            "z": 4,
+            "depth": 0.7
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "escala": 0.0
+              }
+            },
+            {
+              "t": 0.4,
+              "pose": {
+                "escala": 1.0
+              },
+              "ease": "back",
+              "in": 0.37
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "callouts": [
+        {
+          "t": 0.3,
+          "text": "DÁ UM JOINHA!",
+          "dur": 1.8,
+          "color": "azul",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.333,
+          "to": 1.833
+        }
+      ]
+    },
+    {
+      "id": "s10_final",
+      "title": "Chama o papai e a mamãe",
+      "duration": 2.8,
+      "description": "Chama o papai e a mamãe",
+      "background": "plano_casa_frente",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1300.0,
+            "y": 540,
+            "zoom": 1.808
+          },
+          {
+            "t": 2.8,
+            "x": 1300.0,
+            "y": 540,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "mamae": {
+          "start": {
+            "x": 1111.2907191149354,
             "y": 930,
             "turn": 0.2,
             "expr": "happy",
@@ -998,62 +1418,361 @@
           "exposure": 1,
           "actions": [
             {
-              "t": 0.0,
-              "do": "dance",
-              "style": "toca_teclado",
-              "dur": 2.231
+              "t": 0.2,
+              "do": "wave",
+              "dur": 1.4
+            }
+          ]
+        },
+        "laurinha": {
+          "start": {
+            "x": 1488.7092808850646,
+            "y": 930,
+            "turn": -0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "point",
+              "dur": 2.7
             }
           ]
         }
       },
       "props": {
-        "bat": {
+        "n": {
           "start": {
-            "x": 1452.9092808850646,
-            "y": 940,
-            "z": 2,
-            "depth": 0.87
-          },
-          "exposure": 1,
-          "actions": [
-            {
-              "t": 0.0,
-              "do": "dance",
-              "style": "kit_a4",
-              "dur": 2.231
-            }
-          ]
-        },
-        "tec": {
-          "start": {
-            "x": 1075.4907191149355,
-            "y": 940,
-            "z": 2,
-            "depth": 0.899
+            "x": 1111.2907191149354,
+            "y": 430,
+            "z": 0,
+            "depth": 0.507
           },
           "exposure": 1,
           "keys": [
             {
               "t": 0.0,
               "pose": {
-                "tecla": 0.0
+                "x": 655.8
+              },
+              "ease": "step"
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.3,
+          "text": "CHAMA O PAPAI E A MAMÃE!",
+          "dur": 1.8,
+          "color": "verde",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.013,
+          "to": 2.79
+        }
+      ]
+    },
+    {
+      "id": "s11_final",
+      "title": "Pra se inscrever no canal! Zum, zum!",
+      "duration": 2.209,
+      "description": "Pra se inscrever no canal! Zum, zum!",
+      "background": "danca_raios_vermelho",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 2.209,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 960.0,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.885
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.2,
+              "do": "point",
+              "dur": 4.767
+            }
+          ]
+        }
+      },
+      "props": {
+        "botao": {
+          "start": {
+            "x": 960.0,
+            "y": 300,
+            "z": 4,
+            "depth": 0.9
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "escala": 0.0,
+                "aperta": 0.0
+              }
+            },
+            {
+              "t": 0.4,
+              "pose": {
+                "escala": 1.0
+              },
+              "ease": "back",
+              "in": 0.37
+            },
+            {
+              "t": 1.6,
+              "pose": {
+                "aperta": 1.0
+              },
+              "ease": "out",
+              "in": 1.57
+            },
+            {
+              "t": 1.9,
+              "pose": {
+                "aperta": 0.0
+              },
+              "ease": "in",
+              "in": 0.27
+            }
+          ]
+        }
+      },
+      "fx": [
+        "coracoes"
+      ],
+      "callouts": [
+        {
+          "t": 0.5,
+          "text": "INSCREVA-SE!",
+          "dur": 1.8,
+          "color": "vermelho",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.133,
+          "to": 2.189
+        }
+      ]
+    },
+    {
+      "id": "s12_final",
+      "title": "Pra se inscrever no canal! Zum, zum!",
+      "duration": 2.7576,
+      "description": "Pra se inscrever no canal! Zum, zum!",
+      "background": "danca_raios_vermelho",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 960.0,
+            "y": 760.0,
+            "zoom": 2.0
+          },
+          {
+            "t": 2.758,
+            "x": 960.0,
+            "y": 760.0,
+            "zoom": 2.08,
+            "ease": "inout"
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 960.0,
+            "y": 1010,
+            "turn": 0.15,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.885
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "point",
+              "dur": 2.758
+            }
+          ]
+        }
+      },
+      "props": {
+        "botao": {
+          "start": {
+            "x": 960.0,
+            "y": 300,
+            "z": 4,
+            "depth": 0.9
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "aperta": 0.0
+              },
+              "ease": "in",
+              "in": 0.27
+            }
+          ]
+        }
+      },
+      "fx": [
+        "coracoes"
+      ],
+      "callouts": [],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.0,
+          "to": 2.584
+        }
+      ]
+    },
+    {
+      "id": "s13_final",
+      "title": "Careta de limão! Tchau! Ui!",
+      "duration": 2.6,
+      "description": "Careta de limão! Tchau! Ui!",
+      "background": "plano_jardim",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 799.0,
+            "y": 540.0,
+            "zoom": 1.808
+          },
+          {
+            "t": 2.6,
+            "x": 799.0,
+            "y": 540.0,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "vovo": {
+          "start": {
+            "x": 610.2907191149354,
+            "y": 930,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "wave",
+              "dur": 2.6
+            }
+          ]
+        },
+        "laurinha": {
+          "start": {
+            "x": 987.7092808850646,
+            "y": 930,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "wave",
+              "dur": 2.6
+            }
+          ]
+        }
+      },
+      "props": {
+        "a": {
+          "start": {
+            "x": 987.7092808850646,
+            "y": 960,
+            "z": 0,
+            "depth": 0.906
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "quantos": 1.0,
+                "cai": 0.0,
+                "balanco": 0.0
               },
               "ease": "step"
             },
             {
-              "t": 2.191,
+              "t": 2.54,
               "pose": {
-                "tecla": 8.9
+                "balanco": 1.3
               },
               "ease": "linear",
-              "in": 4.397
+              "in": 2.51
             }
           ]
         },
         "l": {
           "start": {
-            "x": 1075.4907191149355,
-            "y": 960,
+            "x": 987.7092808850646,
+            "y": 1020,
             "z": 2,
             "depth": 0.58
           },
@@ -1062,38 +1781,196 @@
             {
               "t": 0.0,
               "pose": {
-                "careta": 1.0
+                "boca": 0.4,
+                "careta": 0.0,
+                "pulo": 0.0,
+                "fase": 0.0
               },
-              "ease": "out",
-              "in": 2.2
+              "ease": "step"
             },
             {
-              "t": 2.174,
+              "t": 0.5,
               "pose": {
-                "fase": 4.47
+                "pulo": 1.0
+              },
+              "ease": "out",
+              "in": 0.47
+            },
+            {
+              "t": 0.8,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "out",
+              "in": 0.27
+            },
+            {
+              "t": 1.5,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "out",
+              "in": 0.67
+            },
+            {
+              "t": 1.8,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "out",
+              "in": 0.27
+            },
+            {
+              "t": 2.54,
+              "pose": {
+                "fase": 2.6
               },
               "ease": "linear",
-              "in": 4.38
+              "in": 2.51
             }
           ]
         }
       },
       "fx": [
-        "confete"
+        "coracoes"
       ],
-      "callouts": [],
-      "sing": [
+      "callouts": [
         {
-          "who": "luisinho",
-          "from": 0.0,
-          "to": 2.151
+          "t": 0.2,
+          "text": "CARETA DE LIMÃO!",
+          "dur": 1.8,
+          "color": "verde",
+          "y": 170
         },
         {
-          "who": "laurinha",
-          "from": 0.0,
-          "to": 2.151
+          "t": 1.3,
+          "text": "TCHAU!",
+          "dur": 1.3,
+          "color": "amarelo",
+          "y": 170
         }
-      ]
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.187,
+          "to": 2.59
+        }
+      ],
+      "transition_in": {
+        "type": "deslizar_cima",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s14_final",
+      "title": "limonada de canudinho: o sorriso de volta",
+      "duration": 2.9,
+      "description": "",
+      "background": "plano_cozinha",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1300.0,
+            "y": 536.0387215734481,
+            "zoom": 1.808
+          },
+          {
+            "t": 2.9,
+            "x": 1300.0,
+            "y": 536.0387215734481,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1300.0,
+            "y": 930,
+            "turn": 0.1,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.45
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "beber",
+              "item": "limonada",
+              "dur": 2.9
+            }
+          ]
+        }
+      },
+      "props": {
+        "l": {
+          "start": {
+            "x": 1488.7092808850646,
+            "y": 900,
+            "z": 4,
+            "depth": 0.507
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "boca": 0.4,
+                "careta": 0.0,
+                "pulo": 0.0,
+                "fase": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.2,
+              "pose": {
+                "pulo": 1.0
+              },
+              "ease": "out",
+              "in": 1.17
+            },
+            {
+              "t": 1.5,
+              "pose": {
+                "pulo": 0.0
+              },
+              "ease": "out",
+              "in": 0.27
+            },
+            {
+              "t": 2.84,
+              "pose": {
+                "fase": 2.9
+              },
+              "ease": "linear",
+              "in": 2.81
+            }
+          ]
+        }
+      },
+      "fx": [
+        "coracoes"
+      ],
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "LIMONADA!",
+          "dur": 1.8,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "transition_out": "fade"
     }
   ]
 }

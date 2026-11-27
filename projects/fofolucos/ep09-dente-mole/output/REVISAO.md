@@ -1,0 +1,136 @@
+# Revisão — Dente Mole de Monstrinho!
+
+- Vídeo: `ep09-dente-mole.mp4`
+- Prancha: `prancha.png`
+- Aprovação humana (storyboard → render definitivo): **SIM**
+
+## Falas (QA por transcrição cega)
+
+| cena | texto | ouvido | sim. | dur. |
+|---|---|---|---|---|
+
+## Cenas
+
+- **s01_intro** — 123 quadros; nhoque: 123 desenhos, mesa: 121 desenhos, dt: 123 desenhos, mf: 123 desenhos
+- **s02_intro** — 94 quadros; nhoque: 94 desenhos, dt: 94 desenhos, mesa: 94 desenhos, mf: 94 desenhos
+- **s03_intro** — 83 quadros; teco: 83 desenhos, gogo: 83 desenhos, bilu: 83 desenhos, mimi: 83 desenhos, bo: 83 desenhos
+- **s04_intro** — 52 quadros; bilu: 52 desenhos, zuzu: 52 desenhos, nhoque: 52 desenhos, bat: 52 desenhos, tec: 52 desenhos
+- **s05_verso** — 67 quadros; nhoque: 67 desenhos, mimi: 67 desenhos, mesa: 67 desenhos, mf: 67 desenhos
+- **s06_verso** — 52 quadros; nhoque: 52 desenhos, mesa: 52 desenhos, mf: 52 desenhos
+- **s07_verso** — 40 quadros; nhoque: 23 desenhos, mesa: 40 desenhos, mf: 40 desenhos
+- **s08_verso** — 53 quadros; nhoque: 53 desenhos, mesa: 53 desenhos, mf: 53 desenhos
+- **s09_verso** — 65 quadros; dt: 65 desenhos, mesa: 65 desenhos, mf: 65 desenhos
+- **s10_verso** — 39 quadros; nhoque: 39 desenhos, mesa: 39 desenhos, mf: 39 desenhos
+- **s11_verso** — 54 quadros; bilu: 54 desenhos, mimi: 54 desenhos, nv: 54 desenhos
+- **s12_verso** — 52 quadros; bilu: 52 desenhos, nhoque: 52 desenhos, mimi: 52 desenhos, mesa: 52 desenhos, mf: 52 desenhos
+- **s13_refrao** — 105 quadros; nhoque: 105 desenhos, mimi: 105 desenhos, dt: 105 desenhos, mesa: 104 desenhos, mf: 105 desenhos
+- **s14_refrao__p0** — 118 quadros; bilu: 118 desenhos, mesa: 116 desenhos, mf: 118 desenhos
+- **s14_refrao__p1** — 118 quadros; dt2: 118 desenhos, bo: 118 desenhos
+- **s14_refrao** — 118 quadros; 
+- **s15_refrao** — 92 quadros; teco: 92 desenhos, bilu: 92 desenhos, gogo: 92 desenhos, bo: 92 desenhos
+- **s16_refrao** — 118 quadros; mimi: 118 desenhos, nv: 118 desenhos
+- **s17_intervalo** — 66 quadros; zuzu: 66 desenhos, nhoque: 66 desenhos, mesa: 66 desenhos, mf: 66 desenhos
+- **s18_intervalo__p0** — 38 quadros; teco: 38 desenhos, bo: 38 desenhos
+- **s18_intervalo__p1** — 38 quadros; gogo: 38 desenhos, bo: 38 desenhos
+- **s18_intervalo** — 38 quadros; 
+- **s19_intervalo** — 120 quadros; bilu: 120 desenhos, zuzu: 117 desenhos, nhoque: 120 desenhos, bat: 120 desenhos, tec: 120 desenhos
+- **s20_intervalo** — 51 quadros; teco: 51 desenhos, mimi: 51 desenhos, mesa: 51 desenhos, mf: 51 desenhos
+- **s21_ponte** — 65 quadros; nhoque: 65 desenhos, esp: 65 desenhos, bo: 65 desenhos
+- **s22_ponte** — 40 quadros; dt: 40 desenhos, bo: 40 desenhos
+- **s23_ponte** — 52 quadros; nhoque: 52 desenhos, bo: 52 desenhos
+- **s24_ponte__p0** — 66 quadros; mimi: 66 desenhos, mesa: 66 desenhos, mf: 66 desenhos
+- **s24_ponte__p1** — 66 quadros; teco: 66 desenhos, nv: 66 desenhos
+- **s24_ponte** — 66 quadros; 
+- **s25_ponte** — 78 quadros; gogo: 78 desenhos, esp: 78 desenhos, bo: 78 desenhos
+- **s26_ponte** — 40 quadros; zuzu: 40 desenhos, bo: 40 desenhos
+- **s27_ponte** — 66 quadros; bilu: 66 desenhos, nhoque: 66 desenhos, mesa: 66 desenhos, mf: 66 desenhos
+- **s28_ponte** — 130 quadros; nhoque: 130 desenhos, mimi: 130 desenhos, mesa: 128 desenhos, dt: 130 desenhos, mf: 130 desenhos
+- **s29_verso** — 53 quadros; nhoque: 53 desenhos, teco: 53 desenhos, cesta: 53 desenhos, nv: 53 desenhos
+- **s30_verso** — 39 quadros; mc: 39 desenhos, cesta: 39 desenhos, nv: 39 desenhos
+- **s31_verso** — 53 quadros; nhoque: 33 desenhos, mc: 53 desenhos, nv: 53 desenhos
+- **s32_verso** — 53 quadros; nhoque: 53 desenhos, mc: 53 desenhos, nv: 53 desenhos
+- **s33_verso** — 51 quadros; bilu: 51 desenhos, gogo: 51 desenhos, mf: 51 desenhos
+- **s34_verso** — 53 quadros; mimi: 53 desenhos, teco: 53 desenhos, mesa: 53 desenhos, mf: 53 desenhos
+- **s35_verso** — 52 quadros; mc: 52 desenhos, nv: 52 desenhos
+- **s36_verso__p0** — 53 quadros; nhoque: 30 desenhos, nv: 53 desenhos
+- **s36_verso__p1** — 53 quadros; mimi: 53 desenhos, mc2: 53 desenhos, nv: 53 desenhos
+- **s36_verso** — 53 quadros; 
+- **s37_refrao** — 104 quadros; nhoque: 104 desenhos, bilu: 104 desenhos, dt: 104 desenhos, bo: 104 desenhos
+- **s38_refrao__p0** — 105 quadros; teco: 105 desenhos, mesa: 104 desenhos, mf: 105 desenhos
+- **s38_refrao__p1** — 105 quadros; dt2: 105 desenhos, bo: 105 desenhos
+- **s38_refrao** — 105 quadros; 
+- **s39_refrao** — 105 quadros; nhoque: 105 desenhos, mimi: 105 desenhos, zuzu: 105 desenhos, bo: 105 desenhos
+- **s40_refrao** — 104 quadros; zuzu: 104 desenhos, nv: 104 desenhos
+- **s41_intervalo** — 210 quadros; bilu: 210 desenhos, zuzu: 199 desenhos, nhoque: 210 desenhos, bat: 210 desenhos, tec: 210 desenhos
+- **s42_intervalo** — 209 quadros; bilu: 208 desenhos, nhoque: 206 desenhos, gogo: 207 desenhos, mc: 209 desenhos, nv: 208 desenhos
+- **s43_refrao** — 104 quadros; nhoque: 104 desenhos, zuzu: 104 desenhos, dt: 104 desenhos, mesa: 104 desenhos, mf: 104 desenhos
+- **s44_refrao__p0** — 117 quadros; gogo: 117 desenhos, mesa: 115 desenhos, mf: 117 desenhos
+- **s44_refrao__p1** — 117 quadros; dt2: 117 desenhos, bo: 117 desenhos
+- **s44_refrao** — 117 quadros; 
+- **s45_refrao** — 92 quadros; bilu: 92 desenhos, nhoque: 92 desenhos, mimi: 92 desenhos, bo: 92 desenhos
+- **s46_refrao** — 117 quadros; teco: 117 desenhos
+- **s47_final** — 88 quadros; nhoque: 88 desenhos, mesa: 88 desenhos, mf: 88 desenhos
+- **s48_final** — 40 quadros; zuzu: 40 desenhos, joinha: 40 desenhos, bo: 40 desenhos
+  - ⚠ joinha: 1 quadros vazios (ex.: [1])
+- **s49_final** — 66 quadros; bilu: 66 desenhos, mimi: 66 desenhos, nv: 66 desenhos
+- **s50_final** — 106 quadros; gogo: 106 desenhos, botao: 106 desenhos, bo: 106 desenhos
+  - ⚠ botao: 1 quadros vazios (ex.: [1])
+- **s51_final** — 26 quadros; teco: 26 desenhos, nhoque: 26 desenhos, nv: 26 desenhos
+- **s52_final** — 90 quadros; teco: 90 desenhos, gogo: 90 desenhos, mimi: 90 desenhos, zuzu: 90 desenhos, bilu: 90 desenhos, nhoque: 90 desenhos, nv: 90 desenhos
+- **s53_final** — 210 quadros; nhoque: 210 desenhos, mesa: 137 desenhos, mf: 210 desenhos
+
+## Avisos
+
+- storyboard s01_intro: pendente
+- storyboard s02_intro: pendente
+- storyboard s03_intro: pendente
+- storyboard s04_intro: pendente
+- storyboard s05_verso: pendente
+- storyboard s06_verso: pendente
+- storyboard s07_verso: pendente
+- storyboard s08_verso: pendente
+- storyboard s09_verso: pendente
+- storyboard s10_verso: pendente
+- storyboard s11_verso: pendente
+- storyboard s12_verso: pendente
+- storyboard s13_refrao: pendente
+- storyboard s14_refrao: pendente
+- storyboard s15_refrao: pendente
+- storyboard s16_refrao: pendente
+- storyboard s17_intervalo: pendente
+- storyboard s18_intervalo: pendente
+- storyboard s19_intervalo: pendente
+- storyboard s20_intervalo: pendente
+- storyboard s21_ponte: pendente
+- storyboard s22_ponte: pendente
+- storyboard s23_ponte: pendente
+- storyboard s24_ponte: pendente
+- storyboard s25_ponte: pendente
+- storyboard s26_ponte: pendente
+- storyboard s27_ponte: pendente
+- storyboard s28_ponte: pendente
+- storyboard s29_verso: pendente
+- storyboard s30_verso: pendente
+- storyboard s31_verso: pendente
+- storyboard s32_verso: pendente
+- storyboard s33_verso: pendente
+- storyboard s34_verso: pendente
+- storyboard s35_verso: pendente
+- storyboard s36_verso: pendente
+- storyboard s37_refrao: pendente
+- storyboard s38_refrao: pendente
+- storyboard s39_refrao: pendente
+- storyboard s40_refrao: pendente
+- storyboard s41_intervalo: pendente
+- storyboard s42_intervalo: pendente
+- storyboard s43_refrao: pendente
+- storyboard s44_refrao: pendente
+- storyboard s45_refrao: pendente
+- storyboard s46_refrao: pendente
+- storyboard s47_final: pendente
+- storyboard s48_final: pendente
+- storyboard s49_final: pendente
+- storyboard s50_final: pendente
+- storyboard s51_final: pendente
+- storyboard s52_final: pendente
+- storyboard s53_final: pendente

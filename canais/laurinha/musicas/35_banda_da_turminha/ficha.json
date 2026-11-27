@@ -1,69 +1,124 @@
 {
- "schema": "musica-1.0",
- "titulo": "Banda da Turminha",
- "gancho": "banda da turminha",
- "palavras_tema": [
-  "banda",
-  "tambor",
-  "flauta",
-  "violão"
- ],
- "tipo": "brincadeira",
- "tema": "a banda feita com panela, pente e colher",
- "dia_a_dia": [
-  "fazer música em casa",
-  "bater o ritmo com o corpo"
- ],
- "curiosidade": "dá pra fazer música com o corpo: barriga, palma e pé",
- "ritmo": "marchinha",
- "bpm": 130,
- "estrutura": "C",
- "voz": "luisinho",
- "cantam": {
-  "verso": "luisinho",
-  "refrão": "luisinho",
-  "ponte": "luisinho (comandos)"
- },
- "cenas": [
-  {
-   "parte": "intro",
-   "ideia": "a cozinha; o Luisinho acha panela, colher e pente"
+  "schema": "musica-1.0",
+  "titulo": "Banda da Turminha",
+  "gancho": "banda da turminha",
+  "palavras_tema": [
+    "banda",
+    "tambor",
+    "flauta",
+    "violão"
+  ],
+  "tipo": "brincadeira",
+  "tema": "num dia de chuva ninguém brinca lá fora; o Luisinho tem uma ideia, pega panela, colher, pente e uma garrafinha e chama a turma: nasce a BANDA DA TURMINHA. Refrão-desafio: 'banda da turminha! marcha, marcha, vem! toca você também!' (a criança marcha e toca junto). Ponte = comandos de música com o corpo (barriga tum, palma plá, pé pá, dedinho tic, joelho tá, bem rapidinho… e para: estátua!). Virada: a vovó traz o balde, o vovô a peneira, a banda cresce pela casa inteira… e o GATO, sem querer, pisa no teclado — plim! — e a Laurinha ri: 'gatinho, toca pra mim!'",
+  "dia_a_dia": [
+    "fazer música em casa",
+    "bater o ritmo com o corpo"
+  ],
+  "curiosidade": "dá pra fazer música com o corpo: barriga, palma e pé",
+  "ritmo": "marchinha",
+  "bpm": 130,
+  "estrutura": "C",
+  "voz": "luisinho",
+  "cantam": {
+    "verso": "luisinho",
+    "refrão": "luisinho",
+    "ponte": "luisinho (comandos)"
   },
-  {
-   "parte": "verso 1",
-   "ideia": "a banda de coisas de casa: panela tum, pente zum, colher na garrafa plim"
+  "cenas": [
+    {
+      "parte": "intro",
+      "ideia": "dia de chuva na janela; a cozinha; o Luisinho abre o armário e acha panela, colher e pente"
+    },
+    {
+      "parte": "verso 1",
+      "ideia": "chuva na janela; o Luisinho tem a ideia, pega panela, colher, pente e garrafinha e chama a turma"
+    },
+    {
+      "parte": "refrão",
+      "ideia": "a turma marcha tocando pela casa"
+    },
+    {
+      "parte": "ponte",
+      "ideia": "música com o corpo: barriga tum, palma plá, pé pá, dedinho tic, joelho tá… rapidinho e ESTÁTUA!"
+    },
+    {
+      "parte": "verso 2",
+      "ideia": "a vovó com o balde, o vovô com a peneira, a banda passa pela casa; o gato pisa no teclado (plim!) e a Laurinha ri: 'gatinho, toca pra mim!'"
+    },
+    {
+      "parte": "final",
+      "ideia": "convite; a banda posa com os 'instrumentos' e dá tchau"
+    }
+  ],
+  "duracao_alvo": [
+    140,
+    170
+  ],
+  "alternativas": [
+    "frevo"
+  ],
+  "status": "letra_revisada",
+  "versoes": [],
+  "youtube": {
+    "resumo": "BANDA DA TURMINHA! 🥁 O Luisinho achou uma panela, uma colher e um pente… e virou banda! A panela faz tum, o pente faz zum e a colher faz plim! Bate na barriga, bate palma, bate o pé!",
+    "resumo_short": "BANDA DA TURMINHA! 🥁 Tum, tum, fiu, fiu com a Laurinha e o Luisinho!",
+    "curiosidade": "Dá pra fazer música com o corpo: barriga, palma e pé",
+    "miniatura": "BANDA DA\nTURMINHA!",
+    "miniatura_cena": {
+      "fundo": "raios",
+      "centro": [
+        400,
+        430
+      ],
+      "cores": [
+        [
+          255,
+          214,
+          120
+        ],
+        [
+          120,
+          200,
+          255
+        ],
+        [
+          255,
+          170,
+          200
+        ],
+        [
+          180,
+          240,
+          170
+        ]
+      ],
+      "heroi": {
+        "id": "luisinho",
+        "pose": {
+          "expr": "joy",
+          "turn": 0.15,
+          "mouth": "D",
+          "hand_n_x": -120,
+          "hand_n_y": -150,
+          "hand_n_bend": 0.5,
+          "paw_n": 3
+        }
+      },
+      "par": {
+        "id": "laurinha",
+        "pose": {
+          "expr": "joy",
+          "turn": -0.2,
+          "mouth": "D"
+        },
+        "tam": 520,
+        "x": 1060,
+        "corte": 120
+      },
+      "objetos": [],
+      "frente": []
+    }
   },
-  {
-   "parte": "refrão",
-   "ideia": "a turma marcha tocando pela casa"
-  },
-  {
-   "parte": "ponte",
-   "ideia": "percussão com o corpo: barriga, palma, pé… todo mundo junto"
-  },
-  {
-   "parte": "verso 2",
-   "ideia": "a vovó com o balde, o vovô com a peneira; o gato pisa no teclado e vira o tecladista da banda"
-  },
-  {
-   "parte": "final",
-   "ideia": "convite; a banda posa com os 'instrumentos' e dá tchau"
-  }
- ],
- "duracao_alvo": [
-  140,
-  170
- ],
- "alternativas": [
-  "frevo"
- ],
- "status": "letra_revisada",
- "versoes": [],
- "youtube": {
-  "resumo": "BANDA DA TURMINHA! 🥁 O Luisinho achou uma panela, uma colher e um pente… e virou banda! A panela faz tum, o pente faz zum e a colher faz plim! Bate na barriga, bate palma, bate o pé!",
-  "resumo_short": "BANDA DA TURMINHA! 🥁 Tum, tum, fiu, fiu com a Laurinha e o Luisinho!",
-  "curiosidade": "Dá pra fazer música com o corpo: barriga, palma e pé"
- },
- "persona": "luisinho",
- "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz) · 23/11/2026: reescrita para 5 a 8 anos"
+  "persona": "luisinho",
+  "revisao": "18/11/2026: jeito da referência (premissa engraçada, molde, rima, bloco que volta, uma voz) · 23/11/2026: reescrita para 5 a 8 anos"
 }

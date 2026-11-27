@@ -1,0 +1,123 @@
+{
+  "schema": "musica-1.0",
+  "ritmo": "pop_infantil",
+  "bpm": 136,
+  "estrutura": "R",
+  "voz": "fofolucos",
+  "duracao_alvo": [
+    140,
+    170
+  ],
+  "persona": "fofolucos",
+  "titulo": "Banho de Monstrinho!",
+  "gancho": "banho de monstrinho",
+  "palavras_tema": [
+    "banho",
+    "sabão",
+    "espuma",
+    "esfrega",
+    "cheirosa"
+  ],
+  "tipo": "historia",
+  "tema": "a Mimi, a peludinha, brincou na lama e voltou toda pintadinha ('ué? eu tô normal!'); a turma tampa o nariz e o Gogo estica o olhão: hora do banho de sabão. Refrão-desafio: 'banho de monstrinho! esfrega, esfrega, esfregão! rawr! espuma pelo chão!' (a criança esfrega junto). Ponte = comandos de banho (orelhinha, atrás do chifrinho, barriguinha, entre os dedinhos, espuma na cabeça, fecha o olho, enxágua e sacode). Virada: depois do banho o pelo da Mimi seca e ESTUFA — ela vira uma nuvem rosa redondinha rolando pelo chão",
+  "dia_a_dia": [
+    "tomar banho depois de brincar",
+    "lavar atrás da orelha e entre os dedos",
+    "fechar o olho para o sabão não arder"
+  ],
+  "curiosidade": "a espuma do sabão gruda na sujeira e a água leva tudo embora — por isso é preciso esfregar e depois enxaguar bem",
+  "cantam": {
+    "verso": "fofolucos",
+    "refrão": "fofolucos",
+    "ponte": "fofolucos (comandos do banho)"
+  },
+  "cenas": [
+    {
+      "parte": "intro",
+      "ideia": "close da Mimi toda pintada de lama, espuma subindo; RAWR da turma"
+    },
+    {
+      "parte": "verso 1",
+      "ideia": "a Mimi pula na poça do quintal e volta pintadinha; a turma tampa o nariz; o Gogo estica o olhão: banho de sabão!"
+    },
+    {
+      "parte": "refrão",
+      "ideia": "todo mundo esfrega junto na banheira cheia de espuma; espuma voa pelo chão; muda quem esfrega a cada refrão"
+    },
+    {
+      "parte": "ponte",
+      "ideia": "comandos: orelhinha, atrás do chifrinho, barriguinha, entre os dedinhos; espuma na cabeça, fecha o olho, enxágua e sacode"
+    },
+    {
+      "parte": "verso 2",
+      "ideia": "a Mimi sacode para secar e o pelo estufa: vira uma nuvem rosa redondinha que rola pelo chão; a turma ri"
+    },
+    {
+      "parte": "final",
+      "ideia": "'e você? gosta de banho?' · joinha · inscreva-se · tchau da turma, a Mimi fofíssima"
+    }
+  ],
+  "alternativas": [],
+  "status": "letra_revisada",
+  "versoes": [],
+  "youtube": {
+    "resumo": "BANHO DE MONSTRINHO! 👾🛁 A Mimi brincou na lama e voltou toda pintadinha! Hora do banho de sabão: esfrega a orelhinha, atrás do chifrinho, entre os dedinhos… e depois do banho o pelo dela estufa! Esfrega junto com os Fofolucos!",
+    "resumo_short": "BANHO DE MONSTRINHO! 👾🛁 Esfrega, esfrega, esfregão!",
+    "curiosidade": "A espuma do sabão gruda na sujeira e a água leva tudo embora — por isso a gente esfrega e depois enxágua bem!",
+    "miniatura": "BANHO DE\nMONSTRINHO!",
+    "miniatura_cena": {
+      "fundo": "bolinhas",
+      "centro": [
+        400,
+        430
+      ],
+      "cores": [
+        [
+          255,
+          190,
+          220
+        ],
+        [
+          200,
+          240,
+          255
+        ],
+        [
+          255,
+          250,
+          210
+        ],
+        [
+          170,
+          230,
+          200
+        ]
+      ],
+      "heroi": {
+        "id": "mimi",
+        "pose": {
+          "expr": "joy",
+          "turn": 0.15,
+          "mouth": "D",
+          "hand_n_x": -120,
+          "hand_n_y": -150,
+          "hand_n_bend": 0.5,
+          "paw_n": 3
+        }
+      },
+      "par": {
+        "id": "gogo",
+        "pose": {
+          "expr": "surprised",
+          "turn": -0.2,
+          "mouth": "O"
+        },
+        "tam": 500,
+        "x": 1080,
+        "corte": 120
+      },
+      "objetos": [],
+      "frente": []
+    }
+  }
+}

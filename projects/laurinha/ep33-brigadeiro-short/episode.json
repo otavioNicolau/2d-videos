@@ -14,7 +14,7 @@
     "file": "musica/trabalho.wav",
     "analysis": "analise/song.json",
     "start": 0.0,
-    "end": 15.9373,
+    "end": 30.2,
     "fade_out": 0.3,
     "beat_grid": "full"
   },
@@ -83,8 +83,10 @@
     }
   },
   "approval": {
-    "storyboard": false,
-    "final_render": false
+    "storyboard": true,
+    "final_render": false,
+    "approved_by": "Otavio",
+    "notes": "storyboard do Short (último refrão até o fim; 1 da dupla por plano) aprovado pelo usuário em 26/11"
   },
   "scenes": [
     {
@@ -324,12 +326,12 @@
       "characters": {
         "laurinha": {
           "start": {
-            "x": 810.0,
-            "y": 1190,
+            "x": 800.0,
+            "y": 1010,
             "turn": 0.2,
             "expr": "happy",
             "z": 3,
-            "depth": 1.0
+            "depth": 1.445
           },
           "exposure": 1,
           "actions": [
@@ -343,12 +345,12 @@
         },
         "vovo_cico": {
           "start": {
-            "x": 1110.0,
-            "y": 1190,
+            "x": 1120.0,
+            "y": 1010,
             "turn": 0.0,
             "expr": "joy",
             "z": 3,
-            "depth": 1.0
+            "depth": 1.445
           },
           "exposure": 1,
           "actions": [
@@ -357,25 +359,6 @@
               "do": "dance",
               "dur": 3.083,
               "style": "balanco"
-            }
-          ]
-        },
-        "luisinho": {
-          "start": {
-            "x": 960.0,
-            "y": 800,
-            "turn": -0.2,
-            "expr": "happy",
-            "z": 2,
-            "depth": 0.85
-          },
-          "exposure": 1,
-          "actions": [
-            {
-              "t": 0.1,
-              "do": "dance",
-              "dur": 3.033,
-              "style": "pulinho"
             }
           ]
         }
@@ -397,18 +380,13 @@
           "who": "laurinha",
           "from": 0.203,
           "to": 3.123
-        },
-        {
-          "who": "luisinho",
-          "from": 0.203,
-          "to": 3.123
         }
       ]
     },
     {
       "id": "s04_refrao",
       "title": "Brigadeiro, brigadeiro!",
-      "duration": 2.657,
+      "duration": 2.216,
       "description": "Brigadeiro, brigadeiro! / Foi você? Fala primeiro!",
       "background": "plano_jardim",
       "camera": {
@@ -420,7 +398,7 @@
             "zoom": 1.85
           },
           {
-            "t": 2.657,
+            "t": 2.216,
             "x": 1300.0,
             "y": 523.9189189189188,
             "zoom": 1.85
@@ -477,7 +455,7 @@
               "ease": "step"
             },
             {
-              "t": 2.657,
+              "t": 2.216,
               "pose": {
                 "x": 1969.9
               },
@@ -487,27 +465,19 @@
           ]
         }
       },
-      "callouts": [
-        {
-          "t": 2.06,
-          "text": "FOI VOCÊ? FALA PRIMEIRO!",
-          "dur": 1.8,
-          "color": "roxo",
-          "y": 170
-        }
-      ],
+      "callouts": [],
       "sing": [
         {
           "who": "laurinha",
           "from": 0.28,
-          "to": 2.637
+          "to": 2.196
         }
       ]
     },
     {
       "id": "s05_refrao",
       "title": "Brigadeiro, brigadeiro!",
-      "duration": 2.647,
+      "duration": 2.6507,
       "description": "Brigadeiro, brigadeiro! / Foi você? Fala primeiro!",
       "background": "plano_jardim",
       "camera": {
@@ -519,7 +489,7 @@
             "zoom": 2.4
           },
           {
-            "t": 2.647,
+            "t": 2.651,
             "x": 1300.0,
             "y": 560.0,
             "zoom": 2.496,
@@ -553,7 +523,7 @@
             {
               "t": 0.0,
               "do": "apontar_camera",
-              "dur": 2.21
+              "dur": 2.651
             }
           ]
         }
@@ -577,7 +547,7 @@
               "ease": "step"
             },
             {
-              "t": 2.153,
+              "t": 2.594,
               "pose": {
                 "x": 1969.9
               },
@@ -600,9 +570,736 @@
         {
           "who": "laurinha",
           "from": 0.0,
-          "to": 2.2
+          "to": 2.631
         }
       ]
+    },
+    {
+      "id": "s06_final",
+      "title": "E você? Divide o seu?",
+      "duration": 2.6333,
+      "description": "E você? Divide o seu?",
+      "background": "plano_sala",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1300.0,
+            "y": 523.9189189189188,
+            "zoom": 1.85
+          },
+          {
+            "t": 2.6333,
+            "x": 1300.0,
+            "y": 523.9189189189188,
+            "zoom": 1.85
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 1300.0,
+            "y": 930,
+            "turn": 0.0,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.7,
+            "holding": "brigadeiro",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "apontar_camera",
+              "dur": 2.533
+            }
+          ]
+        }
+      },
+      "props": {
+        "bal0": {
+          "start": {
+            "x": 1111.2907191149354,
+            "y": 640,
+            "z": 1,
+            "depth": 0.935
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cor": 0.0,
+                "balanco": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.57,
+              "pose": {
+                "balanco": 1.6
+              },
+              "ease": "linear",
+              "in": 2.54
+            }
+          ]
+        },
+        "bal1": {
+          "start": {
+            "x": 1488.7092808850646,
+            "y": 640,
+            "z": 1,
+            "depth": 0.935
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cor": 2.0,
+                "balanco": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.57,
+              "pose": {
+                "balanco": 1.6
+              },
+              "ease": "linear",
+              "in": 2.54
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "E VOCÊ? DIVIDE O SEU?",
+          "dur": 1.8,
+          "color": "rosa",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.013,
+          "to": 2.623
+        }
+      ],
+      "transition_in": {
+        "type": "deslizar_cima",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s07_final",
+      "title": "Dá um joinha!",
+      "duration": 1.8,
+      "description": "Dá um joinha!",
+      "background": "danca_raios_verde",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 1.8,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "vovo_cico": {
+          "start": {
+            "x": 960.0,
+            "y": 1170,
+            "turn": 0.2,
+            "expr": "joy",
+            "z": 3,
+            "depth": 1.7
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.2,
+              "do": "bacana",
+              "dur": 1.6
+            }
+          ]
+        }
+      },
+      "props": {
+        "joinha": {
+          "start": {
+            "x": 960.0,
+            "y": 300,
+            "z": 4,
+            "depth": 0.7
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "escala": 0.0
+              }
+            },
+            {
+              "t": 0.4,
+              "pose": {
+                "escala": 1.0
+              },
+              "ease": "back",
+              "in": 0.37
+            }
+          ]
+        }
+      },
+      "fx": [
+        "estrelas"
+      ],
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "DÁ UM JOINHA!",
+          "dur": 1.6,
+          "color": "azul",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s08_final",
+      "title": "Chama o papai e a mamãe",
+      "duration": 2.6333,
+      "description": "Chama o papai e a mamãe",
+      "background": "plano_casa_frente",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1300.0,
+            "y": 536.0387215734481,
+            "zoom": 1.808
+          },
+          {
+            "t": 2.6333,
+            "x": 1300.0,
+            "y": 536.0387215734481,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 1140.0,
+            "y": 930,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.7
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "point",
+              "dur": 2.533
+            }
+          ],
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "chocolate": 1.0
+              },
+              "ease": "step"
+            }
+          ]
+        },
+        "mamae": {
+          "start": {
+            "x": 1460.0,
+            "y": 930,
+            "turn": -0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.7
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.2,
+              "do": "wave",
+              "dur": 2.433
+            }
+          ]
+        }
+      },
+      "props": {
+        "nv": {
+          "start": {
+            "x": 1051.9,
+            "y": 260,
+            "z": 0,
+            "depth": 0.544
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cara": 1.0,
+                "x": 1051.9
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.57,
+              "pose": {
+                "x": 1225.6
+              },
+              "ease": "linear",
+              "in": 2.54
+            }
+          ]
+        }
+      },
+      "callouts": [
+        {
+          "t": 0.3,
+          "text": "CHAMA O PAPAI E A MAMÃE!",
+          "dur": 1.8,
+          "color": "verde",
+          "y": 170
+        }
+      ]
+    },
+    {
+      "id": "s09_final",
+      "title": "Pra se inscrever no canal! Zum, zum!",
+      "duration": 3.1,
+      "description": "Pra se inscrever no canal! Zum, zum!",
+      "background": "danca_raios_vermelho",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          },
+          {
+            "t": 3.1,
+            "x": 960,
+            "y": 620,
+            "zoom": 1.579
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 960.0,
+            "y": 1010,
+            "turn": 0.2,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.7
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.2,
+              "do": "point",
+              "dur": 2.9
+            }
+          ]
+        }
+      },
+      "props": {
+        "botao": {
+          "start": {
+            "x": 960.0,
+            "y": 300,
+            "z": 4,
+            "depth": 0.9
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "escala": 0.0,
+                "aperta": 0.0
+              }
+            },
+            {
+              "t": 0.4,
+              "pose": {
+                "escala": 1.0
+              },
+              "ease": "back",
+              "in": 0.37
+            },
+            {
+              "t": 1.6,
+              "pose": {
+                "aperta": 1.0
+              },
+              "ease": "out",
+              "in": 1.57
+            },
+            {
+              "t": 1.9,
+              "pose": {
+                "aperta": 0.0
+              },
+              "ease": "in",
+              "in": 0.27
+            }
+          ]
+        }
+      },
+      "fx": [
+        "coracoes"
+      ],
+      "callouts": [
+        {
+          "t": 0.5,
+          "text": "INSCREVA-SE!",
+          "dur": 1.8,
+          "color": "vermelho",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.027,
+          "to": 3.09
+        }
+      ]
+    },
+    {
+      "id": "s10_final",
+      "title": "Brigadeiro! Tchau! Nhac!",
+      "duration": 2.6,
+      "description": "Brigadeiro! Tchau! Nhac!",
+      "background": "plano_sala",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1070.5,
+            "y": 540.0,
+            "zoom": 1.808
+          },
+          {
+            "t": 2.6,
+            "x": 1070.5,
+            "y": 540.0,
+            "zoom": 1.808
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "laurinha": {
+          "start": {
+            "x": 881.7907191149354,
+            "y": 930,
+            "turn": 0.3,
+            "expr": "happy",
+            "z": 3,
+            "depth": 1.445
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.0,
+              "do": "wave",
+              "dur": 2.6
+            }
+          ]
+        },
+        "vovo": {
+          "start": {
+            "x": 1259.2092808850646,
+            "y": 930,
+            "turn": 0.0,
+            "expr": "joy",
+            "z": 3,
+            "depth": 1.445
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "wave",
+              "dur": 2.5
+            }
+          ]
+        }
+      },
+      "props": {
+        "bal0": {
+          "start": {
+            "x": 881.7907191149354,
+            "y": 640,
+            "z": 1,
+            "depth": 0.935
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cor": 0.0,
+                "balanco": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.54,
+              "pose": {
+                "balanco": 1.6
+              },
+              "ease": "linear",
+              "in": 2.51
+            }
+          ]
+        },
+        "bal1": {
+          "start": {
+            "x": 1259.2092808850646,
+            "y": 640,
+            "z": 1,
+            "depth": 0.935
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cor": 2.0,
+                "balanco": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 2.54,
+              "pose": {
+                "balanco": 1.6
+              },
+              "ease": "linear",
+              "in": 2.51
+            }
+          ]
+        }
+      },
+      "fx": [
+        "coracoes"
+      ],
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "BRIGADEIRO!",
+          "dur": 1.05,
+          "color": "laranja",
+          "y": 170
+        },
+        {
+          "t": 1.3,
+          "text": "TCHAU!",
+          "dur": 1.3,
+          "color": "amarelo",
+          "y": 170
+        }
+      ],
+      "sing": [
+        {
+          "who": "laurinha",
+          "from": 0.207,
+          "to": 2.59
+        }
+      ],
+      "transition_in": {
+        "type": "giro",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s11_final",
+      "title": "o último NHAC do Luisinho",
+      "duration": 1.9334,
+      "description": "",
+      "background": "plano_sala",
+      "camera": {
+        "keys": [
+          {
+            "t": 0.0,
+            "x": 1300.0,
+            "y": 523.9189189189188,
+            "zoom": 1.85
+          },
+          {
+            "t": 1.9334,
+            "x": 1300.0,
+            "y": 523.9189189189188,
+            "zoom": 1.85
+          }
+        ],
+        "beat": {
+          "pulse": 0.0,
+          "bar_zoom": 0.04,
+          "sway": 6,
+          "bounce": 0
+        }
+      },
+      "characters": {
+        "luisinho": {
+          "start": {
+            "x": 1300.0,
+            "y": 930,
+            "turn": 0.0,
+            "expr": "joy",
+            "z": 3,
+            "depth": 1.7,
+            "holding": "brigadeiro",
+            "hand_n_x": -110,
+            "hand_n_y": 20,
+            "hand_n_bend": 0.5,
+            "paw_n": 1
+          },
+          "exposure": 1,
+          "actions": [
+            {
+              "t": 0.1,
+              "do": "eat",
+              "dur": 1.833
+            }
+          ],
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "chocolate": 1.0
+              },
+              "ease": "step"
+            }
+          ]
+        }
+      },
+      "props": {
+        "bal0": {
+          "start": {
+            "x": 1111.2907191149354,
+            "y": 640,
+            "z": 1,
+            "depth": 0.935
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cor": 1.0,
+                "balanco": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.87,
+              "pose": {
+                "balanco": 1.2
+              },
+              "ease": "linear",
+              "in": 1.84
+            }
+          ]
+        },
+        "bal1": {
+          "start": {
+            "x": 1488.7092808850646,
+            "y": 640,
+            "z": 1,
+            "depth": 0.935
+          },
+          "exposure": 1,
+          "keys": [
+            {
+              "t": 0.0,
+              "pose": {
+                "cor": 3.0,
+                "balanco": 0.0
+              },
+              "ease": "step"
+            },
+            {
+              "t": 1.87,
+              "pose": {
+                "balanco": 1.2
+              },
+              "ease": "linear",
+              "in": 1.84
+            }
+          ]
+        }
+      },
+      "flash_in": true,
+      "callouts": [
+        {
+          "t": 0.2,
+          "text": "NHAC!",
+          "dur": 1.733,
+          "color": "vermelho",
+          "y": 170
+        }
+      ],
+      "transition_out": "fade"
     }
   ]
 }

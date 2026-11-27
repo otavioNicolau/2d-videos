@@ -12,15 +12,7 @@
           },
           "empty_frames": 0
         },
-        "luisinho": {
-          "drawings": 101,
-          "hidden_frames": [],
-          "exposure": {
-            "1s": 100
-          },
-          "empty_frames": 0
-        },
-        "c1": {
+        "pz": {
           "drawings": 101,
           "hidden_frames": [],
           "exposure": {
@@ -35,14 +27,6 @@
     "s02_refrao": {
       "frames": 111,
       "performers": {
-        "laurinha": {
-          "drawings": 111,
-          "hidden_frames": [],
-          "exposure": {
-            "1s": 110
-          },
-          "empty_frames": 0
-        },
         "luisinho": {
           "drawings": 111,
           "hidden_frames": [],
@@ -51,7 +35,7 @@
           },
           "empty_frames": 0
         },
-        "c1": {
+        "tr": {
           "drawings": 111,
           "hidden_frames": [],
           "exposure": {
@@ -74,15 +58,7 @@
           },
           "empty_frames": 0
         },
-        "luisinho": {
-          "drawings": 99,
-          "hidden_frames": [],
-          "exposure": {
-            "1s": 98
-          },
-          "empty_frames": 0
-        },
-        "c2": {
+        "qj": {
           "drawings": 99,
           "hidden_frames": [],
           "exposure": {
@@ -95,29 +71,311 @@
       "frozen_samples": 0
     },
     "s04_refrao": {
-      "frames": 90,
+      "frames": 99,
+      "performers": {
+        "luisinho": {
+          "drawings": 83,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 82
+          },
+          "empty_frames": 0
+        },
+        "ov": {
+          "drawings": 99,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 98
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s05_intervalo": {
+      "frames": 136,
+      "performers": {
+        "mesa": {
+          "drawings": 131,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 135
+          },
+          "empty_frames": 0
+        },
+        "pz": {
+          "drawings": 131,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 135
+          },
+          "empty_frames": 0
+        },
+        "tr": {
+          "drawings": 129,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 135
+          },
+          "empty_frames": 0
+        },
+        "qj": {
+          "drawings": 136,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 135
+          },
+          "empty_frames": 0
+        },
+        "ov": {
+          "drawings": 136,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 135
+          },
+          "empty_frames": 0
+        },
+        "pr": {
+          "drawings": 136,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 135
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s06_final": {
+      "frames": 50,
+      "performers": {
+        "luisinho": {
+          "drawings": 50,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 49
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s07_final": {
+      "frames": 100,
       "performers": {
         "laurinha": {
-          "drawings": 72,
+          "drawings": 100,
           "hidden_frames": [],
           "exposure": {
-            "1s": 71
+            "1s": 99
           },
           "empty_frames": 0
         },
+        "joinha": {
+          "drawings": 100,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 99
+          },
+          "empty_frames": 5
+        }
+      },
+      "issues": [
+        "joinha: 5 quadros vazios (ex.: [1, 2, 3, 4, 5])"
+      ],
+      "frozen_samples": 0
+    },
+    "s08_final": {
+      "frames": 75,
+      "performers": {
         "luisinho": {
-          "drawings": 72,
+          "drawings": 75,
           "hidden_frames": [],
           "exposure": {
-            "1s": 71
+            "1s": 74
           },
           "empty_frames": 0
         },
-        "c2": {
-          "drawings": 90,
+        "mamae": {
+          "drawings": 75,
           "hidden_frames": [],
           "exposure": {
-            "1s": 89
+            "1s": 74
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s09_final": {
+      "frames": 112,
+      "performers": {
+        "laurinha": {
+          "drawings": 112,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 111
+          },
+          "empty_frames": 0
+        },
+        "botao": {
+          "drawings": 109,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 111
+          },
+          "empty_frames": 5
+        }
+      },
+      "issues": [
+        "botao: 5 quadros vazios (ex.: [1, 2, 3, 4, 5])"
+      ],
+      "frozen_samples": 0
+    },
+    "s10_final": {
+      "frames": 100,
+      "performers": {
+        "luisinho": {
+          "drawings": 100,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 99
+          },
+          "empty_frames": 0
+        },
+        "botao": {
+          "drawings": 100,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 99
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s11_final": {
+      "frames": 88,
+      "performers": {
+        "laurinha": {
+          "drawings": 88,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 87
+          },
+          "empty_frames": 0
+        },
+        "pz": {
+          "drawings": 88,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 87
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s12_final": {
+      "frames": 88,
+      "performers": {
+        "luisinho": {
+          "drawings": 88,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 87
+          },
+          "empty_frames": 0
+        },
+        "pr": {
+          "drawings": 88,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 87
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s13_final": {
+      "frames": 100,
+      "performers": {
+        "mesa": {
+          "drawings": 100,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 99
+          },
+          "empty_frames": 0
+        },
+        "pz": {
+          "drawings": 100,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 99
+          },
+          "empty_frames": 0
+        },
+        "tr": {
+          "drawings": 100,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 99
+          },
+          "empty_frames": 0
+        },
+        "qj": {
+          "drawings": 100,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 99
+          },
+          "empty_frames": 0
+        },
+        "ov": {
+          "drawings": 100,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 99
+          },
+          "empty_frames": 0
+        },
+        "pr": {
+          "drawings": 100,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 99
+          },
+          "empty_frames": 0
+        }
+      },
+      "issues": [],
+      "frozen_samples": 0
+    },
+    "s14_final": {
+      "frames": 85,
+      "performers": {
+        "laurinha": {
+          "drawings": 85,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 84
+          },
+          "empty_frames": 0
+        },
+        "pz": {
+          "drawings": 85,
+          "hidden_frames": [],
+          "exposure": {
+            "1s": 84
           },
           "empty_frames": 0
         }
@@ -127,14 +385,24 @@
     }
   },
   "warnings": [
-    "storyboard ainda não aprovado (approval.storyboard = false): o render sairá como CANDIDATO",
+    "s01_refrao/pz: chave em 3.54s após o fim da cena",
     "storyboard s01_refrao: pendente",
     "storyboard s02_refrao: pendente",
     "storyboard s03_refrao: pendente",
-    "storyboard s04_refrao: pendente"
+    "storyboard s04_refrao: pendente",
+    "storyboard s05_intervalo: pendente",
+    "storyboard s06_final: pendente",
+    "storyboard s07_final: pendente",
+    "storyboard s08_final: pendente",
+    "storyboard s09_final: pendente",
+    "storyboard s10_final: pendente",
+    "storyboard s11_final: pendente",
+    "storyboard s12_final: pendente",
+    "storyboard s13_final: pendente",
+    "storyboard s14_final: pendente"
   ],
   "lines": {},
-  "video": "/home/otavio/2d/projects/laurinha/ep17-que-forma-e-essa-short/output/ep17-que-forma-e-essa-short_CANDIDATO.mp4",
+  "video": "/home/otavio/2d/projects/laurinha/ep17-que-forma-e-essa-short/output/ep17-que-forma-e-essa-short.mp4",
   "contact_sheet": "/home/otavio/2d/projects/laurinha/ep17-que-forma-e-essa-short/output/prancha.png",
-  "approved": false
+  "approved": true
 }

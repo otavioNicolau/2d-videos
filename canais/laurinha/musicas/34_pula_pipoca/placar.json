@@ -1,0 +1,33 @@
+{
+ "musica": "34",
+ "titulo": "Pula Pipoca!",
+ "estilo": "E18",
+ "medidas": {
+  "voz_%": 30.0,
+  "bateria_%": 49.1,
+  "baixo_%": 5.2,
+  "outros_%": 15.7,
+  "largura_voz": 0.081,
+  "batidas_identicas": 0.733,
+  "duracao_s": 149.6,
+  "teclado_eletronico": 0.019,
+  "bateria_banda": 0.014,
+  "percussao": 0.008,
+  "metais": 0.003,
+  "sincope": 0.26,
+  "baixo_sincopado": 0.72
+ },
+ "acertos": "4/12",
+ "nota": 4.9,
+ "obs": "E18 144 BPM: nota 4,9 do usuário apesar do placar 4/12 (voz 30 % baixa, batida 49 % alta, contratempo 0,26); alinhamento dos refrões corrigido à mão nos tempos da letra (áudio intacto)",
+ "falhas": [
+  "voz no som (%) (baixo)",
+  "batida no som (%) (alto)",
+  "baixo no som (%) (baixo)",
+  "outros instrumentos (%) (alto)",
+  "largura da voz (0 = uma voz no centro) (alto)",
+  "batida de teclado (loop igual) (baixo)",
+  "teclado/synth reconhecido (baixo)",
+  "batida sincopada (contratempo) — o 'contagiante' (baixo)"
+ ]
+}
